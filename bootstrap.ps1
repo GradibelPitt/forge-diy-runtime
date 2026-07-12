@@ -197,6 +197,13 @@ function Sync-DiyPayload {
     Copy-Files (Join-Path $source 'tokens\pictures') $tokenCache '*'
 }
 
+function Disable-IncompatibleLockedGauntlets {
+    $gauntletDir = Join-Path $AppRoot 'res\defaults\gauntlet'
+    if (-not (Test-Path -LiteralPath $gauntletDir)) { return }
+    Get-ChildItem -LiteralPath $gauntletDir -Filter '*.dat' -File -ErrorAction SilentlyContinue |
+        Remove-Item -Force -ErrorAction SilentlyContinue
+}
+
 function New-DesktopShortcut([string]$ScriptPath) {
     $desktop = [Environment]::GetFolderPath('Desktop')
     $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Forge DIY.lnk'))
@@ -233,6 +240,7 @@ try {
     if (-not $java) { $java = Install-PortableJava17 }
 
     Sync-DiyPayload
+    Disable-IncompatibleLockedGauntlets
     $installedScript = Join-Path $RepoRoot 'bootstrap.ps1'
     New-DesktopShortcut $installedScript
     Write-Host "[Forge DIY] 当前构建版本：$($release.buildId)" -ForegroundColor Green

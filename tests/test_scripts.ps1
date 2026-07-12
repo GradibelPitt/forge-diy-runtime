@@ -38,6 +38,11 @@ if ($bootstrap -notmatch "'-Xmx2048m'" -or
     $bootstrap -notmatch 'WaitForExit\(10000\)') {
     throw 'Forge launch must use a modest heap, capture logs, and detect early process exit'
 }
+if ($bootstrap -notmatch 'function Disable-IncompatibleLockedGauntlets' -or
+    $bootstrap -notmatch "Get-ChildItem .* -Filter '\*\.dat'" -or
+    $bootstrap -notmatch 'Disable-IncompatibleLockedGauntlets') {
+    throw 'Bootstrap must disable incompatible bundled gauntlet data before Forge starts'
+}
 $cmdLines = Get-Content (Join-Path $root '一键安装并启动.cmd') -Encoding UTF8
 $codePageLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '^chcp 65001' })
 $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '[一-龥]' })
