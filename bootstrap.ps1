@@ -10,7 +10,7 @@ $Repository = 'forge-diy-runtime'
 $RepoUrl = "https://github.com/$Owner/$Repository.git"
 $InstallRoot = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'ForgeDIY'
 $RepoRoot = Join-Path $InstallRoot 'repo'
-$AppRoot = Join-Path $InstallRoot 'app'
+$AppRoot = Join-Path $RepoRoot 'app'
 $ToolsRoot = Join-Path $InstallRoot 'tools'
 $JavaRoot = Join-Path $InstallRoot 'java17'
 
@@ -194,7 +194,8 @@ try {
     $git = Find-Git
     if (-not $git) { $git = Install-Git }
     Update-Repository $git
-    $release = Install-RuntimePayload
+    if (-not (Test-CriticalManifest $AppRoot)) { throw '仓库中的运行文件校验失败，请重新运行脚本更新仓库。' }
+    $release = [pscustomobject]@{ buildId = (Get-Content (Join-Path $AppRoot 'BUILD-ID.txt') -Raw).Trim() }
 
     $java = $null
     if (-not $IgnoreSystemJava) { $java = Find-Java17 }
@@ -216,4 +217,3 @@ try {
     Write-Host "[错误] $($_.Exception.Message)" -ForegroundColor Red
     exit 1
 }
-
