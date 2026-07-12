@@ -74,7 +74,7 @@ function Install-Git {
     $winget = Get-Command winget.exe -ErrorAction SilentlyContinue
     if ($winget) {
         Write-Step '未检测到 Git，正在通过 Windows 包管理器安装...'
-        & $winget.Source install --id Git.Git -e --silent --accept-package-agreements --accept-source-agreements
+        & $winget.Source install --id Git.Git -e --source winget --silent --accept-package-agreements --accept-source-agreements | Out-Host
         $git = Find-Git
         if ($git) { return $git }
     }

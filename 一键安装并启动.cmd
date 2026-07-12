@@ -1,5 +1,6 @@
 @echo off
 setlocal
+chcp 65001 >nul
 title Forge DIY 一键安装并启动
 set "BOOTSTRAP_URL=https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/main/bootstrap.ps1"
 set "BOOTSTRAP_FILE=%TEMP%\forge-diy-bootstrap.ps1"
@@ -19,4 +20,3 @@ if errorlevel 1 (
   exit /b 1
 )
 endlocal
-
