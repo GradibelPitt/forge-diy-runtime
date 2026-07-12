@@ -26,4 +26,16 @@ if (-not (Test-Path -LiteralPath $attributesPath) -or
     (Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8) -notmatch '(?m)^\* -text\s*$') {
     throw 'Runtime payload must disable Git text conversion so manifest hashes survive fresh clones'
 }
+$manifestPath = Join-Path $root 'app\manifest-critical.sha256'
+foreach ($line in Get-Content -LiteralPath $manifestPath -Encoding UTF8) {
+    if ([string]::IsNullOrWhiteSpace($line)) { continue }
+    if ($line -notmatch '^[0-9A-Fa-f]{64} \*(.+)$') { throw "Invalid manifest entry: $line" }
+    $relative = $Matches[1]
+    $payloadPath = Join-Path $root (Join-Path 'app' $relative.Replace('/', '\'))
+    $indexObject = (& git -C $root rev-parse ":app/$relative").Trim()
+    $worktreeObject = (& git -C $root hash-object --no-filters $payloadPath).Trim()
+    if ($LASTEXITCODE -ne 0 -or $indexObject -ne $worktreeObject) {
+        throw "Git index bytes differ from manifest payload bytes: $relative"
+    }
+}
 Write-Output 'SCRIPT_TESTS=OK'
