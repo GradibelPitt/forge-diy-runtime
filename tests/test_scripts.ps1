@@ -15,6 +15,9 @@ $bootstrap = Get-Content (Join-Path $root 'bootstrap.ps1') -Raw -Encoding UTF8
 if ($bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
     throw 'winget output must be sent to Out-Host instead of leaking into Install-Git return values'
 }
+if ($bootstrap -notmatch '& \$GitExe -C \$RepoRoot checkout-index -a -f') {
+    throw 'Repository updates must force a full checkout to repair payload bytes from older clones'
+}
 if ($bootstrap -notmatch 'Get-ChildItem \$JavaRoot -Filter java\.exe' -or
     $bootstrap -notmatch 'Join-Path \$candidateDirectory ''javaw\.exe''') {
     throw 'Java version must be checked with java.exe before returning javaw.exe'

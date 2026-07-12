@@ -121,6 +121,7 @@ function Update-Repository([string]$GitExe) {
         Write-Step '正在检查运行仓库更新...'
         & $GitExe -C $RepoRoot fetch origin main --depth 1
         & $GitExe -C $RepoRoot reset --hard origin/main
+        & $GitExe -C $RepoRoot checkout-index -a -f
     }
     if ($LASTEXITCODE -ne 0) { throw 'Git 仓库克隆或更新失败。' }
 }
