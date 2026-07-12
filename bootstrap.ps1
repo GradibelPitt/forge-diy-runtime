@@ -97,6 +97,7 @@ function Install-Git {
 
 function Update-Repository([string]$GitExe) {
     New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
+    & $GitExe config --global core.longpaths true
     if (-not (Test-Path (Join-Path $RepoRoot '.git'))) {
         Write-Step '正在克隆公开运行仓库...'
         & $GitExe clone --depth 1 $RepoUrl $RepoRoot
