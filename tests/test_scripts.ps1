@@ -23,6 +23,11 @@ if ($bootstrap -notmatch '\.RedirectStandardError\s*=\s*\$true' -or
     $bootstrap -notmatch '\.StandardError\.ReadToEnd\(\)') {
     throw 'Java version detection must read native stderr without PowerShell error-stream exceptions'
 }
+if ($bootstrap -notmatch "'-Xmx2048m'" -or
+    $bootstrap -notmatch 'RedirectStandardError' -or
+    $bootstrap -notmatch 'WaitForExit\(10000\)') {
+    throw 'Forge launch must use a modest heap, capture logs, and detect early process exit'
+}
 $cmdLines = Get-Content (Join-Path $root '一键安装并启动.cmd') -Encoding UTF8
 $codePageLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '^chcp 65001' })
 $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '[一-龥]' })

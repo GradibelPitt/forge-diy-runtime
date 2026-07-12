@@ -57,9 +57,11 @@ function Find-Java17 {
 }
 
 function Install-PortableJava17 {
-    Write-Step '未检测到 Java 17，正在下载便携 Java 17（无需配置环境变量）...'
+    Write-Step '未检测到 Java 17 或更高版本，正在下载便携 Java（无需配置环境变量）...'
     New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
     $archive = Join-Path $InstallRoot 'java17.zip'
+    # Forge's desktop bundle includes x64 native libraries. Windows ARM runs the
+    # matching x64 Java through its compatibility layer.
     $uri = 'https://api.adoptium.net/v3/binary/latest/17/ga/windows/x64/jre/hotspot/normal/eclipse'
     Invoke-WebRequest -UseBasicParsing -Uri $uri -OutFile $archive
     if (Test-Path $JavaRoot) { Remove-Item -LiteralPath $JavaRoot -Recurse -Force }
@@ -225,8 +227,20 @@ try {
     if (-not $InstallOnly) {
         $jar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' | Select-Object -First 1
         if (-not $jar) { throw '运行目录中没有 Forge 聚合 JAR。' }
-        $arguments = @('-Xmx4096m', '-Dio.netty.tryReflectionSetAccessible=true', '-Dfile.encoding=UTF-8', '-cp', $jar.FullName, 'forge.view.Main')
-        Start-Process -FilePath $java -ArgumentList $arguments -WorkingDirectory $AppRoot
+        $javaDirectory = Split-Path $java -Parent
+        $consoleJava = Join-Path $javaDirectory 'java.exe'
+        if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
+        $logRoot = Join-Path $InstallRoot 'logs'
+        New-Item -ItemType Directory -Path $logRoot -Force | Out-Null
+        $stdoutLog = Join-Path $logRoot 'forge-stdout.log'
+        $stderrLog = Join-Path $logRoot 'forge-stderr.log'
+        Remove-Item -LiteralPath $stdoutLog, $stderrLog -Force -ErrorAction SilentlyContinue
+        $arguments = @('-Xmx2048m', '-Dio.netty.tryReflectionSetAccessible=true', '-Dfile.encoding=UTF-8', '-cp', "`"$($jar.FullName)`"", 'forge.view.Main')
+        $process = Start-Process -FilePath $consoleJava -ArgumentList $arguments -WorkingDirectory $AppRoot -WindowStyle Hidden -RedirectStandardOutput $stdoutLog -RedirectStandardError $stderrLog -PassThru
+        if ($process.WaitForExit(10000)) {
+            throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。请把日志发给维护者：$stderrLog"
+        }
+        Write-Host "[Forge DIY] 启动日志：$stderrLog" -ForegroundColor DarkGray
     }
 } catch {
     Write-Host "[错误] $($_.Exception.Message)" -ForegroundColor Red
