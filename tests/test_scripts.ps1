@@ -53,6 +53,17 @@ if ($repairCmd -notmatch '%LOCALAPPDATA%\\ForgeDIY\\repo' -or
     $repairCmd -notmatch $bootstrapUrlPattern) {
     throw 'Force-repair CMD must delete only the runtime repo and download the latest bootstrap'
 }
+$asciiLauncherPath = Join-Path $root 'ForgeDIY_Repair.bat'
+if (-not (Test-Path -LiteralPath $asciiLauncherPath)) { throw 'ASCII repair BAT is missing' }
+$asciiLauncherBytes = [System.IO.File]::ReadAllBytes($asciiLauncherPath)
+if (($asciiLauncherBytes | Where-Object { $_ -gt 127 }).Count -ne 0) {
+    throw 'ASCII repair BAT must contain only ASCII bytes for maximum Windows compatibility'
+}
+$asciiLauncher = [System.Text.Encoding]::ASCII.GetString($asciiLauncherBytes)
+if ($asciiLauncher -notmatch '%LOCALAPPDATA%\\ForgeDIY\\repo' -or
+    $asciiLauncher -notmatch 'powershell\.exe' -or $asciiLauncher -notmatch 'pause') {
+    throw 'ASCII repair BAT must clear the runtime repo, invoke PowerShell, and remain visible'
+}
 $attributesPath = Join-Path $root '.gitattributes'
 if (-not (Test-Path -LiteralPath $attributesPath) -or
     (Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8) -notmatch '(?m)^\* -text\s*$') {
