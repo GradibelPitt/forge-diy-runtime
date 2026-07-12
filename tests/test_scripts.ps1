@@ -19,6 +19,10 @@ if ($bootstrap -notmatch 'Get-ChildItem \$JavaRoot -Filter java\.exe' -or
     $bootstrap -notmatch 'Join-Path \$candidateDirectory ''javaw\.exe''') {
     throw 'Java version must be checked with java.exe before returning javaw.exe'
 }
+if ($bootstrap -notmatch '\.RedirectStandardError\s*=\s*\$true' -or
+    $bootstrap -notmatch '\.StandardError\.ReadToEnd\(\)') {
+    throw 'Java version detection must read native stderr without PowerShell error-stream exceptions'
+}
 $cmdLines = Get-Content (Join-Path $root '一键安装并启动.cmd') -Encoding UTF8
 $codePageLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '^chcp 65001' })
 $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '[一-龥]' })

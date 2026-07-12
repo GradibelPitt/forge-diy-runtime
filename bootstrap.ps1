@@ -21,7 +21,16 @@ function Write-Step([string]$Message) {
 function Get-JavaMajor([string]$JavaExe) {
     if (-not (Test-Path -LiteralPath $JavaExe -PathType Leaf)) { return 0 }
     try {
-        $output = (& $JavaExe -version 2>&1 | Out-String)
+        $startInfo = New-Object System.Diagnostics.ProcessStartInfo
+        $startInfo.FileName = $JavaExe
+        $startInfo.Arguments = '-version'
+        $startInfo.UseShellExecute = $false
+        $startInfo.CreateNoWindow = $true
+        $startInfo.RedirectStandardOutput = $true
+        $startInfo.RedirectStandardError = $true
+        $process = [System.Diagnostics.Process]::Start($startInfo)
+        $output = $process.StandardOutput.ReadToEnd() + $process.StandardError.ReadToEnd()
+        $process.WaitForExit()
         if ($output -match 'version\s+"(?:(1)\.)?(\d+)') { return [int]$Matches[2] }
     } catch { }
     return 0
