@@ -44,6 +44,15 @@ $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($li
 if ($codePageLine -lt 0 -or $firstChineseLine -lt 0 -or $codePageLine -gt $firstChineseLine) {
     throw 'CMD must switch to UTF-8 before its first Chinese output'
 }
+$repairCmdPath = Join-Path $root '强制修复并启动.cmd'
+if (-not (Test-Path -LiteralPath $repairCmdPath)) { throw 'Force-repair CMD is missing' }
+$repairCmd = Get-Content -LiteralPath $repairCmdPath -Raw -Encoding UTF8
+$bootstrapUrlPattern = [regex]::Escape('https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/main/bootstrap.ps1')
+if ($repairCmd -notmatch '%LOCALAPPDATA%\\ForgeDIY\\repo' -or
+    $repairCmd -notmatch 'rmdir /s /q "%RUNTIME_REPO%"' -or
+    $repairCmd -notmatch $bootstrapUrlPattern) {
+    throw 'Force-repair CMD must delete only the runtime repo and download the latest bootstrap'
+}
 $attributesPath = Join-Path $root '.gitattributes'
 if (-not (Test-Path -LiteralPath $attributesPath) -or
     (Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8) -notmatch '(?m)^\* -text\s*$') {
