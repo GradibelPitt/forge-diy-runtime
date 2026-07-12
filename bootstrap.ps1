@@ -29,15 +29,20 @@ function Get-JavaMajor([string]$JavaExe) {
 
 function Find-Java17 {
     $candidates = New-Object System.Collections.Generic.List[string]
-    if ($env:JAVA_HOME) { $candidates.Add((Join-Path $env:JAVA_HOME 'bin\javaw.exe')) }
-    $command = Get-Command javaw.exe -ErrorAction SilentlyContinue
+    if ($env:JAVA_HOME) { $candidates.Add((Join-Path $env:JAVA_HOME 'bin\java.exe')) }
+    $command = Get-Command java.exe -ErrorAction SilentlyContinue
     if ($command) { $candidates.Add($command.Source) }
     if (Test-Path $JavaRoot) {
-        Get-ChildItem $JavaRoot -Filter javaw.exe -Recurse -ErrorAction SilentlyContinue |
+        Get-ChildItem $JavaRoot -Filter java.exe -Recurse -ErrorAction SilentlyContinue |
             ForEach-Object { $candidates.Add($_.FullName) }
     }
     foreach ($candidate in $candidates | Select-Object -Unique) {
-        if ((Get-JavaMajor $candidate) -ge 17) { return $candidate }
+        if ((Get-JavaMajor $candidate) -ge 17) {
+            $candidateDirectory = Split-Path $candidate -Parent
+            $javaw = Join-Path $candidateDirectory 'javaw.exe'
+            if (Test-Path -LiteralPath $javaw -PathType Leaf) { return $javaw }
+            return $candidate
+        }
     }
     return $null
 }

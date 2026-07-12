@@ -15,6 +15,10 @@ $bootstrap = Get-Content (Join-Path $root 'bootstrap.ps1') -Raw -Encoding UTF8
 if ($bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
     throw 'winget output must be sent to Out-Host instead of leaking into Install-Git return values'
 }
+if ($bootstrap -notmatch 'Get-ChildItem \$JavaRoot -Filter java\.exe' -or
+    $bootstrap -notmatch 'Join-Path \$candidateDirectory ''javaw\.exe''') {
+    throw 'Java version must be checked with java.exe before returning javaw.exe'
+}
 $cmdLines = Get-Content (Join-Path $root '一键安装并启动.cmd') -Encoding UTF8
 $codePageLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '^chcp 65001' })
 $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '[一-龥]' })
