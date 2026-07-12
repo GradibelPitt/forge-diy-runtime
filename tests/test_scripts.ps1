@@ -21,4 +21,9 @@ $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($li
 if ($codePageLine -lt 0 -or $firstChineseLine -lt 0 -or $codePageLine -gt $firstChineseLine) {
     throw 'CMD must switch to UTF-8 before its first Chinese output'
 }
+$attributesPath = Join-Path $root '.gitattributes'
+if (-not (Test-Path -LiteralPath $attributesPath) -or
+    (Get-Content -LiteralPath $attributesPath -Raw -Encoding UTF8) -notmatch '(?m)^\* -text\s*$') {
+    throw 'Runtime payload must disable Git text conversion so manifest hashes survive fresh clones'
+}
 Write-Output 'SCRIPT_TESTS=OK'
