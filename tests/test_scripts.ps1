@@ -18,6 +18,13 @@ if ($bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
 if ($bootstrap -notmatch '& \$GitExe -C \$RepoRoot checkout-index -a -f') {
     throw 'Repository updates must force a full checkout to repair payload bytes from older clones'
 }
+if ($bootstrap -notmatch 'clone -c core\.autocrlf=false --depth 1' -or
+    $bootstrap -notmatch 'Remove-Item -LiteralPath \$RepoRoot -Recurse -Force') {
+    throw 'A failed runtime manifest must trigger a clean clone with text conversion disabled'
+}
+if ($bootstrap -notmatch 'Get-CriticalManifestFailure') {
+    throw 'Runtime manifest failures must report the failing file or format detail'
+}
 if ($bootstrap -notmatch 'Get-ChildItem \$JavaRoot -Filter java\.exe' -or
     $bootstrap -notmatch 'Join-Path \$candidateDirectory ''javaw\.exe''') {
     throw 'Java version must be checked with java.exe before returning javaw.exe'

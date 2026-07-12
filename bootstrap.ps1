@@ -116,7 +116,7 @@ function Update-Repository([string]$GitExe) {
     & $GitExe config --global core.longpaths true
     if (-not (Test-Path (Join-Path $RepoRoot '.git'))) {
         Write-Step '正在克隆公开运行仓库...'
-        & $GitExe clone --depth 1 $RepoUrl $RepoRoot
+        & $GitExe clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
     } else {
         Write-Step '正在检查运行仓库更新...'
         & $GitExe -C $RepoRoot fetch origin main --depth 1
@@ -132,15 +132,21 @@ function Test-Hash([string]$Path, [string]$Expected) {
 }
 
 function Test-CriticalManifest([string]$Root) {
+    return -not (Get-CriticalManifestFailure $Root)
+}
+
+function Get-CriticalManifestFailure([string]$Root) {
     $manifest = Join-Path $Root 'manifest-critical.sha256'
-    if (-not (Test-Path $manifest)) { return $false }
+    if (-not (Test-Path $manifest)) { return '缺少 manifest-critical.sha256' }
     foreach ($line in Get-Content $manifest -Encoding UTF8) {
         if ([string]::IsNullOrWhiteSpace($line)) { continue }
-        if ($line -notmatch '^([0-9A-Fa-f]{64}) \*(.+)$') { return $false }
+        if ($line -notmatch '^([0-9A-Fa-f]{64}) \*(.+)$') { return "清单格式错误：$line" }
         $path = Join-Path $Root $Matches[2].Replace('/', '\')
-        if (-not (Test-Hash $path $Matches[1])) { return $false }
+        if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { return "缺少文件：$($Matches[2])" }
+        $actual = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash
+        if ($actual -ne $Matches[1].ToUpperInvariant()) { return "文件校验失败：$($Matches[2])（实际 $actual）" }
     }
-    return $true
+    return $null
 }
 
 function Install-RuntimePayload {
@@ -212,7 +218,14 @@ try {
     $git = Find-Git
     if (-not $git) { $git = Install-Git }
     Update-Repository $git
-    if (-not (Test-CriticalManifest $AppRoot)) { throw '仓库中的运行文件校验失败，请重新运行脚本更新仓库。' }
+    if (-not (Test-CriticalManifest $AppRoot)) {
+        Write-Step '检测到旧安装文件校验失败，正在自动执行全新克隆修复...'
+        Remove-Item -LiteralPath $RepoRoot -Recurse -Force
+        & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
+        if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+    }
+    $manifestFailure = Get-CriticalManifestFailure $AppRoot
+    if ($manifestFailure) { throw "仓库中的运行文件校验失败：$manifestFailure" }
     $release = [pscustomobject]@{ buildId = (Get-Content (Join-Path $AppRoot 'BUILD-ID.txt') -Raw).Trim() }
 
     $java = $null
