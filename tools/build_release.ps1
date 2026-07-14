@@ -65,6 +65,7 @@ $sourceSha = (Get-FileHash $SourceAsset -Algorithm SHA256).Hash
 
 $release = [ordered]@{
     buildId = $BuildId
+    delivery = 'git'
     tag = "v$BuildId"
     assetName = $AssetName
     sha256 = $sha
