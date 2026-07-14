@@ -175,26 +175,11 @@ function Install-RuntimePayload {
 }
 
 function Sync-DiyPayload {
-    $source = Join-Path $AppRoot 'managed\custom'
-    $forgeCustom = Join-Path ([Environment]::GetFolderPath('ApplicationData')) 'Forge\custom'
-    $cardCache = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Forge\Cache\pics\cards'
-    $tokenCache = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Forge\Cache\pics\tokens'
-
-    function Copy-Files([string]$From, [string]$To, [string]$Pattern) {
-        if (-not (Test-Path $From)) { return }
-        Get-ChildItem $From -Recurse -File -Filter $Pattern | ForEach-Object {
-            $relative = $_.FullName.Substring($From.Length).TrimStart('\')
-            $target = Join-Path $To $relative
-            New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null
-            Copy-Item -LiteralPath $_.FullName -Destination $target -Force
-        }
+    $syncScript = Join-Path $RepoRoot 'tools\sync_profile.ps1'
+    if (-not (Test-Path -LiteralPath $syncScript -PathType Leaf)) {
+        throw 'Runtime profile sync helper is missing.'
     }
-
-    Copy-Files (Join-Path $source 'cards') (Join-Path $forgeCustom 'cards') '*.txt'
-    Copy-Files (Join-Path $source 'editions') (Join-Path $forgeCustom 'editions') '*.txt'
-    Copy-Files (Join-Path $source 'tokens') (Join-Path $forgeCustom 'tokens') '*.txt'
-    Copy-Files (Join-Path $source 'cards\pictures') $cardCache '*'
-    Copy-Files (Join-Path $source 'tokens\pictures') $tokenCache '*'
+    & $syncScript -AppRoot $AppRoot
 }
 
 function Disable-IncompatibleLockedGauntlets {

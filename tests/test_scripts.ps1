@@ -11,6 +11,10 @@ foreach ($file in @('bootstrap.ps1', 'tools\build_release.ps1')) {
 if ($errors.Count -gt 0) { $errors | Format-List; exit 1 }
 $selfTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'bootstrap.ps1') -SelfTest
 if ($LASTEXITCODE -ne 0 -or $selfTest -notcontains 'SELFTEST=OK') { throw 'bootstrap self-test failed' }
+$profileSyncTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'tests\test_profile_sync.ps1')
+if ($LASTEXITCODE -ne 0 -or $profileSyncTest -notcontains 'PROFILE_SYNC_TESTS=OK') {
+    throw 'profile sync integration test failed'
+}
 $bootstrap = Get-Content (Join-Path $root 'bootstrap.ps1') -Raw -Encoding UTF8
 if ($bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
     throw 'winget output must be sent to Out-Host instead of leaking into Install-Git return values'
@@ -42,6 +46,10 @@ if ($bootstrap -notmatch 'function Disable-IncompatibleLockedGauntlets' -or
     $bootstrap -notmatch "Get-ChildItem .* -Filter '\*\.dat'" -or
     $bootstrap -notmatch 'Disable-IncompatibleLockedGauntlets') {
     throw 'Bootstrap must disable incompatible bundled gauntlet data before Forge starts'
+}
+if ($bootstrap -notmatch 'Join-Path \$RepoRoot ''tools\\sync_profile\.ps1''' -or
+    $bootstrap -notmatch '& \$syncScript -AppRoot \$AppRoot') {
+    throw 'Bootstrap must use the verified profile sync helper before Forge starts'
 }
 $cmdLines = Get-Content (Join-Path $root '一键安装并启动.cmd') -Encoding UTF8
 $codePageLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '^chcp 65001' })
@@ -84,6 +92,24 @@ foreach ($line in Get-Content -LiteralPath $manifestPath -Encoding UTF8) {
     $worktreeObject = (& git -C $root hash-object --no-filters $payloadPath).Trim()
     if ($LASTEXITCODE -ne 0 -or $indexObject -ne $worktreeObject) {
         throw "Git index bytes differ from manifest payload bytes: $relative"
+    }
+}
+
+$release = Get-Content -LiteralPath (Join-Path $root 'release.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$payloadBuildId = (Get-Content -LiteralPath (Join-Path $root 'app\BUILD-ID.txt') -Raw -Encoding UTF8).Trim()
+if ($release.buildId -ne $payloadBuildId -or $release.delivery -ne 'git') {
+    throw 'Git delivery metadata must match the committed runtime payload build ID'
+}
+
+$editionPath = Join-Path $root 'app\managed\custom\editions\Placeholder_Set.txt'
+$artRoot = Join-Path $root 'app\managed\custom\cards\pictures\PH01'
+foreach ($line in Get-Content -LiteralPath $editionPath -Encoding UTF8) {
+    if ($line -notmatch '^\d+\s+\S+\s+(.+?)\s+@Custom\s*$') { continue }
+    $cardName = $Matches[1]
+    $pattern = '^' + [regex]::Escape($cardName) + '(?:\d+)?\.artcrop\.jpg$'
+    $art = @(Get-ChildItem -LiteralPath $artRoot -File | Where-Object { $_.Name -match $pattern })
+    if ($art.Count -eq 0) {
+        throw "Custom card is missing Crop-compatible artwork: $cardName"
     }
 }
 Write-Output 'SCRIPT_TESTS=OK'
