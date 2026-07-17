@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $root = Resolve-Path (Join-Path $PSScriptRoot '..')
 $errors = @()
-foreach ($file in @('bootstrap.ps1', 'tools\build_release.ps1')) {
+foreach ($file in @('bootstrap.ps1', 'tools\build_release.ps1', 'tools\publish_git_payload.ps1')) {
     $path = Join-Path $root $file
     $tokens = $null
     $parseErrors = $null
@@ -41,6 +41,17 @@ if ($bootstrap -notmatch "'-Xmx2048m'" -or
     $bootstrap -notmatch 'RedirectStandardError' -or
     $bootstrap -notmatch 'WaitForExit\(10000\)') {
     throw 'Forge launch must use a modest heap, capture logs, and detect early process exit'
+}
+if ($bootstrap -notmatch 'Join-Path \$AppRoot ''overlays''' -or
+    $bootstrap -notmatch '\[IO\.Path\]::PathSeparator' -or
+    $bootstrap -notmatch '\$classPathEntries') {
+    throw 'Forge launch must prepend optional module overlay JARs to the aggregate JAR'
+}
+$incrementalPublisher = Get-Content (Join-Path $root 'tools\publish_git_payload.ps1') -Raw -Encoding UTF8
+if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or
+    $incrementalPublisher -notmatch 'PUBLISH_GIT_PAYLOAD=OK' -or
+    $incrementalPublisher -notmatch 'moduleOverlays') {
+    throw 'Incremental Git publisher must update payloads without rebuilding release ZIP files'
 }
 if ($bootstrap -notmatch 'function Disable-IncompatibleLockedGauntlets' -or
     $bootstrap -notmatch "Get-ChildItem .* -Filter '\*\.dat'" -or

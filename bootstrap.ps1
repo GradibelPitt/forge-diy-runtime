@@ -234,6 +234,14 @@ try {
     if (-not $InstallOnly) {
         $jar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' | Select-Object -First 1
         if (-not $jar) { throw '运行目录中没有 Forge 聚合 JAR。' }
+        $overlayRoot = Join-Path $AppRoot 'overlays'
+        $overlayJars = @()
+        if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
+            $overlayJars = @(Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File |
+                Sort-Object Name)
+        }
+        $classPathEntries = @($overlayJars | ForEach-Object { $_.FullName }) + @($jar.FullName)
+        $classPath = [string]::Join([IO.Path]::PathSeparator, $classPathEntries)
         $javaDirectory = Split-Path $java -Parent
         $consoleJava = Join-Path $javaDirectory 'java.exe'
         if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
@@ -242,7 +250,7 @@ try {
         $stdoutLog = Join-Path $logRoot 'forge-stdout.log'
         $stderrLog = Join-Path $logRoot 'forge-stderr.log'
         Remove-Item -LiteralPath $stdoutLog, $stderrLog -Force -ErrorAction SilentlyContinue
-        $arguments = @('-Xmx2048m', '-Dio.netty.tryReflectionSetAccessible=true', '-Dfile.encoding=UTF-8', '-cp', "`"$($jar.FullName)`"", 'forge.view.Main')
+        $arguments = @('-Xmx2048m', '-Dio.netty.tryReflectionSetAccessible=true', '-Dfile.encoding=UTF-8', '-cp', "`"$classPath`"", 'forge.view.Main')
         $process = Start-Process -FilePath $consoleJava -ArgumentList $arguments -WorkingDirectory $AppRoot -WindowStyle Hidden -RedirectStandardOutput $stdoutLog -RedirectStandardError $stderrLog -PassThru
         if ($process.WaitForExit(10000)) {
             throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。请把日志发给维护者：$stderrLog"
