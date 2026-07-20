@@ -38,8 +38,13 @@ if ($DesktopJar) {
 }
 
 $overlayNames = @()
+$overlayRoot = Join-Path $AppRoot 'overlays'
+if ($DesktopJar -and $Module.Count -eq 0 -and
+        (Test-Path -LiteralPath $overlayRoot -PathType Container)) {
+    Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File |
+        Remove-Item -Force
+}
 if ($Module.Count -gt 0) {
-    $overlayRoot = Join-Path $AppRoot 'overlays'
     New-Item -ItemType Directory -Path $overlayRoot -Force | Out-Null
     foreach ($moduleName in $Module) {
         if ($moduleName -notmatch '^forge-(core|game|ai|gui|gui-desktop)$') {
@@ -80,8 +85,14 @@ $aggregateJar = Get-ChildItem -LiteralPath $AppRoot -Filter '*-jar-with-dependen
     Select-Object -First 1
 if (-not $aggregateJar) { throw 'app 目录中没有桌面聚合 JAR。' }
 
-$critical = @('BUILD-ID.txt', 'forge.exe', $aggregateJar.Name, 'res\languages\cardnames-zh-CN.txt')
-$overlayRoot = Join-Path $AppRoot 'overlays'
+$critical = @(
+    'BUILD-ID.txt',
+    'forge.exe',
+    $aggregateJar.Name,
+    'res\languages\cardnames-zh-CN.txt',
+    'res\languages\en-US.properties',
+    'res\languages\zh-CN.properties'
+)
 if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
     $critical += Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File | ForEach-Object {
         $_.FullName.Substring($AppRoot.Length + 1)
