@@ -53,10 +53,9 @@ if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or
     $incrementalPublisher -notmatch 'moduleOverlays') {
     throw 'Incremental Git publisher must update payloads without rebuilding release ZIP files'
 }
-if ($bootstrap -notmatch 'function Disable-IncompatibleLockedGauntlets' -or
-    $bootstrap -notmatch "Get-ChildItem .* -Filter '\*\.dat'" -or
-    $bootstrap -notmatch 'Disable-IncompatibleLockedGauntlets') {
-    throw 'Bootstrap must disable incompatible bundled gauntlet data before Forge starts'
+if ($bootstrap -match 'Disable-IncompatibleLockedGauntlets' -or
+    $bootstrap -match "Get-ChildItem .* -Filter '\*\.dat'") {
+    throw 'Bootstrap must not retain the retired gauntlet compatibility workaround'
 }
 if ($bootstrap -notmatch 'Join-Path \$RepoRoot ''tools\\sync_profile\.ps1''' -or
     $bootstrap -notmatch '& \$syncScript -AppRoot \$AppRoot') {
