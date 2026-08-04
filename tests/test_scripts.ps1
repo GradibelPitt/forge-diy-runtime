@@ -53,6 +53,9 @@ if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or
     $incrementalPublisher -notmatch 'moduleOverlays') {
     throw 'Incremental Git publisher must update payloads without rebuilding release ZIP files'
 }
+if ($incrementalPublisher -notmatch '(?s)if \(\$SyncCustom\).*?\$SyncLocalization\s*=\s*\$true') {
+    throw 'Publishing custom cards must also publish the zh-CN card localization resource'
+}
 if ($bootstrap -match 'Disable-IncompatibleLockedGauntlets' -or
     $bootstrap -match "Get-ChildItem .* -Filter '\*\.dat'") {
     throw 'Bootstrap must not retain the retired gauntlet compatibility workaround'

@@ -66,6 +66,10 @@ if ($Module.Count -gt 0) {
 }
 
 if ($SyncCustom) {
+    # Custom cards and their translated type/oracle text are one payload.
+    # Keeping this implicit prevents a newly published card from falling back
+    # to its internal English text in a zh-CN client.
+    $SyncLocalization = $true
     Copy-Tree (Join-Path $ForgeRoot 'custom\cards') (Join-Path $AppRoot 'managed\custom\cards')
     Copy-Tree (Join-Path $ForgeRoot 'custom\tokens') (Join-Path $AppRoot 'managed\custom\tokens')
     Copy-Tree (Join-Path $ForgeRoot 'custom\editions') (Join-Path $AppRoot 'managed\custom\editions')
@@ -75,6 +79,11 @@ if ($SyncLocalization) {
     $sourceLocalization = Join-Path $ForgeRoot 'forge-gui\res\languages\cardnames-zh-CN.txt'
     $destinationLocalization = Join-Path $AppRoot 'res\languages\cardnames-zh-CN.txt'
     Copy-Item -LiteralPath $sourceLocalization -Destination $destinationLocalization -Force
+    $sourceLocalizationHash = (Get-FileHash -LiteralPath $sourceLocalization -Algorithm SHA256).Hash
+    $destinationLocalizationHash = (Get-FileHash -LiteralPath $destinationLocalization -Algorithm SHA256).Hash
+    if ($sourceLocalizationHash -ne $destinationLocalizationHash) {
+        throw '简中卡牌资源同步后哈希不一致。'
+    }
 }
 
 $sourceCommit = (& git -C $ForgeRoot rev-parse HEAD).Trim()
