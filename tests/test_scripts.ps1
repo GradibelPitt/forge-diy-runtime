@@ -56,6 +56,9 @@ if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or
 if ($incrementalPublisher -notmatch '(?s)if \(\$SyncCustom\).*?\$SyncLocalization\s*=\s*\$true') {
     throw 'Publishing custom cards must also publish the zh-CN card localization resource'
 }
+if ($incrementalPublisher -notmatch '(?s)-not \$DesktopJar.*?\$Module\.Count -eq 0.*?Get-ChildItem.*?overlayNames') {
+    throw 'A card-only payload publish must preserve existing module overlay metadata'
+}
 if ($bootstrap -match 'Disable-IncompatibleLockedGauntlets' -or
     $bootstrap -match "Get-ChildItem .* -Filter '\*\.dat'") {
     throw 'Bootstrap must not retain the retired gauntlet compatibility workaround'

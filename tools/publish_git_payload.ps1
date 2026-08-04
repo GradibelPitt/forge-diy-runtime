@@ -39,6 +39,13 @@ if ($DesktopJar) {
 
 $overlayNames = @()
 $overlayRoot = Join-Path $AppRoot 'overlays'
+if (-not $DesktopJar -and $Module.Count -eq 0 -and
+        (Test-Path -LiteralPath $overlayRoot -PathType Container)) {
+    $existingOverlayNames = Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File |
+        Sort-Object Name |
+        Select-Object -ExpandProperty Name
+    $overlayNames += @($existingOverlayNames)
+}
 if ($DesktopJar -and $Module.Count -eq 0 -and
         (Test-Path -LiteralPath $overlayRoot -PathType Container)) {
     Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File |
