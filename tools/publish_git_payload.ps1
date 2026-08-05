@@ -5,7 +5,8 @@
     [string]$DesktopJar,
     [string[]]$Module = @(),
     [switch]$SyncCustom,
-    [switch]$SyncLocalization
+    [switch]$SyncLocalization,
+    [switch]$SyncSkins
 )
 
 $ErrorActionPreference = 'Stop'
@@ -72,6 +73,14 @@ if ($Module.Count -gt 0) {
     }
 }
 
+# Release metadata must describe every overlay that the launcher will prepend,
+# including overlays retained from earlier incremental publishes.
+if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
+    $overlayNames = @(Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File |
+        Sort-Object Name |
+        Select-Object -ExpandProperty Name)
+}
+
 if ($SyncCustom) {
     # Custom cards and their translated type/oracle text are one payload.
     # Keeping this implicit prevents a newly published card from falling back
@@ -91,6 +100,10 @@ if ($SyncLocalization) {
     if ($sourceLocalizationHash -ne $destinationLocalizationHash) {
         throw '简中卡牌资源同步后哈希不一致。'
     }
+}
+
+if ($SyncSkins) {
+    Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res\skins') (Join-Path $AppRoot 'res\skins')
 }
 
 $sourceCommit = (& git -C $ForgeRoot rev-parse HEAD).Trim()
@@ -117,6 +130,12 @@ if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
 $managedRoot = Join-Path $AppRoot 'managed'
 $critical += Get-ChildItem -LiteralPath $managedRoot -Recurse -File | ForEach-Object {
     $_.FullName.Substring($AppRoot.Length + 1)
+}
+$skinsRoot = Join-Path $AppRoot 'res\skins'
+if (Test-Path -LiteralPath $skinsRoot -PathType Container) {
+    $critical += Get-ChildItem -LiteralPath $skinsRoot -Recurse -File | ForEach-Object {
+        $_.FullName.Substring($AppRoot.Length + 1)
+    }
 }
 $manifestLines = foreach ($relative in $critical | Sort-Object -Unique) {
     $hash = (Get-FileHash -LiteralPath (Join-Path $AppRoot $relative) -Algorithm SHA256).Hash

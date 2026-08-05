@@ -59,6 +59,12 @@ if ($incrementalPublisher -notmatch '(?s)if \(\$SyncCustom\).*?\$SyncLocalizatio
 if ($incrementalPublisher -notmatch '(?s)-not \$DesktopJar.*?\$Module\.Count -eq 0.*?Get-ChildItem.*?overlayNames') {
     throw 'A card-only payload publish must preserve existing module overlay metadata'
 }
+if ($incrementalPublisher -notmatch '(?s)Release metadata must describe every overlay.*?Get-ChildItem.*?overlayNames') {
+    throw 'Incremental module publishes must retain every active overlay in release metadata'
+}
+if ($incrementalPublisher -notmatch '(?s)if \(\$SyncSkins\).*?forge-gui\\res\\skins.*?res\\skins') {
+    throw 'Runtime publishing must support verified built-in skin synchronization'
+}
 if ($bootstrap -match 'Disable-IncompatibleLockedGauntlets' -or
     $bootstrap -match "Get-ChildItem .* -Filter '\*\.dat'") {
     throw 'Bootstrap must not retain the retired gauntlet compatibility workaround'
@@ -99,10 +105,12 @@ if (-not (Test-Path -LiteralPath $attributesPath) -or
     throw 'Runtime payload must disable Git text conversion so manifest hashes survive fresh clones'
 }
 $manifestPath = Join-Path $root 'app\manifest-critical.sha256'
+$manifestEntries = @{}
 foreach ($line in Get-Content -LiteralPath $manifestPath -Encoding UTF8) {
     if ([string]::IsNullOrWhiteSpace($line)) { continue }
     if ($line -notmatch '^[0-9A-Fa-f]{64} \*(.+)$') { throw "Invalid manifest entry: $line" }
     $relative = $Matches[1]
+    $manifestEntries[$relative] = $true
     $payloadPath = Join-Path $root (Join-Path 'app' $relative.Replace('/', '\'))
     $indexObject = (& git -C $root rev-parse ":app/$relative").Trim()
     $worktreeObject = (& git -C $root hash-object --no-filters $payloadPath).Trim()
@@ -111,10 +119,24 @@ foreach ($line in Get-Content -LiteralPath $manifestPath -Encoding UTF8) {
     }
 }
 
+$skinRoot = Join-Path $root 'app\res\skins'
+foreach ($skinFile in Get-ChildItem -LiteralPath $skinRoot -Recurse -File) {
+    $relative = $skinFile.FullName.Substring((Join-Path $root 'app').Length + 1).Replace('\', '/')
+    if (-not $manifestEntries.ContainsKey($relative)) {
+        throw "Built-in skin is missing from critical manifest: $relative"
+    }
+}
+
 $release = Get-Content -LiteralPath (Join-Path $root 'release.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $payloadBuildId = (Get-Content -LiteralPath (Join-Path $root 'app\BUILD-ID.txt') -Raw -Encoding UTF8).Trim()
 if ($release.buildId -ne $payloadBuildId -or $release.delivery -ne 'git') {
     throw 'Git delivery metadata must match the committed runtime payload build ID'
+}
+$actualOverlays = @(Get-ChildItem -LiteralPath (Join-Path $root 'app\overlays') -Filter '*.jar' -File |
+    Sort-Object Name | Select-Object -ExpandProperty Name)
+$declaredOverlays = @($release.moduleOverlays | Sort-Object)
+if (@(Compare-Object $actualOverlays $declaredOverlays).Count -ne 0) {
+    throw 'Release metadata must list every active module overlay'
 }
 
 $editionPath = Join-Path $root 'app\managed\custom\editions\Placeholder_Set.txt'
