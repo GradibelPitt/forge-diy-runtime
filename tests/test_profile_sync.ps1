@@ -28,6 +28,20 @@ try {
     [IO.File]::WriteAllText($tokenSource, "Name:$tokenName`r`n", [Text.UTF8Encoding]::new($false))
     [IO.File]::WriteAllBytes($tokenImageSource, [byte[]](2, 4, 6, 8))
 
+    $hearthstoneName = -join ([char[]](0x7089, 0x77F3, 0x4F20, 0x8BF4))
+    $retiredCard = Join-Path $roaming "Forge\custom\cards\colorless\$hearthstoneName.txt"
+    New-Item -ItemType Directory -Path (Split-Path $retiredCard -Parent) -Force | Out-Null
+    [IO.File]::WriteAllText($retiredCard, "Name:$hearthstoneName`r`n", [Text.UTF8Encoding]::new($false))
+    $legacyDeck = Join-Path $roaming 'Forge\decks\constructed\legacy-hearthstone.dck'
+    New-Item -ItemType Directory -Path (Split-Path $legacyDeck -Parent) -Force | Out-Null
+    [IO.File]::WriteAllLines($legacyDeck, @(
+        '[metadata]',
+        'Name=Legacy Hearthstone',
+        '[Main]',
+        "1 $hearthstoneName|PH01|[14]",
+        '1 Plains|UST|[212]'
+    ), [Text.UTF8Encoding]::new($false))
+
     $preferences = Join-Path $roaming 'Forge\preferences\forge.preferences'
     New-Item -ItemType Directory -Path (Split-Path $preferences -Parent) -Force | Out-Null
     [IO.File]::WriteAllLines($preferences, @(
@@ -66,6 +80,23 @@ try {
     $cardArtLines = @($preferenceLines | Where-Object { $_ -match '^UI_CARD_ART_FORMAT=' })
     if ($cardArtLines.Count -ne 1 -or $cardArtLines[0] -ne 'UI_CARD_ART_FORMAT=Crop') {
         throw 'Profile sync must force Forge card art format to Crop'
+    }
+    if (Test-Path -LiteralPath $retiredCard) {
+        throw 'Profile sync must remove the retired Hearthstone rule card'
+    }
+    $migratedDeckLines = [IO.File]::ReadAllLines($legacyDeck, [Text.Encoding]::UTF8)
+    if ($migratedDeckLines -match [regex]::Escape($hearthstoneName)) {
+        throw 'Profile sync must remove the retired Hearthstone card from saved decks'
+    }
+    if ($migratedDeckLines -notcontains '1 Plains|UST|[212]') {
+        throw 'Profile sync must preserve unrelated saved deck cards'
+    }
+    $legacyBackup = $legacyDeck + '.pre-hearthstone-mode.bak'
+    if (-not (Test-Path -LiteralPath $legacyBackup -PathType Leaf)) {
+        throw 'Profile sync must back up migrated saved decks'
+    }
+    if (-not ([IO.File]::ReadAllText($legacyBackup, [Text.Encoding]::UTF8).Contains($hearthstoneName))) {
+        throw 'Saved deck backup must retain the retired Hearthstone entry'
     }
 
     Write-Output 'PROFILE_SYNC_TESTS=OK'

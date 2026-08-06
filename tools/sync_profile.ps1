@@ -64,17 +64,60 @@ function Set-CardArtPreference([string]$PreferencesFile) {
     }
 }
 
+function Remove-RetiredHearthstoneContent(
+    [string]$ForgeCustomRoot,
+    [string]$ForgeDeckRoot
+) {
+    $hearthstoneName = -join ([char[]](0x7089, 0x77F3, 0x4F20, 0x8BF4))
+    $retiredCard = Join-Path $ForgeCustomRoot "cards\colorless\$hearthstoneName.txt"
+    if (Test-Path -LiteralPath $retiredCard -PathType Leaf) {
+        Remove-Item -LiteralPath $retiredCard -Force
+    }
+
+    if (-not (Test-Path -LiteralPath $ForgeDeckRoot -PathType Container)) {
+        return 0
+    }
+
+    $migrated = 0
+    Get-ChildItem -LiteralPath $ForgeDeckRoot -Recurse -Filter '*.dck' -File | ForEach-Object {
+        $lines = [IO.File]::ReadAllLines($_.FullName, [Text.Encoding]::UTF8)
+        $updated = New-Object 'System.Collections.Generic.List[string]'
+        $removed = $false
+        foreach ($line in $lines) {
+            $trimmed = $line.Trim()
+            $request = $trimmed -replace '^\d+\s+', ''
+            if ($trimmed -match '^\d+\s+' -and $request.StartsWith("$hearthstoneName|PH01")) {
+                $removed = $true
+            } else {
+                $updated.Add($line)
+            }
+        }
+        if ($removed) {
+            $backup = $_.FullName + '.pre-hearthstone-mode.bak'
+            if (-not (Test-Path -LiteralPath $backup -PathType Leaf)) {
+                Copy-Item -LiteralPath $_.FullName -Destination $backup
+            }
+            [IO.File]::WriteAllLines($_.FullName, $updated, [Text.UTF8Encoding]::new($false))
+            $script:migratedHearthstoneDecks++
+        }
+    }
+    return $script:migratedHearthstoneDecks
+}
+
 $source = Join-Path $AppRoot 'managed\custom'
 $forgeCustom = Join-Path $RoamingAppData 'Forge\custom'
 $cardCache = Join-Path $LocalAppData 'Forge\Cache\pics\cards'
 $tokenCache = Join-Path $LocalAppData 'Forge\Cache\pics\tokens'
 $preferences = Join-Path $RoamingAppData 'Forge\preferences\forge.preferences'
+$constructedDecks = Join-Path $RoamingAppData 'Forge\decks\constructed'
 
 $cardCount = Copy-VerifiedFiles (Join-Path $source 'cards') (Join-Path $forgeCustom 'cards') '*.txt'
 $editionCount = Copy-VerifiedFiles (Join-Path $source 'editions') (Join-Path $forgeCustom 'editions') '*.txt'
 $tokenCount = Copy-VerifiedFiles (Join-Path $source 'tokens') (Join-Path $forgeCustom 'tokens') '*.txt'
 $cardImageCount = Copy-VerifiedFiles (Join-Path $source 'cards\pictures') $cardCache '*'
 $tokenImageCount = Copy-VerifiedFiles (Join-Path $source 'tokens\pictures') $tokenCache '*'
+$migratedHearthstoneDecks = 0
+Remove-RetiredHearthstoneContent $forgeCustom $constructedDecks | Out-Null
 Set-CardArtPreference $preferences
 
 Write-Output "SYNCED_CARDS=$cardCount"
@@ -82,4 +125,5 @@ Write-Output "SYNCED_EDITIONS=$editionCount"
 Write-Output "SYNCED_TOKENS=$tokenCount"
 Write-Output "SYNCED_CARD_IMAGES=$cardImageCount"
 Write-Output "SYNCED_TOKEN_IMAGES=$tokenImageCount"
+Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
 Write-Output 'CARD_ART_FORMAT=Crop'
