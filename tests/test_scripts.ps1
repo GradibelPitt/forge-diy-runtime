@@ -141,7 +141,14 @@ if (@(Compare-Object $actualOverlays $declaredOverlays).Count -ne 0) {
 
 $editionPath = Join-Path $root 'app\managed\custom\editions\Placeholder_Set.txt'
 $artRoot = Join-Path $root 'app\managed\custom\cards\pictures\PH01'
-foreach ($line in Get-Content -LiteralPath $editionPath -Encoding UTF8) {
+$editionLines = @(Get-Content -LiteralPath $editionPath -Encoding UTF8)
+foreach ($collectorNumber in 90..99) {
+    $matchingRows = @($editionLines | Where-Object { $_ -match "^$collectorNumber\s" })
+    if ($matchingRows.Count -ne 1) {
+        throw "PH01 collector number $collectorNumber must have exactly one runtime row"
+    }
+}
+foreach ($line in $editionLines) {
     if ($line -notmatch '^\d+\s+\S+\s+(.+?)\s+@Custom\s*$') { continue }
     $cardName = $Matches[1]
     $pattern = '^' + [regex]::Escape($cardName) + '(?:\d+)?\.artcrop\.jpg$'
@@ -149,5 +156,11 @@ foreach ($line in Get-Content -LiteralPath $editionPath -Encoding UTF8) {
     if ($art.Count -eq 0) {
         throw "Custom card is missing Crop-compatible artwork: $cardName"
     }
+}
+$demonfireScript = Join-Path $root 'app\managed\custom\cards\black\demonfire_custom.txt'
+$demonfireArt = Join-Path $artRoot 'Demonfire (Custom).full.jpg'
+if (-not (Test-Path -LiteralPath $demonfireScript -PathType Leaf) -or
+    -not (Test-Path -LiteralPath $demonfireArt -PathType Leaf)) {
+    throw 'PH01 collector number 98 must retain its script and full-card artwork'
 }
 Write-Output 'SCRIPT_TESTS=OK'
