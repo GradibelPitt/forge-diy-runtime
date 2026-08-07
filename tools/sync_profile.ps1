@@ -105,7 +105,9 @@ function Remove-RetiredHearthstoneContent(
 }
 
 $source = Join-Path $AppRoot 'managed\custom'
+$managedDecks = Join-Path $AppRoot 'managed\decks'
 $forgeCustom = Join-Path $RoamingAppData 'Forge\custom'
+$forgeDecks = Join-Path $RoamingAppData 'Forge\decks'
 $cardCache = Join-Path $LocalAppData 'Forge\Cache\pics\cards'
 $tokenCache = Join-Path $LocalAppData 'Forge\Cache\pics\tokens'
 $preferences = Join-Path $RoamingAppData 'Forge\preferences\forge.preferences'
@@ -118,6 +120,10 @@ $cardImageCount = Copy-VerifiedFiles (Join-Path $source 'cards\pictures') $cardC
 $tokenImageCount = Copy-VerifiedFiles (Join-Path $source 'tokens\pictures') $tokenCache '*'
 $migratedHearthstoneDecks = 0
 Remove-RetiredHearthstoneContent $forgeCustom $constructedDecks | Out-Null
+$constructedDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'constructed') `
+    (Join-Path $forgeDecks 'constructed\ForgeDIY') '*.dck'
+$commanderDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'commander') `
+    (Join-Path $forgeDecks 'commander\ForgeDIY') '*.dck'
 Set-CardArtPreference $preferences
 
 Write-Output "SYNCED_CARDS=$cardCount"
@@ -125,5 +131,7 @@ Write-Output "SYNCED_EDITIONS=$editionCount"
 Write-Output "SYNCED_TOKENS=$tokenCount"
 Write-Output "SYNCED_CARD_IMAGES=$cardImageCount"
 Write-Output "SYNCED_TOKEN_IMAGES=$tokenImageCount"
+Write-Output "SYNCED_CONSTRUCTED_DECKS=$constructedDeckCount"
+Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
 Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
 Write-Output 'CARD_ART_FORMAT=Crop'

@@ -19,7 +19,16 @@ try {
     $cardImageSource = Join-Path $managed ("cards\pictures\PH01\$cardName.artcrop.jpg")
     $tokenSource = Join-Path $managed ("tokens\$tokenName.txt")
     $tokenImageSource = Join-Path $managed 'tokens\pictures\test_token.jpg'
-    foreach ($path in @($cardSource, $cardImageSource, $tokenSource, $tokenImageSource)) {
+    $constructedDeckSource = Join-Path $appRoot 'managed\decks\constructed\shared-constructed.dck'
+    $commanderDeckSource = Join-Path $appRoot 'managed\decks\commander\shared-commander.dck'
+    foreach ($path in @(
+        $cardSource,
+        $cardImageSource,
+        $tokenSource,
+        $tokenImageSource,
+        $constructedDeckSource,
+        $commanderDeckSource
+    )) {
         New-Item -ItemType Directory -Path (Split-Path $path -Parent) -Force | Out-Null
     }
 
@@ -27,6 +36,31 @@ try {
     [IO.File]::WriteAllBytes($cardImageSource, [byte[]](1, 3, 3, 7, 9))
     [IO.File]::WriteAllText($tokenSource, "Name:$tokenName`r`n", [Text.UTF8Encoding]::new($false))
     [IO.File]::WriteAllBytes($tokenImageSource, [byte[]](2, 4, 6, 8))
+    [IO.File]::WriteAllLines($constructedDeckSource, @(
+        '[metadata]',
+        'Name=Shared Constructed',
+        'Deck Type=Constructed',
+        '[Main]',
+        '1 Plains|UST|[212]'
+    ), [Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllLines($commanderDeckSource, @(
+        '[metadata]',
+        'Name=Shared Commander',
+        '[Main]',
+        '1 Island|UST|[213]',
+        '[Commander]',
+        '1 Isamaru, Hound of Konda|CHK|[19]'
+    ), [Text.UTF8Encoding]::new($false))
+
+    $unrelatedDeck = Join-Path $roaming 'Forge\decks\constructed\personal-local.dck'
+    New-Item -ItemType Directory -Path (Split-Path $unrelatedDeck -Parent) -Force | Out-Null
+    [IO.File]::WriteAllLines($unrelatedDeck, @(
+        '[metadata]',
+        'Name=Personal Local',
+        '[Main]',
+        '1 Swamp|UST|[214]'
+    ), [Text.UTF8Encoding]::new($false))
+    $unrelatedDeckHash = (Get-FileHash -LiteralPath $unrelatedDeck -Algorithm SHA256).Hash
 
     $hearthstoneName = -join ([char[]](0x7089, 0x77F3, 0x4F20, 0x8BF4))
     $retiredCard = Join-Path $roaming "Forge\custom\cards\colorless\$hearthstoneName.txt"
@@ -57,11 +91,17 @@ try {
     $cardImageTarget = Join-Path $local ("Forge\Cache\pics\cards\PH01\$cardName.artcrop.jpg")
     $tokenTarget = Join-Path $roaming ("Forge\custom\tokens\$tokenName.txt")
     $tokenImageTarget = Join-Path $local 'Forge\Cache\pics\tokens\test_token.jpg'
+    $constructedDeckTarget = Join-Path $roaming `
+        'Forge\decks\constructed\ForgeDIY\shared-constructed.dck'
+    $commanderDeckTarget = Join-Path $roaming `
+        'Forge\decks\commander\ForgeDIY\shared-commander.dck'
     foreach ($pair in @(
         @($cardSource, $cardTarget),
         @($cardImageSource, $cardImageTarget),
         @($tokenSource, $tokenTarget),
-        @($tokenImageSource, $tokenImageTarget)
+        @($tokenImageSource, $tokenImageTarget),
+        @($constructedDeckSource, $constructedDeckTarget),
+        @($commanderDeckSource, $commanderDeckTarget)
     )) {
         if (-not (Test-Path -LiteralPath $pair[1] -PathType Leaf)) {
             throw "Synced file is missing: $($pair[1])"
@@ -71,6 +111,10 @@ try {
         if ($sourceHash -ne $targetHash) {
             throw "Synced file hash differs: $($pair[1])"
         }
+    }
+
+    if ((Get-FileHash -LiteralPath $unrelatedDeck -Algorithm SHA256).Hash -ne $unrelatedDeckHash) {
+        throw 'Profile sync must preserve unrelated local constructed decks'
     }
 
     $preferenceLines = @(Get-Content -LiteralPath $preferences -Encoding UTF8)
