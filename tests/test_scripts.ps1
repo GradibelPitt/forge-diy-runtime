@@ -142,6 +142,28 @@ if (@(Compare-Object $actualOverlays $declaredOverlays).Count -ne 0) {
 $editionPath = Join-Path $root 'app\managed\custom\editions\Placeholder_Set.txt'
 $artRoot = Join-Path $root 'app\managed\custom\cards\pictures\PH01'
 $editionLines = @(Get-Content -LiteralPath $editionPath -Encoding UTF8)
+$recentHearthstoneCards = [ordered]@{
+    '111' = @('盗版之王托尼', 'multicolor\盗版之王托尼.txt')
+    '112' = @('冰霜新星', 'blue\冰霜新星.txt')
+    '113' = @('矿车难题', 'multicolor\矿车难题.txt')
+}
+$localizationLines = @(Get-Content -LiteralPath (Join-Path $root 'app\res\languages\cardnames-zh-CN.txt') -Encoding UTF8)
+foreach ($collectorNumber in $recentHearthstoneCards.Keys) {
+    $cardName, $relativeScript = $recentHearthstoneCards[$collectorNumber]
+    $matchingRows = @($editionLines | Where-Object {
+        $_ -match "^$collectorNumber\s+\S+\s+$([regex]::Escape($cardName))(?:\s+@.+)?$"
+    })
+    if ($matchingRows.Count -ne 1) {
+        throw "PH01 $collectorNumber must assign $cardName to the Hearthstone set"
+    }
+    $scriptPath = Join-Path $root (Join-Path 'app\managed\custom\cards' $relativeScript)
+    if (-not (Test-Path -LiteralPath $scriptPath -PathType Leaf)) {
+        throw "PH01 $collectorNumber is missing its runtime card script: $cardName"
+    }
+    if (@($localizationLines | Where-Object { $_ -match "^$([regex]::Escape($cardName))\|" }).Count -ne 1) {
+        throw "PH01 $collectorNumber must have exactly one zh-CN row: $cardName"
+    }
+}
 foreach ($collectorNumber in 90..99) {
     $matchingRows = @($editionLines | Where-Object { $_ -match "^$collectorNumber\s" })
     if ($matchingRows.Count -ne 1) {
