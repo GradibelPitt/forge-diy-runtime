@@ -89,6 +89,7 @@ if ($SyncCustom) {
     Copy-Tree (Join-Path $ForgeRoot 'custom\cards') (Join-Path $AppRoot 'managed\custom\cards')
     Copy-Tree (Join-Path $ForgeRoot 'custom\tokens') (Join-Path $AppRoot 'managed\custom\tokens')
     Copy-Tree (Join-Path $ForgeRoot 'custom\editions') (Join-Path $AppRoot 'managed\custom\editions')
+    Copy-Tree (Join-Path $ForgeRoot 'custom\music') (Join-Path $AppRoot 'managed\custom\music')
 }
 
 if ($SyncLocalization) {

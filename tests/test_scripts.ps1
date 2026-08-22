@@ -56,6 +56,13 @@ if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or
 if ($incrementalPublisher -notmatch '(?s)if \(\$SyncCustom\).*?\$SyncLocalization\s*=\s*\$true') {
     throw 'Publishing custom cards must also publish the zh-CN card localization resource'
 }
+if ($incrementalPublisher -notmatch "custom\\music'.*?managed\\custom\\music") {
+    throw 'Publishing custom content must retain the verified friend music set'
+}
+$fullPublisher = Get-Content (Join-Path $root 'tools\build_release.ps1') -Raw -Encoding UTF8
+if ($fullPublisher -notmatch "custom\\music'.*?managed\\custom\\music") {
+    throw 'Full runtime builds must include the verified friend music set'
+}
 if ($incrementalPublisher -notmatch '(?s)-not \$DesktopJar.*?\$Module\.Count -eq 0.*?Get-ChildItem.*?overlayNames') {
     throw 'A card-only payload publish must preserve existing module overlay metadata'
 }
@@ -116,6 +123,23 @@ foreach ($line in Get-Content -LiteralPath $manifestPath -Encoding UTF8) {
     $worktreeObject = (& git -C $root hash-object --no-filters $payloadPath).Trim()
     if ($LASTEXITCODE -ne 0 -or $indexObject -ne $worktreeObject) {
         throw "Git index bytes differ from manifest payload bytes: $relative"
+    }
+}
+
+$expectedMusic = [ordered]@{
+    'managed/custom/music/Pull Up a Chair/menus/Pull Up a Chair.mp3' =
+        '5761979E0E71C1C5AC2CFAE664DCA0069FB39DFDB900834B7B61A2BA73D1CAFB'
+    'managed/custom/music/Pull Up a Chair/match/Bad Down to the Molten Core.mp3' =
+        '378F65639E84BF246FDE8220C5C65D502288CC30B37A242398026165A2E6EDB6'
+}
+foreach ($relative in $expectedMusic.Keys) {
+    if (-not $manifestEntries.ContainsKey($relative)) {
+        throw "Friend music is missing from the critical manifest: $relative"
+    }
+    $musicPath = Join-Path $root (Join-Path 'app' $relative.Replace('/', '\'))
+    $actualHash = (Get-FileHash -LiteralPath $musicPath -Algorithm SHA256).Hash
+    if ($actualHash -ne $expectedMusic[$relative]) {
+        throw "Friend music differs from the verified local playlist: $relative"
     }
 }
 
