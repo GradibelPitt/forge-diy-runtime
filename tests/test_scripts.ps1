@@ -170,6 +170,7 @@ $recentHearthstoneCards = [ordered]@{
     '111' = @('盗版之王托尼', 'multicolor\盗版之王托尼.txt')
     '112' = @('冰霜新星', 'blue\冰霜新星.txt')
     '113' = @('矿车难题', 'multicolor\矿车难题.txt')
+    '114' = @('水栖形态', 'blue\水栖形态.txt')
 }
 $localizationLines = @(Get-Content -LiteralPath (Join-Path $root 'app\res\languages\cardnames-zh-CN.txt') -Encoding UTF8)
 foreach ($collectorNumber in $recentHearthstoneCards.Keys) {
