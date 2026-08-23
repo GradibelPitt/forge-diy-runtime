@@ -36,7 +36,7 @@ function Copy-VerifiedFiles(
     return $count
 }
 
-function Set-CardArtPreference([string]$PreferencesFile) {
+function Set-ManagedPreferences([string]$PreferencesFile) {
     New-Item -ItemType Directory -Path (Split-Path $PreferencesFile -Parent) -Force | Out-Null
     $lines = if (Test-Path -LiteralPath $PreferencesFile -PathType Leaf) {
         @(Get-Content -LiteralPath $PreferencesFile -Encoding UTF8)
@@ -44,24 +44,47 @@ function Set-CardArtPreference([string]$PreferencesFile) {
         @()
     }
 
+    $managed = [ordered]@{
+        UI_CARD_ART_FORMAT = 'Crop'
+        UI_SKIN = 'Warmwood'
+        UI_ENABLE_MUSIC = 'true'
+        UI_VOL_MUSIC = '100'
+        UI_CURRENT_MUSIC_SET = 'Pull Up a Chair'
+    }
+
     $updated = New-Object 'System.Collections.Generic.List[string]'
-    $found = $false
+    $found = @{}
     foreach ($line in $lines) {
-        if ($line -match '^UI_CARD_ART_FORMAT=') {
-            if (-not $found) { $updated.Add('UI_CARD_ART_FORMAT=Crop') }
-            $found = $true
+        if ($line -match '^([^=]+)=') {
+            $key = $Matches[1]
+        } else {
+            $key = $null
+        }
+        if ($key -and $managed.Contains($key)) {
+            if (-not $found.ContainsKey($key)) {
+                $updated.Add("$key=$($managed[$key])")
+                $found[$key] = $true
+            }
         } else {
             $updated.Add($line)
         }
     }
-    if (-not $found) { $updated.Add('UI_CARD_ART_FORMAT=Crop') }
+    foreach ($key in $managed.Keys) {
+        if (-not $found.ContainsKey($key)) {
+            $updated.Add("$key=$($managed[$key])")
+        }
+    }
 
     [IO.File]::WriteAllLines($PreferencesFile, $updated, [Text.UTF8Encoding]::new($false))
-    $saved = @(Get-Content -LiteralPath $PreferencesFile -Encoding UTF8 |
-        Where-Object { $_ -match '^UI_CARD_ART_FORMAT=' })
-    if ($saved.Count -ne 1 -or $saved[0] -ne 'UI_CARD_ART_FORMAT=Crop') {
-        throw 'Failed to set UI_CARD_ART_FORMAT=Crop'
+    $savedLines = @(Get-Content -LiteralPath $PreferencesFile -Encoding UTF8)
+    foreach ($key in $managed.Keys) {
+        $saved = @($savedLines | Where-Object { $_ -match "^$([regex]::Escape($key))=" })
+        $expected = "$key=$($managed[$key])"
+        if ($saved.Count -ne 1 -or $saved[0] -ne $expected) {
+            throw "Failed to set $expected"
+        }
     }
+
 }
 
 function Remove-RetiredHearthstoneContent(
@@ -105,7 +128,9 @@ function Remove-RetiredHearthstoneContent(
 }
 
 $source = Join-Path $AppRoot 'managed\custom'
+$managedDecks = Join-Path $AppRoot 'managed\decks'
 $forgeCustom = Join-Path $RoamingAppData 'Forge\custom'
+$forgeDecks = Join-Path $RoamingAppData 'Forge\decks'
 $cardCache = Join-Path $LocalAppData 'Forge\Cache\pics\cards'
 $tokenCache = Join-Path $LocalAppData 'Forge\Cache\pics\tokens'
 $preferences = Join-Path $RoamingAppData 'Forge\preferences\forge.preferences'
@@ -114,16 +139,26 @@ $constructedDecks = Join-Path $RoamingAppData 'Forge\decks\constructed'
 $cardCount = Copy-VerifiedFiles (Join-Path $source 'cards') (Join-Path $forgeCustom 'cards') '*.txt'
 $editionCount = Copy-VerifiedFiles (Join-Path $source 'editions') (Join-Path $forgeCustom 'editions') '*.txt'
 $tokenCount = Copy-VerifiedFiles (Join-Path $source 'tokens') (Join-Path $forgeCustom 'tokens') '*.txt'
+$musicCount = Copy-VerifiedFiles (Join-Path $source 'music') (Join-Path $forgeCustom 'music') '*'
 $cardImageCount = Copy-VerifiedFiles (Join-Path $source 'cards\pictures') $cardCache '*'
 $tokenImageCount = Copy-VerifiedFiles (Join-Path $source 'tokens\pictures') $tokenCache '*'
 $migratedHearthstoneDecks = 0
 Remove-RetiredHearthstoneContent $forgeCustom $constructedDecks | Out-Null
-Set-CardArtPreference $preferences
+$constructedDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'constructed') `
+    (Join-Path $forgeDecks 'constructed\ForgeDIY') '*.dck'
+$commanderDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'commander') `
+    (Join-Path $forgeDecks 'commander\ForgeDIY') '*.dck'
+Set-ManagedPreferences $preferences
 
 Write-Output "SYNCED_CARDS=$cardCount"
 Write-Output "SYNCED_EDITIONS=$editionCount"
 Write-Output "SYNCED_TOKENS=$tokenCount"
+Write-Output "SYNCED_MUSIC=$musicCount"
 Write-Output "SYNCED_CARD_IMAGES=$cardImageCount"
 Write-Output "SYNCED_TOKEN_IMAGES=$tokenImageCount"
+Write-Output "SYNCED_CONSTRUCTED_DECKS=$constructedDeckCount"
+Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
 Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
 Write-Output 'CARD_ART_FORMAT=Crop'
+Write-Output 'FRIEND_UI=Warmwood'
+Write-Output 'FRIEND_MUSIC=Pull Up a Chair'

@@ -56,6 +56,13 @@ if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or
 if ($incrementalPublisher -notmatch '(?s)if \(\$SyncCustom\).*?\$SyncLocalization\s*=\s*\$true') {
     throw 'Publishing custom cards must also publish the zh-CN card localization resource'
 }
+if ($incrementalPublisher -notmatch "custom\\music'.*?managed\\custom\\music") {
+    throw 'Publishing custom content must retain the verified friend music set'
+}
+$fullPublisher = Get-Content (Join-Path $root 'tools\build_release.ps1') -Raw -Encoding UTF8
+if ($fullPublisher -notmatch "custom\\music'.*?managed\\custom\\music") {
+    throw 'Full runtime builds must include the verified friend music set'
+}
 if ($incrementalPublisher -notmatch '(?s)-not \$DesktopJar.*?\$Module\.Count -eq 0.*?Get-ChildItem.*?overlayNames') {
     throw 'A card-only payload publish must preserve existing module overlay metadata'
 }
@@ -119,6 +126,23 @@ foreach ($line in Get-Content -LiteralPath $manifestPath -Encoding UTF8) {
     }
 }
 
+$expectedMusic = [ordered]@{
+    'managed/custom/music/Pull Up a Chair/menus/Pull Up a Chair.mp3' =
+        '5761979E0E71C1C5AC2CFAE664DCA0069FB39DFDB900834B7B61A2BA73D1CAFB'
+    'managed/custom/music/Pull Up a Chair/match/Bad Down to the Molten Core.mp3' =
+        '378F65639E84BF246FDE8220C5C65D502288CC30B37A242398026165A2E6EDB6'
+}
+foreach ($relative in $expectedMusic.Keys) {
+    if (-not $manifestEntries.ContainsKey($relative)) {
+        throw "Friend music is missing from the critical manifest: $relative"
+    }
+    $musicPath = Join-Path $root (Join-Path 'app' $relative.Replace('/', '\'))
+    $actualHash = (Get-FileHash -LiteralPath $musicPath -Algorithm SHA256).Hash
+    if ($actualHash -ne $expectedMusic[$relative]) {
+        throw "Friend music differs from the verified local playlist: $relative"
+    }
+}
+
 $skinRoot = Join-Path $root 'app\res\skins'
 foreach ($skinFile in Get-ChildItem -LiteralPath $skinRoot -Recurse -File) {
     $relative = $skinFile.FullName.Substring((Join-Path $root 'app').Length + 1).Replace('\', '/')
@@ -142,6 +166,29 @@ if (@(Compare-Object $actualOverlays $declaredOverlays).Count -ne 0) {
 $editionPath = Join-Path $root 'app\managed\custom\editions\Placeholder_Set.txt'
 $artRoot = Join-Path $root 'app\managed\custom\cards\pictures\PH01'
 $editionLines = @(Get-Content -LiteralPath $editionPath -Encoding UTF8)
+$recentHearthstoneCards = [ordered]@{
+    '111' = @('盗版之王托尼', 'multicolor\盗版之王托尼.txt')
+    '112' = @('冰霜新星', 'blue\冰霜新星.txt')
+    '113' = @('矿车难题', 'multicolor\矿车难题.txt')
+    '114' = @('水栖形态', 'blue\水栖形态.txt')
+}
+$localizationLines = @(Get-Content -LiteralPath (Join-Path $root 'app\res\languages\cardnames-zh-CN.txt') -Encoding UTF8)
+foreach ($collectorNumber in $recentHearthstoneCards.Keys) {
+    $cardName, $relativeScript = $recentHearthstoneCards[$collectorNumber]
+    $matchingRows = @($editionLines | Where-Object {
+        $_ -match "^$collectorNumber\s+\S+\s+$([regex]::Escape($cardName))(?:\s+@.+)?$"
+    })
+    if ($matchingRows.Count -ne 1) {
+        throw "PH01 $collectorNumber must assign $cardName to the Hearthstone set"
+    }
+    $scriptPath = Join-Path $root (Join-Path 'app\managed\custom\cards' $relativeScript)
+    if (-not (Test-Path -LiteralPath $scriptPath -PathType Leaf)) {
+        throw "PH01 $collectorNumber is missing its runtime card script: $cardName"
+    }
+    if (@($localizationLines | Where-Object { $_ -match "^$([regex]::Escape($cardName))\|" }).Count -ne 1) {
+        throw "PH01 $collectorNumber must have exactly one zh-CN row: $cardName"
+    }
+}
 foreach ($collectorNumber in 90..99) {
     $matchingRows = @($editionLines | Where-Object { $_ -match "^$collectorNumber\s" })
     if ($matchingRows.Count -ne 1) {

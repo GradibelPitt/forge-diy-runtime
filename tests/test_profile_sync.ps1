@@ -19,7 +19,20 @@ try {
     $cardImageSource = Join-Path $managed ("cards\pictures\PH01\$cardName.artcrop.jpg")
     $tokenSource = Join-Path $managed ("tokens\$tokenName.txt")
     $tokenImageSource = Join-Path $managed 'tokens\pictures\test_token.jpg'
-    foreach ($path in @($cardSource, $cardImageSource, $tokenSource, $tokenImageSource)) {
+    $constructedDeckSource = Join-Path $appRoot 'managed\decks\constructed\shared-constructed.dck'
+    $commanderDeckSource = Join-Path $appRoot 'managed\decks\commander\shared-commander.dck'
+    $menuMusicSource = Join-Path $managed 'music\Pull Up a Chair\menus\Pull Up a Chair.mp3'
+    $matchMusicSource = Join-Path $managed 'music\Pull Up a Chair\match\Bad Down to the Molten Core.mp3'
+    foreach ($path in @(
+        $cardSource,
+        $cardImageSource,
+        $tokenSource,
+        $tokenImageSource,
+        $constructedDeckSource,
+        $commanderDeckSource,
+        $menuMusicSource,
+        $matchMusicSource
+    )) {
         New-Item -ItemType Directory -Path (Split-Path $path -Parent) -Force | Out-Null
     }
 
@@ -27,6 +40,33 @@ try {
     [IO.File]::WriteAllBytes($cardImageSource, [byte[]](1, 3, 3, 7, 9))
     [IO.File]::WriteAllText($tokenSource, "Name:$tokenName`r`n", [Text.UTF8Encoding]::new($false))
     [IO.File]::WriteAllBytes($tokenImageSource, [byte[]](2, 4, 6, 8))
+    [IO.File]::WriteAllLines($constructedDeckSource, @(
+        '[metadata]',
+        'Name=Shared Constructed',
+        'Deck Type=Constructed',
+        '[Main]',
+        '1 Plains|UST|[212]'
+    ), [Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllLines($commanderDeckSource, @(
+        '[metadata]',
+        'Name=Shared Commander',
+        '[Main]',
+        '1 Island|UST|[213]',
+        '[Commander]',
+        '1 Isamaru, Hound of Konda|CHK|[19]'
+    ), [Text.UTF8Encoding]::new($false))
+
+    $unrelatedDeck = Join-Path $roaming 'Forge\decks\constructed\personal-local.dck'
+    New-Item -ItemType Directory -Path (Split-Path $unrelatedDeck -Parent) -Force | Out-Null
+    [IO.File]::WriteAllLines($unrelatedDeck, @(
+        '[metadata]',
+        'Name=Personal Local',
+        '[Main]',
+        '1 Swamp|UST|[214]'
+    ), [Text.UTF8Encoding]::new($false))
+    $unrelatedDeckHash = (Get-FileHash -LiteralPath $unrelatedDeck -Algorithm SHA256).Hash
+    [IO.File]::WriteAllBytes($menuMusicSource, [byte[]](9, 8, 7, 6))
+    [IO.File]::WriteAllBytes($matchMusicSource, [byte[]](6, 7, 8, 9))
 
     $hearthstoneName = -join ([char[]](0x7089, 0x77F3, 0x4F20, 0x8BF4))
     $retiredCard = Join-Path $roaming "Forge\custom\cards\colorless\$hearthstoneName.txt"
@@ -57,11 +97,21 @@ try {
     $cardImageTarget = Join-Path $local ("Forge\Cache\pics\cards\PH01\$cardName.artcrop.jpg")
     $tokenTarget = Join-Path $roaming ("Forge\custom\tokens\$tokenName.txt")
     $tokenImageTarget = Join-Path $local 'Forge\Cache\pics\tokens\test_token.jpg'
+    $constructedDeckTarget = Join-Path $roaming `
+        'Forge\decks\constructed\ForgeDIY\shared-constructed.dck'
+    $commanderDeckTarget = Join-Path $roaming `
+        'Forge\decks\commander\ForgeDIY\shared-commander.dck'
+    $menuMusicTarget = Join-Path $roaming 'Forge\custom\music\Pull Up a Chair\menus\Pull Up a Chair.mp3'
+    $matchMusicTarget = Join-Path $roaming 'Forge\custom\music\Pull Up a Chair\match\Bad Down to the Molten Core.mp3'
     foreach ($pair in @(
         @($cardSource, $cardTarget),
         @($cardImageSource, $cardImageTarget),
         @($tokenSource, $tokenTarget),
-        @($tokenImageSource, $tokenImageTarget)
+        @($tokenImageSource, $tokenImageTarget),
+        @($constructedDeckSource, $constructedDeckTarget),
+        @($commanderDeckSource, $commanderDeckTarget),
+        @($menuMusicSource, $menuMusicTarget),
+        @($matchMusicSource, $matchMusicTarget)
     )) {
         if (-not (Test-Path -LiteralPath $pair[1] -PathType Leaf)) {
             throw "Synced file is missing: $($pair[1])"
@@ -73,6 +123,10 @@ try {
         }
     }
 
+    if ((Get-FileHash -LiteralPath $unrelatedDeck -Algorithm SHA256).Hash -ne $unrelatedDeckHash) {
+        throw 'Profile sync must preserve unrelated local constructed decks'
+    }
+
     $preferenceLines = @(Get-Content -LiteralPath $preferences -Encoding UTF8)
     if ($preferenceLines -notcontains 'UI_LANGUAGE=zh-CN') {
         throw 'Profile sync must preserve unrelated Forge preferences'
@@ -80,6 +134,36 @@ try {
     $cardArtLines = @($preferenceLines | Where-Object { $_ -match '^UI_CARD_ART_FORMAT=' })
     if ($cardArtLines.Count -ne 1 -or $cardArtLines[0] -ne 'UI_CARD_ART_FORMAT=Crop') {
         throw 'Profile sync must force Forge card art format to Crop'
+    }
+    foreach ($expectedPreference in @(
+        'UI_SKIN=Warmwood',
+        'UI_ENABLE_MUSIC=true',
+        'UI_VOL_MUSIC=100',
+        'UI_CURRENT_MUSIC_SET=Pull Up a Chair'
+    )) {
+        if ($preferenceLines -notcontains $expectedPreference) {
+            throw "Profile sync must apply friend default: $expectedPreference"
+        }
+    }
+    $customizedPreferences = $preferenceLines |
+        ForEach-Object { $_ -replace '^UI_SKIN=.*$', 'UI_SKIN=Default' } |
+        ForEach-Object { $_ -replace '^UI_ENABLE_MUSIC=.*$', 'UI_ENABLE_MUSIC=false' } |
+        ForEach-Object { $_ -replace '^UI_VOL_MUSIC=.*$', 'UI_VOL_MUSIC=25' } |
+        ForEach-Object { $_ -replace '^UI_CURRENT_MUSIC_SET=.*$', 'UI_CURRENT_MUSIC_SET=Default' }
+    [IO.File]::WriteAllLines($preferences, $customizedPreferences, [Text.UTF8Encoding]::new($false))
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $syncScript `
+        -AppRoot $appRoot -RoamingAppData $roaming -LocalAppData $local
+    if ($LASTEXITCODE -ne 0) { throw "Second profile sync failed: $LASTEXITCODE" }
+    $reappliedPreferences = @(Get-Content -LiteralPath $preferences -Encoding UTF8)
+    foreach ($reappliedPreference in @(
+        'UI_SKIN=Warmwood',
+        'UI_ENABLE_MUSIC=true',
+        'UI_VOL_MUSIC=100',
+        'UI_CURRENT_MUSIC_SET=Pull Up a Chair'
+    )) {
+        if ($reappliedPreferences -notcontains $reappliedPreference) {
+            throw "Profile sync must reapply friend UI/music preference: $reappliedPreference"
+        }
     }
     if (Test-Path -LiteralPath $retiredCard) {
         throw 'Profile sync must remove the retired Hearthstone rule card'

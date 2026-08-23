@@ -29,6 +29,7 @@ Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res') (Join-Path $Stage 'res')
 Copy-Tree (Join-Path $ForgeRoot 'custom\cards') (Join-Path $Stage 'managed\custom\cards')
 Copy-Tree (Join-Path $ForgeRoot 'custom\tokens') (Join-Path $Stage 'managed\custom\tokens')
 Copy-Tree (Join-Path $ForgeRoot 'custom\editions') (Join-Path $Stage 'managed\custom\editions')
+Copy-Tree (Join-Path $ForgeRoot 'custom\music') (Join-Path $Stage 'managed\custom\music')
 [IO.File]::WriteAllText((Join-Path $Stage 'BUILD-ID.txt'), "$BuildId`r`n", [Text.UTF8Encoding]::new($false))
 
 $critical = @($Jar.Name, 'forge.exe', 'BUILD-ID.txt', 'res\languages\cardnames-zh-CN.txt')
