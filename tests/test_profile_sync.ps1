@@ -94,7 +94,15 @@ try {
     New-Item -ItemType Directory -Path (Split-Path $preferences -Parent) -Force | Out-Null
     [IO.File]::WriteAllLines($preferences, @(
         'UI_LANGUAGE=zh-CN',
-        'UI_CARD_ART_FORMAT=Full'
+        'UI_CARD_ART_FORMAT=Full',
+        'UI_SKIN=Default',
+        'UI_ENABLE_MUSIC=false',
+        'UI_VOL_MUSIC=25',
+        'UI_CURRENT_MUSIC_SET=Default',
+        'UI_SKIN=Another Skin',
+        'UI_ENABLE_MUSIC=false',
+        'UI_VOL_MUSIC=0',
+        'UI_CURRENT_MUSIC_SET=Another Set'
     ), [Text.UTF8Encoding]::new($false))
 
     Push-Location $testRoot
@@ -154,8 +162,12 @@ try {
         'UI_VOL_MUSIC=100',
         'UI_CURRENT_MUSIC_SET=Pull Up a Chair'
     )) {
-        if ($preferenceLines -notcontains $expectedPreference) {
-            throw "Profile sync must apply friend default: $expectedPreference"
+        $preferenceKey = $expectedPreference.Split('=')[0]
+        $matchingPreferences = @($preferenceLines | Where-Object {
+            $_ -match "^$([regex]::Escape($preferenceKey))="
+        })
+        if ($matchingPreferences.Count -ne 1 -or $matchingPreferences[0] -ne $expectedPreference) {
+            throw "Profile sync must apply exactly one friend default: $expectedPreference"
         }
     }
     $customizedPreferences = $preferenceLines |
@@ -174,8 +186,12 @@ try {
         'UI_VOL_MUSIC=100',
         'UI_CURRENT_MUSIC_SET=Pull Up a Chair'
     )) {
-        if ($reappliedPreferences -notcontains $reappliedPreference) {
-            throw "Profile sync must reapply friend UI/music preference: $reappliedPreference"
+        $preferenceKey = $reappliedPreference.Split('=')[0]
+        $matchingPreferences = @($reappliedPreferences | Where-Object {
+            $_ -match "^$([regex]::Escape($preferenceKey))="
+        })
+        if ($matchingPreferences.Count -ne 1 -or $matchingPreferences[0] -ne $reappliedPreference) {
+            throw "Profile sync must reapply exactly one friend UI/music preference: $reappliedPreference"
         }
     }
     if (Test-Path -LiteralPath $retiredCard) {

@@ -163,6 +163,37 @@ if (@(Compare-Object $actualOverlays $declaredOverlays).Count -ne 0) {
     throw 'Release metadata must list every active module overlay'
 }
 
+$desktopOverlay = Join-Path $root 'app\overlays\forge-gui-desktop.jar'
+if (-not (Test-Path -LiteralPath $desktopOverlay -PathType Leaf)) {
+    throw 'Desktop overlay is required for the default constructed catalog filter'
+}
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$overlayArchive = [IO.Compression.ZipFile]::OpenRead($desktopOverlay)
+try {
+    $controllerEntry = $overlayArchive.GetEntry('forge/screens/deckeditor/controllers/CEditorConstructed.class')
+    if (-not $controllerEntry) {
+        throw 'Desktop overlay is missing CEditorConstructed.class'
+    }
+    $controllerStream = $controllerEntry.Open()
+    try {
+        $controllerBytes = New-Object byte[] $controllerEntry.Length
+        $read = $controllerStream.Read($controllerBytes, 0, $controllerBytes.Length)
+        if ($read -ne $controllerBytes.Length) {
+            throw 'Could not read the default constructed catalog controller bytecode'
+        }
+    } finally {
+        $controllerStream.Dispose()
+    }
+    $controllerText = [Text.Encoding]::GetEncoding(28591).GetString($controllerBytes)
+    foreach ($requiredMarker in @('BT3K', 'PH01', 'getDefaultCatalogSetCodes')) {
+        if (-not $controllerText.Contains($requiredMarker)) {
+            throw "Desktop overlay is missing default catalog marker: $requiredMarker"
+        }
+    }
+} finally {
+    $overlayArchive.Dispose()
+}
+
 $editionPath = Join-Path $root 'app\managed\custom\editions\Placeholder_Set.txt'
 $artRoot = Join-Path $root 'app\managed\custom\cards\pictures\PH01'
 $editionLines = @(Get-Content -LiteralPath $editionPath -Encoding UTF8)
