@@ -98,6 +98,12 @@ function Remove-RetiredHearthstoneContent(
         Remove-Item -LiteralPath $retiredCard -Force
     }
 
+    $wildheartGuffName = -join ([char[]](0x91CE, 0x6027, 0x4E4B, 0x5FC3, 0x53E4, 0x592B))
+    $retiredWildheartGuff = Join-Path $ForgeCustomRoot "cards\green\$wildheartGuffName.txt"
+    if (Test-Path -LiteralPath $retiredWildheartGuff -PathType Leaf) {
+        Remove-Item -LiteralPath $retiredWildheartGuff -Force
+    }
+
     if (-not (Test-Path -LiteralPath $ForgeDeckRoot -PathType Container)) {
         return 0
     }

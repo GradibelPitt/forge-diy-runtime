@@ -72,6 +72,14 @@ try {
     $retiredCard = Join-Path $roaming "Forge\custom\cards\colorless\$hearthstoneName.txt"
     New-Item -ItemType Directory -Path (Split-Path $retiredCard -Parent) -Force | Out-Null
     [IO.File]::WriteAllText($retiredCard, "Name:$hearthstoneName`r`n", [Text.UTF8Encoding]::new($false))
+    $wildheartGuffName = -join ([char[]](0x91CE, 0x6027, 0x4E4B, 0x5FC3, 0x53E4, 0x592B))
+    $retiredWildheartGuff = Join-Path $roaming "Forge\custom\cards\green\$wildheartGuffName.txt"
+    New-Item -ItemType Directory -Path (Split-Path $retiredWildheartGuff -Parent) -Force | Out-Null
+    [IO.File]::WriteAllText(
+        $retiredWildheartGuff,
+        "Name:$wildheartGuffName`r`nManaCost:3 G G`r`n",
+        [Text.UTF8Encoding]::new($false)
+    )
     $legacyDeck = Join-Path $roaming 'Forge\decks\constructed\legacy-hearthstone.dck'
     New-Item -ItemType Directory -Path (Split-Path $legacyDeck -Parent) -Force | Out-Null
     [IO.File]::WriteAllLines($legacyDeck, @(
@@ -172,6 +180,9 @@ try {
     }
     if (Test-Path -LiteralPath $retiredCard) {
         throw 'Profile sync must remove the retired Hearthstone rule card'
+    }
+    if (Test-Path -LiteralPath $retiredWildheartGuff) {
+        throw 'Profile sync must remove the retired green Wildheart Guff script'
     }
     $migratedDeckLines = [IO.File]::ReadAllLines($legacyDeck, [Text.Encoding]::UTF8)
     if ($migratedDeckLines -match [regex]::Escape($hearthstoneName)) {
