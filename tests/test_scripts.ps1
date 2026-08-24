@@ -176,10 +176,12 @@ try {
     }
     $controllerStream = $controllerEntry.Open()
     try {
-        $controllerBytes = New-Object byte[] $controllerEntry.Length
-        $read = $controllerStream.Read($controllerBytes, 0, $controllerBytes.Length)
-        if ($read -ne $controllerBytes.Length) {
-            throw 'Could not read the default constructed catalog controller bytecode'
+        $controllerBuffer = New-Object IO.MemoryStream
+        $controllerStream.CopyTo($controllerBuffer)
+        $controllerBytes = $controllerBuffer.ToArray()
+        $controllerBuffer.Dispose()
+        if ($controllerBytes.Length -ne $controllerEntry.Length) {
+            throw 'Could not read the complete default constructed catalog controller bytecode'
         }
     } finally {
         $controllerStream.Dispose()
