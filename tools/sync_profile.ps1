@@ -6,6 +6,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$AppRoot = (Resolve-Path -LiteralPath $AppRoot).Path
 
 function Copy-VerifiedFiles(
     [string]$From,

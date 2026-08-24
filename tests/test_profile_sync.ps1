@@ -89,9 +89,14 @@ try {
         'UI_CARD_ART_FORMAT=Full'
     ), [Text.UTF8Encoding]::new($false))
 
-    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $syncScript `
-        -AppRoot $appRoot -RoamingAppData $roaming -LocalAppData $local
-    if ($LASTEXITCODE -ne 0) { throw "Profile sync helper failed: $LASTEXITCODE" }
+    Push-Location $testRoot
+    try {
+        & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $syncScript `
+            -AppRoot '.\app' -RoamingAppData $roaming -LocalAppData $local
+        if ($LASTEXITCODE -ne 0) { throw "Profile sync helper failed: $LASTEXITCODE" }
+    } finally {
+        Pop-Location
+    }
 
     $cardTarget = Join-Path $roaming ("Forge\custom\cards\multicolor\$cardName.txt")
     $cardImageTarget = Join-Path $local ("Forge\Cache\pics\cards\PH01\$cardName.artcrop.jpg")
