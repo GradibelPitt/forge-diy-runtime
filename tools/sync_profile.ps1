@@ -136,6 +136,9 @@ function Remove-RetiredHearthstoneContent(
 
 $source = Join-Path $AppRoot 'managed\custom'
 $managedDecks = Join-Path $AppRoot 'managed\decks'
+$managedProfile = Join-Path $AppRoot 'managed\profile'
+$managedProfilePreferences = Join-Path $managedProfile 'preferences'
+$managedProfileDecks = Join-Path $managedProfile 'decks'
 $forgeCustom = Join-Path $RoamingAppData 'Forge\custom'
 $forgeDecks = Join-Path $RoamingAppData 'Forge\decks'
 $cardCache = Join-Path $LocalAppData 'Forge\Cache\pics\cards'
@@ -155,6 +158,9 @@ $constructedDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'constructed
     (Join-Path $forgeDecks 'constructed\ForgeDIY') '*.dck'
 $commanderDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'commander') `
     (Join-Path $forgeDecks 'commander\ForgeDIY') '*.dck'
+$profilePreferenceCount = Copy-VerifiedFiles $managedProfilePreferences `
+    (Join-Path $RoamingAppData 'Forge\preferences') '*'
+$profileDeckCount = Copy-VerifiedFiles $managedProfileDecks $forgeDecks '*.dck'
 Set-ManagedPreferences $preferences
 
 Write-Output "SYNCED_CARDS=$cardCount"
@@ -165,6 +171,8 @@ Write-Output "SYNCED_CARD_IMAGES=$cardImageCount"
 Write-Output "SYNCED_TOKEN_IMAGES=$tokenImageCount"
 Write-Output "SYNCED_CONSTRUCTED_DECKS=$constructedDeckCount"
 Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
+Write-Output "SYNCED_PROFILE_PREFERENCES=$profilePreferenceCount"
+Write-Output "SYNCED_PROFILE_DECKS=$profileDeckCount"
 Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
 Write-Output 'CARD_ART_FORMAT=Crop'
 Write-Output 'FRIEND_UI=Warmwood'
