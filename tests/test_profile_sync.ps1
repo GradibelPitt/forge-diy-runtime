@@ -90,6 +90,23 @@ try {
         '1 Plains|UST|[212]'
     ), [Text.UTF8Encoding]::new($false))
 
+    $chainbreakerHoggerName = -join ([char[]](0x7834, 0x94FE, 0x707E, 0x661F, 0x970D, 0x683C))
+    $patchesPirateName = -join ([char[]](0x6D77, 0x76D7, 0x5E15, 0x5947, 0x65AF))
+    $retiredCardPictures = @(
+        "PH01\$chainbreakerHoggerName.full.jpg",
+        "PH01\$($chainbreakerHoggerName)1.artcrop.jpg",
+        "PH01\$($chainbreakerHoggerName)2.full.jpg",
+        "PH01\$($chainbreakerHoggerName)2.artcrop.jpg",
+        "PH01\$patchesPirateName.full.jpg",
+        "PH01\$($patchesPirateName)1.artcrop.jpg",
+        "PH01\$($patchesPirateName)2.full.jpg",
+        "PH01\$($patchesPirateName)2.artcrop.jpg"
+    ) | ForEach-Object { Join-Path $local "Forge\Cache\pics\cards\$_" }
+    foreach ($retiredCardPicture in $retiredCardPictures) {
+        New-Item -ItemType Directory -Path (Split-Path $retiredCardPicture -Parent) -Force | Out-Null
+        [IO.File]::WriteAllBytes($retiredCardPicture, [byte[]](1, 2, 3))
+    }
+
     $preferences = Join-Path $roaming 'Forge\preferences\forge.preferences'
     New-Item -ItemType Directory -Path (Split-Path $preferences -Parent) -Force | Out-Null
     [IO.File]::WriteAllLines($preferences, @(
@@ -155,6 +172,15 @@ try {
     $cardArtLines = @($preferenceLines | Where-Object { $_ -match '^UI_CARD_ART_FORMAT=' })
     if ($cardArtLines.Count -ne 1 -or $cardArtLines[0] -ne 'UI_CARD_ART_FORMAT=Crop') {
         throw 'Profile sync must force Forge card art format to Crop'
+    }
+    $cardImagesEnabled = @($preferenceLines | Where-Object { $_ -match '^UI_DISABLE_CARD_IMAGES=' })
+    if ($cardImagesEnabled.Count -ne 1 -or $cardImagesEnabled[0] -ne 'UI_DISABLE_CARD_IMAGES=false') {
+        throw 'Profile sync must keep card images enabled for Crop rendering'
+    }
+    foreach ($retiredCardPicture in $retiredCardPictures) {
+        if (Test-Path -LiteralPath $retiredCardPicture) {
+            throw "Profile sync must remove obsolete Hogger/Patches art: $retiredCardPicture"
+        }
     }
     foreach ($expectedPreference in @(
         'UI_SKIN=Warmwood',

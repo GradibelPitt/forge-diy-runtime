@@ -46,6 +46,7 @@ function Set-ManagedPreferences([string]$PreferencesFile) {
     }
 
     $managed = [ordered]@{
+        UI_DISABLE_CARD_IMAGES = 'false'
         UI_CARD_ART_FORMAT = 'Crop'
         UI_SKIN = 'Warmwood'
         UI_ENABLE_MUSIC = 'true'
@@ -86,6 +87,31 @@ function Set-ManagedPreferences([string]$PreferencesFile) {
         }
     }
 
+}
+
+function Remove-RetiredCardPictureVariants([string]$CardCache) {
+    $chainbreakerHoggerName = -join ([char[]](0x7834, 0x94FE, 0x707E, 0x661F, 0x970D, 0x683C))
+    $patchesPirateName = -join ([char[]](0x6D77, 0x76D7, 0x5E15, 0x5947, 0x65AF))
+    $retired = @(
+        "PH01\$chainbreakerHoggerName.full.jpg",
+        "PH01\$($chainbreakerHoggerName)1.artcrop.jpg",
+        "PH01\$($chainbreakerHoggerName)2.full.jpg",
+        "PH01\$($chainbreakerHoggerName)2.artcrop.jpg",
+        "PH01\$patchesPirateName.full.jpg",
+        "PH01\$($patchesPirateName)1.artcrop.jpg",
+        "PH01\$($patchesPirateName)2.full.jpg",
+        "PH01\$($patchesPirateName)2.artcrop.jpg"
+    )
+
+    $removed = 0
+    foreach ($relative in $retired) {
+        $target = Join-Path $CardCache $relative
+        if (Test-Path -LiteralPath $target -PathType Leaf) {
+            Remove-Item -LiteralPath $target -Force
+            $removed++
+        }
+    }
+    return $removed
 }
 
 function Remove-RetiredHearthstoneContent(
@@ -152,6 +178,7 @@ $tokenCount = Copy-VerifiedFiles (Join-Path $source 'tokens') (Join-Path $forgeC
 $musicCount = Copy-VerifiedFiles (Join-Path $source 'music') (Join-Path $forgeCustom 'music') '*'
 $cardImageCount = Copy-VerifiedFiles (Join-Path $source 'cards\pictures') $cardCache '*'
 $tokenImageCount = Copy-VerifiedFiles (Join-Path $source 'tokens\pictures') $tokenCache '*'
+$retiredCardPictureCount = Remove-RetiredCardPictureVariants $cardCache
 $migratedHearthstoneDecks = 0
 Remove-RetiredHearthstoneContent $forgeCustom $constructedDecks | Out-Null
 $constructedDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'constructed') `
@@ -169,6 +196,7 @@ Write-Output "SYNCED_TOKENS=$tokenCount"
 Write-Output "SYNCED_MUSIC=$musicCount"
 Write-Output "SYNCED_CARD_IMAGES=$cardImageCount"
 Write-Output "SYNCED_TOKEN_IMAGES=$tokenImageCount"
+Write-Output "REMOVED_RETIRED_CARD_IMAGES=$retiredCardPictureCount"
 Write-Output "SYNCED_CONSTRUCTED_DECKS=$constructedDeckCount"
 Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
 Write-Output "SYNCED_PROFILE_PREFERENCES=$profilePreferenceCount"
