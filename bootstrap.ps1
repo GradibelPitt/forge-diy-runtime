@@ -94,8 +94,6 @@ function Install-PortableJava17 {
     Write-Step '未检测到 JDK 17 或更高版本，正在下载便携 JDK（无需配置环境变量）...'
     New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
     $archive = Join-Path $InstallRoot 'java17.zip'
-    # Forge's Windows desktop launcher requires a JDK, not a JRE. The desktop
-    # bundle also contains x64 native libraries, so use the x64 JDK on Windows.
     $uri = 'https://api.adoptium.net/v3/binary/latest/17/ga/windows/x64/jdk/hotspot/normal/eclipse'
     Invoke-WebRequest -UseBasicParsing -Uri $uri -OutFile $archive
     if (Test-Path $JavaRoot) { Remove-Item -LiteralPath $JavaRoot -Recurse -Force }
@@ -155,11 +153,18 @@ function Update-Repository([string]$GitExe) {
         Write-Step '正在检查运行仓库更新...'
         & $GitExe -C $RepoRoot fetch origin main --depth 1
         if ($LASTEXITCODE -ne 0) { throw 'Git fetch 失败。' }
-        # reset --hard already updates changed tracked files. Do not force a full
-        # checkout-index of the entire payload on every normal launch.
+        # reset --hard is enough for ordinary updates. Avoid rewriting every
+        # payload file through checkout-index on every normal launch.
         & $GitExe -C $RepoRoot reset --hard origin/main
     }
     if ($LASTEXITCODE -ne 0) { throw 'Git 仓库克隆或更新失败。' }
+}
+
+function Repair-RepositoryWorkingTree([string]$GitExe) {
+    # Deliberately excluded from normal startup. This is only for explicit deep
+    # verification/repair, where rewriting the full payload is acceptable.
+    & $GitExe -C $RepoRoot checkout-index -a -f
+    if ($LASTEXITCODE -ne 0) { throw 'Git 工作区强制恢复失败。' }
 }
 
 # Normal startup uses this cheap structural check only. It intentionally does not
@@ -261,6 +266,18 @@ try {
     if ($FullVerify) {
         Write-Step '正在执行完整 SHA-256 校验（FullVerify 模式，可能需要数分钟）...'
         $manifestFailure = Get-CriticalManifestFailure $AppRoot
+        if ($manifestFailure) {
+            Write-Step "完整校验发现异常（$manifestFailure），正在从 Git 索引恢复运行文件..."
+            Repair-RepositoryWorkingTree $git
+            $manifestFailure = Get-CriticalManifestFailure $AppRoot
+        }
+        if ($manifestFailure) {
+            Write-Step 'Git 索引恢复后仍未通过，正在执行全新克隆修复...'
+            Remove-Item -LiteralPath $RepoRoot -Recurse -Force
+            & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
+            if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+            $manifestFailure = Get-CriticalManifestFailure $AppRoot
+        }
         if ($manifestFailure) { throw "完整运行文件校验失败：$manifestFailure" }
         Write-Host '[Forge DIY] 完整 SHA-256 校验通过。' -ForegroundColor Green
     }
