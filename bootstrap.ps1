@@ -14,6 +14,32 @@ $AppRoot = Join-Path $RepoRoot 'app'
 $ToolsRoot = Join-Path $InstallRoot 'tools'
 $JavaRoot = Join-Path $InstallRoot 'java17'
 
+# Forge's official desktop launcher opens these JDK modules. Because this runtime
+# prepends overlay JARs with -cp instead of using "java -jar", the manifest's
+# Add-Opens entries are not applied automatically and must be passed explicitly.
+$ForgeAddOpens = @(
+    'java.desktop/java.beans',
+    'java.desktop/javax.swing.border',
+    'java.desktop/javax.swing.event',
+    'java.desktop/sun.swing',
+    'java.desktop/java.awt.image',
+    'java.desktop/java.awt.color',
+    'java.desktop/sun.awt.image',
+    'java.desktop/javax.swing',
+    'java.desktop/java.awt',
+    'java.base/java.util',
+    'java.base/java.lang',
+    'java.base/java.lang.reflect',
+    'java.base/java.text',
+    'java.desktop/java.awt.font',
+    'java.base/jdk.internal.misc',
+    'java.base/sun.nio.ch',
+    'java.base/java.nio',
+    'java.base/java.math',
+    'java.base/java.util.concurrent',
+    'java.base/java.net'
+)
+
 function Write-Step([string]$Message) {
     Write-Host "[Forge DIY] $Message" -ForegroundColor Cyan
 }
@@ -36,6 +62,13 @@ function Get-JavaMajor([string]$JavaExe) {
     return 0
 }
 
+function Test-Jdk17([string]$JavaExe) {
+    if ((Get-JavaMajor $JavaExe) -lt 17) { return $false }
+    $candidateDirectory = Split-Path $JavaExe -Parent
+    $javac = Join-Path $candidateDirectory 'javac.exe'
+    return (Test-Path -LiteralPath $javac -PathType Leaf)
+}
+
 function Find-Java17 {
     $candidates = New-Object System.Collections.Generic.List[string]
     if ($env:JAVA_HOME) { $candidates.Add((Join-Path $env:JAVA_HOME 'bin\java.exe')) }
@@ -46,7 +79,7 @@ function Find-Java17 {
             ForEach-Object { $candidates.Add($_.FullName) }
     }
     foreach ($candidate in $candidates | Select-Object -Unique) {
-        if ((Get-JavaMajor $candidate) -ge 17) {
+        if (Test-Jdk17 $candidate) {
             $candidateDirectory = Split-Path $candidate -Parent
             $javaw = Join-Path $candidateDirectory 'javaw.exe'
             if (Test-Path -LiteralPath $javaw -PathType Leaf) { return $javaw }
@@ -57,19 +90,19 @@ function Find-Java17 {
 }
 
 function Install-PortableJava17 {
-    Write-Step '未检测到 Java 17 或更高版本，正在下载便携 Java（无需配置环境变量）...'
+    Write-Step '未检测到 JDK 17 或更高版本，正在下载便携 JDK（无需配置环境变量）...'
     New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
     $archive = Join-Path $InstallRoot 'java17.zip'
-    # Forge's desktop bundle includes x64 native libraries. Windows ARM runs the
-    # matching x64 Java through its compatibility layer.
-    $uri = 'https://api.adoptium.net/v3/binary/latest/17/ga/windows/x64/jre/hotspot/normal/eclipse'
+    # Forge's Windows desktop launcher requires a JDK, not a JRE. The desktop
+    # bundle also contains x64 native libraries, so use the x64 JDK on Windows.
+    $uri = 'https://api.adoptium.net/v3/binary/latest/17/ga/windows/x64/jdk/hotspot/normal/eclipse'
     Invoke-WebRequest -UseBasicParsing -Uri $uri -OutFile $archive
     if (Test-Path $JavaRoot) { Remove-Item -LiteralPath $JavaRoot -Recurse -Force }
     New-Item -ItemType Directory -Path $JavaRoot -Force | Out-Null
     Expand-Archive -LiteralPath $archive -DestinationPath $JavaRoot -Force
     Remove-Item -LiteralPath $archive -Force
     $java = Find-Java17
-    if (-not $java) { throw '便携 Java 17 下载完成，但未找到 javaw.exe。' }
+    if (-not $java) { throw '便携 JDK 17 下载完成，但未找到可用的 javaw.exe / javac.exe。' }
     return $java
 }
 
@@ -126,15 +159,6 @@ function Update-Repository([string]$GitExe) {
     if ($LASTEXITCODE -ne 0) { throw 'Git 仓库克隆或更新失败。' }
 }
 
-function Test-Hash([string]$Path, [string]$Expected) {
-    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { return $false }
-    return (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash -eq $Expected.ToUpperInvariant()
-}
-
-function Test-CriticalManifest([string]$Root) {
-    return -not (Get-CriticalManifestFailure $Root)
-}
-
 function Get-CriticalManifestFailure([string]$Root) {
     $manifest = Join-Path $Root 'manifest-critical.sha256'
     if (-not (Test-Path $manifest)) { return '缺少 manifest-critical.sha256' }
@@ -149,29 +173,8 @@ function Get-CriticalManifestFailure([string]$Root) {
     return $null
 }
 
-function Install-RuntimePayload {
-    $releaseFile = Join-Path $RepoRoot 'release.json'
-    if (-not (Test-Path $releaseFile)) { throw '仓库缺少 release.json。' }
-    $release = Get-Content $releaseFile -Raw -Encoding UTF8 | ConvertFrom-Json
-    $currentId = if (Test-Path (Join-Path $AppRoot 'BUILD-ID.txt')) {
-        (Get-Content (Join-Path $AppRoot 'BUILD-ID.txt') -Raw).Trim()
-    } else { '' }
-    if ($currentId -eq $release.buildId -and (Test-CriticalManifest $AppRoot)) { return $release }
-
-    Write-Step "正在下载 Forge DIY 运行包 $($release.buildId)..."
-    $archive = Join-Path $InstallRoot $release.assetName
-    $uri = "https://github.com/$Owner/$Repository/releases/download/$($release.tag)/$($release.assetName)"
-    Invoke-WebRequest -UseBasicParsing -Uri $uri -OutFile $archive
-    if (-not (Test-Hash $archive $release.sha256)) { throw '运行包 SHA-256 校验失败。' }
-    $newRoot = Join-Path $InstallRoot 'app-new'
-    if (Test-Path $newRoot) { Remove-Item -LiteralPath $newRoot -Recurse -Force }
-    New-Item -ItemType Directory -Path $newRoot -Force | Out-Null
-    Expand-Archive -LiteralPath $archive -DestinationPath $newRoot -Force
-    if (-not (Test-CriticalManifest $newRoot)) { throw '运行包关键文件校验失败。' }
-    if (Test-Path $AppRoot) { Remove-Item -LiteralPath $AppRoot -Recurse -Force }
-    Move-Item -LiteralPath $newRoot -Destination $AppRoot
-    Remove-Item -LiteralPath $archive -Force
-    return $release
+function Test-CriticalManifest([string]$Root) {
+    return -not (Get-CriticalManifestFailure $Root)
 }
 
 function Sync-DiyPayload {
@@ -203,6 +206,7 @@ try {
     $git = Find-Git
     if (-not $git) { $git = Install-Git }
     Update-Repository $git
+
     Write-Step '正在校验运行文件...'
     $manifestFailure = Get-CriticalManifestFailure $AppRoot
     if ($manifestFailure) {
@@ -213,22 +217,36 @@ try {
         $manifestFailure = Get-CriticalManifestFailure $AppRoot
     }
     if ($manifestFailure) { throw "仓库中的运行文件校验失败：$manifestFailure" }
-    $release = [pscustomobject]@{ buildId = (Get-Content (Join-Path $AppRoot 'BUILD-ID.txt') -Raw).Trim() }
+
+    $buildIdFile = Join-Path $AppRoot 'BUILD-ID.txt'
+    if (-not (Test-Path -LiteralPath $buildIdFile -PathType Leaf)) { throw '运行目录缺少 BUILD-ID.txt。' }
+    $release = [pscustomobject]@{ buildId = (Get-Content $buildIdFile -Raw).Trim() }
 
     $java = $null
     if (-not $IgnoreSystemJava) { $java = Find-Java17 }
     if (-not $java) { $java = Install-PortableJava17 }
 
+    $javaDirectory = Split-Path $java -Parent
+    $consoleJava = Join-Path $javaDirectory 'java.exe'
+    $javac = Join-Path $javaDirectory 'javac.exe'
+    if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf) -or
+        -not (Test-Path -LiteralPath $javac -PathType Leaf)) {
+        throw 'Forge 需要完整 JDK 17+；当前 Java 安装缺少 java.exe 或 javac.exe。'
+    }
+    $env:JAVA_HOME = Split-Path $javaDirectory -Parent
+    $env:PATH = "$javaDirectory;$env:PATH"
+
     Sync-DiyPayload
     $installedScript = Join-Path $RepoRoot 'bootstrap.ps1'
     New-DesktopShortcut $installedScript
     Write-Host "[Forge DIY] 当前构建版本：$($release.buildId)" -ForegroundColor Green
-    Write-Host "[Forge DIY] Java：$java" -ForegroundColor DarkGray
+    Write-Host "[Forge DIY] JDK：$env:JAVA_HOME" -ForegroundColor DarkGray
 
     if (-not $InstallOnly) {
         Write-Step '正在启动 Forge...'
         $jar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' | Select-Object -First 1
         if (-not $jar) { throw '运行目录中没有 Forge 聚合 JAR。' }
+
         $overlayRoot = Join-Path $AppRoot 'overlays'
         $overlayJars = @()
         if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
@@ -237,19 +255,35 @@ try {
         }
         $classPathEntries = @($overlayJars | ForEach-Object { $_.FullName }) + @($jar.FullName)
         $classPath = [string]::Join([IO.Path]::PathSeparator, $classPathEntries)
-        $javaDirectory = Split-Path $java -Parent
-        $consoleJava = Join-Path $javaDirectory 'java.exe'
-        if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
+
         $logRoot = Join-Path $InstallRoot 'logs'
         New-Item -ItemType Directory -Path $logRoot -Force | Out-Null
         $logStamp = Get-Date -Format 'yyyyMMdd-HHmmss-fff'
         $stdoutLog = Join-Path $logRoot "forge-bootstrap-$logStamp.stdout.log"
         $stderrLog = Join-Path $logRoot "forge-bootstrap-$logStamp.stderr.log"
-        $arguments = @('-Xmx2048m', '-Dio.netty.tryReflectionSetAccessible=true', '-Dfile.encoding=UTF-8', '-cp', "`"$classPath`"", 'forge.view.Main')
+
+        $arguments = @(
+            '-Xmx2048m',
+            '-Dio.netty.tryReflectionSetAccessible=true',
+            '-Dfile.encoding=UTF-8'
+        )
+        foreach ($openPackage in $ForgeAddOpens) {
+            $arguments += "--add-opens=$openPackage=ALL-UNNAMED"
+        }
+        $arguments += @('-cp', "`"$classPath`"", 'forge.view.Main')
+
         $process = Start-Process -FilePath $consoleJava -ArgumentList $arguments -WorkingDirectory $AppRoot -WindowStyle Hidden -RedirectStandardOutput $stdoutLog -RedirectStandardError $stderrLog -PassThru
         if ($process.WaitForExit(10000)) {
-            throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。请把日志发给维护者：$stderrLog"
+            $errorTail = ''
+            if (Test-Path -LiteralPath $stderrLog -PathType Leaf) {
+                $errorTail = ((Get-Content -LiteralPath $stderrLog -Tail 20 -ErrorAction SilentlyContinue) -join [Environment]::NewLine).Trim()
+            }
+            if ($errorTail) {
+                throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。日志：$stderrLog`n$errorTail"
+            }
+            throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。日志：$stderrLog"
         }
+
         Write-Host "[Forge DIY] Forge 已启动（PID $($process.Id)）。" -ForegroundColor Green
         Write-Host "[Forge DIY] 启动日志：$stderrLog" -ForegroundColor DarkGray
     }
