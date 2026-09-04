@@ -203,13 +203,15 @@ try {
     $git = Find-Git
     if (-not $git) { $git = Install-Git }
     Update-Repository $git
-    if (-not (Test-CriticalManifest $AppRoot)) {
+    Write-Step '正在校验运行文件...'
+    $manifestFailure = Get-CriticalManifestFailure $AppRoot
+    if ($manifestFailure) {
         Write-Step '检测到旧安装文件校验失败，正在自动执行全新克隆修复...'
         Remove-Item -LiteralPath $RepoRoot -Recurse -Force
         & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
         if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+        $manifestFailure = Get-CriticalManifestFailure $AppRoot
     }
-    $manifestFailure = Get-CriticalManifestFailure $AppRoot
     if ($manifestFailure) { throw "仓库中的运行文件校验失败：$manifestFailure" }
     $release = [pscustomobject]@{ buildId = (Get-Content (Join-Path $AppRoot 'BUILD-ID.txt') -Raw).Trim() }
 
@@ -224,6 +226,7 @@ try {
     Write-Host "[Forge DIY] Java：$java" -ForegroundColor DarkGray
 
     if (-not $InstallOnly) {
+        Write-Step '正在启动 Forge...'
         $jar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' | Select-Object -First 1
         if (-not $jar) { throw '运行目录中没有 Forge 聚合 JAR。' }
         $overlayRoot = Join-Path $AppRoot 'overlays'
@@ -239,14 +242,15 @@ try {
         if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
         $logRoot = Join-Path $InstallRoot 'logs'
         New-Item -ItemType Directory -Path $logRoot -Force | Out-Null
-        $stdoutLog = Join-Path $logRoot 'forge-stdout.log'
-        $stderrLog = Join-Path $logRoot 'forge-stderr.log'
-        Remove-Item -LiteralPath $stdoutLog, $stderrLog -Force -ErrorAction SilentlyContinue
+        $logStamp = Get-Date -Format 'yyyyMMdd-HHmmss-fff'
+        $stdoutLog = Join-Path $logRoot "forge-bootstrap-$logStamp.stdout.log"
+        $stderrLog = Join-Path $logRoot "forge-bootstrap-$logStamp.stderr.log"
         $arguments = @('-Xmx2048m', '-Dio.netty.tryReflectionSetAccessible=true', '-Dfile.encoding=UTF-8', '-cp', "`"$classPath`"", 'forge.view.Main')
         $process = Start-Process -FilePath $consoleJava -ArgumentList $arguments -WorkingDirectory $AppRoot -WindowStyle Hidden -RedirectStandardOutput $stdoutLog -RedirectStandardError $stderrLog -PassThru
         if ($process.WaitForExit(10000)) {
             throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。请把日志发给维护者：$stderrLog"
         }
+        Write-Host "[Forge DIY] Forge 已启动（PID $($process.Id)）。" -ForegroundColor Green
         Write-Host "[Forge DIY] 启动日志：$stderrLog" -ForegroundColor DarkGray
     }
 } catch {
