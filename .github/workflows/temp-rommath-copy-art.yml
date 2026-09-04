@@ -27,6 +27,9 @@ jobs:
           path: source-forge
           fetch-depth: 1
 
+      - name: Install image verifier
+        run: python -m pip install --disable-pip-version-check pillow
+
       - name: Copy and verify crop art
         run: |
           set -euo pipefail
