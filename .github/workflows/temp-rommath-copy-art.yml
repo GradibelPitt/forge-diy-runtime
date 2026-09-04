@@ -1,0 +1,58 @@
+name: Copy Rommath crop art
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/temp-rommath-copy-art.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  copy-art:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout runtime
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Checkout Forge DIY source
+        uses: actions/checkout@v4
+        with:
+          repository: GradibelPitt/forge
+          ref: diy
+          path: source-forge
+          fetch-depth: 1
+
+      - name: Copy and verify crop art
+        run: |
+          set -euo pipefail
+          src='source-forge/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
+          dst='app/managed/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
+          test -f "$src"
+          mkdir -p "$(dirname "$dst")"
+          cp "$src" "$dst"
+          python - <<'PY'
+          from PIL import Image
+          p = 'app/managed/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
+          with Image.open(p) as im:
+              assert im.format == 'JPEG', im.format
+              assert im.mode == 'RGB', im.mode
+              assert im.size == (800, 584), im.size
+              assert abs(im.width / im.height - 1.37) <= 0.01
+          PY
+
+      - name: Commit crop and remove one-shot workflow
+        run: |
+          set -euo pipefail
+          rm '.github/workflows/temp-rommath-copy-art.yml'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add 'app/managed/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
+          git add -u '.github/workflows/temp-rommath-copy-art.yml'
+          git diff --cached --check
+          git commit -m 'Add Grand Magister Rommath crop art to runtime'
+          git push origin main
