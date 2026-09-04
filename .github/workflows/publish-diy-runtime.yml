@@ -1,0 +1,447 @@
+name: Publish Forge DIY runtime
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Exact 40-character GradibelPitt/forge:diy commit to publish
+        required: true
+        type: string
+      build_id:
+        description: Optional build ID; defaults to YYYYMMDD-diy-<short SHA>
+        required: false
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - '.github/publish-diy-runtime.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-forge-diy-runtime
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout runtime
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Resolve pinned publish request
+        id: request
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $runtimeBase = (& git rev-parse HEAD).Trim()
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to resolve runtime HEAD.' }
+
+          if ('${{ github.event_name }}' -eq 'workflow_dispatch') {
+              $sourceCommit = '${{ inputs.source_commit }}'.Trim()
+              $buildId = '${{ inputs.build_id }}'.Trim()
+          } else {
+              $requestPath = Join-Path $env:GITHUB_WORKSPACE '.github\publish-diy-runtime.json'
+              if (-not (Test-Path -LiteralPath $requestPath -PathType Leaf)) {
+                  throw 'Missing .github/publish-diy-runtime.json.'
+              }
+              $request = Get-Content -LiteralPath $requestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+              $sourceCommit = ([string]$request.sourceCommit).Trim()
+              $buildId = ([string]$request.buildId).Trim()
+          }
+
+          if ($sourceCommit -notmatch '^[0-9a-fA-F]{40}$') {
+              throw 'sourceCommit must be an exact 40-character Git commit SHA.'
+          }
+          $sourceCommit = $sourceCommit.ToLowerInvariant()
+          if ([string]::IsNullOrWhiteSpace($buildId)) {
+              $buildId = (Get-Date).ToUniversalTime().ToString('yyyyMMdd') +
+                  '-diy-' + $sourceCommit.Substring(0, 8)
+          }
+          if ($buildId -notmatch '^[A-Za-z0-9._-]{1,128}$') {
+              throw 'buildId contains unsupported characters or is too long.'
+          }
+
+          $previousSource = ''
+          $releasePath = Join-Path $env:GITHUB_WORKSPACE 'release.json'
+          if (Test-Path -LiteralPath $releasePath -PathType Leaf) {
+              $release = Get-Content -LiteralPath $releasePath -Raw -Encoding UTF8 | ConvertFrom-Json
+              $candidate = ([string]$release.sourceCommit).Trim().ToLowerInvariant()
+              if ($candidate -match '^[0-9a-f]{40}$') {
+                  $previousSource = $candidate
+              }
+          }
+
+          "runtime_base=$runtimeBase" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "source_commit=$sourceCommit" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "previous_source=$previousSource" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "build_id=$buildId" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+
+      - name: Checkout pinned Forge DIY source
+        uses: actions/checkout@v4
+        with:
+          repository: GradibelPitt/forge
+          ref: ${{ steps.request.outputs.source_commit }}
+          path: source
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Verify source commit is current diy HEAD
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $sourceRoot = Join-Path $env:GITHUB_WORKSPACE 'source'
+          $actual = (& git -C $sourceRoot rev-parse HEAD).Trim().ToLowerInvariant()
+          $requested = '${{ steps.request.outputs.source_commit }}'.ToLowerInvariant()
+          if ($LASTEXITCODE -ne 0 -or $actual -ne $requested) {
+              throw "Checked-out source $actual does not equal requested source $requested."
+          }
+
+          $remoteLine = (& git -C $sourceRoot ls-remote origin refs/heads/diy)
+          if ($LASTEXITCODE -ne 0 -or -not $remoteLine) {
+              throw 'Unable to resolve GradibelPitt/forge:diy.'
+          }
+          $diyHead = (($remoteLine | Select-Object -First 1) -split '\s+')[0].ToLowerInvariant()
+          if ($diyHead -ne $requested) {
+              throw "Refusing stale or side-branch publish: diy HEAD is $diyHead, requested $requested."
+          }
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run source card gates
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          python -m pip install --disable-pip-version-check pillow
+          if ($LASTEXITCODE -ne 0) { throw 'Pillow installation failed.' }
+
+          $sourceRoot = Join-Path $env:GITHUB_WORKSPACE 'source'
+          $customRoot = Join-Path $sourceRoot 'custom'
+          $requiredCards = @(
+              'cards\blue\大法师罗曼斯.txt',
+              'cards\colorless\小型卡扎库斯药水.txt',
+              'cards\colorless\卡扎库斯药水.txt'
+          )
+          $requiredSourceFiles = @(
+              'CARDS.md',
+              'editions\Placeholder_Set.txt',
+              'editions\Token_HS.txt',
+              'tests\test_grand_magister_rommath.py',
+              'tests\test_kazakus_potions_native_demon_contract.py',
+              'cards\pictures\PH01\大法师罗曼斯.artcrop.jpg',
+              'cards\pictures\TOKEN_HS\小型卡扎库斯药水.artcrop.jpg',
+              'cards\pictures\TOKEN_HS\卡扎库斯药水.artcrop.jpg'
+          )
+          foreach ($relative in $requiredSourceFiles) {
+              $path = Join-Path $customRoot $relative
+              if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+                  throw "Required source contract file is missing: $relative"
+              }
+          }
+
+          $supplementalTest = 'test_kazakus_potions_native_demon_contract.py'
+          $originalPotionTests = @(
+              Get-ChildItem -LiteralPath (Join-Path $customRoot 'tests') -Filter 'test_*.py' -File |
+                  Where-Object { $_.Name -ne $supplementalTest } |
+                  Where-Object {
+                      $text = Get-Content -LiteralPath $_.FullName -Raw -Encoding UTF8
+                      $text.Contains('小型卡扎库斯药水') -or $text.Contains('卡扎库斯药水')
+                  }
+          )
+          if ($originalPotionTests.Count -lt 2) {
+              throw 'Both original Kazakus potion test files must be restored in addition to the supplemental contract.'
+          }
+          foreach ($name in @('小型卡扎库斯药水', '卡扎库斯药水')) {
+              $matchingTests = @($originalPotionTests | Where-Object {
+                  (Get-Content -LiteralPath $_.FullName -Raw -Encoding UTF8).Contains($name)
+              })
+              if ($matchingTests.Count -eq 0) {
+                  throw "No restored original test covers $name."
+              }
+          }
+
+          $lintCards = [Collections.Generic.HashSet[string]]::new(
+              [StringComparer]::OrdinalIgnoreCase
+          )
+          foreach ($relative in $requiredCards) {
+              $path = Join-Path $customRoot $relative
+              if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+                  throw "Required source card is missing: $relative"
+              }
+              [void]$lintCards.Add($relative)
+          }
+
+          $previous = '${{ steps.request.outputs.previous_source }}'.Trim()
+          $current = '${{ steps.request.outputs.source_commit }}'.Trim()
+          if ($previous -match '^[0-9a-f]{40}$' -and $previous -ne $current) {
+              & git -C $sourceRoot fetch --no-tags --depth=1 origin $previous
+              if ($LASTEXITCODE -ne 0) {
+                  throw "Unable to fetch previous source commit $previous."
+              }
+              $changed = @(& git -C $sourceRoot diff --name-only --diff-filter=ACMRT $previous $current -- custom/cards)
+              if ($LASTEXITCODE -ne 0) {
+                  throw 'Unable to calculate changed custom-card scripts.'
+              }
+              foreach ($path in $changed) {
+                  if ($path -match '^custom/cards/(.+\.txt)$') {
+                      [void]$lintCards.Add(('cards\' + ($Matches[1] -replace '/', '\')))
+                  }
+              }
+          }
+
+          $placeholder = Get-Content -LiteralPath (Join-Path $customRoot 'editions\Placeholder_Set.txt') -Raw -Encoding UTF8
+          if ($placeholder -notmatch '(?m)^139\s+M\s+大法师罗曼斯\s+@Custom\s*$') {
+              throw 'Rommath PH01 #139 registration is missing.'
+          }
+          $tokenHs = Get-Content -LiteralPath (Join-Path $customRoot 'editions\Token_HS.txt') -Raw -Encoding UTF8
+          if ($tokenHs -notmatch '(?m)^1\s+C\s+小型卡扎库斯药水\s+@Konstantin Turovec\s*$' -or
+              $tokenHs -notmatch '(?m)^3\s+C\s+卡扎库斯药水\s+@Konstantin Turovec\s*$') {
+              throw 'Kazakus potion TOKEN_HS registrations are incomplete.'
+          }
+          $cardsIndex = Get-Content -LiteralPath (Join-Path $customRoot 'CARDS.md') -Raw -Encoding UTF8
+          foreach ($marker in @(
+              'cards/blue/大法师罗曼斯.txt',
+              'cards/colorless/小型卡扎库斯药水.txt',
+              'cards/colorless/卡扎库斯药水.txt'
+          )) {
+              if (-not $cardsIndex.Contains($marker)) {
+                  throw "custom/CARDS.md is missing: $marker"
+              }
+          }
+          $localizationPath = Join-Path $sourceRoot 'forge-gui\res\languages\cardnames-zh-CN.txt'
+          $localizationLines = @(Get-Content -LiteralPath $localizationPath -Encoding UTF8)
+          foreach ($name in @('大法师罗曼斯', '小型卡扎库斯药水', '卡扎库斯药水')) {
+              $rows = @($localizationLines | Where-Object { $_ -match ('^' + [regex]::Escape($name) + '\|') })
+              if ($rows.Count -ne 1 -or $rows[0].Split('|', 4).Count -ne 4) {
+                  throw "Expected exactly one four-field zh-CN row for $name."
+              }
+          }
+
+          Push-Location $customRoot
+          try {
+              foreach ($card in @($lintCards | Sort-Object)) {
+                  python tools\lint_card.py $card
+                  if ($LASTEXITCODE -ne 0) {
+                      throw "Card lint failed: $card"
+                  }
+              }
+              python -m unittest discover -s tests -p 'test_*.py' -v
+              if ($LASTEXITCODE -ne 0) {
+                  throw 'Custom Python contract tests failed.'
+              }
+          } finally {
+              Pop-Location
+          }
+
+      - name: Generate complete runtime payload
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $sourceRoot = Join-Path $env:GITHUB_WORKSPACE 'source'
+          & .\tools\publish_git_payload.ps1 `
+              -ForgeRoot $sourceRoot `
+              -BuildId '${{ steps.request.outputs.build_id }}' `
+              -SyncCustom
+          if ($LASTEXITCODE -ne 0) {
+              throw 'publish_git_payload.ps1 failed.'
+          }
+
+      - name: Verify source-to-runtime mirror and metadata
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $sourceRoot = Join-Path $env:GITHUB_WORKSPACE 'source'
+          $appRoot = Join-Path $env:GITHUB_WORKSPACE 'app'
+
+          function Get-TreeHashes([string]$RootPath) {
+              if (-not (Test-Path -LiteralPath $RootPath -PathType Container)) {
+                  throw "Missing tree: $RootPath"
+              }
+              $root = (Resolve-Path -LiteralPath $RootPath).Path
+              $map = @{}
+              foreach ($file in Get-ChildItem -LiteralPath $root -Recurse -File) {
+                  $relative = $file.FullName.Substring($root.Length)
+                  $relative = $relative.TrimStart(
+                      [char[]]@(
+                          [IO.Path]::DirectorySeparatorChar,
+                          [IO.Path]::AltDirectorySeparatorChar
+                      )
+                  ).Replace('\', '/')
+                  $map[$relative] = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash
+              }
+              return $map
+          }
+
+          function Assert-TreeEqual([string]$Label, [string]$SourcePath, [string]$RuntimePath) {
+              $source = Get-TreeHashes $SourcePath
+              $runtime = Get-TreeHashes $RuntimePath
+              if ($source.Count -ne $runtime.Count) {
+                  throw "$Label file-count mismatch: source=$($source.Count), runtime=$($runtime.Count)"
+              }
+              foreach ($relative in $source.Keys) {
+                  if (-not $runtime.ContainsKey($relative)) {
+                      throw "$Label runtime file missing: $relative"
+                  }
+                  if ($source[$relative] -ne $runtime[$relative]) {
+                      throw "$Label hash mismatch: $relative"
+                  }
+              }
+          }
+
+          Assert-TreeEqual 'cards' `
+              (Join-Path $sourceRoot 'custom\cards') `
+              (Join-Path $appRoot 'managed\custom\cards')
+          Assert-TreeEqual 'tokens' `
+              (Join-Path $sourceRoot 'custom\tokens') `
+              (Join-Path $appRoot 'managed\custom\tokens')
+          Assert-TreeEqual 'editions' `
+              (Join-Path $sourceRoot 'custom\editions') `
+              (Join-Path $appRoot 'managed\custom\editions')
+          Assert-TreeEqual 'music' `
+              (Join-Path $sourceRoot 'custom\music') `
+              (Join-Path $appRoot 'managed\custom\music')
+
+          $sourceLocalization = Join-Path $sourceRoot 'forge-gui\res\languages\cardnames-zh-CN.txt'
+          $runtimeLocalization = Join-Path $appRoot 'res\languages\cardnames-zh-CN.txt'
+          $sourceLocalizationHash = (Get-FileHash -LiteralPath $sourceLocalization -Algorithm SHA256).Hash
+          $runtimeLocalizationHash = (Get-FileHash -LiteralPath $runtimeLocalization -Algorithm SHA256).Hash
+          if ($sourceLocalizationHash -ne $runtimeLocalizationHash) {
+              throw 'cardnames-zh-CN source/runtime hash mismatch.'
+          }
+
+          $release = Get-Content -LiteralPath .\release.json -Raw -Encoding UTF8 | ConvertFrom-Json
+          $buildId = (Get-Content -LiteralPath .\app\BUILD-ID.txt -Raw -Encoding UTF8).Trim()
+          $releaseSource = ([string]$release.sourceCommit).Trim().ToLowerInvariant()
+          if ($releaseSource -ne '${{ steps.request.outputs.source_commit }}'.ToLowerInvariant()) {
+              throw 'release.json sourceCommit does not match the pinned source commit.'
+          }
+          if ($release.buildId -ne '${{ steps.request.outputs.build_id }}' -or
+              $buildId -ne '${{ steps.request.outputs.build_id }}') {
+              throw 'release.json and BUILD-ID.txt do not match the requested build ID.'
+          }
+
+          $manifestPath = Join-Path $appRoot 'manifest-critical.sha256'
+          $manifestLines = @(Get-Content -LiteralPath $manifestPath -Encoding UTF8 |
+              Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+          if ($manifestLines.Count -eq 0) {
+              throw 'manifest-critical.sha256 is empty.'
+          }
+          foreach ($line in $manifestLines) {
+              if ($line -notmatch '^([0-9A-Fa-f]{64}) \*(.+)$') {
+                  throw "Invalid manifest entry: $line"
+              }
+              $expected = $Matches[1].ToUpperInvariant()
+              $relative = $Matches[2]
+              $payload = Join-Path $appRoot ($relative -replace '/', '\')
+              if (-not (Test-Path -LiteralPath $payload -PathType Leaf)) {
+                  throw "Manifest payload is missing: $relative"
+              }
+              $actual = (Get-FileHash -LiteralPath $payload -Algorithm SHA256).Hash
+              if ($actual -ne $expected) {
+                  throw "Manifest hash mismatch: $relative"
+              }
+          }
+
+      - name: Run runtime gates
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & .\tests\test_publish_workflow.ps1
+          if ($LASTEXITCODE -ne 0) { throw 'Publish-workflow contract gate failed.' }
+          & .\tests\test_scripts.ps1
+          if ($LASTEXITCODE -ne 0) { throw 'Runtime script gate failed.' }
+
+      - name: Commit generated payload
+        id: commit
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $runtimeBase = '${{ steps.request.outputs.runtime_base }}'
+          & git fetch origin main
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to refresh runtime main before commit.' }
+          $remoteMain = (& git rev-parse origin/main).Trim()
+          if ($remoteMain -ne $runtimeBase) {
+              throw "Runtime main advanced during publish: expected $runtimeBase, found $remoteMain."
+          }
+
+          git add -- `
+              app/BUILD-ID.txt `
+              app/managed/custom `
+              app/res/languages/cardnames-zh-CN.txt `
+              app/manifest-critical.sha256 `
+              release.json
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to stage generated runtime payload.' }
+
+          git diff --cached --check
+          if ($LASTEXITCODE -ne 0) { throw 'Generated runtime diff check failed.' }
+
+          & git diff --cached --quiet
+          $diffExit = $LASTEXITCODE
+          if ($diffExit -gt 1) { throw 'Unable to inspect generated runtime diff.' }
+
+          if ($diffExit -eq 1) {
+              git config user.name 'github-actions[bot]'
+              git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+              git commit -m "Publish DIY runtime ${{ steps.request.outputs.build_id }} from ${{ steps.request.outputs.source_commit }}"
+              if ($LASTEXITCODE -ne 0) { throw 'Runtime commit failed.' }
+              git push origin HEAD:main
+              if ($LASTEXITCODE -ne 0) { throw 'Runtime push failed.' }
+          }
+
+          $runtimeCommit = (& git rev-parse HEAD).Trim()
+          "runtime_commit=$runtimeCommit" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+
+      - name: Verify pushed release and write summary
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          git fetch origin main
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to verify pushed runtime ref.' }
+          $local = (& git rev-parse HEAD).Trim()
+          $remote = (& git rev-parse origin/main).Trim()
+          if ($local -ne $remote) {
+              throw "Pushed runtime verification failed: local=$local remote=$remote"
+          }
+
+          $paths = [ordered]@{
+              'Rommath script' = 'app\managed\custom\cards\blue\大法师罗曼斯.txt'
+              'PH01 edition' = 'app\managed\custom\editions\Placeholder_Set.txt'
+              'Token_HS edition' = 'app\managed\custom\editions\Token_HS.txt'
+              'zh-CN cards' = 'app\res\languages\cardnames-zh-CN.txt'
+              'Small potion' = 'app\managed\custom\cards\colorless\小型卡扎库斯药水.txt'
+              'Large potion' = 'app\managed\custom\cards\colorless\卡扎库斯药水.txt'
+              'Rommath art' = 'app\managed\custom\cards\pictures\PH01\大法师罗曼斯.artcrop.jpg'
+              'Small potion art' = 'app\managed\custom\cards\pictures\TOKEN_HS\小型卡扎库斯药水.artcrop.jpg'
+              'Large potion art' = 'app\managed\custom\cards\pictures\TOKEN_HS\卡扎库斯药水.artcrop.jpg'
+              'BUILD-ID' = 'app\BUILD-ID.txt'
+              'release.json' = 'release.json'
+              'Critical manifest' = 'app\manifest-critical.sha256'
+          }
+
+          $summary = @(
+              '# Forge DIY runtime publish'
+              ''
+              "- Source HEAD: ${{ steps.request.outputs.source_commit }}"
+              "- Runtime HEAD: $remote"
+              "- Build ID: ${{ steps.request.outputs.build_id }}"
+              ''
+              '## Key SHA-256'
+          )
+          foreach ($label in $paths.Keys) {
+              $path = Join-Path $env:GITHUB_WORKSPACE $paths[$label]
+              if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+                  throw "Final release file is missing: $($paths[$label])"
+              }
+              $hash = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash
+              $summary += "- $label: $hash"
+          }
+          $summary | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8
