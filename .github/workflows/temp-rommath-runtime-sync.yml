@@ -42,16 +42,33 @@ jobs:
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
+          $reportRoot = Join-Path $env:GITHUB_WORKSPACE 'rommath-publication-report'
+          New-Item -ItemType Directory -Path $reportRoot -Force | Out-Null
+
           python -m pip install --disable-pip-version-check pillow
           if ($LASTEXITCODE -ne 0) { throw 'Failed to install Pillow for the source contract test.' }
+
           Push-Location '.\source\custom'
           try {
-            python .\tools\lint_card.py '.\cards\blue\大法师罗曼斯.txt'
-            if ($LASTEXITCODE -ne 0) { throw 'Rommath card lint failed.' }
-            python -m unittest tests.test_grand_magister_rommath -v
-            if ($LASTEXITCODE -ne 0) { throw 'Rommath source contract test failed.' }
+            python .\tools\lint_card.py '.\cards\blue\大法师罗曼斯.txt' *> (Join-Path $reportRoot 'source-lint.log')
+            $lintExit = $LASTEXITCODE
+            Get-Content -LiteralPath (Join-Path $reportRoot 'source-lint.log') -Encoding UTF8 | ForEach-Object { Write-Host $_ }
+            if ($lintExit -ne 0) { throw 'Rommath card lint failed.' }
+
+            python -m unittest tests.test_grand_magister_rommath -v *> (Join-Path $reportRoot 'source-test.log')
+            $testExit = $LASTEXITCODE
+            Get-Content -LiteralPath (Join-Path $reportRoot 'source-test.log') -Encoding UTF8 | ForEach-Object { Write-Host $_ }
+            if ($testExit -ne 0) { throw 'Rommath source contract test failed.' }
           } finally {
             Pop-Location
+          }
+
+          $cardsIndex = Get-Content -LiteralPath '.\source\custom\CARDS.md' -Raw -Encoding UTF8
+          if ($cardsIndex -notmatch [regex]::Escape('cards/blue/大法师罗曼斯.txt')) {
+            throw 'Rommath is missing from the authoritative custom/CARDS.md index.'
+          }
+          if (-not (Test-Path -LiteralPath '.\source\custom\tests\test_grand_magister_rommath.py' -PathType Leaf)) {
+            throw 'Rommath targeted test file is missing from the authoritative source.'
           }
 
       - name: Generate scoped Rommath runtime payload
@@ -76,15 +93,12 @@ jobs:
           $runtimeArt = Join-Path $env:GITHUB_WORKSPACE 'app\managed\custom\cards\pictures\PH01\大法师罗曼斯.artcrop.jpg'
           $runtimeTokenHs = Join-Path $env:GITHUB_WORKSPACE 'app\managed\custom\editions\Token_HS.txt'
 
-          foreach ($required in @($sourceCard, $sourceEdition, $sourceLocalization, $sourceArt, $runtimeTokenHs)) {
+          foreach ($required in @($sourceCard, $sourceEdition, $sourceLocalization, $sourceArt, $runtimeLocalization, $runtimeTokenHs)) {
             if (-not (Test-Path -LiteralPath $required -PathType Leaf)) {
               throw "Required publication input is missing: $required"
             }
           }
 
-          # The local Codex owner has reserved all Kazakus-potion work. Copying the
-          # complete localization file is allowed only when those protected rows are
-          # byte-for-byte unchanged (currently they are absent on both sides).
           $sourceLocalizationLines = @(Get-Content -LiteralPath $sourceLocalization -Encoding UTF8)
           $runtimeLocalizationLines = @(Get-Content -LiteralPath $runtimeLocalization -Encoding UTF8)
           foreach ($protectedName in @('小型卡扎库斯药水', '卡扎库斯药水', '伪造的药水')) {
@@ -95,12 +109,30 @@ jobs:
             }
           }
 
+          $rommathRows = @($sourceLocalizationLines | Where-Object { $_.StartsWith('大法师罗曼斯|') })
+          if ($rommathRows.Count -ne 1 -or $rommathRows[0].Split('|', 4).Count -ne 4) {
+            throw 'Authoritative source must contain exactly one four-field Rommath localization row.'
+          }
+          $rommathRow = $rommathRows[0]
+
           $tokenHsBefore = (Get-FileHash -LiteralPath $runtimeTokenHs -Algorithm SHA256).Hash
 
           Copy-Item -LiteralPath $sourceCard -Destination $runtimeCard -Force
           Copy-Item -LiteralPath $sourceEdition -Destination $runtimeEdition -Force
-          Copy-Item -LiteralPath $sourceLocalization -Destination $runtimeLocalization -Force
           Copy-Item -LiteralPath $sourceArt -Destination $runtimeArt -Force
+
+          # Patch only the Rommath localization row. Preserve every unrelated row,
+          # the existing newline convention, and the existing UTF-8 BOM policy.
+          $runtimeBytes = [IO.File]::ReadAllBytes($runtimeLocalization)
+          $hasBom = $runtimeBytes.Length -ge 3 -and $runtimeBytes[0] -eq 0xEF -and $runtimeBytes[1] -eq 0xBB -and $runtimeBytes[2] -eq 0xBF
+          $runtimeText = [IO.File]::ReadAllText($runtimeLocalization, [Text.Encoding]::UTF8)
+          $lineEnding = if ($runtimeText.Contains("`r`n")) { "`r`n" } else { "`n" }
+          $trimmed = $runtimeText.TrimEnd("`r", "`n")
+          $lines = if ($trimmed.Length -eq 0) { @() } else { @([regex]::Split($trimmed, '\r?\n')) }
+          $lines = @($lines | Where-Object { -not $_.StartsWith('大法师罗曼斯|') })
+          $lines += $rommathRow
+          $encoding = [Text.UTF8Encoding]::new($hasBom)
+          [IO.File]::WriteAllText($runtimeLocalization, (($lines -join $lineEnding) + $lineEnding), $encoding)
 
           $buildId = '20260905-grand-magister-rommath-' + $sourceSha.Substring(0, 8)
           & .\tools\publish_git_payload.ps1 -ForgeRoot $sourceRoot -BuildId $buildId
@@ -119,6 +151,9 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           $sourceRoot = Join-Path $env:GITHUB_WORKSPACE 'source'
+          $reportRoot = Join-Path $env:GITHUB_WORKSPACE 'rommath-publication-report'
+          $verificationPath = Join-Path $reportRoot 'verification.txt'
+
           $pairs = [ordered]@{
             'card' = @(
               (Join-Path $sourceRoot 'custom\cards\blue\大法师罗曼斯.txt'),
@@ -128,33 +163,48 @@ jobs:
               (Join-Path $sourceRoot 'custom\editions\Placeholder_Set.txt'),
               (Join-Path $env:GITHUB_WORKSPACE 'app\managed\custom\editions\Placeholder_Set.txt')
             )
-            'localization' = @(
-              (Join-Path $sourceRoot 'forge-gui\res\languages\cardnames-zh-CN.txt'),
-              (Join-Path $env:GITHUB_WORKSPACE 'app\res\languages\cardnames-zh-CN.txt')
-            )
             'art' = @(
               (Join-Path $sourceRoot 'custom\cards\pictures\PH01\大法师罗曼斯.artcrop.jpg'),
               (Join-Path $env:GITHUB_WORKSPACE 'app\managed\custom\cards\pictures\PH01\大法师罗曼斯.artcrop.jpg')
             )
           }
 
+          $report = New-Object System.Collections.Generic.List[string]
+          $report.Add("SOURCE_COMMIT=$env:ROMMATH_SOURCE_SHA")
+          $report.Add("BUILD_ID=$env:ROMMATH_BUILD_ID")
           foreach ($name in $pairs.Keys) {
             $sourceHash = (Get-FileHash -LiteralPath $pairs[$name][0] -Algorithm SHA256).Hash
             $runtimeHash = (Get-FileHash -LiteralPath $pairs[$name][1] -Algorithm SHA256).Hash
             if ($sourceHash -ne $runtimeHash) {
               throw "Source/runtime SHA-256 mismatch for $name"
             }
-            Write-Output "ROMMATH_SHA256_$($name.ToUpper())=$sourceHash"
+            $key = "SHA256_$($name.ToUpper())"
+            $report.Add("$key=$sourceHash")
+            Write-Output "ROMMATH_$key=$sourceHash"
           }
 
           $editionText = Get-Content -LiteralPath $pairs['edition'][1] -Raw -Encoding UTF8
           if (@([regex]::Matches($editionText, '(?m)^139\s+M\s+大法师罗曼斯\s+@Custom\s*$')).Count -ne 1) {
             throw 'PH01 must contain exactly one #139 Rommath registration.'
           }
-          $localizationLines = @(Get-Content -LiteralPath $pairs['localization'][1] -Encoding UTF8)
-          if (@($localizationLines | Where-Object { $_.StartsWith('大法师罗曼斯|大法师罗曼斯|') }).Count -ne 1) {
-            throw 'Runtime must contain exactly one four-field Rommath localization row.'
+
+          $sourceLocalization = Join-Path $sourceRoot 'forge-gui\res\languages\cardnames-zh-CN.txt'
+          $runtimeLocalization = Join-Path $env:GITHUB_WORKSPACE 'app\res\languages\cardnames-zh-CN.txt'
+          $sourceRows = @(Get-Content -LiteralPath $sourceLocalization -Encoding UTF8 | Where-Object { $_.StartsWith('大法师罗曼斯|') })
+          $runtimeRows = @(Get-Content -LiteralPath $runtimeLocalization -Encoding UTF8 | Where-Object { $_.StartsWith('大法师罗曼斯|') })
+          if ($sourceRows.Count -ne 1 -or $runtimeRows.Count -ne 1 -or $sourceRows[0] -ne $runtimeRows[0]) {
+            throw 'Runtime Rommath localization row does not exactly match authoritative source.'
           }
+          $sha = [Security.Cryptography.SHA256]::Create()
+          try {
+            $rowBytes = [Text.Encoding]::UTF8.GetBytes($runtimeRows[0])
+            $rowHash = ([BitConverter]::ToString($sha.ComputeHash($rowBytes))).Replace('-', '')
+          } finally {
+            $sha.Dispose()
+          }
+          $report.Add("SHA256_LOCALIZATION_ROW=$rowHash")
+          $report.Add("SHA256_LOCALIZATION_RUNTIME_FILE=$((Get-FileHash -LiteralPath $runtimeLocalization -Algorithm SHA256).Hash)")
+          Write-Output "ROMMATH_SHA256_LOCALIZATION_ROW=$rowHash"
 
           $releasePath = Join-Path $env:GITHUB_WORKSPACE 'release.json'
           $buildPath = Join-Path $env:GITHUB_WORKSPACE 'app\BUILD-ID.txt'
@@ -175,7 +225,7 @@ jobs:
             'managed/custom/cards/blue/大法师罗曼斯.txt' = $pairs['card'][1]
             'managed/custom/editions/Placeholder_Set.txt' = $pairs['edition'][1]
             'managed/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg' = $pairs['art'][1]
-            'res/languages/cardnames-zh-CN.txt' = $pairs['localization'][1]
+            'res/languages/cardnames-zh-CN.txt' = $runtimeLocalization
           }
           foreach ($relative in $manifestExpectations.Keys) {
             $actual = (Get-FileHash -LiteralPath $manifestExpectations[$relative] -Algorithm SHA256).Hash
@@ -185,11 +235,12 @@ jobs:
             }
           }
 
-          Write-Output "ROMMATH_SOURCE_COMMIT=$($release.sourceCommit)"
-          Write-Output "ROMMATH_BUILD_ID=$buildId"
-          Write-Output "ROMMATH_MANIFEST_ENTRIES=$($manifestLines.Count)"
+          $report.Add("MANIFEST_ENTRIES=$($manifestLines.Count)")
+          $report.Add("SHA256_MANIFEST=$((Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash)")
+          $report | Set-Content -LiteralPath $verificationPath -Encoding utf8
+          $report | ForEach-Object { Write-Host $_ }
 
-      - name: Stage generated payload and run runtime gates
+      - name: Stage scoped runtime payload
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
@@ -204,10 +255,44 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'Failed to stage the scoped runtime payload.' }
           git diff --cached --check
           if ($LASTEXITCODE -ne 0) { throw 'Staged runtime diff check failed.' }
-          & .\tests\test_scripts.ps1
-          if ($LASTEXITCODE -ne 0) { throw 'Runtime script gate failed.' }
-          & .\tests\test_profile_sync.ps1
-          if ($LASTEXITCODE -ne 0) { throw 'Runtime profile-sync gate failed.' }
+
+      - name: Run runtime script gate
+        id: runtime_scripts
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $log = Join-Path $env:GITHUB_WORKSPACE 'rommath-publication-report\runtime-test-scripts.log'
+          & powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tests\test_scripts.ps1 *> $log
+          $exitCode = $LASTEXITCODE
+          Get-Content -LiteralPath $log -Encoding UTF8 | Select-Object -Last 300 | ForEach-Object { Write-Host $_ }
+          if ($exitCode -ne 0) { exit $exitCode }
+
+      - name: Run profile-sync gate directly
+        id: profile_sync
+        if: ${{ always() }}
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          $log = Join-Path $env:GITHUB_WORKSPACE 'rommath-publication-report\runtime-profile-sync.log'
+          & powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tests\test_profile_sync.ps1 *> $log
+          $exitCode = $LASTEXITCODE
+          Get-Content -LiteralPath $log -Encoding UTF8 | Select-Object -Last 300 | ForEach-Object { Write-Host $_ }
+          if ($exitCode -ne 0) { exit $exitCode }
+
+      - name: Upload Rommath publication report
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: rommath-publication-report-${{ github.run_id }}
+          path: rommath-publication-report
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Stop before commit when a runtime gate failed
+        if: ${{ always() && (steps.runtime_scripts.outcome == 'failure' || steps.profile_sync.outcome == 'failure') }}
+        shell: pwsh
+        run: |
+          throw 'One or more runtime gates failed. See the uploaded Rommath publication report.'
 
       - name: Remove one-shot files and enforce Rommath-only scope
         shell: pwsh
@@ -248,5 +333,9 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m "Publish Grand Magister Rommath runtime ($env:ROMMATH_BUILD_ID)"
           if ($LASTEXITCODE -ne 0) { throw 'Runtime commit failed.' }
+          $commitSha = (& git rev-parse HEAD).Trim()
           git push origin HEAD:main
           if ($LASTEXITCODE -ne 0) { throw 'Runtime push failed.' }
+          $remoteSha = ((& git ls-remote origin refs/heads/main) -split '\s+')[0]
+          if ($remoteSha -ne $commitSha) { throw 'Remote main does not match the verified runtime commit.' }
+          Write-Output "ROMMATH_RUNTIME_COMMIT=$commitSha"
