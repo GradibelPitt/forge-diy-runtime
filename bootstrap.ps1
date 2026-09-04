@@ -1,7 +1,8 @@
 ﻿param(
     [switch]$InstallOnly,
     [switch]$IgnoreSystemJava,
-    [switch]$SelfTest
+    [switch]$SelfTest,
+    [switch]$FullVerify
 )
 
 $ErrorActionPreference = 'Stop'
@@ -153,12 +154,51 @@ function Update-Repository([string]$GitExe) {
     } else {
         Write-Step '正在检查运行仓库更新...'
         & $GitExe -C $RepoRoot fetch origin main --depth 1
+        if ($LASTEXITCODE -ne 0) { throw 'Git fetch 失败。' }
+        # reset --hard already updates changed tracked files. Do not force a full
+        # checkout-index of the entire payload on every normal launch.
         & $GitExe -C $RepoRoot reset --hard origin/main
-        & $GitExe -C $RepoRoot checkout-index -a -f
     }
     if ($LASTEXITCODE -ne 0) { throw 'Git 仓库克隆或更新失败。' }
 }
 
+# Normal startup uses this cheap structural check only. It intentionally does not
+# read the large SHA-256 manifest and does not hash payload files.
+function Get-FastRuntimeFailure([string]$Root) {
+    foreach ($relative in @('BUILD-ID.txt', 'manifest-critical.sha256', 'forge.exe')) {
+        $path = Join-Path $Root $relative
+        if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { return "缺少文件：$relative" }
+    }
+
+    $jar = Get-ChildItem -LiteralPath $Root -Filter '*-jar-with-dependencies.jar' -File -ErrorAction SilentlyContinue |
+        Select-Object -First 1
+    if (-not $jar) { return '缺少 Forge 聚合 JAR。' }
+
+    $releaseFile = Join-Path $RepoRoot 'release.json'
+    if (-not (Test-Path -LiteralPath $releaseFile -PathType Leaf)) { return '缺少 release.json。' }
+    try {
+        $releaseInfo = Get-Content -LiteralPath $releaseFile -Raw -Encoding UTF8 | ConvertFrom-Json
+    } catch {
+        return "release.json 无法读取：$($_.Exception.Message)"
+    }
+
+    $buildId = (Get-Content -LiteralPath (Join-Path $Root 'BUILD-ID.txt') -Raw -Encoding UTF8).Trim()
+    if ([string]::IsNullOrWhiteSpace($buildId)) { return 'BUILD-ID.txt 为空。' }
+    if ($releaseInfo.buildId -ne $buildId) {
+        return "BUILD-ID 不一致：app=$buildId release=$($releaseInfo.buildId)"
+    }
+
+    foreach ($overlayName in @($releaseInfo.moduleOverlays)) {
+        if ([string]::IsNullOrWhiteSpace($overlayName)) { continue }
+        $overlayPath = Join-Path (Join-Path $Root 'overlays') $overlayName
+        if (-not (Test-Path -LiteralPath $overlayPath -PathType Leaf)) {
+            return "缺少 overlay：$overlayName"
+        }
+    }
+    return $null
+}
+
+# Expensive diagnostic path. It is used only when -FullVerify is explicitly set.
 function Get-CriticalManifestFailure([string]$Root) {
     $manifest = Join-Path $Root 'manifest-critical.sha256'
     if (-not (Test-Path $manifest)) { return '缺少 manifest-critical.sha256' }
@@ -207,19 +247,25 @@ try {
     if (-not $git) { $git = Install-Git }
     Update-Repository $git
 
-    Write-Step '正在校验运行文件...'
-    $manifestFailure = Get-CriticalManifestFailure $AppRoot
-    if ($manifestFailure) {
-        Write-Step '检测到旧安装文件校验失败，正在自动执行全新克隆修复...'
+    Write-Step '正在快速检查运行文件...'
+    $runtimeFailure = Get-FastRuntimeFailure $AppRoot
+    if ($runtimeFailure) {
+        Write-Step "快速检查失败（$runtimeFailure），正在执行全新克隆修复..."
         Remove-Item -LiteralPath $RepoRoot -Recurse -Force
         & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
         if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
-        $manifestFailure = Get-CriticalManifestFailure $AppRoot
+        $runtimeFailure = Get-FastRuntimeFailure $AppRoot
     }
-    if ($manifestFailure) { throw "仓库中的运行文件校验失败：$manifestFailure" }
+    if ($runtimeFailure) { throw "仓库中的运行文件结构异常：$runtimeFailure" }
+
+    if ($FullVerify) {
+        Write-Step '正在执行完整 SHA-256 校验（FullVerify 模式，可能需要数分钟）...'
+        $manifestFailure = Get-CriticalManifestFailure $AppRoot
+        if ($manifestFailure) { throw "完整运行文件校验失败：$manifestFailure" }
+        Write-Host '[Forge DIY] 完整 SHA-256 校验通过。' -ForegroundColor Green
+    }
 
     $buildIdFile = Join-Path $AppRoot 'BUILD-ID.txt'
-    if (-not (Test-Path -LiteralPath $buildIdFile -PathType Leaf)) { throw '运行目录缺少 BUILD-ID.txt。' }
     $release = [pscustomobject]@{ buildId = (Get-Content $buildIdFile -Raw).Trim() }
 
     $java = $null
