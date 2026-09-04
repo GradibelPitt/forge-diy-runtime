@@ -15,8 +15,8 @@ $AppRoot = Join-Path $RepoRoot 'app'
 $ToolsRoot = Join-Path $InstallRoot 'tools'
 $JavaRoot = Join-Path $InstallRoot 'java17'
 
-# Forge's official desktop launcher opens these JDK modules. Because this runtime
-# prepends overlay JARs with -cp instead of using "java -jar", the manifest's
+# Forge's desktop runtime opens these JVM modules. Because this runtime prepends
+# overlay JARs with -cp instead of using "java -jar", the aggregate JAR manifest's
 # Add-Opens entries are not applied automatically and must be passed explicitly.
 $ForgeAddOpens = @(
     'java.desktop/java.beans',
@@ -63,13 +63,6 @@ function Get-JavaMajor([string]$JavaExe) {
     return 0
 }
 
-function Test-Jdk17([string]$JavaExe) {
-    if ((Get-JavaMajor $JavaExe) -lt 17) { return $false }
-    $candidateDirectory = Split-Path $JavaExe -Parent
-    $javac = Join-Path $candidateDirectory 'javac.exe'
-    return (Test-Path -LiteralPath $javac -PathType Leaf)
-}
-
 function Find-Java17 {
     $candidates = New-Object System.Collections.Generic.List[string]
     if ($env:JAVA_HOME) { $candidates.Add((Join-Path $env:JAVA_HOME 'bin\java.exe')) }
@@ -80,7 +73,7 @@ function Find-Java17 {
             ForEach-Object { $candidates.Add($_.FullName) }
     }
     foreach ($candidate in $candidates | Select-Object -Unique) {
-        if (Test-Jdk17 $candidate) {
+        if ((Get-JavaMajor $candidate) -ge 17) {
             $candidateDirectory = Split-Path $candidate -Parent
             $javaw = Join-Path $candidateDirectory 'javaw.exe'
             if (Test-Path -LiteralPath $javaw -PathType Leaf) { return $javaw }
@@ -91,17 +84,17 @@ function Find-Java17 {
 }
 
 function Install-PortableJava17 {
-    Write-Step '未检测到 JDK 17 或更高版本，正在下载便携 JDK（无需配置环境变量）...'
+    Write-Step '未检测到 Java 17 或更高版本，正在下载便携 Java（无需配置环境变量）...'
     New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
     $archive = Join-Path $InstallRoot 'java17.zip'
-    $uri = 'https://api.adoptium.net/v3/binary/latest/17/ga/windows/x64/jdk/hotspot/normal/eclipse'
+    $uri = 'https://api.adoptium.net/v3/binary/latest/17/ga/windows/x64/jre/hotspot/normal/eclipse'
     Invoke-WebRequest -UseBasicParsing -Uri $uri -OutFile $archive
     if (Test-Path $JavaRoot) { Remove-Item -LiteralPath $JavaRoot -Recurse -Force }
     New-Item -ItemType Directory -Path $JavaRoot -Force | Out-Null
     Expand-Archive -LiteralPath $archive -DestinationPath $JavaRoot -Force
     Remove-Item -LiteralPath $archive -Force
     $java = Find-Java17
-    if (-not $java) { throw '便携 JDK 17 下载完成，但未找到可用的 javaw.exe / javac.exe。' }
+    if (-not $java) { throw '便携 Java 17 下载完成，但未找到可用的 javaw.exe。' }
     return $java
 }
 
@@ -291,11 +284,7 @@ try {
 
     $javaDirectory = Split-Path $java -Parent
     $consoleJava = Join-Path $javaDirectory 'java.exe'
-    $javac = Join-Path $javaDirectory 'javac.exe'
-    if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf) -or
-        -not (Test-Path -LiteralPath $javac -PathType Leaf)) {
-        throw 'Forge 需要完整 JDK 17+；当前 Java 安装缺少 java.exe 或 javac.exe。'
-    }
+    if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
     $env:JAVA_HOME = Split-Path $javaDirectory -Parent
     $env:PATH = "$javaDirectory;$env:PATH"
 
@@ -303,7 +292,7 @@ try {
     $installedScript = Join-Path $RepoRoot 'bootstrap.ps1'
     New-DesktopShortcut $installedScript
     Write-Host "[Forge DIY] 当前构建版本：$($release.buildId)" -ForegroundColor Green
-    Write-Host "[Forge DIY] JDK：$env:JAVA_HOME" -ForegroundColor DarkGray
+    Write-Host "[Forge DIY] Java：$java" -ForegroundColor DarkGray
 
     if (-not $InstallOnly) {
         Write-Step '正在启动 Forge...'
