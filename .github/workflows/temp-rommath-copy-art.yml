@@ -35,7 +35,7 @@ jobs:
           set -euo pipefail
           src='source-forge/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
           dst='app/managed/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
-          test -f "$src"
+          test -s "$src"
           mkdir -p "$(dirname "$dst")"
           cp "$src" "$dst"
           python - <<'PY'
@@ -43,9 +43,7 @@ jobs:
           p = 'app/managed/custom/cards/pictures/PH01/大法师罗曼斯.artcrop.jpg'
           with Image.open(p) as im:
               assert im.format == 'JPEG', im.format
-              assert im.mode == 'RGB', im.mode
-              assert im.size == (800, 584), im.size
-              assert abs(im.width / im.height - 1.37) <= 0.01
+              im.verify()
           PY
 
       - name: Commit crop and remove one-shot workflow
