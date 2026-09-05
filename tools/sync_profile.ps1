@@ -89,6 +89,44 @@ function Set-ManagedPreferences([string]$PreferencesFile) {
 
 }
 
+function Ensure-DesktopAssetCompatibility([string]$RuntimeAppRoot) {
+    # The overlay desktop JAR can identify itself as a development build and ask
+    # Forge for ../forge-gui/res relative to the app working directory. Resolve
+    # the actual checkout on this machine from AppRoot instead of hard-coding a
+    # user/profile path, then bridge only the expected res directory to app\res.
+    $runtimeRepoRoot = Split-Path $RuntimeAppRoot -Parent
+    $gitMetadata = Join-Path $runtimeRepoRoot '.git'
+    if (-not (Test-Path -LiteralPath $gitMetadata)) {
+        # Unit-test fixtures and non-repository callers do not need this bridge.
+        return $null
+    }
+
+    $runtimeRes = Join-Path $RuntimeAppRoot 'res'
+    $runtimeSplash = Join-Path $runtimeRes 'skins\default\bg_splash.png'
+    if (-not (Test-Path -LiteralPath $runtimeSplash -PathType Leaf)) {
+        throw "Runtime default skin is missing: $runtimeSplash"
+    }
+
+    $compatRoot = Join-Path $runtimeRepoRoot 'forge-gui'
+    $compatRes = Join-Path $compatRoot 'res'
+    $compatSplash = Join-Path $compatRes 'skins\default\bg_splash.png'
+    if (Test-Path -LiteralPath $compatSplash -PathType Leaf) {
+        return $compatRes
+    }
+
+    New-Item -ItemType Directory -Path $compatRoot -Force | Out-Null
+    $existingCompatRes = Get-Item -LiteralPath $compatRes -Force -ErrorAction SilentlyContinue
+    if ($existingCompatRes) {
+        throw "Forge compatibility resource path already exists but is invalid: $compatRes"
+    }
+
+    New-Item -ItemType Junction -Path $compatRes -Target $runtimeRes | Out-Null
+    if (-not (Test-Path -LiteralPath $compatSplash -PathType Leaf)) {
+        throw "Forge compatibility resource bridge could not expose the default skin: $compatSplash"
+    }
+    return $compatRes
+}
+
 function Remove-RetiredCardPictureVariants([string]$CardCache) {
     $chainbreakerHoggerName = -join ([char[]](0x7834, 0x94FE, 0x707E, 0x661F, 0x970D, 0x683C))
     $patchesPirateName = -join ([char[]](0x6D77, 0x76D7, 0x5E15, 0x5947, 0x65AF))
@@ -189,6 +227,7 @@ $profilePreferenceCount = Copy-VerifiedFiles $managedProfilePreferences `
     (Join-Path $RoamingAppData 'Forge\preferences') '*'
 $profileDeckCount = Copy-VerifiedFiles $managedProfileDecks $forgeDecks '*.dck'
 Set-ManagedPreferences $preferences
+$assetCompatibilityPath = Ensure-DesktopAssetCompatibility $AppRoot
 
 Write-Output "SYNCED_CARDS=$cardCount"
 Write-Output "SYNCED_EDITIONS=$editionCount"
@@ -202,6 +241,9 @@ Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
 Write-Output "SYNCED_PROFILE_PREFERENCES=$profilePreferenceCount"
 Write-Output "SYNCED_PROFILE_DECKS=$profileDeckCount"
 Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
+if ($assetCompatibilityPath) {
+    Write-Output "ASSET_COMPAT_PATH=$assetCompatibilityPath"
+}
 Write-Output 'CARD_ART_FORMAT=Crop'
 Write-Output 'FRIEND_UI=Warmwood'
 Write-Output 'FRIEND_MUSIC=Pull Up a Chair'
