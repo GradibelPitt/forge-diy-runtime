@@ -21,6 +21,7 @@ try {
     $tokenImageSource = Join-Path $managed 'tokens\pictures\test_token.jpg'
     $constructedDeckSource = Join-Path $appRoot 'managed\decks\constructed\shared-constructed.dck'
     $commanderDeckSource = Join-Path $appRoot 'managed\decks\commander\shared-commander.dck'
+    $managedProfileDeckSource = Join-Path $appRoot 'managed\profile\decks\constructed\personal-local.dck'
     $menuMusicSource = Join-Path $managed 'music\Pull Up a Chair\menus\Pull Up a Chair.mp3'
     $matchMusicSource = Join-Path $managed 'music\Pull Up a Chair\match\Bad Down to the Molten Core.mp3'
     foreach ($path in @(
@@ -30,6 +31,7 @@ try {
         $tokenImageSource,
         $constructedDeckSource,
         $commanderDeckSource,
+        $managedProfileDeckSource,
         $menuMusicSource,
         $matchMusicSource
     )) {
@@ -54,6 +56,12 @@ try {
         '1 Island|UST|[213]',
         '[Commander]',
         '1 Isamaru, Hound of Konda|CHK|[19]'
+    ), [Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllLines($managedProfileDeckSource, @(
+        '[metadata]',
+        'Name=Packaged Profile Copy That Must Not Be Pushed',
+        '[Main]',
+        '1 Mountain|UST|[215]'
     ), [Text.UTF8Encoding]::new($false))
 
     $unrelatedDeck = Join-Path $roaming 'Forge\decks\constructed\personal-local.dck'

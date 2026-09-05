@@ -202,7 +202,6 @@ $source = Join-Path $AppRoot 'managed\custom'
 $managedDecks = Join-Path $AppRoot 'managed\decks'
 $managedProfile = Join-Path $AppRoot 'managed\profile'
 $managedProfilePreferences = Join-Path $managedProfile 'preferences'
-$managedProfileDecks = Join-Path $managedProfile 'decks'
 $forgeCustom = Join-Path $RoamingAppData 'Forge\custom'
 $forgeDecks = Join-Path $RoamingAppData 'Forge\decks'
 $cardCache = Join-Path $LocalAppData 'Forge\Cache\pics\cards'
@@ -225,7 +224,6 @@ $commanderDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'commander') `
     (Join-Path $forgeDecks 'commander\ForgeDIY') '*.dck'
 $profilePreferenceCount = Copy-VerifiedFiles $managedProfilePreferences `
     (Join-Path $RoamingAppData 'Forge\preferences') '*'
-$profileDeckCount = Copy-VerifiedFiles $managedProfileDecks $forgeDecks '*.dck'
 Set-ManagedPreferences $preferences
 $assetCompatibilityPath = Ensure-DesktopAssetCompatibility $AppRoot
 
@@ -239,7 +237,6 @@ Write-Output "REMOVED_RETIRED_CARD_IMAGES=$retiredCardPictureCount"
 Write-Output "SYNCED_CONSTRUCTED_DECKS=$constructedDeckCount"
 Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
 Write-Output "SYNCED_PROFILE_PREFERENCES=$profilePreferenceCount"
-Write-Output "SYNCED_PROFILE_DECKS=$profileDeckCount"
 Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
 if ($assetCompatibilityPath) {
     Write-Output "ASSET_COMPAT_PATH=$assetCompatibilityPath"
