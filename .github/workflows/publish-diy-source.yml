@@ -52,6 +52,10 @@ jobs:
           "sha=$requested" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
           "short=$($requested.Substring(0, 12))" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
 
+      - name: Preserve source bytes on Windows
+        shell: pwsh
+        run: git config --global core.autocrlf false
+
       - name: Check out the exact Forge DIY source commit
         uses: actions/checkout@v4
         with:
@@ -96,7 +100,9 @@ jobs:
             $cards = @(
               'cards/white/龙鳞祭司.txt',
               'cards/multicolor/奥术吐息.txt',
-              'cards/multicolor/梦境吐息.txt'
+              'cards/multicolor/梦境吐息.txt',
+              'cards/colorless/小型卡扎库斯药水.txt',
+              'cards/colorless/卡扎库斯药水.txt'
             )
             foreach ($card in $cards) {
               if (-not (Test-Path -LiteralPath $card -PathType Leaf)) {
@@ -119,8 +125,8 @@ jobs:
               if ($LASTEXITCODE -ne 0) { throw "Artwork validation failed: $picture" }
             }
 
-            & python -m unittest tests.test_dragon_breaths -v
-            if ($LASTEXITCODE -ne 0) { throw 'Dragon Behold trio contract tests failed.' }
+            & python -m unittest tests.test_dragon_breaths tests.test_small_kazakus_potion tests.test_kazakus_potion -v
+            if ($LASTEXITCODE -ne 0) { throw 'Dragon Behold and TOKEN_HS potion contract tests failed.' }
           }
           finally {
             Pop-Location
@@ -216,7 +222,7 @@ jobs:
           $ErrorActionPreference = 'Stop'
           git add -- app/BUILD-ID.txt app/managed/custom app/res/languages/cardnames-zh-CN.txt app/manifest-critical.sha256 release.json
           if ($LASTEXITCODE -ne 0) { throw 'Failed to stage generated runtime payload before gates.' }
-          git diff --cached --check
+          git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check
           if ($LASTEXITCODE -ne 0) { throw 'Staged runtime diff check failed before gates.' }
 
       - name: Run runtime and profile-sync gates
@@ -234,7 +240,7 @@ jobs:
           $ErrorActionPreference = 'Stop'
           git add -- app/BUILD-ID.txt app/managed/custom app/res/languages/cardnames-zh-CN.txt app/manifest-critical.sha256 release.json
           if ($LASTEXITCODE -ne 0) { throw 'Failed to stage generated runtime payload.' }
-          git diff --cached --check
+          git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --cached --check
           if ($LASTEXITCODE -ne 0) { throw 'Staged runtime diff check failed.' }
           if ([string]::IsNullOrWhiteSpace((git diff --cached --name-only))) {
             throw 'Publisher produced no staged payload or metadata changes.'

@@ -243,4 +243,5 @@ if (-not (Test-Path -LiteralPath $demonfireScript -PathType Leaf) -or
     -not (Test-Path -LiteralPath $demonfireArt -PathType Leaf)) {
     throw 'PH01 collector number 98 must retain its script and full-card artwork'
 }
+& (Join-Path $root 'tests\test_token_hs_potions.ps1') -AppRoot (Join-Path $root 'app')
 Write-Output 'SCRIPT_TESTS=OK'
