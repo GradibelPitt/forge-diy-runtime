@@ -88,15 +88,15 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           & python -m pip install --disable-pip-version-check pillow
-          if ($LASTEXITCODE -ne 0) { throw 'Unable to install Pillow for image-contract tests.' }
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to install Pillow for image-contract checks.' }
 
           $customRoot = Join-Path $env:GITHUB_WORKSPACE 'forge-source\custom'
           Push-Location $customRoot
           try {
             $cards = @(
-              'cards/blue/大法师罗曼斯.txt',
-              'cards/colorless/小型卡扎库斯药水.txt',
-              'cards/colorless/卡扎库斯药水.txt'
+              'cards/white/龙鳞祭司.txt',
+              'cards/multicolor/奥术吐息.txt',
+              'cards/multicolor/梦境吐息.txt'
             )
             foreach ($card in $cards) {
               if (-not (Test-Path -LiteralPath $card -PathType Leaf)) {
@@ -106,22 +106,21 @@ jobs:
               if ($LASTEXITCODE -ne 0) { throw "Card lint failed: $card" }
             }
 
-            & python -m unittest tests.test_grand_magister_rommath -v
-            if ($LASTEXITCODE -ne 0) { throw 'Grand Magister Rommath contract tests failed.' }
-
-            $kazakusModules = @(
-              Get-ChildItem -LiteralPath 'tests' -Filter 'test_*.py' -File |
-                Where-Object {
-                  (Get-Content -LiteralPath $_.FullName -Raw -Encoding utf8) -match '小型卡扎库斯药水|卡扎库斯药水'
-                } |
-                ForEach-Object { "tests.$($_.BaseName)" } |
-                Sort-Object -Unique
+            $art = @(
+              'cards/pictures/PH01/龙鳞祭司.artcrop.jpg',
+              'cards/pictures/PH01/奥术吐息.artcrop.jpg',
+              'cards/pictures/PH01/梦境吐息.artcrop.jpg'
             )
-            if ($kazakusModules.Count -lt 3) {
-              throw "Expected the two restored potion test modules plus the native-token contract; found $($kazakusModules.Count): $($kazakusModules -join ', ')"
+            foreach ($picture in $art) {
+              if (-not (Test-Path -LiteralPath $picture -PathType Leaf)) {
+                throw "Missing required source artwork: $picture"
+              }
+              & python -c "from PIL import Image; import sys; p=sys.argv[1]; im=Image.open(p); im.verify(); im=Image.open(p); assert im.format == 'JPEG'; assert im.width > 0 and im.height > 0; print(f'ART_OK {p} {im.size}')" $picture
+              if ($LASTEXITCODE -ne 0) { throw "Artwork validation failed: $picture" }
             }
-            & python -m unittest @kazakusModules -v
-            if ($LASTEXITCODE -ne 0) { throw 'Kazakus potion contract tests failed.' }
+
+            & python -m unittest tests.test_dragon_breaths -v
+            if ($LASTEXITCODE -ne 0) { throw 'Dragon Behold trio contract tests failed.' }
           }
           finally {
             Pop-Location
