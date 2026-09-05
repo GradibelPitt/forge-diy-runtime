@@ -152,10 +152,7 @@ function Remove-RetiredCardPictureVariants([string]$CardCache) {
     return $removed
 }
 
-function Remove-RetiredHearthstoneContent(
-    [string]$ForgeCustomRoot,
-    [string]$ForgeDeckRoot
-) {
+function Remove-RetiredHearthstoneContent([string]$ForgeCustomRoot) {
     $hearthstoneName = -join ([char[]](0x7089, 0x77F3, 0x4F20, 0x8BF4))
     $retiredCard = Join-Path $ForgeCustomRoot "cards\colorless\$hearthstoneName.txt"
     if (Test-Path -LiteralPath $retiredCard -PathType Leaf) {
@@ -168,46 +165,13 @@ function Remove-RetiredHearthstoneContent(
         Remove-Item -LiteralPath $retiredWildheartGuff -Force
     }
 
-    if (-not (Test-Path -LiteralPath $ForgeDeckRoot -PathType Container)) {
-        return 0
-    }
-
-    $migrated = 0
-    Get-ChildItem -LiteralPath $ForgeDeckRoot -Recurse -Filter '*.dck' -File | ForEach-Object {
-        $lines = [IO.File]::ReadAllLines($_.FullName, [Text.Encoding]::UTF8)
-        $updated = New-Object 'System.Collections.Generic.List[string]'
-        $removed = $false
-        foreach ($line in $lines) {
-            $trimmed = $line.Trim()
-            $request = $trimmed -replace '^\d+\s+', ''
-            if ($trimmed -match '^\d+\s+' -and $request.StartsWith("$hearthstoneName|PH01")) {
-                $removed = $true
-            } else {
-                $updated.Add($line)
-            }
-        }
-        if ($removed) {
-            $backup = $_.FullName + '.pre-hearthstone-mode.bak'
-            if (-not (Test-Path -LiteralPath $backup -PathType Leaf)) {
-                Copy-Item -LiteralPath $_.FullName -Destination $backup
-            }
-            [IO.File]::WriteAllLines($_.FullName, $updated, [Text.UTF8Encoding]::new($false))
-            $script:migratedHearthstoneDecks++
-        }
-    }
-    return $script:migratedHearthstoneDecks
 }
 
 $source = Join-Path $AppRoot 'managed\custom'
-$managedDecks = Join-Path $AppRoot 'managed\decks'
-$managedProfile = Join-Path $AppRoot 'managed\profile'
-$managedProfilePreferences = Join-Path $managedProfile 'preferences'
 $forgeCustom = Join-Path $RoamingAppData 'Forge\custom'
-$forgeDecks = Join-Path $RoamingAppData 'Forge\decks'
 $cardCache = Join-Path $LocalAppData 'Forge\Cache\pics\cards'
 $tokenCache = Join-Path $LocalAppData 'Forge\Cache\pics\tokens'
 $preferences = Join-Path $RoamingAppData 'Forge\preferences\forge.preferences'
-$constructedDecks = Join-Path $RoamingAppData 'Forge\decks\constructed'
 
 $cardCount = Copy-VerifiedFiles (Join-Path $source 'cards') (Join-Path $forgeCustom 'cards') '*.txt'
 $editionCount = Copy-VerifiedFiles (Join-Path $source 'editions') (Join-Path $forgeCustom 'editions') '*.txt'
@@ -216,14 +180,7 @@ $musicCount = Copy-VerifiedFiles (Join-Path $source 'music') (Join-Path $forgeCu
 $cardImageCount = Copy-VerifiedFiles (Join-Path $source 'cards\pictures') $cardCache '*'
 $tokenImageCount = Copy-VerifiedFiles (Join-Path $source 'tokens\pictures') $tokenCache '*'
 $retiredCardPictureCount = Remove-RetiredCardPictureVariants $cardCache
-$migratedHearthstoneDecks = 0
-Remove-RetiredHearthstoneContent $forgeCustom $constructedDecks | Out-Null
-$constructedDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'constructed') `
-    (Join-Path $forgeDecks 'constructed\ForgeDIY') '*.dck'
-$commanderDeckCount = Copy-VerifiedFiles (Join-Path $managedDecks 'commander') `
-    (Join-Path $forgeDecks 'commander\ForgeDIY') '*.dck'
-$profilePreferenceCount = Copy-VerifiedFiles $managedProfilePreferences `
-    (Join-Path $RoamingAppData 'Forge\preferences') '*'
+Remove-RetiredHearthstoneContent $forgeCustom
 Set-ManagedPreferences $preferences
 $assetCompatibilityPath = Ensure-DesktopAssetCompatibility $AppRoot
 
@@ -234,10 +191,6 @@ Write-Output "SYNCED_MUSIC=$musicCount"
 Write-Output "SYNCED_CARD_IMAGES=$cardImageCount"
 Write-Output "SYNCED_TOKEN_IMAGES=$tokenImageCount"
 Write-Output "REMOVED_RETIRED_CARD_IMAGES=$retiredCardPictureCount"
-Write-Output "SYNCED_CONSTRUCTED_DECKS=$constructedDeckCount"
-Write-Output "SYNCED_COMMANDER_DECKS=$commanderDeckCount"
-Write-Output "SYNCED_PROFILE_PREFERENCES=$profilePreferenceCount"
-Write-Output "MIGRATED_HEARTHSTONE_DECKS=$migratedHearthstoneDecks"
 if ($assetCompatibilityPath) {
     Write-Output "ASSET_COMPAT_PATH=$assetCompatibilityPath"
 }

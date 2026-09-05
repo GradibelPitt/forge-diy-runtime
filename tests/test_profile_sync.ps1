@@ -22,6 +22,7 @@ try {
     $constructedDeckSource = Join-Path $appRoot 'managed\decks\constructed\shared-constructed.dck'
     $commanderDeckSource = Join-Path $appRoot 'managed\decks\commander\shared-commander.dck'
     $managedProfileDeckSource = Join-Path $appRoot 'managed\profile\decks\constructed\personal-local.dck'
+    $managedDeckPreferenceSource = Join-Path $appRoot 'managed\profile\preferences\deck.preferences'
     $menuMusicSource = Join-Path $managed 'music\Pull Up a Chair\menus\Pull Up a Chair.mp3'
     $matchMusicSource = Join-Path $managed 'music\Pull Up a Chair\match\Bad Down to the Molten Core.mp3'
     foreach ($path in @(
@@ -32,6 +33,7 @@ try {
         $constructedDeckSource,
         $commanderDeckSource,
         $managedProfileDeckSource,
+        $managedDeckPreferenceSource,
         $menuMusicSource,
         $matchMusicSource
     )) {
@@ -63,6 +65,11 @@ try {
         '[Main]',
         '1 Mountain|UST|[215]'
     ), [Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllText(
+        $managedDeckPreferenceSource,
+        "PACKAGED_DECK_PREFERENCE=must-not-be-pushed`r`n",
+        [Text.UTF8Encoding]::new($false)
+    )
 
     $unrelatedDeck = Join-Path $roaming 'Forge\decks\constructed\personal-local.dck'
     New-Item -ItemType Directory -Path (Split-Path $unrelatedDeck -Parent) -Force | Out-Null
@@ -73,6 +80,14 @@ try {
         '1 Swamp|UST|[214]'
     ), [Text.UTF8Encoding]::new($false))
     $unrelatedDeckHash = (Get-FileHash -LiteralPath $unrelatedDeck -Algorithm SHA256).Hash
+    $userDeckPreference = Join-Path $roaming 'Forge\preferences\deck.preferences'
+    New-Item -ItemType Directory -Path (Split-Path $userDeckPreference -Parent) -Force | Out-Null
+    [IO.File]::WriteAllText(
+        $userDeckPreference,
+        "USER_DECK_PREFERENCE=preserve-this`r`n",
+        [Text.UTF8Encoding]::new($false)
+    )
+    $userDeckPreferenceHash = (Get-FileHash -LiteralPath $userDeckPreference -Algorithm SHA256).Hash
     [IO.File]::WriteAllBytes($menuMusicSource, [byte[]](9, 8, 7, 6))
     [IO.File]::WriteAllBytes($matchMusicSource, [byte[]](6, 7, 8, 9))
 
@@ -97,6 +112,7 @@ try {
         "1 $hearthstoneName|PH01|[14]",
         '1 Plains|UST|[212]'
     ), [Text.UTF8Encoding]::new($false))
+    $legacyDeckHash = (Get-FileHash -LiteralPath $legacyDeck -Algorithm SHA256).Hash
 
     $chainbreakerHoggerName = -join ([char[]](0x7834, 0x94FE, 0x707E, 0x661F, 0x970D, 0x683C))
     $patchesPirateName = -join ([char[]](0x6D77, 0x76D7, 0x5E15, 0x5947, 0x65AF))
@@ -154,8 +170,6 @@ try {
         @($cardImageSource, $cardImageTarget),
         @($tokenSource, $tokenTarget),
         @($tokenImageSource, $tokenImageTarget),
-        @($constructedDeckSource, $constructedDeckTarget),
-        @($commanderDeckSource, $commanderDeckTarget),
         @($menuMusicSource, $menuMusicTarget),
         @($matchMusicSource, $matchMusicTarget)
     )) {
@@ -169,8 +183,17 @@ try {
         }
     }
 
+    foreach ($deckTarget in @($constructedDeckTarget, $commanderDeckTarget)) {
+        if (Test-Path -LiteralPath $deckTarget) {
+            throw "Profile sync must not publish or overwrite deck files: $deckTarget"
+        }
+    }
+
     if ((Get-FileHash -LiteralPath $unrelatedDeck -Algorithm SHA256).Hash -ne $unrelatedDeckHash) {
         throw 'Profile sync must preserve unrelated local constructed decks'
+    }
+    if ((Get-FileHash -LiteralPath $userDeckPreference -Algorithm SHA256).Hash -ne $userDeckPreferenceHash) {
+        throw 'Profile sync must preserve non-UI and non-music preferences'
     }
 
     $preferenceLines = @(Get-Content -LiteralPath $preferences -Encoding UTF8)
@@ -234,19 +257,12 @@ try {
     if (Test-Path -LiteralPath $retiredWildheartGuff) {
         throw 'Profile sync must remove the retired green Wildheart Guff script'
     }
-    $migratedDeckLines = [IO.File]::ReadAllLines($legacyDeck, [Text.Encoding]::UTF8)
-    if ($migratedDeckLines -match [regex]::Escape($hearthstoneName)) {
-        throw 'Profile sync must remove the retired Hearthstone card from saved decks'
-    }
-    if ($migratedDeckLines -notcontains '1 Plains|UST|[212]') {
-        throw 'Profile sync must preserve unrelated saved deck cards'
+    if ((Get-FileHash -LiteralPath $legacyDeck -Algorithm SHA256).Hash -ne $legacyDeckHash) {
+        throw 'Profile sync must never migrate or rewrite saved decks'
     }
     $legacyBackup = $legacyDeck + '.pre-hearthstone-mode.bak'
-    if (-not (Test-Path -LiteralPath $legacyBackup -PathType Leaf)) {
-        throw 'Profile sync must back up migrated saved decks'
-    }
-    if (-not ([IO.File]::ReadAllText($legacyBackup, [Text.Encoding]::UTF8).Contains($hearthstoneName))) {
-        throw 'Saved deck backup must retain the retired Hearthstone entry'
+    if (Test-Path -LiteralPath $legacyBackup -PathType Leaf) {
+        throw 'Profile sync must not create migration backups because it must not touch saved decks'
     }
 
     Write-Output 'PROFILE_SYNC_TESTS=OK'
