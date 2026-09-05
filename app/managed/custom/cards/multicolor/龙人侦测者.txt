@@ -1,0 +1,13 @@
+Name:龙人侦测者
+ManaCost:2 U B
+Types:Creature Dragon Spy
+PT:4/5
+K:Vigilance
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigDig | TriggerDescription$ 当龙人侦测者进场时，若已请援龙，则检视目标对手牌库顶的三张牌，将一张牌面朝下地放逐，另一张置于该牌库底。你可以检视并使用所放逐的牌。
+SVar:TrigDig:DB$ Dig | ValidTgts$ Opponent | DigNum$ 3 | ChangeNum$ 1 | DestinationZone$ Exile | DestinationZone2$ Library | LibraryPosition2$ 0 | ExileFaceDown$ True | WithMayLook$ True | ChangeValid$ Card | RememberChanged$ True | SubAbility$ DBBottom
+SVar:DBBottom:DB$ Dig | Defined$ Targeted | DigNum$ 2 | ChangeNum$ 1 | DestinationZone$ Library | LibraryPosition$ -1 | DestinationZone2$ Library | LibraryPosition2$ 0 | ChangeValid$ Card | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | Duration$ Permanent | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreColor$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ 你可以使用这张牌，且可以将法术力视同任意颜色的法术力来施放它。
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:警戒\n你可以请援龙，以作为施放此咒语的额外费用。\n当龙人侦测者进场时，若已请援龙，则检视目标对手牌库顶的三张牌。将其中一张牌面朝下地放逐，另一张置于该牌库底，其余的牌置于该牌库顶。于所放逐之牌持续放逐的时段内，你可以检视并使用该牌，且你可以将法术力视同任意颜色的法术力来施放该咒语。

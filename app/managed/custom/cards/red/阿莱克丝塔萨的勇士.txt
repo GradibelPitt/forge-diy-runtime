@@ -1,0 +1,8 @@
+Name:阿莱克丝塔萨的勇士
+ManaCost:1 R
+Types:Creature Human Soldier
+PT:2/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ 当阿莱克丝塔萨的勇士进场时，你可以请援龙。若你如此作，在它上面放置一个+1/+1指示物，且它获得敏捷异能直到回合结束。
+SVar:TrigCounter:AB$ PutCounter | Cost$ Behold<1/Dragon> | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBHaste
+SVar:DBHaste:DB$ Pump | Defined$ Self | KW$ Haste
+Oracle:当阿莱克丝塔萨的勇士进场时，你可以请援龙。若你如此作，在它上面放置一个+1/+1指示物，且它获得敏捷异能直到回合结束。

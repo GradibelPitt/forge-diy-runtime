@@ -1,0 +1,10 @@
+Name:黑翼腐蚀者
+ManaCost:3 B R
+Types:Creature Dragon
+PT:5/4
+K:Trample
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigEffect | TriggerDescription$ 当黑翼腐蚀者进场时，你可以请援龙。若你如此作，则本回合中伤害不能被防止，且黑翼腐蚀者对任意一个目标造成4点伤害。
+SVar:TrigEffect:AB$ Effect | Cost$ Behold<1/Dragon> | StaticAbilities$ STCantPrevent | SubAbility$ DBDamage
+SVar:STCantPrevent:Mode$ CantPreventDamage | Description$ 本回合中伤害不能被防止。
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 4 | NoPrevention$ True
+Oracle:践踏\n当黑翼腐蚀者进场时，你可以请援龙。若你如此作，则本回合中伤害不能被防止，且黑翼腐蚀者对任意一个目标造成4点伤害。

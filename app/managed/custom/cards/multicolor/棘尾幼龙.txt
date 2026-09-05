@@ -1,0 +1,9 @@
+Name:棘尾幼龙
+ManaCost:2 R G
+Types:Creature Dragon
+PT:5/4
+K:Trample
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigDamage | TriggerDescription$ 当棘尾幼龙进场时，若已请援龙，则它对目标由对手操控的生物造成5点伤害。
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Creature.OppCtrl | NumDmg$ 5
+Oracle:践踏\n你可以请援龙，以作为施放此咒语的额外费用。\n当棘尾幼龙进场时，若已请援龙，则它对目标由对手操控的生物造成5点伤害。

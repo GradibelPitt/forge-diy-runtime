@@ -1,0 +1,10 @@
+Name:蜡烛巨龙
+ManaCost:3 W B
+Types:Legendary Creature Dragon Spirit
+PT:7/5
+K:Lifelink
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigShuffle | TriggerDescription$ 当蜡烛巨龙从任何区域置入坟墓场时，将它洗入其拥有者的牌库。占卜2。
+SVar:TrigShuffle:DB$ ChangeZone | Defined$ TriggeredCardLKICopy | Origin$ Graveyard | Destination$ Library | Shuffle$ True | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry | Defined$ You | ScryNum$ 2
+K:Miracle:W B Behold<1/Dragon>
+Oracle:系命\n当蜡烛巨龙从任何区域置入坟墓场时，将它洗入其拥有者的牌库。占卜2。\n奇迹～{W}{B}，请援龙。

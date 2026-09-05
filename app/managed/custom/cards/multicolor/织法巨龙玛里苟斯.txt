@@ -1,0 +1,11 @@
+Name:织法巨龙玛里苟斯
+ManaCost:2 U R
+Types:Legendary Creature Elder Dragon
+PT:2/5
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+K:Flying
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigDelayedCopy | TriggerDescription$ 当织法巨龙玛里苟斯进场时，若已请援龙，则建立本回合下一次瞬间或法术咒语的复制效果，然后你可以从手上免费施放一个法术力值等于或小于4的瞬间或法术咒语。
+SVar:TrigDelayedCopy:DB$ DelayedTrigger | Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | Execute$ DBCopy | ThisTurn$ True | SubAbility$ DBPlay
+SVar:DBCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+SVar:DBPlay:DB$ Play | Valid$ Card.YouOwn | ValidZone$ Hand | Controller$ You | WithoutManaCost$ True | ValidSA$ Instant.cmcLE4,Sorcery.cmcLE4 | Amount$ 1 | Optional$ True
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n飞行\n当织法巨龙玛里苟斯进场时，若已请援龙，则本回合中，当你下一次施放瞬间或法术咒语时，复制该咒语。你可以为该复制品选择新的目标。然后你可以从你手上施放一个法术力值等于或小于4的瞬间或法术咒语，且不需支付其法术力费用。

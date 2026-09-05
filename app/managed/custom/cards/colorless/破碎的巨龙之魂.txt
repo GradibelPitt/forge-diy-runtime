@@ -1,0 +1,14 @@
+Name:破碎的巨龙之魂
+ManaCost:6
+Types:Sorcery
+K:Escalate:Behold<1/Dragon>
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ 6 | Choices$ DBDrain,DBScry,DBDestroy,DBUntap,DBDamage,DBToken
+SVar:DBDrain:DB$ LoseLife | ValidTgts$ Opponent | LifeAmount$ 3 | SubAbility$ DBGainLife | SpellDescription$ 目标对手失去3点生命。你获得3点生命。
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
+SVar:DBScry:DB$ Scry | Defined$ You | ScryNum$ 1 | SubAbility$ DBDraw | SpellDescription$ 占卜1。抓一张牌。
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | SpellDescription$ 消灭目标神器或结界。
+SVar:DBUntap:DB$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ 3 | SpellDescription$ 重置至多三个地。
+SVar:DBDamage:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 3 | SpellDescription$ 破碎的巨龙之魂对每个生物各造成3点伤害。
+SVar:DBToken:DB$ Token | TokenScript$ w_5_5_dragon_flying | TokenAmount$ 1 | SpellDescription$ 派出一个5/5白色、具飞行异能的龙衍生生物。
+Oracle:增效～请援龙。\n选择一项或多项～\n• 目标对手失去3点生命。你获得3点生命。\n• 占卜1。抓一张牌。\n• 消灭目标神器或结界。\n• 重置至多三个地。\n• 破碎的巨龙之魂对每个生物各造成3点伤害。\n• 派出一个5/5白色、具飞行异能的龙衍生生物。

@@ -1,0 +1,7 @@
+Name:乘龙法师
+ManaCost:3 U R W
+Types:Creature Human Wizard Knight
+PT:4/4
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPlay | TriggerDescription$ 当乘龙法师进场时，你可以请援龙。若你如此作，你可以从你手上施放一个瞬间或法术咒语，且不需支付其法术力费用。
+SVar:TrigPlay:AB$ Play | Cost$ Behold<1/Dragon> | Valid$ Card.YouOwn | ValidZone$ Hand | Controller$ You | WithoutManaCost$ True | ValidSA$ Instant,Sorcery | Amount$ 1 | Optional$ True
+Oracle:当乘龙法师进场时，你可以请援龙。若你如此作，你可以从你手上施放一个瞬间或法术咒语，且不需支付其法术力费用。

@@ -1,0 +1,7 @@
+Name:青铜龙军团
+ManaCost:U
+Types:Instant
+K:AlternateAdditionalCost:Behold<1/Dragon>:W
+A:SP$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBToken | SpellDescription$ 抓一张牌。然后若你操控六个或更多地，则派出一个5/5白色、具飞行异能的龙衍生生物。
+SVar:DBToken:DB$ Token | TokenScript$ w_5_5_dragon_flying | TokenAmount$ 1 | ConditionPresent$ Land.YouCtrl | ConditionCompare$ GE6
+Oracle:请援龙或支付{W}，以作为施放此咒语的额外费用。\n抓一张牌。然后若你操控六个或更多地，则派出一个5/5白色、具飞行异能的龙衍生生物。

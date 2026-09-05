@@ -1,0 +1,9 @@
+Name:飞向天空
+ManaCost:1 G W
+Types:Sorcery
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Modes | Choices$ DBPump,DBDraw | AdditionalDescription$ 。如果已请援龙，则你可以改为两项都选。
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ 1 | NumDef$ 1 | KW$ Flying | SpellDescription$ 直到回合结束，由你操控的生物得+1/+1且获得飞行异能。
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 2 | SpellDescription$ 抓两张牌。
+SVar:Modes:Count$OptionalGenericCostPaid.2.1
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n选择一项。如果已请援龙，则你可以改为两项都选。\n• 直到回合结束，由你操控的生物得+1/+1且获得飞行异能。\n• 抓两张牌。

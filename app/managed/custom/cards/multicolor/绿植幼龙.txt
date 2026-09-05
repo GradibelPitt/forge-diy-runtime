@@ -1,0 +1,8 @@
+Name:绿植幼龙
+ManaCost:2 B G
+Types:Creature Dragon
+PT:2/3
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ 当绿植幼龙进场时，将目标牌从你的坟墓场移回你手上。
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.YouOwn | TgtPrompt$ 选择目标你坟墓场中的牌
+K:Unearth:B G Behold<1/Dragon>
+Oracle:当绿植幼龙进场时，将目标牌从你的坟墓场移回你手上。\n破坟～{B}{G}，请援龙。

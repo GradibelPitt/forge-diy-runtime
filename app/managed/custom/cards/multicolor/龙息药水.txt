@@ -1,0 +1,10 @@
+Name:龙息药水
+ManaCost:2 R W
+Types:Sorcery
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Modes | Choices$ DBGainLife,DBDamage | AdditionalDescription$ 。如果已请援龙，则你可以改为两项都选。
+SVar:DBGainLife:DB$ GainLife | Defined$ You | ValidTgts$ Player | LifeAmount$ 4 | SubAbility$ DBLifelink | SpellDescription$ 你获得4点生命。由目标牌手操控的龙获得系命异能直到回合结束。
+SVar:DBLifelink:DB$ PumpAll | ValidCards$ Dragon.TargetedPlayerCtrl | KW$ Lifelink
+SVar:DBDamage:DB$ DamageAll | ValidCards$ Creature,Planeswalker | NumDmg$ 4 | SpellDescription$ 龙息药水对每个生物和每个鹏洛客各造成4点伤害。
+SVar:Modes:Count$OptionalGenericCostPaid.2.1
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n选择一项。如果已请援龙，则你可以改为两项都选。\n• 你获得4点生命。由目标牌手操控的龙获得系命异能直到回合结束。\n• 龙息药水对每个生物和每个鹏洛客各造成4点伤害。

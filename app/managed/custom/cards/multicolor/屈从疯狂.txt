@@ -1,0 +1,8 @@
+Name:屈从疯狂
+ManaCost:B R
+Types:Sorcery
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.Dragon+YouOwn | TgtPrompt$ 选择目标你坟墓场中的龙生物牌 | GainControl$ True | RememberChanged$ True | SubAbility$ DBHaste | SpellDescription$ 将目标龙生物牌从你的坟墓场移回战场。该生物获得敏捷异能。在下一个结束步骤开始时将它放逐。
+SVar:DBHaste:DB$ Animate | Defined$ Remembered | Keywords$ Haste | Duration$ Permanent | AtEOT$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+K:Flashback:2 B R Behold<1/Dragon>
+Oracle:将目标龙生物牌从你的坟墓场移回战场。该生物获得敏捷异能。在下一个结束步骤开始时将它放逐。\n返照～{2}{B}{R}，请援龙。

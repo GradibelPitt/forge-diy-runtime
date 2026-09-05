@@ -1,0 +1,9 @@
+Name:晦鳞巢母
+ManaCost:1 U B
+Types:Creature Dragon
+PT:4/3
+K:Menace
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigUntap | TriggerDescription$ 当晦鳞巢母进场时，若已请援龙，则重置至多两个地。
+SVar:TrigUntap:DB$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ 2
+Oracle:威慑\n你可以请援龙，以作为施放此咒语的额外费用。\n当晦鳞巢母进场时，若已请援龙，则重置至多两个地。

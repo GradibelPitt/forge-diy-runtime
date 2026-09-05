@@ -1,0 +1,15 @@
+Name:火光之龙菲莱克
+ManaCost:4 U B R
+Types:Legendary Creature Elder Dragon
+PT:7/7
+A:SP$ PermanentCreature | Cost$ 4 U B R Behold<X/Dragon> | Announce$ X | SpellDescription$ 请援X个龙，以作为施放此咒语的额外费用。
+SVar:X:Count$xPaid
+SVar:CastX:CastSA>Count$xPaid
+K:Flying
+K:Protection:Instant
+K:Protection:Sorcery
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ 当火光之龙菲莱克进场时，从你的坟墓场放逐X张瞬间和／或法术牌。复制以此法放逐的每张牌，你可以免费施放这些复制品。
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ChangeType$ Instant.YouOwn,Sorcery.YouOwn | ChangeNum$ CastX | Hidden$ True | Mandatory$ True | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | Amount$ All | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:请援X个龙，以作为施放此咒语的额外费用。\n飞行，反瞬间与法术保护\n当火光之龙菲莱克进场时，从你的坟墓场放逐X张瞬间和／或法术牌。对每张以此法放逐的牌而言，将其复制，你可以施放该复制品，且不需支付其法术力费用。

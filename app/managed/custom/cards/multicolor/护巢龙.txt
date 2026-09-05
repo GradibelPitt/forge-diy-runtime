@@ -1,0 +1,10 @@
+Name:护巢龙
+ManaCost:2 R G
+Types:Creature Dragon
+PT:3/4
+K:AlternateAdditionalCost:Behold<1/Dragon>:1
+K:Trample
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ 当护巢龙进场时，从你牌库中搜寻至多一张树林牌，将它横置放进战场，然后洗牌。然后若你操控八个或更多地，则派出一个2/1绿色的龙衍生生物。
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Forest | ChangeNum$ 1 | Tapped$ True | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ g_2_1_dragon | TokenAmount$ 1 | ConditionPresent$ Land.YouCtrl | ConditionCompare$ GE8
+Oracle:请援龙或支付{1}，以作为施放此咒语的额外费用。\n践踏\n当护巢龙进场时，从你牌库中搜寻至多一张树林牌，将它横置放进战场，然后洗牌。然后若你操控八个或更多地，则派出一个2/1绿色的龙衍生生物。

@@ -1,0 +1,10 @@
+Name:逐月幼龙
+ManaCost:2 W U
+Types:Creature Dragon
+PT:2/4
+K:AlternateAdditionalCost:Behold<1/Dragon>:1
+K:Ward:1
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ DragonsCast | SVarCompare$ GE1 | Execute$ TrigDraw | TriggerDescription$ 在你的结束步骤开始时，若你本回合中施放过龙咒语，则抓一张牌。
+SVar:DragonsCast:Count$ThisTurnCast_Dragon.YouCtrl
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+Oracle:请援龙或支付{1}，以作为施放此咒语的额外费用。\n守护{1}\n在你的结束步骤开始时，若你本回合中施放过龙咒语，则抓一张牌。

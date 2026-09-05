@@ -1,0 +1,10 @@
+Name:时空扭曲者扎里米
+ManaCost:3 W U
+Types:Legendary Creature Elder Dragon
+PT:4/6
+K:Kicker:Behold<7/Dragon>
+K:Flying
+T:Mode$ SpellCast | ValidCard$ Card.Self | Kicked$ True | Execute$ TrigExtraTurn | TriggerDescription$ 当你施放此咒语时，若它已增幅，则于本回合后进行额外的一个回合。
+SVar:TrigExtraTurn:DB$ AddTurn | Defined$ You | NumTurns$ 1
+S:Mode$ CantBeCast | Caster$ Opponent | ValidCard$ Card | Condition$ PlayerTurn | Description$ 所有对手在你的回合中都不能施放咒语。
+Oracle:增幅～请援七个龙。\n飞行\n当你施放此咒语时，若它已增幅，则于本回合后进行额外的一个回合。\n所有对手在你的回合中都不能施放咒语。

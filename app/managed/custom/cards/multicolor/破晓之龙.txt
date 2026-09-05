@@ -1,0 +1,9 @@
+Name:破晓之龙
+ManaCost:2 B R
+Types:Creature Dragon
+PT:3/3
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigDamage | TriggerDescription$ 当破晓之龙进场时，若已请援龙，则它对每个其他生物各造成3点伤害。如果本回合中曾以此法受到伤害的生物将死去，则改为将它放逐。
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature.Other | NumDmg$ 3 | RememberDamaged$ True | ReplaceDyingDefined$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n当破晓之龙进场时，若已请援龙，则它对每个其他生物各造成3点伤害。如果本回合中曾以此法受到伤害的生物将死去，则改为将它放逐。

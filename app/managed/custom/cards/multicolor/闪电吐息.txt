@@ -1,0 +1,8 @@
+Name:闪电吐息
+ManaCost:R W
+Types:Instant
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ 当你施放此咒语时，若已请援龙，则将它复制。你可以为该复制品选择新的目标。
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+A:SP$ DealDamage | ValidTgts$ Creature,Planeswalker | NumDmg$ 3 | SpellDescription$ 闪电吐息对目标生物或鹏洛客造成3点伤害。
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n当你施放此咒语时，若已请援龙，则将它复制。你可以为该复制品选择新的目标。\n闪电吐息对目标生物或鹏洛客造成3点伤害。

@@ -1,0 +1,10 @@
+Name:撼地巨吼
+ManaCost:G
+Types:Sorcery
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Modes | Choices$ DBSetToughness,DBFightTarget | AdditionalDescription$ 。如果已请援龙，则你可以改为两项都选。
+SVar:DBSetToughness:DB$ Animate | ValidTgts$ Creature | Toughness$ 1 | IsCurse$ True | SpellDescription$ 目标生物的基础防御力成为1直到回合结束。
+SVar:DBFightTarget:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ 选择目标由你操控的生物 | AILogic$ Fight | SubAbility$ DBFight | SpellDescription$ 目标由你操控的生物与目标由对手操控的生物互斗。
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.OppCtrl | TgtPrompt$ 选择目标由对手操控的生物
+SVar:Modes:Count$OptionalGenericCostPaid.2.1
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n选择一项。如果已请援龙，则你可以改为两项都选。\n• 目标生物的基础防御力成为1直到回合结束。\n• 目标由你操控的生物与目标由对手操控的生物互斗。

@@ -1,0 +1,8 @@
+Name:虚空幽龙史学家
+ManaCost:1 U
+Types:Creature Dwarf Scientist
+PT:1/3
+K:AlternateAdditionalCost:Behold<1/Dragon>:W
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ 当虚空幽龙史学家进场时，检视你牌库顶的五张牌。你可以展示其中一张龙牌并置于你手上。然后将其余的牌以任意顺序置于你牌库底。
+SVar:TrigDig:DB$ Dig | Defined$ You | DigNum$ 5 | ChangeNum$ 1 | ChangeValid$ Dragon | Optional$ True | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition2$ -1
+Oracle:请援龙或支付{W}，以作为施放此咒语的额外费用。\n当虚空幽龙史学家进场时，检视你牌库顶的五张牌。你可以展示其中一张龙牌并置于你手上。然后将其余的牌以任意顺序置于你牌库底。

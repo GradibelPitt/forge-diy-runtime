@@ -1,0 +1,7 @@
+Name:风暴之锤
+ManaCost:1 G
+Types:Artifact Equipment
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddToughness$ 0 | AddKeyword$ First strike | Description$ 佩带此武具的生物得+1/+0且具有先攻异能。
+K:Equip:0:Creature.YouCtrl+Dragon:Dragon
+K:Equip:2
+Oracle:佩带此武具的生物得+1/+0且具有先攻异能。\n佩带龙{0}\n佩带{2}

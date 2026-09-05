@@ -1,0 +1,12 @@
+Name:嗜睡巨龙
+ManaCost:2 G W
+Types:Creature Dragon
+PT:3/5
+K:AlternateAdditionalCost:Behold<1/Dragon>:W
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | Description$ 嗜睡巨龙须横置进场，且上面有两个晕眩指示物。
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True | SubAbility$ DBStun
+SVar:DBStun:DB$ PutCounter | Defined$ Self | ETB$ True | CounterType$ STUN | CounterNum$ 2
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+tapped | Execute$ TrigToken | TriggerDescription$ 在你的结束步骤开始时，若嗜睡巨龙已横置，则派出一个2/1绿色的龙衍生生物。
+SVar:TrigToken:DB$ Token | TokenScript$ g_2_1_dragon | TokenAmount$ 1
+S:Mode$ Continuous | Affected$ Dragon.YouCtrl+tapped | AddKeyword$ Ward:3 | Description$ 由你操控且已横置的龙具有守护{3}。
+Oracle:请援龙或支付{W}，以作为施放此咒语的额外费用。\n嗜睡巨龙须横置进场，且上面有两个晕眩指示物。\n在你的结束步骤开始时，若嗜睡巨龙已横置，则派出一个2/1绿色的龙衍生生物。\n由你操控且已横置的龙具有守护{3}。

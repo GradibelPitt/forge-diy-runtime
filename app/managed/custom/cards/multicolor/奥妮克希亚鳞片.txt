@@ -1,0 +1,8 @@
+Name:奥妮克希亚鳞片
+ManaCost:X 1 R G
+Types:Kindred Sorcery Dragon
+A:SP$ Token | TokenScript$ g_2_1_dragon | TokenAmount$ X | SubAbility$ DBHaste | SpellDescription$ 派出X个2/1绿色的龙衍生生物。由你操控的龙获得敏捷异能直到回合结束。
+SVar:X:Count$xPaid
+SVar:DBHaste:DB$ PumpAll | ValidCards$ Dragon.YouCtrl | KW$ Haste
+K:Harmonize:R R G G Behold<X/Dragon>
+Oracle:派出X个2/1绿色的龙衍生生物。由你操控的龙获得敏捷异能直到回合结束。\n谐颂～{R}{R}{G}{G}，请援X个龙。

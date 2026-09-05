@@ -1,0 +1,7 @@
+Name:龙火护符
+ManaCost:4 U R
+Types:Sorcery
+K:AlternateAdditionalCost:Behold<1/Dragon>:U R
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Dragon | ChangeNum$ 1 | SpellDescription$ 从你牌库中搜寻一张龙牌，将它放进战场，然后洗牌。
+K:Cycling:U Behold<1/Dragon>
+Oracle:请援龙或支付{U}{R}，以作为施放此咒语的额外费用。\n从你牌库中搜寻一张龙牌，将它放进战场，然后洗牌。\n循环～{U}，请援龙。

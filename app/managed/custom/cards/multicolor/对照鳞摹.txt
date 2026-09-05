@@ -1,0 +1,9 @@
+Name:对照鳞摹
+ManaCost:G U
+Types:Sorcery
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Modes | Choices$ DBSearch,DBReturn | AdditionalDescription$ 。如果已请援龙，则你可以改为两项都选。
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Dragon | ChangeNum$ 1 | Reveal$ True | SpellDescription$ 从你牌库中搜寻一张龙牌，展示该牌，将它置于你手上，然后洗牌。
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Dragon.YouOwn | TgtPrompt$ 选择目标你坟墓场中的龙牌 | SpellDescription$ 将目标龙牌从你的坟墓场移回你手上。
+SVar:Modes:Count$OptionalGenericCostPaid.2.1
+Oracle:你可以请援龙，以作为施放此咒语的额外费用。\n选择一项。如果已请援龙，则你可以改为两项都选。\n• 从你牌库中搜寻一张龙牌，展示该牌，将它置于你手上，然后洗牌。\n• 将目标龙牌从你的坟墓场移回你手上。

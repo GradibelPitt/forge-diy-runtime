@@ -1,0 +1,7 @@
+Name:烛火吐息
+ManaCost:1 W B
+Types:Sorcery
+K:AlternateAdditionalCost:Behold<3/Dragon>:2
+A:SP$ Draw | ValidTgts$ Player | NumCards$ 3 | SubAbility$ DBLoseLife | SpellDescription$ 目标牌手抓三张牌并失去3点生命。
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Targeted | LifeAmount$ 3
+Oracle:请援三个龙或支付{2}，以作为施放此咒语的额外费用。\n目标牌手抓三张牌并失去3点生命。

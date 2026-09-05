@@ -1,0 +1,9 @@
+Name:沙漠巢母
+ManaCost:2 G G
+Types:Creature Dragon
+PT:3/4
+K:Vigilance
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ Behold<1/Dragon> | Description$ 你可以请援龙，以作为施放此咒语的额外费用。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigUntap | TriggerDescription$ 当沙漠巢母进场时，若已请援龙，则重置至多四个地。
+SVar:TrigUntap:DB$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ 4
+Oracle:警戒\n你可以请援龙，以作为施放此咒语的额外费用。\n当沙漠巢母进场时，若已请援龙，则重置至多四个地。

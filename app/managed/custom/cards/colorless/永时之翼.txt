@@ -1,0 +1,6 @@
+Name:永时之翼
+ManaCost:0
+Types:Sorcery
+K:AlternateAdditionalCost:Behold<1/Dragon>:U
+A:SP$ ChangeZone | Origin$ Sideboard,Exile | Destination$ Hand | ChangeType$ Dragon.YouOwn | ChangeTypeDesc$ 由你拥有的龙牌 | ChangeNum$ 1 | Hidden$ True | Reveal$ True | SpellDescription$ 你可以从游戏外展示一张由你拥有的龙牌，或选择一张放逐区中由你拥有且牌面朝上的龙牌。将该牌置于你手上。
+Oracle:请援龙或支付{U}，以作为施放此咒语的额外费用。\n你可以从游戏外展示一张由你拥有的龙牌，或选择一张放逐区中由你拥有且牌面朝上的龙牌。将该牌置于你手上。

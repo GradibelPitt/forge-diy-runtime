@@ -1,0 +1,11 @@
+Name:拉希奥的角
+ManaCost:1 G W
+Types:Kindred Artifact Dragon
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | TriggersWhenSpent$ TrigSpent | SpellDescription$ 加一点任意颜色的法术力。当你将此法术力用来施放龙生物咒语时，派出一个2/1绿色的龙衍生生物，且该咒语所成为的生物进场时上面额外有一个+1/+1指示物，并获得辟邪异能直到你的下一个回合。
+SVar:TrigSpent:Mode$ SpellCast | ValidCard$ Creature.Dragon | ValidActivatingPlayer$ You | Execute$ TrigToken | TriggerDescription$ 派出一个2/1绿色的龙衍生生物，且该龙生物咒语进场时上面额外有一个+1/+1指示物，并获得辟邪异能直到你的下一个回合。
+SVar:TrigToken:DB$ Token | TokenScript$ g_2_1_dragon | TokenAmount$ 1 | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ TriggeredCard | ForgetOnMoved$ Stack | ReplacementEffects$ ETBDragon
+SVar:ETBDragon:Event$ Moved | ValidCard$ Card.IsRemembered | Destination$ Battlefield | ReplaceWith$ DBEnterCounter | ReplacementResult$ Updated | Description$ 该生物进场时上面额外有一个+1/+1指示物，且获得辟邪异能直到你的下一个回合。
+SVar:DBEnterCounter:DB$ PutCounter | Defined$ ReplacedCard | CounterType$ P1P1 | ETB$ True | CounterNum$ 1 | SubAbility$ DBHexproof
+SVar:DBHexproof:DB$ Pump | Defined$ ReplacedCard | Duration$ UntilYourNextTurn | KW$ Hexproof | PumpZone$ Stack
+Oracle:{T}：加一点任意颜色的法术力。当你将此法术力用来施放龙生物咒语时，派出一个2/1绿色的龙衍生生物，且该咒语所成为的生物进场时上面额外有一个+1/+1指示物，并获得辟邪异能直到你的下一个回合。
