@@ -210,6 +210,15 @@ jobs:
             throw 'The runtime payload unexpectedly contains c_5_5_demon.txt.'
           }
 
+      - name: Stage generated payload for index-aware gates
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          git add -- app/BUILD-ID.txt app/managed/custom app/res/languages/cardnames-zh-CN.txt app/manifest-critical.sha256 release.json
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to stage generated runtime payload before gates.' }
+          git diff --cached --check
+          if ($LASTEXITCODE -ne 0) { throw 'Staged runtime diff check failed before gates.' }
+
       - name: Run runtime and profile-sync gates
         shell: pwsh
         run: |
