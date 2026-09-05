@@ -4,7 +4,7 @@ Types:Creature Dragon
 PT:3/3
 K:MayFlashCost:Behold<1/Dragon>
 K:Flying
-T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ SpellsCast | SVarCompare$ EQ0 | Execute$ TrigDraw | TriggerDescription$ 在你的结束步骤开始时，若你本回合中未施放过咒语，则抓一张牌。
-SVar:SpellsCast:Count$ThisTurnCast_Card.YouCtrl
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ NonDragonCreaturesCast | SVarCompare$ EQ0 | Execute$ TrigDraw | TriggerDescription$ 在你的结束步骤开始时，如果你本回合施放的每个生物咒语都包含龙类别，则抓一张牌。
+SVar:NonDragonCreaturesCast:Count$ThisTurnCast_Creature.nonDragon+YouCtrl
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
-Oracle:如果你多支付请援龙此费用，则你可以将此咒语视同具有闪现异能地来施放。\n飞行\n在你的结束步骤开始时，若你本回合中未施放过咒语，则抓一张牌。
+Oracle:如果你多支付请援龙此费用，则你可以将此咒语视同具有闪现异能地来施放。\n飞行\n在你的结束步骤开始时，如果你本回合施放的每个生物咒语都包含龙类别，则抓一张牌。

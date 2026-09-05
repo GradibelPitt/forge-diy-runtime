@@ -3,7 +3,7 @@ ManaCost:2 G U
 Types:Creature Dragon
 PT:3/3
 K:Flying
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Mutant.YouCtrl+Other | Execute$ TrigDraw | TriggerDescription$ 当迷时始祖幼龙进场时，若你操控另一个突变体，则抓一张牌。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Dragon.YouCtrl+Other | Execute$ TrigDraw | TriggerDescription$ 当迷时始祖幼龙进场时，若你操控另一个龙，则抓一张牌。
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
 K:Miracle:1 G U Behold<1/Dragon>
-Oracle:飞行\n当迷时始祖幼龙进场时，若你操控另一个突变体，则抓一张牌。\n奇迹～{1}{G}{U}，请援龙。
+Oracle:飞行\n当迷时始祖幼龙进场时，若你操控另一个龙，则抓一张牌。\n奇迹～{1}{G}{U}，请援龙。

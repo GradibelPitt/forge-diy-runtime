@@ -2,6 +2,6 @@ Name:礼盒雏龙
 ManaCost:W
 Types:Creature Dragon
 PT:1/1
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ 当礼盒雏龙进场时，你可以请援龙。若你如此作，将目标瞬间或法术牌从你的坟墓场移回你手上。
-SVar:TrigReturn:AB$ ChangeZone | Cost$ Behold<1/Dragon> | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ 选择目标你坟墓场中的瞬间或法术牌
-Oracle:当礼盒雏龙进场时，你可以请援龙。若你如此作，将目标瞬间或法术牌从你的坟墓场移回你手上。
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ 当礼盒雏龙进场时，你可以请援龙。若你如此作，在礼盒雏龙和至多一个目标由你控制的龙上放置一个+1/+1指示物。
+SVar:TrigPutCounter:AB$ PutCounter | Cost$ Behold<1/Dragon> | Defined$ Self & Targeted | ValidTgts$ Creature.Dragon+YouCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ 选择至多一个目标由你控制的龙 | CounterType$ P1P1 | CounterNum$ 1
+Oracle:当礼盒雏龙进场时，你可以请援龙。若你如此作，在礼盒雏龙和至多一个目标由你控制的龙上放置一个+1/+1指示物。
