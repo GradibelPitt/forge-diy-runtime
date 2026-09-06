@@ -253,17 +253,23 @@ foreach ($requiredFragment in @(
     'ValidTgts$ Creature.!token',
     'TargetMin$ 0',
     'TargetMax$ 1',
-    'Zone$ None',
+    'Zone$ Battlefield',
+    'Zone$ Hand',
+    'Zone$ Library',
+    'LibraryPosition$ 0',
     'RemoveTypes$ Legendary',
     'Duration$ Perpetual',
-    'Destination$ Battlefield',
-    'Destination$ Hand',
-    'Destination$ Library',
     'DB$ Shuffle | Defined$ You'
 )) {
     if (-not $shatteredReflectionsScript.Contains($requiredFragment)) {
         throw "破碎映像 is missing required conjure behavior: $requiredFragment"
     }
+}
+if ($shatteredReflectionsScript.Contains('Zone$ None')) {
+    throw '破碎映像 must not stage conjured cards in the invisible None zone'
+}
+if ($shatteredReflectionsScript.Contains('IgnoreLegendRule')) {
+    throw '破碎映像 copies must lose Legendary instead of ignoring the legend rule'
 }
 $shatteredReflectionsLocalization = @($localizationLines | Where-Object { $_ -match '^破碎映像\|' })
 if ($shatteredReflectionsLocalization.Count -ne 1 -or
