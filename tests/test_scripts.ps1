@@ -204,6 +204,7 @@ $recentHearthstoneCards = [ordered]@{
     '112' = @('冰霜新星', 'blue\冰霜新星.txt')
     '113' = @('矿车难题', 'multicolor\矿车难题.txt')
     '114' = @('水栖形态', 'blue\水栖形态.txt')
+    '185' = @('破碎映像', 'multicolor\破碎映像.txt')
 }
 $localizationLines = @(Get-Content -LiteralPath (Join-Path $root 'app\res\languages\cardnames-zh-CN.txt') -Encoding UTF8)
 foreach ($collectorNumber in $recentHearthstoneCards.Keys) {
@@ -244,6 +245,34 @@ $aquaticFormLocalization = @($localizationLines | Where-Object { $_ -match '^水
 if ($aquaticFormLocalization.Count -ne 1 -or
     -not $aquaticFormLocalization[0].Contains('或者如果以此法选择的牌为地牌')) {
     throw '水栖形态 zh-CN rules text must mention the selected-land alternative'
+}
+$shatteredReflectionsScriptPath = Join-Path $root 'app\managed\custom\cards\multicolor\破碎映像.txt'
+$shatteredReflectionsScript = Get-Content -LiteralPath $shatteredReflectionsScriptPath -Raw -Encoding UTF8
+foreach ($requiredFragment in @(
+    'ManaCost:2 U W G',
+    'ValidTgts$ Creature.!token',
+    'TargetMin$ 0',
+    'TargetMax$ 1',
+    'Zone$ None',
+    'RemoveTypes$ Legendary',
+    'Duration$ Perpetual',
+    'Destination$ Battlefield',
+    'Destination$ Hand',
+    'Destination$ Library',
+    'DB$ Shuffle | Defined$ You'
+)) {
+    if (-not $shatteredReflectionsScript.Contains($requiredFragment)) {
+        throw "破碎映像 is missing required conjure behavior: $requiredFragment"
+    }
+}
+$shatteredReflectionsLocalization = @($localizationLines | Where-Object { $_ -match '^破碎映像\|' })
+if ($shatteredReflectionsLocalization.Count -ne 1 -or
+    -not $shatteredReflectionsLocalization[0].Contains('以此法化生的牌不是传奇')) {
+    throw '破碎映像 zh-CN rules text must retain the nonlegendary clause'
+}
+$shatteredReflectionsArt = Join-Path $artRoot '破碎映像.artcrop.jpg'
+if (-not (Test-Path -LiteralPath $shatteredReflectionsArt -PathType Leaf)) {
+    throw 'PH01 185 is missing its Crop-compatible artwork: 破碎映像'
 }
 foreach ($collectorNumber in 90..99) {
     $matchingRows = @($editionLines | Where-Object { $_ -match "^$collectorNumber\s" })
