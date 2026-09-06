@@ -222,6 +222,29 @@ foreach ($collectorNumber in $recentHearthstoneCards.Keys) {
         throw "PH01 $collectorNumber must have exactly one zh-CN row: $cardName"
     }
 }
+$aquaticFormScriptPath = Join-Path $root 'app\managed\custom\cards\blue\水栖形态.txt'
+$aquaticFormScript = Get-Content -LiteralPath $aquaticFormScriptPath -Raw -Encoding UTF8
+foreach ($requiredFragment in @(
+    'FromBottom$ True',
+    'BranchConditionSVar$ RememberedLand',
+    'TrueSubAbility$ MoveToHand | FalseSubAbility$ CheckMana',
+    'RememberedLand:Count$ValidLibrary Card.IsRemembered+land',
+    'BranchConditionSVar$ AvailableMana',
+    'Destination$ Hand | Optional$ True',
+    'Reveal$ True'
+)) {
+    if (-not $aquaticFormScript.Contains($requiredFragment)) {
+        throw "水栖形态 is missing its land-or-castable reveal-to-hand behavior: $requiredFragment"
+    }
+}
+if ($aquaticFormScript.Contains('RememberedNonland')) {
+    throw '水栖形态 must not exclude lands from its reveal-to-hand branch'
+}
+$aquaticFormLocalization = @($localizationLines | Where-Object { $_ -match '^水栖形态\|' })
+if ($aquaticFormLocalization.Count -ne 1 -or
+    -not $aquaticFormLocalization[0].Contains('或者如果以此法选择的牌为地牌')) {
+    throw '水栖形态 zh-CN rules text must mention the selected-land alternative'
+}
 foreach ($collectorNumber in 90..99) {
     $matchingRows = @($editionLines | Where-Object { $_ -match "^$collectorNumber\s" })
     if ($matchingRows.Count -ne 1) {
