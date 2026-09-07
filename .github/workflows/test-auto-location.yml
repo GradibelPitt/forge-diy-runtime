@@ -1,0 +1,31 @@
+name: Auto-location Windows regression
+on:
+  push:
+    paths:
+      - 'tools/auto_location.ps1'
+      - 'tests/test_auto_location.ps1'
+      - '.github/workflows/test-auto-location.yml'
+      - '一键安装并启动.cmd'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-powershell-51:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch only test scripts from this exact commit
+        shell: powershell
+        run: |
+          $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
+          Invoke-WebRequest -UseBasicParsing "$base/tools/auto_location.ps1" -OutFile "$env:RUNNER_TEMP/auto_location.ps1"
+          Invoke-WebRequest -UseBasicParsing "$base/tests/test_auto_location.ps1" -OutFile "$env:RUNNER_TEMP/test_auto_location.ps1"
+      - name: Windows PowerShell 5.1 parse and real NTFS migration fixtures
+        shell: powershell
+        run: |
+          $PSVersionTable | Format-List
+          & "$env:RUNNER_TEMP/test_auto_location.ps1" -Helper "$env:RUNNER_TEMP/auto_location.ps1"
+      - name: No-I/O self-test
+        shell: powershell
+        run: |
+          & "$env:RUNNER_TEMP/auto_location.ps1" -SelfTest
