@@ -30,6 +30,14 @@ $clashWithoutTun = Get-ForgeNetworkPathState -ProcessNames @('clash-verge') -Rou
 if ($clashWithoutTun.ProxyProvider -ne 'CLASH_VERGE' -or $clashWithoutTun.ProxyRoute -ne 'MISSING') {
     throw 'A running Clash process without a TUN route must be reported as blocked'
 }
+$directPath = Get-ForgeNetworkPathState -ProcessNames @() -RouteTableLines @(
+    '  7...........................Realtek PCIe GbE Family Controller',
+    '          0.0.0.0          0.0.0.0      192.168.1.1     192.168.1.17     30'
+)
+if ($directPath.ProxyRoute -ne 'DIRECT' -or
+        $directPath.ConnectionPath -ne 'DIRECT_UPNP_OR_MANUAL') {
+    throw 'A host without Clash must remain on the direct UPnP/manual path'
+}
 if (-not (Test-ForgeFakeIpAddress '198.18.0.18') -or (Test-ForgeFakeIpAddress '192.168.1.1')) {
     throw 'Clash fake-IP range classification failed'
 }
@@ -76,6 +84,12 @@ try {
     }
     if ($source -notmatch 'CLASH_TUN_LOST' -or $source -notmatch 'Get-ForgeNetworkPathState') {
         throw 'Tunnel manager must monitor the selected Clash TUN route and reconnect when it disappears'
+    }
+    $routeGateIndex = $source.IndexOf("if (`$pathState.ProxyRoute -ne 'ACTIVE')")
+    $configReadIndex = $source.IndexOf('Read-TunnelConfig $ConfigPath', $routeGateIndex)
+    if ($routeGateIndex -lt 0 -or $configReadIndex -lt 0 -or $routeGateIndex -ge $configReadIndex -or
+            $source -notmatch 'TUNNEL_SKIPPED_NO_CLASH') {
+        throw 'Clash TUN must be selected before the manager reads relay credentials or starts a tunnel'
     }
     if ($source -notmatch 'ServerAliveInterval=20' -or
         $source -notmatch 'ServerAliveCountMax=3' -or

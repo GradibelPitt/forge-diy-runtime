@@ -257,6 +257,32 @@ $missingConfigProbeAt = [DateTime]::MinValue
 
 while (Test-OwnerAlive $OwnerProcessId) {
     $pathState = Get-ForgeNetworkPathState
+    $reportedPort = Read-ActivePort $ActivePortPath
+    if ($reportedPort -gt 0 -and -not $SkipListenerCheck -and -not (Test-LocalListener $reportedPort)) {
+        $reportedPort = 0
+    }
+
+    # The registered TCP Exposer route belongs only to hosts that are actually
+    # using Clash/Meta TUN. Direct hosts stay on the ordinary UPnP/manual path
+    # and never read credentials, probe the relay, or start ssh.exe.
+    if ($pathState.ProxyRoute -ne 'ACTIVE') {
+        $code = if ($pathState.ProxyProvider -eq 'NONE') {
+            'TUNNEL_SKIPPED_NO_CLASH'
+        } else {
+            'CLASH_TUN_NOT_READY'
+        }
+        $detail = if ($pathState.ProxyProvider -eq 'NONE') {
+            'No active Clash/Meta TUN route was detected. TCP Exposer was not started; hosting continues through UPnP or manual port forwarding.'
+        } else {
+            'Clash/Mihomo is running, but an active Meta Tunnel default route was not found. TCP Exposer was not started.'
+        }
+        $lastSuccessfulStage = if ($reportedPort -gt 0) { 'LOCAL_LISTENER' } else { '' }
+        Publish-TunnelStatus $code 'TUN_ROUTE' $lastSuccessfulStage 'TUN_ROUTE' $reportedPort '' 0 `
+            $pathState 'tcpexposer.com' 22 $emptyProbe $detail
+        Start-Sleep -Seconds 2
+        continue
+    }
+
     if (-not (Test-Path -LiteralPath $ConfigPath -PathType Leaf)) {
         if ($null -eq $missingConfigProbe -or
                 ([DateTime]::UtcNow - $missingConfigProbeAt).TotalSeconds -ge 30) {
@@ -264,10 +290,6 @@ while (Test-OwnerAlive $OwnerProcessId) {
             $missingConfigProbeAt = [DateTime]::UtcNow
         }
         $probe = $missingConfigProbe
-        $reportedPort = Read-ActivePort $ActivePortPath
-        if ($reportedPort -gt 0 -and -not $SkipListenerCheck -and -not (Test-LocalListener $reportedPort)) {
-            $reportedPort = 0
-        }
         $lastSuccessfulStage = if ($reportedPort -gt 0) { 'LOCAL_LISTENER' } else { 'PROXY_ROUTE' }
         Publish-TunnelStatus 'CONFIG_MISSING' 'CONFIG' $lastSuccessfulStage 'CONFIG' $reportedPort '' 0 `
             $pathState 'tcpexposer.com' 22 $probe `
@@ -295,16 +317,7 @@ while (Test-OwnerAlive $OwnerProcessId) {
         continue
     }
 
-    $clashWasSelected = $pathState.ProxyRoute -eq 'ACTIVE'
-    if (($tunnelConfig.RoutePolicy -eq 'require-clash-tun' -or $pathState.ProxyProvider -ne 'NONE') -and
-            -not $clashWasSelected) {
-        Publish-TunnelStatus 'CLASH_TUN_NOT_READY' 'TUN_ROUTE' 'LOCAL_LISTENER' 'TUN_ROUTE' $localPort `
-            $tunnelConfig.RemoteHost $tunnelConfig.RemotePort $pathState `
-            $tunnelConfig.RemoteHost $tunnelConfig.SshPort $emptyProbe `
-            'Clash/Mihomo is running, but an active Meta Tunnel default route was not found.'
-        Start-Sleep -Seconds 2
-        continue
-    }
+    $clashWasSelected = $true
 
     $probe = Get-RelayProbe $tunnelConfig.RemoteHost $tunnelConfig.SshPort
     if ($probe.Dns -eq 'FAIL') {

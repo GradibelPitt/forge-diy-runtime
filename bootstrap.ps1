@@ -264,6 +264,19 @@ function Install-BundledTunnelConfig {
     if (Test-Path -LiteralPath $TunnelConfigFile -PathType Leaf) { return }
     if (-not (Test-Path -LiteralPath $BundledTunnelConfigFile -PathType Leaf)) { return }
 
+    try {
+        $bundledConfig = Get-Content -LiteralPath $BundledTunnelConfigFile -Raw -Encoding UTF8 | ConvertFrom-Json
+        $identityFile = [Environment]::ExpandEnvironmentVariables(([string]$bundledConfig.identityFile).Trim())
+    } catch {
+        Write-Warning "预设的 TCP Exposer 配置无法读取，已跳过：$($_.Exception.Message)"
+        return
+    }
+    if ([string]::IsNullOrWhiteSpace($identityFile) -or
+            -not (Test-Path -LiteralPath $identityFile -PathType Leaf)) {
+        Write-Step '未检测到本机专属的 TCP Exposer 私钥；保持普通 UPnP/手动端口映射模式。'
+        return
+    }
+
     $configRoot = Split-Path $TunnelConfigFile -Parent
     New-Item -ItemType Directory -Path $configRoot -Force | Out-Null
     Copy-Item -LiteralPath $BundledTunnelConfigFile -Destination $TunnelConfigFile

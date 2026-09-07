@@ -71,6 +71,10 @@ if ($bootstrap -notmatch 'Install-BundledTunnelConfig' -or
     $bootstrap -notmatch 'tcpexposer\.default\.json') {
     throw 'Forge launch must install the bundled fixed-port tunnel configuration when no local config exists'
 }
+if ($bootstrap -notmatch 'Test-Path -LiteralPath \$identityFile -PathType Leaf' -or
+    $bootstrap -notmatch '保持普通 UPnP/手动端口映射模式') {
+    throw 'The account-specific tunnel preset must only be installed when its local private key exists'
+}
 $defaultTunnelConfigPath = Join-Path $root 'tools\tcpexposer.default.json'
 if (-not (Test-Path -LiteralPath $defaultTunnelConfigPath -PathType Leaf)) {
     throw 'Bundled TCP Exposer configuration is missing'

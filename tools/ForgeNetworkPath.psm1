@@ -81,7 +81,13 @@ function Get-ForgeNetworkPathState {
         TunAdapterPresent = $tunAdapterPresent
         TunDefaultRoute = $tunDefaultRoute
         TunInterfaceAddress = $tunInterfaceAddress
-        ConnectionPath = if ($tunActive) { 'CLASH_TUN_SSH_REVERSE' } else { 'SYSTEM_SSH_REVERSE' }
+        ConnectionPath = if ($tunActive) {
+            'CLASH_TUN_SSH_REVERSE'
+        } elseif ($provider -eq 'NONE') {
+            'DIRECT_UPNP_OR_MANUAL'
+        } else {
+            'CLASH_TUN_NOT_READY'
+        }
     }
 }
 
