@@ -1,7 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 $root = Resolve-Path (Join-Path $PSScriptRoot '..')
 $errors = @()
-foreach ($file in @('bootstrap.ps1', 'tools\build_release.ps1', 'tools\publish_git_payload.ps1')) {
+foreach ($file in @(
+    'bootstrap.ps1',
+    'tools\build_release.ps1',
+    'tools\publish_git_payload.ps1',
+    'tools\start_forge_tunnel.ps1',
+    'tools\ForgeNetworkPath.psm1'
+)) {
     $path = Join-Path $root $file
     $tokens = $null
     $parseErrors = $null
@@ -14,6 +20,10 @@ if ($LASTEXITCODE -ne 0 -or $selfTest -notcontains 'SELFTEST=OK') { throw 'boots
 $profileSyncTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'tests\test_profile_sync.ps1')
 if ($LASTEXITCODE -ne 0 -or $profileSyncTest -notcontains 'PROFILE_SYNC_TESTS=OK') {
     throw 'profile sync integration test failed'
+}
+$networkTunnelTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'tests\test_network_tunnel.ps1')
+if ($LASTEXITCODE -ne 0 -or $networkTunnelTest -notcontains 'NETWORK_TUNNEL_TESTS=OK') {
+    throw 'network tunnel integration test failed'
 }
 $bootstrap = Get-Content (Join-Path $root 'bootstrap.ps1') -Raw -Encoding UTF8
 if ($bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
@@ -28,6 +38,10 @@ if ($bootstrap -notmatch 'clone -c core\.autocrlf=false --depth 1' -or
 }
 if ($bootstrap -notmatch 'Get-CriticalManifestFailure') {
     throw 'Runtime manifest failures must report the failing file or format detail'
+}
+if ($bootstrap -notmatch 'SetErrorMode\(0x3\)' -or
+    $bootstrap -notmatch 'SetErrorMode\(\$previousErrorMode\)') {
+    throw 'ForgeDIY Git operations must suppress inherited helper crash dialogs and restore the prior mode'
 }
 if ($bootstrap -notmatch 'Get-ChildItem \$JavaRoot -Filter java\.exe' -or
     $bootstrap -notmatch 'Join-Path \$candidateDirectory ''javaw\.exe''') {
@@ -46,6 +60,27 @@ if ($bootstrap -notmatch 'Join-Path \$AppRoot ''overlays''' -or
     $bootstrap -notmatch '\[IO\.Path\]::PathSeparator' -or
     $bootstrap -notmatch '\$classPathEntries') {
     throw 'Forge launch must prepend optional module overlay JARs to the aggregate JAR'
+}
+if ($bootstrap -notmatch 'forge\.net\.activePortFile' -or
+    $bootstrap -notmatch 'forge\.net\.tunnelStatusFile' -or
+    $bootstrap -notmatch 'forge\.runtime\.version' -or
+    $bootstrap -notmatch 'start_forge_tunnel\.ps1') {
+    throw 'Forge launch must publish its actual port, preserve the package version, and start the configured tunnel manager'
+}
+if ($bootstrap -notmatch 'Install-BundledTunnelConfig' -or
+    $bootstrap -notmatch 'tcpexposer\.default\.json') {
+    throw 'Forge launch must install the bundled fixed-port tunnel configuration when no local config exists'
+}
+$defaultTunnelConfigPath = Join-Path $root 'tools\tcpexposer.default.json'
+if (-not (Test-Path -LiteralPath $defaultTunnelConfigPath -PathType Leaf)) {
+    throw 'Bundled TCP Exposer configuration is missing'
+}
+$defaultTunnelConfig = Get-Content -LiteralPath $defaultTunnelConfigPath -Raw -Encoding UTF8 | ConvertFrom-Json
+if ($defaultTunnelConfig.userName -ne 'marco23456' -or
+    $defaultTunnelConfig.remoteHost -ne 'tcpexposer.com' -or
+    $defaultTunnelConfig.remotePort -ne 41895 -or
+    $defaultTunnelConfig.identityFile -notmatch 'id_ed25519_tcpexposer$') {
+    throw 'Bundled TCP Exposer configuration does not match the registered fixed endpoint'
 }
 $incrementalPublisher = Get-Content (Join-Path $root 'tools\publish_git_payload.ps1') -Raw -Encoding UTF8
 if ($incrementalPublisher -match 'Compress-Archive|tar\.exe' -or

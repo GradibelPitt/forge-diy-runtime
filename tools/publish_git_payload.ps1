@@ -101,6 +101,15 @@ if ($SyncLocalization) {
     if ($sourceLocalizationHash -ne $destinationLocalizationHash) {
         throw '简中卡牌资源同步后哈希不一致。'
     }
+    foreach ($uiLanguage in @('en-US.properties', 'zh-CN.properties')) {
+        $sourceUiLanguage = Join-Path $ForgeRoot (Join-Path 'forge-gui\res\languages' $uiLanguage)
+        $destinationUiLanguage = Join-Path $AppRoot (Join-Path 'res\languages' $uiLanguage)
+        Copy-Item -LiteralPath $sourceUiLanguage -Destination $destinationUiLanguage -Force
+        if ((Get-FileHash -LiteralPath $sourceUiLanguage -Algorithm SHA256).Hash -ne
+                (Get-FileHash -LiteralPath $destinationUiLanguage -Algorithm SHA256).Hash) {
+            throw "界面语言资源同步后哈希不一致：$uiLanguage"
+        }
+    }
 }
 
 if ($SyncSkins) {

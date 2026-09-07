@@ -14,6 +14,11 @@ $RepoRoot = Join-Path $InstallRoot 'repo'
 $AppRoot = Join-Path $RepoRoot 'app'
 $ToolsRoot = Join-Path $InstallRoot 'tools'
 $JavaRoot = Join-Path $InstallRoot 'java17'
+$NetworkStateRoot = Join-Path $InstallRoot 'state'
+$ActiveServerPortFile = Join-Path $NetworkStateRoot 'active-server-port'
+$TunnelStatusFile = Join-Path $NetworkStateRoot 'tunnel-status.properties'
+$TunnelConfigFile = Join-Path $InstallRoot 'config\tcpexposer.json'
+$BundledTunnelConfigFile = Join-Path $RepoRoot 'tools\tcpexposer.default.json'
 
 # Forge's desktop runtime opens these JVM modules. Because this runtime prepends
 # overlay JARs with -cp instead of using "java -jar", the aggregate JAR manifest's
@@ -40,6 +45,17 @@ $ForgeAddOpens = @(
     'java.base/java.util.concurrent',
     'java.base/java.net'
 )
+
+Add-Type -TypeDefinition @'
+using System.Runtime.InteropServices;
+
+namespace ForgeDIY {
+    public static class NativeMethods {
+        [DllImport("kernel32.dll")]
+        public static extern uint SetErrorMode(uint mode);
+    }
+}
+'@
 
 function Write-Step([string]$Message) {
     Write-Host "[Forge DIY] $Message" -ForegroundColor Cyan
@@ -215,12 +231,43 @@ function Test-CriticalManifest([string]$Root) {
     return -not (Get-CriticalManifestFailure $Root)
 }
 
+function Get-ForgeRuntimeVersion([string]$JarPath) {
+    $archive = $null
+    $reader = $null
+    try {
+        Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
+        $archive = [IO.Compression.ZipFile]::OpenRead($JarPath)
+        $entry = $archive.GetEntry('META-INF/MANIFEST.MF')
+        if (-not $entry) { return $null }
+        $reader = New-Object IO.StreamReader($entry.Open(), [Text.Encoding]::UTF8)
+        $manifest = $reader.ReadToEnd() -replace "\r?\n ", ''
+        if ($manifest -match '(?m)^Implementation-Version:\s*(.+?)\r?$') {
+            return $Matches[1].Trim()
+        }
+    } catch { }
+    finally {
+        if ($reader) { $reader.Dispose() }
+        if ($archive) { $archive.Dispose() }
+    }
+    return $null
+}
+
 function Sync-DiyPayload {
     $syncScript = Join-Path $RepoRoot 'tools\sync_profile.ps1'
     if (-not (Test-Path -LiteralPath $syncScript -PathType Leaf)) {
         throw 'Runtime profile sync helper is missing.'
     }
     & $syncScript -AppRoot $AppRoot
+}
+
+function Install-BundledTunnelConfig {
+    if (Test-Path -LiteralPath $TunnelConfigFile -PathType Leaf) { return }
+    if (-not (Test-Path -LiteralPath $BundledTunnelConfigFile -PathType Leaf)) { return }
+
+    $configRoot = Split-Path $TunnelConfigFile -Parent
+    New-Item -ItemType Directory -Path $configRoot -Force | Out-Null
+    Copy-Item -LiteralPath $BundledTunnelConfigFile -Destination $TunnelConfigFile
+    Write-Host '[Forge DIY] 已安装预设的 TCP Exposer 固定端口配置。' -ForegroundColor Green
 }
 
 function New-DesktopShortcut([string]$ScriptPath) {
@@ -234,8 +281,16 @@ function New-DesktopShortcut([string]$ScriptPath) {
 }
 
 if ($SelfTest) {
+    $selfTestJar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' -File |
+        Select-Object -First 1
+    if (-not $selfTestJar) { throw 'SELFTEST: aggregate Forge JAR is missing.' }
+    $selfTestVersion = Get-ForgeRuntimeVersion $selfTestJar.FullName
+    if ([string]::IsNullOrWhiteSpace($selfTestVersion)) {
+        throw 'SELFTEST: aggregate Forge JAR has no Implementation-Version.'
+    }
     Write-Output 'SELFTEST=OK'
     Write-Output "REPO=$RepoUrl"
+    Write-Output "RUNTIME_VERSION=$selfTestVersion"
     exit 0
 }
 
@@ -243,37 +298,46 @@ try {
     Write-Step '正在准备一键环境...'
     $git = Find-Git
     if (-not $git) { $git = Install-Git }
-    Update-Repository $git
+    # Git's HTTPS helper inherits this per-process mode. It suppresses the
+    # git-remote-https crash dialog while preserving exit codes and logs.
+    $previousErrorMode = [ForgeDIY.NativeMethods]::SetErrorMode(0x3)
+    try {
+        Update-Repository $git
 
-    Write-Step '正在快速检查运行文件...'
-    $runtimeFailure = Get-FastRuntimeFailure $AppRoot
-    if ($runtimeFailure) {
-        Write-Step "快速检查失败（$runtimeFailure），正在执行全新克隆修复..."
-        Remove-Item -LiteralPath $RepoRoot -Recurse -Force
-        & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
-        if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+        Write-Step '正在快速检查运行文件...'
         $runtimeFailure = Get-FastRuntimeFailure $AppRoot
-    }
-    if ($runtimeFailure) { throw "仓库中的运行文件结构异常：$runtimeFailure" }
-
-    if ($FullVerify) {
-        Write-Step '正在执行完整 SHA-256 校验（FullVerify 模式，可能需要数分钟）...'
-        $manifestFailure = Get-CriticalManifestFailure $AppRoot
-        if ($manifestFailure) {
-            Write-Step "完整校验发现异常（$manifestFailure），正在从 Git 索引恢复运行文件..."
-            Repair-RepositoryWorkingTree $git
-            $manifestFailure = Get-CriticalManifestFailure $AppRoot
-        }
-        if ($manifestFailure) {
-            Write-Step 'Git 索引恢复后仍未通过，正在执行全新克隆修复...'
+        if ($runtimeFailure) {
+            Write-Step "快速检查失败（$runtimeFailure），正在执行全新克隆修复..."
             Remove-Item -LiteralPath $RepoRoot -Recurse -Force
             & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
             if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
-            $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            $runtimeFailure = Get-FastRuntimeFailure $AppRoot
         }
-        if ($manifestFailure) { throw "完整运行文件校验失败：$manifestFailure" }
-        Write-Host '[Forge DIY] 完整 SHA-256 校验通过。' -ForegroundColor Green
+        if ($runtimeFailure) { throw "仓库中的运行文件结构异常：$runtimeFailure" }
+
+        if ($FullVerify) {
+            Write-Step '正在执行完整 SHA-256 校验（FullVerify 模式，可能需要数分钟）...'
+            $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            if ($manifestFailure) {
+                Write-Step "完整校验发现异常（$manifestFailure），正在从 Git 索引恢复运行文件..."
+                Repair-RepositoryWorkingTree $git
+                $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            }
+            if ($manifestFailure) {
+                Write-Step 'Git 索引恢复后仍未通过，正在执行全新克隆修复...'
+                Remove-Item -LiteralPath $RepoRoot -Recurse -Force
+                & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
+                if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+                $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            }
+            if ($manifestFailure) { throw "完整运行文件校验失败：$manifestFailure" }
+            Write-Host '[Forge DIY] 完整 SHA-256 校验通过。' -ForegroundColor Green
+        }
+    } finally {
+        [void][ForgeDIY.NativeMethods]::SetErrorMode($previousErrorMode)
     }
+
+    Install-BundledTunnelConfig
 
     $buildIdFile = Join-Path $AppRoot 'BUILD-ID.txt'
     $release = [pscustomobject]@{ buildId = (Get-Content $buildIdFile -Raw).Trim() }
@@ -308,6 +372,14 @@ try {
         $classPathEntries = @($overlayJars | ForEach-Object { $_.FullName }) + @($jar.FullName)
         $classPath = [string]::Join([IO.Path]::PathSeparator, $classPathEntries)
 
+        New-Item -ItemType Directory -Path $NetworkStateRoot -Force | Out-Null
+        if (Test-Path -LiteralPath $ActiveServerPortFile -PathType Leaf) {
+            Remove-Item -LiteralPath $ActiveServerPortFile -Force
+        }
+        if (Test-Path -LiteralPath $TunnelStatusFile -PathType Leaf) {
+            Remove-Item -LiteralPath $TunnelStatusFile -Force
+        }
+
         $logRoot = Join-Path $InstallRoot 'logs'
         New-Item -ItemType Directory -Path $logRoot -Force | Out-Null
         $logStamp = Get-Date -Format 'yyyyMMdd-HHmmss-fff'
@@ -317,8 +389,14 @@ try {
         $arguments = @(
             '-Xmx2048m',
             '-Dio.netty.tryReflectionSetAccessible=true',
-            '-Dfile.encoding=UTF-8'
+            '-Dfile.encoding=UTF-8',
+            "-Dforge.net.activePortFile=$ActiveServerPortFile",
+            "-Dforge.net.tunnelStatusFile=$TunnelStatusFile"
         )
+        $runtimeVersion = Get-ForgeRuntimeVersion $jar.FullName
+        if ($runtimeVersion) {
+            $arguments += "-Dforge.runtime.version=$runtimeVersion"
+        }
         foreach ($openPackage in $ForgeAddOpens) {
             $arguments += "--add-opens=$openPackage=ALL-UNNAMED"
         }
@@ -334,6 +412,27 @@ try {
                 throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。日志：$stderrLog`n$errorTail"
             }
             throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。日志：$stderrLog"
+        }
+
+        $tunnelManager = Join-Path $RepoRoot 'tools\start_forge_tunnel.ps1'
+        if (Test-Path -LiteralPath $tunnelManager -PathType Leaf) {
+            $tunnelStdout = Join-Path $logRoot "forge-tunnel-$logStamp.stdout.log"
+            $tunnelStderr = Join-Path $logRoot "forge-tunnel-$logStamp.stderr.log"
+            $tunnelArguments = @(
+                '-NoProfile',
+                '-ExecutionPolicy', 'Bypass',
+                '-File', "`"$tunnelManager`"",
+                '-OwnerProcessId', [string]$process.Id,
+                '-ConfigPath', "`"$TunnelConfigFile`"",
+                '-ActivePortPath', "`"$ActiveServerPortFile`"",
+                '-StatusPath', "`"$TunnelStatusFile`""
+            )
+            Start-Process -FilePath powershell.exe -ArgumentList $tunnelArguments -WindowStyle Hidden `
+                -RedirectStandardOutput $tunnelStdout -RedirectStandardError $tunnelStderr | Out-Null
+            Write-Host "[Forge DIY] 网络路线与长期隧道管理器已启动；会检测 Clash TUN 并读取客户端实际端口。" -ForegroundColor Green
+            Write-Host "[Forge DIY] 隧道日志：$tunnelStdout" -ForegroundColor DarkGray
+        } else {
+            Write-Host "[Forge DIY] 网络路线诊断器缺失；客户端仍会自动申请端口并尝试 UPnP。" -ForegroundColor Yellow
         }
 
         Write-Host "[Forge DIY] Forge 已启动（PID $($process.Id)）。" -ForegroundColor Green
