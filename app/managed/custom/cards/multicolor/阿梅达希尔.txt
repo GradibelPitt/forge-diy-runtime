@@ -1,21 +1,22 @@
 Name:阿梅达希尔
 ManaCost:G U W
 Types:Legendary Enchantment Saga
-Oracle:(于此传记进战场时及于你抓牌步骤后，加一个学问指示物。到III后牺牲之。)\nI — 获得1点生命，抓一张牌，选择至多一个目标地。直到回合结束，每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。\nII — 获得2点生命，抓两张牌，选择至多两个目标地。直到回合结束，每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。\nIII — 获得3点生命，抓三张牌，选择至多三个目标地。直到回合结束，每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。
+Oracle:(于此传记进战场时及于你抓牌步骤后，加一个学问指示物。到III后牺牲之。)\nI — 获得1点生命，抓一张牌。在你的下一个主要阶段开始时，重置至多一个目标地。\nII — 获得2点生命，抓两张牌。在你的下一个主要阶段开始时，重置至多两个目标地。\nIII — 获得3点生命，抓三张牌。在你的下一个主要阶段开始时，重置至多三个目标地。
 
 K:Chapter:3:Gain1Life,Gain2Life,Gain3Life
 
-SVar:Gain1Life:DB$ GainLife | Defined$ You | LifeAmount$ 1 | SubAbility$ Draw1 | SpellDescription$ 获得1点生命，抓一张牌，选择至多一个目标地。直到回合结束，每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。
-SVar:Draw1:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ ManaBoost1
-SVar:ManaBoost1:DB$ Effect | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ 选择至多一个目标地 | RememberObjects$ Targeted | ForgetOnMoved$ Battlefield | Triggers$ ManaTrigger | Duration$ EndOfTurn
+SVar:Gain1Life:DB$ GainLife | Defined$ You | LifeAmount$ 1 | SubAbility$ Draw1 | SpellDescription$ 获得1点生命，抓一张牌。在你的下一个主要阶段开始时，重置至多一个目标地。
+SVar:Draw1:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DelayUntap1
+SVar:DelayUntap1:DB$ DelayedTrigger | Mode$ Phase | Phase$ Main1,Main2 | ValidPlayer$ You | Execute$ Untap1 | SpellDescription$ 在你的下一个主要阶段开始时，重置至多一个目标地。
+SVar:Untap1:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ 选择至多一个目标地
 
-SVar:Gain2Life:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ Draw2 | SpellDescription$ 获得2点生命，抓两张牌，选择至多两个目标地。直到回合结束，每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。
-SVar:Draw2:DB$ Draw | Defined$ You | NumCards$ 2 | SubAbility$ ManaBoost2
-SVar:ManaBoost2:DB$ Effect | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ 选择至多两个目标地 | RememberObjects$ Targeted | ForgetOnMoved$ Battlefield | Triggers$ ManaTrigger | Duration$ EndOfTurn
+SVar:Gain2Life:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ Draw2 | SpellDescription$ 获得2点生命，抓两张牌。在你的下一个主要阶段开始时，重置至多两个目标地。
+SVar:Draw2:DB$ Draw | Defined$ You | NumCards$ 2 | SubAbility$ DelayUntap2
+SVar:DelayUntap2:DB$ DelayedTrigger | Mode$ Phase | Phase$ Main1,Main2 | ValidPlayer$ You | Execute$ Untap2 | SpellDescription$ 在你的下一个主要阶段开始时，重置至多两个目标地。
+SVar:Untap2:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ 选择至多两个目标地
 
-SVar:Gain3Life:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SubAbility$ Draw3 | SpellDescription$ 获得3点生命，抓三张牌，选择至多三个目标地。直到回合结束，每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。
-SVar:Draw3:DB$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ ManaBoost3
-SVar:ManaBoost3:DB$ Effect | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 3 | TgtPrompt$ 选择至多三个目标地 | RememberObjects$ Targeted | ForgetOnMoved$ Battlefield | Triggers$ ManaTrigger | Duration$ EndOfTurn
+SVar:Gain3Life:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SubAbility$ Draw3 | SpellDescription$ 获得3点生命，抓三张牌。在你的下一个主要阶段开始时，重置至多三个目标地。
+SVar:Draw3:DB$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DelayUntap3
+SVar:DelayUntap3:DB$ DelayedTrigger | Mode$ Phase | Phase$ Main1,Main2 | ValidPlayer$ You | Execute$ Untap3 | SpellDescription$ 在你的下一个主要阶段开始时，重置至多三个目标地。
+SVar:Untap3:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 3 | TgtPrompt$ 选择至多三个目标地
 
-SVar:ManaTrigger:Mode$ TapsForMana | ValidCard$ Card.IsRemembered | Execute$ ExtraMana | Static$ True | TriggerDescription$ 每当以此法选择的地为法术力横置时，其操控者加一点该地所产法术力的任意类型。
-SVar:ExtraMana:DB$ ManaReflected | ColorOrType$ Type | ReflectProperty$ Produced | Defined$ TriggeredActivator
