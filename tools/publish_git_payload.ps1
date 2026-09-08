@@ -6,6 +6,7 @@
     [string[]]$Module = @(),
     [switch]$SyncCustom,
     [switch]$SyncLocalization,
+    [switch]$SyncCustomTranslations,
     [switch]$SyncSkins
 )
 
@@ -13,6 +14,15 @@ $ErrorActionPreference = 'Stop'
 $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $AppRoot = (Resolve-Path (Join-Path $RepoRoot 'app')).Path
 $ForgeRoot = (Resolve-Path -LiteralPath $ForgeRoot).Path
+
+# Reject malformed custom translations before changing any runtime payload.
+$translationSync = Join-Path $ForgeRoot 'custom\tools\sync_translations.ps1'
+if (($SyncCustom -or $SyncLocalization -or $SyncCustomTranslations) -and (Test-Path -LiteralPath $translationSync)) {
+    & $translationSync -CheckOnly
+}
+if ($SyncCustomTranslations -and -not (Test-Path -LiteralPath $translationSync)) {
+    throw 'Custom translation sync helper is missing from ForgeRoot.'
+}
 
 function Copy-Tree([string]$Source, [string]$Destination) {
     $sourcePath = (Resolve-Path -LiteralPath $Source).Path
@@ -92,6 +102,12 @@ if ($SyncCustom) {
     Copy-Tree (Join-Path $ForgeRoot 'custom\music') (Join-Path $AppRoot 'managed\custom\music')
 }
 
+if ($SyncCustom -or $SyncLocalization -or $SyncCustomTranslations) {
+    if (Test-Path -LiteralPath $translationSync) {
+        & $translationSync -LanguagesDirectory (Join-Path $AppRoot 'res\languages')
+    }
+}
+
 if ($SyncLocalization) {
     $sourceLocalization = Join-Path $ForgeRoot 'forge-gui\res\languages\cardnames-zh-CN.txt'
     $destinationLocalization = Join-Path $AppRoot 'res\languages\cardnames-zh-CN.txt'
@@ -132,6 +148,9 @@ $critical = @(
     'res\languages\en-US.properties',
     'res\languages\zh-CN.properties'
 )
+if (Test-Path -LiteralPath (Join-Path $AppRoot 'res\languages\cardnames-zh-CN-custom.txt')) {
+    $critical += 'res\languages\cardnames-zh-CN-custom.txt'
+}
 if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
     $critical += Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File | ForEach-Object {
         $_.FullName.Substring($AppRoot.Length + 1)

@@ -26,6 +26,10 @@ function Copy-Tree([string]$Source, [string]$Destination) {
 }
 
 Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res') (Join-Path $Stage 'res')
+$translationSync = Join-Path $ForgeRoot 'custom\tools\sync_translations.ps1'
+if (Test-Path -LiteralPath $translationSync) {
+    & $translationSync -LanguagesDirectory (Join-Path $Stage 'res\languages')
+}
 Copy-Tree (Join-Path $ForgeRoot 'custom\cards') (Join-Path $Stage 'managed\custom\cards')
 Copy-Tree (Join-Path $ForgeRoot 'custom\tokens') (Join-Path $Stage 'managed\custom\tokens')
 Copy-Tree (Join-Path $ForgeRoot 'custom\editions') (Join-Path $Stage 'managed\custom\editions')
@@ -33,6 +37,9 @@ Copy-Tree (Join-Path $ForgeRoot 'custom\music') (Join-Path $Stage 'managed\custo
 [IO.File]::WriteAllText((Join-Path $Stage 'BUILD-ID.txt'), "$BuildId`r`n", [Text.UTF8Encoding]::new($false))
 
 $critical = @($Jar.Name, 'forge.exe', 'BUILD-ID.txt', 'res\languages\cardnames-zh-CN.txt')
+if (Test-Path -LiteralPath (Join-Path $Stage 'res\languages\cardnames-zh-CN-custom.txt')) {
+    $critical += 'res\languages\cardnames-zh-CN-custom.txt'
+}
 $critical += Get-ChildItem (Join-Path $Stage 'managed') -Recurse -File | ForEach-Object {
     $_.FullName.Substring($Stage.Length + 1)
 }

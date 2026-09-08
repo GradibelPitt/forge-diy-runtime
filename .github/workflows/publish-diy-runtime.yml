@@ -317,6 +317,14 @@ jobs:
           if ($sourceLocalizationHash -ne $runtimeLocalizationHash) {
               throw 'cardnames-zh-CN source/runtime hash mismatch.'
           }
+          $customLocalization = Join-Path $sourceRoot 'custom\translations\cardnames-zh-CN-custom.txt'
+          if (Test-Path -LiteralPath $customLocalization) {
+              $runtimeCustomLocalization = Join-Path $appRoot 'res\languages\cardnames-zh-CN-custom.txt'
+              if ((Get-FileHash -LiteralPath $customLocalization -Algorithm SHA256).Hash -ne
+                      (Get-FileHash -LiteralPath $runtimeCustomLocalization -Algorithm SHA256).Hash) {
+                  throw 'Custom zh-CN source/runtime hash mismatch.'
+              }
+          }
 
           $release = Get-Content -LiteralPath .\release.json -Raw -Encoding UTF8 | ConvertFrom-Json
           $buildId = (Get-Content -LiteralPath .\app\BUILD-ID.txt -Raw -Encoding UTF8).Trim()
@@ -380,6 +388,10 @@ jobs:
               app/manifest-critical.sha256 `
               release.json
           if ($LASTEXITCODE -ne 0) { throw 'Failed to stage generated runtime payload.' }
+          if (Test-Path -LiteralPath 'app/res/languages/cardnames-zh-CN-custom.txt') {
+              git add -- app/res/languages/cardnames-zh-CN-custom.txt
+              if ($LASTEXITCODE -ne 0) { throw 'Failed to stage custom translations.' }
+          }
 
           git diff --cached --check
           if ($LASTEXITCODE -ne 0) { throw 'Generated runtime diff check failed.' }
