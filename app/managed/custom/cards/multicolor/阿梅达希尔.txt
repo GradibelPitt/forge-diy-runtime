@@ -3,18 +3,18 @@ ManaCost:G U W
 Types:Legendary Enchantment Saga
 Oracle:(于此传记进战场时及于你抓牌步骤后，加一个学问指示物。到III后牺牲之。)\nI 获得1点生命，抓一张牌，重置至多一个目标地。\nII 获得2点生命，抓两张牌，重置至多两个目标地。\nIII 获得3点生命，抓三张牌，重置至多三个目标地。
 
-S:Mode$ Saga | Chapter$ 1 | Execute$ Chapter1
-S:Mode$ Saga | Chapter$ 2 | Execute$ Chapter2
-S:Mode$ Saga | Chapter$ 3 | Execute$ Chapter3
+T:Mode$ Lore | Chapter$ 1 | Execute$ Chapter1
+T:Mode$ Lore | Chapter$ 2 | Execute$ Chapter2
+T:Mode$ Lore | Chapter$ 3 | Execute$ Chapter3
 
-SVar:Chapter1:DB$ GainLife | Defined$ You | LifeAmount$ 1 | SubAbility$ Draw1 | SubAbility$ Untap1
+SVar:Chapter1:DB$ GainLife | LifeAmount$ 1 | Defined$ You | SubAbility$ Draw1 | SubAbility$ Untap1
 SVar:Draw1:DB$ Draw | Defined$ You | NumCards$ 1
-SVar:Untap1:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多一个目标地
+SVar:Untap1:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多一个目标地 | MaxTargets$ 1
 
-SVar:Chapter2:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ Draw2 | SubAbility$ Untap2
+SVar:Chapter2:DB$ GainLife | LifeAmount$ 2 | Defined$ You | SubAbility$ Draw2 | SubAbility$ Untap2
 SVar:Draw2:DB$ Draw | Defined$ You | NumCards$ 2
-SVar:Untap2:DB$ Untap | ValidTgts$ Land | MaxTargets$ 2 | TgtPrompt$ 选择至多两个目标地
+SVar:Untap2:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多两个目标地 | MaxTargets$ 2
 
-SVar:Chapter3:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SubAbility$ Draw3 | SubAbility$ Untap3
+SVar:Chapter3:DB$ GainLife | LifeAmount$ 3 | Defined$ You | SubAbility$ Draw3 | SubAbility$ Untap3
 SVar:Draw3:DB$ Draw | Defined$ You | NumCards$ 3
-SVar:Untap3:DB$ Untap | ValidTgts$ Land | MaxTargets$ 3 | TgtPrompt$ 选择至多三个目标地
+SVar:Untap3:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多三个目标地 | MaxTargets$ 3
