@@ -1,20 +1,18 @@
 Name:阿梅达希尔
 ManaCost:G U W
 Types:Legendary Enchantment Saga
-Oracle:(于此传记进战场时及于你抓牌步骤后，加一个学问指示物。到III后牺牲之。)\nI 获得1点生命，抓一张牌，重置至多一个目标地。\nII 获得2点生命，抓两张牌，重置至多两个目标地。\nIII 获得3点生命，抓三张牌，重置至多三个目标地。
+Oracle:(于此传记进战场时及于你抓牌步骤后，加一个学问指示物。到III后牺牲之。)\nI — 获得1点生命，抓一张牌，重置至多一个目标地。\nII — 获得2点生命，抓两张牌，重置至多两个目标地。\nIII — 获得3点生命，抓三张牌，重置至多三个目标地。
 
-T:Mode$ Lore | Chapter$ 1 | Execute$ Chapter1
-T:Mode$ Lore | Chapter$ 2 | Execute$ Chapter2
-T:Mode$ Lore | Chapter$ 3 | Execute$ Chapter3
+K:Chapter:3:Gain1Life,Gain2Life,Gain3Life
 
-SVar:Chapter1:DB$ GainLife | LifeAmount$ 1 | Defined$ You | SubAbility$ Draw1 | SubAbility$ Untap1
-SVar:Draw1:DB$ Draw | Defined$ You | NumCards$ 1
-SVar:Untap1:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多一个目标地 | MaxTargets$ 1
+SVar:Gain1Life:DB$ GainLife | Defined$ You | LifeAmount$ 1 | SubAbility$ Draw1 | SpellDescription$ 获得1点生命，抓一张牌，重置至多一个目标地。
+SVar:Draw1:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ Untap1
+SVar:Untap1:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ 选择至多一个目标地
 
-SVar:Chapter2:DB$ GainLife | LifeAmount$ 2 | Defined$ You | SubAbility$ Draw2 | SubAbility$ Untap2
-SVar:Draw2:DB$ Draw | Defined$ You | NumCards$ 2
-SVar:Untap2:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多两个目标地 | MaxTargets$ 2
+SVar:Gain2Life:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ Draw2 | SpellDescription$ 获得2点生命，抓两张牌，重置至多两个目标地。
+SVar:Draw2:DB$ Draw | Defined$ You | NumCards$ 2 | SubAbility$ Untap2
+SVar:Untap2:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ 选择至多两个目标地
 
-SVar:Chapter3:DB$ GainLife | LifeAmount$ 3 | Defined$ You | SubAbility$ Draw3 | SubAbility$ Untap3
-SVar:Draw3:DB$ Draw | Defined$ You | NumCards$ 3
-SVar:Untap3:DB$ Untap | ValidTgts$ Land | TgtPrompt$ 选择至多三个目标地 | MaxTargets$ 3
+SVar:Gain3Life:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SubAbility$ Draw3 | SpellDescription$ 获得3点生命，抓三张牌，重置至多三个目标地。
+SVar:Draw3:DB$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ Untap3
+SVar:Untap3:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 3 | TgtPrompt$ 选择至多三个目标地
