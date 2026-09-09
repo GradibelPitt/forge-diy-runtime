@@ -1,7 +1,7 @@
 {
-  "buildId": "20260910-upstream-c8630845-full-cards",
+  "buildId": "20260910-upstream-c8630845-full-cards-updater",
   "delivery": "git",
-  "sourceCommit": "796a741d32903182dccb7ff1b7d1f0b934271a23",
+  "sourceCommit": "ed34b4e5c04e20e2755a51597297651530724e69",
   "moduleOverlays": [],
   "engineSourceCommit": "b791d0b96614c667fce405e47cd59aa6479ccac1",
   "upstreamCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
@@ -16,7 +16,8 @@
     "testFailuresAcknowledged": true,
     "reviewedUpstreamChanges": 1,
     "compilerCaptureFalsePositives": 2,
-    "jarSha256": "412FF54CDE17760658EC835E9629FC9E074CD72B78498916D53FC4D1D817A14B"
+    "jarSha256": "F4D4F502FBACD7DB197587F55DDBCD74B6ABB9D0C3103D2B69AB2C8D76E4278F",
+    "resourceUpdaterTests": "passed: complete tree, zero engine delta, official changes, tokens, DIY conflicts, edition rename, duplicate codes, unchanged prior test decisions"
   },
   "cardResourceCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
   "cardResources": {
@@ -34,5 +35,6 @@
       "Borg Queen, Perfection Manifest"
     ],
     "jarLoadProbe": "passed"
-  }
+  },
+  "updaterResourceSha256": "8823C59A1BF6BCCB575A6E7A17FD49EB669FE6227B1D7F65D014325C3D6714D2"
 }
