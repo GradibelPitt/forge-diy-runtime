@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Personal, non-commercial project.** Forge DIY Runtime was created for **playing Commander with friends**, experimenting with **custom cards**, and exploring fan-made mechanics and cross-game card design. It is an unofficial project built on a modified fork of the open-source **Forge** rules engine and is **not affiliated with, endorsed by, sponsored by, or officially connected to Card-Forge / Forge, Wizards of the Coast, Hasbro, Magic: The Gathering, Blizzard Entertainment, or Hearthstone**. All trademarks, game names, characters, artwork, and other intellectual property belong to their respective owners.
+
 # Forge DIY Runtime
 
 > **从朋友间的 Commander DIY，到把《炉石传说》的设计重新翻译进《万智牌》的规则世界。**
