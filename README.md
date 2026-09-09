@@ -1,50 +1,207 @@
 # Forge DIY Runtime
 
-## 当前更新建议
+> **从朋友间的 Commander DIY，到把《炉石传说》的设计重新翻译进《万智牌》的规则世界。**
 
-当前运行版本：`20260908-clash-only-tunnel-v3`
+Forge DIY Runtime 是一个基于开源项目 [Forge](https://github.com/Card-Forge/forge) 的个人 / 朋友间 DIY 卡牌运行环境。
 
-## 公网联机与固定地址（2026-09-08）
+它最初没有什么宏大的路线图。起点非常简单：**我和朋友喜欢打 Commander，也想做自己的牌。** 我们希望那些只存在于聊天记录、图片编辑器或脑洞里的设计，不只是“看起来像一张万智牌”，而是真的能够被规则引擎理解、结算、联机游玩，并在一场又一场对局里接受测试。
 
-本运行包为 TCP Exposer 注册用户 `marco23456` 预置固定公网入口：
+后来，这个项目逐渐变成了更大的实验：**如果把《炉石传说》里的卡牌、角色、机制和设计理念带进《万智牌》，它们应该变成什么样？**
+
+这就是这个仓库存在的原因。
+
+---
+
+## 从 Magic: The Gathering 说起
+
+1993 年，Richard Garfield 设计的 **Magic: The Gathering（万智牌）** 由 Wizards of the Coast 推向市场。它把牌库构筑、收集、随机补充包、资源系统和玩家之间不断变化的卡牌组合放进了同一个游戏里，并由此奠定了现代集换式卡牌游戏的重要基础。
+
+Magic 最有生命力的地方并不只是某一批牌，而是它背后的**规则系统**。
+
+一张新牌可以改变旧牌的价值；一个新机制可以和十几年前的机制发生互动；不同系列、不同世界观、不同年代的设计可以被放进同一副牌里。随着规则、系列和玩家社区不断扩张，Magic 逐渐不再只是一个固定内容的桌游，而更像是一套能够持续承载新设计的游戏语言。
+
+而 Commander，则把这种特点推到了一个特别适合 DIY 的方向。
+
+Commander 的前身是玩家社区创造的 **Elder Dragon Highlander（EDH）**。最早的玩法围绕《Legends》中的五张 Elder Dragon 展开，后来逐渐形成了以传奇生物作为主将、百张单卡、颜色标识和多人对局为核心的形式。2011 年，Wizards 推出了正式的 *Magic: The Gathering—Commander* 产品，Commander 随后成长为万智牌最重要的多人休闲玩法之一。
+
+Commander 对我们尤其有吸引力，因为它允许一副牌拥有非常强的个性。
+
+它不要求每张牌都只是最高效率的标准答案。一个角色、一条部族线、一套奇怪的资源引擎、一个只为了某种主题而存在的机制，都可以成为整副牌的中心。对于喜欢自己设计卡牌的人来说，这种环境几乎天然适合实验。
+
+所以这个项目的第一阶段非常直接：
+
+**做我们想玩的 DIY，然后拿它们和朋友真正打 Commander。**
+
+---
+
+## 项目的初心：让 DIY 不只是图片
+
+做一张自定义卡图并不难，真正困难的是让它成为一张“可以玩的牌”。
+
+它需要正确的费用、类型、目标、区域、触发时点、替代效应、持续效应和规则文字；它还需要处理那些只有实际开局后才会暴露出来的问题——强度是否失控、规则是否有歧义、多个效果叠在一起时会不会出错、对手是否真的有办法互动。
+
+这也是我们选择 Forge 的原因。
+
+Forge 本身是一套开源的 Magic 规则引擎。相比只制作代理卡或静态图片，在 Forge 中实现 DIY 意味着这些牌需要真正经过游戏规则：能被施放、响应、复制、反击、牺牲、放逐、复活，也必须正确地和已有的 Magic 卡牌互动。
+
+于是项目逐渐形成了几个很朴素的目标：
+
+- **让自制卡真正可运行。** 不是只写 Oracle，而是让规则引擎能够执行它。
+- **以 Commander 实战作为主要测试环境。** 卡牌最终要回到朋友之间的真实对局，而不是停留在设计文档里。
+- **允许必要的引擎扩展。** 当 Forge 原有脚本系统表达不了某种机制时，可以继续修改规则引擎，而不是为了省事把设计削成另一张已有的牌。
+- **让所有人的环境保持一致。** 卡牌、图片、翻译、规则补丁和套牌应该能够同步，而不是每个人手工复制一堆文件以后再猜版本是否相同。
+- **保留可追踪、可复现的发布链。** 运行包对应的源码版本记录在 `release.json` 中，方便确认某个运行版本究竟来自哪一次源码修改。
+
+---
+
+## 第二阶段：把炉石传说移植进万智牌
+
+随着 DIY 越做越多，我们开始碰到一个更有意思的问题：
+
+**如果一张《炉石传说》的牌真的存在于 Magic 的世界里，它应该怎么工作？**
+
+这不是简单地把“2 费 2/3”改写成 `{1}{U}`，也不是把原卡文本逐字翻译成 Magic Oracle。
+
+Hearthstone 和 Magic 对游戏的基本假设并不相同。它们拥有不同的资源系统、战斗结构、回合互动、牌库规则、目标系统和节奏。一个在 Hearthstone 中成立的设计，如果原封不动搬到 Magic，可能会完全失去原本的感觉，也可能因为 Magic 更开放的牌池和瞬间互动而变得极端失衡。
+
+因此这里所说的“移植”，更接近一种**规则翻译与再设计**：
+
+1. 先判断原卡真正的玩法身份是什么——它为什么有趣、玩家为什么会记住它。
+2. 再寻找 Magic 中最接近的颜色、卡牌类型、费用模型和规则表达。
+3. 如果现有 Magic 机制不足以表达原本的体验，就设计新的自定义机制或扩展 Forge 的规则支持。
+4. 最后把它放回 Commander 和实际对局中测试，再根据 Magic 的环境重新平衡。
+
+目标不是做到逐字逐数值的 1:1 复制，而是尽可能保留那张牌的**灵魂、节奏与决策方式**。
+
+有些内容可以自然地被翻译成 Magic 的触发式异能、死亡触发、衍生物、指示物或替代效应；另一些则会逼着我们继续扩展 Forge，让两套卡牌游戏的设计语言在同一个规则引擎中发生碰撞。
+
+目前运行环境中已经包含专门的《炉石传说》自定义系列，并对 Forge 的规则、界面和本地化进行了相应扩展。这个方向也已经从“做几张炉石卡试试看”，发展成项目长期的一部分。
+
+---
+
+## 这个仓库是什么
+
+`forge-diy-runtime` 是 **运行与分发仓库**，目标是让朋友或测试者尽量少做手工配置，就能获得一致的 Forge DIY 环境。
+
+主要内容包括：
+
+- Forge DIY 的运行 payload；
+- 修改后的 Forge 模块与规则引擎 overlay；
+- 自定义卡牌、系列、衍生物和相关资源；
+- 简体中文本地化与项目需要的界面修改；
+- 自定义音乐与共享内容；
+- 自动安装、同步、更新和修复脚本；
+- 发布清单、哈希与对应源码版本信息。
+
+自定义内容主要位于：
 
 ```text
-tcpexposer.com:41895
+app/managed/custom/
+├─ cards/
+├─ editions/
+├─ tokens/
+└─ music/
 ```
 
-TCP Exposer 账户中已经登记对应 SSH 公钥和 TCP 端口 `41895`。仓库只保存公开的用户名、服务地址、端口号和私钥文件路径；私钥本体、密码及其他认证材料不得提交。私钥只保存在运行电脑的 `%LOCALAPPDATA%\ForgeDIY\config\id_ed25519_tcpexposer`。
+本项目修改后的 Forge 源码位于：
 
-创建房间时，Forge 不再读取或复用 `NET_PORT` 偏好。服务端直接请求操作系统分配可用端口，绑定成功后才把真实端口写入 `%LOCALAPPDATA%\ForgeDIY\state\active-server-port`。因此本地端口可能每次不同，例如实测先后得到 `7975` 和 `11123`，但朋友始终连接固定入口 `tcpexposer.com:41895`。
+- [GradibelPitt/forge](https://github.com/GradibelPitt/forge)
+- 开发分支：`diy`
 
-启动器只有在本机已经存在专属私钥时，才会从 `tools/tcpexposer.default.json` 安装已登记的固定端口配置。隧道管理器先检查网络路径：只有活动的 Clash/Meta TUN 默认路由存在时，才读取 TCP Exposer 配置、探测中继并启动 SSH；未检测到 Clash TUN 的电脑保持普通 UPnP/手动端口映射模式。结果写入 `%LOCALAPPDATA%\ForgeDIY\state\tunnel-status.properties`：
+Forge 上游项目：
 
-- 检测 `Clash Verge` / `verge-mihomo` 进程、Meta Tunnel 虚拟网卡、默认路由和 `198.18.0.0/15` Fake-IP 路径。
-- 未检测到活动的 Clash TUN 时返回 `TUNNEL_SKIPPED_NO_CLASH`，不读取账户配置、不探测 TCP Exposer，也不启动 `ssh.exe`；因此没有该账户和私钥的朋友仍按普通方式开房。
-- 分开报告 TCP Exposer 的 DNS 解析、SSH 端口连通、SSH 认证和公网隧道阶段。
-- 读取 Forge 已经绑定并正在监听的真实端口，再建立 `41895 → 127.0.0.1:<当前真实端口>` 的 SSH 反向转发；不猜测端口，也不使用旧偏好。
-- 使用 SSH keepalive；链路断开后随机等待 5–35 秒重连，避免服务恢复时集中重试。Clash TUN 路由消失时停止当前 SSH 连接，路由恢复后再重建。
-- 检查 Windows 防火墙活动配置文件，并在房间聊天中明确报告启用、关闭、无法读取或可能阻断，不把所有失败笼统归因于防火墙。
+- [Card-Forge/forge](https://github.com/Card-Forge/forge)
 
-UPnP 和 TCP Exposer 是两条独立路线。出现 `UPnP failed to open port <本地端口>` 只表示路由器直连映射失败；只要状态为 `SSH_CONNECTED / PUBLIC_TUNNEL`，固定公网入口仍然可用。不要向朋友分享地址窗口里的 WAN、Meta Tunnel、Tailscale 或 Wi-Fi 地址。
+简单来说：**`GradibelPitt/forge:diy` 负责开发，这个仓库负责把可以玩的版本交到玩家手里。**
 
-2026-09-08 的实际验证结果：本机端口 `11123` 正在监听；Windows 防火墙活动配置文件均关闭；Clash Verge / Meta Tunnel 路由有效；`tcpexposer.com` 经 Fake-IP `198.18.0.18` 解析并可连接 SSH 端口；隧道状态进入 `SSH_CONNECTED`；从公网入口 `tcpexposer.com:41895` 发起的 TCP 连接成功到达该会话。
+---
 
-相关发布：Forge 自动端口与诊断基础提交为 `7e77d7d348a7f8a9869eb67ec1fdb58e6a7f21c8`，Clash 专用分流修正提交为 `a4ebec1bb5437c13e410d8f537370019f520ede9`。启动器向 Forge 注入运行包版本，避免同一套运行包因源码构建标识为 `GIT` 而持续产生错误的版本不兼容警告。启动器还使用进程级 Windows error mode 抑制其 Git HTTPS 子进程的崩溃弹窗，同时保留退出码和日志；Forge 客户端本身不受该设置影响。
+## 快速开始
 
-- 本版本继续使用 `forge-game.jar` 注入补丁发布引擎更新，不重新打包桌面聚合 JAR；新增跨牌库抓牌、抓牌步骤首次抓牌替代、同回合咒语共享类别计数与指定目标牌手牌库区域支持。
-- 新增系列 `博图三国新篇`（`BT3K`）及 `{1}{U}{U}` 2/3 传奇生物 `许攸`；同步此前待发布的青玉魔像、末日预言者、海中向导芬利爵士、生物计划、野性之心古夫，以及埃辛诺斯壁垒的辟邪／不灭／耐久 7 调整。
-- `-SyncCustom` 会自动携带简中卡牌资源和 `custom/music` 音乐集并校验哈希，避免中文客户端回退到内部英文文字或朋友端缺少自定义曲库；朋友端每次启动都会使用 Warmwood UI、启用 100% 音量的 `Pull Up a Chair` 音乐集（菜单曲 `Pull Up a Chair`、对局曲 `Bad Down to the Molten Core`）。更新后需重启 Forge 才会载入注入补丁、牌脚本、音乐和新的翻译表。
-- 正常更新会自动拉取 Git payload 并校验清单。只有普通启动入口失败时，才使用强制修复入口。
+目前主要面向 Windows 桌面环境。
 
-## 共享自建套牌
+下载或克隆仓库后，运行：
 
-运行载荷包含 7 副构筑套牌和 4 副 Commander 套牌。启动同步会分别安装到
-`%APPDATA%\Forge\decks\constructed\ForgeDIY` 和
-`%APPDATA%\Forge\decks\commander\ForgeDIY`，使用独立的 `ForgeDIY` 分类，
-不会覆盖使用者保存在原目录中的同名本地套牌。
+```text
+一键安装并启动.cmd
+```
 
-## 维护发布规则
+该入口会获取最新的 `bootstrap.ps1`，安装 / 同步运行环境并启动 Forge。
 
-- 每次完成新卡或卡牌修改并通过相称验证、本机部署后，立即先将范围明确的源码提交 push 到 `GradibelPitt/forge:diy`，不等待后续卡牌批次。
-- 随后运行 `tools/publish_git_payload.ps1 -SyncCustom` 生成运行 payload。涉及 Java 时优先增加 `-Module <module>` 精准注入受影响模块的 overlay JAR；只有跨模块/API、依赖、资源打包边界或明确的新基线才重建桌面聚合 JAR。
-- `publish_git_payload.ps1` 不会测试、暂存、commit 或 push。脚本成功后必须审查差异、只暂存本次 payload 与发布元数据、运行 `tests/test_scripts.ps1`、commit 并 push `GradibelPitt/forge-diy-runtime:main`，最后核对源码和运行仓库的两个远端 ref；不得用 `git add -A` 混入无关文件。
+如果本地运行仓库已经损坏、更新中断，或者普通启动无法恢复，可以使用：
+
+```text
+强制修复并启动.cmd
+```
+
+强制修复会删除 `%LOCALAPPDATA%\ForgeDIY\repo` 中的运行缓存并重新获取运行环境，因此它应该作为**修复入口**，而不是每次启动的默认方式。
+
+错误日志通常位于：
+
+```text
+%LOCALAPPDATA%\ForgeDIY\logs\forge-stderr.log
+```
+
+当前运行包对应的源码提交和模块 overlay 记录在：
+
+```text
+release.json
+```
+
+---
+
+## 设计原则
+
+这个项目并不追求把所有东西都变成“官方风格”。DIY 的意义本来就是尝试官方环境不会轻易出现的设计。
+
+但我们仍然希望遵守几条原则：
+
+**先保证规则明确，再谈酷。** 牌必须知道什么时候触发、影响谁、持续多久，以及和现有规则如何互动。
+
+**先保留设计身份，再追求逐字还原。** 尤其在 Hearthstone → Magic 的移植中，玩法体验比表面数字更重要。
+
+**强度最终由实战决定。** Commander 是一个极其宽广的环境，纸面上合理并不等于实际对局合理。
+
+**能用卡牌脚本解决的问题优先用卡牌脚本；真正属于规则系统的问题才修改引擎。** 这样可以尽量避免无意义地扩大维护成本。
+
+**朋友能顺利加入一局游戏，比复杂的部署流程更重要。** Runtime 仓库存在的意义，就是把开发端的复杂度挡在玩家之外。
+
+---
+
+## 这不是官方项目
+
+Forge DIY Runtime 是非商业的玩家 DIY / 实验项目。
+
+它与 **Wizards of the Coast、Magic: The Gathering、Blizzard Entertainment、Hearthstone** 均无官方隶属或背书关系。相关游戏名称、角色、美术和其他知识产权归各自权利人所有。
+
+Forge 是独立开发的开源项目。本仓库分发的 Forge 修改代码、运行脚本和相关构建内容遵循 **GNU General Public License v3**；具体说明请参阅 [`NOTICE.md`](NOTICE.md) 与 [`COPYING`](COPYING)。
+
+本运行仓库不会把用户自行下载的官方万智牌卡图缓存作为发布内容一起分发。
+
+---
+
+## 最后
+
+Magic 从来都不只是“官方印了哪些牌”。
+
+它最有意思的一部分，一直来自玩家拿着同一套规则去构筑完全不同的东西：新的套牌、新的玩法、新的格式，以及那些原本根本不存在的牌。
+
+这个项目只是我们自己的延伸。
+
+最开始，我们只是想和朋友一起打几张自己做的 Commander DIY。
+
+后来我们发现，只要 Forge 的规则系统还能继续被扩展，就没有必要把边界停在那里。
+
+所以现在，我们也在尝试回答另一个问题：
+
+> **如果炉石传说的那些角色、机制和记忆，真的穿过酒馆的大门来到 Magic 的牌桌上，会变成什么样？**
+
+这就是 Forge DIY Runtime。
+
+---
+
+### Further reading
+
+- [Forge — The Magic: The Gathering Rules Engine](https://github.com/Card-Forge/forge)
+- [Magic's 25th Anniversary — 25 Year Timeline](https://magic.wizards.com/en/news/feature/magics-25th-anniversary-25-year-timeline)
+- [30 Years, Part 2 — Commander history](https://magic.wizards.com/en/news/making-magic/30-years-part-2)
