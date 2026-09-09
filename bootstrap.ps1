@@ -821,7 +821,7 @@ try {
     $consoleJava = Join-Path $javaDirectory 'java.exe'
     if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
     $env:JAVA_HOME = Split-Path $javaDirectory -Parent
-    $env:PATH = "$javaDirectory;$env:PATH"
+    $env:PATH = "$javaDirectory;$(Split-Path $git -Parent);$env:PATH"
 
     Sync-DiyPayload
     $installedScript = Join-Path $RepoRoot 'bootstrap.ps1'
@@ -830,6 +830,12 @@ try {
     Write-Host "[Forge DIY] Java：$java" -ForegroundColor DarkGray
 
     if (-not $InstallOnly) {
+        # Local source builds live outside the Git-managed payload; normal refresh cannot erase them.
+        $selector = Join-Path $RepoRoot 'tools\select_diy_update.ps1'
+        if (Test-Path -LiteralPath $selector -PathType Leaf) {
+            . $selector
+            $AppRoot = Select-DiyUpdateApp $InstallRoot $AppRoot
+        }
         Write-Step '正在启动 Forge...'
         $jar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' | Select-Object -First 1
         if (-not $jar) { throw '运行目录中没有 Forge 聚合 JAR。' }
@@ -861,6 +867,8 @@ try {
             '-Xmx2048m',
             '-Dio.netty.tryReflectionSetAccessible=true',
             '-Dfile.encoding=UTF-8',
+            "`"-Dforge.diy.installRoot=$InstallRoot`"",
+            "`"-Dforge.diy.appRoot=$AppRoot`"",
             "-Dforge.net.activePortFile=$ActiveServerPortFile",
             "-Dforge.net.tunnelStatusFile=$TunnelStatusFile"
         )

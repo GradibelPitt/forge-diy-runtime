@@ -3,6 +3,7 @@ $root = Resolve-Path (Join-Path $PSScriptRoot '..')
 $errors = @()
 foreach ($file in @(
     'bootstrap.ps1',
+    'tools\select_diy_update.ps1',
     'tools\build_release.ps1',
     'tools\publish_git_payload.ps1',
     'tools\start_forge_tunnel.ps1',
@@ -15,6 +16,8 @@ foreach ($file in @(
     if ($parseErrors.Count -gt 0) { $errors += $parseErrors }
 }
 if ($errors.Count -gt 0) { $errors | Format-List; exit 1 }
+$diyUpdateTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'tests\test_diy_update.ps1')
+if ($LASTEXITCODE -ne 0 -or $diyUpdateTest -notcontains 'DIY_UPDATE_SELECTION_TESTS=OK') { throw 'DIY local update selection tests failed' }
 $selfTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'bootstrap.ps1') -SelfTest
 if ($LASTEXITCODE -ne 0 -or $selfTest -notcontains 'SELFTEST=OK') { throw 'bootstrap self-test failed' }
 $profileSyncTest = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $root 'tests\test_profile_sync.ps1')
@@ -26,8 +29,8 @@ if ($LASTEXITCODE -ne 0 -or $networkTunnelTest -notcontains 'NETWORK_TUNNEL_TEST
     throw 'network tunnel integration test failed'
 }
 $bootstrap = Get-Content (Join-Path $root 'bootstrap.ps1') -Raw -Encoding UTF8
-if ($bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
-    throw 'winget output must be sent to Out-Host instead of leaking into Install-Git return values'
+if ($bootstrap -match '& \$winget\.Source install' -and $bootstrap -notmatch '& \$winget\.Source install[^\r\n]+\| Out-Host') {
+    throw 'When winget is used, its output must not leak into Install-Git return values'
 }
 if ($bootstrap -notmatch '& \$GitExe -C \$RepoRoot checkout-index -a -f') {
     throw 'Repository updates must force a full checkout to repair payload bytes from older clones'
