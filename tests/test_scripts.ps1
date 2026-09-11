@@ -315,7 +315,7 @@ if ($shatteredReflectionsScript.Contains('IgnoreLegendRule')) {
 }
 $shatteredReflectionsLocalization = @($localizationLines | Where-Object { $_ -match '^破碎映像\|' })
 if ($shatteredReflectionsLocalization.Count -ne 1 -or
-    -not $shatteredReflectionsLocalization[0].Contains('以此法化生的牌不是传奇')) {
+    -not $shatteredReflectionsLocalization[0].Contains('以此法幻变的牌不是传奇')) {
     throw '破碎映像 zh-CN rules text must retain the nonlegendary clause'
 }
 $shatteredReflectionsArt = Join-Path $artRoot '破碎映像.artcrop.jpg'
