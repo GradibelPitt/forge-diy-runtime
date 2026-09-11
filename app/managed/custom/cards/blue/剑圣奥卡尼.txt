@@ -1,0 +1,8 @@
+Name:剑圣奥卡尼
+ManaCost:2 U U
+Types:Legendary Creature Merfolk
+PT:2/6
+K:etbCounter:剑术:1
+A:AB$ Counter | Cost$ SubCounter<1/剑术> | TargetType$ Spell | ValidTgts$ Creature | TgtPrompt$ 选择目标生物咒语 | SpellDescription$ 反击目标生物咒语。
+A:AB$ Counter | Cost$ SubCounter<1/剑术> | TargetType$ Spell | ValidTgts$ Instant,Sorcery | TgtPrompt$ 选择目标瞬间或法术咒语 | SpellDescription$ 反击目标瞬间或法术咒语。
+Oracle:剑圣奥卡尼进战场时其上有一个剑术指示物。\n从剑圣奥卡尼上移去一个剑术指示物：反击目标生物咒语。\n从剑圣奥卡尼上移去一个剑术指示物：反击目标瞬间或法术咒语。
