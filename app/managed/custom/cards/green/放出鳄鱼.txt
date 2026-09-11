@@ -1,0 +1,7 @@
+Name:放出鳄鱼
+ManaCost:G
+Types:Sorcery
+A:SP$ GainLife | Defined$ You | LifeAmount$ 10 | SubAbility$ DBRepeat
+SVar:DBRepeat:DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBToken | ChangeZoneTable$ True
+SVar:DBToken:DB$ Token | TokenAmount$ 2 | TokenScript$ g_2_3_crocodile | TokenOwner$ Player.IsRemembered
+Oracle:获得10点生命。每位对手派出两个2/3绿色鳄鱼衍生生物。
