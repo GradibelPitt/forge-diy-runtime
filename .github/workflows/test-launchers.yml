@@ -1,0 +1,58 @@
+name: Launcher regression
+on:
+  push:
+    paths:
+      - 'starter/**'
+      - 'bootstrap.ps1'
+      - 'tools/storage_migration.ps1'
+      - 'tests/test_macos_launcher.py'
+      - 'tests/test_storage_helper.ps1'
+      - 'tests/test_storage_launcher.ps1'
+      - '.github/workflows/test-launchers.yml'
+  pull_request:
+    paths:
+      - 'starter/**'
+      - 'bootstrap.ps1'
+      - 'tools/storage_migration.ps1'
+      - 'tests/test_macos_launcher.py'
+      - 'tests/test_storage_helper.ps1'
+      - 'tests/test_storage_launcher.ps1'
+      - '.github/workflows/test-launchers.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch launcher and fixtures from this commit
+        shell: bash
+        run: |
+          mkdir -p starter tests
+          base="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$GITHUB_SHA"
+          curl -fLsS "$base/starter/%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8.command" -o starter/一键启动.command
+          curl -fLsS "$base/tests/test_macos_launcher.py" -o tests/test_macos_launcher.py
+      - name: System Bash 3.2 and native macOS integration fixtures
+        run: |
+          /bin/bash -n starter/一键启动.command
+          /bin/bash starter/一键启动.command --self-test
+          python3 tests/test_macos_launcher.py
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch only launcher sources from this commit
+        shell: powershell
+        run: |
+          $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
+          foreach ($path in @('bootstrap.ps1', 'tools/storage_migration.ps1', 'tests/test_storage_helper.ps1', 'tests/test_storage_launcher.ps1')) {
+            $destination = Join-Path $env:GITHUB_WORKSPACE $path
+            New-Item -ItemType Directory -Path (Split-Path $destination -Parent) -Force | Out-Null
+            Invoke-WebRequest -UseBasicParsing "$base/$path" -OutFile $destination
+          }
+      - name: Windows PowerShell 5.1 helper loading and launcher behavior
+        shell: powershell
+        run: |
+          & ./tests/test_storage_helper.ps1
+          & ./tests/test_storage_launcher.ps1

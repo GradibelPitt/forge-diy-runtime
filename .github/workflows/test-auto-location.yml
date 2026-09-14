@@ -5,7 +5,7 @@ on:
       - 'tools/auto_location.ps1'
       - 'tests/test_auto_location.ps1'
       - '.github/workflows/test-auto-location.yml'
-      - '一键安装并启动.cmd'
+      - 'starter/一键安装并启动.cmd'
   workflow_dispatch:
 permissions:
   contents: read

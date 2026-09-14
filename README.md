@@ -123,12 +123,14 @@ Forge 上游项目：
 
 ## 快速开始
 
-目前主要面向 Windows 桌面环境。
+所有可双击的启动入口统一位于 [`starter/`](starter/)。
+
+### Windows
 
 下载或克隆仓库后，运行：
 
 ```text
-一键安装并启动.cmd
+starter/一键安装并启动.cmd
 ```
 
 该入口会获取最新的 `bootstrap.ps1`，安装 / 同步运行环境并启动 Forge。
@@ -136,8 +138,10 @@ Forge 上游项目：
 如果本地运行仓库已经损坏、更新中断，或者普通启动无法恢复，可以使用：
 
 ```text
-强制修复并启动.cmd
+starter/强制修复并启动.cmd
 ```
+
+英文兼容入口是 `starter/ForgeDIY_Repair.bat`。三个 Windows 入口仍下载根目录的 [`bootstrap.ps1`](bootstrap.ps1)，不依赖当前工作目录。
 
 强制修复会删除 `%LOCALAPPDATA%\ForgeDIY\repo` 中的运行缓存并重新获取运行环境，因此它应该作为**修复入口**，而不是每次启动的默认方式。
 
@@ -152,6 +156,47 @@ Forge 上游项目：
 ```text
 release.json
 ```
+
+### macOS（Apple Silicon / Intel）
+
+下载或克隆仓库后，双击 [`starter/一键启动.command`](starter/一键启动.command)。也可以只下载这一个文件并运行，不需要提前安装 Git、Homebrew、Python 或 Java。
+
+启动器会检查 `main` 的最新提交；首次安装或有更新时下载完整运行包并校验 JAR，自动获取本机架构的 Java 17，同步 DIY 卡牌、图片、音乐后启动桌面版 Forge。无更新时复用缓存；检查更新失败且本地运行包完整时会提示并使用本地版本。游戏运行期间请保留终端窗口。
+
+如果单独下载的文件没有执行权限，在文件所在目录运行一次：
+
+```bash
+chmod +x 一键启动.command
+./一键启动.command
+```
+
+若 macOS 提示无法确认开发者，请通过系统提供的“打开”确认该文件的来源。
+
+可选参数：`--offline` 使用已有安装、`--install-only` 只安装和同步、`--self-test` 检查脚本语法。`FORGE_DIY_HOME` 可指定运行包安装目录；目录名支持空格和中文，不支持冒号。
+
+| 内容 | macOS 路径 |
+| --- | --- |
+| 运行包和便携 Java | `~/Library/Application Support/ForgeDIY/` |
+| 用户套牌、设置、自定义卡牌 | `~/Library/Application Support/Forge/` |
+| 图片缓存 | `~/Library/Caches/Forge/` |
+| 启动日志 | `~/Library/Application Support/ForgeDIY/logs/` |
+
+同步保留用户套牌和无关设置，统一应用与 Windows 版相同的皮肤、卡图格式和音乐选项。macOS 入口负责运行包更新和启动；Windows 专属的磁盘迁移、PowerShell TCP Exposer 管理和本地源码构建切换不在该入口中运行。
+
+### 启动相关结构
+
+```text
+starter/                       # 用户可双击的入口
+├─ 一键启动.command             # macOS 独立启动器
+├─ 一键安装并启动.cmd           # Windows 常规启动
+├─ 强制修复并启动.cmd           # Windows 修复
+└─ ForgeDIY_Repair.bat           # Windows 英文修复入口
+bootstrap.ps1                  # Windows 安装和同步实现，保留原 GitHub 地址
+tools/storage_migration.ps1     # 明文存储迁移实现
+tests/                         # 启动与同步回归测试
+```
+
+`bootstrap.ps1` 不再内嵌 Base64 迁移代码，也不再将解码字符串作为脚本执行。它优先加载仓库内的 `tools/storage_migration.ps1`；作为临时单文件启动时按需下载该文件，核对源码 SHA-256 后通过文件路径加载。修改迁移脚本时，须同步更新 bootstrap 中的源码哈希（UTF-8、无 BOM、LF 换行）。迁移仍保留原有确认、校验和恢复行为。
 
 ---
 

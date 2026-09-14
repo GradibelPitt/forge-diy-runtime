@@ -122,13 +122,13 @@ if ($bootstrap -notmatch 'Join-Path \$RepoRoot ''tools\\sync_profile\.ps1''' -or
     $bootstrap -notmatch '& \$syncScript -AppRoot \$AppRoot') {
     throw 'Bootstrap must use the verified profile sync helper before Forge starts'
 }
-$cmdLines = Get-Content (Join-Path $root '一键安装并启动.cmd') -Encoding UTF8
+$cmdLines = Get-Content (Join-Path $root 'starter\一键安装并启动.cmd') -Encoding UTF8
 $codePageLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '^chcp 65001' })
 $firstChineseLine = [Array]::FindIndex($cmdLines, [Predicate[string]]{ param($line) $line -match '[一-龥]' })
 if ($codePageLine -lt 0 -or $firstChineseLine -lt 0 -or $codePageLine -gt $firstChineseLine) {
     throw 'CMD must switch to UTF-8 before its first Chinese output'
 }
-$repairCmdPath = Join-Path $root '强制修复并启动.cmd'
+$repairCmdPath = Join-Path $root 'starter\强制修复并启动.cmd'
 if (-not (Test-Path -LiteralPath $repairCmdPath)) { throw 'Force-repair CMD is missing' }
 $repairCmd = Get-Content -LiteralPath $repairCmdPath -Raw -Encoding UTF8
 $bootstrapUrlPattern = [regex]::Escape('https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/main/bootstrap.ps1')
@@ -137,7 +137,7 @@ if ($repairCmd -notmatch '%LOCALAPPDATA%\\ForgeDIY\\repo' -or
     $repairCmd -notmatch $bootstrapUrlPattern) {
     throw 'Force-repair CMD must delete only the runtime repo and download the latest bootstrap'
 }
-$asciiLauncherPath = Join-Path $root 'ForgeDIY_Repair.bat'
+$asciiLauncherPath = Join-Path $root 'starter\ForgeDIY_Repair.bat'
 if (-not (Test-Path -LiteralPath $asciiLauncherPath)) { throw 'ASCII repair BAT is missing' }
 $asciiLauncherBytes = [System.IO.File]::ReadAllBytes($asciiLauncherPath)
 if (($asciiLauncherBytes | Where-Object { $_ -gt 127 }).Count -ne 0) {

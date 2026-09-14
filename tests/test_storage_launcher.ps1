@@ -1,5 +1,5 @@
 ﻿#requires -Version 5.1
-param([switch]$ChoiceProbe)
+param([switch]$ChoiceProbe, [switch]$SkipConsoleProbe)
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version 2.0
 $bootstrapPath = Join-Path (Split-Path $PSScriptRoot -Parent) 'bootstrap.ps1'
@@ -17,8 +17,10 @@ if ($ChoiceProbe) {
     Write-Output ('CHOICE=' + (Confirm-ForgeStorageMigration))
     exit 0
 }
-. ([scriptblock]::Create((Get-Definition $ast 'Get-ForgeStorageMigrationSource')))
-$migration = Get-ForgeStorageMigrationSource
+. ([scriptblock]::Create((Get-Definition $ast 'Resolve-ForgeStorageMigrationHelper')))
+$helperPath = Join-Path (Split-Path $PSScriptRoot -Parent) 'tools/storage_migration.ps1'
+$helper = Resolve-ForgeStorageMigrationHelper -HelperPath $helperPath
+$migration = [IO.File]::ReadAllText($helper.Path, [Text.Encoding]::UTF8)
 $migrationAst = [Management.Automation.Language.Parser]::ParseInput($migration,[ref]$null,[ref]$parseErrors)
 if ($parseErrors.Count) { throw ($parseErrors | Out-String) }
 $guardDefinition = Get-Definition $migrationAst 'CheckIdle'
@@ -66,7 +68,18 @@ $gameAncestor = @((ProcessRow $PID 300021 'powershell.exe' 'forge-diy-bootstrap.
 Check-Processes 'game ancestor remains blocked' $gameAncestor @(300021)
 
 # Test the actual initializer while replacing only external effects with small fixtures.
-$global:ForgeStorageLauncherTestState = [pscustomobject]@{Migrate=$false;DriveReads=0;SourceReads=0;PrepareCalls=0;Result=0}
+$fixturePath = Join-Path ([IO.Path]::GetTempPath()) ('forge-launcher-fixture-' + [Guid]::NewGuid().ToString('N') + '.ps1')
+$fixtureSource = @'
+param([switch]$LibraryOnly)
+function Invoke-ForgeStorage {
+    param([string]$Mode)
+    if ($Mode -ne 'Prepare') { throw 'Unexpected migration mode' }
+    $global:ForgeStorageLauncherTestState.PrepareCalls++
+    return $global:ForgeStorageLauncherTestState.Result
+}
+'@
+[IO.File]::WriteAllText($fixturePath, $fixtureSource)
+$global:ForgeStorageLauncherTestState = [pscustomobject]@{Migrate=$false;DriveReads=0;SourceReads=0;PrepareCalls=0;Result=0;HelperPath=$fixturePath}
 $initializer = Get-Definition $ast 'Initialize-ForgeStorage'
 $testModule = New-Module -ScriptBlock {
     param($Definition)
@@ -78,17 +91,9 @@ $testModule = New-Module -ScriptBlock {
         return [pscustomobject]@{Name='D:\'}
     }
     function Get-Item { param($LiteralPath,[switch]$Force,$ErrorAction) return $null }
-    function Get-ForgeStorageMigrationSource {
+    function Resolve-ForgeStorageMigrationHelper {
         $global:ForgeStorageLauncherTestState.SourceReads++
-        return @'
-param([switch]$LibraryOnly,[string]$EmbeddedSource)
-function Invoke-ForgeStorage {
-    param([string]$Mode)
-    if ($Mode -ne 'Prepare') { throw 'Unexpected migration mode' }
-    $global:ForgeStorageLauncherTestState.PrepareCalls++
-    return $global:ForgeStorageLauncherTestState.Result
-}
-'@
+        return [pscustomobject]@{Path=$global:ForgeStorageLauncherTestState.HelperPath;TemporaryDirectory=$null}
     }
     . ([scriptblock]::Create($Definition))
     Export-ModuleMember -Function Initialize-ForgeStorage
@@ -109,10 +114,12 @@ try {
     $script:Passed++
 } finally {
     Remove-Module $testModule -Force -ErrorAction SilentlyContinue
+    Remove-Item -LiteralPath $fixturePath -Force
     Remove-Variable ForgeStorageLauncherTestState -Scope Global -ErrorAction SilentlyContinue
 }
 
 # Exercise the real console choice, including Enter's default, in a child process.
+if (-not $SkipConsoleProbe) {
 $powerShell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
 foreach ($case in @(@{Input='';Expected='False'},@{Input='N';Expected='False'},@{Input='Y';Expected='True'})) {
     $start = New-Object Diagnostics.ProcessStartInfo
@@ -136,4 +143,6 @@ foreach ($case in @(@{Input='';Expected='False'},@{Input='N';Expected='False'},@
         $script:Passed++
     } finally { $process.Dispose() }
 }
+}
 Write-Output "STORAGE_LAUNCHER_TESTS=OK ($script:Passed checks)"
+
