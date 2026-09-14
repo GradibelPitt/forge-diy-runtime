@@ -55,4 +55,5 @@ jobs:
         shell: powershell
         run: |
           & ./tests/test_storage_helper.ps1
-          & ./tests/test_storage_launcher.ps1
+          # Hosted runners have no interactive Windows console for PromptForChoice.
+          & ./tests/test_storage_launcher.ps1 -SkipConsoleProbe

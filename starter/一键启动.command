@@ -249,7 +249,7 @@ launch_forge() {
     GAME_PID=''
     if [[ $code -ne 0 ]]; then
         tail -n 30 "$stderr_log" >&2
-        fail "Forge 已退出（代码 $code）。请查看日志：$stderr_log" || true
+        fail "Forge 已退出（代码 ${code}）。请查看日志：$stderr_log" || true
         return "$code"
     fi
 }

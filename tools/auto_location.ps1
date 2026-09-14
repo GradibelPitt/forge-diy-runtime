@@ -160,7 +160,7 @@ function SaveJournal($State, [string]$Path) {
     $tmp = $Path + '.tmp'
     $json = ($State | ConvertTo-Json -Depth 8) -replace '\r?\n', "`r`n"
     [IO.File]::WriteAllText($tmp, $json, (New-Object Text.UTF8Encoding($true)))
-    if ([IO.File]::Exists($Path)) { [IO.File]::Replace($tmp, $Path, $null) } else { [IO.File]::Move($tmp, $Path) }
+    if ([IO.File]::Exists($Path)) { [IO.File]::Replace($tmp, $Path, [NullString]::Value) } else { [IO.File]::Move($tmp, $Path) }
 }
 function GuardJournal($State, $Defaults, [string]$Sid) {
     if ($State.Version -ne 2 -or $State.Sid -ne $Sid -or $State.Machine -ne $env:COMPUTERNAME -or $State.Id -notmatch '^[0-9a-f]{32}$') { throw 'Invalid migration journal.' }

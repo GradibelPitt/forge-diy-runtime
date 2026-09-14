@@ -38,7 +38,10 @@ if [[ ${GAME_EXIT:-0} != 0 ]]; then echo 'fixture game failure' >&2; fi
 exit "${GAME_EXIT:-0}"
 ''')
         self.java.chmod(0o755)
-        self.env = dict(os.environ, TEST_ROOT=str(self.root), LAUNCHER=str(LAUNCHER), MOCK_JAVA=str(self.java))
+        # Exercise Bash 3.2 under a real UTF-8 locale, including Chinese text
+        # immediately after variable expansions in failure messages.
+        self.env = dict(os.environ, TEST_ROOT=str(self.root), LAUNCHER=str(LAUNCHER),
+                        MOCK_JAVA=str(self.java), LC_ALL='en_US.UTF-8')
         self.prefix = '''set -euo pipefail
 source "$LAUNCHER"
 shopt -s nullglob
