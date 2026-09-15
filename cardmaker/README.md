@@ -1,0 +1,107 @@
+# Forge 制卡工坊
+
+本地浏览器制卡工具。默认目标仓库：`GradibelPitt/forge-diy-runtime`，分支：`main`。
+
+## 启动
+
+```text
+cardmaker/
+├── macver/
+│   ├── 启动制卡器.command       ← macOS 双击这个文件
+│   └── program/                ← 程序、资源、独立依赖环境和本地数据
+└── windowsver/
+    ├── 启动制卡器.bat           ← Windows 双击这个文件
+    └── program/
+```
+
+需要 Python 3.9 或更新版本。启动器会创建独立虚拟环境并安装 Pillow，然后默认用 Google Chrome 打开界面；没有安装 Chrome 时提示并临时使用系统浏览器。首次安装依赖需要网络；已安装依赖后，本地制卡可离线使用。服务仅监听 `127.0.0.1`。保持启动窗口打开，按 Ctrl+C 停止。
+
+macOS 首次下载后若文件没有执行权限：在 `macver` 目录执行 `chmod +x 启动制卡器.command`。当前交付副本已经设置执行权限。
+
+Windows 未安装 Python 时，启动器会打开 Python 官方下载页；安装时勾选 Add Python to PATH。
+
+## 制作新卡
+
+1. 粘贴 UTF-8 卡牌脚本，或选择 `.txt` 文件。
+2. 程序从 `Name:` 读取中文卡名，从 `Colors:` / `ManaCost:` 读取卡牌颜色，从稀有度声明读取稀有度。
+3. 上传图片，或输入图片直链 / 网页 URL。网页会尝试提取分享图及正文图片，由用户选择。
+4. 选择是否自动裁剪，检查预览，点击“检查脚本与输出文件”。
+5. 选择“仅保存到本地”或“保存并推送 GitHub”。后者先保存本地副本，再展示最新远端提交预览，最后由按钮确认推送。
+
+### 卡名、颜色、稀有度
+
+```text
+# Rarity: M
+Name:星界守望者
+ManaCost:3 G U
+Types:Legendary Creature Dragon
+PT:4/4
+K:Flying
+K:Vigilance
+Oracle:飞行，警戒
+```
+
+- 卡名逐字取自 `Name:`，不根据文件名推测、不自行翻译。制作新卡要求内部名称含中文。
+- `Colors:` 优先于费用；未声明时分析 `ManaCost:`。单色放到 `white/blue/black/red/green`，多色放到 `multicolor`，无色放到 `colorless`。混色和非瑞克西亚费用也参与分析；起动费用和 Oracle 中的颜色不改变本程序判断的牌张颜色。
+- `Colors:` 多色用英文逗号分隔，例如 `Colors:Blue,Red`；同时支持 `Colors:WU`、`Colors:all`、`Colors:Colorless`。无法识别的写法停止处理，避免猜错目录。
+- Forge 现有脚本通常不保存稀有度。新卡请添加 `# Rarity: C/U/R/M/S/L` 注释，或通过界面选择后自动写入此注释。也支持 `Rarity:Rare`、`# 稀有度：神话` 等明确声明。缺失、未知或冲突时不猜测；不会把 `Legendary` 自动当成神话。
+- 已有卡的稀有度可从 PH01 表读取。修改脚本模式不更新该登记。
+
+### 图片
+
+- 无论是否裁剪，图片始终命名为 `Name字段.artcrop.jpg`，实际转为 RGB JPEG，处理 EXIF 方向和透明背景。
+- “图片自动裁剪”开启：裁切为约 1.37:1，可调位置及缩放，最大输出 1370×1000。
+- 关闭：不裁剪、不缩放，保留原图尺寸与比例，仅转换图片格式及 EXIF 方向。
+- 原图保存在导出包的 `original/`，不修改上传的源文件。
+- 支持 JPEG、PNG、WebP、BMP、GIF、TIFF；GIF 使用第一帧。图片上限 20 MB、3200 万像素。
+- URL 抓取仅支持标准 HTTP/HTTPS 公网地址；登录、反爬或依赖 JavaScript 的页面可能无法获取，请改用图片直链或文件上传。
+
+### 编号与同名保护
+
+新增登记格式为 `编号 稀有度 中文卡名 @Custom`，画师字段固定默认 `@Custom`。
+
+按 `[cards]` 中所有已有编号的最大数字值加一，追加到该段最末尾、`[tokens]` 前；不回填编号空缺，也不覆盖空编号占位。内置 2026-09-15 快照的末尾占位为 205，因此离线初始下一编号为 206。实际发布以最新远端为准。
+
+普通制卡入口发现同名卡时立即警告并停止，不能通过覆盖选项绕过。推送前再读取最新远端：新卡不覆盖已有脚本、已占用编号或同名孤立图片。发布预览之后若远端前进，非强制更新会拒绝发布。
+
+## 只修改已有脚本
+
+1. 切换到“修改已有脚本”。
+2. **直接粘贴 / 上传新脚本即可，无需先搜索。** 程序读取 `Name:` 并精确定位已有脚本。可选地搜索卡名并“读取原脚本”再编辑。
+3. 检查后保存，或保存并推送。
+
+此模式不需要图片，不生成图片，不新增或修改版本登记。若颜色改变，发布时把新脚本放入正确颜色文件夹并删除同名旧脚本位置；原图片与版本表字节保持不变。同名脚本不唯一、目标不存在或远端脚本在保存后变化时停止处理。
+
+## 本地保存与 GitHub 发布
+
+本地保存产生独立目录，不会直接改动运行中的 Forge 安装。新卡目录包含脚本、JPEG、完整 PH01 表、原图及 `cardmaker.json`；脚本修改模式只导出替换脚本及操作记录。请勿把离线生成的完整 PH01 表覆盖到更晚版本的仓库，联网发布功能会重新合并最新版本表。
+
+GitHub 发布需要目标仓库的 Contents 读写权限。支持：
+
+- 在设置中填写 GitHub Token（不存入文件或 localStorage）；
+- `GH_TOKEN` / `GITHUB_TOKEN` 环境变量；
+- 已安装并登录的 `gh` CLI（也支持 `program/tools/gh` 配合 `program/data/gh` 的独立配置）。
+
+程序不会读取 Codex 连接器凭据；首次使用 GitHub 发布时需配置上述任一种凭据。公开仓库的编号同步、脚本读取和发布预览可无凭据进行，但受 GitHub API 限额约束。
+
+发布使用 GitHub Git Data API，一次提交包括本次卡牌改动以及 `app/BUILD-ID.txt`、`release.json`、`app/manifest-critical.sha256`。脚本修改模式不包含图片或 edition 改动。保留其他文件与引擎来源信息，不提交本地原图备份、凭据或依赖环境；不使用强制推送。完成后检查远端提交中的每个文件 Git blob SHA。
+
+本程序只操作上述运行仓库，不修改 `GradibelPitt/forge:diy` 或 Java 引擎，不自动重启游戏。要在游戏中使用新发布内容，请按已有 Forge 启动器更新并重启。卡牌基础静态检查不是 Forge 引擎玩法测试。
+
+## 支持范围
+
+当前面向单面卡牌；双面 / 连体等多面脚本会明确停止，避免只有一张图片时产生不完整导入。无中文内部名的新卡需先修改 `Name:`。中文外观名称与英文内部名的映射不由本工具自动推测。
+
+## 开发与验证
+
+两平台 `program/` 中的程序源码相同，只启动器不同。修改时同步两份代码，避免平台行为漂移。
+
+```text
+macver/启动制卡器.command --check
+cd macver/program
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+Windows 检查入口：`启动制卡器.bat --check`；在 `windowsver/program` 目录运行测试：`.venv-windows\Scripts\python.exe -m unittest discover -s tests -v`。
+
+界面与本地程序为本项目新实现；资源快照来自本仓库 PH01 版本表和公开脚本索引。卡图不随程序示例分发。遵循仓库根目录 `COPYING` 的 GPL-3.0 许可。
