@@ -8,3 +8,24 @@
 .mode-bar{display:flex;justify-content:space-between;align-items:center;margin:0 0 20px;gap:15px}.mode-bar .segmented{background:#e7ebdf;padding:4px}.mode-bar .segmented button{font-size:12px;padding:7px 16px}.mode-bar>span{font-size:10px;color:#8b9a80}#existingPane{margin-bottom:22px}#existingPane .input-row input,#existingPane .input-row select{flex:1;min-width:0}#existingPane .help{margin:10px 0 0}@media(max-width:750px){#existingPane .input-row{flex-wrap:wrap}.mode-bar>span{display:none}}
 
 .mode-bar .segmented{flex-wrap:wrap}
+
+/* The preview has its own full-height column; output actions stay with inputs. */
+:root{--actionbar-height:86px}
+.preview-column{align-self:stretch}
+.preview-panel{position:sticky;top:16px;max-height:calc(100dvh - var(--actionbar-height) - 32px)}
+.preview-panel .card-stage{align-items:flex-start;padding:16px;overflow:hidden}
+.preview-panel .card{flex-shrink:0;transform-origin:50% 0}
+html{scroll-padding-bottom:calc(var(--actionbar-height) + 20px)}
+
+@media(max-width:750px){
+  .workspace{display:flex;flex-direction:column;gap:18px}
+  .edit-column,.preview-column{width:100%}
+  .preview-column{order:-1;display:block;position:sticky;top:8px;z-index:5}
+  .preview-panel{position:relative;top:0;max-height:min(34dvh,calc(100dvh - var(--actionbar-height) - 100px));box-shadow:0 5px 18px #21393018}
+  .preview-heading{padding:7px 12px 0}
+  .preview-panel .card-stage{padding:8px}
+  .preview-panel .card{width:240px;transform:none;border-width:5px;border-radius:10px;padding:4px}
+  .preview-panel .card-art{height:140px}
+  .preview-panel .card-type,.preview-panel .card-oracle,.preview-panel .card-footer,.preview-caption{display:none}
+  html{scroll-padding-top:min(34dvh,260px)}
+}

@@ -32,3 +32,12 @@
 - New-card commits contain exactly script, JPG and edition changes. Script edits contain only affected scripts; artwork replacement contains only the target JPG.
 - Additional tests inject JAR, BUILD-ID, release.json, manifest and updater files into each mode's plan and verify rejection before any Git write. Another test confirms card publishing does not require release or manifest files.
 - Existing engine/updater files remain byte-for-byte unchanged. Git blob verification is read-only; it does not update the repository's manifest.
+
+
+## Persistent preview update
+
+- Output details now follow the inputs; the preview occupies its own sticky column. At widths up to 750px it becomes a compact sticky view above the editor.
+- Chrome UI verified at 1470×797, 1280×600 and 390×844 using the supplied Huiji original and live zoom-slider adjustments. Both crop controls and artwork stayed visible.
+- At 1280×600 the preview ended at y=497, above the action bar at y=514; at 390×844 the preview stayed at y=8–253 while crop controls remained at y=466–506.
+- Preview scaling affects presentation only. JavaScript syntax check passed; Chrome reported no console warnings or errors. Backend files were unchanged in this UI update, so the existing 51-test backend result was not rerun.
+- macOS Desktop and Windows web sources match. Responsive checks used Chrome on macOS; native Windows verification remains unavailable.

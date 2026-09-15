@@ -180,3 +180,34 @@ async function initialize(){
   catch(e){notice('无法连接本地服务，请通过启动脚本重新打开。',true);}
 }
 initialize();
+
+// Keep the entire preview above the fixed action bar, even in short windows.
+// Scaling the card leaves the original image/crop data untouched.
+let previewFrame=0;
+function fitPreview(){
+  previewFrame=0;
+  const panel=document.querySelector('.preview-panel'),stage=document.querySelector('.card-stage'),preview=$('card');
+  const footer=document.querySelector('.actionbar');
+  const footerHeight=Math.ceil(footer.getBoundingClientRect().height);
+  document.documentElement.style.setProperty('--actionbar-height',footerHeight+'px');
+  const viewportHeight=window.visualViewport?.height||window.innerHeight;
+  const compact=window.matchMedia('(max-width:750px)').matches;
+  const panelHeight=compact?Math.min(viewportHeight*.34,viewportHeight-footerHeight-100)
+    :viewportHeight-footerHeight-Math.max(16,panel.getBoundingClientRect().top)-16;
+  const css=getComputedStyle(stage);
+  const paddingY=parseFloat(css.paddingTop)+parseFloat(css.paddingBottom);
+  const paddingX=parseFloat(css.paddingLeft)+parseFloat(css.paddingRight);
+  const header=panel.querySelector('.preview-heading').getBoundingClientRect().height;
+  const caption=panel.querySelector('.preview-caption').getBoundingClientRect().height;
+  const availableHeight=panelHeight-header-caption-paddingY-8;
+  const scale=Math.min(1,(panel.clientWidth-paddingX-8)/preview.offsetWidth,Math.max(1,availableHeight)/preview.offsetHeight);
+  preview.style.transform=`scale(${scale})`;
+  stage.style.height=Math.ceil(preview.offsetHeight*scale+paddingY+4)+'px';
+}
+function schedulePreviewFit(){if(!previewFrame)previewFrame=requestAnimationFrame(fitPreview);}
+const previewObserver=new ResizeObserver(schedulePreviewFit);
+for(const node of [$('card'),document.querySelector('.preview-column'),document.querySelector('.actionbar')])previewObserver.observe(node);
+window.addEventListener('resize',schedulePreviewFit);
+window.addEventListener('scroll',schedulePreviewFit,{passive:true});
+window.visualViewport?.addEventListener('resize',schedulePreviewFit);
+schedulePreviewFit();
