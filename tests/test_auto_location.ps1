@@ -65,7 +65,7 @@ foreach ($scenario in @('Outer','Inner','Fresh','Rollback')) {
     try {
         if ($scenario -eq 'Rollback') {
             $script:SavedMake = (Get-Item Function:\MakeJunction).ScriptBlock
-            $script:FailPath = $f.Defs[1].Alias
+            $script:FailPath = RealRoot $f.Defs[1].Alias
             function MakeJunction([string]$Path,[string]$Target) {
                 if ($Path -eq $script:FailPath) { throw 'Injected switch failure' }
                 & $script:SavedMake $Path $Target
