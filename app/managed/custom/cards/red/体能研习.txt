@@ -1,0 +1,14 @@
+# Rarity: R
+Name:体能研习
+ManaCost:R
+Types:Sorcery
+
+S:Mode$ RaiseCost | ValidCard$ Card.Self | Activator$ You | Type$ Spell | Cost$ Behold<1/Creature.hasKeywordHaste> | EffectZone$ All | Description$ 请援一个具有敏捷的生物，以作为施放本咒语的额外费用。
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.hasKeywordHaste | ChangeNum$ 1 | SubAbility$ DBMana | SpellDescription$ 从你的牌库中搜寻一张具有敏捷的生物牌，将它展示并置于你手上，然后洗牌。加一点任意颜色的法术力。此法术力只能用来施放具有敏捷的生物咒语。
+
+SVar:DBMana:DB$ Mana | Produced$ Any | Amount$ 1 | RestrictValid$ Spell.Creature+hasKeywordHaste
+
+DeckHints:Type$Creature
+
+Oracle:请援一个具有敏捷的生物，以作为施放本咒语的额外费用。\n从你的牌库中搜寻一张具有敏捷的生物牌，将它展示并置于你手上，然后洗牌。加一点任意颜色的法术力。此法术力只能用来施放具有敏捷的生物咒语。
