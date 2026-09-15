@@ -20,7 +20,7 @@ function notice(message, error=false, link=null) {
 }
 function setBusy(value, message='') {
   busy=value; document.body.classList.toggle('busy',value);
-  for (const id of ['check','sync','fetchUrl','publishConfirm','sample','chooseFolder','modeCard','modeScript','loadExisting']) $(id).disabled=value;
+  for (const id of ['check','sync','fetchUrl','publishConfirm','sample','chooseFolder','modeCard','modeScript','modeArt','loadExisting']) $(id).disabled=value;
   $('saveLocal').disabled=value || !draft; $('savePush').disabled=value || !draft;
   if(message) $('actionHint').textContent=message;
 }
@@ -39,7 +39,7 @@ function renderState(value){
   for(const record of value.history){
     const row=document.createElement('div');row.className='history-item';
     const left=document.createElement('div');const title=document.createElement('b');title.textContent=`${record.name} · PH01 #${record.number}`;
-    const status=document.createElement('small');status.textContent=record.status+' · '+record.folder;left.append(title,status);row.append(left);
+    const status=document.createElement('small');status.textContent=(record.mode==='art'?'替换卡图 · ':record.mode==='script'?'修改脚本 · ':'')+record.status+' · '+record.folder;left.append(title,status);row.append(left);
     if(record.url){const a=document.createElement('a');a.href=record.url;a.target='_blank';a.rel='noopener';a.textContent='查看提交 ↗';row.append(a);}
     else{const button=document.createElement('button');button.className='ghost';button.textContent='预览推送 ↗';button.onclick=()=>run(()=>prepare(record.id),'读取远端并检查编号…');row.append(button);}
     history.append(row);
@@ -55,27 +55,52 @@ function renderCard(info){
   $('previewOracle').textContent=info.oracle||'脚本尚未提供 Oracle 规则文字。';$('previewNumber').textContent='PH01 · '+info.number;
   $('previewRarity').textContent=info.rarity||'✧';
   $('artFilename').textContent=info.name+'.artcrop.jpg';
+  $('artPath').textContent='cards/pictures/PH01/'+info.name+'.artcrop.jpg';
   $('scriptPath').textContent='cards/'+info.folder+'/'+info.name+'.txt';
-  $('editionRow').textContent=mode==='script'?'保留原登记，不修改版本表':`${info.number} ${info.rarity||'?'} ${info.name} @Custom`;
+  $('editionRow').textContent=mode!=='card'?`保留 #${info.number} · 不修改版本表`:`${info.number} ${info.rarity||'?'} ${info.name} @Custom`;
   $('scriptStatus').textContent=info.warnings.length?info.warnings[0]:(info.rarity?'✓ 已识别卡名、颜色与稀有度':'未检测到稀有度，请在下方选择并补写脚本');
-  if(mode==='card' && info.existing)notice(`已有同名卡牌「${info.name}」。普通制卡入口禁止覆盖或推送，请切换到「修改已有脚本」。`,true);
+  if(mode==='card' && info.existing)notice(`已有同名卡牌「${info.name}」。普通制卡入口禁止覆盖或推送，请切换到「修改已有脚本」或「替换已有卡图」。`,true);
 }
 function filterCards(){
   const select=$('existingCard'),previous=select.value,query=$('cardSearch').value.trim().toLowerCase();select.replaceChildren();
-  const empty=document.createElement('option');empty.value='';empty.textContent='可选：选择卡牌读取原脚本';select.append(empty);
-  for(const c of (state?.cards||[]).filter(c=>c.name.toLowerCase().includes(query)).sort((a,b)=>a.name.localeCompare(b.name,'zh'))){const option=document.createElement('option');option.value=c.name;option.textContent=c.name;select.append(option);}
+  const empty=document.createElement('option');empty.value='';empty.textContent=mode==='art'?'选择要替换卡图的卡牌':'可选：选择卡牌读取原脚本';select.append(empty);
+  for(const c of (state?.cards||[]).filter(c=>c.name.toLowerCase().includes(query)).sort((a,b)=>a.name.localeCompare(b.name,'zh'))){const option=document.createElement('option');option.value=c.name;option.textContent=c.name+(mode==='art'&&!c.hasArt?'（卡图待同步确认）':'');select.append(option);}
   if([...select.options].some(o=>o.value===previous))select.value=previous;
 }
-function changeMode(value){mode=value;invalidate();$('notice').className='notice hidden';$('modeCard').classList.toggle('selected',value==='card');$('modeScript').classList.toggle('selected',value==='script');$('artPanel').classList.toggle('hidden',value==='script');$('existingPane').classList.toggle('hidden',value!=='script');$('outputArtPath').classList.toggle('hidden',value==='script');$('registrationHelp').textContent=value==='script'?'本次只替换已有脚本，保留原图片与版本登记。':'新增编号按现有最大值递增，追加到卡牌列表末尾。';$('modeHint').textContent=value==='script'?'仅替换脚本 · 保留图片与卡名登记':'脚本 + 卡图 + 版本登记';if(card)renderCard(card);}
-$('modeCard').onclick=()=>changeMode('card');$('modeScript').onclick=()=>changeMode('script');$('cardSearch').oninput=filterCards;
-$('existingCard').onchange=invalidate;
+function resetCard(){
+  card=null;$('previewName').textContent=mode==='art'?'选择已有卡牌':'你的下一张牌';$('previewCost').textContent='';
+  $('previewTypes').textContent='卡牌类型';$('previewPT').textContent='';$('previewOracle').textContent=mode==='art'?'选择目标卡牌，再导入要替换的新原画。':'脚本中的规则文字将在此显示。';
+  $('previewNumber').textContent='PH01 · —';$('previewRarity').textContent='✧';$('artFilename').textContent='中文卡名.artcrop.jpg';$('artPath').textContent='cards/pictures/PH01/';
+  $('editionRow').textContent=mode==='card'?'编号 稀有度 中文卡名 @Custom':'保留原登记，不修改版本表';
+}
+function changeMode(value){
+  const prior=card;mode=value;invalidate();clearTimeout(analyzeTimer);$('notice').className='notice hidden';
+  for(const [id,key] of [['modeCard','card'],['modeScript','script'],['modeArt','art']])$(id).classList.toggle('selected',value===key);
+  $('scriptPanel').classList.toggle('hidden',value==='art');$('artPanel').classList.toggle('hidden',value==='script');
+  $('existingPane').classList.toggle('hidden',value==='card');$('outputArtPath').classList.toggle('hidden',value==='script');$('outputScriptPath').classList.toggle('hidden',value==='art');$('loadExisting').classList.toggle('hidden',value==='art');
+  $('existingTitle').textContent=value==='art'?'选择要替换卡图的已有卡牌':'直接粘贴脚本，即可自动定位原卡';
+  $('existingHint').textContent=value==='art'?'沿用原中文卡名与编号':'按脚本 Name: 精确匹配';
+  $('cardSearch').placeholder=value==='art'?'输入中文卡名筛选，或填写完整卡名…':'可选：输入中文卡名筛选…';
+  $('existingHelp').textContent=value==='art'?'无需上传脚本。选择已有卡或填写完整卡名，再上传图片 / 提供 URL。只替换 PH01 卡图，推送前备份旧图；脚本与版本登记保持原样。':'无需先搜索或选择卡牌。直接在下方粘贴 / 导入新脚本，程序从 Name: 自动查找已有卡，只替换脚本；图片与卡名登记均保持原样。';
+  $('registrationHelp').textContent=value==='art'?'只替换卡图，不生成脚本或版本表。远端旧图已变化时停止推送。':value==='script'?'本次只替换已有脚本，保留原图片与版本登记。':'新增编号按现有最大值递增，追加到卡牌列表末尾。';
+  $('modeHint').textContent=value==='art'?'仅替换卡图 · 保留脚本与卡名登记':value==='script'?'仅替换脚本 · 保留图片与卡名登记':'脚本 + 卡图 + 版本登记';
+  $('stepOne').textContent=value==='art'?'选择已有卡牌':'导入脚本';
+  $('actionTitle').textContent=value==='art'?'替换已有卡图':'保存你的作品';
+  $('actionHint').textContent=value==='art'?'选择目标卡牌与新原画，再检查替换。':'先检查内容，再选择保存方式。';
+  $('check').textContent=value==='art'?'检查卡图替换':'检查脚本与输出文件';
+  filterCards();if(value==='art'&&prior?.existing&&!$('existingCard').value)$('existingCard').value=prior.name;
+  resetCard();analyze();
+}
+$('modeCard').onclick=()=>changeMode('card');$('modeScript').onclick=()=>changeMode('script');$('modeArt').onclick=()=>changeMode('art');
+$('cardSearch').oninput=()=>{filterCards();if(mode==='art'){invalidate();clearTimeout(analyzeTimer);analyzeTimer=setTimeout(analyze,250);}};
+$('existingCard').onchange=()=>{invalidate();if(mode==='art')analyze();};
 $('loadExisting').onclick=()=>run(async()=>{const result=await api('load-existing',{name:$('existingCard').value,...githubSettings()});renderState(result.state);$('existingCard').value=result.name;$('script').value=result.script;scriptChanged();notice('已载入 '+result.name+'\n原位置：'+result.path);},'正在读取原脚本…');
 async function analyze(){
-  const current=revision,text=$('script').value;
+  const current=revision,text=$('script').value,name=$('existingCard').value||$('cardSearch').value.trim();
   $('lineCount').textContent=(text?text.split('\n').length:0)+' 行';
-  if(!text.trim())return;
-  try{const info=await api('analyze',{script:text});if(current===revision)renderCard(info);}
-  catch(e){if(current===revision){card=null;$('scriptStatus').textContent=e.message;}}
+  if(mode==='art'?!name:!text.trim()){resetCard();return;}
+  try{const info=await api('analyze',{script:text,name,mode});if(current===revision)renderCard(info);}
+  catch(e){if(current===revision){resetCard();$('scriptStatus').textContent=e.message;}}
 }
 function scriptChanged(){invalidate();clearTimeout(analyzeTimer);analyzeTimer=setTimeout(analyze,250);}
 $('script').addEventListener('input',scriptChanged);
@@ -117,10 +142,10 @@ for(const id of ['cropX','cropY','cropZoom'])$(id).oninput=()=>{invalidate();dra
 
 $('check').onclick=()=>run(async()=>{
   const current=revision;
-  const result=await api('preview',{script:$('script').value,image:imageData,crop:cropSettings(),mode,...githubSettings()});
+  const result=await api('preview',{script:$('script').value,name:$('existingCard').value||$('cardSearch').value.trim(),image:imageData,crop:cropSettings(),mode,...githubSettings()});
   if(current!==revision){notice('内容已变更，请重新检查。');return;}
   draft=result;renderCard(result.card);if(result.image)$('previewArt').src=result.image;$('readyBadge').textContent='✓ 可以保存';$('readyBadge').className='badge ready';
-  notice(mode==='script'?`脚本检查通过：${result.card.name}\n${result.card.originalPath} → ${result.card.scriptPath}\n只替换脚本，不生成图片、不执行卡名登记。`:`检查通过：${result.card.name} · ${result.card.colorLabel} · ${labels[result.card.rarity]}\n登记：${result.card.editionRow}`);
+  notice(mode==='art'?`卡图替换检查通过：${result.card.name}\n${result.card.artPath}\n只替换卡图，保留脚本与卡名登记。`:mode==='script'?`脚本检查通过：${result.card.name}\n${result.card.originalPath} → ${result.card.scriptPath}\n只替换脚本，不生成图片、不执行卡名登记。`:`检查通过：${result.card.name} · ${result.card.colorLabel} · ${labels[result.card.rarity]}\n登记：${result.card.editionRow}`);
   $('actionTitle').textContent='卡牌已准备好';$('actionHint').textContent='可保存到本地，或预览本次 GitHub 提交。';
 },'正在校验脚本、图片和编号…');
 async function save(push){
@@ -135,7 +160,7 @@ async function prepare(savedId){
   const result=await api('prepare',{savedId,...githubSettings()});plan=result;
   $('publishTarget').textContent=result.repo+' / '+result.branch+' · 基于 '+result.base.slice(0,8);
   $('publishRow').textContent=result.editionRow;
-  $('renumberNotice').textContent=result.mode==='script'?'仅提交脚本与必要发布校验信息，图片和版本表不变。':result.oldNumber!==result.number?`远端编号已更新，本次将使用 #${result.number}，发布成功后本地文件同步更新。`:'收藏编号已根据最新 GitHub 版本表核对。';
+  $('renumberNotice').textContent=result.mode==='art'?'仅提交目标卡图。旧图已备份到本地 previous 文件夹；脚本和版本表不变。':result.mode==='script'?'仅提交本次脚本修改，图片和版本表不变。':result.oldNumber!==result.number?`远端编号已更新，本次将使用 #${result.number}，发布成功后本地文件同步更新。`:'本次只提交脚本、图片和版本登记；收藏编号已根据最新 GitHub 版本表核对。';
   const list=$('publishFiles');list.replaceChildren();
   for(const file of result.files){const row=document.createElement('div');row.className='publish-file';const action=document.createElement('span');action.textContent=file.action;row.append(action,document.createTextNode(file.path));list.append(row);}
   $('publishError').className='notice hidden';$('publishDialog').showModal();

@@ -32,6 +32,7 @@ class FakeGitHub(GitHub):
         self.files = {
             EDITION_PATH: b'[metadata]\nCode=PH01\n[cards]\n199 R Old @Custom\n200\n205\n\n[tokens]\nx\n',
             MANIFEST_PATH: (digest(b'engine') + ' *engine.jar\n').encode(),
+            'app/BUILD-ID.txt': b'keep-original-build-id\n',
             'release.json': b'{"buildId":"old","engineSourceCommit":"keep-me","validation":{"tests":123}}',
             'app/engine.jar': b'engine', 'unrelated.txt': b'unchanged'}
         self.current = 'base'
@@ -55,6 +56,7 @@ class FakeGitHub(GitHub):
                 name=next(s[5:].strip() for s in content.decode().splitlines() if s.startswith('Name:'))
                 cards.append({'name':name,'path':path,'sha':gitsha(content)})
         return {'commit': self.current, 'tree': self.tree(self.current), 'edition': self.files[EDITION_PATH],
+                'arts': {p: gitsha(v) for p, v in self.files.items() if p.startswith(ART_ROOT) and p.endswith('.artcrop.jpg')},
                 'cards': cards, 'repo': self.repo, 'branch': self.branch}
 
     def request(self, method, path, data=None):
@@ -125,19 +127,16 @@ class WorkflowTests(unittest.TestCase):
         self.save()
         with self.assertRaises(StudioError):self.service.save({'draftId':preview['draftId']})
 
-    def test_remote_publish_is_atomic_and_manifest_is_consistent(self):
-        saved=self.save();fake=FakeGitHub()
+    def test_remote_publish_is_atomic_and_only_changes_card_files(self):
+        saved=self.save();fake=FakeGitHub();before=fake.files.copy()
         with patch('studio.service.GitHub',return_value=fake):
             plan=self.service.prepare({'savedId':saved['savedId']})
         result=self.service.publish({'planId':plan['planId']})
         self.assertEqual(result['commit'],'new-commit')
         self.assertEqual(fake.files['unrelated.txt'],b'unchanged')
         self.assertEqual(fake.files['app/engine.jar'],b'engine')
-        release=json.loads(fake.files['release.json'])
-        self.assertEqual(release['engineSourceCommit'],'keep-me')
-        for line in fake.files[MANIFEST_PATH].decode().splitlines():
-            sha,path=line.split(' *',1)
-            self.assertEqual(sha,digest(fake.files['app/'+path]))
+        self.assertEqual({p for p in before.keys()|fake.files.keys() if before.get(p)!=fake.files.get(p)},
+                         {CARD_ROOT+'multicolor/验证新卡.txt',ART_ROOT+'验证新卡.artcrop.jpg',EDITION_PATH})
         self.assertEqual(sum(1 for method,path,_ in fake.calls if path.startswith('git/refs/heads/')),1)
 
     def test_remote_advance_during_publish_never_forces(self):
@@ -209,6 +208,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertFalse((Path(saved['folder'])/'original').exists())
         with patch('studio.service.GitHub',return_value=fake):plan=self.service.prepare({'savedId':saved['savedId']})
         paths=[f['path'] for f in plan['files']]
+        self.assertEqual(set(paths),{old,CARD_ROOT+'multicolor/验证新卡.txt'})
         self.assertNotIn(EDITION_PATH,paths)
         self.assertFalse(any('/pictures/' in p for p in paths))
         self.service.publish({'planId':plan['planId']})
@@ -235,6 +235,114 @@ class WorkflowTests(unittest.TestCase):
         fake.commit_files['base']=fake.files.copy()
         with patch('studio.service.GitHub',return_value=fake),self.assertRaises(StudioError):
             self.service.prepare({'savedId':saved['savedId']})
+
+    def save_art(self, crop=False):
+        preview=self.service.preview({'mode':'art','name':'验证新卡','image':self.image,'crop':{'enabled':crop}})
+        return self.service.save({'draftId':preview['draftId'],'saveRoot':self.temp.name})
+
+    def test_art_only_local_save_needs_no_script_and_preserves_number(self):
+        fake,old=self.setup_existing();edition=self.service.edition;catalog=copy.deepcopy(self.service.catalog)
+        for crop in (False,True):
+            saved=self.save_art(crop);root=Path(saved['folder'])
+            self.assertEqual(saved['number'],'199')
+            self.assertEqual(set(saved['paths']),{ART_ROOT+'验证新卡.artcrop.jpg','original/验证新卡.png'})
+            self.assertFalse((root/old).exists());self.assertFalse((root/EDITION_PATH).exists())
+            with Image.open(root/(ART_ROOT+'验证新卡.artcrop.jpg')) as jpg:
+                self.assertEqual(jpg.format,'JPEG');self.assertEqual(jpg.mode,'RGB')
+                if not crop:self.assertEqual(jpg.size,(200,400))
+            self.assertEqual(self.service.edition,edition)
+            self.assertEqual(self.service.catalog,catalog)
+            self.assertNotIn('script',self.service.record(saved['savedId'])['card'])
+
+    def test_art_publish_only_changes_target_image(self):
+        fake,old=self.setup_existing();before=fake.files.copy();saved=self.save_art()
+        with patch('studio.service.GitHub',return_value=fake):plan=self.service.prepare({'savedId':saved['savedId']})
+        art=ART_ROOT+'验证新卡.artcrop.jpg'
+        expected={art}
+        self.assertEqual({f['path'] for f in plan['files']},expected)
+        self.assertEqual((Path(saved['folder'])/'previous/验证新卡.artcrop.jpg').read_bytes(),before[art])
+        self.service.publish({'planId':plan['planId']})
+        self.assertEqual(fake.files[old],before[old]);self.assertEqual(fake.files[EDITION_PATH],before[EDITION_PATH])
+        self.assertNotEqual(fake.files[art],before[art])
+        self.assertEqual({p for p in before.keys()|fake.files.keys() if before.get(p)!=fake.files.get(p)},expected)
+        self.assertEqual(self.service.catalog['arts'][art],gitsha(fake.files[art]))
+        self.assertEqual(next(c for c in self.service.catalog['cards'] if c['name']=='验证新卡')['sha'],gitsha(before[old]))
+        self.assertFalse(any(p.startswith(('previous/','original/')) for p in fake.files))
+
+    def test_art_replacement_rejects_changed_or_deleted_remote_art(self):
+        for removed in (False,True):
+            fake,_=self.setup_existing();saved=self.save_art();art=ART_ROOT+'验证新卡.artcrop.jpg'
+            if removed:del fake.files[art]
+            else:fake.files[art]=b'new remote art'
+            fake.commit_files['base']=fake.files.copy()
+            with patch('studio.service.GitHub',return_value=fake),self.assertRaisesRegex(StudioError,'旧卡图已被修改或删除'):
+                self.service.prepare({'savedId':saved['savedId']})
+
+    def test_art_replacement_keeps_concurrent_script_edit(self):
+        fake,old=self.setup_existing();saved=self.save_art()
+        fake.files[old]+=b'\n# unrelated script edit';fake.commit_files['base']=fake.files.copy();fake.tree_files['tree-base']=fake.files.copy()
+        expected=fake.files[old]
+        with patch('studio.service.GitHub',return_value=fake):plan=self.service.prepare({'savedId':saved['savedId']})
+        self.service.publish({'planId':plan['planId']})
+        self.assertEqual(fake.files[old],expected)
+
+    def test_art_replacement_requires_existing_unique_card_and_image(self):
+        fake,old=self.setup_existing()
+        with self.assertRaises(StudioError):self.service.preview({'mode':'art','name':'不存在的卡','image':self.image})
+        self.service.catalog['cards'].append({**self.service.catalog['cards'][0],'path':CARD_ROOT+'blue/duplicate.txt'})
+        with self.assertRaises(StudioError):self.save_art()
+        self.setup_existing();del fake.files[ART_ROOT+'验证新卡.artcrop.jpg'];fake.commit_files['base']=fake.files.copy()
+        self.service.catalog['arts']={}
+        with patch('studio.service.GitHub',return_value=fake),self.assertRaisesRegex(StudioError,'没有可替换'):
+            self.save_art()
+
+    def test_art_preview_ignores_script_input_and_rejects_tampered_jpeg(self):
+        fake,_=self.setup_existing()
+        preview=self.service.preview({'mode':'art','name':'验证新卡','script':'invalid script','image':self.image})
+        self.assertEqual(preview['paths'],[ART_ROOT+'验证新卡.artcrop.jpg'])
+        saved=self.service.save({'draftId':preview['draftId'],'saveRoot':self.temp.name})
+        (Path(saved['folder'])/(ART_ROOT+'验证新卡.artcrop.jpg')).write_bytes(b'tampered')
+        with patch('studio.service.GitHub',return_value=fake),self.assertRaisesRegex(StudioError,'外部修改'):
+            self.service.prepare({'savedId':saved['savedId']})
+
+    def test_art_replacement_rejects_wrong_repo_and_concurrent_branch_update(self):
+        fake,_=self.setup_existing();saved=self.save_art()
+        with patch('studio.service.GitHub',return_value=fake),self.assertRaisesRegex(StudioError,'不同仓库'):
+            self.service.prepare({'savedId':saved['savedId'],'repo':'Other/repository'})
+        with patch('studio.service.GitHub',return_value=fake):plan=self.service.prepare({'savedId':saved['savedId']})
+        fake.advance_on_patch=True
+        with self.assertRaises(StudioError):self.service.publish({'planId':plan['planId']})
+        self.assertEqual(fake.files[ART_ROOT+'验证新卡.artcrop.jpg'],b'untouched original art')
+
+    def test_all_modes_reject_engine_and_updater_files_at_publish(self):
+        forbidden=('app/engine.jar','app/BUILD-ID.txt','release.json',MANIFEST_PATH,'bootstrap.ps1')
+        for mode in ('card','script','art'):
+            if mode=='card':
+                # The test service has an empty catalog for a genuinely new card.
+                self.service=Studio(APP,Path(self.temp.name)/('scope-'+mode))
+                saved=self.save();fake=FakeGitHub()
+            else:
+                fake,_=self.setup_existing()
+                if mode=='art':saved=self.save_art()
+                else:
+                    preview=self.service.preview({'mode':'script','script':self.request['script']})
+                    saved=self.service.save({'draftId':preview['draftId'],'saveRoot':self.temp.name})
+            with patch('studio.service.GitHub',return_value=fake):plan=self.service.prepare({'savedId':saved['savedId']})
+            for path in forbidden:
+                self.service.plans[plan['planId']]['changes'][path]=b'forbidden mutation'
+                with self.assertRaisesRegex(StudioError,'不允许的文件'):
+                    self.service.publish({'planId':plan['planId']})
+                del self.service.plans[plan['planId']]['changes'][path]
+            self.assertEqual(fake.calls,[])
+
+    def test_card_publish_does_not_require_release_or_manifest_files(self):
+        saved=self.save();fake=FakeGitHub()
+        for path in ('app/BUILD-ID.txt','release.json',MANIFEST_PATH):del fake.files[path]
+        fake.commit_files['base']=fake.files.copy();fake.tree_files['tree-base']=fake.files.copy()
+        with patch('studio.service.GitHub',return_value=fake):plan=self.service.prepare({'savedId':saved['savedId']})
+        self.service.publish({'planId':plan['planId']})
+        self.assertNotIn('release.json',fake.files)
+        self.assertNotIn(MANIFEST_PATH,fake.files)
 
 
 if __name__ == '__main__':unittest.main()

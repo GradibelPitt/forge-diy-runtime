@@ -14,7 +14,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from .core import CARD_ROOT, EDITION_PATH, MANIFEST_PATH, StudioError, update_manifest
+from .core import ART_ROOT, CARD_ROOT, EDITION_PATH, StudioError
 
 DEFAULT_REPO = 'GradibelPitt/forge-diy-runtime'
 
@@ -113,7 +113,8 @@ class GitHub:
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
             cards = list(pool.map(inspect, scripts))
-        return {'commit': commit, 'repo': self.repo, 'branch': self.branch, 'cards': cards, 'tree': tree, 'edition': edition}
+        return {'commit': commit, 'repo': self.repo, 'branch': self.branch, 'cards': cards, 'tree': tree, 'edition': edition,
+                'arts': {path: item['sha'] for path, item in tree.items() if path.startswith(ART_ROOT) and path.endswith('.artcrop.jpg')}}
 
     def publish(self, base, changes, message, on_created=None):
         if not self.token:

@@ -2,7 +2,7 @@
 
 - macOS ARM64: system Python 3.9.6, isolated Pillow 11.3.0, Google Chrome 153.0.8010.37.
 - The upper-level `.command --check` entry created a fresh environment, installed the dependency and passed.
-- 42 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, SHA-256 updates, HTTP session/origin protection, and the Wiki crawler cases below.
+- 51 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only and artwork-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, local hashes, HTTP session/origin protection, and the Wiki crawler cases below.
 - Frontend JavaScript syntax check passed.
 - The desktop copy has official GitHub CLI 2.101.0 for macOS ARM64, verified against its official SHA-256 checksum. Authentication data and the CLI binary are local-only and excluded from the repository.
 - Read 207 current repository scripts: 206 parsed; the existing `灵魂之火.txt` has `Colors:red black`, which is rejected with a clear diagnostic. Current Forge's comma-separated `Colors` reader does not interpret that value as a two-color list. Existing repository card files were not edited.
@@ -19,3 +19,16 @@
 - Live Wiki.gg media import returned the same 1278×1038 original. The Earthen Scales article API identifies the full artwork; framed cards, resource icons and logos are excluded when full artwork is present.
 - Imports do not publish cards or alter edition data. Original download and optional Forge crop remain separate.
 - The updated desktop launcher was run in the unrestricted environment and successfully opened Google Chrome at `127.0.0.1:8765`; the supplied Huiji media URL imported through the UI and showed the 1278×1038 original dimensions.
+
+## Existing artwork replacement
+
+- Added a separate mode requiring an existing card name and new image, with no script input. The offline index includes 174 original-art Git blob hashes.
+- Seven additional tests verify cropped/uncropped JPEG exports, unchanged scripts and edition bytes, exact previous-art backup, rejection of changed/deleted art, unknown or ambiguous names, missing images, local file tampering, repository mismatch and concurrent branch updates. Concurrent script edits are preserved.
+- Publishing simulation changes only the target image. New-input and old-art backups stay local.
+- Chrome UI test used an isolated data directory: entering the existing Chinese name without a script, importing the Huiji media URL, disabling crop, checking and saving produced the correctly named 1278×1038 JPEG with the existing number 77. Live read-only publication preview verifies the target image and backs up the previous image. The test replacement was not published.
+
+## Card publication boundary
+
+- New-card commits contain exactly script, JPG and edition changes. Script edits contain only affected scripts; artwork replacement contains only the target JPG.
+- Additional tests inject JAR, BUILD-ID, release.json, manifest and updater files into each mode's plan and verify rejection before any Git write. Another test confirms card publishing does not require release or manifest files.
+- Existing engine/updater files remain byte-for-byte unchanged. Git blob verification is read-only; it does not update the repository's manifest.
