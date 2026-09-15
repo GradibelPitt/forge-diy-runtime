@@ -70,6 +70,116 @@ verify_jar() {
     [[ $(printf '%s' "$actual" | tr 'A-F' 'a-f') == $(printf '%s' "$expected" | tr 'A-F' 'a-f') ]]
 }
 
+safe_update_path() {
+    local path=$1 parent
+    case "/$path/" in
+        *'/../'*|*'/./'*|*'//'*|*$'\n'*|*$'\r'*) return 1 ;;
+    esac
+    [[ -n "$path" && "$path" != .runtime-commit && "$path" != .git && "$path" != .git/* ]] || return 1
+    parent="$REPO_ROOT/$path"
+    [[ ! -d "$parent" ]] || return 1
+    while [[ "$parent" != "$REPO_ROOT" ]]; do
+        [[ ! -L "$parent" ]] || return 1
+        parent=${parent%/*}
+    done
+}
+
+restore_incremental_update() {
+    local path target
+    while IFS= read -r path; do
+        target="$REPO_ROOT/$path"
+        if [[ -f "$SETUP_DIR/delta/old/$path" ]]; then
+            mkdir -p "${target%/*}" || return 1
+            cp -p "$SETUP_DIR/delta/old/$path" "$target" || return 1
+        else
+            rm -f "$target" || return 1
+        fi
+    done < "$SETUP_DIR/delta/affected"
+    DELTA_APPLYING=0
+}
+
+update_incrementally() {
+    local current=$1 sha=$2 comparison="$SETUP_DIR/compare.json" delta="$SETUP_DIR/delta"
+    local i=0 path status previous url expected actual size target jar_changed=0
+    local paths=() statuses=()
+    download "https://api.github.com/repos/GradibelPitt/forge-diy-runtime/compare/$current...$sha?per_page=1" "$comparison" || return 1
+    # GitHub returns at most 300 changed files, even with pagination. A truncated
+    # list or rewritten history requires a full snapshot, never a partial patch.
+    [[ $(json_value "$comparison" status) == ahead &&
+       $(json_value "$comparison" merge_base_commit.sha) == "$current" ]] || return 2
+    plutil -extract files json -o /dev/null "$comparison" 2>/dev/null || return 2
+    if json_value "$comparison" files.299.filename >/dev/null; then return 2; fi
+    mkdir -p "$delta/new" "$delta/old" || return 1
+    : > "$delta/affected"
+    while path=$(json_value "$comparison" "files.$i.filename"); do
+        safe_update_path "$path" || return 2
+        status=$(json_value "$comparison" "files.$i.status") || return 2
+        case $status in
+            added|modified|removed|renamed) ;;
+            *) return 2 ;;
+        esac
+        paths+=("$path"); statuses+=("$status")
+        printf '%s\n' "$path" >> "$delta/affected"
+        if [[ "$status" == renamed ]]; then
+            previous=$(json_value "$comparison" "files.$i.previous_filename") || return 2
+            safe_update_path "$previous" || return 2
+            printf '%s\n' "$previous" >> "$delta/affected"
+        fi
+        case $path in app/*-jar-with-dependencies.jar) jar_changed=1 ;; esac
+        i=$((i + 1))
+    done
+    step "正在增量更新 ${i} 个文件..."
+    # Stage only changed files. Pin every URL to the target commit and verify
+    # its Git blob hash; leave the installed files untouched until all arrive.
+    for ((i=0; i<${#paths[@]}; i++)); do
+        path=${paths[i]}
+        [[ "${statuses[i]}" != removed ]] || continue
+        url=$(json_value "$comparison" "files.$i.raw_url") || return 1
+        case $url in "https://github.com/GradibelPitt/forge-diy-runtime/raw/$sha/"*) ;;
+            *) fail '增量文件的下载地址无效。'; return 1 ;;
+        esac
+        url="https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/${url#*/raw/}"
+        expected=$(json_value "$comparison" "files.$i.sha") || return 1
+        [[ "$expected" =~ ^[[:xdigit:]]{40}$ ]] || return 1
+        target="$delta/new/$path"
+        mkdir -p "${target%/*}" || return 1
+        download "$url" "$target" || return 1
+        size=$(stat -f %z "$target") || return 1
+        actual=$({ printf 'blob %s\0' "$size"; cat "$target"; } | shasum -a 1) || return 1
+        [[ "${actual%% *}" == "$expected" ]] || { fail "增量文件校验失败：$path"; return 1; }
+        if [[ -x "$REPO_ROOT/$path" || "$path" == *.command || "$path" == *.sh ]]; then
+            chmod +x "$target" || return 1
+        fi
+    done
+    if [[ -f "$delta/new/release.json" ]] &&
+       [[ $(json_value "$delta/new/release.json" validation.jarSha256) != $(json_value "$REPO_ROOT/release.json" validation.jarSha256) ]]; then
+        jar_changed=1
+    fi
+    printf '%s\n' .runtime-commit >> "$delta/affected"
+    LC_ALL=C sort -u "$delta/affected" -o "$delta/affected" || return 1
+    while IFS= read -r path; do
+        if [[ -f "$REPO_ROOT/$path" ]]; then
+            target="$delta/old/$path"
+            mkdir -p "${target%/*}" || return 1
+            cp -p "$REPO_ROOT/$path" "$target" || return 1
+        fi
+    done < "$delta/affected"
+    DELTA_APPLYING=1
+    # Remove renamed/deleted paths first, then move staged files into place.
+    while IFS= read -r path; do rm -f "$REPO_ROOT/$path" || return 1; done < "$delta/affected"
+    for ((i=0; i<${#paths[@]}; i++)); do
+        [[ "${statuses[i]}" != removed ]] || continue
+        path=${paths[i]}; target="$REPO_ROOT/$path"
+        mkdir -p "${target%/*}" || return 1
+        mv "$delta/new/$path" "$target" || return 1
+    done
+    validate_runtime "$REPO_ROOT" || { fail '增量更新后的运行文件不完整，将恢复原文件。'; return 1; }
+    if [[ $jar_changed == 1 ]]; then verify_jar "$REPO_ROOT" || return 1; fi
+    printf '%s\n' "$sha" > "$REPO_ROOT/.runtime-commit" || return 1
+    DELTA_APPLYING=0
+    rm -rf "$delta" || return 1
+}
+
 update_runtime() {
     local sha current='' staged
     if [[ $OFFLINE == 1 ]]; then
@@ -91,7 +201,17 @@ update_runtime() {
     if [[ -f "$REPO_ROOT/.runtime-commit" ]]; then current=$(cat "$REPO_ROOT/.runtime-commit"); fi
     if [[ "$current" == "$sha" ]] && validate_runtime "$REPO_ROOT"; then return; fi
 
-    step '正在下载完整运行包（首次安装或版本更新可能需要数分钟）...'
+    if [[ "$current" =~ ^[[:xdigit:]]{40}$ ]] && validate_runtime "$REPO_ROOT"; then
+        local result=0
+        update_incrementally "$current" "$sha" || result=$?
+        case $result in
+            0) return ;;
+            2) step '本次变更范围过大或历史已重写，使用完整运行包更新。' ;;
+            *) fail '增量更新未完成，请检查网络后重试。'; return 1 ;;
+        esac
+    fi
+
+    step '正在下载完整运行包（首次安装、大范围更新或修复可能需要数分钟）...'
     download "https://codeload.github.com/GradibelPitt/forge-diy-runtime/zip/$sha" "$SETUP_DIR/runtime.zip" || return 1
     ditto -x -k "$SETUP_DIR/runtime.zip" "$SETUP_DIR/unpacked" || return 1
     staged="$SETUP_DIR/unpacked/forge-diy-runtime-$sha"
@@ -261,6 +381,9 @@ cleanup() {
     if [[ -n ${GAME_PID:-} ]]; then kill "$GAME_PID" 2>/dev/null || true; wait "$GAME_PID" 2>/dev/null || true; fi
     if [[ -n ${SETUP_DIR:-} && -d "$SETUP_DIR" ]]; then
         local restore_ok=1
+        if [[ ${DELTA_APPLYING:-0} == 1 ]]; then
+            restore_incremental_update || restore_ok=0
+        fi
         if [[ -d "$SETUP_DIR/previous-repo" && ! -e "$REPO_ROOT" ]]; then
             mv "$SETUP_DIR/previous-repo" "$REPO_ROOT" || restore_ok=0
         fi

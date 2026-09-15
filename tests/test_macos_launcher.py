@@ -9,6 +9,7 @@ import sys
 import tarfile
 import tempfile
 import unittest
+from urllib.parse import quote
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,6 +61,9 @@ download() {
     printf '%s\\n' "$1" >> "$TEST_ROOT/requests"
     case $1 in
         */commits/main) [[ ${FAIL_METADATA:-0} != 1 ]] && cp "$TEST_ROOT/mock/commit.json" "$2" ;;
+        */compare/*) cp "$TEST_ROOT/mock/compare.json" "$2" ;;
+        https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/*)
+            [[ ${FAIL_DELTA:-0} != 1 ]] && cp "$TEST_ROOT/mock/blobs/${1##*/}" "$2" ;;
         */zip/*) [[ $1 == */aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ]] && cp "$TEST_ROOT/mock/runtime.zip" "$2" ;;
         *api.adoptium.net*) cp "$TEST_ROOT/mock/java.json" "$2" ;;
         https://github.com/adoptium/*) cp "$TEST_ROOT/mock/java.tar.gz" "$2" ;;
@@ -97,10 +101,34 @@ download() {
         if corrupt_build:
             self.write(root / 'app/BUILD-ID.txt', 'mismatched build')
         self.write(self.mock / 'commit.json', json.dumps(dict(sha=SHA)))
+        self.write(self.mock / 'compare.json', json.dumps(dict(status='diverged', files=[])))
         with zipfile.ZipFile(self.mock / 'runtime.zip', 'w') as z:
             for file in root.rglob('*'):
                 if file.is_file():
                     z.write(file, file.relative_to(self.mock))
+
+    def delta(self, changes, current='b' * 40, sha=SHA):
+        """Changes are (path, bytes or text or None for deletion, previous name)."""
+        self.write(self.repo / '.runtime-commit', current)
+        self.write(self.mock / 'commit.json', json.dumps(dict(sha=sha)))
+        files = []
+        for path, content, previous in changes:
+            status = 'removed' if content is None else 'renamed' if previous else 'modified'
+            file = dict(filename=path, status=status)
+            if previous:
+                file['previous_filename'] = previous
+            if content is not None:
+                data = content.encode() if isinstance(content, str) else content
+                encoded = quote(path, safe='')
+                target = self.mock / 'blobs' / encoded
+                target.parent.mkdir(exist_ok=True)
+                target.write_bytes(data)
+                file['raw_url'] = f'https://github.com/GradibelPitt/forge-diy-runtime/raw/{sha}/{encoded}'
+                file['sha'] = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+            files.append(file)
+        comparison = dict(status='ahead', merge_base_commit=dict(sha=current), files=files)
+        self.write(self.mock / 'compare.json', json.dumps(comparison))
+        return comparison
 
     def run_bash(self, code, success=True, **env):
         result = subprocess.run(['/bin/bash', '-c', self.prefix + '\n' + code], env=dict(self.env, **env),
@@ -190,6 +218,91 @@ download() {
         lock.mkdir(parents=True)
         self.run_bash('main --offline', success=False)
         self.assertTrue(lock.is_dir())
+
+    def test_small_update_downloads_only_changes_and_reuses_jar(self):
+        app = self.runtime(self.repo)
+        jar = app / 'forge-fixture-jar-with-dependencies.jar'
+        original_jar = jar.stat()
+        self.delta([('app/managed/custom/cards/blue/测试.txt', 'Name:Updated', None),
+                    ('app/managed/custom/cards/pictures/PH01/新 图.jpg', b'new image', None)])
+        self.run_bash('verify_jar() { return 91; }; main --install-only')
+        self.assertEqual((app / 'managed/custom/cards/blue/测试.txt').read_text(), 'Name:Updated')
+        self.assertEqual((self.root / 'profile/custom/cards/blue/测试.txt').read_text(), 'Name:Updated')
+        self.assertEqual(jar.stat().st_ino, original_jar.st_ino)
+        self.assertEqual(jar.stat().st_mtime_ns, original_jar.st_mtime_ns)
+        self.assertEqual((self.repo / '.runtime-commit').read_text().strip(), SHA)
+        self.run_bash('main --install-only')
+        requests = (self.root / 'requests').read_text()
+        self.assertEqual(requests.count('/compare/'), 1)
+        self.assertEqual(requests.count('raw.githubusercontent.com'), 2)
+        self.assertNotIn('/zip/', requests)
+        self.assertFalse(list(self.install.glob('.macos-setup.*')))
+
+    def test_delta_handles_rename_delete_and_executable(self):
+        self.runtime(self.repo)
+        self.write(self.repo / 'old name.txt', 'old')
+        self.write(self.repo / 'remove.txt', 'removed')
+        self.write(self.repo / 'starter/helper.command', '#!/bin/bash\necho old\n')
+        self.delta([('新名字.txt', 'renamed', 'old name.txt'), ('remove.txt', None, None),
+                    ('starter/helper.command', '#!/bin/bash\necho new\n', None)])
+        self.run_bash('main --install-only')
+        self.assertFalse((self.repo / 'old name.txt').exists())
+        self.assertFalse((self.repo / 'remove.txt').exists())
+        self.assertEqual((self.repo / '新名字.txt').read_text(), 'renamed')
+        self.assertTrue(os.access(self.repo / 'starter/helper.command', os.X_OK))
+
+    def test_delta_download_failure_does_not_trigger_full_download(self):
+        self.runtime(self.repo)
+        self.delta([('README.md', 'new readme', None)])
+        self.run_bash('main --install-only', success=False, FAIL_DELTA='1')
+        self.assertEqual((self.repo / '.runtime-commit').read_text(), 'b' * 40)
+        self.assertFalse((self.repo / 'README.md').exists())
+        self.assertNotIn('/zip/', (self.root / 'requests').read_text())
+
+    def test_delta_bad_blob_preserves_installed_files(self):
+        self.runtime(self.repo)
+        self.delta([('README.md', 'new readme', None)])
+        (self.mock / 'blobs/README.md').write_text('corrupt download')
+        self.run_bash('main --install-only', success=False)
+        self.assertEqual((self.repo / '.runtime-commit').read_text(), 'b' * 40)
+        self.assertFalse((self.repo / 'README.md').exists())
+
+    def test_failed_delta_validation_restores_changed_files(self):
+        self.runtime(self.repo)
+        self.write(self.repo / 'deleted.txt', 'restore this')
+        self.delta([('app/BUILD-ID.txt', 'wrong build', None),
+                    ('deleted.txt', None, None), ('new.txt', 'new', None)])
+        self.run_bash('main --install-only', success=False)
+        self.assertEqual((self.repo / 'app/BUILD-ID.txt').read_text(), 'fixture-build\n')
+        self.assertEqual((self.repo / 'deleted.txt').read_text(), 'restore this')
+        self.assertFalse((self.repo / 'new.txt').exists())
+        self.assertEqual((self.repo / '.runtime-commit').read_text(), 'b' * 40)
+
+    def test_changed_jar_is_verified_and_replaced(self):
+        app = self.runtime(self.repo)
+        jar = app / 'forge-fixture-jar-with-dependencies.jar'
+        updated = jar.read_bytes() + b'new version'
+        release = json.loads((self.repo / 'release.json').read_text())
+        release['validation']['jarSha256'] = hashlib.sha256(updated).hexdigest()
+        self.delta([('app/' + jar.name, updated, None), ('release.json', json.dumps(release), None)])
+        self.run_bash('main --install-only')
+        self.assertEqual(jar.read_bytes(), updated)
+        # A second update with an incorrect release hash must restore this JAR.
+        self.delta([('app/' + jar.name, b'bad jar', None)], current=SHA, sha='c' * 40)
+        self.run_bash('main --install-only', success=False)
+        self.assertEqual(jar.read_bytes(), updated)
+        self.assertEqual((self.repo / '.runtime-commit').read_text().strip(), SHA)
+
+    def test_compare_file_limit_falls_back_to_complete_snapshot(self):
+        self.runtime(self.repo)
+        self.archive()
+        comparison = dict(status='ahead', merge_base_commit=dict(sha='b' * 40),
+                          files=[dict(filename=f'{i}.txt', status='modified') for i in range(300)])
+        self.write(self.mock / 'compare.json', json.dumps(comparison))
+        self.write(self.repo / '.runtime-commit', 'b' * 40)
+        self.run_bash('main --install-only')
+        self.assertIn('/zip/', (self.root / 'requests').read_text())
+        self.assertEqual((self.repo / '.runtime-commit').read_text().strip(), SHA)
 
     def test_java_version_and_architecture(self):
         for arch, reported in [('aarch64','aarch64'),('x64','x86_64')]:

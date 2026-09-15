@@ -52,7 +52,7 @@ For licensing and source-distribution information, see [`NOTICE.md`](NOTICE.md) 
 
 ## Run on macOS
 
-Double-click [`starter/一键启动.command`](starter/一键启动.command). This file also works on its own. It downloads the runtime snapshot and a verified Java 17 runtime for Apple Silicon or Intel without requiring Git, Homebrew or Python. Keep Terminal open while the game is running.
+Double-click [`starter/一键启动.command`](starter/一键启动.command). This file also works on its own, without Git, Homebrew, Python or preinstalled Java. The first installation downloads the runtime snapshot and a verified Java 17 runtime for Apple Silicon or Intel. Subsequent updates compare the installed commit with `main` and download only changed files, including removals and renames. Unchanged versions reuse the installation; card-only updates do not rehash the large JAR. Full snapshots are used for first installation, damaged installations, rewritten history, or comparisons reaching GitHub’s 300-file limit. Keep Terminal open while the game is running.
 
 If a standalone download loses its executable permission, run `chmod +x 一键启动.command` once in its directory, then `./一键启动.command`. Options: `--offline`, `--install-only`, `--self-test`. Set `FORGE_DIY_HOME` to customize the installation directory (spaces and Unicode supported; colons are not).
 
