@@ -46,6 +46,7 @@ function Set-ManagedPreferences([string]$PreferencesFile) {
     }
 
     $managed = [ordered]@{
+        UI_LANGUAGE = 'zh-CN'
         UI_DISABLE_CARD_IMAGES = 'false'
         UI_CARD_ART_FORMAT = 'Crop'
         UI_SKIN = 'Warmwood'

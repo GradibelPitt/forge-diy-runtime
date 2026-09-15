@@ -194,6 +194,7 @@ sync_profile() {
     # publisher's managed/profile snapshot or mirror-delete the user's folders.
     awk '
         BEGIN {
+            value["UI_LANGUAGE"]="zh-CN"
             value["UI_DISABLE_CARD_IMAGES"]="false"; value["UI_CARD_ART_FORMAT"]="Crop"
             value["UI_SKIN"]="Warmwood"; value["UI_ENABLE_MUSIC"]="true"
             value["UI_VOL_MUSIC"]="100"; value["UI_CURRENT_MUSIC_SET"]="Pull Up a Chair"
