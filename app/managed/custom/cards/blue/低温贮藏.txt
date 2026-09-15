@@ -1,0 +1,7 @@
+Name:低温贮藏
+ManaCost:1 U
+Types:Instant
+A:SP$ Tap | ValidTgts$ Creature | SubAbility$ DBPump | SpellDescription$ 横置目标生物。它在其操控者的下一个重置步骤中不能重置。你掌握先制。
+SVar:DBPump:DB$ Pump | Defined$ ParentTarget | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | SubAbility$ DBInitiative
+SVar:DBInitiative:DB$ TakeInitiative
+Oracle:横置目标生物。它在其操控者的下一个重置步骤中不能重置。\n你掌握先制。
