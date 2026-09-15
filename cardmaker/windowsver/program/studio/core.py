@@ -113,10 +113,13 @@ def parse_script(script: str) -> dict:
     missing = sorted(set(refs) - definitions)
     if missing:
         raise StudioError('以下异能引用缺少 SVar 定义：' + '、'.join(missing))
+    legendary = 'legendary' in fields['Types'].lower().split()
+    rarity = rarities[0] if rarities else 'M' if legendary else 'C'
+    rarity_source = '脚本明确声明' if rarities else 'Legendary 类型 → Mythic 神话' if legendary else '默认 Common 普通'
     return {'name': name, 'colors': symbols, 'colorLabel': ' / '.join(COLORS[c][1] for c in symbols) or '无色',
             'folder': folder, 'colorBasis': basis, 'manaCost': cost, 'types': fields['Types'],
             'pt': fields.get('PT', ''), 'oracle': fields.get('Oracle', '').replace('\\n', '\n'),
-            'rarity': rarities[0] if rarities else '',
+            'rarity': rarity, 'rarityExplicit': bool(rarities), 'raritySource': rarity_source,
             'chineseName': bool(re.search(r'[\u3400-\u9fff]', name)),
             'scriptPath': CARD_ROOT + folder + '/' + name + '.txt',
             'artPath': ART_ROOT + name + '.artcrop.jpg', 'warnings': notes,

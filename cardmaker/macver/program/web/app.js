@@ -50,6 +50,8 @@ function renderCard(info){
   $('colorValue').title=info.colorBasis;
   $('rarityValue').textContent=info.rarity ? info.rarity+' · '+labels[info.rarity] : '待补充';
   $('rarityValue').title=info.raritySource||'';
+  $('rarity').value=info.rarity||'';
+  $('rarityHint').textContent=(info.raritySource||'自动判断')+' · 可手动修改';
   $('previewName').textContent=info.name;$('previewCost').textContent=info.manaCost==='no cost'?'':info.manaCost;
   $('previewTypes').textContent=info.types;$('previewPT').textContent=info.pt;
   $('previewOracle').textContent=info.oracle||'脚本尚未提供 Oracle 规则文字。';$('previewNumber').textContent='PH01 · '+info.number;
@@ -58,7 +60,7 @@ function renderCard(info){
   $('artPath').textContent='cards/pictures/PH01/'+info.name+'.artcrop.jpg';
   $('scriptPath').textContent='cards/'+info.folder+'/'+info.name+'.txt';
   $('editionRow').textContent=mode!=='card'?`保留 #${info.number} · 不修改版本表`:`${info.number} ${info.rarity||'?'} ${info.name} @Custom`;
-  $('scriptStatus').textContent=info.warnings.length?info.warnings[0]:(info.rarity?'✓ 已识别卡名、颜色与稀有度':'未检测到稀有度，请在下方选择并补写脚本');
+  $('scriptStatus').textContent=info.warnings.length?info.warnings[0]:'✓ 已识别卡名、颜色与稀有度';
   if(mode==='card' && info.existing)notice(`已有同名卡牌「${info.name}」。普通制卡入口禁止覆盖或推送，请切换到「修改已有脚本」或「替换已有卡图」。`,true);
 }
 function filterCards(){
@@ -68,6 +70,8 @@ function filterCards(){
   if([...select.options].some(o=>o.value===previous))select.value=previous;
 }
 function resetCard(){
+  $('rarity').value='';$('rarityHint').textContent='默认普通；Legendary 类型自动神话';
+  $('rarityValue').textContent='—';$('rarityValue').title='';
   card=null;$('previewName').textContent=mode==='art'?'选择已有卡牌':'你的下一张牌';$('previewCost').textContent='';
   $('previewTypes').textContent='卡牌类型';$('previewPT').textContent='';$('previewOracle').textContent=mode==='art'?'选择目标卡牌，再导入要替换的新原画。':'脚本中的规则文字将在此显示。';
   $('previewNumber').textContent='PH01 · —';$('previewRarity').textContent='✧';$('artFilename').textContent='中文卡名.artcrop.jpg';$('artPath').textContent='cards/pictures/PH01/';
@@ -106,7 +110,7 @@ function scriptChanged(){invalidate();clearTimeout(analyzeTimer);analyzeTimer=se
 $('script').addEventListener('input',scriptChanged);
 $('sample').onclick=()=>{if($('script').value.trim()&&!confirm('用示例替换当前编辑器内容？'))return;$('script').value='# Rarity: M\nName:星界守望者\nManaCost:3 G U\nTypes:Legendary Creature Dragon\nPT:4/4\nK:Flying\nK:Vigilance\nOracle:飞行，警戒\n';scriptChanged();};
 $('scriptFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>256000)throw new Error('脚本上限 256 KB。');$('script').value=new TextDecoder('utf-8',{fatal:true}).decode(await file.arrayBuffer());scriptChanged();notice('已导入 '+file.name+'。');}catch(e){notice('无法读取脚本，请使用 UTF-8 文本。',true);}e.target.value='';};
-$('rarity').onchange=()=>{const value=$('rarity').value;if(!value)return;let text=$('script').value;text=text.replace(/^\s*#?\s*(Rarity|稀有度)\s*[:：].*(?:\r?\n|$)/gmi,'');$('script').value='# Rarity: '+value+'\n'+text;scriptChanged();$('rarity').value='';};
+$('rarity').onchange=()=>{const value=$('rarity').value;let text=$('script').value;text=text.replace(/^\s*#?\s*(Rarity|稀有度)\s*[:：].*(?:\r?\n|$)/gmi,'');$('script').value=(value?'# Rarity: '+value+'\n':'')+text;scriptChanged();};
 
 function drawArt(){
   if(!imageObject)return;

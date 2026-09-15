@@ -59,8 +59,27 @@ class CoreTests(unittest.TestCase):
     def test_rarity_read_from_script(self):
         for line, value in [('# Rarity: M', 'M'), ('Rarity:Rare', 'R'), ('# 稀有度：非普通', 'U')]:
             self.assertEqual(parse_script(script(extra=line))['rarity'], value)
-        self.assertEqual(parse_script(script())['rarity'], '')
         with self.assertRaises(StudioError): parse_script(script(extra='# Rarity: M\n# 稀有度:普通'))
+
+    def test_default_rarity_uses_only_legendary_type_token(self):
+        for types, expected in [('Creature Ooze', 'C'), ('Legendary Creature Dragon', 'M'),
+                                ('legendary Artifact', 'M'), ('LEGENDARY\tEnchantment', 'M'),
+                                ('NonLegendary Creature', 'C')]:
+            with self.subTest(types=types):
+                text = script(extra='# Legendary\nK:Legendary', name='Legendary测试').replace('Types:Creature Ooze', 'Types:' + types)
+                info = parse_script(text)
+                self.assertEqual(info['rarity'], expected)
+                self.assertFalse(info['rarityExplicit'])
+                self.assertEqual(info['script'], text)
+        self.assertEqual(parse_script('Name:传奇描述\nTypes:Land\nOracle:Legendary')['rarity'], 'C')
+
+    def test_explicit_rarity_overrides_legendary_default(self):
+        for line, expected in [('# Rarity: C', 'C'), ('Rarity:Rare', 'R'), ('# 稀有度：非普通', 'U')]:
+            with self.subTest(line=line):
+                info = parse_script(script(extra=line).replace('Types:Creature Ooze', 'Types:Legendary Creature Ooze'))
+                self.assertEqual(info['rarity'], expected)
+                self.assertTrue(info['rarityExplicit'])
+        with self.assertRaises(StudioError): parse_script(script(extra='# Rarity: Unknown'))
 
     def test_edition_append_and_duplicates(self):
         edition = Edition(b'[metadata]\nCode=PH01\n[cards]\n8 M A @Custom\n[tokens]\nx\n')

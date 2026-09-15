@@ -106,9 +106,39 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(Edition((root/EDITION_PATH).read_bytes()).suggest('验证新卡'), '206')
         self.assertGreater((root/EDITION_PATH).read_text().index('206 M 验证新卡'), (root/EDITION_PATH).read_text().index('205'))
 
-    def test_new_card_missing_rarity_never_guessed(self):
+    def test_new_card_defaults_to_common_through_save_and_publish(self):
         self.request['script']=self.request['script'].replace('# Rarity: M\n','')
-        with self.assertRaises(StudioError): self.service.preview(self.request)
+        self.assertEqual(self.service.analyze(self.request)['rarity'], 'C')
+        saved=self.save();root=Path(saved['folder'])
+        self.assertIn('206 C 验证新卡 @Custom', (root/EDITION_PATH).read_text())
+        fake=FakeGitHub()
+        with patch('studio.service.GitHub',return_value=fake):
+            plan=self.service.prepare({'savedId':saved['savedId']})
+        self.service.publish({'planId':plan['planId']})
+        self.assertIn('206 C 验证新卡 @Custom',fake.files[EDITION_PATH].decode())
+        self.assertEqual(fake.files[CARD_ROOT+'multicolor/验证新卡.txt'].decode(),self.request['script'])
+
+    def test_legendary_defaults_to_mythic_through_save_and_publish(self):
+        self.request['script']=self.request['script'].replace('# Rarity: M\n','').replace('Types:Creature', 'Types:Legendary Creature')
+        self.assertEqual(self.service.analyze(self.request)['rarity'], 'M')
+        saved=self.save()
+        fake=FakeGitHub()
+        with patch('studio.service.GitHub',return_value=fake):
+            plan=self.service.prepare({'savedId':saved['savedId']})
+        self.service.publish({'planId':plan['planId']})
+        self.assertIn('206 M 验证新卡 @Custom',fake.files[EDITION_PATH].decode())
+
+    def test_existing_edition_rarity_is_preserved_before_defaults(self):
+        self.service.edition='[metadata]\nCode=PH01\n[cards]\n205 R 验证新卡 @Custom\n'.encode()
+        self.request['script']=self.request['script'].replace('# Rarity: M\n','').replace('Types:Creature', 'Types:Legendary Creature')
+        self.request['mode']='script'
+        before=self.service.edition
+        result=self.service.analyze(self.request)
+        self.assertEqual(result['rarity'],'R')
+        self.assertEqual(result['raritySource'],'已有 PH01 登记')
+        self.assertEqual(self.service.edition,before)
+        self.request['script']='# Rarity: U\n'+self.request['script']
+        self.assertEqual(self.service.analyze(self.request)['rarity'],'U')
 
     def test_english_name_never_silently_saved_as_chinese(self):
         self.request['script']=self.request['script'].replace('验证新卡','English Name')

@@ -93,8 +93,7 @@ class Studio:
         matches = [e for e in edition.entries if e.name == card['name']]
         card['number'] = edition.suggest(card['name'])
         card['existing'] = bool(matches) or any(c['name'] == card['name'] for c in self.catalog['cards'])
-        card['raritySource'] = '脚本' if card['rarity'] else ''
-        if not card['rarity'] and matches:
+        if not card['rarityExplicit'] and matches and matches[0].rarity:
             card['rarity'], card['raritySource'] = matches[0].rarity, '已有 PH01 登记'
         return card
 
@@ -174,8 +173,6 @@ class Studio:
             raise StudioError('已有同名卡牌「' + card['name'] + '」。普通制卡入口禁止覆盖或推送，请切换到「修改已有脚本」或「替换已有卡图」。')
         if not card['chineseName']:
             raise StudioError('请先将脚本 Name: 设置为正确的中文卡名。图片和版本表将逐字使用这个名称。')
-        if not card['rarity']:
-            raise StudioError('脚本未声明稀有度。请用界面补写 # Rarity:，或直接在脚本中添加。不会根据传奇类型猜测稀有度。')
         overwrite = False
         edition, number, row = Edition(self.edition).register(card['name'], card['rarity'], artist='Custom', overwrite=overwrite)
         jpg, original, extension, dimensions = crop_image(request.get('image', ''), request.get('crop', {}))

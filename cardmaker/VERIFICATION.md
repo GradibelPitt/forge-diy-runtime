@@ -2,7 +2,7 @@
 
 - macOS ARM64: system Python 3.9.6, isolated Pillow 11.3.0, Google Chrome 153.0.8010.37.
 - The upper-level `.command --check` entry created a fresh environment, installed the dependency and passed.
-- 51 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only and artwork-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, local hashes, HTTP session/origin protection, and the Wiki crawler cases below.
+- 55 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only and artwork-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, local hashes, HTTP session/origin protection, and the Wiki crawler cases below.
 - Frontend JavaScript syntax check passed.
 - The desktop copy has official GitHub CLI 2.101.0 for macOS ARM64, verified against its official SHA-256 checksum. Authentication data and the CLI binary are local-only and excluded from the repository.
 - Read 207 current repository scripts: 206 parsed; the existing `灵魂之火.txt` has `Colors:red black`, which is rejected with a clear diagnostic. Current Forge's comma-separated `Colors` reader does not interpret that value as a two-color list. Existing repository card files were not edited.
@@ -41,3 +41,13 @@
 - At 1280×600 the preview ended at y=497, above the action bar at y=514; at 390×844 the preview stayed at y=8–253 while crop controls remained at y=466–506.
 - Preview scaling affects presentation only. JavaScript syntax check passed; Chrome reported no console warnings or errors. Backend files were unchanged in this UI update, so the existing 51-test backend result was not rerun.
 - macOS Desktop and Windows web sources match. Responsive checks used Chrome on macOS; native Windows verification remains unavailable.
+
+
+## Rarity defaults update
+
+- Undeclared new-card rarity defaults to Common. An independent Legendary token in Types (case-insensitive) selects Mythic. Names, Oracle text, comments and substrings such as NonLegendary do not trigger Mythic.
+- Explicit rarity declarations override defaults. Existing PH01 rarity is preserved when an existing script lacks a declaration. Unknown and conflicting declarations still fail.
+- All 55 Python tests passed, including actual temporary local exports and simulated Git publication for Common/Mythic defaults, explicit overrides, and existing-edition precedence. No test card was saved or published to the live data directory/repository.
+- Chrome verified ordinary script → C, Legendary script → M, manual selection → R with a script comment, and restore-auto → M with the comment removed. The dropdown, preview and edition row agree. Automatic analysis does not alter script text.
+- Fixed the original Common option's HTML tag so C is selectable. JavaScript syntax check passed; no Chrome warnings/errors.
+- Desktop backend restarted on port 8765 with the new sources; existing saved cards remain available. Windows program sources match the tested macOS sources; native Windows launch was not tested.
