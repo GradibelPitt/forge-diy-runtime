@@ -1,0 +1,8 @@
+# Rarity: C
+Name:眺望陆地
+ManaCost:2 U R
+Types:Sorcery
+A:SP$ Draw | Defined$ You | NumCards$ 2 | SubAbility$ DBToken | SpellDescription$ 抓两张牌，派出两个火炮手。
+SVar:DBToken:DB$ Token | TokenScript$ r_1_1_pirate_cannoneer | TokenAmount$ 2 | TokenOwner$ You
+DeckHas:Ability$Draw|Token
+Oracle:抓两张牌，派出两个火炮手。
