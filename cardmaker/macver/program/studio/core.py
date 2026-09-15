@@ -13,6 +13,11 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 CARD_ROOT = 'app/managed/custom/cards/'
 EDITION_PATH = 'app/managed/custom/editions/Placeholder_Set.txt'
 ART_ROOT = CARD_ROOT + 'pictures/PH01/'
+SETS = {
+    'PH01': {'label': '炉石传说', 'file': 'Placeholder_Set.txt'},
+    'BT3K': {'label': '博图三国新篇', 'file': 'BoTu_Three_Kingdoms_New_Chapter.txt'},
+    'TOKEN_HS': {'label': '衍生牌', 'file': 'Token_HS.txt'},
+}
 MANIFEST_PATH = 'app/manifest-critical.sha256'
 COLORS = {'W': ('white', '白'), 'U': ('blue', '蓝'), 'B': ('black', '黑'),
           'R': ('red', '红'), 'G': ('green', '绿')}
@@ -26,6 +31,17 @@ Image.MAX_IMAGE_PIXELS = 32_000_000
 
 class StudioError(ValueError):
     pass
+
+
+def set_info(code='PH01'):
+    if not isinstance(code, str) or code not in SETS:
+        raise StudioError('请选择 PH01、BT3K 或 TOKEN_HS 卡集。')
+    return {'code': code, **SETS[code], 'editionPath': 'app/managed/custom/editions/' + SETS[code]['file'],
+            'artRoot': CARD_ROOT + 'pictures/' + code + '/'}
+
+
+def has_type(types, name):
+    return name.casefold() in types.casefold().split()
 
 
 def digest(data: bytes) -> str:
@@ -62,6 +78,8 @@ def parse_script(script: str) -> dict:
         if ':' not in line:
             raise StudioError(f'第 {n} 行缺少字段分隔符「:」。')
         key, value = line.split(':', 1)
+        if key.casefold() == 'types':
+            key = 'Types'
         value = value.strip()
         if key in ('Name', 'ManaCost', 'Colors', 'Types', 'PT', 'Oracle'):
             if key in fields:
@@ -101,7 +119,7 @@ def parse_script(script: str) -> dict:
                 raise StudioError(f'无法识别 Colors: {token}。请使用 White,Blue,Black,Red,Green 或 Colorless。')
             found.add(symbol)
         basis = 'Colors: ' + fields['Colors'] + '（优先于费用）'
-    elif 'ManaCost' not in fields and 'Land' not in fields['Types'].split():
+    elif 'ManaCost' not in fields and not has_type(fields['Types'], 'Land'):
         raise StudioError('非地牌需要 ManaCost: 或 Colors:，才能可靠判断颜色。')
     symbols = [c for c in COLORS if c in found]
     folder = 'multicolor' if len(symbols) > 1 else COLORS[symbols[0]][0] if symbols else 'colorless'
@@ -113,7 +131,7 @@ def parse_script(script: str) -> dict:
     missing = sorted(set(refs) - definitions)
     if missing:
         raise StudioError('以下异能引用缺少 SVar 定义：' + '、'.join(missing))
-    legendary = 'legendary' in fields['Types'].lower().split()
+    legendary = has_type(fields['Types'], 'Legendary')
     rarity = rarities[0] if rarities else 'M' if legendary else 'C'
     rarity_source = '脚本明确声明' if rarities else 'Legendary 类型 → Mythic 神话' if legendary else '默认 Common 普通'
     return {'name': name, 'colors': symbols, 'colorLabel': ' / '.join(COLORS[c][1] for c in symbols) or '无色',
@@ -136,12 +154,13 @@ class Entry:
 
 
 class Edition:
-    def __init__(self, data: bytes):
+    def __init__(self, data: bytes, code='PH01'):
+        set_info(code)
         self.newline = '\r\n' if b'\r\n' in data else '\n'
         self.bom = data.startswith(b'\xef\xbb\xbf')
         text = data.decode('utf-8-sig')
-        if not re.search(r'^Code\s*=\s*PH01\s*$', text, re.M):
-            raise StudioError('版本文件不是 PH01。')
+        if not re.search(r'^Code\s*=\s*' + re.escape(code) + r'\s*$', text, re.M):
+            raise StudioError('版本文件不是 ' + code + '。')
         self.lines = text.splitlines()
         self.entries = []
         self.start = next((i for i, s in enumerate(self.lines) if s.strip().lower() == '[cards]'), -1)

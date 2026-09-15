@@ -2,7 +2,7 @@
 
 - macOS ARM64: system Python 3.9.6, isolated Pillow 11.3.0, Google Chrome 153.0.8010.37.
 - The upper-level `.command --check` entry created a fresh environment, installed the dependency and passed.
-- 55 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only and artwork-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, local hashes, HTTP session/origin protection, and the Wiki crawler cases below.
+- 72 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only and artwork-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, local hashes, HTTP session/origin protection, and the Wiki crawler cases below.
 - Frontend JavaScript syntax check passed.
 - The desktop copy has official GitHub CLI 2.101.0 for macOS ARM64, verified against its official SHA-256 checksum. Authentication data and the CLI binary are local-only and excluded from the repository.
 - Read 207 current repository scripts: 206 parsed; the existing `灵魂之火.txt` has `Colors:red black`, which is rejected with a clear diagnostic. Current Forge's comma-separated `Colors` reader does not interpret that value as a two-color list. Existing repository card files were not edited.
@@ -29,7 +29,7 @@
 
 ## Card publication boundary
 
-- New-card commits contain exactly script, JPG and edition changes. Script edits contain only affected scripts; artwork replacement contains only the target JPG.
+- New-card commits contain script, JPG and selected-edition changes, plus explicitly selected token attachments. Script edits contain affected scripts and selected token attachments; artwork replacement contains only the target JPG.
 - Additional tests inject JAR, BUILD-ID, release.json, manifest and updater files into each mode's plan and verify rejection before any Git write. Another test confirms card publishing does not require release or manifest files.
 - Existing engine/updater files remain byte-for-byte unchanged. Git blob verification is read-only; it does not update the repository's manifest.
 
@@ -51,3 +51,15 @@
 - Chrome verified ordinary script → C, Legendary script → M, manual selection → R with a script comment, and restore-auto → M with the comment removed. The dropdown, preview and edition row agree. Automatic analysis does not alter script text.
 - Fixed the original Common option's HTML tag so C is selectable. JavaScript syntax check passed; no Chrome warnings/errors.
 - Desktop backend restarted on port 8765 with the new sources; existing saved cards remain available. Windows program sources match the tested macOS sources; native Windows launch was not tested.
+
+
+## Paged workflow, selectable sets and optional tokens
+
+- All 72 Python tests passed, including 17 new cases for per-set paths/numbering/persistence, remote renumbering, selected-set artwork replacement, token reference validation, optional image crop/format/backups, collision rejection and publish-scope tampering. Tests save to temporary directories and simulate publication; no test card was saved or published to live data.
+- PH01 remains the default. BT3K and TOKEN_HS use the repository's actual edition metadata and picture directories. Only the selected edition changes; original row order is retained, and new numbers use max + 1.
+- Types field names and all type decisions are case-insensitive. Tests cover Types/types/TYPES/tYpEs and mixed-case Emblem, Legendary and Land. Oracle, names, comments and NonEmblem substrings cannot trigger Emblem routing. Emblem automatically selects TOKEN_HS, including actual temporary export and simulated publication.
+- Optional token scripts go to custom/tokens/ID.txt, and optional token images go to custom/tokens/pictures/ID.jpg. An unchecked master switch hides all token controls and excludes attachments; the per-token image switch defaults off. Existing differing token content is never overwritten.
+- Chrome verified mixed-case Types/Emblem/Legendary, manual BT3K selection, non-type Emblem text, inferred token ID, adding a token without an image, editing it to import a Huiji original, disabling crop, hiding/re-enabling attachments and successful combined output validation. The output showed the selected edition, Chinese artcrop filename and token ID.jpg path.
+- Script/image/output are separate pages. Inputs and artwork survive page changes. The check button and existing save/publish buttons stay visible. The preview remains outside the page scroller.
+- Responsive Chrome checks at 390x844 and 1280x600 found no document-height overflow. At 390x844, the check button ended at y=790, push at y=835, preview art at y=417 and crop controls at y=736. At 1280x600, both action buttons ended at y=588 and crop controls at y=497.
+- Frontend syntax check passed. Desktop backend was restarted with the updated program; existing saved-card history and credentials were preserved. Both packaged platform source trees and Desktop sources match. Windows native execution and Forge gameplay were not tested.

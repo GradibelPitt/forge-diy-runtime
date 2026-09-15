@@ -14,7 +14,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from .core import ART_ROOT, CARD_ROOT, EDITION_PATH, StudioError
+from .core import ART_ROOT, CARD_ROOT, EDITION_PATH, StudioError, SETS, set_info
 
 DEFAULT_REPO = 'GradibelPitt/forge-diy-runtime'
 
@@ -86,7 +86,8 @@ class GitHub:
     def snapshot(self, cache=None):
         commit = self.head()
         tree = self.tree(commit)
-        edition = self.file(tree, EDITION_PATH)
+        editions = {code: self.file(tree, set_info(code)['editionPath']) for code in SETS if set_info(code)['editionPath'] in tree}
+        edition = editions['PH01']
         prior = {c['sha']: c for c in (cache or {}).get('cards', [])}
         scripts = [(path, item['sha']) for path, item in tree.items() if path.startswith(CARD_ROOT) and '/pictures/' not in path and path.endswith('.txt')]
 
@@ -113,8 +114,9 @@ class GitHub:
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
             cards = list(pool.map(inspect, scripts))
-        return {'commit': commit, 'repo': self.repo, 'branch': self.branch, 'cards': cards, 'tree': tree, 'edition': edition,
-                'arts': {path: item['sha'] for path, item in tree.items() if path.startswith(ART_ROOT) and path.endswith('.artcrop.jpg')}}
+        return {'commit': commit, 'repo': self.repo, 'branch': self.branch, 'cards': cards, 'tree': tree, 'edition': edition, 'editions': editions,
+                'tokens': {path: item['sha'] for path, item in tree.items() if path.startswith('app/managed/custom/tokens/') and path.endswith('.txt')},
+                'arts': {path: item['sha'] for path, item in tree.items() if path.startswith(CARD_ROOT + 'pictures/') and path.endswith('.artcrop.jpg')}}
 
     def publish(self, base, changes, message, on_created=None):
         if not self.token:

@@ -110,6 +110,7 @@ def make_server(studio, port=8765):
                 if not isinstance(data, dict):
                     raise StudioError('请求格式不正确。')
                 routes = {'/api/analyze': studio.analyze, '/api/preview': studio.preview, '/api/save': studio.save,
+                          '/api/token-preview': studio.token_preview,
                           '/api/sync': studio.sync, '/api/prepare': studio.prepare, '/api/publish': studio.publish,
                           '/api/import-url': fetch_image, '/api/image-preview': image_preview, '/api/load-existing': studio.load_existing}
                 if self.path == '/api/choose-folder':

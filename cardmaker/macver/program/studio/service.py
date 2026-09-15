@@ -11,8 +11,9 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .core import ART_ROOT, CARD_ROOT, EDITION_PATH, Edition, StudioError, crop_image, digest, parse_script, safe_name
+from .core import ART_ROOT, CARD_ROOT, EDITION_PATH, Edition, StudioError, crop_image, digest, parse_script, safe_name, SETS, set_info, has_type
 from .github import DEFAULT_REPO, GitHub, credential
+from .tokens import TOKEN_ROOT, parse_attachments, prepare_attachments
 
 
 def stamp():
@@ -29,22 +30,38 @@ def write_json(path, value):
 def check_publish_scope(record, changes):
     """Card operations never write engine or updater files, even via a stale plan."""
     card, mode = record['card'], record.get('mode', 'card')
-    art_path = ART_ROOT + safe_name(card['name']) + '.artcrop.jpg'
+    tokens = parse_attachments(card.get('script', ''), record.get('tokens', []))
+    token_files = {item['path']: item['script'].encode('utf-8') for item in tokens}
+    token_images = {item['artPath']: item['imageHash'] for item in tokens if item.get('artPath')}
+    edition_set = set_info(card.get('setCode', 'PH01'))
+    edition_path = edition_set['editionPath']
+    art_path = edition_set['artRoot'] + safe_name(card['name']) + '.artcrop.jpg'
     script_path = card['scriptPath']
     if mode == 'art':
+        if tokens:
+            raise StudioError('替换卡图模式不能附带衍生物脚本。')
         allowed = {art_path}
     elif mode == 'script':
         allowed = {script_path} | set(record['baseline'])
     elif mode == 'card':
-        allowed = {script_path, art_path, EDITION_PATH}
+        allowed = {script_path, art_path, edition_path}
     else:
         raise StudioError('未知的卡牌发布模式。')
+    allowed |= set(token_files) | set(token_images)
     if set(changes) != allowed:
         raise StudioError('提交包含当前模式不允许的文件，已停止推送。请重新检查。')
     for path in allowed:
-        if path in (art_path, EDITION_PATH):
+        if path in token_images:
+            if changes[path] is None or digest(changes[path]) != token_images[path]:
+                raise StudioError('衍生物图片与检查结果不一致，已停止推送。')
             continue
-        if not path.startswith(CARD_ROOT) or path.startswith(ART_ROOT) or not path.endswith('.txt') or '..' in path.split('/'):
+        if path in token_files:
+            if changes[path] != token_files[path]:
+                raise StudioError('衍生物脚本内容与检查结果不一致，已停止推送。')
+            continue
+        if path in (art_path, edition_path):
+            continue
+        if not path.startswith(CARD_ROOT) or path.startswith(CARD_ROOT + 'pictures/') or not path.endswith('.txt') or '..' in path.split('/'):
             raise StudioError('脚本路径不在自定义卡牌目录，已停止推送。')
 
 
@@ -56,7 +73,8 @@ class Studio:
         self.drafts, self.plans = {}, {}
         self.catalog = json.loads((app_dir / 'resources/catalog.json').read_text('utf-8'))
         self.catalog.update(repo=DEFAULT_REPO, branch='main')
-        self.edition = (app_dir / 'resources/Placeholder_Set.txt').read_bytes()
+        self.editions = {code: (app_dir / 'resources' / item['file']).read_bytes() for code, item in SETS.items()}
+        self.edition = self.editions['PH01']
         self.source_label = '内置快照 · 2026-09-15'
         self.history_path = data_dir / 'history.json'
         self.history = json.loads(self.history_path.read_text('utf-8')) if self.history_path.exists() else []
@@ -64,23 +82,42 @@ class Studio:
         if snapshot.exists():
             saved = json.loads(snapshot.read_text('utf-8'))
             self.catalog, self.edition = saved['catalog'], base64.b64decode(saved['edition'])
+            self.editions.update({code: base64.b64decode(data) for code, data in saved.get('editions', {}).items() if code in SETS})
             self.source_label = saved['label']
 
+    def edition_data(self, code):
+        set_info(code)
+        return self.edition if code == 'PH01' else self.editions[code]
+
+    def update_edition(self, code, data):
+        Edition(data, code)
+        self.editions[code] = data
+        if code == 'PH01':
+            self.edition = data
+
+    def accept_snapshot(self, snapshot, update_editions=True):
+        self.catalog = {k: v for k, v in snapshot.items() if k not in ('tree', 'edition', 'editions')}
+        if update_editions:
+            for code, data in snapshot.get('editions', {'PH01': snapshot['edition']}).items():
+                self.update_edition(code, data)
+
     def remember_snapshot(self):
-        write_json(self.data_dir / 'snapshot.json', {'catalog': self.catalog, 'edition': base64.b64encode(self.edition).decode(), 'label': self.source_label})
+        write_json(self.data_dir / 'snapshot.json', {'catalog': self.catalog, 'edition': base64.b64encode(self.edition).decode(), 'label': self.source_label,
+                   'editions': {code: base64.b64encode(self.edition_data(code)).decode() for code in SETS}})
 
     def state(self):
         return {'repo': self.catalog.get('repo', DEFAULT_REPO), 'branch': self.catalog.get('branch', 'main'),
                 'snapshot': self.source_label, 'commit': self.catalog['commit'],
+                'sets': [{**set_info(code), 'nextNumber': Edition(self.edition_data(code), code).suggest()} for code in SETS],
                 'nextNumber': Edition(self.edition).suggest(), 'count': len([e for e in Edition(self.edition).entries if e.name]),
                 'saveRoot': str(self.data_dir / 'saved-cards'), 'history': self.history[-12:][::-1],
-                'cards': [{'name': c['name'], 'path': c['path'], 'hasArt': ART_ROOT + c['name'] + '.artcrop.jpg' in self.catalog.get('arts', {})} for c in self.catalog['cards']]}
+                'cards': [{'name': c['name'], 'path': c['path'], 'hasArt': ART_ROOT + c['name'] + '.artcrop.jpg' in self.catalog.get('arts', {}),
+                           'artSets': [code for code in SETS if set_info(code)['artRoot'] + c['name'] + '.artcrop.jpg' in self.catalog.get('arts', {})]} for c in self.catalog['cards']]}
 
     def sync(self, request):
         client = GitHub(request.get('repo', DEFAULT_REPO), request.get('branch', 'main'), credential(request.get('token', '')))
         snapshot = client.snapshot(self.catalog)
-        self.catalog = {k: v for k, v in snapshot.items() if k not in ('tree', 'edition')}
-        self.edition = snapshot['edition']
+        self.accept_snapshot(snapshot)
         self.source_label = 'GitHub · ' + datetime.now().strftime('%m-%d %H:%M')
         self.remember_snapshot()
         return self.state()
@@ -89,13 +126,22 @@ class Studio:
         if request.get('mode') == 'art':
             return self.art_card(request)
         card = parse_script(request.get('script', ''))
-        edition = Edition(self.edition)
+        emblem = has_type(card['types'], 'Emblem')
+        edition_set = set_info('TOKEN_HS' if emblem else request.get('setCode', 'PH01'))
+        code = edition_set['code']
+        card['setSource'] = 'Types: Emblem → TOKEN_HS' if emblem else '所选卡集'
+        card.update(setCode=code, editionPath=edition_set['editionPath'], artPath=edition_set['artRoot'] + card['name'] + '.artcrop.jpg')
+        edition = Edition(self.edition_data(code), code)
         matches = [e for e in edition.entries if e.name == card['name']]
         card['number'] = edition.suggest(card['name'])
         card['existing'] = bool(matches) or any(c['name'] == card['name'] for c in self.catalog['cards'])
         if not card['rarityExplicit'] and matches and matches[0].rarity:
-            card['rarity'], card['raritySource'] = matches[0].rarity, '已有 PH01 登记'
+            card['rarity'], card['raritySource'] = matches[0].rarity, '已有 ' + code + ' 登记'
         return card
+
+    def token_preview(self, request):
+        tokens, _ = prepare_attachments(request.get('script', ''), request.get('tokens', []), require_references=False)
+        return {'tokens': tokens}
 
     def art_card(self, request):
         name = str(request.get('name', '')).strip()
@@ -105,14 +151,16 @@ class Studio:
         matches = [c for c in self.catalog['cards'] if c['name'] == name]
         if len(matches) != 1:
             raise StudioError('请选择唯一已有卡牌；可输入完整中文卡名，或同步后从列表选择。')
-        entries = [e for e in Edition(self.edition).entries if e.name == name]
+        edition_set = set_info(request.get('setCode', 'PH01'))
+        code = edition_set['code']
+        entries = [e for e in Edition(self.edition_data(code), code).entries if e.name == name]
         if len(entries) > 1:
             raise StudioError('该卡有多条同名版本登记，请先确认要替换的卡牌。')
         entry = entries[0] if entries else None
         path = matches[0]['path']
         return {'name': name, 'number': entry.number if entry else '—', 'rarity': entry.rarity if entry else '',
-                'raritySource': '已有 PH01 登记', 'existing': True, 'scriptPath': path,
-                'artPath': ART_ROOT + name + '.artcrop.jpg', 'folder': path.rsplit('/', 2)[-2],
+                'raritySource': '已有 ' + code + ' 登记', 'setCode': code, 'editionPath': edition_set['editionPath'], 'existing': True, 'scriptPath': path,
+                'artPath': edition_set['artRoot'] + name + '.artcrop.jpg', 'folder': path.rsplit('/', 2)[-2],
                 'colorLabel': '保留原脚本', 'colorBasis': '', 'manaCost': '', 'types': '已有卡牌 · 替换卡图',
                 'pt': '', 'oracle': '只替换这张卡的原画，保留已有脚本与版本登记。', 'warnings': [],
                 'editionRow': '保留原登记，不修改版本表'}
@@ -128,7 +176,7 @@ class Studio:
             card = self.art_card(request)
             old_sha = self.catalog.get('arts', {}).get(card['artPath'])
         if not old_sha:
-            raise StudioError('这张卡没有可替换的 PH01 卡图。替换入口只更新已有卡图。')
+            raise StudioError('这张卡在所选卡集中没有可替换的卡图。请检查卡集或同步索引。')
         jpg, original, extension, dimensions = crop_image(request.get('image', ''), request.get('crop', {}))
         card['dimensions'] = dimensions
         draft_id = uuid.uuid4().hex
@@ -153,8 +201,12 @@ class Studio:
         if request.get('mode', 'card') not in ('card', 'script', 'art'):
             raise StudioError('未知的制卡模式。')
         if request.get('mode') == 'art':
+            if request.get('tokens'):
+                raise StudioError('替换卡图模式不能附带衍生物脚本。')
             return self.preview_art(request)
         card = self.analyze(request)
+        tokens, token_assets = prepare_attachments(card['script'], request.get('tokens', []))
+        token_paths = [path for item in tokens for path in ([item['path'], item['artPath']] if item.get('artPath') else [item['path']])]
         script_only = request.get('mode') == 'script'
         if script_only:
             old = [c for c in self.catalog['cards'] if c['name'] == card['name']]
@@ -166,15 +218,15 @@ class Studio:
                 raise StudioError('修改模式需要找到唯一已有卡牌。请保持原 Name: 不变，并同步索引。')
             card.update(editionRow='保留原登记，不修改版本表', originalPath=old[0]['path'])
             draft_id = uuid.uuid4().hex
-            self.drafts[draft_id] = {'card': card, 'mode': 'script', 'overwrite': True,
+            self.drafts[draft_id] = {'card': card, 'tokens': tokens, 'tokenAssets': token_assets, 'mode': 'script', 'overwrite': True,
                 'baseline': {old[0]['path']: old[0]['sha']}, 'repo': self.catalog['repo'], 'branch': self.catalog['branch']}
-            return {'draftId': draft_id, 'card': card, 'image': None, 'paths': [card['scriptPath']], 'mode': 'script'}
+            return {'draftId': draft_id, 'card': card, 'tokens': tokens, 'image': None, 'paths': [card['scriptPath']] + token_paths, 'mode': 'script'}
         if card['existing']:
             raise StudioError('已有同名卡牌「' + card['name'] + '」。普通制卡入口禁止覆盖或推送，请切换到「修改已有脚本」或「替换已有卡图」。')
         if not card['chineseName']:
             raise StudioError('请先将脚本 Name: 设置为正确的中文卡名。图片和版本表将逐字使用这个名称。')
         overwrite = False
-        edition, number, row = Edition(self.edition).register(card['name'], card['rarity'], artist='Custom', overwrite=overwrite)
+        edition, number, row = Edition(self.edition_data(card['setCode']), card['setCode']).register(card['name'], card['rarity'], artist='Custom', overwrite=overwrite)
         jpg, original, extension, dimensions = crop_image(request.get('image', ''), request.get('crop', {}))
         card.update(number=number, editionRow=row, dimensions=dimensions)
         draft_id = uuid.uuid4().hex
@@ -182,13 +234,13 @@ class Studio:
         if baseline_paths and not overwrite:
             raise StudioError('已有同名脚本。请明确选择更新同名卡牌。')
         baseline = {x['path']: x['sha'] for x in self.catalog['cards'] if x['name'] == card['name']}
-        self.drafts[draft_id] = {'card': card, 'jpg': jpg, 'original': original, 'extension': extension,
+        self.drafts[draft_id] = {'card': card, 'tokens': tokens, 'tokenAssets': token_assets, 'jpg': jpg, 'original': original, 'extension': extension,
                                  'edition': edition, 'overwrite': overwrite, 'baseline': baseline,
                                  'repo': self.catalog.get('repo', DEFAULT_REPO), 'branch': self.catalog.get('branch', 'main')}
         while len(self.drafts) > 8:
             del self.drafts[next(iter(self.drafts))]
         return {'draftId': draft_id, 'card': card, 'image': 'data:image/jpeg;base64,' + base64.b64encode(jpg).decode(),
-                'paths': [card['scriptPath'], card['artPath'], EDITION_PATH]}
+                'tokens': tokens, 'paths': [card['scriptPath'], card['artPath'], card['editionPath']] + token_paths}
 
     def save(self, request):
         draft = self.drafts.get(request.get('draftId'))
@@ -197,8 +249,9 @@ class Studio:
         card = draft['card']
         # Another save may have consumed this number since preview.
         mode = draft.get('mode', 'card')
+        edition_set = set_info(card.get('setCode', 'PH01'))
         if mode == 'card':
-            current, number, row = Edition(self.edition).register(card['name'], card['rarity'], artist='Custom', overwrite=draft['overwrite'])
+            current, number, row = Edition(self.edition_data(edition_set['code']), edition_set['code']).register(card['name'], card['rarity'], artist='Custom', overwrite=draft['overwrite'])
             if number != card['number']:
                 raise StudioError('编号在预览后已变化，请重新检查再保存。')
             draft['edition'] = current
@@ -209,13 +262,15 @@ class Studio:
         temp = root / ('.saving-' + package_id)
         temp.mkdir()
         files = {} if mode == 'art' else {card['scriptPath']: card['script'].encode('utf-8')}
+        files.update({item['path']: item['script'].encode('utf-8') for item in draft.get('tokens', [])})
+        files.update(draft.get('tokenAssets', {}))
         if mode != 'script':
             files.update({card['artPath']: draft['jpg'], 'original/' + card['name'] + draft['extension']: draft['original']})
         if mode == 'card':
-            files[EDITION_PATH] = draft['edition']
+            files[edition_set['editionPath']] = draft['edition']
         record = {'id': package_id, 'name': card['name'], 'number': card['number'], 'rarity': card['rarity'], 'folder': str(folder),
                   'status': '已保存到本地', 'card': card, 'overwrite': draft['overwrite'], 'baseline': draft['baseline'],
-                  'mode': mode,
+                  'mode': mode, 'tokens': draft.get('tokens', []),
                   'repo': draft['repo'], 'branch': draft['branch'], 'files': {p: digest(v) for p, v in files.items()}}
         try:
             for relative, content in files.items():
@@ -230,7 +285,7 @@ class Studio:
         self.history.append(record)
         write_json(self.history_path, self.history)
         if mode == 'card':
-            self.edition = draft['edition']
+            self.update_edition(edition_set['code'], draft['edition'])
             self.source_label = '本地登记 · ' + datetime.now().strftime('%m-%d %H:%M')
         self.remember_snapshot()
         return {'savedId': package_id, 'folder': str(folder), 'number': card['number'], 'paths': list(files), 'state': self.state()}
@@ -252,10 +307,16 @@ class Studio:
         repo, branch = request.get('repo', DEFAULT_REPO), request.get('branch', 'main')
         client = GitHub(repo, branch, credential(request.get('token', '')))
         snapshot = client.snapshot(self.catalog)
-        self.catalog = {k: v for k, v in snapshot.items() if k not in ('tree', 'edition')}
-        original_edition = Edition(snapshot['edition'])
+        self.accept_snapshot(snapshot, update_editions=False)
+        edition_set = set_info(card.get('setCode', 'PH01'))
+        code = edition_set['code']
+        remote_editions = snapshot.get('editions', {'PH01': snapshot['edition']})
+        if code not in remote_editions:
+            raise StudioError('远端缺少所选卡集版本表，已停止推送。')
+        remote_edition = remote_editions[code]
+        original_edition = Edition(remote_edition, code)
         if updating:
-            new_edition, number, row = snapshot['edition'], card['number'], '保留原登记，不修改版本表'
+            new_edition, number, row = remote_edition, card['number'], '保留原登记，不修改版本表'
             if art_only:
                 matches = [e for e in original_edition.entries if e.name == card['name']]
                 if len(matches) > 1:
@@ -284,6 +345,15 @@ class Studio:
             raise StudioError('目标文件路径已存在且对应其他脚本，禁止覆盖。')
         changes = {}
         paths = [card['artPath']] if art_only else [card['scriptPath']] if script_only else [card['scriptPath'], card['artPath']]
+        tokens = parse_attachments(card.get('script', ''), record.get('tokens', []))
+        for item in tokens:
+            for path in ([item['path'], item['artPath']] if item.get('artPath') else [item['path']]):
+                existing = [p for p in snapshot['tree'] if p.casefold() == path.casefold()]
+                data = (Path(record['folder']) / path).read_bytes()
+                sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+                if existing and (existing != [path] or snapshot['tree'][path]['sha'] != sha):
+                    raise StudioError('远端衍生物文件「' + path + '」已存在且内容不同，禁止覆盖。请复用原文件或使用新的 TokenScript 标识。')
+                paths.append(path)
         for path in paths:
             data = (Path(record['folder']) / path).read_bytes()
             if digest(data) != record['files'][path]:
@@ -296,7 +366,7 @@ class Studio:
             if path != card['scriptPath']:
                 changes[path] = None
         if not updating:
-            changes[EDITION_PATH] = new_edition
+            changes[edition_set['editionPath']] = new_edition
         if art_only:
             old_bytes = client.blob(old_art['sha'])
             if hashlib.sha1(b'blob ' + str(len(old_bytes)).encode() + b'\0' + old_bytes).hexdigest() != old_art['sha']:
@@ -315,7 +385,7 @@ class Studio:
         while len(self.plans) > 4:
             del self.plans[next(iter(self.plans))]
         return {'planId': plan_id, 'repo': repo, 'branch': branch, 'number': number, 'oldNumber': record['number'],
-                'editionRow': row, 'base': snapshot['commit'], 'mode': record.get('mode', 'card'),
+                'editionRow': row, 'setCode': code, 'base': snapshot['commit'], 'mode': record.get('mode', 'card'),
                 'files': [{'path': p, 'action': '删除旧位置' if b is None else '更新' if p in snapshot['tree'] else '新增'} for p, b in changes.items()]}
 
     def publish(self, request):
@@ -334,7 +404,7 @@ class Studio:
         # A retry after a lost reply can safely recognize the already updated ref.
         pending = record.get('pendingCommit')
         commit = pending if pending and client.head() == pending else client.publish(
-            plan['base'], plan['changes'], f"Add or update PH01 #{plan['number']} {record['name']} via Card Studio", created)
+            plan['base'], plan['changes'], f"Add or update {record['card'].get('setCode', 'PH01')} #{plan['number']} {record['name']} via Card Studio", created)
         for path, data in plan['changes'].items():
             if data is not None:
                 dest = Path(record['folder']) / path
@@ -345,7 +415,7 @@ class Studio:
         record['card'].update(number=plan['number'], editionRow=plan['row'])
         write_json(Path(record['folder']) / 'cardmaker.json', record)
         write_json(self.history_path, self.history)
-        self.edition = plan['edition']
+        self.update_edition(record['card'].get('setCode', 'PH01'), plan['edition'])
         self.catalog['commit'] = commit
         if record.get('mode') != 'art':
             script_bytes = plan['changes'][record['card']['scriptPath']]
@@ -355,6 +425,9 @@ class Studio:
         if record['card']['artPath'] in plan['changes']:
             art = plan['changes'][record['card']['artPath']]
             self.catalog.setdefault('arts', {})[record['card']['artPath']] = hashlib.sha1(b'blob ' + str(len(art)).encode() + b'\0' + art).hexdigest()
+        for item in record.get('tokens', []):
+            data = plan['changes'][item['path']]
+            self.catalog.setdefault('tokens', {})[item['path']] = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
         self.source_label = '已发布 · ' + datetime.now().strftime('%m-%d %H:%M')
         self.remember_snapshot()
         return {'commit': commit, 'url': record['url'], 'number': plan['number'], 'folder': record['folder'], 'state': self.state()}
