@@ -100,3 +100,5 @@ foreach ($scenario in @('Outer','Inner','Fresh','Rollback')) {
     }
 }
 Write-Host "AUTO_LOCATION_TESTS_OK=$script:Passed"
+# Robocopy uses exit code 1 for a successful copy; do not leak it to CI.
+exit 0
