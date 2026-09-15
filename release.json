@@ -1,5 +1,5 @@
 {
-  "buildId": "20260911-conjure-zh-cn-huanbian",
+  "buildId": "20260915-203905-cardmaker-c0c4b907",
   "delivery": "git",
   "sourceCommit": "da940037f13dca03a0972241b1a88d4747fa7150",
   "moduleOverlays": [],
@@ -36,5 +36,13 @@
     ],
     "jarLoadProbe": "passed"
   },
-  "updaterResourceSha256": "8823C59A1BF6BCCB575A6E7A17FD49EB669FE6227B1D7F65D014325C3D6714D2"
+  "updaterResourceSha256": "8823C59A1BF6BCCB575A6E7A17FD49EB669FE6227B1D7F65D014325C3D6714D2",
+  "cardmaker": {
+    "version": "1.0.0",
+    "card": "大地之鳞",
+    "number": "206",
+    "mode": "card",
+    "baseRuntimeCommit": "e504a9f7b3ee02b98291d0e8939a55353f9e55d2",
+    "validation": "script metadata, RGB JPEG, edition uniqueness and changed-file SHA-256; gameplay not run"
+  }
 }

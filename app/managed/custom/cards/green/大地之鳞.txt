@@ -1,0 +1,8 @@
+# Rarity: R
+Name:大地之鳞
+ManaCost:G
+Types:Instant
+A:SP$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBGainLife | SpellDescription$ 在目标生物上放置一个+1/+1指示物，然后你获得等同于其力量的生命。
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X
+SVar:X:Targeted$CardPower
+Oracle:在目标生物上放置一个+1/+1指示物，然后你获得等同于其力量的生命。
