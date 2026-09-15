@@ -1,0 +1,16 @@
+# Rarity: C
+Name:伪装的特工
+ManaCost:B
+Types:Creature Human Rogue
+PT:4/2
+K:Haste
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBChoosePlayer | Layer$ Control | Description$ 不忠（此生物在一位由你选择的牌手操控下进战场。）
+SVar:DBChoosePlayer:DB$ ChoosePlayer | Defined$ You | Choices$ Player | ChoiceTitle$ 选择一位接收CARDNAME的牌手 | AILogic$ Curse | SubAbility$ MoveToPlay
+SVar:MoveToPlay:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Battlefield | Defined$ ReplacedCard | GainControl$ ChosenPlayer | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenPlayer$ True
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ 当CARDNAME死去时，每位对手抓两张牌。
+SVar:TrigDraw:DB$ Draw | Defined$ Player.Opponent | NumCards$ 2
+
+Oracle:敏捷\n不忠（此生物在一位由你选择的牌手操控下进战场。）\n当伪装的特工死去时，每位对手抓两张牌。
