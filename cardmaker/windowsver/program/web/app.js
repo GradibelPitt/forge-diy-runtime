@@ -107,8 +107,8 @@ function tabs(url){$('urlPane').classList.toggle('hidden',!url);$('filePane').cl
 $('fileTab').onclick=()=>tabs(false);$('urlTab').onclick=()=>tabs(true);
 async function fetchImage(url){
   const result=await api('import-url',{url});const box=$('candidates');box.replaceChildren();
-  if(result.kind==='image'){await setImage(result.image,result.name);notice('图片已从 URL 导入。');}
-  else{notice(`找到 ${result.candidates.length} 个图片地址，请选择原画。`);for(const [i,url] of result.candidates.entries()){const b=document.createElement('button');b.className='candidate';b.textContent=(i+1)+'. '+url;b.title=url;b.onclick=()=>run(()=>fetchImage(url),'正在导入所选图片…');box.append(b);}}
+  if(result.kind==='image'){await setImage(result.image,result.name);notice(result.site?`已从 ${result.site} 导入指定原图。`:'图片已从 URL 导入。');}
+  else{notice(`${result.site?result.site+' · ':''}找到 ${result.candidates.length} 个图片地址，请选择原画。`);for(const [i,url] of result.candidates.entries()){const b=document.createElement('button');b.className='candidate';b.textContent=(i+1)+'. '+(result.candidateLabels?.[i]||url);b.title=url;b.onclick=()=>run(()=>fetchImage(url),'正在导入所选原图…');box.append(b);}}
 }
 $('fetchUrl').onclick=()=>run(()=>fetchImage($('imageUrl').value),'正在抓取图片或分析网页…');
 function cropChanged(value){$('cropInline').checked=value;$('cropSetting').checked=value;$('cropControls').classList.toggle('hidden',!value);invalidate();drawArt();}

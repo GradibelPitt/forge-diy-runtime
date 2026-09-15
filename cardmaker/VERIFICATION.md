@@ -2,7 +2,7 @@
 
 - macOS ARM64: system Python 3.9.6, isolated Pillow 11.3.0, Google Chrome 153.0.8010.37.
 - The upper-level `.command --check` entry created a fresh environment, installed the dependency and passed.
-- 31 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, SHA-256 updates, and HTTP session/origin protection.
+- 42 Python unit/integration tests passed on macOS: script metadata, Chinese names, colors, rarity declarations, numbering, duplicate prevention, image decode/crop, local export, script-only replacement, atomic Git publication simulation, non-forced concurrent-update rejection, SHA-256 updates, HTTP session/origin protection, and the Wiki crawler cases below.
 - Frontend JavaScript syntax check passed.
 - The desktop copy has official GitHub CLI 2.101.0 for macOS ARM64, verified against its official SHA-256 checksum. Authentication data and the CLI binary are local-only and excluded from the repository.
 - Read 207 current repository scripts: 206 parsed; the existing `灵魂之火.txt` has `Colors:red black`, which is rejected with a clear diagnostic. Current Forge's comma-separated `Colors` reader does not interpret that value as a two-color list. Existing repository card files were not edited.
@@ -11,3 +11,11 @@
 - Windows includes the same program sources and a separate `.bat` entry, UTF-8 console setup, independent virtual environment and Chrome discovery. No Windows host was available for native launcher/UI testing.
 - Publishing tests use an in-memory GitHub API model. No test cards were published to the live PH01 set. The requested program itself is published separately under `cardmaker/`.
 - Forge gameplay and in-game rendering were not run; frontend preview is a layout illustration, and validation is limited to metadata, packaging and publication integrity.
+
+## Wiki crawler update
+
+- Added 11 tests for localized/encoded media fragments, file pages, original URL and redirect resolution, lazy thumbnail HTML fallback, artwork ranking, direct thumbnail upgrades, blocked APIs and exact-file failure protection.
+- Live read-only import of the supplied Huiji media link returned `Earthen_Scales_full.jpg`, 1278×1038, from its public original CDN. Its article/API returned HTTP 403 to ordinary HTTP requests in this environment; the explicit-file CDN fallback succeeded.
+- Live Wiki.gg media import returned the same 1278×1038 original. The Earthen Scales article API identifies the full artwork; framed cards, resource icons and logos are excluded when full artwork is present.
+- Imports do not publish cards or alter edition data. Original download and optional Forge crop remain separate.
+- The updated desktop launcher was run in the unrestricted environment and successfully opened Google Chrome at `127.0.0.1:8765`; the supplied Huiji media URL imported through the UI and showed the 1278×1038 original dimensions.

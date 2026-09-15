@@ -56,6 +56,23 @@ Oracle:飞行，警戒
 - 支持 JPEG、PNG、WebP、BMP、GIF、TIFF；GIF 使用第一帧。图片上限 20 MB、3200 万像素。
 - URL 抓取仅支持标准 HTTP/HTTPS 公网地址；登录、反爬或依赖 JavaScript 的页面可能无法获取，请改用图片直链或文件上传。
 
+#### 炉石 Wiki 专用抓取
+
+针对 `hearthstone.wiki.gg` 与 `hearthstone.huijiwiki.com`：
+
+- 支持卡牌文章、`File:` / `文件:` 文件页、`index.php?title=…`，以及媒体查看器复制的 `#/media/文件:…` 链接。
+- 指定文件时直接导入该原图；卡牌文章优先筛选 `full` / `Art` 原画，候选显示文件名及可用的尺寸。找到原画时不混入卡框和图标。
+- 优先通过 MediaWiki `imageinfo` 读取原图 URL，识别文件重定向；两站缩略图链接会转换为原图地址。
+- 灰机公开 API 被限制时，包含具体文件名的链接可回退到公开图片 CDN。普通文章若也无法读取，会提示复制原画媒体链接或“原始文件”直链；指定原图失败不会改用其他图片。
+- 不读取浏览器 Cookie，不要求额外安装浏览器自动化环境。裁剪开关与最终中文卡名命名逻辑保持一致。
+
+示例：
+
+```text
+https://hearthstone.huijiwiki.com/wiki/Card/41081#/media/文件:Earthen_Scales_full.jpg
+https://hearthstone.wiki.gg/wiki/Earthen_Scales#/media/File:Earthen_Scales_full.jpg
+```
+
 ### 编号与同名保护
 
 新增登记格式为 `编号 稀有度 中文卡名 @Custom`，画师字段固定默认 `@Custom`。

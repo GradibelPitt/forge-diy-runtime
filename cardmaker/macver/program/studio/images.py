@@ -8,6 +8,7 @@ import urllib.request
 from html.parser import HTMLParser
 
 from .core import MAX_IMAGE, StudioError, crop_image
+from .wiki import context as wiki_context, discover as discover_wiki, original_image_url
 
 
 def image_preview(request):
@@ -57,18 +58,51 @@ class Candidates(HTMLParser):
             self.priority.append(attrs.get('href', ''))
 
 
-def fetch_image(request):
-    url = public_url(str(request.get('url', '')).strip())
+def download(url, accept='image/*,text/html;q=0.8'):
+    url = public_url(url)
     try:
         opener = urllib.request.build_opener(Redirects())
-        with opener.open(urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; ForgeCardStudio/1.0)', 'Accept': 'image/*,text/html;q=0.8'}), timeout=25) as response:
+        with opener.open(urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; ForgeCardStudio/1.0)', 'Accept': accept}), timeout=25) as response:
             mime = response.headers.get_content_type()
-            limit = 2 * 1024 * 1024 if mime == 'text/html' else MAX_IMAGE
+            limit = 2 * 1024 * 1024 if mime in ('text/html', 'application/json') else MAX_IMAGE
             data = response.read(limit + 1)
             final_url = response.url
             charset = response.headers.get_content_charset() or 'utf-8'
         if len(data) > limit:
             raise StudioError('图片或网页超过导入大小上限。')
+        return {'data': data, 'mime': mime, 'url': final_url, 'charset': charset}
+    except StudioError:
+        raise
+    except (urllib.error.URLError, OSError, TimeoutError, LookupError, ValueError):
+        raise StudioError('抓取失败，网站可能限制访问。可尝试图片直链或下载后上传。') from None
+
+
+def image_result(result):
+    data, final_url = result['data'], result['url']
+    encoded = base64.b64encode(data).decode()
+    _, _, ext, dimensions = crop_image(encoded, {'enabled': False})
+    return {'kind': 'image', 'image': encoded, 'name': urllib.parse.unquote(urllib.parse.urlsplit(final_url).path.rsplit('/', 1)[-1]) or 'image' + ext,
+            'sourceUrl': final_url, 'dimensions': dimensions}
+
+
+def fetch_image(request):
+    raw_url = str(request.get('url', '')).strip()
+    try:
+        # Read the media fragment BEFORE public_url removes the HTTP fragment.
+        ctx = wiki_context(raw_url)
+        if ctx:
+            items = discover_wiki(ctx, download)
+            if ctx['file']:
+                for item in items:
+                    try:
+                        return {**image_result(download(item['url'])), 'site': ctx['site'], 'pageUrl': raw_url}
+                    except StudioError:
+                        continue
+                raise StudioError('无法下载指定的 Wiki 原图「' + ctx['file'] + '」。请检查文件名或复制“原始文件”直链；不会改用其他图片。')
+            return {'kind': 'page', 'candidates': [x['url'] for x in items], 'candidateLabels': [x['label'] for x in items],
+                    'site': ctx['site'], 'pageUrl': raw_url}
+        result = download(original_image_url(raw_url))
+        data, mime, final_url, charset = (result[k] for k in ('data', 'mime', 'url', 'charset'))
         if mime == 'text/html' or data.lstrip().lower().startswith((b'<!doctype html', b'<html')):
             parser = Candidates()
             parser.feed(data.decode(charset, errors='replace'))
@@ -77,10 +111,7 @@ def fetch_image(request):
             if not urls:
                 raise StudioError('该网页未找到可用图片。可能需要登录或 JavaScript，请使用图片直链或上传文件。')
             return {'kind': 'page', 'candidates': urls, 'pageUrl': final_url}
-        encoded = base64.b64encode(data).decode()
-        _, _, ext, dimensions = crop_image(encoded, {'enabled': False})
-        return {'kind': 'image', 'image': encoded, 'name': urllib.parse.unquote(urllib.parse.urlsplit(final_url).path.rsplit('/', 1)[-1]) or 'image' + ext,
-                'sourceUrl': final_url, 'dimensions': dimensions}
+        return image_result(result)
     except StudioError:
         raise
     except (urllib.error.URLError, OSError, TimeoutError, LookupError, ValueError):
