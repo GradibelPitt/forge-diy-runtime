@@ -195,7 +195,7 @@ function openToken(index=-1){
   $('tokenCrop').checked=item?.crop?.enabled??$('cropInline').checked;
   $('tokenImagePreview').src=tokenImagePreview;$('tokenImagePreview').hidden=!tokenImagePreview;
   $('tokenImageInfo').textContent=tokenImageData?'已保留图片；将按衍生物脚本标识命名 JPG。':'未选择图片。输出为 tokens/pictures/脚本标识.jpg，原图另行备份。';
-  $('tokenImageUrl').value='';$('tokenImageCandidates').replaceChildren();
+  $('tokenImageUrl').value='';$('tokenImageCandidates').replaceChildren();imageSourceTabs(true,true);
   $('tokenIds').replaceChildren();for(const id of refs){const option=document.createElement('option');option.value=id;$('tokenIds').append(option);}
   $('tokenDialog').showModal();
 }
@@ -252,8 +252,14 @@ async function importFile(file){if(!file)return;if(file.size>20*1024*1024)throw 
 $('imageFile').onchange=e=>run(()=>importFile(e.target.files[0]),'读取图片…');
 for(const event of ['dragenter','dragover'])$('dropzone').addEventListener(event,e=>{e.preventDefault();$('dropzone').classList.add('dragging');});
 for(const event of ['dragleave','drop'])$('dropzone').addEventListener(event,e=>{e.preventDefault();$('dropzone').classList.remove('dragging');if(event==='drop')run(()=>importFile(e.dataTransfer.files[0]));});
-function tabs(url){$('urlPane').classList.toggle('hidden',!url);$('filePane').classList.toggle('hidden',url);$('urlTab').classList.toggle('selected',url);$('fileTab').classList.toggle('selected',!url);}
-$('fileTab').onclick=()=>tabs(false);$('urlTab').onclick=()=>tabs(true);
+function imageSourceTabs(url,token=false){
+  const ids=token?['tokenUrlPane','tokenFilePane','tokenUrlTab','tokenFileTab']:['urlPane','filePane','urlTab','fileTab'];
+  $(ids[0]).classList.toggle('hidden',!url);$(ids[1]).classList.toggle('hidden',url);
+  $(ids[2]).classList.toggle('selected',url);$(ids[3]).classList.toggle('selected',!url);
+  $(ids[2]).setAttribute('aria-pressed',String(url));$(ids[3]).setAttribute('aria-pressed',String(!url));
+}
+$('fileTab').onclick=()=>imageSourceTabs(false);$('urlTab').onclick=()=>imageSourceTabs(true);
+$('tokenFileTab').onclick=()=>imageSourceTabs(false,true);$('tokenUrlTab').onclick=()=>imageSourceTabs(true,true);
 async function fetchImage(url){
   const result=await api('import-url',{url});const box=$('candidates');box.replaceChildren();
   if(result.kind==='image'){await setImage(result.image,result.name);notice(result.site?`已从 ${result.site} 导入指定原图。`:'图片已从 URL 导入。');}

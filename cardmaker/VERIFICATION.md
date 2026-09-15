@@ -63,3 +63,10 @@
 - Script/image/output are separate pages. Inputs and artwork survive page changes. The check button and existing save/publish buttons stay visible. The preview remains outside the page scroller.
 - Responsive Chrome checks at 390x844 and 1280x600 found no document-height overflow. At 390x844, the check button ended at y=790, push at y=835, preview art at y=417 and crop controls at y=736. At 1280x600, both action buttons ended at y=588 and crop controls at y=497.
 - Frontend syntax check passed. Desktop backend was restarted with the updated program; existing saved-card history and credentials were preserved. Both packaged platform source trees and Desktop sources match. Windows native execution and Forge gameplay were not tested.
+
+
+## URL-first image selection
+
+- Main-card and optional token image selectors default to URL. File upload remains a secondary selectable source; switching sources retains the typed URL and imported-image state.
+- Chrome verified both default URL views, switching to file upload and back, and URL input preservation. Optional token-image gating remains unchanged. No console warnings/errors.
+- JavaScript syntax check passed. This is a frontend-only update; the previously passing 72 backend tests were not rerun. Desktop and Windows web files match the packaged macOS files.
