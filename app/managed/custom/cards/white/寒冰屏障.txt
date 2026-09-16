@@ -1,0 +1,13 @@
+Name:寒冰屏障
+ManaCost:1 W W
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ ExileFromHand<1/Card.White+Other> | Condition$ NotPlayerTurn | Description$ If it's not your turn, you may exile a white card from your hand rather than pay this spell's mana cost.
+
+A:SP$ Effect | Duration$ UntilYourNextTurn | StaticAbilities$ CantChangeLife | SubAbility$ GainProtection | SpellDescription$ Until your next turn, your life total can't change and you gain protection from everything.
+
+SVar:CantChangeLife:Mode$ CantChangeLife | ValidPlayer$ You | Description$ Your life total can't change.
+
+SVar:GainProtection:DB$ Pump | Defined$ You | Duration$ UntilYourNextTurn | KW$ Protection from everything
+
+Oracle:如果当前不是你的回合，你可以从你的手上放逐一张白色牌，而不支付此咒语的法术力费用。\n直到你的下一个维持开始，你的总生命不能改变，且你获得反一切保护。
