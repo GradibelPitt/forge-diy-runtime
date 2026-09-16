@@ -1,0 +1,9 @@
+Name:盾牌格挡
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ GainLife | Defined$ You | LifeAmount$ 5 | SubAbility$ DBDraw | SpellDescription$ You gain 5 life, then draw a card.
+
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:你获得5点生命，然后抓一张牌。
