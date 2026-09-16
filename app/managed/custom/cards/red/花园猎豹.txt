@@ -1,0 +1,13 @@
+Name:花园猎豹
+ManaCost:2 R R
+Types:Creature Cat
+PT:4/4
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ 每当CARDNAME进攻时，目标由你操控且不是CARDNAME的生物得+3/+0直到回合结束。
+
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ 选择目标由你操控且不是花园猎豹的生物 | NumAtt$ +3 | NumDef$ +0
+
+SVar:HasAttackEffect:TRUE
+
+Oracle:敏捷。\n每当花园猎豹进攻时，目标由你操控且不是花园猎豹的生物得+3/+0直到回合结束。
