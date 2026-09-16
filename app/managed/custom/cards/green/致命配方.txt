@@ -1,0 +1,10 @@
+Name:致命配方
+ManaCost:1 G G
+Types:Sorcery
+
+A:SP$ Seek | Defined$ You | Type$ Creature | Num$ 2 | RememberFound$ True | SubAbility$ DBPerpetualPump | SpellDescription$ 取出两张生物牌。如果你操控至少十个地，以此法取出的生物牌永久获得+3/+3。
+
+SVar:DBPerpetualPump:DB$ Pump | Defined$ Remembered | PumpZone$ Hand | ConditionPresent$ Land.YouCtrl | ConditionCompare$ GE10 | ConditionZone$ Battlefield | NumAtt$ +3 | NumDef$ +3 | Duration$ Perpetual | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:取出两张生物牌。如果你操控至少十个地，以此法取出的生物牌永久获得+3/+3。
