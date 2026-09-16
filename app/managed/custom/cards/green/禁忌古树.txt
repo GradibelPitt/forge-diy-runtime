@@ -1,0 +1,8 @@
+Name:禁忌古树
+ManaCost:G
+Types:Creature Treefolk
+PT:1/1
+A:AB$ PutCounter | Cost$ X | Adapt$ X | Exhaust$ True | SpellDescription$ Adapt X. (Activate each exhaust ability only once.)
+SVar:X:Count$xPaid
+DeckHas:Ability$Counters
+Oracle:竭绝～{X}：演化X。
