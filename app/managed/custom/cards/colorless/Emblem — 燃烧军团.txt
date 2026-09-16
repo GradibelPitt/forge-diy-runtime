@@ -1,0 +1,12 @@
+Name:Emblem — 燃烧军团
+ManaCost:no cost
+Types:Emblem
+R:Event$ Draw | ActiveZones$ Command | ValidPlayer$ You | ReplaceWith$ DiscoverDemon | Description$ 如果你将要抓一张牌，改为发现一张恶魔牌。
+SVar:DiscoverDemon:DB$ CardDiscover | Defined$ You | Source$ CardDatabase | ValidCards$ Demon | OptionCount$ 3 | Destination$ Hand | RememberChosen$ True
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Execute$ GainLegionCounter | TriggerDescription$ 在你的维持开始时，你获得一个军团指示物。
+SVar:GainLegionCounter:DB$ PutCounter | Defined$ You | CounterType$ LEGION | CounterNum$ 1
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Demon.IsRemembered | TriggerZones$ Command | Execute$ EmpowerDemon | TriggerDescription$ 每当一个以此法发现的恶魔进战场时，你每有一个军团指示物，便在其上放置两个+1/+1指示物。
+SVar:EmpowerDemon:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ P1P1 | CounterNum$ LegionBonus
+SVar:LegionBonus:Count$YourCountersLEGION/Twice
+AI:RemoveDeck:All
+Oracle:如果你将要抓一张牌，改为发现一张恶魔牌。\n在你的维持开始时，你获得一个军团指示物。\n每当一个以此法发现的恶魔进战场时，你每有一个军团指示物，便在其上放置两个+1/+1指示物。
