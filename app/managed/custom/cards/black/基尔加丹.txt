@@ -1,0 +1,9 @@
+Name:基尔加丹
+ManaCost:4 B B B
+Types:Legendary Creature Demon
+PT:7/7
+K:Flying
+K:Lifelink
+T:Mode$ SpellCast | ValidCard$ Card.Self | TriggerZones$ Stack | Execute$ GainLegionEmblem | TriggerDescription$ 当你施放CARDNAME时，你获得一个名为燃烧军团的徽记。
+SVar:GainLegionEmblem:DB$ MakeCard | Defined$ You | Name$ Emblem — 燃烧军团 | Zone$ Command | AsEmblem$ True
+Oracle:飞行，系命\n当你施放基尔加丹时，你获得一个名为燃烧军团的徽记。
