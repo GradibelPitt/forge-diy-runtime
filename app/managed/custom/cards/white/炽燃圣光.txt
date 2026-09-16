@@ -1,0 +1,9 @@
+Name:炽燃圣光
+ManaCost:W
+Types:Instant
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ X | RememberDamaged$ True | SubAbility$ DBDelayedTrigger | SpellDescription$ CARDNAME deals damage to target creature equal to that creature's power. When a creature dealt damage this way dies this turn, draw a card.
+SVar:X:Targeted$CardPower
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ ChangesZone | RememberObjects$ Remembered | ValidCard$ Card.IsTriggerRemembered | Origin$ Battlefield | Destination$ Graveyard | ThisTurn$ True | Execute$ DBDraw | SubAbility$ DBCleanup
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:炽燃圣光对目标生物造成等同于该生物力量的伤害。若以此法受到伤害的生物本回合死去，抓一张牌。
