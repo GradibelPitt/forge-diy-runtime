@@ -1,0 +1,17 @@
+Name:自助大餐
+ManaCost:W G R
+Types:Sorcery
+
+A:SP$ Cleanup | ClearNotedTypes$ True | ClearChosenType$ True | SubAbility$ DBRepeat | StackDescription$ SpellDescription | SpellDescription$ 取出三张生物类别各不相同的生物牌。
+
+SVar:DBRepeat:DB$ Repeat | MaxRepeat$ 3 | RepeatSubAbility$ DBReset | SubAbility$ DBFinalCleanup
+
+SVar:DBReset:DB$ Cleanup | ClearChosenType$ True | SubAbility$ DBChooseType
+
+SVar:DBChooseType:DB$ ChooseType | Defined$ You | Type$ Creature | TypesFromDefined$ ValidLibrary Creature.YouCtrl | AtRandom$ True | Secretly$ True | Note$ True | ChooseNoted$ True | SubAbility$ DBSeek
+
+SVar:DBSeek:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.ChosenType | ChangeNum$ 1 | AtRandom$ True | Hidden$ True | Mandatory$ True
+
+SVar:DBFinalCleanup:DB$ Cleanup | ClearChosenType$ True | ClearNotedTypes$ True
+
+Oracle:取出三张生物类别各不相同的生物牌。
