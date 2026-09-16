@@ -1,0 +1,9 @@
+Name:能量零食
+ManaCost:G
+Types:Sorcery
+
+A:SP$ DelayedTrigger | Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigToken | TriggerDescription$ 在你的下一个维持开始时，派出两个珍宝衍生物。 | SpellDescription$ 在你的下一个维持开始时，派出两个珍宝衍生物。
+
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ c_a_treasure_sac | TokenOwner$ You
+
+Oracle:在你的下一个维持开始时，派出两个珍宝衍生物。
