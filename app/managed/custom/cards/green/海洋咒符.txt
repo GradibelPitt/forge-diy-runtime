@@ -1,0 +1,8 @@
+Name:海洋咒符
+ManaCost:G
+Types:Enchantment
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create a 3/3 green Naga creature token, then sacrifice CARDNAME.
+SVar:TrigToken:DB$ Token | TokenScript$ g_3_3_naga | TokenOwner$ You | SubAbility$ DBSacrifice
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ Self
+DeckHas:Ability$Token|Sacrifice
+Oracle:在你的维持开始时，派出一个3/3绿色娜迦衍生生物，然后牺牲海洋咒符。
