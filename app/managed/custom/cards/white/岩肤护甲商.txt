@@ -1,0 +1,14 @@
+Name:岩肤护甲商
+ManaCost:W W
+Types:Creature Human Artificer
+PT:2/2
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ GE1 | Execute$ TrigDraw | TriggerDescription$ 当CARDNAME进战场时，若你本回合中获得过生命，抓两张牌。
+
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 2
+SVar:X:Count$LifeYouGainedThisTurn
+
+DeckHints:Ability$LifeGain
+
+Oracle:闪现。\n当岩肤护甲商进战场时，若你本回合中获得过生命，抓两张牌。
