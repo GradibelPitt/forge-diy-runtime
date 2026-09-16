@@ -1,0 +1,13 @@
+Name:北郡牧师
+ManaCost:W
+Types:Creature Human
+PT:1/2
+
+T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ LEY | Execute$ TrigDraw | TriggerDescription$ Whenever you gain life, if your life total is less than or equal to your starting life total, draw a card.
+
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | ConditionCheckSVar$ X | ConditionSVarCompare$ LEY
+SVar:X:Count$YourLifeTotal
+SVar:Y:Count$YourStartingLife
+
+DeckHas:Ability$LifeGain
+Oracle:每当你获得生命时，若你的总生命不多于你的起始生命，抓一张牌。
