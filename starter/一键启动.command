@@ -327,6 +327,24 @@ sync_profile() {
     cp "$SETUP_DIR/forge.preferences" "$preferences"
 }
 
+select_local_update() {
+    [[ -f "$INSTALL_ROOT/updates/active.json" ]] || return 0
+    local pwsh="$INSTALL_ROOT/updates/tools/powershell-7.6.6-macos/pwsh" selected
+    if [[ ! -x "$pwsh" ]]; then
+        step '本地更新校验工具缺失，继续使用已发布版本。'
+        return 0
+    fi
+    selected=$("$pwsh" -NoLogo -NoProfile -NonInteractive -File "$REPO_ROOT/tools/select_diy_update_macos.ps1" \
+        -InstallRoot "$INSTALL_ROOT" -BaseApp "$APP_ROOT" -ReleaseFile "$REPO_ROOT/release.json") || return 1
+    [[ -d "$selected" ]] || { fail '本地更新选择器返回了无效路径。'; return 1; }
+    APP_ROOT=$selected
+    # SNAPSHOT builds also resolve resources relative to the application directory.
+    if [[ "$APP_ROOT" != "$REPO_ROOT/app" ]]; then
+        mkdir -p "${APP_ROOT%/app}/forge-gui"
+        [[ -e "${APP_ROOT%/app}/forge-gui/res" ]] || ln -s ../app/res "${APP_ROOT%/app}/forge-gui/res"
+    fi
+}
+
 launch_forge() {
     local jar overlay classpath package version stdout_log stderr_log code=0
     local jars=("$APP_ROOT"/*-jar-with-dependencies.jar)
@@ -337,6 +355,7 @@ launch_forge() {
     classpath="$classpath$jar"
     local args=(-Xmx2048m -Dio.netty.tryReflectionSetAccessible=true -Dfile.encoding=UTF-8
         "-Dforge.diy.installRoot=$INSTALL_ROOT" "-Dforge.diy.appRoot=$APP_ROOT"
+        "-Dforge.diy.repoRoot=$REPO_ROOT"
         "-Dforge.net.activePortFile=$INSTALL_ROOT/state/active-server-port"
         "-Dforge.net.tunnelStatusFile=$INSTALL_ROOT/state/tunnel-status.properties")
     version=$(unzip -p "$jar" META-INF/MANIFEST.MF | tr -d '\r' | awk '
@@ -436,6 +455,7 @@ main() {
     update_runtime
     if ! find_java; then install_java; fi
     sync_profile
+    select_local_update
     step "当前构建版本：$(tr -d '\r\n' < "$APP_ROOT/BUILD-ID.txt")"
     step "Java：$JAVA_BIN"
     if [[ $INSTALL_ONLY == 0 ]]; then launch_forge; fi

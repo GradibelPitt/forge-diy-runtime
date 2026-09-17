@@ -1,9 +1,10 @@
 {
   "buildId": "20260915-203905-cardmaker-c0c4b907",
   "delivery": "git",
-  "sourceCommit": "38193210142db95edf9ce65a16911a43220ec59f",
+  "sourceCommit": "3ab32a077db76d7e71800db18bafcc655046fa2d",
   "moduleOverlays": [
-    "001-forge-diy-updater-resources.jar"
+    "001-forge-diy-updater-resources.jar",
+    "002-forge-diy-updater-platform.jar"
   ],
   "engineSourceCommit": "b791d0b96614c667fce405e47cd59aa6479ccac1",
   "upstreamCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
@@ -20,7 +21,8 @@
     "compilerCaptureFalsePositives": 2,
     "jarSha256": "F4D4F502FBACD7DB197587F55DDBCD74B6ABB9D0C3103D2B69AB2C8D76E4278F",
     "resourceUpdaterTests": "passed: complete tree, zero engine delta, official changes, tokens, DIY conflicts, edition rename, duplicate codes, unchanged prior test decisions",
-    "adventureExclusion": "passed: real sparse checkout, updater regressions, resource audit, packaging arguments, JVM resource loading; Windows full update and gameplay not run"
+    "adventureExclusion": "passed: real sparse checkout, updater regressions, resource audit, packaging arguments, JVM resource loading; Windows full update and gameplay not run",
+    "updaterPlatforms": "macOS Java-to-PowerShell process, native resource copy, version selection, live official plan; shared Windows/macOS regressions in CI; full engine rebuild not performed"
   },
   "cardResourceCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
   "cardResources": {
@@ -39,7 +41,7 @@
     ],
     "jarLoadProbe": "passed"
   },
-  "updaterResourceSha256": "F476511A9560F41897FFC2658819181792965E99D2588E2A292D5C5B2318FFCA",
+  "updaterResourceSha256": "CCFFFF7DD312DCAC509E90ED6E257D0D72FDC6591A656C84C15BECBA01D348E6",
   "cardmaker": {
     "version": "1.0.0",
     "card": "大地之鳞",

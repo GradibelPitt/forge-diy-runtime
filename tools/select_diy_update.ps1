@@ -11,7 +11,7 @@ function Assert-DiyUpdatePath([string]$Root, [string]$Path) {
         $part = [IO.Path]::GetDirectoryName($part)
     }
 }
-function Select-DiyUpdateApp([string]$InstallRoot, [string]$BaseApp) {
+function Select-DiyUpdateApp([string]$InstallRoot, [string]$BaseApp, [string]$ReleaseFile = '') {
     $updates = Join-Path $InstallRoot 'updates'
     $pointer = Join-Path $updates 'active.json'
     if (-not (Test-Path -LiteralPath $pointer -PathType Leaf)) { return $BaseApp }
@@ -19,7 +19,8 @@ function Select-DiyUpdateApp([string]$InstallRoot, [string]$BaseApp) {
         Assert-DiyUpdatePath $InstallRoot $pointer
         $state = Get-Content -LiteralPath $pointer -Raw -Encoding UTF8 | ConvertFrom-Json
         if ($state.schema -ne 1 -or $state.generation -cnotmatch '^[a-f0-9]{32}$') { throw 'Invalid update generation.' }
-        $releaseHash = (Get-FileHash -LiteralPath (Join-Path $InstallRoot 'repo/release.json') -Algorithm SHA256).Hash
+        if (-not $ReleaseFile) { $ReleaseFile = Join-Path $InstallRoot 'repo/release.json' }
+        $releaseHash = (Get-FileHash -LiteralPath $ReleaseFile -Algorithm SHA256).Hash
         if ($state.baseReleaseHash -ne $releaseHash) { throw 'The published DIY baseline changed; using the published release.' }
         $versionRoot = Join-Path $updates ('versions/' + $state.generation)
         $app = Join-Path $versionRoot 'app'
@@ -30,7 +31,16 @@ function Select-DiyUpdateApp([string]$InstallRoot, [string]$BaseApp) {
         }
         if ($state.jar -notmatch '^forge-[A-Za-z0-9._-]+-jar-with-dependencies\.jar$' -or
             $state.jarHash -notmatch '^[a-fA-F0-9]{64}$' -or $state.manifestHash -notmatch '^[a-fA-F0-9]{64}$') { throw 'Invalid update JAR metadata.' }
-        if (Test-Path -LiteralPath (Join-Path $app 'overlays')) { throw 'Local full builds must not contain stale module overlays.' }
+        $overlays = @($state.moduleOverlays | Where-Object { $_ })
+        if (($overlays -join '|') -cne (@($savedState.moduleOverlays | Where-Object { $_ }) -join '|')) { throw 'Mismatched platform overlays.' }
+        foreach ($name in $overlays) {
+            if ([IO.Path]::DirectorySeparatorChar -eq '\' -or $name -ne '000-forge-macos-native-audio.jar') { throw 'Unexpected local build overlay.' }
+        }
+        $actualOverlays = @()
+        if (Test-Path -LiteralPath (Join-Path $app 'overlays')) {
+            $actualOverlays = @(Get-ChildItem -LiteralPath (Join-Path $app 'overlays') -File | Select-Object -ExpandProperty Name)
+        }
+        if (($overlays -join '|') -cne ($actualOverlays -join '|')) { throw 'Local build overlays differ from verified metadata.' }
         $jar = Join-Path $app $state.jar
         $candidates = @(Get-ChildItem -LiteralPath $app -Filter '*-jar-with-dependencies.jar' -File)
         if ($candidates.Count -ne 1 -or $candidates[0].Name -ne $state.jar) { throw 'Ambiguous local update JAR.' }

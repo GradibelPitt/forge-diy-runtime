@@ -5,6 +5,10 @@ on:
       - 'app/res/adventure/**'
       - 'app/res/skins/default/sprite_adventure.png'
       - 'app/overlays/**'
+      - 'tools/run_diy_updater_macos.sh'
+      - 'tools/select_diy_update*.ps1'
+      - 'starter/**'
+      - 'tests/test_macos_update_selection.ps1'
       - 'release.json'
       - 'tools/build_release.ps1'
       - 'tools/publish_git_payload.ps1'
@@ -14,16 +18,24 @@ on:
 permissions:
   contents: read
 jobs:
-  windows:
-    runs-on: windows-latest
+  platforms:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            shell: powershell
+          - os: macos-latest
+            shell: pwsh
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     steps:
       - name: Fetch pinned updater and packaging fixtures
-        shell: powershell
+        shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
           $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
-          foreach ($path in @('release.json', 'tools/build_release.ps1', 'tools/publish_git_payload.ps1', 'tests/test_adventure_exclusion.ps1', 'app/overlays/001-forge-diy-updater-resources.jar')) {
+          foreach ($path in @('release.json', 'tools/build_release.ps1', 'tools/publish_git_payload.ps1', 'tests/test_adventure_exclusion.ps1', 'app/overlays/001-forge-diy-updater-resources.jar', 'app/overlays/002-forge-diy-updater-platform.jar', 'tools/select_diy_update.ps1', 'tools/select_diy_update_macos.ps1', 'tools/run_diy_updater_macos.sh', 'tests/test_diy_update.ps1', 'tests/test_macos_update_selection.ps1')) {
             $destination = Join-Path $env:GITHUB_WORKSPACE $path
             New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
             Invoke-WebRequest -UseBasicParsing "$base/$path" -OutFile $destination
@@ -33,10 +45,20 @@ jobs:
           foreach ($entry in $tree.tree) {
             if ($entry.path -match '^app/res/adventure(/|$)' -or $entry.path -eq 'app/res/skins/default/sprite_adventure.png') { throw "Adventure remains tracked: $($entry.path)" }
           }
-      - name: Verify embedded updater and native Windows resource copy
-        shell: powershell
+      - name: Verify embedded updater and version selection on both platforms
+        shell: pwsh
         run: |
           & ./tests/test_adventure_exclusion.ps1
+          & ./tests/test_diy_update.ps1
+          if ($env:RUNNER_OS -eq 'macOS') { & ./tests/test_macos_update_selection.ps1 }
           if ($LASTEXITCODE -gt 7) { throw 'Adventure regression failed.' }
           # Robocopy returns 1 when files were copied successfully.
+          $global:LASTEXITCODE = 0
+      - name: Windows PowerShell 5.1 runtime compatibility
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & ./tests/test_adventure_exclusion.ps1
+          & ./tests/test_diy_update.ps1
           $global:LASTEXITCODE = 0

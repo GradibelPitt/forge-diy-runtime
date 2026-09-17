@@ -258,3 +258,7 @@ Magic 从来都不只是“官方印了哪些牌”。
 ### Adventure 模式资源边界
 
 桌面 DIY runtime 不包含 `app/res/adventure/` 及专用的 `res/skins/default/sprite_adventure.png`。官方 updater 在更新计划、稀疏检出和资源复制时明确排除这两项；完整打包与皮肤同步也采用同一边界。历险牌、Venture／地城、Subgame 和普通卡牌／版本资源继续保留。更新器脚本通过 `app/overlays/001-forge-diy-updater-resources.jar` 优先加载，源码位于 `forge:diy` 的 `forge-gui/src/main/resources/forge/download/diy-updater.ps1`。
+
+### macOS / Windows updater parity
+
+Both platforms now run the same embedded updater and protection policy. macOS uses a checksum-verified PowerShell bootstrap when the update button is clicked, native JDK/Maven commands and the shared local-build validator on restart. Windows retains its system PowerShell entry. Updater changes must pass both platform CI jobs and deploy source plus embedded runtime components together. `002-forge-diy-updater-platform.jar` supplies the portable Java bridge; `001-forge-diy-updater-resources.jar` supplies the shared policy script. Restart Forge after installing these changes.
