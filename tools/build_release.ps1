@@ -19,13 +19,21 @@ New-Item -ItemType Directory -Path $Stage -Force | Out-Null
 Copy-Item -LiteralPath $Jar.FullName -Destination $Stage
 Copy-Item -LiteralPath (Join-Path $ForgeRoot 'forge-gui-desktop\target\forge.exe') -Destination $Stage
 
-function Copy-Tree([string]$Source, [string]$Destination) {
+function Copy-Tree([string]$Source, [string]$Destination, [string[]]$ExcludedDirectories = @(), [string[]]$ExcludedFiles = @()) {
     New-Item -ItemType Directory -Path $Destination -Force | Out-Null
-    & robocopy $Source $Destination /E /COPY:DAT /DCOPY:DAT /R:2 /W:1 /NFL /NDL /NJH /NJS /NP | Out-Null
+    $exclusions = @()
+    if ($ExcludedDirectories.Count) { $exclusions += @('/XD') + @($ExcludedDirectories | ForEach-Object { Join-Path $Source $_ }) }
+    if ($ExcludedFiles.Count) { $exclusions += @('/XF') + @($ExcludedFiles | ForEach-Object { Join-Path $Source $_ }) }
+    & robocopy $Source $Destination /E /COPY:DAT /DCOPY:DAT /R:2 /W:1 /NFL /NDL /NJH /NJS /NP @exclusions | Out-Null
     if ($LASTEXITCODE -gt 7) { throw "robocopy 失败: $LASTEXITCODE" }
 }
 
-Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res') (Join-Path $Stage 'res')
+Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res') (Join-Path $Stage 'res') -ExcludedDirectories @('adventure') -ExcludedFiles @('skins/default/sprite_adventure.png')
+# A reused staging directory must not retain assets excluded from this release.
+foreach ($relative in @('res/adventure', 'res/skins/default/sprite_adventure.png')) {
+    $obsolete = Join-Path $Stage $relative
+    if (Test-Path -LiteralPath $obsolete) { Remove-Item -LiteralPath $obsolete -Recurse -Force }
+}
 $translationSync = Join-Path $ForgeRoot 'custom\tools\sync_translations.ps1'
 if (Test-Path -LiteralPath $translationSync) {
     & $translationSync -LanguagesDirectory (Join-Path $Stage 'res\languages')

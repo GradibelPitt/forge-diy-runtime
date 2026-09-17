@@ -1,8 +1,10 @@
 {
   "buildId": "20260915-203905-cardmaker-c0c4b907",
   "delivery": "git",
-  "sourceCommit": "da940037f13dca03a0972241b1a88d4747fa7150",
-  "moduleOverlays": [],
+  "sourceCommit": "38193210142db95edf9ce65a16911a43220ec59f",
+  "moduleOverlays": [
+    "001-forge-diy-updater-resources.jar"
+  ],
   "engineSourceCommit": "b791d0b96614c667fce405e47cd59aa6479ccac1",
   "upstreamCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
   "updaterPolicyVersion": 2,
@@ -17,7 +19,8 @@
     "reviewedUpstreamChanges": 1,
     "compilerCaptureFalsePositives": 2,
     "jarSha256": "F4D4F502FBACD7DB197587F55DDBCD74B6ABB9D0C3103D2B69AB2C8D76E4278F",
-    "resourceUpdaterTests": "passed: complete tree, zero engine delta, official changes, tokens, DIY conflicts, edition rename, duplicate codes, unchanged prior test decisions"
+    "resourceUpdaterTests": "passed: complete tree, zero engine delta, official changes, tokens, DIY conflicts, edition rename, duplicate codes, unchanged prior test decisions",
+    "adventureExclusion": "passed: real sparse checkout, updater regressions, resource audit, packaging arguments, JVM resource loading; Windows full update and gameplay not run"
   },
   "cardResourceCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
   "cardResources": {
@@ -36,7 +39,7 @@
     ],
     "jarLoadProbe": "passed"
   },
-  "updaterResourceSha256": "8823C59A1BF6BCCB575A6E7A17FD49EB669FE6227B1D7F65D014325C3D6714D2",
+  "updaterResourceSha256": "F476511A9560F41897FFC2658819181792965E99D2588E2A292D5C5B2318FFCA",
   "cardmaker": {
     "version": "1.0.0",
     "card": "大地之鳞",
@@ -44,5 +47,6 @@
     "mode": "card",
     "baseRuntimeCommit": "e504a9f7b3ee02b98291d0e8939a55353f9e55d2",
     "validation": "script metadata, RGB JPEG, edition uniqueness and changed-file SHA-256; gameplay not run"
-  }
+  },
+  "adventureAssetsExcluded": true
 }

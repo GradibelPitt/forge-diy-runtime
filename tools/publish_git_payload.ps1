@@ -24,7 +24,7 @@ if ($SyncCustomTranslations -and -not (Test-Path -LiteralPath $translationSync))
     throw 'Custom translation sync helper is missing from ForgeRoot.'
 }
 
-function Copy-Tree([string]$Source, [string]$Destination) {
+function Copy-Tree([string]$Source, [string]$Destination, [string[]]$ExcludedDirectories = @(), [string[]]$ExcludedFiles = @()) {
     $sourcePath = (Resolve-Path -LiteralPath $Source).Path
     $destinationPath = [IO.Path]::GetFullPath($Destination)
     if (-not $destinationPath.StartsWith($AppRoot + [IO.Path]::DirectorySeparatorChar,
@@ -32,7 +32,10 @@ function Copy-Tree([string]$Source, [string]$Destination) {
         throw "拒绝同步到 app 目录之外：$destinationPath"
     }
     New-Item -ItemType Directory -Path $destinationPath -Force | Out-Null
-    & robocopy $sourcePath $destinationPath /MIR /COPY:DAT /DCOPY:DAT /R:2 /W:1 /NFL /NDL /NJH /NJS /NP | Out-Null
+    $exclusions = @()
+    if ($ExcludedDirectories.Count) { $exclusions += @('/XD') + @($ExcludedDirectories | ForEach-Object { Join-Path $Source $_ }) }
+    if ($ExcludedFiles.Count) { $exclusions += @('/XF') + @($ExcludedFiles | ForEach-Object { Join-Path $Source $_ }) }
+    & robocopy $sourcePath $destinationPath /MIR /COPY:DAT /DCOPY:DAT /R:2 /W:1 /NFL /NDL /NJH /NJS /NP @exclusions | Out-Null
     if ($LASTEXITCODE -gt 7) { throw "robocopy 失败：$LASTEXITCODE" }
 }
 
@@ -129,7 +132,13 @@ if ($SyncLocalization) {
 }
 
 if ($SyncSkins) {
-    Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res\skins') (Join-Path $AppRoot 'res\skins')
+    Copy-Tree (Join-Path $ForgeRoot 'forge-gui\res\skins') (Join-Path $AppRoot 'res\skins') -ExcludedFiles @('default/sprite_adventure.png')
+}
+
+# Adventure mode is outside the desktop runtime payload.
+foreach ($relative in @('res/adventure', 'res/skins/default/sprite_adventure.png')) {
+    $obsolete = Join-Path $AppRoot $relative
+    if (Test-Path -LiteralPath $obsolete) { Remove-Item -LiteralPath $obsolete -Recurse -Force }
 }
 
 $sourceCommit = (& git -C $ForgeRoot rev-parse HEAD).Trim()
