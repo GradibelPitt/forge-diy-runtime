@@ -38,3 +38,5 @@ jobs:
         run: |
           & ./tests/test_adventure_exclusion.ps1
           if ($LASTEXITCODE -gt 7) { throw 'Adventure regression failed.' }
+          # Robocopy returns 1 when files were copied successfully.
+          $global:LASTEXITCODE = 0
