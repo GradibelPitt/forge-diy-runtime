@@ -262,3 +262,5 @@ Magic 从来都不只是“官方印了哪些牌”。
 ### macOS / Windows updater parity
 
 Both platforms now run the same embedded updater and protection policy. macOS uses a checksum-verified PowerShell bootstrap when the update button is clicked, native JDK/Maven commands and the shared local-build validator on restart. Windows retains its system PowerShell entry. Updater changes must pass both platform CI jobs and deploy source plus embedded runtime components together. `002-forge-diy-updater-platform.jar` supplies the portable Java bridge; `001-forge-diy-updater-resources.jar` supplies the shared policy script. Restart Forge after installing these changes.
+
+Publishing a rebuilt `forge-gui` module retires the small `001`/`002` updater patches, so they cannot shadow later module changes. Runtime CI also compares the embedded policy hash against the pinned source commit on both desktop platforms.

@@ -82,6 +82,14 @@ if ($Module.Count -gt 0) {
         if (-not $candidate) { throw "找不到模块 JAR：$moduleName" }
         $overlayName = "$moduleName.jar"
         Copy-Item -LiteralPath $candidate.FullName -Destination (Join-Path $overlayRoot $overlayName) -Force
+        # A rebuilt GUI module contains both the bridge and policy resources.
+        # Retire the earlier small patches so they cannot shadow future updates.
+        if ($moduleName -eq 'forge-gui') {
+            foreach ($retired in @('001-forge-diy-updater-resources.jar', '002-forge-diy-updater-platform.jar')) {
+                $retiredPath = Join-Path $overlayRoot $retired
+                if (Test-Path -LiteralPath $retiredPath) { Remove-Item -LiteralPath $retiredPath -Force }
+            }
+        }
         $overlayNames += $overlayName
     }
 }

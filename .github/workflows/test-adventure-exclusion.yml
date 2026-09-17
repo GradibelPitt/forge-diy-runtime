@@ -40,6 +40,10 @@ jobs:
             New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
             Invoke-WebRequest -UseBasicParsing "$base/$path" -OutFile $destination
           }
+          $release = Get-Content ./release.json -Raw | ConvertFrom-Json
+          $source = "https://raw.githubusercontent.com/GradibelPitt/forge/$($release.sourceCommit)/forge-gui/src/main/resources/forge/download/diy-updater.ps1"
+          Invoke-WebRequest -UseBasicParsing $source -OutFile source-updater.ps1
+          if ((Get-FileHash source-updater.ps1 -Algorithm SHA256).Hash -ne $release.updaterResourceSha256) { throw 'Embedded updater does not match the pinned source policy.' }
           $tree = Invoke-RestMethod -Headers @{ Authorization = 'Bearer ${{ github.token }}' } "https://api.github.com/repos/$env:GITHUB_REPOSITORY/git/trees/$env:GITHUB_SHA`?recursive=1"
           if ($tree.truncated) { throw 'Runtime inventory truncated.' }
           foreach ($entry in $tree.tree) {
