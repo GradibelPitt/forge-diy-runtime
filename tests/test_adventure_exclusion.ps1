@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot
 foreach ($relative in @('app/res/adventure', 'app/res/skins/default/sprite_adventure.png')) {
     if (Test-Path -LiteralPath (Join-Path $root $relative)) { throw "Excluded asset present: $relative" }
@@ -23,8 +23,13 @@ foreach ($relative in @('tools/build_release.ps1', 'tools/publish_git_payload.ps
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $release = Get-Content (Join-Path $root 'release.json') -Raw | ConvertFrom-Json
 $overlay = '001-forge-diy-updater-resources.jar'
-if ($release.moduleOverlays -notcontains $overlay) { throw 'Updater overlay is not registered.' }
-$zip = [IO.Compression.ZipFile]::OpenRead((Join-Path $root "app/overlays/$overlay"))
+$carrier = Join-Path $root "app/overlays/$overlay"
+if ($release.moduleOverlays -notcontains $overlay) {
+    $jars = @(Get-ChildItem (Join-Path $root 'app') -File -Filter '*-jar-with-dependencies.jar')
+    if ($jars.Count -ne 1) { throw 'Expected one full desktop updater carrier.' }
+    $carrier = $jars[0].FullName
+}
+$zip = [IO.Compression.ZipFile]::OpenRead($carrier)
 try {
     $entry = $zip.GetEntry('forge/download/diy-updater.ps1')
     if (-not $entry) { throw 'Updater resource missing.' }
@@ -47,7 +52,7 @@ if ($env:OS -eq 'Windows_NT') {
             New-Item -ItemType Directory -Path (Split-Path $file) -Force | Out-Null
             [IO.File]::WriteAllText($file, 'fixture')
         }
-        $zip = [IO.Compression.ZipFile]::OpenRead((Join-Path $root "app/overlays/$overlay"))
+        $zip = [IO.Compression.ZipFile]::OpenRead($carrier)
         try { [IO.Compression.ZipFileExtensions]::ExtractToFile($zip.GetEntry('forge/download/diy-updater.ps1'), (Join-Path $fixture 'diy-updater.ps1')) } finally { $zip.Dispose() }
         . (Join-Path $fixture 'diy-updater.ps1') -LibraryOnly
         $new = Join-Path $fixture 'new'

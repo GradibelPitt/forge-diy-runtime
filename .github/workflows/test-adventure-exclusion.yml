@@ -35,7 +35,7 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
-          foreach ($path in @('release.json', 'tools/build_release.ps1', 'tools/publish_git_payload.ps1', 'tests/test_adventure_exclusion.ps1', 'app/overlays/001-forge-diy-updater-resources.jar', 'app/overlays/002-forge-diy-updater-platform.jar', 'tools/select_diy_update.ps1', 'tools/select_diy_update_macos.ps1', 'tools/run_diy_updater_macos.sh', 'tests/test_diy_update.ps1', 'tests/test_macos_update_selection.ps1')) {
+          foreach ($path in @('release.json', 'tools/build_release.ps1', 'tools/publish_git_payload.ps1', 'tests/test_adventure_exclusion.ps1', 'tools/select_diy_update.ps1', 'tools/select_diy_update_macos.ps1', 'tools/run_diy_updater_macos.sh', 'tests/test_diy_update.ps1', 'tests/test_macos_update_selection.ps1')) {
             $destination = Join-Path $env:GITHUB_WORKSPACE $path
             New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
             Invoke-WebRequest -UseBasicParsing "$base/$path" -OutFile $destination
@@ -46,6 +46,15 @@ jobs:
           if ((Get-FileHash source-updater.ps1 -Algorithm SHA256).Hash -ne $release.updaterResourceSha256) { throw 'Embedded updater does not match the pinned source policy.' }
           $tree = Invoke-RestMethod -Headers @{ Authorization = 'Bearer ${{ github.token }}' } "https://api.github.com/repos/$env:GITHUB_REPOSITORY/git/trees/$env:GITHUB_SHA`?recursive=1"
           if ($tree.truncated) { throw 'Runtime inventory truncated.' }
+          $carriers = @($release.moduleOverlays | ForEach-Object { "app/overlays/$_" })
+          if ($release.moduleOverlays -notcontains '001-forge-diy-updater-resources.jar') {
+            $carriers += @($tree.tree | Where-Object { $_.path -match '^app/[^/]+-jar-with-dependencies\.jar$' } | Select-Object -ExpandProperty path)
+          }
+          foreach ($path in $carriers) {
+            $destination = Join-Path $env:GITHUB_WORKSPACE $path
+            New-Item -ItemType Directory -Path (Split-Path $destination) -Force | Out-Null
+            Invoke-WebRequest -UseBasicParsing "$base/$path" -OutFile $destination
+          }
           foreach ($entry in $tree.tree) {
             if ($entry.path -match '^app/res/adventure(/|$)' -or $entry.path -eq 'app/res/skins/default/sprite_adventure.png') { throw "Adventure remains tracked: $($entry.path)" }
           }

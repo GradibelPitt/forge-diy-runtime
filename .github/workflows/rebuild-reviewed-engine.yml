@@ -1,0 +1,107 @@
+name: Build and publish reviewed DIY engine
+on:
+  push:
+    branches: [main]
+    paths: ['tools/reviewed-engine-release.json', 'tools/rebuild_reviewed_engine.ps1', '.github/workflows/rebuild-reviewed-engine.yml']
+permissions:
+  contents: write
+concurrency:
+  group: reviewed-engine-release
+  cancel-in-progress: false
+jobs:
+  policy:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: runtime
+          sparse-checkout: tools/reviewed-engine-release.json
+          sparse-checkout-cone-mode: false
+      - id: pin
+        shell: pwsh
+        run: |
+          $pin = (Get-Content runtime/tools/reviewed-engine-release.json -Raw | ConvertFrom-Json).sourceCommit
+          if ($pin -notmatch '^[a-f0-9]{40}$') { throw 'Invalid source pin' }
+          "sha=$pin" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: GradibelPitt/forge
+          ref: ${{ steps.pin.outputs.sha }}
+          path: source
+          filter: blob:none
+          sparse-checkout: |
+            custom/tests
+            forge-gui/src/main/resources/forge/download
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Validate shared policy on both platforms
+        shell: pwsh
+        run: |
+          $ErrorActionPreference='Stop'
+          & ./source/custom/tests/test_diy_updater.ps1
+          & ./source/custom/tests/test_diy_resource_update.ps1
+          & ./source/custom/tests/test_diy_online_policy.ps1
+          & ./source/custom/tests/test_diy_protection_platform.ps1
+          & ./source/custom/tests/test_diy_adventure_exclusion.ps1
+          $global:LASTEXITCODE=0
+      - name: Windows PowerShell compatibility
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: |
+          $ErrorActionPreference='Stop'
+          & ./source/custom/tests/test_diy_online_policy.ps1
+          & ./source/custom/tests/test_diy_protection_platform.ps1
+          $global:LASTEXITCODE=0
+  publish:
+    needs: policy
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: runtime
+      - id: pin
+        shell: pwsh
+        run: |
+          "sha=$((Get-Content runtime/tools/reviewed-engine-release.json -Raw | ConvertFrom-Json).sourceCommit)" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: GradibelPitt/forge
+          ref: ${{ steps.pin.outputs.sha }}
+          path: source
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /pom.xml
+            /.mvn/
+            /checkstyle*
+            /forge-core/
+            /forge-game/
+            /forge-ai/
+            /forge-gui/
+            /forge-gui-desktop/
+            /custom/
+            !*.dck
+            !/forge-gui/res/adventure/
+            !/forge-gui/res/skins/default/sprite_adventure.png
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Build, test and stage exact reviewed payload
+        shell: pwsh
+        run: ./runtime/tools/rebuild_reviewed_engine.ps1 -Source "$PWD/source" -Runtime "$PWD/runtime"
+      - name: Publish without overwriting concurrent runtime changes
+        working-directory: runtime
+        shell: bash
+        run: |
+          git fetch origin main
+          git merge-base --is-ancestor origin/main HEAD
+          git push origin HEAD:main
