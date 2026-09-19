@@ -1,33 +1,31 @@
 {
-  "buildId": "20260915-203905-cardmaker-c0c4b907",
+  "buildId": "20260917-reviewed-native-java-online-frozen",
   "delivery": "git",
-  "sourceCommit": "1ed43d524cedd30be13b0466c9aac8ca1ca3ecf1",
-  "moduleOverlays": [
-    "001-forge-diy-updater-resources.jar",
-    "002-forge-diy-updater-platform.jar"
-  ],
-  "engineSourceCommit": "b791d0b96614c667fce405e47cd59aa6479ccac1",
-  "upstreamCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
+  "sourceCommit": "e2f6c33302c5fd564dcc188265d7e2cd3fcdb02d",
+  "moduleOverlays": [],
+  "engineSourceCommit": "e2f6c33302c5fd564dcc188265d7e2cd3fcdb02d",
+  "upstreamCommit": "1575e927612f3a80b32c481580fd767bed1355b7",
   "updaterPolicyVersion": 2,
-  "updaterPolicyHash": "FDE84E9C014B36EEC57EA8E41D3EE89CF3F14B419A4B15FF48A0C7838D0D143D",
+  "updaterPolicyHash": "D2BAFF7117BB0DF70949C78D495D5920BDA30F17A10329045E1B7CD9D57F14AF",
   "validation": {
     "build": "success",
-    "tests": 914,
-    "passed": 900,
-    "skipped": 7,
-    "failures": 7,
+    "validationMode": "Local module suites plus targeted regressions after fixes; candidate aggregate verified separately",
     "testFailuresAcknowledged": true,
-    "reviewedUpstreamChanges": 1,
-    "compilerCaptureFalsePositives": 2,
-    "jarSha256": "F4D4F502FBACD7DB197587F55DDBCD74B6ABB9D0C3103D2B69AB2C8D76E4278F",
-    "resourceUpdaterTests": "passed: complete tree, zero engine delta, official changes, tokens, DIY conflicts, edition rename, duplicate codes, unchanged prior test decisions",
-    "adventureExclusion": "passed: real sparse checkout, updater regressions, resource audit, packaging arguments, JVM resource loading; Windows full update and gameplay not run",
-    "updaterPlatforms": "macOS Java-to-PowerShell process, native resource copy, version selection, live official plan; shared Windows/macOS regressions in CI; full engine rebuild not performed"
+    "failures": 9,
+    "jarSha256": "4E105A5F237FECD8ED2E7981EC2762240BF28BF46348EB34473272BC6348224C",
+    "targetedEditorTranslationImportTests": 103,
+    "candidateBridgeTestsPassed": 10,
+    "candidateBridgePlatformSkipped": 1,
+    "diyHistoryRules": 909,
+    "onlineUpdatesExcluded": true,
+    "sourcePlatformCI": "https://github.com/GradibelPitt/forge/actions/runs/35278618957",
+    "cloudRebuild": "Build compiled and packaged; publication blocked by missing precon fixture and 20-second performance timeout. Published artifact is the locally verified build.",
+    "performanceFollowup": "The 20,000-card performance test passed in the earlier full local suite but timed out in an isolated rerun at its unchanged 20-second limit. No assertion or timeout was weakened; investigate test-order/environment sensitivity separately."
   },
-  "cardResourceCommit": "c86308451651af63c1b4a69a2c47f9cd478d53f6",
+  "cardResourceCommit": "1575e927612f3a80b32c481580fd767bed1355b7",
   "cardResources": {
-    "officialTxtFiles": 35208,
-    "repairedFiles": 810,
+    "officialTxtFiles": 35419,
+    "repairedFiles": 288,
     "retiredRenamedFiles": 4,
     "uniqueEditionCodes": 680,
     "verifiedLoadedCards": {
@@ -41,7 +39,7 @@
     ],
     "jarLoadProbe": "passed"
   },
-  "updaterResourceSha256": "6BCAD4FEA29558F4F2C0A7F85CF71C39B7CA909BAC2EA492256221B066E009CE",
+  "updaterResourceSha256": "BA0CC67D8F273A33323A5D0FA685B3A79DB126618681831CF71FBA5926D1BBDC",
   "cardmaker": {
     "version": "1.0.0",
     "card": "大地之鳞",

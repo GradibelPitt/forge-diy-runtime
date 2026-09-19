@@ -41,7 +41,8 @@ Copy-Item -LiteralPath $jar[0].FullName -Destination $oldJar[0].FullName -Force
 foreach($name in @('001-forge-diy-updater-resources.jar','002-forge-diy-updater-platform.jar')){
  $path=Join-Path $app "overlays/$name";if(Test-Path -LiteralPath $path){Remove-Item -LiteralPath $path}
 }
-$changed=@($jar[0].Name)
+Write-Utf8 (Join-Path $app 'BUILD-ID.txt') "20260917-reviewed-native-java-online-frozen`n"
+$changed=@($jar[0].Name,'BUILD-ID.txt')
 foreach($path in $config.resourcePaths){
  if($path -notmatch '^forge-gui/res/(cardsfolder/|editions/|tokenscripts/)[^:\\\x00-\x1f]+\.txt$' -and $path -notin @('forge-gui/res/languages/en-US.properties','forge-gui/res/languages/zh-CN.properties')){throw "Invalid release resource: $path"}
  if($path -match '(^|/)\.\.(/|$)'){throw 'Invalid release resource traversal'}
@@ -67,7 +68,7 @@ $release.sourceCommit=$config.sourceCommit;$release.engineSourceCommit=$config.s
 $release.upstreamCommit=$config.upstreamCommit;$release.cardResourceCommit=$config.upstreamCommit
 $release.moduleOverlays=@($release.moduleOverlays | Where-Object {$_ -notin @('001-forge-diy-updater-resources.jar','002-forge-diy-updater-platform.jar')})
 $release.updaterResourceSha256=(Get-FileHash (Join-Path $Source 'forge-gui/src/main/resources/forge/download/diy-updater.ps1') -Algorithm SHA256).Hash
-$release.updaterPolicyHash=(Get-FileHash (Join-Path $Source 'forge-gui/src/main/resources/forge/download/diy-protection-history.tsv') -Algorithm SHA256).Hash
+$release.updaterPolicyHash=(Get-FileHash (Join-Path $Source 'forge-gui/src/main/resources/forge/download/DiyProtection.java') -Algorithm SHA256).Hash
 $release.validation=@{build='success';tests=$counts.tests;passed=($counts.tests-$counts.failures-$counts.errors-$counts.skipped);failures=($counts.failures+$counts.errors);skipped=$counts.skipped;testFailuresAcknowledged=[bool]$config.failuresAcknowledged;jarSha256=(Get-FileHash $jar[0].FullName -Algorithm SHA256).Hash;onlineUpdatesExcluded=$true;diyHistoryRules=([IO.File]::ReadAllLines((Join-Path $Source 'forge-gui/src/main/resources/forge/download/diy-protection-history.tsv')).Count-1)}
 $release.cardResources.officialTxtFiles=$config.officialFileCount;$release.cardResources.repairedFiles=288
 Write-Utf8 $releasePath (($release | ConvertTo-Json -Depth 12)+"`n")

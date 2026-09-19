@@ -1,8 +1,6 @@
 name: Build and publish reviewed DIY engine
 on:
-  push:
-    branches: [main]
-    paths: ['tools/reviewed-engine-release.json', 'tools/rebuild_reviewed_engine.ps1', '.github/workflows/rebuild-reviewed-engine.yml']
+  workflow_dispatch:
 permissions:
   contents: write
 concurrency:
@@ -87,7 +85,6 @@ jobs:
             /forge-gui/
             /forge-gui-desktop/
             /custom/
-            !*.dck
             !/forge-gui/res/adventure/
             !/forge-gui/res/skins/default/sprite_adventure.png
       - uses: actions/setup-java@v4
