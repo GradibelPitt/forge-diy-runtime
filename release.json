@@ -1,52 +1,9 @@
 {
-  "buildId": "20260917-reviewed-native-java-online-frozen",
+  "buildId": "20260919-auto-mana-partial-payment",
   "delivery": "git",
-  "sourceCommit": "e2f6c33302c5fd564dcc188265d7e2cd3fcdb02d",
-  "moduleOverlays": [],
-  "engineSourceCommit": "e2f6c33302c5fd564dcc188265d7e2cd3fcdb02d",
-  "upstreamCommit": "1575e927612f3a80b32c481580fd767bed1355b7",
-  "updaterPolicyVersion": 2,
-  "updaterPolicyHash": "D2BAFF7117BB0DF70949C78D495D5920BDA30F17A10329045E1B7CD9D57F14AF",
-  "validation": {
-    "build": "success",
-    "validationMode": "Local module suites plus targeted regressions after fixes; candidate aggregate verified separately",
-    "testFailuresAcknowledged": true,
-    "failures": 9,
-    "jarSha256": "4E105A5F237FECD8ED2E7981EC2762240BF28BF46348EB34473272BC6348224C",
-    "targetedEditorTranslationImportTests": 103,
-    "candidateBridgeTestsPassed": 10,
-    "candidateBridgePlatformSkipped": 1,
-    "diyHistoryRules": 909,
-    "onlineUpdatesExcluded": true,
-    "sourcePlatformCI": "https://github.com/GradibelPitt/forge/actions/runs/35278618957",
-    "cloudRebuild": "Build compiled and packaged; publication blocked by missing precon fixture and 20-second performance timeout. Published artifact is the locally verified build.",
-    "performanceFollowup": "The 20,000-card performance test passed in the earlier full local suite but timed out in an isolated rerun at its unchanged 20-second limit. No assertion or timeout was weakened; investigate test-order/environment sensitivity separately."
-  },
-  "cardResourceCommit": "1575e927612f3a80b32c481580fd767bed1355b7",
-  "cardResources": {
-    "officialTxtFiles": 35419,
-    "repairedFiles": 288,
-    "retiredRenamedFiles": 4,
-    "uniqueEditionCodes": 680,
-    "verifiedLoadedCards": {
-      "TRK": 91,
-      "TRC": 39,
-      "HOB": 193,
-      "HOC": 117
-    },
-    "unsupportedOfficialCards": [
-      "Borg Queen, Perfection Manifest"
-    ],
-    "jarLoadProbe": "passed"
-  },
-  "updaterResourceSha256": "BA0CC67D8F273A33323A5D0FA685B3A79DB126618681831CF71FBA5926D1BBDC",
-  "cardmaker": {
-    "version": "1.0.0",
-    "card": "大地之鳞",
-    "number": "206",
-    "mode": "card",
-    "baseRuntimeCommit": "e504a9f7b3ee02b98291d0e8939a55353f9e55d2",
-    "validation": "script metadata, RGB JPEG, edition uniqueness and changed-file SHA-256; gameplay not run"
-  },
-  "adventureAssetsExcluded": true
+  "sourceCommit": "7bf0702660bf5f91eb6fc5a8ff89591e917f6338",
+  "moduleOverlays": [
+    "forge-ai.jar",
+    "forge-gui.jar"
+  ]
 }
