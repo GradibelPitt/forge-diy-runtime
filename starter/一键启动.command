@@ -674,7 +674,7 @@ FORGE_DIY_JXA
 show_launcher_ui() {
     local ui_script build='' code=0
     mkdir -p "$USER_ROOT"
-    ui_script=$(mktemp "$INSTALL_ROOT/state/launcher-ui.XXXXXX.js")
+    ui_script=$(mktemp "$INSTALL_ROOT/state/launcher-ui.XXXXXX")
     write_launcher_ui "$ui_script"
     if [[ -s "$APP_ROOT/BUILD-ID.txt" ]]; then build=$(tr -d '\r\n' < "$APP_ROOT/BUILD-ID.txt"); fi
     /usr/bin/osascript -l JavaScript "$ui_script" "${BASH_SOURCE[0]}" \
@@ -687,8 +687,8 @@ show_launcher_ui() {
 launcher_self_test() {
     local ui_script compiled output
     /bin/bash -n "${BASH_SOURCE[0]}"
-    ui_script=$(mktemp /tmp/forge-diy-launcher-ui.XXXXXX.js)
-    compiled=${ui_script%.js}.scpt
+    ui_script=$(mktemp /tmp/forge-diy-launcher-ui.XXXXXX)
+    compiled=${ui_script}.scpt
     write_launcher_ui "$ui_script"
     /usr/bin/osacompile -l JavaScript -o "$compiled" "$ui_script"
     output=$(/usr/bin/osascript -l JavaScript "$ui_script" --self-test)
