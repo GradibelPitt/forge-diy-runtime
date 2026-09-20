@@ -41,8 +41,10 @@ exit "${GAME_EXIT:-0}"
         self.java.chmod(0o755)
         # Exercise Bash 3.2 under a real UTF-8 locale, including Chinese text
         # immediately after variable expansions in failure messages.
+        self.home = self.root / 'home'
+        self.home.mkdir()
         self.env = dict(os.environ, TEST_ROOT=str(self.root), LAUNCHER=str(LAUNCHER),
-                        MOCK_JAVA=str(self.java), LC_ALL='en_US.UTF-8')
+                        MOCK_JAVA=str(self.java), HOME=str(self.home), LC_ALL='en_US.UTF-8')
         self.prefix = '''set -euo pipefail
 source "$LAUNCHER"
 shopt -s nullglob
@@ -54,6 +56,7 @@ initialize_paths() {
     APP_ROOT="$REPO_ROOT/app"
     JAVA_ROOT="$INSTALL_ROOT/java17-macos"
     LOG_ROOT="$INSTALL_ROOT/logs"
+    SETTINGS_FILE="$INSTALL_ROOT/launcher-settings.properties"
     mkdir -p "$LOG_ROOT" "$INSTALL_ROOT/state"
 }
 find_java() { JAVA_BIN="$MOCK_JAVA"; }
@@ -325,6 +328,33 @@ download() {
         archive.write_bytes(b'corrupted archive')
         self.run_bash('initialize_paths; SETUP_DIR=$(mktemp -d "$INSTALL_ROOT/.macos-setup.XXXXXX"); ARCH=aarch64; OFFLINE=0; install_java', success=False)
         self.assertTrue((self.install / 'java17-macos/Contents/Home/bin/java').is_file())
+
+    def test_launcher_settings_are_validated_saved_and_applied(self):
+        self.run_bash('main --save-settings en-US Default false Full')
+        settings = (self.install / 'launcher-settings.properties').read_text()
+        self.assertIn('UI_LANGUAGE=en-US', settings)
+        self.assertIn('UI_SKIN=Default', settings)
+        self.assertIn('UI_ENABLE_MUSIC=false', settings)
+        self.assertIn('UI_CARD_ART_FORMAT=Full', settings)
+        preferences = (self.root / 'profile/preferences/forge.preferences').read_text()
+        self.assertIn('UI_LANGUAGE=en-US', preferences)
+        self.assertIn('UI_SKIN=Default', preferences)
+        self.assertIn('UI_ENABLE_MUSIC=false', preferences)
+        self.assertIn('UI_CARD_ART_FORMAT=Full', preferences)
+        self.run_bash('main --save-settings invalid Default true Crop', success=False)
+        self.assertEqual((self.install / 'launcher-settings.properties').read_text(), settings)
+
+    def test_legacy_migration_only_adds_missing_files(self):
+        old_deck = self.home / '.forge/decks/constructed/old.dck'
+        self.write(old_deck, 'legacy deck')
+        existing = self.root / 'profile/decks/constructed/existing.dck'
+        self.write(existing, 'current deck')
+        self.write(self.home / '.forge/decks/constructed/existing.dck', 'must not overwrite')
+        self.write(self.home / '.cache/forge/pics/cards/legacy.jpg', 'legacy image')
+        self.run_bash('main --migrate')
+        self.assertEqual((self.root / 'profile/decks/constructed/old.dck').read_text(), 'legacy deck')
+        self.assertEqual(existing.read_text(), 'current deck')
+        self.assertEqual((self.root / 'cache/pics/cards/legacy.jpg').read_text(), 'legacy image')
 
 
 if __name__ == '__main__':

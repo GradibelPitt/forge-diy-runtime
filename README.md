@@ -172,7 +172,9 @@ chmod +x 一键启动.command
 
 若 macOS 提示无法确认开发者，请通过系统提供的“打开”确认该文件的来源。
 
-可选参数：`--offline` 使用已有安装、`--install-only` 只安装和同步、`--self-test` 检查脚本语法。`FORGE_DIY_HOME` 可指定运行包安装目录；目录名支持空格和中文，不支持冒号。
+无参数双击时会打开 macOS 原生启动面板，可以正常/离线启动、检查更新、导入旧版 `~/.forge` 资料、打开资料与日志目录，并设置语言、界面主题、卡图样式和音乐。设置保存在 `launcher-settings.properties`，启动同步时只更新对应 Forge 偏好，保留套牌和其他用户设置。“实验性功能”区域与稳定启动流程分开，作为后续功能的独立入口。
+
+可选命令行参数：`--offline` 使用已有安装、`--install-only` 只安装和同步、`--migrate` 安全导入旧版资料、`--self-test` 检查 Bash 与启动面板。`FORGE_DIY_HOME` 可指定运行包安装目录；目录名支持空格和中文，不支持冒号。
 
 | 内容 | macOS 路径 |
 | --- | --- |
@@ -181,13 +183,13 @@ chmod +x 一键启动.command
 | 图片缓存 | `~/Library/Caches/Forge/` |
 | 启动日志 | `~/Library/Application Support/ForgeDIY/logs/` |
 
-同步保留用户套牌和无关设置，统一应用与 Windows 版相同的皮肤、卡图格式和音乐选项。macOS 入口负责运行包更新和启动；Windows 专属的磁盘迁移、PowerShell TCP Exposer 管理和本地源码构建切换不在该入口中运行。
+同步保留用户套牌和无关设置。macOS 面板的“导入旧版资料”只把 `~/.forge` 和 `~/.cache/forge` 中尚未存在的文件补充到 macOS 标准目录，不覆盖、不删除原资料。Windows 专属的跨盘存储迁移仍由 `tools/storage_migration.ps1` 执行；PowerShell TCP Exposer 管理和本地源码构建切换也不在 macOS 入口中运行。
 
 ### 启动相关结构
 
 ```text
 starter/                       # 用户可双击的入口
-├─ 一键启动.command             # macOS 独立启动器
+├─ 一键启动.command             # macOS 单文件启动器（内含原生面板）
 ├─ 一键安装并启动.cmd           # Windows 常规启动
 ├─ 强制修复并启动.cmd           # Windows 修复
 └─ ForgeDIY_Repair.bat           # Windows 英文修复入口
