@@ -140,7 +140,7 @@ restore_incremental_update() {
 
 update_incrementally() {
     local current=$1 sha=$2 comparison="$SETUP_DIR/compare.json" delta="$SETUP_DIR/delta"
-    local i=0 path status previous url expected actual size target jar_changed=0
+    local i=0 path status previous url expected actual size target jar_changed=0 new_jar_hash='' old_jar_hash=''
     local paths=() statuses=()
     download "https://api.github.com/repos/GradibelPitt/forge-diy-runtime/compare/$current...$sha?per_page=1" "$comparison" || return 1
     # GitHub returns at most 300 changed files, even with pagination. A truncated
@@ -191,9 +191,10 @@ update_incrementally() {
             chmod +x "$target" || return 1
         fi
     done
-    if [[ -f "$delta/new/release.json" ]] &&
-       [[ $(json_value "$delta/new/release.json" validation.jarSha256) != $(json_value "$REPO_ROOT/release.json" validation.jarSha256) ]]; then
-        jar_changed=1
+    if [[ -f "$delta/new/release.json" ]]; then
+        if ! new_jar_hash=$(json_value "$delta/new/release.json" validation.jarSha256); then new_jar_hash=''; fi
+        if ! old_jar_hash=$(json_value "$REPO_ROOT/release.json" validation.jarSha256); then old_jar_hash=''; fi
+        if [[ -n "$new_jar_hash" && "$new_jar_hash" != "$old_jar_hash" ]]; then jar_changed=1; fi
     fi
     printf '%s\n' .runtime-commit >> "$delta/affected"
     LC_ALL=C sort -u "$delta/affected" -o "$delta/affected" || return 1
@@ -266,6 +267,14 @@ update_runtime() {
     # from the EXIT trap if interrupted between these two renames.
     if [[ -e "$REPO_ROOT" ]]; then mv "$REPO_ROOT" "$SETUP_DIR/previous-repo"; fi
     mv "$staged" "$REPO_ROOT"
+}
+
+use_installed_runtime() {
+    validate_runtime "$REPO_ROOT" || {
+        fail '本机还没有完整的 Forge DIY 运行包，请先在面板中点击“检查更新”。'
+        return 1
+    }
+    step '使用本机已安装版本（未检查更新）。'
 }
 
 usable_java() {
@@ -548,7 +557,7 @@ ObjC.registerSubclass({
             types: ['void', ['id']],
             implementation: function (sender) {
                 var tag = Number(sender.tag);
-                if (tag === 1) launch(['--from-ui'], '正在更新并启动 Forge');
+                if (tag === 1) launch(['--from-ui'], '正在启动本机已安装的 Forge');
                 if (tag === 2) launch(['--from-ui', '--offline'], '正在离线启动 Forge');
                 if (tag === 3) launch(['--from-ui', '--install-only'], '正在检查更新并同步内容');
                 if (tag === 4) launch(['--from-ui', '--migrate'], '正在导入旧版资料');
@@ -621,7 +630,7 @@ function run(argv) {
     ui.actionButtons.push(addButton(launchBox, '启动 Forge', frame(18, 76, 210, 42), 1, ui.controller, true));
     ui.actionButtons.push(addButton(launchBox, '离线启动', frame(244, 76, 145, 42), 2, ui.controller, false));
     ui.actionButtons.push(addButton(launchBox, '检查更新', frame(405, 76, 145, 42), 3, ui.controller, false));
-    addLabel(launchBox, '正常启动会先进行快速增量更新；离线启动只使用本机已有版本。', frame(18, 40, 650, 22), 12, $.NSColor.secondaryLabelColor, false);
+    addLabel(launchBox, '启动会直接使用本机已安装版本；只有点击“检查更新”才会连接 GitHub。', frame(18, 40, 650, 22), 12, $.NSColor.secondaryLabelColor, false);
 
     var settingsBox = $.NSBox.alloc.initWithFrame(frame(24, 128, 470, 178));
     settingsBox.title = $('Settings');
@@ -729,6 +738,7 @@ main() {
     OFFLINE=0
     INSTALL_ONLY=0
     MIGRATE_ONLY=0
+    CHECK_UPDATE=0
     SAVE_SETTINGS=0
     GAME_ARGS=()
     if [[ $# -eq 0 && ${FORGE_DIY_NO_UI:-0} != 1 ]]; then
@@ -741,7 +751,8 @@ main() {
     while [[ $# -gt 0 ]]; do
         case $1 in
             --offline) OFFLINE=1 ;;
-            --install-only) INSTALL_ONLY=1 ;;
+            --install-only) INSTALL_ONLY=1; CHECK_UPDATE=1 ;;
+            --update) CHECK_UPDATE=1 ;;
             --migrate) MIGRATE_ONLY=1 ;;
             --from-ui) ;;
             --save-settings)
@@ -752,7 +763,7 @@ main() {
                 ;;
             --self-test) launcher_self_test; return ;;
             --help|-h)
-                printf '用法：一键启动.command [--offline] [--install-only] [--migrate] [--self-test] [-- 游戏参数]\n'
+                printf '用法：一键启动.command [--offline] [--update] [--install-only] [--migrate] [--self-test] [-- 游戏参数]\n'
                 printf '无参数时打开 Forge DIY 启动面板。\n'
                 return
                 ;;
@@ -793,7 +804,7 @@ main() {
         return
     fi
     detect_architecture
-    update_runtime
+    if [[ $CHECK_UPDATE == 1 ]]; then update_runtime; else use_installed_runtime; fi
     if ! find_java; then install_java; fi
     sync_profile
     select_local_update

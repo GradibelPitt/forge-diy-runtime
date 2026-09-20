@@ -181,6 +181,12 @@ download() {
         self.assertEqual(args[-2], 'forge.view.Main')
         self.assertNotIn('*', args[args.index('-cp') + 1])
 
+    def test_normal_launch_uses_installed_runtime_without_update_check(self):
+        self.runtime(self.repo)
+        result = self.run_bash('main --from-ui')
+        self.assertIn('未检查更新', result.stdout)
+        self.assertFalse((self.root / 'requests').exists())
+
     def test_failed_game_is_reported_and_unlocks(self):
         self.runtime(self.repo)
         r = self.run_bash('main --offline', success=False, GAME_EXIT='7')
@@ -294,6 +300,16 @@ download() {
         self.delta([('app/' + jar.name, b'bad jar', None)], current=SHA, sha='c' * 40)
         self.run_bash('main --install-only', success=False)
         self.assertEqual(jar.read_bytes(), updated)
+        self.assertEqual((self.repo / '.runtime-commit').read_text().strip(), SHA)
+
+    def test_delta_accepts_release_without_legacy_jar_hash(self):
+        self.runtime(self.repo)
+        release = dict(buildId='fixture-build', moduleOverlays=[])
+        self.write(self.repo / 'release.json', json.dumps(release))
+        updated = dict(release, delivery='git')
+        self.delta([('release.json', json.dumps(updated), None)])
+        self.run_bash('verify_jar() { return 91; }; main --install-only')
+        self.assertEqual(json.loads((self.repo / 'release.json').read_text()), updated)
         self.assertEqual((self.repo / '.runtime-commit').read_text().strip(), SHA)
 
     def test_compare_file_limit_falls_back_to_complete_snapshot(self):
