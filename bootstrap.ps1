@@ -9,7 +9,12 @@ $ErrorActionPreference = 'Stop'
 $Owner = 'GradibelPitt'
 $Repository = 'forge-diy-runtime'
 $RepoUrl = "https://github.com/$Owner/$Repository.git"
-$InstallRoot = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'ForgeDIY'
+$DefaultInstallRoot = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'ForgeDIY'
+$InstallRoot = if (-not [string]::IsNullOrWhiteSpace($env:FORGE_DIY_HOME)) {
+    [IO.Path]::GetFullPath([Environment]::ExpandEnvironmentVariables($env:FORGE_DIY_HOME))
+} else {
+    $DefaultInstallRoot
+}
 $RepoRoot = Join-Path $InstallRoot 'repo'
 $AppRoot = Join-Path $RepoRoot 'app'
 $ToolsRoot = Join-Path $InstallRoot 'tools'
@@ -119,6 +124,10 @@ function Confirm-ForgeStorageMigration {
 }
 
 function Initialize-ForgeStorage {
+    if (-not [string]::IsNullOrWhiteSpace($env:FORGE_DIY_HOME)) {
+        Write-Step 'FORGE_DIY_HOME 已指定安装位置，跳过自动存储迁移。'
+        return
+    }
     if (-not (Confirm-ForgeStorageMigration)) {
         Write-Step '已跳过迁移，将在原位置继续安装/更新。'
         return
@@ -370,14 +379,53 @@ function Install-BundledTunnelConfig {
     Write-Host '[Forge DIY] 已安装预设的 TCP Exposer 固定端口配置。' -ForegroundColor Green
 }
 
+function Resolve-ForgeDesktopDirectory {
+    $candidates = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($candidate in @(
+        [Environment]::GetFolderPath('DesktopDirectory'),
+        [Environment]::GetFolderPath('Desktop'),
+        $(if ($env:USERPROFILE) { Join-Path $env:USERPROFILE 'Desktop' } else { $null })
+    )) {
+        if (-not [string]::IsNullOrWhiteSpace($candidate) -and -not $candidates.Contains($candidate)) {
+            $candidates.Add($candidate)
+        }
+    }
+    foreach ($candidate in $candidates) {
+        if (Test-Path -LiteralPath $candidate -PathType Container) { return $candidate }
+    }
+    if ($env:USERPROFILE) {
+        $fallback = Join-Path $env:USERPROFILE 'Desktop'
+        try {
+            New-Item -ItemType Directory -Path $fallback -Force | Out-Null
+            if (Test-Path -LiteralPath $fallback -PathType Container) { return $fallback }
+        } catch { }
+    }
+    return $null
+}
+
 function New-DesktopShortcut([string]$ScriptPath) {
-    $desktop = [Environment]::GetFolderPath('Desktop')
-    $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Forge DIY.lnk'))
-    $shortcut.TargetPath = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
-    $shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$ScriptPath`""
-    $shortcut.WorkingDirectory = Split-Path $ScriptPath -Parent
-    $shortcut.IconLocation = (Join-Path $AppRoot 'forge.exe') + ',0'
-    $shortcut.Save()
+    try {
+        $desktop = Resolve-ForgeDesktopDirectory
+        if (-not $desktop) {
+            Write-Warning '无法解析可用的桌面目录，已跳过创建快捷方式；不影响安装或启动。'
+            return
+        }
+        $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Forge DIY.lnk'))
+        $launcher = Join-Path $RepoRoot 'starter\一键启动.bat'
+        if (Test-Path -LiteralPath $launcher -PathType Leaf) {
+            $shortcut.TargetPath = $launcher
+            $shortcut.Arguments = ''
+            $shortcut.WorkingDirectory = Split-Path $launcher -Parent
+        } else {
+            $shortcut.TargetPath = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
+            $shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$ScriptPath`""
+            $shortcut.WorkingDirectory = Split-Path $ScriptPath -Parent
+        }
+        $shortcut.IconLocation = (Join-Path $AppRoot 'forge.exe') + ',0'
+        $shortcut.Save()
+    } catch {
+        Write-Warning "无法创建桌面快捷方式，已跳过；不影响安装或启动：$($_.Exception.Message)"
+    }
 }
 
 if ($SelfTest) {
