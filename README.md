@@ -127,13 +127,15 @@ Forge 上游项目：
 
 ### Windows
 
-下载或克隆仓库后，运行：
+下载或克隆仓库后，双击：
 
 ```text
-starter/一键安装并启动.cmd
+starter/一键启动.bat
 ```
 
-该入口会获取最新的 `bootstrap.ps1`，安装 / 同步运行环境并启动 Forge。
+Windows 入口现在与 macOS 启动器采用同一使用逻辑：无参数时打开启动面板，可直接启动本机版本、离线启动、显式检查更新、导入旧版资料，并设置语言、主题、卡图样式和音乐。普通“启动 Forge”不会访问 GitHub；只有“检查更新”会下载最新 `bootstrap.ps1` 并同步运行环境。
+
+旧入口 `starter/一键安装并启动.cmd` 保留为兼容跳转器，使用 `%~dp0` 查找同目录的 `一键启动.bat`；不会写死用户目录、Desktop 或 OneDrive 路径。若只单独保留旧 CMD，它会临时下载最新 BAT 后继续。
 
 如果本地运行仓库已经损坏、更新中断，或者普通启动无法恢复，可以使用：
 
@@ -141,9 +143,9 @@ starter/一键安装并启动.cmd
 starter/强制修复并启动.cmd
 ```
 
-英文兼容入口是 `starter/ForgeDIY_Repair.bat`。三个 Windows 入口仍下载根目录的 [`bootstrap.ps1`](bootstrap.ps1)，不依赖当前工作目录。
+英文兼容修复入口是 `starter/ForgeDIY_Repair.bat`。强制修复会删除 `%LOCALAPPDATA%\ForgeDIY\repo` 中的运行缓存并重新获取运行环境，因此它应该作为**修复入口**，而不是每次启动的默认方式。
 
-强制修复会删除 `%LOCALAPPDATA%\ForgeDIY\repo` 中的运行缓存并重新获取运行环境，因此它应该作为**修复入口**，而不是每次启动的默认方式。
+Windows 启动器和 bootstrap 都支持 `FORGE_DIY_HOME` 自定义安装目录。桌面快捷方式路径通过 Windows 系统目录 API 解析；即使系统残留失效的 OneDrive Desktop 重定向，快捷方式创建失败也只会被跳过，不会阻止 Forge 安装或启动。
 
 错误日志通常位于：
 
@@ -190,7 +192,8 @@ chmod +x 一键启动.command
 ```text
 starter/                       # 用户可双击的入口
 ├─ 一键启动.command             # macOS 单文件启动器（内含原生面板）
-├─ 一键安装并启动.cmd           # Windows 常规启动
+├─ 一键启动.bat                 # Windows 单文件启动器（内含 WinForms 面板）
+├─ 一键安装并启动.cmd           # Windows 旧入口兼容跳转
 ├─ 强制修复并启动.cmd           # Windows 修复
 └─ ForgeDIY_Repair.bat           # Windows 英文修复入口
 bootstrap.ps1                  # Windows 安装和同步实现，保留原 GitHub 地址
