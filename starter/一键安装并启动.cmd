@@ -1,26 +1,22 @@
 @echo off
-setlocal
 chcp 65001 >nul
-title Forge DIY 一键安装并启动
-set "BOOTSTRAP_URL=https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/main/bootstrap.ps1"
-set "BOOTSTRAP_FILE=%TEMP%\forge-diy-bootstrap-%RANDOM%-%RANDOM%.ps1"
-set "BOOTSTRAP_ARGS="
-if /i "%~1"=="--self-test" set "BOOTSTRAP_ARGS=-SelfTest"
+setlocal EnableExtensions
+set "LAUNCHER=%~dp0一键启动.bat"
+set "TEMP_LAUNCHER="
 
-echo [Forge DIY] 正在下载安装脚本...
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing -Uri '%BOOTSTRAP_URL%' -OutFile '%BOOTSTRAP_FILE%'"
-if errorlevel 1 (
-  echo [错误] 无法下载安装脚本，请检查网络后重试。
-  pause
-  exit /b 1
+if not exist "%LAUNCHER%" (
+  echo [Forge DIY] 当前目录缺少新版一键启动.bat，正在获取兼容启动器...
+  set "TEMP_LAUNCHER=%TEMP%\forge-diy-launcher-%RANDOM%-%RANDOM%.bat"
+  set "LAUNCHER=%TEMP_LAUNCHER%"
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/GradibelPitt/forge-diy-runtime/main/starter/%E4%B8%80%E9%94%AE%E5%90%AF%E5%8A%A8.bat' -OutFile $env:TEMP_LAUNCHER"
+  if errorlevel 1 (
+    echo [错误] 无法获取新版启动器，请检查网络后重试。
+    pause
+    exit /b 1
+  )
 )
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%BOOTSTRAP_FILE%" %BOOTSTRAP_ARGS%
-if errorlevel 1 (
-  echo [错误] 安装或启动失败。请保留本窗口中的错误信息。
-  del /f /q "%BOOTSTRAP_FILE%" >nul 2>&1
-  pause
-  exit /b 1
-)
-del /f /q "%BOOTSTRAP_FILE%" >nul 2>&1
-endlocal
+call "%LAUNCHER%" %*
+set "EXIT_CODE=%ERRORLEVEL%"
+if defined TEMP_LAUNCHER del /f /q "%TEMP_LAUNCHER%" >nul 2>&1
+exit /b %EXIT_CODE%
