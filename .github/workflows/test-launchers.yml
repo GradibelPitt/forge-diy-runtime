@@ -43,7 +43,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Fetch only launcher sources from this commit
-        shell: powershell
+        shell: pwsh
         run: |
           $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
           foreach ($path in @('bootstrap.ps1', 'starter/一键启动.bat', 'starter/一键安装并启动.cmd', 'tools/storage_migration.ps1', 'tests/test_storage_helper.ps1', 'tests/test_storage_launcher.ps1')) {
@@ -53,8 +53,8 @@ jobs:
             & curl.exe -fLsS "$base/$encodedPath" -o "$destination"
             if ($LASTEXITCODE -ne 0) { throw "Could not fetch $path from $env:GITHUB_SHA" }
           }
-      - name: Windows PowerShell 5.1 helper loading and launcher behavior
-        shell: powershell
+      - name: Windows BAT UTF-8 and path behavior
+        shell: pwsh
         run: |
           $launcher = Join-Path $env:GITHUB_WORKSPACE 'starter\一键启动.bat'
           $launcherBytes = [IO.File]::ReadAllBytes($launcher)
@@ -81,6 +81,9 @@ jobs:
           } finally {
             Pop-Location
           }
+      - name: Windows PowerShell 5.1 helper loading and storage behavior
+        shell: powershell
+        run: |
           & ./tests/test_storage_helper.ps1
           # Hosted runners have no interactive Windows console for PromptForChoice.
           & ./tests/test_storage_launcher.ps1 -SkipConsoleProbe
