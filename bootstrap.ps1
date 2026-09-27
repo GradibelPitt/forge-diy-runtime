@@ -515,7 +515,7 @@ try {
         Write-Step '使用本机已安装版本（未检查更新）。'
         $runtimeFailure = Get-FastRuntimeFailure $AppRoot
         if ($runtimeFailure) {
-            throw "本机 Forge DIY 运行包不可用：$runtimeFailure。请从启动面板选择“检查更新”。"
+            throw "本机 Forge DIY 运行包不可用：$runtimeFailure。请从启动面板选择 [检查更新]。"
         }
     }
 
