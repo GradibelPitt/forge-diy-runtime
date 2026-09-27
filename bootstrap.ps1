@@ -2,7 +2,9 @@
     [switch]$InstallOnly,
     [switch]$IgnoreSystemJava,
     [switch]$SelfTest,
-    [switch]$FullVerify
+    [switch]$FullVerify,
+    [switch]$NoUpdate,
+    [switch]$Offline
 )
 
 $ErrorActionPreference = 'Stop'
@@ -348,12 +350,317 @@ function Get-ForgeRuntimeVersion([string]$JarPath) {
     return $null
 }
 
+function Get-LauncherSettings {
+    $settings = [ordered]@{
+        UI_LANGUAGE = 'zh-CN'
+        UI_SKIN = 'Warmwood'
+        UI_ENABLE_MUSIC = 'true'
+        UI_CARD_ART_FORMAT = 'Crop'
+    }
+    $settingsFile = Join-Path $InstallRoot 'launcher-settings.properties'
+    if (Test-Path -LiteralPath $settingsFile -PathType Leaf) {
+        foreach ($line in Get-Content -LiteralPath $settingsFile -Encoding UTF8) {
+            if ($line -notmatch '^([^=]+)=(.*)
+
+function Install-BundledTunnelConfig {
+    if (Test-Path -LiteralPath $TunnelConfigFile -PathType Leaf) { return }
+    if (-not (Test-Path -LiteralPath $BundledTunnelConfigFile -PathType Leaf)) { return }
+
+    try {
+        $bundledConfig = Get-Content -LiteralPath $BundledTunnelConfigFile -Raw -Encoding UTF8 | ConvertFrom-Json
+        $identityFile = [Environment]::ExpandEnvironmentVariables(([string]$bundledConfig.identityFile).Trim())
+    } catch {
+        Write-Warning "预设的 TCP Exposer 配置无法读取，已跳过：$($_.Exception.Message)"
+        return
+    }
+    if ([string]::IsNullOrWhiteSpace($identityFile) -or
+            -not (Test-Path -LiteralPath $identityFile -PathType Leaf)) {
+        Write-Step '未检测到本机专属的 TCP Exposer 私钥；保持普通 UPnP/手动端口映射模式。'
+        return
+    }
+
+    $configRoot = Split-Path $TunnelConfigFile -Parent
+    New-Item -ItemType Directory -Path $configRoot -Force | Out-Null
+    Copy-Item -LiteralPath $BundledTunnelConfigFile -Destination $TunnelConfigFile
+    Write-Host '[Forge DIY] 已安装预设的 TCP Exposer 固定端口配置。' -ForegroundColor Green
+}
+
+function Resolve-ForgeDesktopDirectory {
+    $candidates = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($candidate in @(
+        [Environment]::GetFolderPath('DesktopDirectory'),
+        [Environment]::GetFolderPath('Desktop'),
+        $(if ($env:USERPROFILE) { Join-Path $env:USERPROFILE 'Desktop' } else { $null })
+    )) {
+        if (-not [string]::IsNullOrWhiteSpace($candidate) -and -not $candidates.Contains($candidate)) {
+            $candidates.Add($candidate)
+        }
+    }
+    foreach ($candidate in $candidates) {
+        if (Test-Path -LiteralPath $candidate -PathType Container) { return $candidate }
+    }
+    if ($env:USERPROFILE) {
+        $fallback = Join-Path $env:USERPROFILE 'Desktop'
+        try {
+            New-Item -ItemType Directory -Path $fallback -Force | Out-Null
+            if (Test-Path -LiteralPath $fallback -PathType Container) { return $fallback }
+        } catch { }
+    }
+    return $null
+}
+
+function New-DesktopShortcut([string]$ScriptPath) {
+    try {
+        $desktop = Resolve-ForgeDesktopDirectory
+        if (-not $desktop) {
+            Write-Warning '无法解析可用的桌面目录，已跳过创建快捷方式；不影响安装或启动。'
+            return
+        }
+        $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut((Join-Path $desktop 'Forge DIY.lnk'))
+        $launcher = Join-Path $RepoRoot 'starter\一键启动.bat'
+        if (Test-Path -LiteralPath $launcher -PathType Leaf) {
+            $shortcut.TargetPath = $launcher
+            $shortcut.Arguments = ''
+            $shortcut.WorkingDirectory = Split-Path $launcher -Parent
+        } else {
+            $shortcut.TargetPath = "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
+            $shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$ScriptPath`""
+            $shortcut.WorkingDirectory = Split-Path $ScriptPath -Parent
+        }
+        $shortcut.IconLocation = (Join-Path $AppRoot 'forge.exe') + ',0'
+        $shortcut.Save()
+    } catch {
+        Write-Warning "无法创建桌面快捷方式，已跳过；不影响安装或启动：$($_.Exception.Message)"
+    }
+}
+
+if ($SelfTest) {
+    $storageTokens = $null
+    $storageErrors = $null
+    $helper = Resolve-ForgeStorageMigrationHelper
+    try {
+        [System.Management.Automation.Language.Parser]::ParseFile(
+            $helper.Path, [ref]$storageTokens, [ref]$storageErrors) | Out-Null
+        if ($storageErrors.Count -gt 0) {
+            throw ('SELFTEST: storage migration helper does not parse: ' + ($storageErrors | Out-String))
+        }
+    } finally {
+        if ($helper.TemporaryDirectory) { Remove-Item -LiteralPath $helper.TemporaryDirectory -Recurse -Force }
+    }
+    $testCDrive = [pscustomobject]@{ IsReady = $true; Name = 'C:\'; DriveType = [IO.DriveType]::Fixed; DriveFormat = 'NTFS' }
+    $testDDrive = [pscustomobject]@{ IsReady = $true; Name = 'D:\'; DriveType = [IO.DriveType]::Fixed; DriveFormat = 'NTFS' }
+    $testUsbDrive = [pscustomobject]@{ IsReady = $true; Name = 'E:\'; DriveType = [IO.DriveType]::Removable; DriveFormat = 'NTFS' }
+    if (@(Get-ForgeEligibleStorageDrives -Drives @($testCDrive)).Count -ne 0 -or
+            @(Get-ForgeEligibleStorageDrives -Drives @($testCDrive, $testDDrive, $testUsbDrive)).Count -ne 1) {
+        throw 'SELFTEST: storage partition detection failed.'
+    }
+    $selfTestJar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' -File |
+        Select-Object -First 1
+    if (-not $selfTestJar) { throw 'SELFTEST: aggregate Forge JAR is missing.' }
+    $selfTestVersion = Get-ForgeRuntimeVersion $selfTestJar.FullName
+    if ([string]::IsNullOrWhiteSpace($selfTestVersion)) {
+        throw 'SELFTEST: aggregate Forge JAR has no Implementation-Version.'
+    }
+    Write-Output 'SELFTEST=OK'
+    Write-Output "REPO=$RepoUrl"
+    Write-Output "RUNTIME_VERSION=$selfTestVersion"
+    exit 0
+}
+
+try {
+    Write-Step '正在准备一键环境...'
+    $git = Find-Git
+    if (-not $NoUpdate) {
+        Initialize-ForgeStorage
+        if (-not $git) { $git = Install-Git }
+        # Git's HTTPS helper inherits this per-process mode. It suppresses the
+        # git-remote-https crash dialog while preserving exit codes and logs.
+        $previousErrorMode = [ForgeDIY.NativeMethods]::SetErrorMode(0x3)
+        try {
+            Update-Repository $git
+
+        Write-Step '正在快速检查运行文件...'
+        $runtimeFailure = Get-FastRuntimeFailure $AppRoot
+        if ($runtimeFailure) {
+            Write-Step "快速检查失败（$runtimeFailure），正在执行全新克隆修复..."
+            Remove-Item -LiteralPath $RepoRoot -Recurse -Force
+            & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
+            if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+            $runtimeFailure = Get-FastRuntimeFailure $AppRoot
+        }
+        if ($runtimeFailure) { throw "仓库中的运行文件结构异常：$runtimeFailure" }
+
+        if ($FullVerify) {
+            Write-Step '正在执行完整 SHA-256 校验（FullVerify 模式，可能需要数分钟）...'
+            $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            if ($manifestFailure) {
+                Write-Step "完整校验发现异常（$manifestFailure），正在从 Git 索引恢复运行文件..."
+                Repair-RepositoryWorkingTree $git
+                $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            }
+            if ($manifestFailure) {
+                Write-Step 'Git 索引恢复后仍未通过，正在执行全新克隆修复...'
+                Remove-Item -LiteralPath $RepoRoot -Recurse -Force
+                & $git clone -c core.autocrlf=false --depth 1 $RepoUrl $RepoRoot
+                if ($LASTEXITCODE -ne 0) { throw '全新克隆修复失败。' }
+                $manifestFailure = Get-CriticalManifestFailure $AppRoot
+            }
+            if ($manifestFailure) { throw "完整运行文件校验失败：$manifestFailure" }
+            Write-Host '[Forge DIY] 完整 SHA-256 校验通过。' -ForegroundColor Green
+        }
+        } finally {
+            [void][ForgeDIY.NativeMethods]::SetErrorMode($previousErrorMode)
+        }
+    } else {
+        Write-Step '使用本机已安装版本（未检查更新）。'
+        $runtimeFailure = Get-FastRuntimeFailure $AppRoot
+        if ($runtimeFailure) {
+            throw "本机 Forge DIY 运行包不可用：$runtimeFailure。请从启动面板选择“检查更新”。"
+        }
+    }
+
+    Install-BundledTunnelConfig
+
+    $buildIdFile = Join-Path $AppRoot 'BUILD-ID.txt'
+    $release = [pscustomobject]@{ buildId = (Get-Content $buildIdFile -Raw).Trim() }
+
+    $java = $null
+    if (-not $IgnoreSystemJava) { $java = Find-Java17 }
+    if (-not $java) {
+        if ($Offline) { throw '离线模式下没有可用的 Java 17+；请先联网启动或检查更新一次。' }
+        $java = Install-PortableJava17
+    }
+
+    $javaDirectory = Split-Path $java -Parent
+    $consoleJava = Join-Path $javaDirectory 'java.exe'
+    if (-not (Test-Path -LiteralPath $consoleJava -PathType Leaf)) { $consoleJava = $java }
+    $env:JAVA_HOME = Split-Path $javaDirectory -Parent
+    $pathEntries = @($javaDirectory)
+    if ($git) { $pathEntries += (Split-Path $git -Parent) }
+    $env:PATH = ([string]::Join(';', $pathEntries)) + ';' + $env:PATH
+
+    Sync-DiyPayload
+    $installedScript = Join-Path $RepoRoot 'bootstrap.ps1'
+    New-DesktopShortcut $installedScript
+    Write-Host "[Forge DIY] 当前构建版本：$($release.buildId)" -ForegroundColor Green
+    Write-Host "[Forge DIY] Java：$java" -ForegroundColor DarkGray
+
+    if (-not $InstallOnly) {
+        # Local source builds live outside the Git-managed payload; normal refresh cannot erase them.
+        $selector = Join-Path $RepoRoot 'tools\select_diy_update.ps1'
+        if (Test-Path -LiteralPath $selector -PathType Leaf) {
+            . $selector
+            $AppRoot = Select-DiyUpdateApp $InstallRoot $AppRoot
+        }
+        Write-Step '正在启动 Forge...'
+        $jar = Get-ChildItem $AppRoot -Filter '*-jar-with-dependencies.jar' | Select-Object -First 1
+        if (-not $jar) { throw '运行目录中没有 Forge 聚合 JAR。' }
+
+        $overlayRoot = Join-Path $AppRoot 'overlays'
+        $overlayJars = @()
+        if (Test-Path -LiteralPath $overlayRoot -PathType Container) {
+            $overlayJars = @(Get-ChildItem -LiteralPath $overlayRoot -Filter '*.jar' -File |
+                Sort-Object Name)
+        }
+        $classPathEntries = @($overlayJars | ForEach-Object { $_.FullName }) + @($jar.FullName)
+        $classPath = [string]::Join([IO.Path]::PathSeparator, $classPathEntries)
+
+        New-Item -ItemType Directory -Path $NetworkStateRoot -Force | Out-Null
+        if (Test-Path -LiteralPath $ActiveServerPortFile -PathType Leaf) {
+            Remove-Item -LiteralPath $ActiveServerPortFile -Force
+        }
+        if (Test-Path -LiteralPath $TunnelStatusFile -PathType Leaf) {
+            Remove-Item -LiteralPath $TunnelStatusFile -Force
+        }
+
+        $logRoot = Join-Path $InstallRoot 'logs'
+        New-Item -ItemType Directory -Path $logRoot -Force | Out-Null
+        $logStamp = Get-Date -Format 'yyyyMMdd-HHmmss-fff'
+        $stdoutLog = Join-Path $logRoot "forge-bootstrap-$logStamp.stdout.log"
+        $stderrLog = Join-Path $logRoot "forge-bootstrap-$logStamp.stderr.log"
+
+        $arguments = @(
+            '-Xmx2048m',
+            '-Dio.netty.tryReflectionSetAccessible=true',
+            '-Dfile.encoding=UTF-8',
+            "`"-Dforge.diy.installRoot=$InstallRoot`"",
+            "`"-Dforge.diy.appRoot=$AppRoot`"",
+            "-Dforge.net.activePortFile=$ActiveServerPortFile",
+            "-Dforge.net.tunnelStatusFile=$TunnelStatusFile"
+        )
+        $runtimeVersion = Get-ForgeRuntimeVersion $jar.FullName
+        if ($runtimeVersion) {
+            $arguments += "-Dforge.runtime.version=$runtimeVersion"
+        }
+        foreach ($openPackage in $ForgeAddOpens) {
+            $arguments += "--add-opens=$openPackage=ALL-UNNAMED"
+        }
+        $arguments += @('-cp', "`"$classPath`"", 'forge.view.Main')
+
+        $process = Start-Process -FilePath $consoleJava -ArgumentList $arguments -WorkingDirectory $AppRoot -WindowStyle Hidden -RedirectStandardOutput $stdoutLog -RedirectStandardError $stderrLog -PassThru
+        if ($process.WaitForExit(10000)) {
+            $errorTail = ''
+            if (Test-Path -LiteralPath $stderrLog -PathType Leaf) {
+                $errorTail = ((Get-Content -LiteralPath $stderrLog -Tail 20 -ErrorAction SilentlyContinue) -join [Environment]::NewLine).Trim()
+            }
+            if ($errorTail) {
+                throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。日志：$stderrLog`n$errorTail"
+            }
+            throw "Forge 启动后立即退出（代码 $($process.ExitCode)）。日志：$stderrLog"
+        }
+
+        $tunnelManager = Join-Path $RepoRoot 'tools\start_forge_tunnel.ps1'
+        if (Test-Path -LiteralPath $tunnelManager -PathType Leaf) {
+            $tunnelStdout = Join-Path $logRoot "forge-tunnel-$logStamp.stdout.log"
+            $tunnelStderr = Join-Path $logRoot "forge-tunnel-$logStamp.stderr.log"
+            $tunnelArguments = @(
+                '-NoProfile',
+                '-ExecutionPolicy', 'Bypass',
+                '-File', "`"$tunnelManager`"",
+                '-OwnerProcessId', [string]$process.Id,
+                '-ConfigPath', "`"$TunnelConfigFile`"",
+                '-ActivePortPath', "`"$ActiveServerPortFile`"",
+                '-StatusPath', "`"$TunnelStatusFile`""
+            )
+            Start-Process -FilePath powershell.exe -ArgumentList $tunnelArguments -WindowStyle Hidden `
+                -RedirectStandardOutput $tunnelStdout -RedirectStandardError $tunnelStderr | Out-Null
+            Write-Host "[Forge DIY] 网络路线与长期隧道管理器已启动；会检测 Clash TUN 并读取客户端实际端口。" -ForegroundColor Green
+            Write-Host "[Forge DIY] 隧道日志：$tunnelStdout" -ForegroundColor DarkGray
+        } else {
+            Write-Host "[Forge DIY] 网络路线诊断器缺失；客户端仍会自动申请端口并尝试 UPnP。" -ForegroundColor Yellow
+        }
+
+        Write-Host "[Forge DIY] Forge 已启动（PID $($process.Id)）。" -ForegroundColor Green
+        Write-Host "[Forge DIY] 启动日志：$stderrLog" -ForegroundColor DarkGray
+    }
+} catch {
+    Write-Host "[错误] $($_.Exception.Message)" -ForegroundColor Red
+    exit 1
+}
+
+) { continue }
+            $key = $Matches[1]
+            $value = $Matches[2]
+            switch ($key) {
+                'UI_LANGUAGE' { if ($value -in @('zh-CN','en-US','ja-JP','ko-KR','de-DE','fr-FR','it-IT','es-ES','pt-BR')) { $settings[$key] = $value } }
+                'UI_SKIN' { if ($value -in @('Warmwood','Default')) { $settings[$key] = $value } }
+                'UI_ENABLE_MUSIC' { if ($value -in @('true','false')) { $settings[$key] = $value } }
+                'UI_CARD_ART_FORMAT' { if ($value -in @('Crop','Full')) { $settings[$key] = $value } }
+            }
+        }
+    }
+    return [pscustomobject]$settings
+}
+
 function Sync-DiyPayload {
     $syncScript = Join-Path $RepoRoot 'tools\sync_profile.ps1'
     if (-not (Test-Path -LiteralPath $syncScript -PathType Leaf)) {
         throw 'Runtime profile sync helper is missing.'
     }
-    & $syncScript -AppRoot $AppRoot
+    $settings = Get-LauncherSettings
+    & $syncScript -AppRoot $AppRoot `
+        -Language $settings.UI_LANGUAGE -Skin $settings.UI_SKIN `
+        -EnableMusic $settings.UI_ENABLE_MUSIC -CardArtFormat $settings.UI_CARD_ART_FORMAT
 }
 
 function Install-BundledTunnelConfig {
