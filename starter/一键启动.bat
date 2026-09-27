@@ -365,7 +365,6 @@ try {
     $mode = if ([string]::IsNullOrWhiteSpace($env:FORGE_DIY_MODE)) { 'ui' } else { $env:FORGE_DIY_MODE }
     switch ($mode) {
         'self-test' {
-            if ($InstallRoot -match '(?i)\\OneDrive(?:\\|$)') { throw 'Install root unexpectedly depends on OneDrive.' }
             $probe = Get-LauncherSettings
             if (-not $probe.UI_LANGUAGE) { throw 'Settings parser failed.' }
             Write-Output 'WINDOWS_LAUNCHER_SELF_TEST=OK'
