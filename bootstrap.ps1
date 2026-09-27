@@ -360,7 +360,38 @@ function Get-LauncherSettings {
     $settingsFile = Join-Path $InstallRoot 'launcher-settings.properties'
     if (Test-Path -LiteralPath $settingsFile -PathType Leaf) {
         foreach ($line in Get-Content -LiteralPath $settingsFile -Encoding UTF8) {
-            if ($line -notmatch '^([^=]+)=(.*)
+            if ($line -notmatch '^([^=]+)=(.*)$') { continue }
+            $key = $Matches[1]
+            $value = $Matches[2]
+            switch ($key) {
+                'UI_LANGUAGE' {
+                    if ($value -in @('zh-CN','en-US','ja-JP','ko-KR','de-DE','fr-FR','it-IT','es-ES','pt-BR')) {
+                        $settings[$key] = $value
+                    }
+                }
+                'UI_SKIN' {
+                    if ($value -in @('Warmwood','Default')) { $settings[$key] = $value }
+                }
+                'UI_ENABLE_MUSIC' {
+                    if ($value -in @('true','false')) { $settings[$key] = $value }
+                }
+                'UI_CARD_ART_FORMAT' {
+                    if ($value -in @('Crop','Full')) { $settings[$key] = $value }
+                }
+            }
+        }
+    }
+    return [pscustomobject]$settings
+}
+
+function Sync-DiyPayload {
+    $syncScript = Join-Path $RepoRoot 'tools\sync_profile.ps1'
+    if (-not (Test-Path -LiteralPath $syncScript -PathType Leaf)) {
+        throw 'Runtime profile sync helper is missing.'
+    }
+    $settings = Get-LauncherSettings
+    & $syncScript -AppRoot $AppRoot -Language $settings.UI_LANGUAGE -Skin $settings.UI_SKIN -EnableMusic $settings.UI_ENABLE_MUSIC -CardArtFormat $settings.UI_CARD_ART_FORMAT
+}
 
 function Install-BundledTunnelConfig {
     if (Test-Path -LiteralPath $TunnelConfigFile -PathType Leaf) { return }
