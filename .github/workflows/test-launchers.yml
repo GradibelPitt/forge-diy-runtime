@@ -46,7 +46,7 @@ jobs:
         shell: powershell
         run: |
           $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
-          foreach ($path in @('bootstrap.ps1', 'tools/storage_migration.ps1', 'tests/test_storage_helper.ps1', 'tests/test_storage_launcher.ps1')) {
+          foreach ($path in @('bootstrap.ps1', 'starter/一键启动.bat', 'starter/一键安装并启动.cmd', 'tools/storage_migration.ps1', 'tests/test_storage_helper.ps1', 'tests/test_storage_launcher.ps1')) {
             $destination = Join-Path $env:GITHUB_WORKSPACE $path
             New-Item -ItemType Directory -Path (Split-Path $destination -Parent) -Force | Out-Null
             Invoke-WebRequest -UseBasicParsing "$base/$path" -OutFile $destination
@@ -54,6 +54,31 @@ jobs:
       - name: Windows PowerShell 5.1 helper loading and launcher behavior
         shell: powershell
         run: |
+          $launcher = Join-Path $env:GITHUB_WORKSPACE 'starter\一键启动.bat'
+          $launcherBytes = [IO.File]::ReadAllBytes($launcher)
+          if ($launcherBytes.Length -ge 3 -and $launcherBytes[0] -eq 0xEF -and $launcherBytes[1] -eq 0xBB -and $launcherBytes[2] -eq 0xBF) {
+            throw 'Windows launcher must be UTF-8 without BOM'
+          }
+          $launcherText = [Text.Encoding]::UTF8.GetString($launcherBytes)
+          if ($launcherText.Contains([char]0xFFFD)) { throw 'Windows launcher contains replacement characters' }
+          if ($launcherText -match '(?i)OneDrive') { throw 'Windows launcher must not depend on OneDrive paths' }
+          $launcherLines = Get-Content -LiteralPath $launcher -Encoding UTF8
+          if ($launcherLines[0] -ne '@echo off' -or $launcherLines[1] -notmatch '^chcp 65001') {
+            throw 'Windows launcher must switch to UTF-8 before localized content'
+          }
+          Push-Location (Join-Path $env:GITHUB_WORKSPACE 'starter')
+          try {
+            $launcherProbe = & $env:ComSpec /d /c '一键启动.bat --self-test' 2>&1
+            if ($LASTEXITCODE -ne 0 -or $launcherProbe -notcontains 'WINDOWS_LAUNCHER_SELF_TEST=OK') {
+              throw "Windows launcher self-test failed: $($launcherProbe -join [Environment]::NewLine)"
+            }
+            $legacyProbe = & $env:ComSpec /d /c '一键安装并启动.cmd --self-test' 2>&1
+            if ($LASTEXITCODE -ne 0 -or $legacyProbe -notcontains 'WINDOWS_LAUNCHER_SELF_TEST=OK') {
+              throw "Legacy CMD compatibility self-test failed: $($legacyProbe -join [Environment]::NewLine)"
+            }
+          } finally {
+            Pop-Location
+          }
           & ./tests/test_storage_helper.ps1
           # Hosted runners have no interactive Windows console for PromptForChoice.
           & ./tests/test_storage_launcher.ps1 -SkipConsoleProbe
