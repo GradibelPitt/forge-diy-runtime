@@ -12,7 +12,7 @@ if /i "%~1"=="-h" set "FORGE_DIY_MODE=help"
 set "FORGE_DIY_LAUNCHER=%~f0"
 set "FORGE_DIY_PS=%TEMP%\forge-diy-launcher-%RANDOM%-%RANDOM%.ps1"
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$p=$env:FORGE_DIY_LAUNCHER; $out=$env:FORGE_DIY_PS; $lines=[IO.File]::ReadAllLines($p,[Text.UTF8Encoding]::new($false)); $i=[Array]::IndexOf($lines,'#==FORGE_DIY_POWERSHELL=='); if($i -lt 0){throw 'Launcher payload marker is missing.'}; [IO.File]::WriteAllLines($out,$lines[($i+1)..($lines.Length-1)],[Text.UTF8Encoding]::new($false))"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$p=$env:FORGE_DIY_LAUNCHER; $out=$env:FORGE_DIY_PS; $lines=[IO.File]::ReadAllLines($p,[Text.UTF8Encoding]::new($false)); $i=[Array]::IndexOf($lines,'#==FORGE_DIY_POWERSHELL=='); if($i -lt 0){throw 'Launcher payload marker is missing.'}; $utf8bom=New-Object Text.UTF8Encoding($true); [IO.File]::WriteAllLines($out,$lines[($i+1)..($lines.Length-1)],$utf8bom)"
 if errorlevel 1 (
   echo [错误] 无法读取启动器内置脚本。
   pause
