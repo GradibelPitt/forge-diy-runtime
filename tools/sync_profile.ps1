@@ -2,7 +2,15 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$AppRoot,
     [string]$RoamingAppData = [Environment]::GetFolderPath('ApplicationData'),
-    [string]$LocalAppData = [Environment]::GetFolderPath('LocalApplicationData')
+    [string]$LocalAppData = [Environment]::GetFolderPath('LocalApplicationData'),
+    [ValidateSet('zh-CN','en-US','ja-JP','ko-KR','de-DE','fr-FR','it-IT','es-ES','pt-BR')]
+    [string]$Language = 'zh-CN',
+    [ValidateSet('Warmwood','Default')]
+    [string]$Skin = 'Warmwood',
+    [ValidateSet('true','false')]
+    [string]$EnableMusic = 'true',
+    [ValidateSet('Crop','Full')]
+    [string]$CardArtFormat = 'Crop'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -46,11 +54,11 @@ function Set-ManagedPreferences([string]$PreferencesFile) {
     }
 
     $managed = [ordered]@{
-        UI_LANGUAGE = 'zh-CN'
+        UI_LANGUAGE = $Language
         UI_DISABLE_CARD_IMAGES = 'false'
-        UI_CARD_ART_FORMAT = 'Crop'
-        UI_SKIN = 'Warmwood'
-        UI_ENABLE_MUSIC = 'true'
+        UI_CARD_ART_FORMAT = $CardArtFormat
+        UI_SKIN = $Skin
+        UI_ENABLE_MUSIC = $EnableMusic
         UI_VOL_MUSIC = '100'
         UI_CURRENT_MUSIC_SET = 'Pull Up a Chair'
     }
@@ -195,6 +203,6 @@ Write-Output "REMOVED_RETIRED_CARD_IMAGES=$retiredCardPictureCount"
 if ($assetCompatibilityPath) {
     Write-Output "ASSET_COMPAT_PATH=$assetCompatibilityPath"
 }
-Write-Output 'CARD_ART_FORMAT=Crop'
-Write-Output 'FRIEND_UI=Warmwood'
+Write-Output "CARD_ART_FORMAT=$CardArtFormat"
+Write-Output "FRIEND_UI=$Skin"
 Write-Output 'FRIEND_MUSIC=Pull Up a Chair'
