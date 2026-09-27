@@ -50,7 +50,8 @@ jobs:
             $destination = Join-Path $env:GITHUB_WORKSPACE $path
             New-Item -ItemType Directory -Path (Split-Path $destination -Parent) -Force | Out-Null
             $encodedPath = (($path -split '/') | ForEach-Object { [uri]::EscapeDataString($_) }) -join '/'
-            Invoke-WebRequest -UseBasicParsing "$base/$encodedPath" -OutFile $destination
+            & curl.exe -fLsS "$base/$encodedPath" -o "$destination"
+            if ($LASTEXITCODE -ne 0) { throw "Could not fetch $path from $env:GITHUB_SHA" }
           }
       - name: Windows PowerShell 5.1 helper loading and launcher behavior
         shell: powershell
