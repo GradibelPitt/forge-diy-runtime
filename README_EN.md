@@ -26,13 +26,15 @@ GradibelPitt/forge-diy-runtime
 
 ## Run on Windows
 
-Download or clone this repository, then run:
+Download or clone this repository, then double-click:
 
 ```text
-starter/一键安装并启动.cmd
+starter/一键启动.bat
 ```
 
-The launcher downloads the current bootstrap script, installs or synchronizes the runtime files, and starts Forge.
+The Windows launcher now mirrors the macOS launcher workflow: it opens a native WinForms panel for normal launch, offline launch, explicit update checks, safe legacy-profile import, and language/skin/card-art/music preferences. Normal launch uses the installed runtime without contacting GitHub; only Check for Updates downloads the latest `bootstrap.ps1`.
+
+The legacy `starter/一键安装并启动.cmd` remains as a compatibility shim. It resolves `一键启动.bat` relative to its own directory with `%~dp0`, and never hard-codes Desktop or OneDrive paths. `FORGE_DIY_HOME` can override the runtime install root. Desktop shortcut creation is non-fatal and falls back safely if Windows has a stale redirected Desktop path.
 
 If the local runtime repository is damaged or a normal update cannot recover it, run:
 
