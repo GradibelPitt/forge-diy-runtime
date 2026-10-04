@@ -30,6 +30,10 @@ if not "%FORGE_DIY_EXIT%"=="0" (
 exit /b %FORGE_DIY_EXIT%
 
 #==FORGE_DIY_POWERSHELL==
+$consoleUtf8 = New-Object Text.UTF8Encoding($false)
+[Console]::InputEncoding = $consoleUtf8
+[Console]::OutputEncoding = $consoleUtf8
+$OutputEncoding = $consoleUtf8
 $ErrorActionPreference = 'Stop'
 $Owner = 'GradibelPitt'
 $Repository = 'forge-diy-runtime'
@@ -47,6 +51,141 @@ $LogRoot = Join-Path $InstallRoot 'logs'
 $UserRoot = Join-Path ([Environment]::GetFolderPath('ApplicationData')) 'Forge'
 $CacheRoot = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Forge'
 $InstalledBootstrap = Join-Path $RepoRoot 'bootstrap.ps1'
+
+function Initialize-WindowsPowerShellFile([string]$Path) {
+    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { return }
+    $bytes = [IO.File]::ReadAllBytes($Path)
+    if ($bytes.Length -ge 3 -and $bytes[0] -eq 239 -and $bytes[1] -eq 187 -and $bytes[2] -eq 191) { return }
+    # Windows PowerShell 5.1 requires a BOM to recognize UTF-8 script source.
+    $text = [IO.File]::ReadAllText($Path, [Text.UTF8Encoding]::new($false, $true))
+    [IO.File]::WriteAllText($Path, $text, [Text.UTF8Encoding]::new($true))
+}
+
+function Repair-WindowsBootstrap([string]$Path) {
+    $text = [IO.File]::ReadAllText($Path, [Text.UTF8Encoding]::new($false, $true))
+    $parseErrors = $null
+    $tree = [Management.Automation.Language.Parser]::ParseInput($text, [ref]$null, [ref]$parseErrors)
+    if ($parseErrors.Count) { throw 'Windows bootstrap 脚本不完整或语法错误，请重新下载。' }
+    $shortcutFunction = $tree.Find({
+        param($node)
+        $node -is [Management.Automation.Language.FunctionDefinitionAst] -and $node.Name -eq 'New-DesktopShortcut'
+    }, $false)
+    if ($shortcutFunction) {
+        $shortcutSource = @"
+function New-DesktopShortcut {
+    param(
+        [string]`$ScriptPath,
+        [string[]]`$DesktopPaths = @(
+            [Environment]::GetFolderPath('DesktopDirectory'),
+            `$(if (`$env:USERPROFILE) { Join-Path `$env:USERPROFILE 'Desktop' })
+        )
+    )
+    `$fallback = if (`$env:USERPROFILE) { Join-Path `$env:USERPROFILE 'Desktop' } else { `$null }
+    `$lastFailure = ''
+    foreach (`$desktop in (`$DesktopPaths | Where-Object { -not [string]::IsNullOrWhiteSpace(`$_) } | Select-Object -Unique)) {
+        try {
+            if (-not (Test-Path -LiteralPath `$desktop -PathType Container)) {
+                # Never recreate an unavailable redirected desktop or cloud folder.
+                if (`$desktop -ne `$fallback) { continue }
+                New-Item -ItemType Directory -Path `$desktop -Force | Out-Null
+            }
+            if (-not ('ForgeDIY.LauncherShortcut' -as [type])) {
+                Add-Type -TypeDefinition '
+using System;
+using System.Text;
+using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
+namespace ForgeDIY {
+    [ComImport, Guid("00021401-0000-0000-C000-000000000046")]
+    class ShellLink {}
+    [ComImport, Guid("000214F9-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    interface IShellLinkW {
+        void GetPath([Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder path, int capacity, IntPtr data, uint flags);
+        void GetIDList(out IntPtr idList);
+        void SetIDList(IntPtr idList);
+        void GetDescription([Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder text, int capacity);
+        void SetDescription([MarshalAs(UnmanagedType.LPWStr)] string text);
+        void GetWorkingDirectory([Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder path, int capacity);
+        void SetWorkingDirectory([MarshalAs(UnmanagedType.LPWStr)] string path);
+        void GetArguments([Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder text, int capacity);
+        void SetArguments([MarshalAs(UnmanagedType.LPWStr)] string text);
+        void GetHotkey(out short key);
+        void SetHotkey(short key);
+        void GetShowCmd(out int command);
+        void SetShowCmd(int command);
+        void GetIconLocation([Out, MarshalAs(UnmanagedType.LPWStr)] StringBuilder path, int capacity, out int index);
+        void SetIconLocation([MarshalAs(UnmanagedType.LPWStr)] string path, int index);
+        void SetRelativePath([MarshalAs(UnmanagedType.LPWStr)] string path, uint reserved);
+        void Resolve(IntPtr window, uint flags);
+        void SetPath([MarshalAs(UnmanagedType.LPWStr)] string path);
+    }
+    public static class LauncherShortcut {
+        public static void Save(string destination, string target, string arguments, string directory, string icon) {
+            object instance = new ShellLink();
+            try {
+                IShellLinkW link = (IShellLinkW)instance;
+                link.SetPath(target);
+                link.SetArguments(arguments);
+                link.SetWorkingDirectory(directory);
+                link.SetIconLocation(icon, 0);
+                ((IPersistFile)instance).Save(destination, true);
+            } finally { Marshal.FinalReleaseComObject(instance); }
+        }
+    }
+}'
+            }
+            `$launcher = `$env:FORGE_DIY_LAUNCHER
+            if ([string]::IsNullOrWhiteSpace(`$launcher) -or -not (Test-Path -LiteralPath `$launcher -PathType Leaf)) {
+                `$launcher = Join-Path `$RepoRoot 'starter\一键启动.bat'
+            }
+            if (Test-Path -LiteralPath `$launcher -PathType Leaf) {
+                `$target = `$launcher
+                `$arguments = ''
+                `$workingDirectory = Split-Path `$launcher -Parent
+            } else {
+                `$target = "`$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe"
+                `$arguments = "-NoProfile -ExecutionPolicy Bypass -File ``"`$ScriptPath``""
+                `$workingDirectory = Split-Path `$ScriptPath -Parent
+            }
+            [ForgeDIY.LauncherShortcut]::Save((Join-Path `$desktop 'Forge DIY.lnk'), `$target, `$arguments, `$workingDirectory, (Join-Path `$AppRoot 'forge.exe'))
+            return
+        } catch {
+            `$lastFailure = `$_.Exception.Message
+        }
+    }
+    Write-Warning ("无法创建桌面快捷方式，已跳过；Forge 将继续启动。 " + `$lastFailure)
+}
+"@
+        $start = $shortcutFunction.Extent.StartOffset
+        $length = $shortcutFunction.Extent.EndOffset - $start
+        $text = $text.Remove($start, $length).Insert($start, $shortcutSource)
+    }
+    $consoleSetup = @"
+`$consoleUtf8 = New-Object Text.UTF8Encoding(`$false)
+[Console]::InputEncoding = `$consoleUtf8
+[Console]::OutputEncoding = `$consoleUtf8
+`$OutputEncoding = `$consoleUtf8
+"@
+    if ($text -notmatch '(?m)^\$consoleUtf8 = New-Object Text\.UTF8Encoding') {
+        $offset = if ($tree.ParamBlock) { $tree.ParamBlock.Extent.EndOffset } else { 0 }
+        $text = $text.Insert($offset, "`r`n`r`n$consoleSetup`r`n")
+    }
+    [IO.File]::WriteAllText($Path, $text, [Text.UTF8Encoding]::new($true))
+}
+
+function Initialize-InstalledPowerShell {
+    if (Test-Path -LiteralPath $InstalledBootstrap -PathType Leaf) {
+        Repair-WindowsBootstrap $InstalledBootstrap
+    }
+    $tools = Join-Path $RepoRoot 'tools'
+    if (Test-Path -LiteralPath $tools -PathType Container) {
+        foreach ($file in Get-ChildItem -LiteralPath $tools -File) {
+            if ($file.Extension -in @('.ps1', '.psm1')) {
+                Initialize-WindowsPowerShellFile $file.FullName
+            }
+        }
+    }
+}
 
 function Write-Step([string]$Message) {
     Write-Host "[Forge DIY] $Message" -ForegroundColor Cyan
@@ -98,6 +237,7 @@ function Save-LauncherSettings($Language, $Skin, $Music, $Art) {
     )
     [IO.File]::WriteAllLines($SettingsFile, $content, [Text.UTF8Encoding]::new($false))
 
+    Initialize-InstalledPowerShell
     $sync = Join-Path $RepoRoot 'tools\sync_profile.ps1'
     if ((Test-Path -LiteralPath $sync -PathType Leaf) -and (Test-Path -LiteralPath $AppRoot -PathType Container)) {
         & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $sync -AppRoot $AppRoot -Language $Language -Skin $Skin -EnableMusic $Music -CardArtFormat $Art
@@ -109,6 +249,7 @@ function Invoke-InstalledForge([switch]$Offline) {
     if (-not (Test-Path -LiteralPath $InstalledBootstrap -PathType Leaf)) {
         throw '本机还没有完整的 Forge DIY 运行包，请先点击“检查更新”。'
     }
+    Initialize-InstalledPowerShell
     $arguments = @('-NoProfile','-ExecutionPolicy','Bypass','-File',$InstalledBootstrap,'-NoUpdate')
     if ($Offline) { $arguments += '-Offline' }
     & powershell.exe @arguments
@@ -127,8 +268,11 @@ function Invoke-Update {
         } finally {
             [Net.ServicePointManager]::SecurityProtocol = $previousProtocol
         }
+        Initialize-InstalledPowerShell
+        Repair-WindowsBootstrap $temporary
         & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $temporary -InstallOnly
         if ($LASTEXITCODE -ne 0) { throw "更新失败（代码 $LASTEXITCODE）。" }
+        Initialize-InstalledPowerShell
         Write-Host '[Forge DIY] 更新与内容同步完成。' -ForegroundColor Green
     } finally {
         Remove-Item -LiteralPath $temporary -Force -ErrorAction SilentlyContinue
