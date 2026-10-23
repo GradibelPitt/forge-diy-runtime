@@ -8,6 +8,7 @@ on:
       - 'tests/test_macos_launcher.py'
       - 'tests/test_storage_helper.ps1'
       - 'tests/test_storage_launcher.ps1'
+      - 'tests/test_windows_official_launcher.ps1'
       - '.github/workflows/test-launchers.yml'
   pull_request:
     paths:
@@ -17,6 +18,7 @@ on:
       - 'tests/test_macos_launcher.py'
       - 'tests/test_storage_helper.ps1'
       - 'tests/test_storage_launcher.ps1'
+      - 'tests/test_windows_official_launcher.ps1'
       - '.github/workflows/test-launchers.yml'
   workflow_dispatch:
 permissions:
@@ -46,7 +48,7 @@ jobs:
         shell: pwsh
         run: |
           $base = "https://raw.githubusercontent.com/$env:GITHUB_REPOSITORY/$env:GITHUB_SHA"
-          foreach ($path in @('bootstrap.ps1', 'starter/一键启动.bat', 'starter/一键安装并启动.cmd', 'tools/storage_migration.ps1', 'tests/test_storage_helper.ps1', 'tests/test_storage_launcher.ps1')) {
+          foreach ($path in @('bootstrap.ps1', 'starter/一键启动.bat', 'starter/一键安装并启动.cmd', 'tools/storage_migration.ps1', 'tests/test_storage_helper.ps1', 'tests/test_storage_launcher.ps1', 'tests/test_windows_official_launcher.ps1')) {
             $destination = Join-Path $env:GITHUB_WORKSPACE $path
             New-Item -ItemType Directory -Path (Split-Path $destination -Parent) -Force | Out-Null
             $encodedPath = (($path -split '/') | ForEach-Object { [uri]::EscapeDataString($_) }) -join '/'
@@ -84,6 +86,7 @@ jobs:
       - name: Windows PowerShell 5.1 helper loading and storage behavior
         shell: powershell
         run: |
+          & ./tests/test_windows_official_launcher.ps1
           & ./tests/test_storage_helper.ps1
           # Hosted runners have no interactive Windows console for PromptForChoice.
           & ./tests/test_storage_launcher.ps1 -SkipConsoleProbe

@@ -135,6 +135,8 @@ starter/一键启动.bat
 
 Windows 入口现在与 macOS 启动器采用同一使用逻辑：无参数时打开启动面板，可直接启动本机版本、离线启动、显式检查更新、导入旧版资料，并设置语言、主题、卡图样式和音乐。普通“启动 Forge”不会访问 GitHub；只有“检查更新”会下载最新 `bootstrap.ps1` 并同步运行环境。
 
+“启动官方版”调用已经安装的独立官方版入口；默认查找 `%LOCALAPPDATA%\ForgeOfficial\launch.ps1`，找不到时会打开文件选择框，可选择官方版的 `.exe`、`.ps1`、`.bat` 或 `.cmd`。选择会保存到安装目录的 `official-launcher.txt`；“选择官方版入口”可更换路径，也可通过 `FORGE_OFFICIAL_LAUNCHER` 环境变量覆盖。命令行使用 `--launch-official`。此按钮不安装官方版、不调用 DIY 更新或设置同步；官方版沿用所选入口自己的资料与缓存配置。
+
 旧入口 `starter/一键安装并启动.cmd` 保留为兼容跳转器，使用 `%~dp0` 查找同目录的 `一键启动.bat`；不会写死用户目录、Desktop 或 OneDrive 路径。若只单独保留旧 CMD，它会临时下载最新 BAT 后继续。
 
 如果本地运行仓库已经损坏、更新中断，或者普通启动无法恢复，可以使用：

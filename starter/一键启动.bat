@@ -2,6 +2,7 @@
 chcp 65001 >nul
 setlocal EnableExtensions
 set "FORGE_DIY_MODE=ui"
+if /i "%~1"=="--launch-official" set "FORGE_DIY_MODE=official"
 if /i "%~1"=="--offline" set "FORGE_DIY_MODE=offline"
 if /i "%~1"=="--update" set "FORGE_DIY_MODE=update"
 if /i "%~1"=="--install-only" set "FORGE_DIY_MODE=update"
@@ -51,6 +52,8 @@ $LogRoot = Join-Path $InstallRoot 'logs'
 $UserRoot = Join-Path ([Environment]::GetFolderPath('ApplicationData')) 'Forge'
 $CacheRoot = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'Forge'
 $InstalledBootstrap = Join-Path $RepoRoot 'bootstrap.ps1'
+$OfficialLauncherFile = Join-Path $InstallRoot 'official-launcher.txt'
+$DefaultOfficialLauncher = Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) 'ForgeOfficial\launch.ps1'
 
 function Initialize-WindowsPowerShellFile([string]$Path) {
     if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { return }
@@ -256,6 +259,65 @@ function Invoke-InstalledForge([switch]$Offline) {
     if ($LASTEXITCODE -ne 0) { throw "Forge 启动失败（代码 $LASTEXITCODE）。" }
 }
 
+function Get-OfficialLauncher {
+    if (-not [string]::IsNullOrWhiteSpace($env:FORGE_OFFICIAL_LAUNCHER)) {
+        return [Environment]::ExpandEnvironmentVariables($env:FORGE_OFFICIAL_LAUNCHER)
+    }
+    if (Test-Path -LiteralPath $OfficialLauncherFile -PathType Leaf) {
+        return ([IO.File]::ReadAllText($OfficialLauncherFile, [Text.Encoding]::UTF8)).Trim()
+    }
+    return $DefaultOfficialLauncher
+}
+
+function Assert-OfficialLauncher([string]$Path) {
+    if (-not [IO.Path]::IsPathRooted($Path) -or -not (Test-Path -LiteralPath $Path -PathType Leaf)) {
+        throw '未找到官方版启动入口，请在面板中选择已安装官方版的启动文件。'
+    }
+    if ([IO.Path]::GetExtension($Path).ToLowerInvariant() -notin @('.exe', '.ps1', '.bat', '.cmd')) {
+        throw '请选择官方版的 exe、ps1、bat 或 cmd 启动文件。'
+    }
+    $resolved = [IO.Path]::GetFullPath($Path)
+    $diy = [IO.Path]::GetFullPath($InstallRoot).TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar
+    if ($resolved.StartsWith($diy, [StringComparison]::OrdinalIgnoreCase) -or
+        $resolved -eq $env:FORGE_DIY_LAUNCHER) {
+        throw '这里需要选择独立官方版入口，不能选择 DIY 启动器。'
+    }
+}
+
+function Select-OfficialLauncher {
+    $dialog = New-Object Windows.Forms.OpenFileDialog
+    $dialog.Title = '选择已安装的 Forge 官方版启动文件'
+    $dialog.Filter = 'Forge 启动文件|*.exe;*.ps1;*.bat;*.cmd'
+    $dialog.CheckFileExists = $true
+    try {
+        if ($dialog.ShowDialog() -ne [Windows.Forms.DialogResult]::OK) { return $false }
+        Assert-OfficialLauncher $dialog.FileName
+        New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
+        [IO.File]::WriteAllText($OfficialLauncherFile, $dialog.FileName, [Text.UTF8Encoding]::new($false))
+        return $true
+    } finally { $dialog.Dispose() }
+}
+
+function Invoke-OfficialForge {
+    $launcher = Get-OfficialLauncher
+    Assert-OfficialLauncher $launcher
+    $directory = Split-Path $launcher -Parent
+    Write-Step '正在启动独立官方版 Forge...'
+    Push-Location -LiteralPath $directory
+    try {
+        if ([IO.Path]::GetExtension($launcher) -ieq '.ps1') {
+            & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $launcher
+            if ($LASTEXITCODE -ne 0) { throw "官方版启动失败（代码 $LASTEXITCODE）。" }
+        } elseif ([IO.Path]::GetExtension($launcher) -ieq '.exe') {
+            $process = Start-Process -FilePath $launcher -WorkingDirectory $directory -PassThru -Wait
+            if ($process.ExitCode -ne 0) { throw "官方版启动失败（代码 $($process.ExitCode)）。" }
+        } else {
+            & $launcher
+            if ($LASTEXITCODE -ne 0) { throw "官方版启动失败（代码 $LASTEXITCODE）。" }
+        }
+    } finally { Pop-Location }
+}
+
 function Invoke-Update {
     New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
     $temporary = Join-Path ([IO.Path]::GetTempPath()) ('forge-diy-bootstrap-' + [Guid]::NewGuid().ToString('N') + '.ps1')
@@ -338,7 +400,7 @@ function Show-Launcher {
     $form.Controls.Add($title)
 
     $subtitle = New-Object Windows.Forms.Label
-    $subtitle.Text = '启动、更新与偏好设置'
+    $subtitle.Text = 'DIY 与官方版启动、更新和偏好设置'
     $subtitle.AutoSize = $true
     $subtitle.Location = New-Object Drawing.Point(28, 58)
     $form.Controls.Add($subtitle)
@@ -357,7 +419,7 @@ function Show-Launcher {
     $form.Controls.Add($launchGroup)
 
     $start = New-Object Windows.Forms.Button
-    $start.Text = '启动 Forge'
+    $start.Text = '启动 DIY'
     $start.Location = New-Object Drawing.Point(18, 28)
     $start.Size = New-Object Drawing.Size(190, 38)
     $start.Add_Click({ $script:LauncherAction = 'start'; $form.Close() })
@@ -377,14 +439,34 @@ function Show-Launcher {
     $update.Add_Click({ $script:LauncherAction = 'update'; $form.Close() })
     $launchGroup.Controls.Add($update)
 
+    $official = New-Object Windows.Forms.Button
+    $official.Text = '启动官方版'
+    $official.Location = New-Object Drawing.Point(536, 28)
+    $official.Size = New-Object Drawing.Size(158, 38)
+    $official.Add_Click({
+        try {
+            $path = Get-OfficialLauncher
+            if (-not [string]::IsNullOrWhiteSpace($env:FORGE_OFFICIAL_LAUNCHER)) { Assert-OfficialLauncher $path }
+            if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+                if (-not (Select-OfficialLauncher)) { return }
+            }
+            Assert-OfficialLauncher (Get-OfficialLauncher)
+            $script:LauncherAction = 'official'
+            $form.Close()
+        } catch {
+            [Windows.Forms.MessageBox]::Show($_.Exception.Message, 'Forge 官方版') | Out-Null
+        }
+    })
+    $launchGroup.Controls.Add($official)
+
     $hint = New-Object Windows.Forms.Label
-    $hint.Text = '普通启动直接使用本机已安装版本；只有“检查更新”会连接 GitHub。'
+    $hint.Text = '官方版调用独立启动入口；“检查更新”和以下设置只作用于 DIY。'
     $hint.AutoSize = $true
     $hint.Location = New-Object Drawing.Point(18, 78)
     $launchGroup.Controls.Add($hint)
 
     $settingsGroup = New-Object Windows.Forms.GroupBox
-    $settingsGroup.Text = 'Settings'
+    $settingsGroup.Text = 'DIY 设置'
     $settingsGroup.Location = New-Object Drawing.Point(24, 226)
     $settingsGroup.Size = New-Object Drawing.Size(470, 205)
     $form.Controls.Add($settingsGroup)
@@ -453,7 +535,7 @@ function Show-Launcher {
     $settingsGroup.Controls.Add($save)
 
     $toolsGroup = New-Object Windows.Forms.GroupBox
-    $toolsGroup.Text = '工具'
+    $toolsGroup.Text = 'DIY 工具'
     $toolsGroup.Location = New-Object Drawing.Point(510, 226)
     $toolsGroup.Size = New-Object Drawing.Size(226, 205)
     $form.Controls.Add($toolsGroup)
@@ -485,6 +567,16 @@ function Show-Launcher {
     $logs.Add_Click({ Open-Folder $LogRoot })
     $toolsGroup.Controls.Add($logs)
 
+    $chooseOfficial = New-Object Windows.Forms.Button
+    $chooseOfficial.Text = '选择官方版入口'
+    $chooseOfficial.Location = New-Object Drawing.Point(550, 450)
+    $chooseOfficial.Size = New-Object Drawing.Size(186, 32)
+    $chooseOfficial.Add_Click({
+        try { [void](Select-OfficialLauncher) }
+        catch { [Windows.Forms.MessageBox]::Show($_.Exception.Message, 'Forge 官方版') | Out-Null }
+    })
+    $form.Controls.Add($chooseOfficial)
+
     $experimental = New-Object Windows.Forms.Label
     $experimental.Text = '实验性功能：暂无启用项目。'
     $experimental.Location = New-Object Drawing.Point(28, 452)
@@ -497,6 +589,7 @@ function Show-Launcher {
 
 function Invoke-LauncherAction([string]$Action) {
     switch ($Action) {
+        'official' { Invoke-OfficialForge }
         'start' { Invoke-InstalledForge }
         'offline' { Invoke-InstalledForge -Offline }
         'update' { Invoke-Update }
@@ -514,9 +607,10 @@ try {
             Write-Output 'WINDOWS_LAUNCHER_SELF_TEST=OK'
         }
         'help' {
-            Write-Output '用法：一键启动.bat [--offline | --update | --install-only | --migrate | --self-test]'
+            Write-Output '用法：一键启动.bat [--offline | --update | --install-only | --migrate | --launch-official | --self-test]'
             Write-Output '无参数时打开 Forge DIY Windows 启动面板。'
         }
+        'official' { Invoke-LauncherAction 'official' }
         'offline' { Invoke-LauncherAction 'offline' }
         'update' { Invoke-LauncherAction 'update' }
         'migrate' { Invoke-LauncherAction 'migrate' }
