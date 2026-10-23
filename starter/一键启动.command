@@ -571,6 +571,7 @@ ObjC.registerSubclass({
                 }
                 if (tag === 6) $.NSWorkspace.sharedWorkspace.openFile($(ui.userRoot));
                 if (tag === 7) $.NSWorkspace.sharedWorkspace.openFile($(ui.logRoot));
+                if (tag === 8) launch(['--launch-official'], '正在启动独立官方版 Forge');
             }
         },
         'pollTask:': {
@@ -619,7 +620,7 @@ function run(argv) {
     var content = window.contentView;
 
     addLabel(content, 'Forge DIY', frame(32, 503, 300, 34), 26, $.NSColor.labelColor, true);
-    addLabel(content, '启动、更新与偏好设置', frame(34, 477, 300, 24), 13, $.NSColor.secondaryLabelColor, false);
+    addLabel(content, 'DIY 与官方版启动、更新和偏好设置', frame(34, 477, 360, 24), 13, $.NSColor.secondaryLabelColor, false);
     var buildLabel = build === '' ? '尚未安装' : '已安装：' + build;
     var buildField = addLabel(content, buildLabel, frame(430, 493, 320, 24), 12, $.NSColor.secondaryLabelColor, false);
     buildField.alignment = $.NSTextAlignmentRight;
@@ -627,13 +628,14 @@ function run(argv) {
     var launchBox = $.NSBox.alloc.initWithFrame(frame(24, 322, 732, 140));
     launchBox.title = $('启动');
     content.addSubview(launchBox);
-    ui.actionButtons.push(addButton(launchBox, '启动 Forge', frame(18, 76, 210, 42), 1, ui.controller, true));
+    ui.actionButtons.push(addButton(launchBox, '启动 DIY', frame(18, 76, 210, 42), 1, ui.controller, true));
     ui.actionButtons.push(addButton(launchBox, '离线启动', frame(244, 76, 145, 42), 2, ui.controller, false));
     ui.actionButtons.push(addButton(launchBox, '检查更新', frame(405, 76, 145, 42), 3, ui.controller, false));
-    addLabel(launchBox, '启动会直接使用本机已安装版本；只有点击“检查更新”才会连接 GitHub。', frame(18, 40, 650, 22), 12, $.NSColor.secondaryLabelColor, false);
+    ui.actionButtons.push(addButton(launchBox, '启动官方版', frame(566, 76, 145, 42), 8, ui.controller, false));
+    addLabel(launchBox, 'DIY 与官方版使用独立资料和缓存；“检查更新”只更新 DIY。', frame(18, 40, 690, 22), 12, $.NSColor.secondaryLabelColor, false);
 
     var settingsBox = $.NSBox.alloc.initWithFrame(frame(24, 128, 470, 178));
-    settingsBox.title = $('Settings');
+    settingsBox.title = $('DIY 设置');
     content.addSubview(settingsBox);
     addLabel(settingsBox, '语言', frame(18, 118, 100, 22), 13, null, false);
     ui.language = $.NSPopUpButton.alloc.initWithFramePullsDown(frame(124, 114, 160, 28), false);
@@ -659,7 +661,7 @@ function run(argv) {
     ui.actionButtons.push(addButton(settingsBox, '保存并应用', frame(302, 40, 140, 38), 5, ui.controller, false));
 
     var toolsBox = $.NSBox.alloc.initWithFrame(frame(510, 128, 246, 178));
-    toolsBox.title = $('工具');
+    toolsBox.title = $('DIY 工具');
     content.addSubview(toolsBox);
     ui.actionButtons.push(addButton(toolsBox, '导入旧版资料', frame(16, 112, 214, 36), 4, ui.controller, false));
     addLabel(toolsBox, '仅补充 ~/.forge 中尚未存在的文件，不删除原资料。', frame(18, 72, 210, 36), 11, $.NSColor.secondaryLabelColor, false);
@@ -734,6 +736,12 @@ cleanup() {
 
 main() {
     set -euo pipefail
+    if [[ ${1:-} == --launch-official ]]; then
+        shift
+        local official_launcher="$HOME/Library/Application Support/ForgeOfficial/launch.sh"
+        [[ -x "$official_launcher" ]] || { fail '尚未安装独立官方版 Forge。'; return 1; }
+        exec /bin/bash "$official_launcher" "$@"
+    fi
     shopt -s nullglob
     OFFLINE=0
     INSTALL_ONLY=0
@@ -763,7 +771,7 @@ main() {
                 ;;
             --self-test) launcher_self_test; return ;;
             --help|-h)
-                printf '用法：一键启动.command [--offline] [--update] [--install-only] [--migrate] [--self-test] [-- 游戏参数]\n'
+                printf '用法：一键启动.command [--offline] [--update] [--install-only] [--migrate] [--self-test] [--launch-official] [-- 游戏参数]\n'
                 printf '无参数时打开 Forge DIY 启动面板。\n'
                 return
                 ;;
