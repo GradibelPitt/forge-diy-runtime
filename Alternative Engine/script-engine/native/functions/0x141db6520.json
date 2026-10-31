@@ -1,0 +1,26 @@
+{
+  "va": "0x141db6520",
+  "rva": 31155488,
+  "endRva": 31159601,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-meter/src/lib.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141db6520.asm",
+  "assemblySha256": "3f47ebecd8a7acc1dc4c55a19a3bd6f5f915b404d8f9eebd3da6fbe13c5203ab",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9ac20",
+      "instruction": "0x141db65d5",
+      "preview": "搜索·列可先起动的方案·额外加的少横",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141db6520.c",
+  "pseudocodeSha256": "ae6dd3e554d0d0e9d31bcb6091f75508acf48b7bce5e6eb1aa9740612c1063c1",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

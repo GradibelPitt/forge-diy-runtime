@@ -1,0 +1,45 @@
+{
+  "va": "0x140a0c090",
+  "rva": 10535056,
+  "endRva": 10538918,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/lands.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140a0c090.asm",
+  "assemblySha256": "abf87d06c71e6d49a072f2f0c4022b9378abc95e0dfe745bf99cc884d298ba7c",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427f54a0",
+      "instruction": "0x140a0c960",
+      "preview": "(TB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f54b8",
+      "instruction": "0x140a0c976",
+      "preview": "(TB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f4eb8",
+      "instruction": "0x140a0cebc",
+      "preview": "`NB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f4eb8",
+      "instruction": "0x140a0ced5",
+      "preview": "`NB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140a0c090.c",
+  "pseudocodeSha256": "72228693a91b3ebcf1a02f23a6a5799c0bcd69265ded72ce596679b7543a07d4",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

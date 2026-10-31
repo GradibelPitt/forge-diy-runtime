@@ -1,0 +1,37 @@
+{
+  "va": "0x140382b40",
+  "rva": 3681088,
+  "endRva": 3681911,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140382b40.asm",
+  "assemblySha256": "d4480b99918eaeb08ba265a860b875fadc03c56a6ee272d00315054a8ec14b25",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427976e2",
+      "instruction": "0x140382c34",
+      "preview": "TriggerDescription$每当Whenever 时，, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427976f5",
+      "instruction": "0x140382d60",
+      "preview": "每当Whenever 时，, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427976fb",
+      "instruction": "0x140382d67",
+      "preview": "Whenever 时，, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797704",
+      "instruction": "0x140382db6",
+      "preview": "时，, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,37 @@
+{
+  "va": "0x1421fc780",
+  "rva": 35637120,
+  "endRva": 35638676,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421fc780.asm",
+  "assemblySha256": "6ea222aab020beeb8b56498f63a0fc70c8260f99ac985324ad8a5d213719d2f5",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cd3a6c",
+      "instruction": "0x1421fc7b9",
+      "preview": "ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd341a",
+      "instruction": "0x1421fc877",
+      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3a6c",
+      "instruction": "0x1421fcab4",
+      "preview": "ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd341a",
+      "instruction": "0x1421fcba4",
+      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

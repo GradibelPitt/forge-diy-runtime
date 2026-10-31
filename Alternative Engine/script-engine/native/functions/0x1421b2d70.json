@@ -1,0 +1,25 @@
+{
+  "va": "0x1421b2d70",
+  "rva": 35335536,
+  "endRva": 35336137,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421b2d70.asm",
+  "assemblySha256": "6ac37add76d19b768c3b96adcdb459286cd236b31ee8930b6b3fb13641044aaf",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cd278b",
+      "instruction": "0x1421b2db3",
+      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd2fae",
+      "instruction": "0x1421b2eab",
+      "preview": "ProducedChosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

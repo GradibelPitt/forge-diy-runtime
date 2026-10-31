@@ -1,0 +1,31 @@
+{
+  "va": "0x1422a8ee0",
+  "rva": 36343520,
+  "endRva": 36343708,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422a8ee0.asm",
+  "assemblySha256": "09db0733f160892c8a2261f6fb720d2df04b68c41e9555a2ad4642b676e315b8",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdd5b8",
+      "instruction": "0x1422a8efb",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdd545",
+      "instruction": "0x1422a8f1a",
+      "preview": "PlainsIslandSwampMountainForest",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdd5b8",
+      "instruction": "0x1422a8f44",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

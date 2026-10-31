@@ -1,0 +1,19 @@
+{
+  "va": "0x141b7f610",
+  "rva": 28833296,
+  "endRva": 28845368,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b7f610.asm",
+  "assemblySha256": "1b248c4dcd1c34779246cb5366b35918463643acbfba68a9b4f4ff5d2c26815b",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141b7f610.c",
+  "pseudocodeSha256": "bbd1e5958f00a3be1189746c7aeabbfd6ba853acbbbde7a3ac4ea07fd8c341dd",
+  "pseudocodeOrigin": "prior REA analysis",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

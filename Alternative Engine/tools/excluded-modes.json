@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-30",
+  "modes": ["story", "puzzle", "ascent"],
+  "labels": ["故事模式", "残局模式", "爬塔模式"],
+  "nativeSourcePattern": "^(?:crates/mtg-ascent/|src/(?:stories|story|puzzles|puzzle|ascent)(?:/|\\.rs$))",
+  "rawEvidencePolicy": "Shared original binary snapshots, code sections and linear assembly are provenance, not supported feature modules. Preserve their exact bytes; do not reconstruct or restore excluded modes from them."
+}

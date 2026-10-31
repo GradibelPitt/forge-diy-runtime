@@ -1,0 +1,79 @@
+{
+  "va": "0x140151aa0",
+  "rva": 1383072,
+  "endRva": 1386447,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/session.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140151aa0.asm",
+  "assemblySha256": "865d86290a3f1edf68f5f6921e9389ee4a7f878148f46bfe82d9b710d2c711f6",
+  "literalReferences": [
+    {
+      "dataVa": "0x142778dd8",
+      "instruction": "0x1401523f3",
+      "preview": "incorrect_action؍wB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778d30",
+      "instruction": "0x140152693",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778d78",
+      "instruction": "0x1401526ac",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778d18",
+      "instruction": "0x1401526d4",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778d48",
+      "instruction": "0x1401526f0",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427780c0",
+      "instruction": "0x140152710",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778d60",
+      "instruction": "0x140152722",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778d90",
+      "instruction": "0x140152742",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778da8",
+      "instruction": "0x140152766",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778dc0",
+      "instruction": "0x140152783",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140151aa0.c",
+  "pseudocodeSha256": "e0a41204870d222f89a64e89674d6db3039fe11eb78b975f30d4e62a84bce0da",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

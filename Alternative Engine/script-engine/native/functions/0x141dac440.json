@@ -1,0 +1,19 @@
+{
+  "va": "0x141dac440",
+  "rva": 31114304,
+  "endRva": 31114860,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141dac440.asm",
+  "assemblySha256": "73ee95832d18e9d4ab24c0f5bdb36f2e2914b1d00cbbae92155fa2d0503fb28b",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9a880",
+      "instruction": "0x141dac5d8",
+      "preview": "重置的超过了限制",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

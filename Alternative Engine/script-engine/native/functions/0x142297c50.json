@@ -1,0 +1,19 @@
+{
+  "va": "0x142297c50",
+  "rva": 36273232,
+  "endRva": 36273328,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142297c50.asm",
+  "assemblySha256": "f10c00c1444d09f61c6ce6a20845ed431725b628819ab6d56477488fc0f220f8",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc8bb",
+      "instruction": "0x142297c71",
+      "preview": " 缺 ValidPlayerCantTarget 缺 ValidTargetBlockTapped 缺 ValidCardAttackVigilance 缺 ValidCardCantBlockBy 缺 ValidAttackerPanharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEnti",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

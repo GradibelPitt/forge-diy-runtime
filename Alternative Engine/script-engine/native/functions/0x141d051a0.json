@@ -1,0 +1,49 @@
+{
+  "va": "0x141d051a0",
+  "rva": 30429600,
+  "endRva": 30435955,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d051a0.asm",
+  "assemblySha256": "9be3d026989f5002b7c1c475d1fa34e4a77a44fbe32ed59aae42c0ccf09a3a00",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c97275",
+      "instruction": "0x141d054af",
+      "preview": "现在只能施放给出施放机会的那张牌",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9723f",
+      "instruction": "0x141d0572a",
+      "preview": "这张牌没有法术力费用，不能照费用施放现在只能施放给出施放机会的那张牌",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c97224",
+      "instruction": "0x141d058e4",
+      "preview": "现在不能施放这张牌这张牌没有法术力费用，不能照费用施放现在只能施放给出施放机会的那张牌",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c971f4",
+      "instruction": "0x141d05962",
+      "preview": "迅速：堆叠上有迅速咒语时不能施放现在不能施放这张牌这张牌没有法术力费用，不能照费用施放现在只能施放给出施放机会的那张牌",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c971df",
+      "instruction": "0x141d05b8b",
+      "preview": "这张牌没有模式迅速：堆叠上有迅速咒语时不能施放现在不能施放这张牌这张牌没有法术力费用，不能照费用施放现在只能施放给出施放",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141d051a0.c",
+  "pseudocodeSha256": "f0e253169b93e6006a5fd82a373ce84ccef602ec697290b104df4f2b6343955d",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

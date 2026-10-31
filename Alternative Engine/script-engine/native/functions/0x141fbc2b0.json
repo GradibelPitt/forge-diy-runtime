@@ -1,0 +1,18 @@
+{
+  "va": "0x141fbc2b0",
+  "rva": 33276592,
+  "endRva": 33278205,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/allocate.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbc2b0.asm",
+  "assemblySha256": "fafbda87a0ff00f3a6f82188cb1a02e1193c92cc72041f5ff2677c1c60867816",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141fbc2b0.c",
+  "pseudocodeSha256": "0939f150ebb0f7e72e1c1bfabbcefec4dde41cb11ac8da7633ae55961125360a",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

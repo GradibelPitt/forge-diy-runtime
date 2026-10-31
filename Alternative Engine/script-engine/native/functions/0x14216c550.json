@@ -1,0 +1,319 @@
+{
+  "va": "0x14216c550",
+  "rva": 35046736,
+  "endRva": 35057438,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14216c550.asm",
+  "assemblySha256": "1d53bbd25037ff615d73aceb41fe2cb746ab6349cb8ba9097d11617146e09195",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ccbd1a",
+      "instruction": "0x14216c5b9",
+      "preview": "ActiveZonesNotPlayerTurnFirstCombatFirstUpkeepFirstUpkeepThisGameDefendingPlayerPoisonedManaSpentManaNotSpentConditionYouCastThisTurnCheckOnTriggeredCardPhaseOneOffResolvedLimitGam",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc4c0",
+      "instruction": "0x14216c5c0",
+      "preview": "TriggerZonesTriggerZoneEffectZoneActivatorThisTurnCastEach",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc4c0",
+      "instruction": "0x14216c5d8",
+      "preview": "TriggerZonesTriggerZoneEffectZoneActivatorThisTurnCastEach",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc4cc",
+      "instruction": "0x14216c6dd",
+      "preview": "TriggerZoneEffectZoneActivatorThisTurnCastEach",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc4d7",
+      "instruction": "0x14216c814",
+      "preview": "EffectZoneActivatorThisTurnCastEach",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc4e1",
+      "instruction": "0x14216caae",
+      "preview": "ActivatorThisTurnCastEach",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc9601",
+      "instruction": "0x14216cc60",
+      "preview": "IsPresent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccacc3",
+      "instruction": "0x14216cc92",
+      "preview": "PresentDefinedPresentZoneOrOtherConditionSVarCompareConditionCheckSVarConditionSVarCompareKWChoiceRandomKeywordRandomKWNumNoRepetitionDefinedLandwalkDefinedKWProtection:Player.Play",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccbc3d",
+      "instruction": "0x14216ccab",
+      "preview": "IsPresent2",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc6d5",
+      "instruction": "0x14216d194",
+      "preview": "CheckSVar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccacb5",
+      "instruction": "0x14216d491",
+      "preview": "PresentComparePresentDefinedPresentZoneOrOtherConditionSVarCompareConditionCheckSVarConditionSVarCompareKWChoiceRandomKeywordRandomKWNumNoRepetitionDefinedLandwalkDefinedKWProtecti",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc6d5",
+      "instruction": "0x14216d519",
+      "preview": "CheckSVar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc6f7",
+      "instruction": "0x14216d520",
+      "preview": "Count$RememberedSizeSVarCompare",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc70b",
+      "instruction": "0x14216d53b",
+      "preview": "SVarCompare",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1428234d0",
+      "instruction": "0x14216d753",
+      "preview": "CounterAddedOnce/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb966",
+      "instruction": "0x14216d78e",
+      "preview": "TriggerController",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85890",
+      "instruction": "0x14216d88c",
+      "preview": "SourceControllerEffectSourceContRememberedCardLKI",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8700",
+      "instruction": "0x14216d894",
+      "preview": "TriggeredSourceCPlayer.CardOwneriginalControllerTriggeredOriginaSpellAbility.OppSpellAbility.YouaAbility",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb6fd",
+      "instruction": "0x14216d8b5",
+      "preview": "ValidSourceValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb6fd",
+      "instruction": "0x14216d96e",
+      "preview": "ValidSourceValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb728",
+      "instruction": "0x14216d9e7",
+      "preview": "CounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216da76",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216db56",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb966",
+      "instruction": "0x14216dcec",
+      "preview": "TriggerController",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216de3e",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8880",
+      "instruction": "0x14216e033",
+      "preview": "ty.MayPlaySourceSpellAbility.May/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8890",
+      "instruction": "0x14216e03b",
+      "preview": "SpellAbility.May/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216e090",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc9c48",
+      "instruction": "0x14216e0dd",
+      "preview": "Valid",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216e124",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216e2a8",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca54d",
+      "instruction": "0x14216e36a",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216e3ad",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc5aa",
+      "instruction": "0x14216e3fe",
+      "preview": "ExcludedOriginsExcludedDestinationsExcludeDestinationDelayedTriggerDefinedPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca74a",
+      "instruction": "0x14216e417",
+      "preview": "OriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc5b9",
+      "instruction": "0x14216e430",
+      "preview": "ExcludedDestinationsExcludeDestinationDelayedTriggerDefinedPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca750",
+      "instruction": "0x14216e449",
+      "preview": "DestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc5cd",
+      "instruction": "0x14216e462",
+      "preview": "ExcludeDestinationDelayedTriggerDefinedPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca1bc",
+      "instruction": "0x14216e78f",
+      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca1bc",
+      "instruction": "0x14216e7d5",
+      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb6fd",
+      "instruction": "0x14216e864",
+      "preview": "ValidSourceValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb708",
+      "instruction": "0x14216e8c6",
+      "preview": "ValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc5df",
+      "instruction": "0x14216e8e4",
+      "preview": "DelayedTriggerDefinedPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216ea52",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216eae3",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14216ebf8",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc619",
+      "instruction": "0x14216ec53",
+      "preview": "OrderDuplicatesPhaseCount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccbdb3",
+      "instruction": "0x14216ecda",
+      "preview": "PhaseOneOffResolvedLimitGameActivationLimitBoonAmountBoonAmount 又有 GameActivationLimitFirstTimeTriggeredTarget$CardToughnessInvertValidCauseChangesZoneTurnFaceUpValidBlockedVal",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc628",
+      "instruction": "0x14216ed1f",
+      "preview": "PhaseCount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccbdb3",
+      "instruction": "0x14216ee0a",
+      "preview": "PhaseOneOffResolvedLimitGameActivationLimitBoonAmountBoonAmount 又有 GameActivationLimitFirstTimeTriggeredTarget$CardToughnessInvertValidCauseChangesZoneTurnFaceUpValidBlockedVal",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb708",
+      "instruction": "0x14216ee96",
+      "preview": "ValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

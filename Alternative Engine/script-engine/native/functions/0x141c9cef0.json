@@ -1,0 +1,25 @@
+{
+  "va": "0x141c9cef0",
+  "rva": 30002928,
+  "endRva": 30005120,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/effects/params.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c9cef0.asm",
+  "assemblySha256": "2254d950ee30b0a1b3a3ad61c670be31ecd713e96b1dfe8716623cd9fb4dec30",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c901a0",
+      "instruction": "0x141c9d491",
+      "preview": "选的模式不存在C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\control.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141c9cef0.c",
+  "pseudocodeSha256": "8a1a96345c8dbe7cc309796c337b44b1775da841da799cf27d93000a3b279e93",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,266 @@
+{
+  "authority": "Current locally maintained DIY implementation takes precedence over older upstream or archived versions, as instructed 2026-10-30.",
+  "rustFileCount": 26,
+  "files": [
+    {
+      "path": "patch-source/build-desktop-entry.mjs",
+      "bytes": 4816,
+      "sha256": "9f0b5e7afeb8d964a6bcdca14a08fb2357aa83edc3a7f28d712e9455e84b8e30"
+    },
+    {
+      "path": "patch-source/card-discover.json",
+      "bytes": 110,
+      "sha256": "8caa8ec685fdc70c153dc36b3ceebabcc6d77474af7773ead4adc96f3f372e60"
+    },
+    {
+      "path": "patch-source/Cargo.lock",
+      "bytes": 4872,
+      "sha256": "2f7960f256e980343dc52a5fbeb424bda7ff718d6aef2fe2120a5273812f8dd3"
+    },
+    {
+      "path": "patch-source/Cargo.toml",
+      "bytes": 278,
+      "sha256": "24701c728aea9b854e64294774fe8e471d21526206f287f883eecf5d9035b386"
+    },
+    {
+      "path": "patch-source/deckbuilder-visibility.js",
+      "bytes": 3049,
+      "sha256": "077c45322213a9d92daa2c3a8f7c811d47b948df7cf40f55935a018527aeead1"
+    },
+    {
+      "path": "patch-source/deckbuilder-visibility.mjs",
+      "bytes": 2898,
+      "sha256": "f0f161e9fa821e6f4bcdee9c533906e96301f6c4c36b916c9eecf0465debea4a"
+    },
+    {
+      "path": "patch-source/diy-deck-validation.mjs",
+      "bytes": 3921,
+      "sha256": "b711ddb2cc5f43413f7308cfbab5783360b0b26197b40bedcf0bdb57e6030c4a"
+    },
+    {
+      "path": "patch-source/hearthstone-entry-ui.js",
+      "bytes": 2399,
+      "sha256": "8c72293c6b27891a3888156c0d74b907deb9efe35125ada70d2f6a5c81176b5c"
+    },
+    {
+      "path": "patch-source/inline-script-box.mjs",
+      "bytes": 2349,
+      "sha256": "b80948c642ac0ab9deea36c5a4a4f6ce84ff834f26535532c2a53f4aa3ba1b5c"
+    },
+    {
+      "path": "patch-source/Install.ps1",
+      "bytes": 2888,
+      "sha256": "aad7560cb3b3067f3c94d3349189fcd7839683a74dd49bc77a4705f40f66220c"
+    },
+    {
+      "path": "patch-source/mtgsmith-default.mjs",
+      "bytes": 2707,
+      "sha256": "cb7e9bcfeea55be43fc7aeffaed542e332979cce447513bf97b54affe99c83a9"
+    },
+    {
+      "path": "patch-source/patch-portable-media.mjs",
+      "bytes": 1895,
+      "sha256": "ee927b528204e1716e00d0525528dbca7fe1344c463d99b2634b78e1d764e65a"
+    },
+    {
+      "path": "patch-source/portable-media.js",
+      "bytes": 4305,
+      "sha256": "38105c904932ba13426f29cdee0d6c658b3b3d4523cccb9de0c85651a1411b6c"
+    },
+    {
+      "path": "patch-source/retired-modes.mjs",
+      "bytes": 5720,
+      "sha256": "dc5bbe073ea35f8e7d4244a93862a780cb49d574156bb5f85f0a302bf359e395"
+    },
+    {
+      "path": "patch-source/script-paste.mjs",
+      "bytes": 6895,
+      "sha256": "6f01be6b76e04b2dd0628c6754a0e1332526fc19b4628defd13893f39edeaf5c"
+    },
+    {
+      "path": "patch-source/source-origin.json",
+      "bytes": 232,
+      "sha256": "2d123601352aa8bc65a5868245706a3338adde183843c2688a9ebfbda0ed7674"
+    },
+    {
+      "path": "patch-source/src/ai_choice_hook_sites.json",
+      "bytes": 467,
+      "sha256": "429a94e5217c316b71aa74e33f95918367aad9cad0af8e3cdccacbc902fe12cd"
+    },
+    {
+      "path": "patch-source/src/ai_land.rs",
+      "bytes": 5540,
+      "sha256": "cba9d777e630162627c71435d8430a6a8da20dbcb28a11d23abc9ecc3fc352de"
+    },
+    {
+      "path": "patch-source/src/bin/hearthstone_launcher.rs",
+      "bytes": 4187,
+      "sha256": "8ed65d18030d5c182ee1bb504ae053690704457977191211b01164e579cb92f7"
+    },
+    {
+      "path": "patch-source/src/bin/prepare_discover_engine.rs",
+      "bytes": 589,
+      "sha256": "fd050f3fbf52afcfbd93576f1a3d29817ccec06807ba0775e5b0a1ae52673a6e"
+    },
+    {
+      "path": "patch-source/src/bin/prepare_engine.rs",
+      "bytes": 1188,
+      "sha256": "0968ec41f18dca13f861bf6bf0584f74c15bb10a7b8c3b5155032c8499465a56"
+    },
+    {
+      "path": "patch-source/src/bin/prepare_experimental_engine.rs",
+      "bytes": 618,
+      "sha256": "fc19c11261db7d5b19b19a5189527ccc50030343170c38829b57f4a1ff29d68e"
+    },
+    {
+      "path": "patch-source/src/bin/sidecar_bridge/deck_filter.rs",
+      "bytes": 11937,
+      "sha256": "31b5cef1491187ec9236840bea5666252947ad35563142b6d3bba45d3e418d8b"
+    },
+    {
+      "path": "patch-source/src/bin/sidecar_bridge/discover.rs",
+      "bytes": 28819,
+      "sha256": "b994a6ba96cd26cef5afe5a99ef6d13af048288567128722e78639d2db98732f"
+    },
+    {
+      "path": "patch-source/src/bin/sidecar_bridge/diy_support.rs",
+      "bytes": 4198,
+      "sha256": "bc2b8cf99de22b0998db5a20b7fa6d9e6e5ed94183b399b76f71f8552282630d"
+    },
+    {
+      "path": "patch-source/src/bin/sidecar_bridge/land_search.rs",
+      "bytes": 2664,
+      "sha256": "e71aca7e2aa4856405c07f636f046b15554b4dec0683e1a1ec43b9a82a4b867d"
+    },
+    {
+      "path": "patch-source/src/bin/sidecar_bridge.rs",
+      "bytes": 15291,
+      "sha256": "cb53167e3bfc9e4bcb0795be7a433601a33e9e918036a7a740619e9874be8bfb"
+    },
+    {
+      "path": "patch-source/src/choice_hook_sites.json",
+      "bytes": 4714,
+      "sha256": "17226ff9c669d18afc219fd19dc15f669711fd89dbf366e7a2b0dbf89632c199"
+    },
+    {
+      "path": "patch-source/src/combat_hook_sites.json",
+      "bytes": 1014,
+      "sha256": "554545902b7a5c438eb034e3f9cecfdd73a4dbd16060bc5ddcd884afafd6e287"
+    },
+    {
+      "path": "patch-source/src/creature_types.txt",
+      "bytes": 2810,
+      "sha256": "5c0a26937b4f181603c3872bee71c6e2feb9287b8667752975b371646093b536"
+    },
+    {
+      "path": "patch-source/src/diy_compat.rs",
+      "bytes": 14958,
+      "sha256": "29565ab22a5814b8c73a19c9419a6e63a360c46d332c26a3eee3f775e72e4f12"
+    },
+    {
+      "path": "patch-source/src/diy_hook_sites.json",
+      "bytes": 67511,
+      "sha256": "1c8a1e7f67988e10495270913c4380f016a007964ea979d608fe16ddeb61b2b8"
+    },
+    {
+      "path": "patch-source/src/diy_rules.rs",
+      "bytes": 9591,
+      "sha256": "5a7095e126b392886d74a62cd1cf67d7d727b3ec2f2ebb2f3c1dae2701b7c8a5"
+    },
+    {
+      "path": "patch-source/src/experimental_pe.rs",
+      "bytes": 13565,
+      "sha256": "24271d8a5f970794c03aa5098eaef8fad84d9af804dee167b0f350a70f110e4b"
+    },
+    {
+      "path": "patch-source/src/hook_sites.json",
+      "bytes": 45778,
+      "sha256": "0b0ff19ceb3308122f7db8977b259caef4ff448e747706ea6ab960a002c1987e"
+    },
+    {
+      "path": "patch-source/src/legality_hook_sites.json",
+      "bytes": 7451,
+      "sha256": "d57adeb71ae536e7b9bda00365ec5e744a557221f6317497c3939c76b9ab93dc"
+    },
+    {
+      "path": "patch-source/src/lib.rs",
+      "bytes": 6276,
+      "sha256": "e36e76247f9a027b4f4f250d6b3a13bb7461a23d4bf32c3112903b12b895f6c7"
+    },
+    {
+      "path": "patch-source/src/mystery.rs",
+      "bytes": 15727,
+      "sha256": "560b0a509d13c069741f704f925ce4ca82554ee66dcdbb0a1e5ab89f4704aa4e"
+    },
+    {
+      "path": "patch-source/src/native_ai.rs",
+      "bytes": 9051,
+      "sha256": "d1de1bd74c77d90408f78a20b384b91c331a0c63328488f0e26cce5de7fdede5"
+    },
+    {
+      "path": "patch-source/src/native_combat.rs",
+      "bytes": 5380,
+      "sha256": "6d657b4a79c2cd001a69fa3481296106a6a5846280a5898be160fbbc820aa4dc"
+    },
+    {
+      "path": "patch-source/src/native_discover.rs",
+      "bytes": 17478,
+      "sha256": "4d4f0503a9457cc03a1fc47485fa082bebee98209ea75f4f9d34216b15e008d0"
+    },
+    {
+      "path": "patch-source/src/native_diy.rs",
+      "bytes": 25158,
+      "sha256": "8321baa1802e89bef00dbc45a586f835dc5bf50e14851e0c0c5edb2d4384a1ef"
+    },
+    {
+      "path": "patch-source/src/native_hooks.rs",
+      "bytes": 6141,
+      "sha256": "836570c0dfbac726316071edcd53b798aa0b301649b84e991f066794f3852d27"
+    },
+    {
+      "path": "patch-source/src/native_land_search.rs",
+      "bytes": 16992,
+      "sha256": "44129340ca20ea4c4bb325f37445c8d52ead0c8de3c0dcaa43df6d59446b3637"
+    },
+    {
+      "path": "patch-source/src/native_patch.rs",
+      "bytes": 2032,
+      "sha256": "20aa83a36f32adc522cf4244632c2388ee30bf481df4f914101357b7644fe1f4"
+    },
+    {
+      "path": "patch-source/src/native_registration.rs",
+      "bytes": 2393,
+      "sha256": "1ae32d23d0aef7d19e586b74863bec2f319afd529ed8c7c44463045c5cffbcb0"
+    },
+    {
+      "path": "patch-source/src/native_upkeep.rs",
+      "bytes": 4099,
+      "sha256": "186d411c3d2ea14760f1ca6008d3f499b8bc860881d56609b3b342c231eb96d6"
+    },
+    {
+      "path": "patch-source/starting-life-display.mjs",
+      "bytes": 1163,
+      "sha256": "38b407ac5f2a84ac142e2570e81642f5b82ced15bd744f5445926f40d119996f"
+    },
+    {
+      "path": "patch-source/tests/ai_land.rs",
+      "bytes": 2645,
+      "sha256": "0bd421a67fd790d5eef2aed76ea58f189cea24ec76c1df72ebeb83a4c0e0a903"
+    },
+    {
+      "path": "patch-source/tests/deckbuilder-visibility.test.mjs",
+      "bytes": 6028,
+      "sha256": "e7d5b2b3fdd2560a03fdd785b63668f2b877fd0103c9605da1da2a317e03615c"
+    },
+    {
+      "path": "patch-source/tests/hearthstone.rs",
+      "bytes": 7942,
+      "sha256": "4c5485a363c71a91b0dc143dae3ad378688d3a5f13757966d6e5cd61606ff6ae"
+    },
+    {
+      "path": "patch-source/tests/portable-media.mjs",
+      "bytes": 8526,
+      "sha256": "a29217eb6813c590e0db20eb852d6c66a5e5a5f420d347ad8af4744f9dc96a8c"
+    }
+  ]
+}

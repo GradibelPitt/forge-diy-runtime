@@ -1,0 +1,19 @@
+{
+  "va": "0x142298010",
+  "rva": 36274192,
+  "endRva": 36274291,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142298010.asm",
+  "assemblySha256": "5ca88f5cbd5ebd9ff0d2f88e56a240dccfdb55613834ed08849bb61cd68b3739",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc9ef",
+      "instruction": "0x142298031",
+      "preview": "CantBlockUnless 缺 CostCantBeActivated 缺 PhasesCantBeActivated 缺 ValidCardCantAttach 缺 TargetCantCrew 缺 ValidCardCantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColor",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

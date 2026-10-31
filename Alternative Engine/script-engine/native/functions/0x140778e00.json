@@ -1,0 +1,55 @@
+{
+  "va": "0x140778e00",
+  "rva": 7835136,
+  "endRva": 7841732,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-hard/src/decisions.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140778e00.asm",
+  "assemblySha256": "3018b5222dbd084931a77cff16eb0ca1579a6434d0675ec4a2729c9eff89561a",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427cd118",
+      "instruction": "0x140778e60",
+      "preview": "targetsparamsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cd2ba",
+      "instruction": "0x140778f6f",
+      "preview": "modes",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cd2b5",
+      "instruction": "0x140778fb3",
+      "preview": "namesmodes",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cd2b0",
+      "instruction": "0x1407792e9",
+      "preview": "ordernamesmodes",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cd248",
+      "instruction": "0x1407794f0",
+      "preview": "topaway",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cd24b",
+      "instruction": "0x14077a158",
+      "preview": "away",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140778e00.c",
+  "pseudocodeSha256": "94d4136a64f954973ab3a78b0d4613198ac7f130cdb65d21b6fa39f50d09a842",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,43 @@
+{
+  "va": "0x140358ad0",
+  "rva": 3508944,
+  "endRva": 3509659,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140358ad0.asm",
+  "assemblySha256": "023dbeba549a0509b7fb7c5f55f848d421c604e9e7c1b7c15e7b5371cc736559",
+  "literalReferences": [
+    {
+      "dataVa": "0x142796cf8",
+      "instruction": "0x140358d31",
+      "preview": "AlyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142796ce0",
+      "instruction": "0x140358d49",
+      "preview": "AlyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142796d28",
+      "instruction": "0x140358d5d",
+      "preview": "AlyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142796d10",
+      "instruction": "0x140358d6e",
+      "preview": "AlyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797cc0",
+      "instruction": "0x140358d82",
+      "preview": "AlyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

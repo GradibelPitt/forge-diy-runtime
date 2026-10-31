@@ -1,0 +1,249 @@
+{
+  "va": "0x140855330",
+  "rva": 8737584,
+  "endRva": 8754824,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/acts/staples.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140855330.asm",
+  "assemblySha256": "2a59856173d554befc4294e5985871133e7a60353e5f78190840a5f1eba265fd",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427d8ea0",
+      "instruction": "0x14085574c",
+      "preview": "d(X(Paid(Exiled)Some(Defined(X(P(Mem(Sacrificed)Some(Defined(Mems: [Alt { base: ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d8eb0",
+      "instruction": "0x140855754",
+      "preview": "Some(Defined(X(P(Mem(Sacrificed)Some(Defined(Mems: [Alt { base: ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d8ec0",
+      "instruction": "0x14085575c",
+      "preview": "(Mem(Sacrificed)Some(Defined(Mems: [Alt { base: ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d8ed0",
+      "instruction": "0x140855765",
+      "preview": "Some(Defined(Mems: [Alt { base: ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d992a",
+      "instruction": "0x140855efb",
+      "preview": "MayPlay {zones: [Graveyard]free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controlle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9933",
+      "instruction": "0x140855f43",
+      "preview": "zones: [Graveyard]free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(D",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9945",
+      "instruction": "0x140855f67",
+      "preview": "free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedCon",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d992a",
+      "instruction": "0x140856079",
+      "preview": "MayPlay {zones: [Graveyard]free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controlle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9933",
+      "instruction": "0x14085609d",
+      "preview": "zones: [Graveyard]free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(D",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9945",
+      "instruction": "0x1408560c1",
+      "preview": "free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedCon",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d91dc",
+      "instruction": "0x1408566e5",
+      "preview": "YouCtrlC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\script_mana.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99d5",
+      "instruction": "0x140856822",
+      "preview": "controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9950",
+      "instruction": "0x140856876",
+      "preview": "from: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(Cop",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d995c",
+      "instruction": "0x1408568a3",
+      "preview": "zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9969",
+      "instruction": "0x1408568c7",
+      "preview": " free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9974",
+      "instruction": "0x1408568eb",
+      "preview": "caster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9980",
+      "instruction": "0x14085690f",
+      "preview": "controlled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ C",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9993",
+      "instruction": "0x140856933",
+      "preview": "face_down: true copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ Cop",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99a2",
+      "instruction": "0x140856957",
+      "preview": " copy: truefrom: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99ad",
+      "instruction": "0x140856986",
+      "preview": "from: Zone { valid: Card, spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSp",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99c5",
+      "instruction": "0x1408569fa",
+      "preview": ", spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99c7",
+      "instruction": "0x140856a47",
+      "preview": "spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99ce",
+      "instruction": "0x140856a76",
+      "preview": ", free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9810",
+      "instruction": "0x140857338",
+      "preview": "qty: LifeHalfDownIsRememberedCard.ExiledWithSourcePhasewho: Some(Defined(Filtered(Mem(Imprinted)Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9819",
+      "instruction": "0x140857361",
+      "preview": "HalfDownIsRememberedCard.ExiledWithSourcePhasewho: Some(Defined(Filtered(Mem(Imprinted)Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\万智牌",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d99d5",
+      "instruction": "0x1408575bc",
+      "preview": "controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9847",
+      "instruction": "0x1408575f4",
+      "preview": "who: Some(Defined(Filtered(Mem(Imprinted)Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\a",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9847",
+      "instruction": "0x1408576a2",
+      "preview": "who: Some(Defined(Filtered(Mem(Imprinted)Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\a",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d984c",
+      "instruction": "0x140857adf",
+      "preview": "Some(Defined(Filtered(Mem(Imprinted)Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\s",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9870",
+      "instruction": "0x140857b67",
+      "preview": "Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d982d",
+      "instruction": "0x140857efb",
+      "preview": "Card.ExiledWithSourcePhasewho: Some(Defined(Filtered(Mem(Imprinted)Some(Defined(ValidIn { zones: [Battlefield], valid: choose: Some(num: C:\\00Projects\\万智牌桌面游戏\\代码\\",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d98a4",
+      "instruction": "0x1408581dd",
+      "preview": "choose: Some(num: C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d98b1",
+      "instruction": "0x14085878a",
+      "preview": "num: C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d990a",
+      "instruction": "0x140858861",
+      "preview": "non_legendary: trueat_eot: Some(MayPlay {zones: [Graveyard]free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { vali",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d991d",
+      "instruction": "0x14085888c",
+      "preview": "at_eot: Some(MayPlay {zones: [Graveyard]free: falsefrom: Zone {zones: [Hand] free: truecaster: Nonecontrolled_by: Noneface_down: true copy: truefrom: Zone { valid: Card, spell: , f",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9130",
+      "instruction": "0x140859407",
+      "preview": "ؐ}B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9130",
+      "instruction": "0x140859647",
+      "preview": "ؐ}B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9130",
+      "instruction": "0x140859679",
+      "preview": "ؐ}B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140855330.c",
+  "pseudocodeSha256": "2e116a4bc18824590d57efc7329afa2555b845f4fb51d60c8bd56f67fc54e835",
+  "pseudocodeOrigin": "expanded source/callee recovery",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
+}

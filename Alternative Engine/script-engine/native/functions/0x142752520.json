@@ -1,0 +1,19 @@
+{
+  "va": "0x142752520",
+  "rva": 41231648,
+  "endRva": 41231776,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142752520.asm",
+  "assemblySha256": "2061a35258011882e0cb466d5c80ba9b827147c0b1265c5ef745ce7294e37e1d",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427efe60",
+      "instruction": "0x142752586",
+      "preview": "reentrant init/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\cell\\once.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x141fbacd0",
+  "rva": 33270992,
+  "endRva": 33272107,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbacd0.asm",
+  "assemblySha256": "c8972d766848b9aba89dc2f4b853b877964cfeba48d84df0e9a5e26f24c50010",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9e06",
+      "instruction": "0x141fbb0da",
+      "preview": "分堆后的异能自己取目标",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

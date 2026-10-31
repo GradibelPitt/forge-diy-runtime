@@ -1,0 +1,79 @@
+{
+  "va": "0x1422c5d20",
+  "rva": 36461856,
+  "endRva": 36467899,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422c5d20.asm",
+  "assemblySha256": "9cc24622f77b387d0007ddab27b8521783f375eaacb395e30fdc4a700ef82c06",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc40b",
+      "instruction": "0x1422c5d78",
+      "preview": "ModeAffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc43c",
+      "instruction": "0x1422c5fc0",
+      "preview": "AddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb0d0",
+      "instruction": "0x1422c64b6",
+      "preview": "CanAttackDefendeActivated.!Loyalty",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422c6504",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde6ca",
+      "instruction": "0x1422c65d6",
+      "preview": "ValidCards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde6ca",
+      "instruction": "0x1422c668a",
+      "preview": "ValidCards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422c68ef",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422c6b3f",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422c6e83",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422c719a",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde448",
+      "instruction": "0x1422c7314",
+      "preview": "TypeActivationPhasesActivationFirstCombatPlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

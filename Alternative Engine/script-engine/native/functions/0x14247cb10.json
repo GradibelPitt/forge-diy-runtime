@@ -1,0 +1,25 @@
+{
+  "va": "0x14247cb10",
+  "rva": 38259472,
+  "endRva": 38259795,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14247cb10.asm",
+  "assemblySha256": "acebb7e20b782d82d8394b217749eb295931b480f41cf974c7ee7730142b8e74",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ce5b71",
+      "instruction": "0x14247cbc9",
+      "preview": "Food",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14247cb10.c",
+  "pseudocodeSha256": "074ccdd54c46ea59fa335811dd89824d77b5428f16914bc35bfe40747579269e",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

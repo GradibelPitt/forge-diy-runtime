@@ -1,0 +1,19 @@
+{
+  "va": "0x142297520",
+  "rva": 36271392,
+  "endRva": 36271488,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142297520.asm",
+  "assemblySha256": "0567e0224964101a7760132f2cb4338edebd4e6973f530f2da270e40607f6f25",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc710",
+      "instruction": "0x14229754c",
+      "preview": "MustBlock 缺 ValidCreatureCantPhaseIn 缺 ValidCardNumLoyaltyAct 缺 ValidCardCantSacrifice 缺 ValidCardPlayerDisableTriggers 缺 ValidCauseNoCleanupDamage 缺 ValidCardPlayer.Yo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,31 @@
+{
+  "va": "0x140854640",
+  "rva": 8734272,
+  "endRva": 8735423,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140854640.asm",
+  "assemblySha256": "6965f73318b9eefac821b68c86d3b492c340dab5b878cc5fe8436f1725fe8640",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427d9aac",
+      "instruction": "0x1408546b8",
+      "preview": "Alt { base: , props: [Token",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d9ab8",
+      "instruction": "0x140854741",
+      "preview": ", props: [Token",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427d8e70",
+      "instruction": "0x14085474c",
+      "preview": "Type(Enchantment)",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

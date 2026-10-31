@@ -1,0 +1,25 @@
+{
+  "va": "0x141a61bb0",
+  "rva": 27663280,
+  "endRva": 27663376,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a61bb0.asm",
+  "assemblySha256": "f678552e690ac6ab9c4483a5ba84cf20357adc449a434dd0bbdaac0204fbe6ac",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c86438",
+      "instruction": "0x141a61bd1",
+      "preview": "RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestructibleLifelinkMenaceReachShadowTrampleVigilanceExalted",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8642d",
+      "instruction": "0x141a61bdc",
+      "preview": "Repeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestructibleLifelinkMenaceReachShadowTrampleVigilanceExalted",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

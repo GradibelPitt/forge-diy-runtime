@@ -1,0 +1,25 @@
+{
+  "va": "0x140b2b3d0",
+  "rva": 11711440,
+  "endRva": 11711829,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b2b3d0.asm",
+  "assemblySha256": "1369a46f7875513f2f88fc695adedb013d58a780a3c648556ceccca6f4fa2034",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fb440",
+      "instruction": "0x140b2b4a6",
+      "preview": "ined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fb450",
+      "instruction": "0x140b2b4ae",
+      "preview": "Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

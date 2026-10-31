@@ -1,0 +1,19 @@
+{
+  "va": "0x140413b00",
+  "rva": 4274944,
+  "endRva": 4277820,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140413b00.asm",
+  "assemblySha256": "461d9826ba92c4b75d2870250f5c99f20f46d1cb53160eddd520b3553a654ccd",
+  "literalReferences": [
+    {
+      "dataVa": "0x142771590",
+      "instruction": "0x140413ed9",
+      "preview": "        ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

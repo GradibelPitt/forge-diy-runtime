@@ -1,0 +1,43 @@
+{
+  "va": "0x1401e4b30",
+  "rva": 1985328,
+  "endRva": 1987643,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/prompts.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1401e4b30.asm",
+  "assemblySha256": "85e091f454ea58657da965e6c8d1077bece057a701c9949e9580e07d1e307716",
+  "literalReferences": [
+    {
+      "dataVa": "0x14277de1b",
+      "instruction": "0x1401e502d",
+      "preview": "现在不是选目标Not choosing targets right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277de30",
+      "instruction": "0x1401e5034",
+      "preview": "Not choosing targets right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277ddd0",
+      "instruction": "0x1401e5345",
+      "preview": "这几个目标凑不成一种做法These targets don't make a legal choice现在不是选目标Not choosing targets right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277ddf4",
+      "instruction": "0x1401e534c",
+      "preview": "These targets don't make a legal choice现在不是选目标Not choosing targets right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1401e4b30.c",
+  "pseudocodeSha256": "09e9847ce6cd70c702ddc735ae09b07fe89e58268062f4e5797d4b5ba1fa8436",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,18 @@
+{
+  "va": "0x141c39290",
+  "rva": 29594256,
+  "endRva": 29595688,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/seat/identity.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c39290.asm",
+  "assemblySha256": "1e4a5de50fb4bcc8007e05f200265bbe6dbf6b3c9ba11e7bac26508509c5681b",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141c39290.c",
+  "pseudocodeSha256": "d4834fcfa8526b15dc02f9b38b507295a4c3d02718f8e72dc5b3279c69ce476d",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

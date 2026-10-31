@@ -1,0 +1,25 @@
+{
+  "va": "0x1417f2de0",
+  "rva": 25112032,
+  "endRva": 25112754,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-core/src/statics.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1417f2de0.asm",
+  "assemblySha256": "24503ced361c4167e08a9452bebeb26f86429a7258d2a2db10a8f0808dadf85a",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c5530b",
+      "instruction": "0x1417f3097",
+      "preview": "刚放进去C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-core\\src\\statics.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1417f2de0.c",
+  "pseudocodeSha256": "497ffa1774bcefce14d40f189d8fee932266178222da4edd36cce98dc20471cd",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
+}

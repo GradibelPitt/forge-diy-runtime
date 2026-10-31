@@ -1,0 +1,55 @@
+{
+  "va": "0x1421094e0",
+  "rva": 34641120,
+  "endRva": 34645514,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421094e0.asm",
+  "assemblySha256": "ea3354a91c0f05e5d86083938804f0b87d071e7704142b193692058bae83831a",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc82a0",
+      "instruction": "0x1421095d9",
+      "preview": "eNumFlipsToSVar$SaveNumFlipsToSVernateMode:ModalAlternateMode:MoMode:DoubleFacedAlternateMode:Do",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc82b0",
+      "instruction": "0x1421095e1",
+      "preview": "SaveNumFlipsToSVernateMode:ModalAlternateMode:MoMode:DoubleFacedAlternateMode:Do",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc9978",
+      "instruction": "0x142109c1c",
+      "preview": "AmountFromVotes$NoCall$Amount$ExcessSVar // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc9988",
+      "instruction": "0x142109eb3",
+      "preview": "NoCall$Amount$ExcessSVar // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc998f",
+      "instruction": "0x142109f01",
+      "preview": "Amount$ExcessSVar // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc9960",
+      "instruction": "0x14210a297",
+      "preview": "up toany number",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc9965",
+      "instruction": "0x14210a2be",
+      "preview": "any number",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

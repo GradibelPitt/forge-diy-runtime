@@ -1,0 +1,25 @@
+{
+  "va": "0x141d4eab0",
+  "rva": 30730928,
+  "endRva": 30733093,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d4eab0.asm",
+  "assemblySha256": "d016339686e26695613ce998a6f3e4d20621b8eb5f0d8e42766599124e9a1f05",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c99930",
+      "instruction": "0x141d4ecc7",
+      "preview": "ChangesZoneAttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9993b",
+      "instruction": "0x141d4ed27",
+      "preview": "AttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

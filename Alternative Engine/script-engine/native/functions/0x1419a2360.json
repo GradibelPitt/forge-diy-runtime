@@ -1,0 +1,79 @@
+{
+  "va": "0x1419a2360",
+  "rva": 26878816,
+  "endRva": 26883587,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-match/src/lib.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1419a2360.asm",
+  "assemblySha256": "46b701ce9a7a4fdad8b2ea312a78650a75225e1527d333af10ad7af0c0fcb50c",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c74414",
+      "instruction": "0x1419a28a6",
+      "preview": "先展示行侣，再定先后手对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c743c8",
+      "instruction": "0x1419a28f7",
+      "preview": "已经挑过了",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c743f0",
+      "instruction": "0x1419a2e9c",
+      "preview": "没有这张候选没有这个座位先展示行侣，再定先后手对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74578",
+      "instruction": "0x1419a2efe",
+      "preview": "换备只能在主牌和备牌之间挪，总清单不能变",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74402",
+      "instruction": "0x1419a31fe",
+      "preview": "没有这个座位先展示行侣，再定先后手对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74435",
+      "instruction": "0x1419a33fd",
+      "preview": "对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74435",
+      "instruction": "0x1419a3429",
+      "preview": "对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74435",
+      "instruction": "0x1419a3455",
+      "preview": "对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74435",
+      "instruction": "0x1419a3473",
+      "preview": "对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c74435",
+      "instruction": "0x1419a349f",
+      "preview": "对局中",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1419a2360.c",
+  "pseudocodeSha256": "39fc26d6b8024b1a93395e41ee46d14d3d3aed281fce85c897afdb20da311536",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

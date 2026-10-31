@@ -1,0 +1,25 @@
+{
+  "va": "0x141b4b100",
+  "rva": 28619008,
+  "endRva": 28620033,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/cast.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b4b100.asm",
+  "assemblySha256": "480fb34621642285dfc496af318c9185ea46580b19250c3f2332e75bbead1e8b",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141b4b48c",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141b4b100.c",
+  "pseudocodeSha256": "4e62ca3a61cd5d9346f0a755005a3ad162d3b1a53b69740cef575d39153fa9b1",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

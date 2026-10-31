@@ -1,0 +1,46 @@
+{
+  "va": "0x141e80460",
+  "rva": 31982688,
+  "endRva": 31987314,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/alt_more.rs",
+    "crates/mtg-engine/src/keywords/merge.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141e80460.asm",
+  "assemblySha256": "48005929e2040343cb11d580128ea1bb665b39b2018c4f4e9bf55226ab225906",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c96ed0",
+      "instruction": "0x141e80630",
+      "preview": "Land.YouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c97f9e",
+      "instruction": "0x141e80b47",
+      "preview": "Creature.YouOwn+nonHuman",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141e815ba",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141e81607",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141e80460.c",
+  "pseudocodeSha256": "4cd9a8e06bd875ae72fd50b4751c53d4dd9ce60b456c0d1ffcb17bab197d3b19",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

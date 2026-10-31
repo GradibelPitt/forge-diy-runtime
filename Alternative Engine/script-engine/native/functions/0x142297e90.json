@@ -1,0 +1,25 @@
+{
+  "va": "0x142297e90",
+  "rva": 36273808,
+  "endRva": 36273904,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142297e90.asm",
+  "assemblySha256": "22a8b2fc33a01a06d41563702dce06a843a8ba8abd0aef942880197e763d57af",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc961",
+      "instruction": "0x142297eb1",
+      "preview": " 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc953",
+      "instruction": "0x142297ebc",
+      "preview": "IgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

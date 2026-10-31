@@ -1,0 +1,337 @@
+{
+  "va": "0x1422cd200",
+  "rva": 36491776,
+  "endRva": 36511506,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422cd200.asm",
+  "assemblySha256": "40e49b65d2985884abec99fbdf446c0d565b506c43d8e884e4d6fb84fcfb95c5",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdb150",
+      "instruction": "0x1422cd2f3",
+      "preview": "OptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb160",
+      "instruction": "0x1422cd369",
+      "preview": "Exert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14281f4e0",
+      "instruction": "0x1422cd3d1",
+      "preview": "mage",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb100",
+      "instruction": "0x1422cd3d9",
+      "preview": "AssignNoCombatDaCantPreventDamagUntapOtherPlayerCardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142823490",
+      "instruction": "0x1422cd423",
+      "preview": "CantAttackUnless",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb120",
+      "instruction": "0x1422cd43f",
+      "preview": "UntapOtherPlayerCardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb110",
+      "instruction": "0x1422cd468",
+      "preview": "CantPreventDamagUntapOtherPlayerCardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422cd4c4",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422cd602",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb110",
+      "instruction": "0x1422cd80b",
+      "preview": "CantPreventDamagUntapOtherPlayerCardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422cd983",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422cdbbb",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc4e6",
+      "instruction": "0x1422cdc94",
+      "preview": "NumLimitEachTurnCantRegenerate 缺 ValidCardAssignNoCombatDamage 缺 ValidCardCantAttack 缺 ValidCard咒语关键字缺 Affected静态能力作用于 Stack区里的关键字缺 Af",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422cddf4",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf248",
+      "instruction": "0x1422cdfa8",
+      "preview": "Target静态能力 CantAttackAddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40b",
+      "instruction": "0x1422ce061",
+      "preview": "ModeAffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422ce0a8",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422ce18f",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422ce2bd",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422ce4c7",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14281f4e0",
+      "instruction": "0x1422ce51a",
+      "preview": "mage",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb100",
+      "instruction": "0x1422ce522",
+      "preview": "AssignNoCombatDaCantPreventDamagUntapOtherPlayerCardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422ce539",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422ce69b",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40b",
+      "instruction": "0x1422ce766",
+      "preview": "ModeAffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422ce84b",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422ceb9a",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb120",
+      "instruction": "0x1422ceda0",
+      "preview": "UntapOtherPlayerCardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc4e6",
+      "instruction": "0x1422cedbe",
+      "preview": "NumLimitEachTurnCantRegenerate 缺 ValidCardAssignNoCombatDamage 缺 ValidCardCantAttack 缺 ValidCard咒语关键字缺 Affected静态能力作用于 Stack区里的关键字缺 Af",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422cef3e",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc4af",
+      "instruction": "0x1422cefb6",
+      "preview": "CantAttackUnless 缺 ValidCardCantAttackUnless 缺 CostNumLimitEachTurnCantRegenerate 缺 ValidCardAssignNoCombatDamage 缺 ValidCardCantAttack 缺 ValidCard咒语关键字缺 Affe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf248",
+      "instruction": "0x1422cf025",
+      "preview": "Target静态能力 CantAttackAddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40b",
+      "instruction": "0x1422cf1f9",
+      "preview": "ModeAffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422cf2d7",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf26f",
+      "instruction": "0x1422cf521",
+      "preview": "YouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf248",
+      "instruction": "0x1422cfab5",
+      "preview": "Target静态能力 CantAttackAddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf300",
+      "instruction": "0x1422cfb8f",
+      "preview": "ValidSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422cfcb1",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf33f",
+      "instruction": "0x1422cffd0",
+      "preview": "RememberingAttacker静态能力 CantAttackUnlessRememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc216",
+      "instruction": "0x1422cffff",
+      "preview": "XRandom$ Compare 缺 RandomCompareSVar有的模式没写爪印ConditionPlayerDefined 缺 ConditionPlayerContainsDefined.VillainousChoice 缺 ChoicesExchangeLife 没有牌手",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb130",
+      "instruction": "0x1422d002e",
+      "preview": "CardCounters.ALLRemembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb140",
+      "instruction": "0x1422d0036",
+      "preview": "Remembered$CardCOptionalAttackCoExert<1/CARDNAME>",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf36f",
+      "instruction": "0x1422d0058",
+      "preview": "RememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422d0077",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422d02ff",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf321",
+      "instruction": "0x1422d0742",
+      "preview": "进攻费用不只是法术力RememberingAttacker静态能力 CantAttackUnlessRememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc567",
+      "instruction": "0x1422d087d",
+      "preview": "静态能力作用于 Stack区里的关键字缺 AffectedMayLookAt 缺 AffectedSharedKeywordsZone 缺 SharedRestrictionsSharedKeywordsZone 缺 AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3a4",
+      "instruction": "0x1422d0b31",
+      "preview": "Trigger静态能力 OptionalAttackCostSharedKeywordsZoneSharedRestrictionsValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf24e",
+      "instruction": "0x1422d0c7a",
+      "preview": "静态能力 CantAttackAddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422d0d76",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf31b",
+      "instruction": "0x1422d0e74",
+      "preview": "Caster进攻费用不只是法术力RememberingAttacker静态能力 CantAttackUnlessRememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ab",
+      "instruction": "0x1422d1374",
+      "preview": "静态能力 OptionalAttackCostSharedKeywordsZoneSharedRestrictionsValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf352",
+      "instruction": "0x1422d1609",
+      "preview": "静态能力 CantAttackUnlessRememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422d17e5",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

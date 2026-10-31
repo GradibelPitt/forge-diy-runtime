@@ -1,0 +1,1429 @@
+{
+  "va": "0x1401f83d0",
+  "rva": 2065360,
+  "endRva": 2162608,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1401f83d0.asm",
+  "assemblySha256": "bfe3f16d5c16155933b46ca3e9797116d5e73d76609c91c8b663e86d53599fe9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142782288",
+      "instruction": "0x1401f8609",
+      "preview": "选择放到牌库底的牌的顺序Choose the order of cards put on the bottom of your library",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427822ac",
+      "instruction": "0x1401f8610",
+      "preview": "Choose the order of cards put on the bottom of your library",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781d35",
+      "instruction": "0x1401f896b",
+      "preview": "最接近顶部Closest to the topcard_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781d44",
+      "instruction": "0x1401f8972",
+      "preview": "Closest to the topcard_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781113",
+      "instruction": "0x1401f8e14",
+      "preview": "第一堆Pile 1第二堆Pile 2分成面朝下、面朝上两堆Separate into a face-down pile and a face-up pile面朝下的一堆Face-down pile面朝上的一堆Face-up pile选堆",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278111c",
+      "instruction": "0x1401f8e1b",
+      "preview": "Pile 1第二堆Pile 2分成面朝下、面朝上两堆Separate into a face-down pile and a face-up pile面朝下的一堆Face-down pile面朝上的一堆Face-up pile选堆的人看",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781122",
+      "instruction": "0x1401f8e3a",
+      "preview": "第二堆Pile 2分成面朝下、面朝上两堆Separate into a face-down pile and a face-up pile面朝下的一堆Face-down pile面朝上的一堆Face-up pile选堆的人看不到",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278112b",
+      "instruction": "0x1401f8e41",
+      "preview": "Pile 2分成面朝下、面朝上两堆Separate into a face-down pile and a face-up pile面朝下的一堆Face-down pile面朝上的一堆Face-up pile选堆的人看不到这一堆",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781068",
+      "instruction": "0x1401f916d",
+      "preview": "宣告阻挡生物Declare blockersblock",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278107a",
+      "instruction": "0x1401f9174",
+      "preview": "Declare blockersblock",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278108a",
+      "instruction": "0x1401f91fb",
+      "preview": "block",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781510",
+      "instruction": "0x1401f95f1",
+      "preview": "allocation_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781ce0",
+      "instruction": "0x1401f9d7e",
+      "preview": "选择要放入牌库中的牌的顺序Choose the order of cards put into the library最接近顶部Closest to the topcard_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781d07",
+      "instruction": "0x1401f9d85",
+      "preview": "Choose the order of cards put into the library最接近顶部Closest to the topcard_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781d35",
+      "instruction": "0x1401f9e6f",
+      "preview": "最接近顶部Closest to the topcard_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781d44",
+      "instruction": "0x1401f9e76",
+      "preview": "Closest to the topcard_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780808",
+      "instruction": "0x1401fa464",
+      "preview": "candidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278081a",
+      "instruction": "0x1401fa6b0",
+      "preview": "selectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefenderCardIdcurrentDe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782060",
+      "instruction": "0x1401fab80",
+      "preview": "combatgeneric",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782066",
+      "instruction": "0x1401fab87",
+      "preview": "generic",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781510",
+      "instruction": "0x1401fac0c",
+      "preview": "allocation_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781db7",
+      "instruction": "0x1401faf19",
+      "preview": "牌库底Bottom of library坟墓场Graveyard默认全部留在牌库顶；想放到牌库底的牌，拖到左边All stay on top by default; drag cards to the left to put them on t",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781dc0",
+      "instruction": "0x1401faf20",
+      "preview": "Bottom of library坟墓场Graveyard默认全部留在牌库顶；想放到牌库底的牌，拖到左边All stay on top by default; drag cards to the left to put them on the bottom",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427820dc",
+      "instruction": "0x1401fb6ce",
+      "preview": "mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780841",
+      "instruction": "0x1401fb70c",
+      "preview": "startingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefenderCardIdcurrentDefenderPlayerIdautoConfirmSeconds白色w",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781690",
+      "instruction": "0x1401fbc91",
+      "preview": "选择同时触发的异能的结算顺序Choose the order for simultaneous triggers先结算Resolves first选择替代效应的适用顺序Choose the order to apply replacement ef",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427816e4",
+      "instruction": "0x1401fbd9b",
+      "preview": "先结算Resolves first选择替代效应的适用顺序Choose the order to apply replacement effects横置还是未横置进场：后适用的说了算Tapped or untapped: the one ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427816ed",
+      "instruction": "0x1401fbda2",
+      "preview": "Resolves first选择替代效应的适用顺序Choose the order to apply replacement effects横置还是未横置进场：后适用的说了算Tapped or untapped: the one applied l",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781749",
+      "instruction": "0x1401fcc3a",
+      "preview": "横置还是未横置进场：后适用的说了算Tapped or untapped: the one applied last wins",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278177c",
+      "instruction": "0x1401fcc41",
+      "preview": "Tapped or untapped: the one applied last wins",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427816fb",
+      "instruction": "0x1401fcc55",
+      "preview": "选择替代效应的适用顺序Choose the order to apply replacement effects横置还是未横置进场：后适用的说了算Tapped or untapped: the one applied last wins",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278171c",
+      "instruction": "0x1401fcc5c",
+      "preview": "Choose the order to apply replacement effects横置还是未横置进场：后适用的说了算Tapped or untapped: the one applied last wins",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427817c8",
+      "instruction": "0x1401fcf51",
+      "preview": "先适用Applies first要支付这笔费用吗？Pay this cost?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427817d1",
+      "instruction": "0x1401fcf58",
+      "preview": "Applies first要支付这笔费用吗？Pay this cost?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781d56",
+      "instruction": "0x1401fd4c6",
+      "preview": "card_list_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781660",
+      "instruction": "0x1401fd98c",
+      "preview": "不发动Don't use",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781669",
+      "instruction": "0x1401fd993",
+      "preview": "Don't use",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781b40",
+      "instruction": "0x1401fda9a",
+      "preview": "循环捷径：你的这几条触发已经一模一样地轮了两圈，替双方一路让过几圈？（0＝不用，接着一步一步来）Loop shortcut: your triggers have gone",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781bce",
+      "instruction": "0x1401fdaa1",
+      "preview": "Loop shortcut: your triggers have gone around the same way twice. Pass for everyone for how many more loops? (0 = no, continue step by step)选择要支付的数量Choose how much ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780fae",
+      "instruction": "0x1401fdb91",
+      "preview": "宣告进攻生物Declare attackersattack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780fc0",
+      "instruction": "0x1401fdb98",
+      "preview": "Declare attackersattack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781510",
+      "instruction": "0x1401fdd1e",
+      "preview": "allocation_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277e414",
+      "instruction": "0x1401fdf7b",
+      "preview": "Choose the mana colors占卜：把牌放在牌库顶或牌库底Scry: put cards on the top or bottom of your library刺探：把牌放在牌库顶或坟墓场Surveil: put cards on ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781da0",
+      "instruction": "0x1401fe09f",
+      "preview": "牌库顶Top of library牌库底Bottom of library坟墓场Graveyard默认全部留在牌库顶；想放到牌库底的牌，拖到左边All stay on top by default; drag cards to th",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781da9",
+      "instruction": "0x1401fe0a6",
+      "preview": "Top of library牌库底Bottom of library坟墓场Graveyard默认全部留在牌库顶；想放到牌库底的牌，拖到左边All stay on top by default; drag cards to the left to",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781eb3",
+      "instruction": "0x1401fe12e",
+      "preview": "This nonland card was revealed; put it back to keep it on top of your library默认全部留在牌库顶；想放进坟墓场的牌，拖到左边All stay on top by default; drag c",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781db7",
+      "instruction": "0x1401fe164",
+      "preview": "牌库底Bottom of library坟墓场Graveyard默认全部留在牌库顶；想放到牌库底的牌，拖到左边All stay on top by default; drag cards to the left to put them on t",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781dc0",
+      "instruction": "0x1401fe16b",
+      "preview": "Bottom of library坟墓场Graveyard默认全部留在牌库顶；想放到牌库底的牌，拖到左边All stay on top by default; drag cards to the left to put them on the bottom",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781e28",
+      "instruction": "0x1401fe195",
+      "preview": "All stay on top by default; drag cards to the left to put them on the bottom这张非地牌已经展示过；原样放回就留在牌库顶This nonland card was revealed; put it ba",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782100",
+      "instruction": "0x1401fe1c6",
+      "preview": "留下这手牌吗？Keep this hand?再调度一次还是留下？Mulligan again or keep?keep_or_mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782115",
+      "instruction": "0x1401fe1cd",
+      "preview": "Keep this hand?再调度一次还是留下？Mulligan again or keep?keep_or_mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782124",
+      "instruction": "0x1401fe1e7",
+      "preview": "再调度一次还是留下？Mulligan again or keep?keep_or_mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782142",
+      "instruction": "0x1401fe1ee",
+      "preview": "Mulligan again or keep?keep_or_mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782170",
+      "instruction": "0x1401fe299",
+      "preview": "Y!xB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427821b0",
+      "instruction": "0x1401fe61c",
+      "preview": "留下调度Mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278148e",
+      "instruction": "0x1401fe623",
+      "preview": "Keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427821b6",
+      "instruction": "0x1401fe643",
+      "preview": "调度Mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427821bc",
+      "instruction": "0x1401fe64a",
+      "preview": "Mulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780dc6",
+      "instruction": "0x1401fe8bc",
+      "preview": "你有优先权You have priority要回应吗？Respond?action",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780dd5",
+      "instruction": "0x1401fe8c3",
+      "preview": "You have priority要回应吗？Respond?action",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780de6",
+      "instruction": "0x1401fe8dd",
+      "preview": "要回应吗？Respond?action",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780df5",
+      "instruction": "0x1401fe8e4",
+      "preview": "Respond?action",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780dfd",
+      "instruction": "0x1401fe98a",
+      "preview": "action",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427807f5",
+      "instruction": "0x1401fe9c8",
+      "preview": "hasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandi",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780fd1",
+      "instruction": "0x1401ff813",
+      "preview": "attack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278089c",
+      "instruction": "0x1401ffa2c",
+      "preview": "attackerCandidateIdscurrentDefenderCardIdcurrentDefenderPlayerIdautoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780889",
+      "instruction": "0x1401ffb07",
+      "preview": "declaredAttackerIdsattackerCandidateIdscurrentDefenderCardIdcurrentDefenderPlayerIdautoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780874",
+      "instruction": "0x1401ffc4a",
+      "preview": "attackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefenderCardIdcurrentDefenderPlayerIdautoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780808",
+      "instruction": "0x1401ffd2c",
+      "preview": "candidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427808b0",
+      "instruction": "0x1401ffe4f",
+      "preview": "currentDefenderCardIdcurrentDefenderPlayerIdautoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278081a",
+      "instruction": "0x1401fff13",
+      "preview": "selectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefenderCardIdcurrentDe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427808c5",
+      "instruction": "0x140200002",
+      "preview": "currentDefenderPlayerIdautoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427820a0",
+      "instruction": "0x14020084a",
+      "preview": "搜索并选择一个牌名Search for and choose a card namemulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427820bb",
+      "instruction": "0x140200851",
+      "preview": "Search for and choose a card namemulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278098b",
+      "instruction": "0x1402017e4",
+      "preview": "confirm是Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781f45",
+      "instruction": "0x14020182f",
+      "preview": "All stay on top by default; drag cards to the left to put them into the graveyard原样放回Put back置入坟场Put into graveyard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781f96",
+      "instruction": "0x140201895",
+      "preview": "原样放回Put back置入坟场Put into graveyard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781fa2",
+      "instruction": "0x14020189c",
+      "preview": "Put back置入坟场Put into graveyard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781faa",
+      "instruction": "0x1402018f8",
+      "preview": "置入坟场Put into graveyard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781fb6",
+      "instruction": "0x1402018ff",
+      "preview": "Put into graveyard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278098b",
+      "instruction": "0x140201db6",
+      "preview": "confirm是Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427817de",
+      "instruction": "0x140201f49",
+      "preview": "要支付这笔费用吗？Pay this cost?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427817f9",
+      "instruction": "0x140201f50",
+      "preview": "Pay this cost?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781131",
+      "instruction": "0x14020203e",
+      "preview": "分成面朝下、面朝上两堆Separate into a face-down pile and a face-up pile面朝下的一堆Face-down pile面朝上的一堆Face-up pile选堆的人看不到这一堆The ch",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781183",
+      "instruction": "0x140202060",
+      "preview": "面朝下的一堆Face-down pile面朝上的一堆Face-up pile选堆的人看不到这一堆The chooser can't see this pile这一堆亮给所有人看This pile is revealed to every",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781195",
+      "instruction": "0x140202067",
+      "preview": "Face-down pile面朝上的一堆Face-up pile选堆的人看不到这一堆The chooser can't see this pile这一堆亮给所有人看This pile is revealed to everyone分成两堆（",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427811b5",
+      "instruction": "0x14020208c",
+      "preview": "Face-up pile选堆的人看不到这一堆The chooser can't see this pile这一堆亮给所有人看This pile is revealed to everyone分成两堆（都面朝下）Separate into two",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427811c1",
+      "instruction": "0x1402020ab",
+      "preview": "选堆的人看不到这一堆The chooser can't see this pile这一堆亮给所有人看This pile is revealed to everyone分成两堆（都面朝下）Separate into two piles (both",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781219",
+      "instruction": "0x1402020e3",
+      "preview": "This pile is revealed to everyone分成两堆（都面朝下）Separate into two piles (both face down)第一堆（面朝下）Pile 1 (face down)第二堆（面朝下）Pile 2 (fac",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278123a",
+      "instruction": "0x1402020ff",
+      "preview": "分成两堆（都面朝下）Separate into two piles (both face down)第一堆（面朝下）Pile 1 (face down)第二堆（面朝下）Pile 2 (face down)选堆的人看不到The c",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781258",
+      "instruction": "0x140202106",
+      "preview": "Separate into two piles (both face down)第一堆（面朝下）Pile 1 (face down)第二堆（面朝下）Pile 2 (face down)选堆的人看不到The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781280",
+      "instruction": "0x140202129",
+      "preview": "第一堆（面朝下）Pile 1 (face down)第二堆（面朝下）Pile 2 (face down)选堆的人看不到The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781298",
+      "instruction": "0x140202130",
+      "preview": "Pile 1 (face down)第二堆（面朝下）Pile 2 (face down)选堆的人看不到The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427812aa",
+      "instruction": "0x140202142",
+      "preview": "第二堆（面朝下）Pile 2 (face down)选堆的人看不到The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427812c2",
+      "instruction": "0x140202149",
+      "preview": "Pile 2 (face down)选堆的人看不到The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427812d4",
+      "instruction": "0x140202164",
+      "preview": "选堆的人看不到The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427812e9",
+      "instruction": "0x14020216b",
+      "preview": "The chooser can't see it",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781418",
+      "instruction": "0x140202c6a",
+      "preview": "这几张里没有能拿的牌None of these cards can be taken",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781436",
+      "instruction": "0x140202c71",
+      "preview": "None of these cards can be taken",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781327",
+      "instruction": "0x14020349d",
+      "preview": "点一张牌把它挪到另一堆，分好后确定Click a card to move it to the other pile, then confirmpilesmode",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278135a",
+      "instruction": "0x1402034a4",
+      "preview": "Click a card to move it to the other pile, then confirmpilesmode",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dc84",
+      "instruction": "0x14020492f",
+      "preview": "typeplayercard选择此牌Choose this card选为目标Target this取消选择Deselect你You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dc8e",
+      "instruction": "0x140204a4f",
+      "preview": "card选择此牌Choose this card选为目标Target this取消选择Deselect你You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782300",
+      "instruction": "0x140204b38",
+      "preview": "cardNamecommandentityId没有这个选项No such option",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781320",
+      "instruction": "0x1402051fe",
+      "preview": "choices点一张牌把它挪到另一堆，分好后确定Click a card to move it to the other pile, then confirmpilesmode",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dc92",
+      "instruction": "0x14020602a",
+      "preview": "选择此牌Choose this card选为目标Target this取消选择Deselect你You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dc9e",
+      "instruction": "0x140206031",
+      "preview": "Choose this card选为目标Target this取消选择Deselect你You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dcc5",
+      "instruction": "0x140206054",
+      "preview": "取消选择Deselect你You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dcd1",
+      "instruction": "0x14020605b",
+      "preview": "Deselect你You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781488",
+      "instruction": "0x1402060c7",
+      "preview": "保留Keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278148e",
+      "instruction": "0x1402060ce",
+      "preview": "Keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427814b0",
+      "instruction": "0x14020618d",
+      "preview": "保留此牌Keep this card不保留Don't keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427814bc",
+      "instruction": "0x140206194",
+      "preview": "Keep this card不保留Don't keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427814ca",
+      "instruction": "0x1402061af",
+      "preview": "不保留Don't keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427814d3",
+      "instruction": "0x1402061b6",
+      "preview": "Don't keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780f08",
+      "instruction": "0x140207279",
+      "preview": "让过Pass",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780f0e",
+      "instruction": "0x140207280",
+      "preview": "Pass",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278098b",
+      "instruction": "0x14020775b",
+      "preview": "confirm是Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427808dc",
+      "instruction": "0x1402077a2",
+      "preview": "autoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780992",
+      "instruction": "0x14020792f",
+      "preview": "是Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780995",
+      "instruction": "0x140207936",
+      "preview": "Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780998",
+      "instruction": "0x14020794f",
+      "preview": "否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277ebb4",
+      "instruction": "0x140207eb1",
+      "preview": "Choose a number说出一个牌名Name a card横置还是重置？Tap or untap?选择要展示的牌Choose cards to reveal增殖：选择要增加指示物的永久物与牌手Proli",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277fe93",
+      "instruction": "0x140208638",
+      "preview": "Choose替代费用Alternative cost呼魂Evoke掩袭Dash急袭Blitz逸脱Escape疯魔Madness预示Foretell揭幕Spectacle潮涌Surge伺机Prowl化生Emerge奇迹Miracle免费施放C",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780808",
+      "instruction": "0x140208aa0",
+      "preview": "candidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278081a",
+      "instruction": "0x140208cef",
+      "preview": "selectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefenderCardIdcurrentDe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278098b",
+      "instruction": "0x14020937d",
+      "preview": "confirm是Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427808dc",
+      "instruction": "0x1402093eb",
+      "preview": "autoConfirmSeconds白色white蓝色blue黑色black红色red绿色green",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781970",
+      "instruction": "0x1402096de",
+      "preview": "declineRestLabel",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781ae0",
+      "instruction": "0x14020a34d",
+      "preview": "pickRestLabeldungeonchoose",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781aed",
+      "instruction": "0x14020a3fa",
+      "preview": "dungeonchoose",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781391",
+      "instruction": "0x14020a852",
+      "preview": "pilesmode",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427819d8",
+      "instruction": "0x14020ada4",
+      "preview": "放指示物Put counters不放放在上面Over放在下面Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427819e4",
+      "instruction": "0x14020adab",
+      "preview": "Put counters不放放在上面Over放在下面Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427819f0",
+      "instruction": "0x14020adc1",
+      "preview": "不放放在上面Over放在下面Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427807c4",
+      "instruction": "0x14020adc8",
+      "preview": "Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdatta",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780808",
+      "instruction": "0x14020afb7",
+      "preview": "candidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttackerIdsattackerCandidateIdscurrentDefen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a17",
+      "instruction": "0x14020b3e6",
+      "preview": "放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a26",
+      "instruction": "0x14020b3ed",
+      "preview": "Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a32",
+      "instruction": "0x14020b410",
+      "preview": "留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a3e",
+      "instruction": "0x14020b417",
+      "preview": "Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427819f6",
+      "instruction": "0x14020b42a",
+      "preview": "放在上面Over放在下面Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a02",
+      "instruction": "0x14020b431",
+      "preview": "Over放在下面Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a06",
+      "instruction": "0x14020b45c",
+      "preview": "放在下面Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a12",
+      "instruction": "0x14020b463",
+      "preview": "Under放回统帅区Command zone留在原处Leave it洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a46",
+      "instruction": "0x14020b473",
+      "preview": "洗牌Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a4c",
+      "instruction": "0x14020b47a",
+      "preview": "Shuffle不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a53",
+      "instruction": "0x14020b4a1",
+      "preview": "不洗Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142781a59",
+      "instruction": "0x14020b4a8",
+      "preview": "Don't shuffle",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780992",
+      "instruction": "0x14020b4c5",
+      "preview": "是Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780995",
+      "instruction": "0x14020b4cc",
+      "preview": "Yes否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780998",
+      "instruction": "0x14020b4e2",
+      "preview": "否No",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c135",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c174",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c1b3",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c1f2",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c231",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c270",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c2af",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c2ee",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c32d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c36c",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c3ab",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c3ea",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c429",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c468",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c4a7",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c4e6",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c525",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c564",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c5a3",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c617",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c656",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c695",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c6d4",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020c72f",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780d14",
+      "instruction": "0x14020c802",
+      "preview": "选择要怎么做Choose what to domodal_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780d26",
+      "instruction": "0x14020c809",
+      "preview": "Choose what to domodal_request",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d66a",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d6a9",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d6e8",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d727",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d766",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d7ba",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d7f9",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d838",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d877",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d8b6",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d8f5",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d934",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d973",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d9b2",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020d9f1",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020da30",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020da6f",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020daae",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020daed",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020db53",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020db92",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dbd1",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dc10",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dc4f",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dc8e",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dccd",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dd0c",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dd4b",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dd8a",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020ddc9",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020de08",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020de47",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020de86",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020ded7",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020df59",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020dfaa",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e021",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e060",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e09f",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e0de",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e11d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e15c",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e19b",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e1da",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e219",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e258",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e2ef",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e32e",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e36d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e490",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e4cf",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e50e",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e979",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e9b8",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020e9f7",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020ea36",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020ea75",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277dd58",
+      "instruction": "0x14020eab4",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

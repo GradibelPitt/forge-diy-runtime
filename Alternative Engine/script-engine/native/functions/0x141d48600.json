@@ -1,0 +1,19 @@
+{
+  "va": "0x141d48600",
+  "rva": 30705152,
+  "endRva": 30705810,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/triggers/combat_state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d48600.asm",
+  "assemblySha256": "c582d2073cc085682a58dfc9499b0aef03dabda3ca590c3a53d48e0948deb9a3",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141d48600.c",
+  "pseudocodeSha256": "85486f541565a1db7d0e8695346c53adad1408d1833b4db08a20d79bbd1997b2",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

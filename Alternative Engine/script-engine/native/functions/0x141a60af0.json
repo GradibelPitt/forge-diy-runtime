@@ -1,0 +1,19 @@
+{
+  "va": "0x141a60af0",
+  "rva": 27658992,
+  "endRva": 27659091,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a60af0.asm",
+  "assemblySha256": "13c1b7cbb44817a0f8b462a4a8ee040514d103c550a210272f8de5a11bec5c7a",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c862f5",
+      "instruction": "0x141a60b11",
+      "preview": "StoreSVar 缺 ExpressionDB$ TokenLifePaidAmountRepeat 的衍生物",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

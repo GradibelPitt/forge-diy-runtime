@@ -1,0 +1,19 @@
+{
+  "va": "0x14273a6c0",
+  "rva": 41133760,
+  "endRva": 41134172,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14273a6c0.asm",
+  "assemblySha256": "503ca7495ecd8c2043f1be90701247a86fafe3237606e7250d9428b0ee9c4617",
+  "literalReferences": [
+    {
+      "dataVa": "0x142d177c0",
+      "instruction": "0x14273a82d",
+      "preview": "a formatting trait implementation returned an error when the underlying stream did not/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\fmt.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

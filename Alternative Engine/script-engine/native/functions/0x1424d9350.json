@@ -1,0 +1,25 @@
+{
+  "va": "0x1424d9350",
+  "rva": 38638416,
+  "endRva": 38639678,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1424d9350.asm",
+  "assemblySha256": "dbc7361dce9e6be8bcc4142acc48f2769e91930cc76ff096fe0c4c51e0cfab36",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ca6d28",
+      "instruction": "0x1424d93c6",
+      "preview": "tedType:C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ca6d28",
+      "instruction": "0x1424d96e1",
+      "preview": "tedType:C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

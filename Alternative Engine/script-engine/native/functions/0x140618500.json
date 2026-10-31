@@ -1,0 +1,43 @@
+{
+  "va": "0x140618500",
+  "rva": 6391040,
+  "endRva": 6399477,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/diy.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140618500.asm",
+  "assemblySha256": "089c09e8c5193378a29f668a8bfd8436ed34b1f977e745523a63c934f5059182",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427ba169",
+      "instruction": "0x1406185fc",
+      "preview": "script获得的起动式异能Gained activated abilitysrc\\copy_plan.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba169",
+      "instruction": "0x14061912d",
+      "preview": "script获得的起动式异能Gained activated abilitysrc\\copy_plan.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427bac5f",
+      "instruction": "0x140619155",
+      "preview": "name",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba240",
+      "instruction": "0x14061a16d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140618500.c",
+  "pseudocodeSha256": "d393aabd2dff5284a258e1f6533632e500bd2e0c23fa9543f91e64c10b60547e",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

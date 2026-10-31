@@ -1,0 +1,25 @@
+{
+  "va": "0x141a5d480",
+  "rva": 27645056,
+  "endRva": 27645217,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a5d480.asm",
+  "assemblySha256": "0e93e76ee2448c5628f5e1648b94b3d030ce7b62cdf725375f1ae67353faf285",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c8630d",
+      "instruction": "0x141a5d4a6",
+      "preview": "DB$ TokenLifePaidAmountRepeat 的衍生物",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c86316",
+      "instruction": "0x141a5d4ad",
+      "preview": "LifePaidAmountRepeat 的衍生物",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

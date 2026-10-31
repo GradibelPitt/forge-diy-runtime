@@ -1,0 +1,19 @@
+{
+  "va": "0x140b0e0b0",
+  "rva": 11591856,
+  "endRva": 11592114,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b0e0b0.asm",
+  "assemblySha256": "6c2bc7d7778f41529f689e5013403a1cd58cd48f11d9f51760218500e135e570",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fbba8",
+      "instruction": "0x140b0e0d0",
+      "preview": "Card.ExiledWithSourceMem(TargetedCostPaidAlt {props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

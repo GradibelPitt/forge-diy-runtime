@@ -1,0 +1,43 @@
+{
+  "va": "0x141cf6170",
+  "rva": 30368112,
+  "endRva": 30402472,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/cast.rs",
+    "crates/mtg-engine/src/keywords/cast_more.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs",
+    "crates/mtg-meter/src/lib.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141cf6170.asm",
+  "assemblySha256": "33ed326ef62e0cbe8272c61c884371156e87a67fa391bc4a146a88c5e9070a15",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c97048",
+      "instruction": "0x141cf9f1a",
+      "preview": "列X·找付得起的",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9705f",
+      "instruction": "0x141cfa8ee",
+      "preview": "列X·挑套牌合有模式",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c97098",
+      "instruction": "0x141cfbc4a",
+      "preview": "列X·逐种校验",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c97071",
+      "instruction": "0x141cfe3fc",
+      "preview": "有模式",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

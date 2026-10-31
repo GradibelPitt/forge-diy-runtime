@@ -1,0 +1,26 @@
+{
+  "va": "0x140dccb60",
+  "rva": 14469984,
+  "endRva": 14471893,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/acts/flow.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140dccb60.asm",
+  "assemblySha256": "278f3b2344abfa8ab75792a4c987f9cb19f36a2ac45e13341634ffd829705a34",
+  "literalReferences": [
+    {
+      "dataVa": "0x142819a58",
+      "instruction": "0x140dccda6",
+      "preview": "Fixed(",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140dccb60.c",
+  "pseudocodeSha256": "bf3a31846e645d930288843d7535363b66459880d5c8b7a1972244ab6bb72227",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

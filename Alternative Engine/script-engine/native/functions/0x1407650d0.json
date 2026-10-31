@@ -1,0 +1,25 @@
+{
+  "va": "0x1407650d0",
+  "rva": 7753936,
+  "endRva": 7755008,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-hard/src/plays.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1407650d0.asm",
+  "assemblySha256": "88b5261e50cf7c5c1650f2c08e1fc6b9530542ed33b9a064a0415c598732c9c6",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427cc0d8",
+      "instruction": "0x1407654ab",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1407650d0.c",
+  "pseudocodeSha256": "116960252c6f53c35a2a207aec37c0a98caed6dd6fa338cc8c29aa348a47785c",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

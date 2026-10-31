@@ -1,0 +1,25 @@
+{
+  "va": "0x1401ece50",
+  "rva": 2018896,
+  "endRva": 2019657,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1401ece50.asm",
+  "assemblySha256": "99bced8c44033bbc7a246deb8a83e20649ebd5b18d974b51f173ef5aac19b95c",
+  "literalReferences": [
+    {
+      "dataVa": "0x14277e11d",
+      "instruction": "0x1401ed045",
+      "preview": " ＋ 从手牌中选择牌Choose cards from your hand选择永久物Choose permanents从坟墓场中选择牌Choose cards from the graveyard从放逐区中选择牌Choose cards fro",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1401ece50.c",
+  "pseudocodeSha256": "9d9a89225dc4aa2b404b6d79efb8b273a4352ae6492b0a0bec07b6258e23e80c",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

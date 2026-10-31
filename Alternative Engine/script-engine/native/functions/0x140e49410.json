@@ -1,0 +1,25 @@
+{
+  "va": "0x140e49410",
+  "rva": 14980112,
+  "endRva": 14980520,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140e49410.asm",
+  "assemblySha256": "41cc58f983d1b51cd7cc391631b37877999da1327cf1250ad543b5ebcfb6891b",
+  "literalReferences": [
+    {
+      "dataVa": "0x14281f400",
+      "instruction": "0x140e4945b",
+      "preview": "Tail·TargetRuleFlow·ChooseSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14281f410",
+      "instruction": "0x140e4949a",
+      "preview": "Flow·ChooseSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

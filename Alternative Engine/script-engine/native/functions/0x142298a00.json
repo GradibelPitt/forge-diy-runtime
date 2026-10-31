@@ -1,0 +1,25 @@
+{
+  "va": "0x142298a00",
+  "rva": 36276736,
+  "endRva": 36276832,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142298a00.asm",
+  "assemblySha256": "74b3eebf08bbef63ff9bcb728c24a33d31e626e33d42dbfc6dcc06534d684c77",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdcbe7",
+      "instruction": "0x142298a21",
+      "preview": " 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttac",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcbdc",
+      "instruction": "0x142298a2c",
+      "preview": "FlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 Valid",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

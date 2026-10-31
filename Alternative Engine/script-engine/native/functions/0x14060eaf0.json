@@ -1,0 +1,43 @@
+{
+  "va": "0x14060eaf0",
+  "rva": 6351600,
+  "endRva": 6353526,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14060eaf0.asm",
+  "assemblySha256": "acadf83579dec4645350f1e07f404b5e52bcc29fc8b830e0978f261758b30b2a",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427ba098",
+      "instruction": "0x14060ecd4",
+      "preview": "Effect| Name$SVar:| Triggers$| StaticAbilities$| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba09e",
+      "instruction": "0x14060ed01",
+      "preview": "| Name$SVar:| Triggers$| StaticAbilities$| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b9ee0",
+      "instruction": "0x14060ee05",
+      "preview": "SpellDescription$Description$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba0e2",
+      "instruction": "0x14060f006",
+      "preview": "\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba0e2",
+      "instruction": "0x14060f0a0",
+      "preview": "\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

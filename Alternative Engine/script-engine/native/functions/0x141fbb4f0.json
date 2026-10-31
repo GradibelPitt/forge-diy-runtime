@@ -1,0 +1,19 @@
+{
+  "va": "0x141fbb4f0",
+  "rva": 33273072,
+  "endRva": 33273171,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbb4f0.asm",
+  "assemblySha256": "cda319d1e52e0deb3c622aa15b5d2ade2269f0c2621aa3837fe45ffd7c839ef5",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9e88",
+      "instruction": "0x141fbb511",
+      "preview": "MoveCounter 的来源SkipPhase 的步骤TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,25 @@
+{
+  "va": "0x141a619e0",
+  "rva": 27662816,
+  "endRva": 27662912,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a619e0.asm",
+  "assemblySha256": "0662f6d2cc0bc5b45b866ad1865b19be08674302570844533636cdaec6583854",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c863e5",
+      "instruction": "0x141a61a01",
+      "preview": "nchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestruc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c863d7",
+      "instruction": "0x141a61a0c",
+      "preview": "Branch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHex",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

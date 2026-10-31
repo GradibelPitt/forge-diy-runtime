@@ -1,0 +1,25 @@
+{
+  "va": "0x141c24d80",
+  "rva": 29511040,
+  "endRva": 29511191,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/abilities.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c24d80.asm",
+  "assemblySha256": "58516aa9871d254fe016bb754b9c127dc531aa702b7208bf7efcbbb1564fa32d",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141c24df8",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141c24d80.c",
+  "pseudocodeSha256": "ecb27c9f5a6f6b9584141ad7e0d056ea4733d1c4379d7aa9a767e0d3a6af2d2f",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

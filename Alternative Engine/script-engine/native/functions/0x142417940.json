@@ -1,0 +1,37 @@
+{
+  "va": "0x142417940",
+  "rva": 37845312,
+  "endRva": 37845710,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/effects/objects/mod.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142417940.asm",
+  "assemblySha256": "05804b89d428725793276939b94ac9149374def6ae0bfa7df0dbfcbff55eb626",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cf26b0",
+      "instruction": "0x142417a0a",
+      "preview": "Card.Colorless固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf26be",
+      "instruction": "0x142417a74",
+      "preview": "固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf2680",
+      "instruction": "0x142417aaf",
+      "preview": "牌类别的筛选",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x142417940.c",
+  "pseudocodeSha256": "595abb717ed28539e5762e3b7caad0aff3de4bdf532cc0993a95afa09fb9ee26",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

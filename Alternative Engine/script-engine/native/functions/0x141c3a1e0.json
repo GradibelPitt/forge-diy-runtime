@@ -1,0 +1,43 @@
+{
+  "va": "0x141c3a1e0",
+  "rva": 29598176,
+  "endRva": 29598678,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c3a1e0.asm",
+  "assemblySha256": "184cb5d51be7fe92100270507e94b6049968dbbd76d1aea4a66b1ef1db49b0c6",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c87378",
+      "instruction": "0x141c3a2dd",
+      "preview": "SchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8737c",
+      "instruction": "0x141c3a2e8",
+      "preview": "meIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8799a",
+      "instruction": "0x141c3a31d",
+      "preview": "OngoingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8799d",
+      "instruction": "0x141c3a327",
+      "preview": "oingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141c3a1e0.c",
+  "pseudocodeSha256": "c000d47a834f11ad2cc07567c4c6ed4377b6039ffc20ea5096b293d38fba8285",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

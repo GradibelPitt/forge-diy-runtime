@@ -1,0 +1,62 @@
+{
+  "va": "0x14054a2d0",
+  "rva": 5546704,
+  "endRva": 5547835,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "src/grave_pick.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14054a2d0.asm",
+  "assemblySha256": "a02b310ab28e676ac4aae30c71c7ebd03955eebf1f4e67c30f0001436953c92b",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427a6550",
+      "instruction": "0x14054a32c",
+      "preview": "挑的牌还不够Not enough cards chosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a6562",
+      "instruction": "0x14054a333",
+      "preview": "Not enough cards chosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65cc",
+      "instruction": "0x14054a47c",
+      "preview": "不是施放或起动Not a cast or activationCard固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65e1",
+      "instruction": "0x14054a483",
+      "preview": "Not a cast or activationCard固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a6598",
+      "instruction": "0x14054a660",
+      "preview": "费用的选择对不上The cost choices don't match不是施放或起动Not a cast or activationCard固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65b0",
+      "instruction": "0x14054a667",
+      "preview": "The cost choices don't match不是施放或起动Not a cast or activationCard固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a6288",
+      "instruction": "0x14054a705",
+      "preview": " bzB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14054a2d0.c",
+  "pseudocodeSha256": "156a1cb0e9725181edaa25eec40de447a5efd5aaa18a81d1daf133e383f1665a",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

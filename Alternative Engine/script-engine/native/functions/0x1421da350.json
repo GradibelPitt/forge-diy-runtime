@@ -1,0 +1,19 @@
+{
+  "va": "0x1421da350",
+  "rva": 35496784,
+  "endRva": 35496883,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421da350.asm",
+  "assemblySha256": "5ea6b78784ea1d5f9bf37ad60f14b327716744674e9ac15f7c0fd0c07da04149",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cd2e2c",
+      "instruction": "0x1421da371",
+      "preview": "ChangeZoneAll 缺 OriginChangeZoneAll 缺 Destination",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

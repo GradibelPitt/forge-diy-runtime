@@ -1,0 +1,25 @@
+{
+  "va": "0x140b22680",
+  "rva": 11675264,
+  "endRva": 11676112,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b22680.asm",
+  "assemblySha256": "b16946553f48044d4c70662017f9f66d8189b883343d07df227e8ac31b23736e",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fb5d0",
+      "instruction": "0x140b2279f",
+      "preview": "AuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\picks.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140b22680.c",
+  "pseudocodeSha256": "f46cc29611aa919afe23491fc6723a2ef73c2414c1badf90d44aa7fae5d7f0f8",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

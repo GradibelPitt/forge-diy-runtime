@@ -1,0 +1,25 @@
+{
+  "va": "0x141a611b0",
+  "rva": 27660720,
+  "endRva": 27660823,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a611b0.asm",
+  "assemblySha256": "4e058fd2b77710677ae62fb335422fd7e2a6053436f7c944271bc87105efe1b1",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c86357",
+      "instruction": "0x141a611d1",
+      "preview": "edDeck 没有目标Shared 缺 TypesFromDefined",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c86347",
+      "instruction": "0x141a611dc",
+      "preview": "CreatureInTargetedDeck 没有目标Shared 缺 TypesFromDefined",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

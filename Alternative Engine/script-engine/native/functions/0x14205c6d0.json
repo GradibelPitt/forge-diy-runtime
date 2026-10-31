@@ -1,0 +1,18 @@
+{
+  "va": "0x14205c6d0",
+  "rva": 33933008,
+  "endRva": 33933194,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/mod.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14205c6d0.asm",
+  "assemblySha256": "44a771006e2ecc5c43e740807bbb3197c988113b327c6d9317bec5fb37ab0ab3",
+  "literalReferences": [],
+  "pseudocode": "functions/0x14205c6d0.c",
+  "pseudocodeSha256": "5c2fd02b7891179cd710ab65778ee2c73b929eb08111d68b176f8776baba172a",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

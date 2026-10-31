@@ -1,0 +1,18 @@
+{
+  "va": "0x14251f260",
+  "rva": 38924896,
+  "endRva": 38925358,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/salvage.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14251f260.asm",
+  "assemblySha256": "cdeefa85b2a67f0f9fe6eab0b2e0d5acb888979672008ded831abaacffcd9e82",
+  "literalReferences": [],
+  "pseudocode": "functions/0x14251f260.c",
+  "pseudocodeSha256": "830c7f612db0ddff4b629783c4e5537dfc7e167c1935c1fe405a67819ff73ea5",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

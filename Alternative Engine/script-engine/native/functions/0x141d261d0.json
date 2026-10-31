@@ -1,0 +1,22 @@
+{
+  "va": "0x141d261d0",
+  "rva": 30564816,
+  "endRva": 30579396,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d261d0.asm",
+  "assemblySha256": "0e82152b3ea4a8e968e0ad4128cbdef2cca2e67de0fb2ca500b3a78984305eeb",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9475c",
+      "instruction": "0x141d2838f",
+      "preview": "AssassinMercenaryPirateRogueWarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

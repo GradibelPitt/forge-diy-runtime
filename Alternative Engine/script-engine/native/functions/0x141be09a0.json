@@ -1,0 +1,31 @@
+{
+  "va": "0x141be09a0",
+  "rva": 29231520,
+  "endRva": 29233336,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141be09a0.asm",
+  "assemblySha256": "73771270abd8226f8ed1f18b4134990b95dd1e63810fb42e0a6d08d5962bd2f2",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc4bd0",
+      "instruction": "0x141be0d67",
+      "preview": "对局已结束hand",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc4ed8",
+      "instruction": "0x141be0dca",
+      "preview": "现在不该你做决定",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9ce70",
+      "instruction": "0x141be1096",
+      "preview": "a Display implementation returned an error unexpectedly/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\string.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

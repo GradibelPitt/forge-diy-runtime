@@ -1,0 +1,43 @@
+{
+  "va": "0x14215eee0",
+  "rva": 34991840,
+  "endRva": 34992187,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14215eee0.asm",
+  "assemblySha256": "4a03a474b13ab7daee2036cf5cd7818e364c30a6cf2cde29f503244d925bd353",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c85760",
+      "instruction": "0x14215ef01",
+      "preview": "Ctrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8740",
+      "instruction": "0x14215ef09",
+      "preview": "SpellAbility.OppSpellAbility.YouaAbility",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85760",
+      "instruction": "0x14215ef2d",
+      "preview": "Ctrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8750",
+      "instruction": "0x14215ef35",
+      "preview": "SpellAbility.YouaAbility",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc98b2",
+      "instruction": "0x14215efe5",
+      "preview": "OpponentPlayer.ReplaceToken 缺 TokenScript",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

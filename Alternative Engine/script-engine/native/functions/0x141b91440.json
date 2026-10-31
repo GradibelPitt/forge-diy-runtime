@@ -1,0 +1,24 @@
+{
+  "va": "0x141b91440",
+  "rva": 28906560,
+  "endRva": 28919296,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/effects/extra/misc.rs",
+    "crates/mtg-engine/src/effects/text_change.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b91440.asm",
+  "assemblySha256": "8485b5c9a2461f35a8155a33ba36fa7e022207b3b6d38f8beeb53b4646872b4f",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9b2cd",
+      "instruction": "0x141b93edf",
+      "preview": "STUNSHIELD有批",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

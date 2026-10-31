@@ -1,0 +1,37 @@
+{
+  "va": "0x1407e9d60",
+  "rva": 8297824,
+  "endRva": 8298986,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1407e9d60.asm",
+  "assemblySha256": "59a3f96258c2f4fc2dd70063ae55dd7cfca030180e896f84d6573920b95d18e7",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427cf9e0",
+      "instruction": "0x1407e9de8",
+      "preview": " AlternativeCostMode$ AlternativMMMMMMMMMMMMMMMMtttttttttttttttt/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cf9f0",
+      "instruction": "0x1407e9df0",
+      "preview": "Mode$ AlternativMMMMMMMMMMMMMMMMtttttttttttttttt/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cfa00",
+      "instruction": "0x1407e9df8",
+      "preview": "MMMMMMMMMMMMMMMMtttttttttttttttt/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427cfa10",
+      "instruction": "0x1407e9e01",
+      "preview": "tttttttttttttttt/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

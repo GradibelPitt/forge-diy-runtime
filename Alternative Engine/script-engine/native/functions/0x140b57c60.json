@@ -1,0 +1,37 @@
+{
+  "va": "0x140b57c60",
+  "rva": 11893856,
+  "endRva": 11894195,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b57c60.asm",
+  "assemblySha256": "ed82a4d9572360ba5a744b8dc26b0c5d22cec96101026ac6ed271b956ca35aab",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427feb5b",
+      "instruction": "0x140b57c86",
+      "preview": "who: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427feb6c",
+      "instruction": "0x140b57cac",
+      "preview": "to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427feb74",
+      "instruction": "0x140b57cd2",
+      "preview": "to: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fe9d0",
+      "instruction": "0x140b57d13",
+      "preview": "MayPlayC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

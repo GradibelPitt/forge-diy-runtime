@@ -1,0 +1,43 @@
+{
+  "va": "0x140e551b0",
+  "rva": 15028656,
+  "endRva": 15030329,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/acts/shields.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140e551b0.asm",
+  "assemblySha256": "140976172583f4e6c2eb221f94b59e8b9bf5066f0e4c1658b458dbc920c43135",
+  "literalReferences": [
+    {
+      "dataVa": "0x14281faaf",
+      "instruction": "0x140e55301",
+      "preview": "Defined(Itself)Color(",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1428201d0",
+      "instruction": "0x140e55322",
+      "preview": "Defined(You)Defined(Enchanted)Defined(Equipped)Twicedestination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1428201dc",
+      "instruction": "0x140e55343",
+      "preview": "Defined(Enchanted)Defined(Equipped)Twicedestination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1428201ee",
+      "instruction": "0x140e55364",
+      "preview": "Defined(Equipped)Twicedestination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140e551b0.c",
+  "pseudocodeSha256": "87e4108d4795448dadf5a3502014d1937ef767d8b246a3094f8cb75b05155efd",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

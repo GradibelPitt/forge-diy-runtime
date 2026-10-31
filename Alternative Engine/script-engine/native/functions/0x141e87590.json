@@ -1,0 +1,24 @@
+{
+  "va": "0x141e87590",
+  "rva": 32011664,
+  "endRva": 32046177,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/effects/extra/variants.rs",
+    "crates/mtg-engine/src/rng.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141e87590.asm",
+  "assemblySha256": "05f00291adf80a2ace3e385e3baa4dc0963afaa39d6d22adb5de9ab653d24cd2",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9c761",
+      "instruction": "0x141e8e163",
+      "preview": "指示物种类选项越界",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

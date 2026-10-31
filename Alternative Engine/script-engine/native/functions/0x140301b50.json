@@ -1,0 +1,91 @@
+{
+  "va": "0x140301b50",
+  "rva": 3152720,
+  "endRva": 3164059,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/counter_pick.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140301b50.asm",
+  "assemblySha256": "c1d5c31ce11a25baf3a53f8050b720872c3054cf3a448a1a85f0f44e25244c86",
+  "literalReferences": [
+    {
+      "dataVa": "0x14278ce06",
+      "instruction": "0x140301d6e",
+      "preview": "、, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278ce06",
+      "instruction": "0x140301f40",
+      "preview": "、, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278cf9d",
+      "instruction": "0x14030251b",
+      "preview": "select",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278cfd8",
+      "instruction": "0x140302a02",
+      "preview": "移去指示物remove counters",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278cfe7",
+      "instruction": "0x140302a09",
+      "preview": "remove counters",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278d010",
+      "instruction": "0x1403037fb",
+      "preview": "取消Cancel",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278d016",
+      "instruction": "0x140303802",
+      "preview": "Cancel",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278c958",
+      "instruction": "0x1403042ff",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278c958",
+      "instruction": "0x14030433e",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278c958",
+      "instruction": "0x14030437d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278c958",
+      "instruction": "0x1403043d8",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278c958",
+      "instruction": "0x140304417",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140301b50.c",
+  "pseudocodeSha256": "7b6649a0bde625b16890e9f1fecfe9081eff5b99d19a7c3199e4dbc7a319c80b",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

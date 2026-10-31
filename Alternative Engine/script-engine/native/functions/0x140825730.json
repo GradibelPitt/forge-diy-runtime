@@ -1,0 +1,18 @@
+{
+  "va": "0x140825730",
+  "rva": 8542000,
+  "endRva": 8543113,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/timing.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140825730.asm",
+  "assemblySha256": "91193dfc4e4948e0a15fb2dab928ca2deedaabcfdd651fdbacf4666f262b17d5",
+  "literalReferences": [],
+  "pseudocode": "functions/0x140825730.c",
+  "pseudocodeSha256": "5b4863a434e76e1e76896a1c41f000e251ef67998f191e29a86af8db9c6b80bb",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

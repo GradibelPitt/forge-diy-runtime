@@ -1,0 +1,37 @@
+{
+  "va": "0x1405aa250",
+  "rva": 5939792,
+  "endRva": 5940509,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/stable.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1405aa250.asm",
+  "assemblySha256": "ec2f7b7e92c641aa9e621dbff991b9db32087e103f0eec2226e7cc6f068a241b",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427b69f0",
+      "instruction": "0x1405aa4bd",
+      "preview": "(e{B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b6a08",
+      "instruction": "0x1405aa4cc",
+      "preview": "(e{B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b6a20",
+      "instruction": "0x1405aa4de",
+      "preview": "(e{B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1405aa250.c",
+  "pseudocodeSha256": "4f5257075c89dbb0993aca3e60310a49c6a16d7dff20409d9235a0a9b2f6b369",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,37 @@
+{
+  "va": "0x14244b6b0",
+  "rva": 38057648,
+  "endRva": 38057833,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14244b6b0.asm",
+  "assemblySha256": "43a2e20abf0d27ae2d38d49a6f1cc36a8286451629d648f0c42f124ffc397df3",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb8830",
+      "instruction": "0x14244b6df",
+      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8840",
+      "instruction": "0x14244b6e7",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb93d0",
+      "instruction": "0x14244b718",
+      "preview": "llAbilityTargetsCastSA>CollectedTriggeredTargetsckedTargetAndYountroller",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8840",
+      "instruction": "0x14244b720",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

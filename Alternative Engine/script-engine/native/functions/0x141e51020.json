@@ -1,0 +1,25 @@
+{
+  "va": "0x141e51020",
+  "rva": 31789088,
+  "endRva": 31789726,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-meter/src/lib.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141e51020.asm",
+  "assemblySha256": "06f6b702a1c88d4c421d784290d67c67e4ebe046b212f39fa8a353decf0c4ffc",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9baa7",
+      "instruction": "0x141e51111",
+      "preview": "快速方案C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\choice.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141e51020.c",
+  "pseudocodeSha256": "520668cf1fa8f8e4a0302cf7498256be73de7a22645023a081cf8afcd52cdeca",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

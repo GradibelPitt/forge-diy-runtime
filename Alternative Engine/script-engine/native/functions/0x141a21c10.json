@@ -1,0 +1,18 @@
+{
+  "va": "0x141a21c10",
+  "rva": 27401232,
+  "endRva": 27406686,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/combat/mod.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a21c10.asm",
+  "assemblySha256": "76cc2cab34bfd9661e914bed32e54743bc07952cfe4c25d759ec455995935966",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141a21c10.c",
+  "pseudocodeSha256": "d86424ddc0ecb4f42fc9c94ae6b13eb64dda0b550e77cefdaba84eeddc242e7a",
+  "pseudocodeOrigin": "prior REA analysis",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

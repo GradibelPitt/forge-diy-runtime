@@ -1,0 +1,25 @@
+{
+  "va": "0x141c7ed40",
+  "rva": 29879616,
+  "endRva": 29881312,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c7ed40.asm",
+  "assemblySha256": "30a99ffafe0833f681b55ca3a3f99cecc9bea8a2ce360f40714f998dfac95409",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ca7298",
+      "instruction": "0x141c7f1bf",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ca7298",
+      "instruction": "0x141c7f2dc",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,49 @@
+{
+  "va": "0x141fd32d0",
+  "rva": 33370832,
+  "endRva": 33373764,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fd32d0.asm",
+  "assemblySha256": "52d652ab8b08ce8745558a5ed2ede973ed7bd80abfc4f8fb513a95fa6af91cd2",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cbabb7",
+      "instruction": "0x141fd3320",
+      "preview": "AddsCounters",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbabd3",
+      "instruction": "0x141fd36d7",
+      "preview": "AddsNoCounterInstant,SorceryAddsKeywordsAddsKeywordsValidAddsKeywordsUntil",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbabe0",
+      "instruction": "0x141fd374a",
+      "preview": "Instant,SorceryAddsKeywordsAddsKeywordsValidAddsKeywordsUntil",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbabef",
+      "instruction": "0x141fd3890",
+      "preview": "AddsKeywordsAddsKeywordsValidAddsKeywordsUntil",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbabfb",
+      "instruction": "0x141fd39a8",
+      "preview": "AddsKeywordsValidAddsKeywordsUntil",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbac0c",
+      "instruction": "0x141fd3adc",
+      "preview": "AddsKeywordsUntil",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

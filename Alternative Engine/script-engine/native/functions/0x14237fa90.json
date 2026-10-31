@@ -1,0 +1,73 @@
+{
+  "va": "0x14237fa90",
+  "rva": 37223056,
+  "endRva": 37224161,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14237fa90.asm",
+  "assemblySha256": "5236679d522cb30540317933c1e5c2e545aad59d735e075270dfc3b26c1836e0",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cea831",
+      "instruction": "0x14237fb1d",
+      "preview": "ValidCardManaAmountEffectOnlyValidTokenValidPlayerValidCounterTypeNotFirstCardInDrawStepPhase",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce5360",
+      "instruction": "0x14237fc0b",
+      "preview": "sCastFromCommandCard.Self+wasCas",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce5370",
+      "instruction": "0x14237fc13",
+      "preview": "Card.Self+wasCas",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb320",
+      "instruction": "0x14237fc34",
+      "preview": "EffectZoneTypeModeCost静态能力 UntapOtherPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb32a",
+      "instruction": "0x14237fd0b",
+      "preview": "TypeModeCost静态能力 UntapOtherPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb32e",
+      "instruction": "0x14237fd96",
+      "preview": "ModeCost静态能力 UntapOtherPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceacb0",
+      "instruction": "0x14237fdf0",
+      "preview": "AmountTotalCommanderCastFromCommandZoneYourSpeedInitiativeHighestSpeedMonarchStartingPlayerMaxSpeedEmblemIsCommanderTargetedPlayerCtrlActivePlayerCtrlDefenderCtrlEnchantedPlayerCtr",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb332",
+      "instruction": "0x14237fe28",
+      "preview": "Cost静态能力 UntapOtherPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb332",
+      "instruction": "0x14237fe68",
+      "preview": "Cost静态能力 UntapOtherPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceacb0",
+      "instruction": "0x14237fec1",
+      "preview": "AmountTotalCommanderCastFromCommandZoneYourSpeedInitiativeHighestSpeedMonarchStartingPlayerMaxSpeedEmblemIsCommanderTargetedPlayerCtrlActivePlayerCtrlDefenderCtrlEnchantedPlayerCtr",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

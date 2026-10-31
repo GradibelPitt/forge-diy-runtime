@@ -1,0 +1,37 @@
+{
+  "va": "0x140d105d0",
+  "rva": 13698512,
+  "endRva": 13698905,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140d105d0.asm",
+  "assemblySha256": "7170e69df96fc7162008687296930911f0680b70999d0e8d1b2f509c27704880",
+  "literalReferences": [
+    {
+      "dataVa": "0x14280dcfe",
+      "instruction": "0x140d105f7",
+      "preview": "MayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14280dcfe",
+      "instruction": "0x140d10638",
+      "preview": "MayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14280dd28",
+      "instruction": "0x140d10655",
+      "preview": "Tail(Fetch(to: Battlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14280dd33",
+      "instruction": "0x140d10676",
+      "preview": "to: Battlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

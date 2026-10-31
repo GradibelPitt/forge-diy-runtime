@@ -1,0 +1,20 @@
+{
+  "va": "0x140e45210",
+  "rva": 14963216,
+  "endRva": 14963912,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/acts/shields.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140e45210.asm",
+  "assemblySha256": "f706381c0aa14d2447cef51c81d78a38858e20bae96d0502afc499cfc3d903bc",
+  "literalReferences": [],
+  "pseudocode": "functions/0x140e45210.c",
+  "pseudocodeSha256": "f57cd03d9d05173df169d7dbd29b89763f4cffa5c0047a5f5dae6b1782381edf",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

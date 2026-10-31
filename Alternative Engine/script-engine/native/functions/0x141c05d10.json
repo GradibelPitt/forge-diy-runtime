@@ -1,0 +1,100 @@
+{
+  "va": "0x141c05d10",
+  "rva": 29383952,
+  "endRva": 29403254,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/etb_more.rs",
+    "crates/mtg-engine/src/pipeline.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c05d10.asm",
+  "assemblySha256": "f0c82a616f685442f8e9977002d1909ebc79337f5429067a395f08fe643439c9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c98fbd",
+      "instruction": "0x141c070c7",
+      "preview": "DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | ETB$ True | Optional$ TrueDB$ PutCounter | Defined$ Self | CounterType$ P1P1 | ETB$ TrueDB$ Animate | Defined$ Self | Keywords$",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c98f78",
+      "instruction": "0x141c070d5",
+      "preview": "DB$ GenericChoice | Defined$ You | Choices$ KwRiotCounter,KwRiotHasteDB$ PutCounter | Defined$ Self | CounterType$ P1P1 | ETB$ True | Optional$ TrueDB$ PutCounter | Defined$ Self |",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9903a",
+      "instruction": "0x141c07137",
+      "preview": "P1P1 | ETB$ TrueDB$ Animate | Defined$ Self | Keywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9902c",
+      "instruction": "0x141c07142",
+      "preview": " CounterType$ P1P1 | ETB$ TrueDB$ Animate | Defined$ Self | Keywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9901c",
+      "instruction": "0x141c0714d",
+      "preview": " Defined$ Self | CounterType$ P1P1 | ETB$ TrueDB$ Animate | Defined$ Self | Keywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9900c",
+      "instruction": "0x141c07158",
+      "preview": "DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | ETB$ TrueDB$ Animate | Defined$ Self | Keywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9907a",
+      "instruction": "0x141c071f0",
+      "preview": "Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9906a",
+      "instruction": "0x141c071fb",
+      "preview": "ywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9905a",
+      "instruction": "0x141c07206",
+      "preview": "fined$ Self | Keywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9904a",
+      "instruction": "0x141c07211",
+      "preview": "DB$ Animate | Defined$ Self | Keywords$ Haste | Duration$ Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8754b",
+      "instruction": "0x141c09b1d",
+      "preview": "ALTY",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c87548",
+      "instruction": "0x141c09b26",
+      "preview": "LOYALTY",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141c0a541",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141c05d10.c",
+  "pseudocodeSha256": "9d5fcdfdaf31fa23028ad031fb1742a1c259918d3c9e18930d9ad413bc0a3d45",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

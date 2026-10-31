@@ -1,0 +1,43 @@
+{
+  "va": "0x1405ad2a0",
+  "rva": 5952160,
+  "endRva": 5960770,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/lasting.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1405ad2a0.asm",
+  "assemblySha256": "5dc9086fdff3dfb1d3271c94b45cd6bd5a1f86c439cd9b958199bde7caf2370b",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427b6a80",
+      "instruction": "0x1405ad2e4",
+      "preview": "、,  → ；; 再调度一次Mulligan again留手Keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b6a83",
+      "instruction": "0x1405ad2eb",
+      "preview": ",  → ；; 再调度一次Mulligan again留手Keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b69a0",
+      "instruction": "0x1405af23d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b69a0",
+      "instruction": "0x1405af27c",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1405ad2a0.c",
+  "pseudocodeSha256": "9ce94d49b9e1a68f2019bb24a6266bf48d0c6a3e48cc37d102602bfee2671754",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

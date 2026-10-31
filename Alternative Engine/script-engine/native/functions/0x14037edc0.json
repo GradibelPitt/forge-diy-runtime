@@ -1,0 +1,122 @@
+{
+  "va": "0x14037edc0",
+  "rva": 3665344,
+  "endRva": 3675821,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14037edc0.asm",
+  "assemblySha256": "c20a7ff23c40a1efa97951d87cc8de00708f06fec039debf3ece4e3190b78a5c",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427972fd",
+      "instruction": "0x14037f6fd",
+      "preview": "TriggeredAmountTriggerAmountTriggerMax // ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279730c",
+      "instruction": "0x14037f71d",
+      "preview": "TriggerAmountTriggerMax // ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797319",
+      "instruction": "0x14037f78e",
+      "preview": "TriggerMax // ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797753",
+      "instruction": "0x14037ff95",
+      "preview": "| Triggers$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427976e2",
+      "instruction": "0x140380184",
+      "preview": "TriggerDescription$每当Whenever 时，, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797730",
+      "instruction": "0x14038075b",
+      "preview": "如果你如此作，则If you do, | Triggers$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797748",
+      "instruction": "0x140380762",
+      "preview": "If you do, | Triggers$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797973",
+      "instruction": "0x140380de6",
+      "preview": "呼魂——此生物进场时，牺牲它。Evoke — when this creature enters, sacrifice it.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427979a0",
+      "instruction": "0x140380ded",
+      "preview": "Evoke — when this creature enters, sacrifice it.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427977d0",
+      "instruction": "0x140380e45",
+      "preview": "运土——将它横置移回战场。Earthbend — return it to the battlefield tapped.不死——将它移回战场，并在其上放置一个+1/+1指示物。Undying — retur",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427977f7",
+      "instruction": "0x140380e4c",
+      "preview": "Earthbend — return it to the battlefield tapped.不死——将它移回战场，并在其上放置一个+1/+1指示物。Undying — return it to the battlefield with a +1/+1 co",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427978b7",
+      "instruction": "0x140380eef",
+      "preview": "坚忍——将它移回战场，并在其上放置一个-1/-1指示物。Persist — return it to the battlefield with a -1/-1 counter on it.牺牲此永久物。Sacrifice this pe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797901",
+      "instruction": "0x140380ef6",
+      "preview": "Persist — return it to the battlefield with a -1/-1 counter on it.牺牲此永久物。Sacrifice this permanent.呼魂——此生物进场时，牺牲它。Evoke — when this c",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797945",
+      "instruction": "0x14038130c",
+      "preview": "牺牲此永久物。Sacrifice this permanent.呼魂——此生物进场时，牺牲它。Evoke — when this creature enters, sacrifice it.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279795a",
+      "instruction": "0x140381313",
+      "preview": "Sacrifice this permanent.呼魂——此生物进场时，牺牲它。Evoke — when this creature enters, sacrifice it.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142797873",
+      "instruction": "0x14038133a",
+      "preview": "Undying — return it to the battlefield with a +1/+1 counter on it.坚忍——将它移回战场，并在其上放置一个-1/-1指示物。Persist — return it to the battlefie",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427977b8",
+      "instruction": "0x14038169b",
+      "preview": "^wyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14037edc0.c",
+  "pseudocodeSha256": "8bc7fd6f7b12e6b1f119cdb9cb68e8f6d83afc27b685ab5da91f698ea2e89303",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

@@ -1,0 +1,31 @@
+{
+  "va": "0x142368fd0",
+  "rva": 37130192,
+  "endRva": 37130479,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/faces.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142368fd0.asm",
+  "assemblySha256": "a3846bcccc80d20e60225bf2d28b3dd1cb7e8089822718b86c89fbffebda1431",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ce5ff0",
+      "instruction": "0x142369003",
+      "preview": "Name:\nManaCost:no cost\nTypes:Creature\nPT:2/2\nK:Ward:2",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce5f7c",
+      "instruction": "0x1423690bb",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x142368fd0.c",
+  "pseudocodeSha256": "bcb3838762e361f1bef3bf952f5cc79843ec3d7186b5728c48642568fca6d0e1",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

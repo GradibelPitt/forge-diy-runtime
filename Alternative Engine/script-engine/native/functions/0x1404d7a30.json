@@ -1,0 +1,37 @@
+{
+  "va": "0x1404d7a30",
+  "rva": 5077552,
+  "endRva": 5078169,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1404d7a30.asm",
+  "assemblySha256": "a502446b01ab44cd3b09b1d7ad7dab7f4e06875325a7932848d8648cb54c788f",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427a2778",
+      "instruction": "0x1404d7aa5",
+      "preview": "cloakedbasePowerbaseToughness",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a2770",
+      "instruction": "0x1404d7adb",
+      "preview": "manifestcloakedbasePowerbaseToughness",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a276b",
+      "instruction": "0x1404d7ae2",
+      "preview": "morphmanifestcloakedbasePowerbaseToughness",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1404d7a30.c",
+  "pseudocodeSha256": "40d054571178577802bb3c309b3340a6d2f09e525860490f3651cea209d4d329",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,109 @@
+{
+  "sourceSha256": "ded7eb5f02d6b6df2186cb78144881d6350028a474c6658577c3fe7388a59e7b",
+  "imageBase": "0x140000000",
+  "scope": "Names describe existing adapter calls and prior native regression evidence, not recovered original Rust symbols.",
+  "functions": [
+    {
+      "va": "0x141bed000",
+      "rva": "0x1bed000",
+      "role": "Draw path; empty-library branch at RVA 0x1bed9db",
+      "evidence": "patch-source/src/native_hooks.rs; evidence/historical/hearthstone-final-fatigue.jsonl.summary.json"
+    },
+    {
+      "va": "0x141c0de00",
+      "rva": "0x1c0de00",
+      "role": "Native lose-life entry used after fatigue increment",
+      "evidence": "patch-source/src/native_hooks.rs; evidence/historical/hearthstone-combined-fatigue-prevention.jsonl.summary.json"
+    },
+    {
+      "va": "0x141b970b0",
+      "rva": "0x1b970b0",
+      "role": "Cleanup, marked damage reset at RVA 0x1b97986",
+      "evidence": "patch-source/src/native_patch.rs; evidence/historical/hearthstone-final-cleanup.jsonl.summary.json"
+    },
+    {
+      "va": "0x141ea90c0",
+      "rva": "0x1ea90c0",
+      "role": "Native engine-state clone",
+      "evidence": "patch-source/src/native_hooks.rs; evidence/historical/native-snapshot-selftest.jsonl.summary.json"
+    },
+    {
+      "va": "0x141b11a30",
+      "rva": "0x1b11a30",
+      "role": "Native engine-state drop",
+      "evidence": "patch-source/src/native_hooks.rs"
+    },
+    {
+      "va": "0x141be1340",
+      "rva": "0x1be1340",
+      "role": "Request/replay choice; pending-answer branch used by upkeep",
+      "evidence": "patch-source/src/native_upkeep.rs; evidence/historical/hearthstone-land-0.jsonl.summary.json"
+    },
+    {
+      "va": "0x1420997f0",
+      "rva": "0x20997f0",
+      "role": "Shared database lookup returning owned definition",
+      "evidence": "patch-source/src/native_upkeep.rs; native/sidecar/decompiled/0x1420997f0.c"
+    },
+    {
+      "va": "0x141dbf090",
+      "rva": "0x1dbf090",
+      "role": "Create card instance from definition",
+      "evidence": "patch-source/src/native_upkeep.rs; evidence/historical/hearthstone-land-0.jsonl.summary.json"
+    },
+    {
+      "va": "0x141dc4100",
+      "rva": "0x1dc4100",
+      "role": "Mutable card lookup used to set conjure flag",
+      "evidence": "patch-source/src/native_upkeep.rs"
+    },
+    {
+      "va": "0x141b75b90",
+      "rva": "0x1b75b90",
+      "role": "Collect normal defenders",
+      "evidence": "patch-source/src/native_combat.rs"
+    },
+    {
+      "va": "0x141b7e1e0",
+      "rva": "0x1b7e1e0",
+      "role": "Attack legality entry",
+      "evidence": "patch-source/src/native_combat.rs; evidence/historical/hearthstone-final-attack-creature.jsonl.summary.json"
+    },
+    {
+      "va": "0x141ce9e90",
+      "rva": "0x1ce9e90",
+      "role": "Attack legality without cost entry",
+      "evidence": "patch-source/src/native_combat.rs"
+    },
+    {
+      "va": "0x141b8f430",
+      "rva": "0x1b8f430",
+      "role": "Blocker-attacker pair restriction; reversed in creature-defender adapter",
+      "evidence": "patch-source/src/native_combat.rs; evidence/historical/native-flying-reach-final.jsonl.summary.json"
+    },
+    {
+      "va": "0x141e528d4",
+      "rva": "0x1e528d4",
+      "role": "Guarded CardDiscover candidate hook inside native ChooseCard, after source validity and before random selection",
+      "evidence": "patch-source/src/native_discover.rs; evidence/card-discover-verification.json"
+    },
+    {
+      "va": "0x141c623f0",
+      "rva": "0x1c623f0",
+      "role": "Dynamic amount evaluation reused by CardDiscover OptionCount",
+      "evidence": "patch-source/src/native_discover.rs; evidence/card-discover-verification.json"
+    },
+    {
+      "va": "0x141a27760",
+      "rva": "0x1a27760",
+      "role": "Native bounded RNG used for database discovery",
+      "evidence": "patch-source/src/native_discover.rs; evidence/card-discover-verification.json"
+    },
+    {
+      "va": "0x142474ae0",
+      "rva": "0x2474ae0",
+      "role": "Native card validity retain helper used for database discovery",
+      "evidence": "patch-source/src/native_discover.rs; evidence/card-discover-verification.json"
+    }
+  ]
+}

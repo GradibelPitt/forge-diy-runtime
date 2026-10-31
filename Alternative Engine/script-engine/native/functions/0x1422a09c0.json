@@ -1,0 +1,37 @@
+{
+  "va": "0x1422a09c0",
+  "rva": 36309440,
+  "endRva": 36319299,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/faces.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422a09c0.asm",
+  "assemblySha256": "a28c63e742ed75feb9db2e8615f8e009d48b92c5d77835f8f45745fdb1977acf",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdaf70",
+      "instruction": "0x1422a130c",
+      "preview": "an Meets the EyeMore Than Meets ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernCho",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdaf80",
+      "instruction": "0x1422a1314",
+      "preview": "More Than Meets ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNext",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ca68a0",
+      "instruction": "0x1422a15d7",
+      "preview": "ActivationLimit$ 1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1422a09c0.c",
+  "pseudocodeSha256": "c6fde1bd973233375d1fb6087d6157b504d8342c9779a4b8ffe473162db9c6da",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

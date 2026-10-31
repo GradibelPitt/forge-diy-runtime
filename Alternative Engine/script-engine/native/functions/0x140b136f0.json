@@ -1,0 +1,50 @@
+{
+  "va": "0x140b136f0",
+  "rva": 11613936,
+  "endRva": 11620233,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b136f0.asm",
+  "assemblySha256": "61289ecfddad4f3bed00bbade5d73e72fb88573d12b33b6ca57b031bfd0b994d",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fb8de",
+      "instruction": "0x140b138e4",
+      "preview": "YouCtrlWinsGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbbd1",
+      "instruction": "0x140b142b5",
+      "preview": "Alt {props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbbd6",
+      "instruction": "0x140b14366",
+      "preview": "props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fb8cc",
+      "instruction": "0x140b14538",
+      "preview": "NamedCardCounters(YouCtrlWinsGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fb8c8",
+      "instruction": "0x140b1495a",
+      "preview": "TIMENamedCardCounters(YouCtrlWinsGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140b136f0.c",
+  "pseudocodeSha256": "7603a9bf6e0f6303588add31fe2bafc4b7afaee840e408ec5afee70f1834208a",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

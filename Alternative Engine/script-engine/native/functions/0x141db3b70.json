@@ -1,0 +1,19 @@
+{
+  "va": "0x141db3b70",
+  "rva": 31144816,
+  "endRva": 31146670,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/casting/pay_search.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141db3b70.asm",
+  "assemblySha256": "0b921e6749b6a50b41972f33923bbfd65119e9976ba104d018ba52d506ad40c4",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141db3b70.c",
+  "pseudocodeSha256": "e1763a6b92c44177c9361de27ab3dfb4261553570ca4e6cdc6ce03634ffe9de6",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

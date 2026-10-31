@@ -1,0 +1,31 @@
+{
+  "va": "0x140b29930",
+  "rva": 11704624,
+  "endRva": 11706282,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b29930.asm",
+  "assemblySha256": "449936c0cbcbe298ccb16553d7d7011327401f13e23abc4ba7fed36755b2d572",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fb420",
+      "instruction": "0x140b29e39",
+      "preview": "e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fb430",
+      "instruction": "0x140b29e41",
+      "preview": "More(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140b29930.c",
+  "pseudocodeSha256": "070d8650d2ffb13f38ff4e682352c169612ab52ce3b6df6d98233b96424c6d94",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

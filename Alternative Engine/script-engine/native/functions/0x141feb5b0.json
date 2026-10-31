@@ -1,0 +1,403 @@
+{
+  "va": "0x141feb5b0",
+  "rva": 33469872,
+  "endRva": 33487990,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/effects/misc.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141feb5b0.asm",
+  "assemblySha256": "83a1698dfcb22db5834ce5e72361952fdebbd5e0bee0656a168f847bf07e2f70",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9c2f",
+      "instruction": "0x141feb6b4",
+      "preview": "DestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c29",
+      "instruction": "0x141feb783",
+      "preview": "OriginDestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c2f",
+      "instruction": "0x141feb963",
+      "preview": "DestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb371",
+      "instruction": "0x141febb0b",
+      "preview": "ShuffleNonMandatorySelectPromptOptionalPromptNoShuffleNoLookingUseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSV",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb384",
+      "instruction": "0x141febb53",
+      "preview": "SelectPromptOptionalPromptNoShuffleNoLookingUseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c2f",
+      "instruction": "0x141febcb5",
+      "preview": "DestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb390",
+      "instruction": "0x141fec056",
+      "preview": "OptionalPromptNoShuffleNoLookingUseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompareThisDefined",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb39e",
+      "instruction": "0x141fec09e",
+      "preview": "NoShuffleNoLookingUseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompareThisDefinedAndTgtsChooseF",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c75",
+      "instruction": "0x141fec189",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c88",
+      "instruction": "0x141fec1b3",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c2f",
+      "instruction": "0x141fec1e4",
+      "preview": "DestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c40",
+      "instruction": "0x141fec23c",
+      "preview": "ShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb3a7",
+      "instruction": "0x141fec280",
+      "preview": "NoLookingUseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompareThisDefinedAndTgtsChooseFromDefine",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb3b0",
+      "instruction": "0x141fec2f9",
+      "preview": "UseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompareThisDefinedAndTgtsChooseFromDefined$ChangeZ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb3cc",
+      "instruction": "0x141fec423",
+      "preview": "DifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompareThisDefinedAndTgtsChooseFromDefined$ChangeZone 同时有目标与点名",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb676",
+      "instruction": "0x141fec5f5",
+      "preview": "DestAltSVar 没有 DestinationAlternative",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb5d9",
+      "instruction": "0x141fec79f",
+      "preview": "AbilityCountOptionQuestion",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb5e5",
+      "instruction": "0x141fec7e8",
+      "preview": "OptionQuestion",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c7f",
+      "instruction": "0x141fec831",
+      "preview": "ChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c75",
+      "instruction": "0x141fec876",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c8f",
+      "instruction": "0x141fec8a2",
+      "preview": "TopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c7f",
+      "instruction": "0x141fec8c9",
+      "preview": "ChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c75",
+      "instruction": "0x141fec912",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c88",
+      "instruction": "0x141fed3bf",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c75",
+      "instruction": "0x141fed441",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c88",
+      "instruction": "0x141fed5ca",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb610",
+      "instruction": "0x141fed674",
+      "preview": "ChangeZoneAll 取牌作目标TypeLimitChangeZoneAll 的参数 DifferentNamesChangeZoneAll 的附加项DestAltSVar 没有 DestinationAlternative",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4e5",
+      "instruction": "0x141fed700",
+      "preview": "OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c75",
+      "instruction": "0x141fed815",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb5ca",
+      "instruction": "0x141feda41",
+      "preview": "ChangeType EACHAbilityCountOptionQuestion",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c7f",
+      "instruction": "0x141fedcb9",
+      "preview": "ChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c75",
+      "instruction": "0x141fede2e",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb483",
+      "instruction": "0x141fede54",
+      "preview": "AtRandom已知对象的换区带了搜寻参数DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentP",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb48b",
+      "instruction": "0x141fede7e",
+      "preview": "已知对象的换区带了搜寻参数DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4b2",
+      "instruction": "0x141fedfe1",
+      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4bf",
+      "instruction": "0x141fee027",
+      "preview": "SearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9f98",
+      "instruction": "0x141fee04a",
+      "preview": "ChooserExileWithCountersToken 缺 TokenScriptManaReflected 缺 ValidAnimateAll 缺 ValidCards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb48b",
+      "instruction": "0x141fee097",
+      "preview": "已知对象的换区带了搜寻参数DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c7f",
+      "instruction": "0x141fee234",
+      "preview": "ChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c6c",
+      "instruction": "0x141fee27d",
+      "preview": "MandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4c7",
+      "instruction": "0x141fee37a",
+      "preview": "Transformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactly",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb636",
+      "instruction": "0x141fee534",
+      "preview": "ChangeZoneAll 的参数 DifferentNamesChangeZoneAll 的附加项DestAltSVar 没有 DestinationAlternative",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb65c",
+      "instruction": "0x141fee599",
+      "preview": "ChangeZoneAll 的附加项DestAltSVar 没有 DestinationAlternative",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4b2",
+      "instruction": "0x141fee6a2",
+      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c47",
+      "instruction": "0x141fee814",
+      "preview": "LibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9f98",
+      "instruction": "0x141fee94f",
+      "preview": "ChooserExileWithCountersToken 缺 TokenScriptManaReflected 缺 ValidAnimateAll 缺 ValidCards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9c6c",
+      "instruction": "0x141feead0",
+      "preview": "MandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4f6",
+      "instruction": "0x141feeaf7",
+      "preview": "ShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb508",
+      "instruction": "0x141feeb17",
+      "preview": "AttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb62d",
+      "instruction": "0x141feebf2",
+      "preview": "TypeLimitChangeZoneAll 的参数 DifferentNamesChangeZoneAll 的附加项DestAltSVar 没有 DestinationAlternative",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb5af",
+      "instruction": "0x141feecf2",
+      "preview": "AttachAfter 不是进战场ChangeType EACHAbilityCountOptionQuestion",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb513",
+      "instruction": "0x141feef6c",
+      "preview": "ChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb483",
+      "instruction": "0x141feefb2",
+      "preview": "AtRandom已知对象的换区带了搜寻参数DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentP",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb59a",
+      "instruction": "0x141fef094",
+      "preview": "搜寻的持续时间AttachAfter 不是进战场ChangeType EACHAbilityCountOptionQuestion",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb521",
+      "instruction": "0x141fef116",
+      "preview": "DifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb52d",
+      "instruction": "0x141fef161",
+      "preview": "DifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb53b",
+      "instruction": "0x141fef1ac",
+      "preview": "ShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb548",
+      "instruction": "0x141fef1f7",
+      "preview": "WithTotalPowerWithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb556",
+      "instruction": "0x141fef301",
+      "preview": "WithTotalCMCWithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb562",
+      "instruction": "0x141fef40b",
+      "preview": "WithTotalCardTypesExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb574",
+      "instruction": "0x141fef735",
+      "preview": "ExactlyReorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb57b",
+      "instruction": "0x141fef766",
+      "preview": "Reorder",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb3a7",
+      "instruction": "0x141fef77f",
+      "preview": "NoLookingUseAllOriginZonesRandomOrderDifferentNamesDestinationAlternativeLibraryPositionAlternativeAlternativeDeciderDestAltSVarDestAltSVarCompareThisDefinedAndTgtsChooseFromDefine",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbb4bf",
+      "instruction": "0x141fef798",
+      "preview": "SearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWithTotalCardType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141feb5b0.c",
+  "pseudocodeSha256": "0ce5370a9c97f1d585dea45cf6013a2127dc56835f6e2b493e30b5fed97d4562",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

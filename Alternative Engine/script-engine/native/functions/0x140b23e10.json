@@ -1,0 +1,25 @@
+{
+  "va": "0x140b23e10",
+  "rva": 11681296,
+  "endRva": 11681601,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b23e10.asm",
+  "assemblySha256": "0d72de0cec9bcd1ecc1ba9a8afdf86a1de388fd80ab683b07a7097559a66b094",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fb8cc",
+      "instruction": "0x140b23e88",
+      "preview": "NamedCardCounters(YouCtrlWinsGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140b23e10.c",
+  "pseudocodeSha256": "4790f6fe8e12ddfff28b44632c4b2503dc5194ccb62b5439b19f29c6a0e9cd08",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

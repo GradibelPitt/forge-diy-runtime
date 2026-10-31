@@ -1,0 +1,20 @@
+{
+  "va": "0x141c3bac0",
+  "rva": 29604544,
+  "endRva": 29606651,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/seat/dungeon.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c3bac0.asm",
+  "assemblySha256": "a7e0d7ad3258306ef789ec3accb577e819c8eae266c97ddb42e5e8ab58407f43",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141c3bac0.c",
+  "pseudocodeSha256": "cc86843f662a2eddad94f9691669a175e304eafdc6fd85c55071f004358a8c0e",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

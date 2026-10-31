@@ -1,0 +1,19 @@
+{
+  "va": "0x142724dd0",
+  "rva": 41045456,
+  "endRva": 41046214,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142724dd0.asm",
+  "assemblySha256": "e0d86a42b605ca67f4f4fead090d8668bb8ce0eff13dfb00de12b4bac3c84afb",
+  "literalReferences": [
+    {
+      "dataVa": "0x142d12f68",
+      "instruction": "0x1427250ab",
+      "preview": "internal error: entered unreachable code/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\sys\\pal\\windows\\mod.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

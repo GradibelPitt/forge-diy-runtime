@@ -1,0 +1,19 @@
+{
+  "va": "0x142298d30",
+  "rva": 36277552,
+  "endRva": 36277648,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142298d30.asm",
+  "assemblySha256": "d1f9621a805e1b1e5bc29ace5b0033bf09ce0d2317d3d95fb77a26316105ea21",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdccd8",
+      "instruction": "0x142298d5c",
+      "preview": "PlayerMustAttack 缺 ValidPlayerCanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethal",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,18 @@
+{
+  "va": "0x141d225d0",
+  "rva": 30549456,
+  "endRva": 30550088,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/merge.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d225d0.asm",
+  "assemblySha256": "060ec4cce0502cda6b5b9221bd29f26f763c049a063acace9329a9f895c7fd91",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141d225d0.c",
+  "pseudocodeSha256": "c7cf212e035b1011fad45a89c82172c996e72a2c41c230fefeac213344fc82da",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,25 @@
+{
+  "va": "0x14184b320",
+  "rva": 25473824,
+  "endRva": 25474213,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-core/src/prof.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14184b320.asm",
+  "assemblySha256": "8a116d2b6ec1eec3d8f8a0c4e074a4547e8194920ac4d078926da5ee37066254",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c5b628",
+      "instruction": "0x14184b47c",
+      "preview": "overflow when adding durations/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14184b320.c",
+  "pseudocodeSha256": "ee30c54e090073cb606f3fe0bc5e17b2f5e4abe1a8bf9df8b8e408d72d22df20",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,27 @@
+{
+  "va": "0x141d2ec10",
+  "rva": 30600208,
+  "endRva": 30605397,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/seat/identity.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d2ec10.asm",
+  "assemblySha256": "6b5299569bf186987f415afb7b33a27ad45ae6c65ba4bfa0649c4c5088cf28ec",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c8737e",
+      "instruction": "0x141d2eddd",
+      "preview": "Identity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141d2ec10.c",
+  "pseudocodeSha256": "868270572f392860321088e3fc9334155bbe438b92b7ebd614a299c964df0c2e",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

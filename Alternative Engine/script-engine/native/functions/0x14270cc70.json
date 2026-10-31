@@ -1,0 +1,18 @@
+{
+  "va": "0x14270cc70",
+  "rva": 40946800,
+  "endRva": 40946920,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-meter/src/lib.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14270cc70.asm",
+  "assemblySha256": "2991e27b0f2141a721aa6fb0813746353e70e238636717fce2a6e4ea1406c768",
+  "literalReferences": [],
+  "pseudocode": "functions/0x14270cc70.c",
+  "pseudocodeSha256": "7a6521787a9e65e2c584bb5d6ae81b82b753f2685ac3ac72d42c793de1bb55d6",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

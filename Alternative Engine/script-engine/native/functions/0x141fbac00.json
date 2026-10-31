@@ -1,0 +1,19 @@
+{
+  "va": "0x141fbac00",
+  "rva": 33270784,
+  "endRva": 33270886,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbac00.asm",
+  "assemblySha256": "fef2527c83cac290364da7e9b805aadedf081822c0ae79bef9323cfba0888ef7",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9db8",
+      "instruction": "0x141fbac2c",
+      "preview": "EachDamage 对自己缺 ValidCardsParentTarget 但没有目标",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

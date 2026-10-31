@@ -1,0 +1,67 @@
+{
+  "va": "0x14215f130",
+  "rva": 34992432,
+  "endRva": 34993353,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14215f130.asm",
+  "assemblySha256": "5ccd09885b0833a9397f4d3be76db3aa027386ebcecc96c2037416305fad7976",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cca2f1",
+      "instruction": "0x14215f179",
+      "preview": "ModeChooserObject",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8760",
+      "instruction": "0x14215f352",
+      "preview": "aAbility",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8770",
+      "instruction": "0x14215f35a",
+      "preview": "SpellAbility.Maner.Other",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca2f1",
+      "instruction": "0x14215f3d4",
+      "preview": "ModeChooserObject",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb6bb",
+      "instruction": "0x14215f3db",
+      "preview": "TapsForManaCounterAddedOnceCounterAddedSpellCastOrCopyDiscardedAllValidSourceValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb6fd",
+      "instruction": "0x14215f3f0",
+      "preview": "ValidSourceValidPlayerValidActivatingPlayerCounterAmount",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cca08d",
+      "instruction": "0x14215f424",
+      "preview": "ValidCardPutCounter 的 ChooserKWChoice 不是增益DefinedKW 不是增益DefinedLandwalk 不是增益RandomKeyword 不是增益DiscardUntapDrawGainControlRelativeTargetExcessDamag",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc98ac",
+      "instruction": "0x14215f456",
+      "preview": "PlayerOpponentPlayer.ReplaceToken 缺 TokenScript",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb759",
+      "instruction": "0x14215f48e",
+      "preview": "ActivatorValidBlockerAnnounceMaxDBSubAbility替代效果里要做选择ReplaceManaReplaceColorReplaceOnlyReplaceMana 同时换种类与颜色ReplaceTypeReplaceAmountReplaceMana 没",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

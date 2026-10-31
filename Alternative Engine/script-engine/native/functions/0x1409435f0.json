@@ -1,0 +1,27 @@
+{
+  "va": "0x1409435f0",
+  "rva": 9713136,
+  "endRva": 9713632,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/etb_tax.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1409435f0.asm",
+  "assemblySha256": "2d9756237c0de919c1e8f68dea24fc8ab99976be301a0ba9a88e63bc14b04a08",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427edb70",
+      "instruction": "0x140943793",
+      "preview": "至少一个可选C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\etb_tax.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1409435f0.c",
+  "pseudocodeSha256": "df614af90d7581b36ba0cb39ea63a3f3a112160b0f8e1d0655f76e20bd163885",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

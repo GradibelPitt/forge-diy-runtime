@@ -1,0 +1,25 @@
+{
+  "va": "0x141fbb9b0",
+  "rva": 33274288,
+  "endRva": 33274384,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbb9b0.asm",
+  "assemblySha256": "9b689e3a1068660142ecba8234072601873c05c52f201e093e0cd263e6837cb9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9f6e",
+      "instruction": "0x141fbb9d1",
+      "preview": "ose 没有目标You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9f62",
+      "instruction": "0x141fbb9dc",
+      "preview": "RevealTgtChoose 没有目标You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

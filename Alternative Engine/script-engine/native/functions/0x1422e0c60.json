@@ -1,0 +1,619 @@
+{
+  "va": "0x1422e0c60",
+  "rva": 36572256,
+  "endRva": 36607329,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422e0c60.asm",
+  "assemblySha256": "abc4f9f331352eb7694c4d56a4538e1708c4d4000428697acd756f572ac7c58a",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc443",
+      "instruction": "0x1422e0da1",
+      "preview": "IsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc44c",
+      "instruction": "0x1422e0e76",
+      "preview": "CheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc460",
+      "instruction": "0x1422e0f3c",
+      "preview": "Condition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfa55",
+      "instruction": "0x1422e11a3",
+      "preview": "ExcludeZoneCharacteristicDefining",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfabf",
+      "instruction": "0x1422e12b0",
+      "preview": "GainTextOf",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e13b1",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfabf",
+      "instruction": "0x1422e1482",
+      "preview": "GainTextOf",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e15ac",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfa60",
+      "instruction": "0x1422e1742",
+      "preview": "CharacteristicDefining",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfa55",
+      "instruction": "0x1422e177f",
+      "preview": "ExcludeZoneCharacteristicDefining",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e1ac8",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e1bb3",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e1d88",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb390",
+      "instruction": "0x1422e1e6f",
+      "preview": "efield,GraveyardBattlefield,GravPlot:CardManaCosrary,BattlefieldLibrary,Battlefitlefield,CommandBattlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb3a0",
+      "instruction": "0x1422e1e77",
+      "preview": "Battlefield,GravPlot:CardManaCosrary,BattlefieldLibrary,Battlefitlefield,CommandBattlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e1eb4",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde6f5",
+      "instruction": "0x1422e208f",
+      "preview": "Battlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde685",
+      "instruction": "0x1422e20a8",
+      "preview": "GraveyardReorderZone 不是坟场",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422e221a",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb3b0",
+      "instruction": "0x1422e2257",
+      "preview": "Plot:CardManaCosrary,BattlefieldLibrary,Battlefitlefield,CommandBattlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e2285",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e23ac",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb3c0",
+      "instruction": "0x1422e25dc",
+      "preview": "rary,BattlefieldLibrary,Battlefitlefield,CommandBattlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb3d0",
+      "instruction": "0x1422e25e4",
+      "preview": "Library,Battlefitlefield,CommandBattlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e25ff",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422e26f3",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfb5d",
+      "instruction": "0x1422e2859",
+      "preview": "ChangeColorWordsTo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfb5d",
+      "instruction": "0x1422e290e",
+      "preview": "ChangeColorWordsTo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e298b",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb360",
+      "instruction": "0x1422e29e1",
+      "preview": "Stack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb370",
+      "instruction": "0x1422e2a15",
+      "preview": "Battlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc417",
+      "instruction": "0x1422e2ac8",
+      "preview": "AffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e2b2e",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e2dbc",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e2e25",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422e2e6c",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfb40",
+      "instruction": "0x1422e2f76",
+      "preview": "GainTextOf 不是给自己的ChangeColorWordsTo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422e327f",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e3467",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e3639",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfaf4",
+      "instruction": "0x1422e3980",
+      "preview": "GainTextAbilities静态能力 GainTextOfGainTextAbilities 是法术力异能GainTextOf 不是给自己的ChangeColorWordsTo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfb05",
+      "instruction": "0x1422e3e23",
+      "preview": "静态能力 GainTextOfGainTextAbilities 是法术力异能GainTextOf 不是给自己的ChangeColorWordsTo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422e3f97",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e412f",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e43b3",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e468c",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422e46d3",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e4713",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e4802",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e4941",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e4a5a",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e4c11",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfceb",
+      "instruction": "0x1422e4eef",
+      "preview": "LethalDamageByPower静态能力 LethalDamageByPower",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422e4ffa",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfceb",
+      "instruction": "0x1422e50bb",
+      "preview": "LethalDamageByPower静态能力 LethalDamageByPower",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e5101",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfc07",
+      "instruction": "0x1422e522d",
+      "preview": "Exile,Graveyard,Hand,Library,Command",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e5247",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcd96",
+      "instruction": "0x1422e531b",
+      "preview": "wer 缺 Affected",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcd86",
+      "instruction": "0x1422e5326",
+      "preview": "LethalDamageByPower 缺 Affected",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e55f1",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e5614",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422e5703",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422e583d",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcd68",
+      "instruction": "0x1422e592c",
+      "preview": "牌库里的谋划缺 AffectedLethalDamageByPower 缺 Affected",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422e5ad9",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e5b4b",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422e5c62",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfcfe",
+      "instruction": "0x1422e5ebf",
+      "preview": "静态能力 LethalDamageByPower",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e6102",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e61ab",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422e633a",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422e6444",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e6945",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e6aee",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb3e0",
+      "instruction": "0x1422e6bff",
+      "preview": "tlefield,CommandBattlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb3f0",
+      "instruction": "0x1422e6c07",
+      "preview": "Battlefield,Commmand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb400",
+      "instruction": "0x1422e6c2f",
+      "preview": "mand,BattlefieldCommand,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb410",
+      "instruction": "0x1422e6c37",
+      "preview": "Command,BattlefinvertedManaCost>PayLife<ConverteCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e6c70",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e6d77",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e6ef3",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e7064",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e7167",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422e71ad",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e7220",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e7266",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e73d5",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e741b",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e758a",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e7a02",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf300",
+      "instruction": "0x1422e7e01",
+      "preview": "ValidSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc426",
+      "instruction": "0x1422e80f1",
+      "preview": "AffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfd39",
+      "instruction": "0x1422e822a",
+      "preview": "静态能力在 Graveyard 起作用",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc432",
+      "instruction": "0x1422e827c",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422e83cf",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc0e5",
+      "instruction": "0x1422e84d6",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfaa1",
+      "instruction": "0x1422e8d67",
+      "preview": "ExcludeZone 不是特征定义GainTextOf",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfa8c",
+      "instruction": "0x1422e8dd2",
+      "preview": "ExcludeZone 带条件ExcludeZone 不是特征定义GainTextOf",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfd39",
+      "instruction": "0x1422e8f66",
+      "preview": "静态能力在 Graveyard 起作用",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdfb1c",
+      "instruction": "0x1422e93aa",
+      "preview": "GainTextAbilities 是法术力异能GainTextOf 不是给自己的ChangeColorWordsTo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

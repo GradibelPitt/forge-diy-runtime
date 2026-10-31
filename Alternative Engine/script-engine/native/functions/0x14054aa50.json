@@ -1,0 +1,103 @@
+{
+  "va": "0x14054aa50",
+  "rva": 5548624,
+  "endRva": 5555853,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/cost_labels.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14054aa50.asm",
+  "assemblySha256": "074946268df6ee4a4a98c76b3d5a78a66cc6829894a04020f7333f128d1a0020",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427a5fa5",
+      "instruction": "0x14054af6d",
+      "preview": "付另一笔附加费用Pay another additional cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a5fbd",
+      "instruction": "0x14054af74",
+      "preview": "Pay another additional cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65f9",
+      "instruction": "0x14054b011",
+      "preview": "Card固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65f9",
+      "instruction": "0x14054b253",
+      "preview": "Card固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a670d",
+      "instruction": "0x14054ba5a",
+      "preview": "付增幅Pay kicker付可选费用Pay optional cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a6716",
+      "instruction": "0x14054ba61",
+      "preview": "Pay kicker付可选费用Pay optional cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a6720",
+      "instruction": "0x14054bb1b",
+      "preview": "付可选费用Pay optional cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a672f",
+      "instruction": "0x14054bb22",
+      "preview": "Pay optional cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a67c7",
+      "instruction": "0x14054c171",
+      "preview": "面朝下Face down不付额外代价No extra cost，牌背Face-down card牺牲Sacrifice弃掉Discard横置Tap移回手上return to hand展示reveal放逐Exile置入坟场put into g",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a67d9",
+      "instruction": "0x14054c222",
+      "preview": "不付额外代价No extra cost，牌背Face-down card牺牲Sacrifice弃掉Discard横置Tap移回手上return to hand展示reveal放逐Exile置入坟场put into graveyard请援beho",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a67eb",
+      "instruction": "0x14054c229",
+      "preview": "No extra cost，牌背Face-down card牺牲Sacrifice弃掉Discard横置Tap移回手上return to hand展示reveal放逐Exile置入坟场put into graveyard请援behold请援并放逐b",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a67f8",
+      "instruction": "0x14054c340",
+      "preview": "，牌背Face-down card牺牲Sacrifice弃掉Discard横置Tap移回手上return to hand展示reveal放逐Exile置入坟场put into graveyard请援behold请援并放逐behold and exi",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65fd",
+      "instruction": "0x14054c54b",
+      "preview": "固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427a65fd",
+      "instruction": "0x14054c598",
+      "preview": "固定写法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14054aa50.c",
+  "pseudocodeSha256": "d1d122f428631a45e95116f0dc4fdc816ac944d1c24339cb09a0caeda7acc1ca",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

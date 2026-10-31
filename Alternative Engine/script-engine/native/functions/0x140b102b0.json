@@ -1,0 +1,225 @@
+{
+  "va": "0x140b102b0",
+  "rva": 11600560,
+  "endRva": 11611553,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/acts/cardflow.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b102b0.asm",
+  "assemblySha256": "3e91ee800d20ee440aae5781239478c39350d185e045b33d720a3470ca657667",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fbcc8",
+      "instruction": "0x140b1106e",
+      "preview": "LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedf",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc55",
+      "instruction": "0x140b1109c",
+      "preview": "numnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: S",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc78",
+      "instruction": "0x140b110f9",
+      "preview": "firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fb3e0",
+      "instruction": "0x140b1118a",
+      "preview": "trol",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fb3f0",
+      "instruction": "0x140b11192",
+      "preview": "MoveUnderYourCon who: Some(Slot(CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc4d",
+      "instruction": "0x140b111b6",
+      "preview": "whoTokennumnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controll",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc83",
+      "instruction": "0x140b11225",
+      "preview": "owner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]Ex",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc96",
+      "instruction": "0x140b11253",
+      "preview": "amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImp",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc9c",
+      "instruction": "0x140b11293",
+      "preview": "zone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprinted",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbcad",
+      "instruction": "0x140b112b5",
+      "preview": "zone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Z",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc4d",
+      "instruction": "0x140b1131c",
+      "preview": "whoTokennumnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controll",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbcb7",
+      "instruction": "0x140b1134a",
+      "preview": "controller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc96",
+      "instruction": "0x140b11378",
+      "preview": "amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImp",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbcec",
+      "instruction": "0x140b11877",
+      "preview": "caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbcf9",
+      "instruction": "0x140b1189c",
+      "preview": "controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd0d",
+      "instruction": "0x140b118bc",
+      "preview": "face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd1c",
+      "instruction": "0x140b118e4",
+      "preview": " free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fc318",
+      "instruction": "0x140b11939",
+      "preview": "from: Who(Defined(Mem(Mem(IsRemembered)",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc40",
+      "instruction": "0x140b11aa2",
+      "preview": "choose: Some(whoTokennumnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc50",
+      "instruction": "0x140b11ac2",
+      "preview": "Tokennumnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc4d",
+      "instruction": "0x140b11bd2",
+      "preview": "whoTokennumnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controll",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc7d",
+      "instruction": "0x140b11c86",
+      "preview": "secondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Ex",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbcd1",
+      "instruction": "0x140b11ef3",
+      "preview": "CountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd5a",
+      "instruction": "0x140b120dc",
+      "preview": "from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fc32e",
+      "instruction": "0x140b120f8",
+      "preview": "Mem(IsRemembered)",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd27",
+      "instruction": "0x140b12118",
+      "preview": "zones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd35",
+      "instruction": "0x140b12138",
+      "preview": "ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd45",
+      "instruction": "0x140b1215b",
+      "preview": "IsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc55",
+      "instruction": "0x140b12349",
+      "preview": "numnon_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: S",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc58",
+      "instruction": "0x140b12390",
+      "preview": "non_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc6b",
+      "instruction": "0x140b123b2",
+      "preview": "at_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true fr",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd50",
+      "instruction": "0x140b126df",
+      "preview": "from: Who(from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbd5a",
+      "instruction": "0x140b129a2",
+      "preview": "from: Zone {MayPlay {IsRememberedfree: true",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427fbc96",
+      "instruction": "0x140b12a6f",
+      "preview": "amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImp",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140b102b0.c",
+  "pseudocodeSha256": "bf3a8be28cf782366e0a208c06dd61e6b10aca7f1cfbc5a0c4aea65d10d0c589",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

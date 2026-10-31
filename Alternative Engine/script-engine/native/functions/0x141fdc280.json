@@ -1,0 +1,19 @@
+{
+  "va": "0x141fdc280",
+  "rva": 33407616,
+  "endRva": 33409122,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fdc280.asm",
+  "assemblySha256": "a235afdc74c3db7a5d1a21389e98bca617ace17845a793e4e78c02979614381f",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cbae16",
+      "instruction": "0x141fdc2da",
+      "preview": " & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

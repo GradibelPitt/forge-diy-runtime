@@ -1,0 +1,19 @@
+{
+  "va": "0x142416900",
+  "rva": 37841152,
+  "endRva": 37841241,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142416900.asm",
+  "assemblySha256": "1108c0146eea9603ae04f6e55397283254b342080f6b3509b8c8e7eb6d0710b0",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cf242d",
+      "instruction": "0x142416921",
+      "preview": "保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

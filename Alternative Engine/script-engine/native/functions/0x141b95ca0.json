@@ -1,0 +1,25 @@
+{
+  "va": "0x141b95ca0",
+  "rva": 28925088,
+  "endRva": 28929411,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b95ca0.asm",
+  "assemblySha256": "4f8492886cfdc80231bdc2a8e4327f6491db2fca97671a5c8f07fcb1e10a2cd3",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c8fbe4",
+      "instruction": "0x141b95e86",
+      "preview": "Remove CARDNAME from your deck before playing if you're not playing for ante.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141b95ca0.c",
+  "pseudocodeSha256": "ba99fe0024b09be6c4a62a45a37f36f899c8bbc2b49db6e56d3206392ba8009f",
+  "pseudocodeOrigin": "prior REA analysis",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

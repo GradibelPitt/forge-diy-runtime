@@ -1,0 +1,61 @@
+{
+  "va": "0x1421f9e80",
+  "rva": 35626624,
+  "endRva": 35634011,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421f9e80.asm",
+  "assemblySha256": "2ee9a3c4e9c8c934fd11ca6490a4b432afba96b4346b28610add8317a551e3cc",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cd3b6b",
+      "instruction": "0x1421f9ed8",
+      "preview": "AddAbilityAddTriggerAddReplacementEffectAddStaticAbilityConvertedManaCost$ ConvertedManaCost$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3b75",
+      "instruction": "0x1421fa48f",
+      "preview": "AddTriggerAddReplacementEffectAddStaticAbilityConvertedManaCost$ ConvertedManaCost$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3b7f",
+      "instruction": "0x1421faa4f",
+      "preview": "AddReplacementEffectAddStaticAbilityConvertedManaCost$ ConvertedManaCost$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3b93",
+      "instruction": "0x1421fb00f",
+      "preview": "AddStaticAbilityConvertedManaCost$ ConvertedManaCost$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3ba3",
+      "instruction": "0x1421fb204",
+      "preview": "ConvertedManaCost$ ConvertedManaCost$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3bc7",
+      "instruction": "0x1421fb694",
+      "preview": "$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3bb4",
+      "instruction": "0x1421fb6c0",
+      "preview": "$ ConvertedManaCost$ Count$CardManaCostAddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd3bdb",
+      "instruction": "0x1421fb8fb",
+      "preview": "AddSVarRememberRevealedCostRevealValidPrecostDesc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

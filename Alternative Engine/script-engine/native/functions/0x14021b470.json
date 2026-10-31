@@ -1,0 +1,410 @@
+{
+  "va": "0x14021b470",
+  "rva": 2208880,
+  "endRva": 2224690,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "src/prompts.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14021b470.asm",
+  "assemblySha256": "4086965923e320f8f2d72d53ffd45167aaabdc5de52cf6a190a1c2acbdb8a3e0",
+  "literalReferences": [
+    {
+      "dataVa": "0x142782308",
+      "instruction": "0x14021b4b1",
+      "preview": "commandentityId没有这个选项No such option",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278230f",
+      "instruction": "0x14021b4ec",
+      "preview": "entityId没有这个选项No such option",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827d4",
+      "instruction": "0x14021b612",
+      "preview": "orderedIds每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777020",
+      "instruction": "0x14021b823",
+      "preview": "submit_allocation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782850",
+      "instruction": "0x14021b860",
+      "preview": "allocationsidamount先选一个牌名Choose a card name first没有这个牌名No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277d7a0",
+      "instruction": "0x14021bc3c",
+      "preview": "submit_card_list/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827d4",
+      "instruction": "0x14021bc5e",
+      "preview": "orderedIds每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827c8",
+      "instruction": "0x14021bdf4",
+      "preview": "submit_orderorderedIds每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827d4",
+      "instruction": "0x14021be29",
+      "preview": "orderedIds每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427828b0",
+      "instruction": "0x14021bef2",
+      "preview": "submit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427801a4",
+      "instruction": "0x14021bf0c",
+      "preview": "textGenericChoiceVillainousChoice",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827d4",
+      "instruction": "0x14021c038",
+      "preview": "orderedIds每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278285b",
+      "instruction": "0x14021cdd4",
+      "preview": "idamount先选一个牌名Choose a card name first没有这个牌名No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278285d",
+      "instruction": "0x14021cddb",
+      "preview": "amount先选一个牌名Choose a card name first没有这个牌名No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278280d",
+      "instruction": "0x14021cf4f",
+      "preview": "remainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278259f",
+      "instruction": "0x14021d0e0",
+      "preview": "不是可选的目标Not a legal target现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427825b4",
+      "instruction": "0x14021d0e7",
+      "preview": "Not a legal target现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay the cost to attack li",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427824e0",
+      "instruction": "0x14021d220",
+      "preview": "otherEntityIds这张牌不能拿来付This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish cho",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827d4",
+      "instruction": "0x14021d2f7",
+      "preview": "orderedIds每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782863",
+      "instruction": "0x14021d85e",
+      "preview": "先选一个牌名Choose a card name first没有这个牌名No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782875",
+      "instruction": "0x14021d865",
+      "preview": "Choose a card name first没有这个牌名No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278288d",
+      "instruction": "0x14021d8ad",
+      "preview": "没有这个牌名No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278289f",
+      "instruction": "0x14021d8b4",
+      "preview": "No such card namesubmit_text这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827de",
+      "instruction": "0x14021d926",
+      "preview": "每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827f3",
+      "instruction": "0x14021d92d",
+      "preview": "Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827de",
+      "instruction": "0x14021d97d",
+      "preview": "每一条都要排上Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427827f3",
+      "instruction": "0x14021d984",
+      "preview": "Every item must be orderedremainingIds",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427826f8",
+      "instruction": "0x14021dab8",
+      "preview": "阻挡双方不对Invalid blocker or attacker不能选这张This card can't be chosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278270a",
+      "instruction": "0x14021dabf",
+      "preview": "Invalid blocker or attacker不能选这张This card can't be chosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427825f8",
+      "instruction": "0x14021dc9e",
+      "preview": "付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay the cost to attack like this: send fewer creatures or attack someone without the tax",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782649",
+      "instruction": "0x14021dca5",
+      "preview": "Can't pay the cost to attack like this: send fewer creatures or attack someone without the tax",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782920",
+      "instruction": "0x14021dcba",
+      "preview": "不是手里的牌Not a card in hand现在不收这个命令This command isn't accepted right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782932",
+      "instruction": "0x14021dcc1",
+      "preview": "Not a card in hand现在不收这个命令This command isn't accepted right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427828bb",
+      "instruction": "0x14021dcfe",
+      "preview": "这张牌不能在调度时用This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427828d9",
+      "instruction": "0x14021dd05",
+      "preview": "This card can't be used while mulliganing",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782725",
+      "instruction": "0x14021dde8",
+      "preview": "不能选这张This card can't be chosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782734",
+      "instruction": "0x14021ddef",
+      "preview": "This card can't be chosen",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782944",
+      "instruction": "0x14021e001",
+      "preview": "现在不收这个命令This command isn't accepted right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278295c",
+      "instruction": "0x14021e008",
+      "preview": "This command isn't accepted right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782524",
+      "instruction": "0x14021e0f5",
+      "preview": "X 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish choosing first不是可选的目标Not a legal target现在要选的是",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278253b",
+      "instruction": "0x14021e0fc",
+      "preview": "X is out of range次数不在可选范围里That count is out of range先选完Finish choosing first不是可选的目标Not a legal target现在要选的是选项Choose an option ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278259f",
+      "instruction": "0x14021e22b",
+      "preview": "不是可选的目标Not a legal target现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427825b4",
+      "instruction": "0x14021e232",
+      "preview": "Not a legal target现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay the cost to attack li",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427824c5",
+      "instruction": "0x14021e31e",
+      "preview": "没有这张牌No such cardotherEntityIds这张牌不能拿来付This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277ddd0",
+      "instruction": "0x14021e47c",
+      "preview": "这几个目标凑不成一种做法These targets don't make a legal choice现在不是选目标Not choosing targets right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277ddf4",
+      "instruction": "0x14021e483",
+      "preview": "These targets don't make a legal choice现在不是选目标Not choosing targets right now",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782768",
+      "instruction": "0x14021e4e7",
+      "preview": "保留的张数不对Wrong number of cards kept",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278277d",
+      "instruction": "0x14021e4ee",
+      "preview": "Wrong number of cards kept",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427824ee",
+      "instruction": "0x14021e6bf",
+      "preview": "这张牌不能拿来付This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish choosing first不",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782506",
+      "instruction": "0x14021e6c6",
+      "preview": "This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish choosing first不是可选的目标Not a ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782317",
+      "instruction": "0x14021e8f4",
+      "preview": "没有这个选项No such option",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782329",
+      "instruction": "0x14021e8fb",
+      "preview": "No such option",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427825c6",
+      "instruction": "0x14021eb28",
+      "preview": "现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay the cost to attack like this: send fewe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427825de",
+      "instruction": "0x14021eb2f",
+      "preview": "Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay the cost to attack like this: send fewer creatures or attack so",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278248c",
+      "instruction": "0x14021ec0c",
+      "preview": "这张牌现在不能用This card can't be used right now没有这张牌No such cardotherEntityIds这张牌不能拿来付This card can't be used to payX 不在可选范围里X is ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427824a4",
+      "instruction": "0x14021ec13",
+      "preview": "This card can't be used right now没有这张牌No such cardotherEntityIds这张牌不能拿来付This card can't be used to payX 不在可选范围里X is out of range次数不在",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427824e0",
+      "instruction": "0x14021ec83",
+      "preview": "otherEntityIds这张牌不能拿来付This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish cho",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427824ee",
+      "instruction": "0x14021edf6",
+      "preview": "这张牌不能拿来付This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish choosing first不",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782506",
+      "instruction": "0x14021edfd",
+      "preview": "This card can't be used to payX 不在可选范围里X is out of range次数不在可选范围里That count is out of range先选完Finish choosing first不是可选的目标Not a ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14278259f",
+      "instruction": "0x14021f00b",
+      "preview": "不是可选的目标Not a legal target现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427825b4",
+      "instruction": "0x14021f012",
+      "preview": "Not a legal target现在要选的是选项Choose an option right now付不起这样进攻的费用：少派几个生物，或改攻不收费的对象Can't pay the cost to attack li",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427823aa",
+      "instruction": "0x14021f0fc",
+      "preview": "卧底：要等主公以外的牌手攻击过主公，或已有非主公的身份翻开，才能亮出Undercover: you can unveil only after a non-Leader player has attacked the Lea",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782410",
+      "instruction": "0x14021f103",
+      "preview": "Undercover: you can unveil only after a non-Leader player has attacked the Leader or a non-Leader identity has been revealed这张牌现在不能用This card can't be used right no",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782368",
+      "instruction": "0x14021f197",
+      "preview": "亮出费用现在付不起You can't pay the unveil cost right now卧底：要等主公以外的牌手攻击过主公，或已有非主公的身份翻开，才能亮出Undercover: ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142782383",
+      "instruction": "0x14021f19e",
+      "preview": "You can't pay the unveil cost right now卧底：要等主公以外的牌手攻击过主公，或已有非主公的身份翻开，才能亮出Undercover: you can unveil only after a",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14021b470.c",
+  "pseudocodeSha256": "d45cbb11082c341fafa13437313f78468c60912bab2bb53f2ade46ccdd15c886",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

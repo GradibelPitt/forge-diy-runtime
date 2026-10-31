@@ -1,0 +1,43 @@
+{
+  "va": "0x141fd4520",
+  "rva": 33375520,
+  "endRva": 33376957,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fd4520.asm",
+  "assemblySha256": "71cdf823aaefba5c07961f753184a8dbc60be6fa0f8e03c0484031bf5639b09b",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cbac32",
+      "instruction": "0x141fd4548",
+      "preview": "Activation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbac5e",
+      "instruction": "0x141fd46e1",
+      "preview": "SorcerySpeedInstantSpeedActivationPhasesActivationZoneGraveyardCommand",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbac6a",
+      "instruction": "0x141fd47ae",
+      "preview": "InstantSpeedActivationPhasesActivationZoneGraveyardCommand",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbac76",
+      "instruction": "0x141fd487b",
+      "preview": "ActivationPhasesActivationZoneGraveyardCommand",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbac86",
+      "instruction": "0x141fd493f",
+      "preview": "ActivationZoneGraveyardCommand",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

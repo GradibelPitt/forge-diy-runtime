@@ -1,0 +1,31 @@
+{
+  "va": "0x141b4af90",
+  "rva": 28618640,
+  "endRva": 28618940,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b4af90.asm",
+  "assemblySha256": "573be3f40e567e4a71fd93dca84d0ea537f4208e5e72e2990040b6675f4a3ff2",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c903d0",
+      "instruction": "0x141b4b02d",
+      "preview": "自动付费要疼的生命会让你死掉：要付请亲手点法术力来源法术力付不起固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9041e",
+      "instruction": "0x141b4b03b",
+      "preview": "法术力付不起固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9041e",
+      "instruction": "0x141b4b049",
+      "preview": "法术力付不起固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

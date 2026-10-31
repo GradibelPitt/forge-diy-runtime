@@ -1,0 +1,18 @@
+{
+  "va": "0x141a2ead0",
+  "rva": 27454160,
+  "endRva": 27454369,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/filter/props.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a2ead0.asm",
+  "assemblySha256": "9941843ab96da3a2538ac7b784e29a4388a95cb62a9354e2a2f88f3845b6539d",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141a2ead0.c",
+  "pseudocodeSha256": "408f95bd9e6875a75ae90d15975b1c22d1b669785248a2f60a01f4bdfc951800",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

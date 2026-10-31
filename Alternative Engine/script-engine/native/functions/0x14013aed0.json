@@ -1,0 +1,25 @@
+{
+  "va": "0x14013aed0",
+  "rva": 1289936,
+  "endRva": 1290063,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/session.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14013aed0.asm",
+  "assemblySha256": "2dce65a95d7e5c71f81a8da106a74c74a21e104eac2aa2edc39be19d165b56da",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427780c0",
+      "instruction": "0x14013af3a",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14013aed0.c",
+  "pseudocodeSha256": "64c384fde02503894466313d5c1cd35b58f06085d6fcf0ffb73abf4621c025d9",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

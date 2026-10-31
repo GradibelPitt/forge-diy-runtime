@@ -1,0 +1,64 @@
+{
+  "va": "0x141b57210",
+  "rva": 28668432,
+  "endRva": 28674334,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/dev.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b57210.asm",
+  "assemblySha256": "407b7ee1ec7e4ebb5a20200daea1c39da3ef396dfb5376aece7b455e8f975359",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c914c1",
+      "instruction": "0x141b57595",
+      "preview": "只有战场上的永久物能横置或重置掷骰结果至少是 1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8fbba",
+      "instruction": "0x141b57986",
+      "preview": "这张牌已经不在了没有这位牌手Remove CARDNAME from your deck before playing if you're not playing for ante.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8fbd2",
+      "instruction": "0x141b57ba6",
+      "preview": "没有这位牌手Remove CARDNAME from your deck before playing if you're not playing for ante.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c914ee",
+      "instruction": "0x141b57d6e",
+      "preview": "掷骰结果至少是 1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c91464",
+      "instruction": "0x141b57da1",
+      "preview": "堆叠上的牌不能直接移走只能移到手牌、战场、坟墓场、放逐区或牌库只有战场上的永久物能横置或重置掷骰结果至少是 1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c916af",
+      "instruction": "0x141b58382",
+      "preview": "没有这位主动牌手",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c91428",
+      "instruction": "0x141b5871b",
+      "preview": "只能放进手牌、战场、坟墓场、放逐区或牌库堆叠上的牌不能直接移走只能移到手牌、战场、坟墓场、放逐区或牌库只有战场上的永久物",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c91485",
+      "instruction": "0x141b5872d",
+      "preview": "只能移到手牌、战场、坟墓场、放逐区或牌库只有战场上的永久物能横置或重置掷骰结果至少是 1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

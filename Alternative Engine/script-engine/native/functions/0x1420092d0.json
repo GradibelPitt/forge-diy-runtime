@@ -1,0 +1,61 @@
+{
+  "va": "0x1420092d0",
+  "rva": 33592016,
+  "endRva": 33595992,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1420092d0.asm",
+  "assemblySha256": "d3498748998460249d74f0deef047dbf4c4916d877f32a307499c497bdf2447d",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cbc185",
+      "instruction": "0x142009306",
+      "preview": "ABValid",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbc187",
+      "instruction": "0x142009345",
+      "preview": "Valid",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9fc5",
+      "instruction": "0x14200947e",
+      "preview": "ManaReflected 缺 ValidAnimateAll 缺 ValidCards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbc1bc",
+      "instruction": "0x142009510",
+      "preview": "Card.IsImprintedColorOrType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbc1a7",
+      "instruction": "0x142009630",
+      "preview": "Card.ExiledWithSourceCard.IsImprintedColorOrType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbc1cc",
+      "instruction": "0x142009914",
+      "preview": "ColorOrType",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbc1e6",
+      "instruction": "0x142009ac4",
+      "preview": "ReflectProperty",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbab54",
+      "instruction": "0x142009c57",
+      "preview": "RestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

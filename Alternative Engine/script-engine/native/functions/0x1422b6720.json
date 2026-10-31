@@ -1,0 +1,55 @@
+{
+  "va": "0x1422b6720",
+  "rva": 36398880,
+  "endRva": 36399716,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422b6720.asm",
+  "assemblySha256": "8080e700862bd9094b8c0ac99b745065367889c4ab432aae54e69c439e33b5f9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cde44c",
+      "instruction": "0x1422b674b",
+      "preview": "ActivationPhasesActivationFirstCombatPlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde45c",
+      "instruction": "0x1422b67fe",
+      "preview": "ActivationFirstCombatPlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde471",
+      "instruction": "0x1422b68b4",
+      "preview": "PlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde47b",
+      "instruction": "0x1422b695c",
+      "preview": "OpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc44c",
+      "instruction": "0x1422b69fa",
+      "preview": "CheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc443",
+      "instruction": "0x1422b6a19",
+      "preview": "IsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde487",
+      "instruction": "0x1422b6a38",
+      "preview": "ActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

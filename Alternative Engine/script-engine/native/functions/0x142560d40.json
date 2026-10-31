@@ -1,0 +1,18 @@
+{
+  "va": "0x142560d40",
+  "rva": 39193920,
+  "endRva": 39194214,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/cast_more.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142560d40.asm",
+  "assemblySha256": "f4e3b94a58371cd58bb2614b712cf9fe8a80905a7af62ee755d14027698783ba",
+  "literalReferences": [],
+  "pseudocode": "functions/0x142560d40.c",
+  "pseudocodeSha256": "685031d869c83e98bc060129898891a6533df08bc05da1938913f7201d795ea1",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

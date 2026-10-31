@@ -1,0 +1,26 @@
+{
+  "va": "0x141e7b040",
+  "rva": 31961152,
+  "endRva": 31964155,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/dice_modify.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141e7b040.asm",
+  "assemblySha256": "5e8d92375221506ee744fc797df7e74a7fe3c8d22c55ffccfc2f1654199d8838",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c8f418",
+      "instruction": "0x141e7bbae",
+      "preview": "能改点",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141e7b040.c",
+  "pseudocodeSha256": "9ca196ab6b68189a57e12568c366c9421b0dd2664c4f7e29b1aca48f50952359",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

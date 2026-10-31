@@ -1,0 +1,25 @@
+{
+  "va": "0x142298c60",
+  "rva": 36277344,
+  "endRva": 36277440,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142298c60.asm",
+  "assemblySha256": "7464086201898f87eee778438fb4e9eaaf95a5b7827b9dcd799c2ad362703ce7",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdcca5",
+      "instruction": "0x142298c81",
+      "preview": "nt 缺 ValidCardAttackRequirement 缺 ValidAttackerPlayerMustAttack 缺 ValidPlayerCanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZon",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcc96",
+      "instruction": "0x142298c8c",
+      "preview": "AttackRequirement 缺 ValidCardAttackRequirement 缺 ValidAttackerPlayerMustAttack 缺 ValidPlayerCanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

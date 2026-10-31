@@ -1,0 +1,43 @@
+{
+  "va": "0x1422a3a70",
+  "rva": 36321904,
+  "endRva": 36323952,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422a3a70.asm",
+  "assemblySha256": "e9d2405099058d8dab7ad801cc6a898b25c9764c6bd2abc708f5314f65ef66db",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc40b",
+      "instruction": "0x1422a3b8f",
+      "preview": "ModeAffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdaf90",
+      "instruction": "0x1422a3d26",
+      "preview": "ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNextPlayerInChosgeCo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdafa0",
+      "instruction": "0x1422a3d2e",
+      "preview": "Activated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNextPlayerInChosgeControlVariantExch",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc1a0",
+      "instruction": "0x1422a3d4c",
+      "preview": "ValidCardClassLevelGained 缺等级",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40b",
+      "instruction": "0x1422a3dcc",
+      "preview": "ModeAffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,11 @@
+{
+  "scope":"Partial offsets exercised by the existing hash-pinned native adapters. Not a complete or portable Rust ABI.",
+  "sourceSha256":"ded7eb5f02d6b6df2186cb78144881d6350028a474c6658577c3fe7388a59e7b",
+  "evidence":["patch-source/src/native_hooks.rs","patch-source/src/native_combat.rs","patch-source/src/native_upkeep.rs"],
+  "Engine":{"size":"0x2dc8","cardsPointer":"0x1a98","cardViewsPointer":"0x1ab0","cardViewsCount":"0x1ab8","playersPointer":"0x1ac8","battlefieldIdsPointer":"0x1ae0","battlefieldIdsCount":"0x1ae8","sharedDatabasePointer":"0x2d70","activePlayer":"0x2dc0"},
+  "Player":{"stride":"0xb8","life":"0xa8"},
+  "Card":{"markedDamage":"0xf4","deathtouchDamage":"0x105","conjured":"0x107","controller":"0x11c"},
+  "CardView":{"typesPointer":"0x48","typesLength":"0x50"},
+  "PendingChoiceSnapshot":{"embeddedEngineOffset":"0x90","aggregateSizes":["0x2e58","0x2f78"],"note":"Custom overlay state must also follow clone, move, replay and drop operations."},
+  "Defenders":{"capacity":"0x0","data":"0x8","length":"0x10","entryBytes":8,"playerTag":0,"permanentTag":1,"permanentIdShift":32}
+}

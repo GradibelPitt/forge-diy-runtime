@@ -1,0 +1,31 @@
+{
+  "va": "0x142416450",
+  "rva": 37839952,
+  "endRva": 37840059,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142416450.asm",
+  "assemblySha256": "81aa3c66bd6355a4263e84b64a7f66de52d1b810440e51cf0206ad4e9ec6ac17",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cf240a",
+      "instruction": "0x142416471",
+      "preview": "mmandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf23fb",
+      "instruction": "0x14241647c",
+      "preview": "ck 缺 StaticCommandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf23eb",
+      "instruction": "0x142416487",
+      "preview": "StaticCommandCheck 缺 StaticCommandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

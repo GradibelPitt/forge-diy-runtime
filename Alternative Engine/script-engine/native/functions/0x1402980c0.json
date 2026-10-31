@@ -1,0 +1,19 @@
+{
+  "va": "0x1402980c0",
+  "rva": 2719936,
+  "endRva": 2720321,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1402980c0.asm",
+  "assemblySha256": "f9c473a501ccb8d2d1cfe06fac3f0e71a1e646c0e862213faaf822fa115d75f4",
+  "literalReferences": [
+    {
+      "dataVa": "0x142788638",
+      "instruction": "0x1402981fc",
+      "preview": "capacity overflow/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\slice.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

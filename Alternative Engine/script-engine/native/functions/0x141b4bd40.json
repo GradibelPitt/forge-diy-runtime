@@ -1,0 +1,25 @@
+{
+  "va": "0x141b4bd40",
+  "rva": 28622144,
+  "endRva": 28622660,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/alt_more.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b4bd40.asm",
+  "assemblySha256": "ebee872143aba7303eb074f1b986b651202a7377d9dd69f8ad048fda4f535d55",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141b4befd",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141b4bd40.c",
+  "pseudocodeSha256": "79d3c6d254cac4c777a9b873ca0147073363578b7da508c10a13a5de4bbf0631",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

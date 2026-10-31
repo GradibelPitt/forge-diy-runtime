@@ -1,0 +1,25 @@
+{
+  "va": "0x140826bd0",
+  "rva": 8547280,
+  "endRva": 8547667,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/selfsac.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140826bd0.asm",
+  "assemblySha256": "0ed506e4c52b108d9885e0630b02c147b2c52c77d013415c85536cc2c1b52169",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427d9578",
+      "instruction": "0x140826d1e",
+      "preview": "Ȕ}B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140826bd0.c",
+  "pseudocodeSha256": "40d0053b2c815200e9b29aad1ee7b924601b654a3eb4c000d3245a165ee18fb6",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

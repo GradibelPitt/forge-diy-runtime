@@ -1,0 +1,50 @@
+{
+  "path": "C:/Solo Arcanum_0.3.29_Win/Solo Arcanum/runtime/native/mtg-engine-sidecar.exe",
+  "sha256": "ded7eb5f02d6b6df2186cb78144881d6350028a474c6658577c3fe7388a59e7b",
+  "bytes": 56535552,
+  "imageBase": "0x140000000",
+  "entryRva": "0x274892c",
+  "sections": [
+    {
+      "name": ".text",
+      "rva": 4096,
+      "virtualSize": 41350185,
+      "rawSize": 41350656,
+      "rawOffset": 1024,
+      "flags": 1610612768
+    },
+    {
+      "name": ".rdata",
+      "rva": 41357312,
+      "virtualSize": 13136410,
+      "rawSize": 13136896,
+      "rawOffset": 41351680,
+      "flags": 1073741888
+    },
+    {
+      "name": ".data",
+      "rva": 54497280,
+      "virtualSize": 4432,
+      "rawSize": 4096,
+      "rawOffset": 54488576,
+      "flags": 3221225536
+    },
+    {
+      "name": ".pdata",
+      "rva": 54505472,
+      "virtualSize": 2001516,
+      "rawSize": 2001920,
+      "rawOffset": 54492672,
+      "flags": 1073741888
+    },
+    {
+      "name": ".reloc",
+      "rva": 56508416,
+      "virtualSize": 40576,
+      "rawSize": 40960,
+      "rawOffset": 56494592,
+      "flags": 1107296320
+    }
+  ],
+  "unwindEntries": 166793
+}

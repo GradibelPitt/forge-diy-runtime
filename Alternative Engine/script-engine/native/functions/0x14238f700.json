@@ -1,0 +1,18 @@
+{
+  "va": "0x14238f700",
+  "rva": 37287680,
+  "endRva": 37287986,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/filter/valid.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14238f700.asm",
+  "assemblySha256": "e5a0c384e8b8f55f3cd9262438a30a04ef3a414c5acddb76a1d54f4bd3c888aa",
+  "literalReferences": [],
+  "pseudocode": "functions/0x14238f700.c",
+  "pseudocodeSha256": "85c54bf5edec7ee391793b068aed168647ae259034dfee82119f12788618240f",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

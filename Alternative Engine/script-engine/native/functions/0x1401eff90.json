@@ -1,0 +1,55 @@
+{
+  "va": "0x1401eff90",
+  "rva": 2031504,
+  "endRva": 2031802,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1401eff90.asm",
+  "assemblySha256": "57d4c01d1f0abf9e192633cfd4e370a22de17c58b1a3815ce6218eb436837136",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427800e8",
+      "instruction": "0x1401effc9",
+      "preview": "modal_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780167",
+      "instruction": "0x1401f0028",
+      "preview": "allocation_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780146",
+      "instruction": "0x1401f003b",
+      "preview": "number_resolvedcard_list_resolvedallocation_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780138",
+      "instruction": "0x1401f006e",
+      "preview": "order_resolvednumber_resolvedcard_list_resolvedallocation_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780155",
+      "instruction": "0x1401f0075",
+      "preview": "card_list_resolvedallocation_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142780138",
+      "instruction": "0x1401f008d",
+      "preview": "order_resolvednumber_resolvedcard_list_resolvedallocation_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427800e8",
+      "instruction": "0x1401f00a7",
+      "preview": "modal_resolved",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

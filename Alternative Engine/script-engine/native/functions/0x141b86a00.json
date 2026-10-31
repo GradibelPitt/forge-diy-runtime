@@ -1,0 +1,23 @@
+{
+  "va": "0x141b86a00",
+  "rva": 28862976,
+  "endRva": 28865840,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b86a00.asm",
+  "assemblySha256": "573a6a4ba2cb40bfbf148ce565289595ce2313ef8a4359aa0a4557a718f499e8",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c9097e",
+      "instruction": "0x141b86cac",
+      "preview": "付不起阻挡的费用VerminRound",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141b86a00.c",
+  "pseudocodeSha256": "6018fdc26d3afbbd34aedb7213129e927852bb66f8c295454e62a004f490c520",
+  "pseudocodeOrigin": "prior REA analysis",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

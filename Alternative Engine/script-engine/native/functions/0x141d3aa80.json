@@ -1,0 +1,57 @@
+{
+  "va": "0x141d3aa80",
+  "rva": 30648960,
+  "endRva": 30678282,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/keywords/triggers.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141d3aa80.asm",
+  "assemblySha256": "11a0e3a5dd324e861b8fdc98caca952ecbc7dc220370699192e0518ca0c29126",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c993b8",
+      "instruction": "0x141d3d7ef",
+      "preview": "Permanent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c991b0",
+      "instruction": "0x141d40ae3",
+      "preview": "wb_1_1_spirit_flying",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141d4144e",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141d4149c",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141d414ea",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90430",
+      "instruction": "0x141d41724",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141d3aa80.c",
+  "pseudocodeSha256": "95b8b35406d291ec326b1d9e6f41f82f4292767cdc18db582e458f8ea8ce2271",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

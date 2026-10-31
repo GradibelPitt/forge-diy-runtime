@@ -1,0 +1,18 @@
+{
+  "va": "0x1401e0020",
+  "rva": 1966112,
+  "endRva": 1966425,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/prompts.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1401e0020.asm",
+  "assemblySha256": "a7f77e63fc7506e876cb660436aa5c42d0a47d4e81baac4f883d222b9dcc6f7b",
+  "literalReferences": [],
+  "pseudocode": "functions/0x1401e0020.c",
+  "pseudocodeSha256": "ccd4d3c8f1bc44408fe4d6b5557070d050ccc9d62cf967c383100c3e099717c9",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

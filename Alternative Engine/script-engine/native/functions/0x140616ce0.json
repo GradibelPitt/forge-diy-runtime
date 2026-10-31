@@ -1,0 +1,37 @@
+{
+  "va": "0x140616ce0",
+  "rva": 6384864,
+  "endRva": 6389518,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/diy.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140616ce0.asm",
+  "assemblySha256": "479092e6e54b065d989a8065689b89f34cab8cc909610fdcf986655b0df5995e",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427b9d00",
+      "instruction": "0x140616da5",
+      "preview": "反面中文类别",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b9d30",
+      "instruction": "0x140616dbe",
+      "preview": "反面中文规则",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba240",
+      "instruction": "0x140617e75",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140616ce0.c",
+  "pseudocodeSha256": "74ee1904a42f35742606fb59763e3944f8bd7cbc796b09cb97cc7e1a10d7cf5c",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

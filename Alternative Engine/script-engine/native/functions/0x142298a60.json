@@ -1,0 +1,25 @@
+{
+  "va": "0x142298a60",
+  "rva": 36276832,
+  "endRva": 36276932,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142298a60.asm",
+  "assemblySha256": "d20fee7d389bf90e84bf009b73b6bdf250f4587381ba6e9f71f718cccd8ad78a",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdcc07",
+      "instruction": "0x142298a81",
+      "preview": "n 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttackRequirement 缺 ValidCardAttack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcbf7",
+      "instruction": "0x142298a8c",
+      "preview": "GainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttackRequirement 缺",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

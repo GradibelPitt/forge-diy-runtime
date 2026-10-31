@@ -1,0 +1,61 @@
+{
+  "va": "0x1422d38d0",
+  "rva": 36518096,
+  "endRva": 36519361,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422d38d0.asm",
+  "assemblySha256": "597cfba0e8ffdd8c5a1e5769b328e5264e724d18929cb1b92276367dd0580f1f",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdf3ca",
+      "instruction": "0x1422d38f6",
+      "preview": "SharedKeywordsZoneSharedRestrictionsValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3dc",
+      "instruction": "0x1422d39ae",
+      "preview": "SharedRestrictionsValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc5cf",
+      "instruction": "0x1422d3a8a",
+      "preview": "aredRestrictionsSharedKeywordsZone 缺 AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc5c6",
+      "instruction": "0x1422d3a95",
+      "preview": "ne 缺 SharedRestrictionsSharedKeywordsZone 缺 AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc5b6",
+      "instruction": "0x1422d3aa0",
+      "preview": "SharedKeywordsZone 缺 SharedRestrictionsSharedKeywordsZone 缺 AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf265",
+      "instruction": "0x1422d3b15",
+      "preview": "AddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc5ef",
+      "instruction": "0x1422d3c1d",
+      "preview": "ne 缺 AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc5df",
+      "instruction": "0x1422d3c28",
+      "preview": "SharedKeywordsZone 缺 AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

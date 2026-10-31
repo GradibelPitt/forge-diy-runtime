@@ -1,0 +1,18 @@
+{
+  "va": "0x141089440",
+  "rva": 17339456,
+  "endRva": 17340006,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/arcane-ai/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141089440.asm",
+  "assemblySha256": "11c0a45a184d442372d2bbe4ab945a38dfd4106c45cb361b60e856b53abdacc8",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141089440.c",
+  "pseudocodeSha256": "d2fa431fd3e6e877127d909197de6af32c43f84c4b960a6e70cb89f684ce660b",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x141fbb620",
+  "rva": 33273376,
+  "endRva": 33273468,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbb620.asm",
+  "assemblySha256": "9724dbe0052a0179c02c868e81192d811ed2419a0b825d95c2f461f1e057a692",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9e9d",
+      "instruction": "0x141fbb641",
+      "preview": "SkipPhase 的步骤TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

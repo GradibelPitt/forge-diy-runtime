@@ -1,0 +1,49 @@
+{
+  "va": "0x140612280",
+  "rva": 6365824,
+  "endRva": 6366585,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140612280.asm",
+  "assemblySha256": "f808c1111206a06aa0b4d778b29c4995468fd80830667e7656929ce828978fac",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427ba0c7",
+      "instruction": "0x1406122fc",
+      "preview": "| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba473",
+      "instruction": "0x140612308",
+      "preview": "AddReplacementEffect$AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba0aa",
+      "instruction": "0x140612311",
+      "preview": "| Triggers$| StaticAbilities$| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba468",
+      "instruction": "0x14061231d",
+      "preview": "AddTrigger$AddReplacementEffect$AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba499",
+      "instruction": "0x140612330",
+      "preview": "| staticAbilities$| SpellDescription$src\\ability_text.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba488",
+      "instruction": "0x14061233c",
+      "preview": "AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,952 @@
+[
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/arcane-ai/src/lib.rs",
+    "index": "native/modules/arcane-ai/lib/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/arcane-ai/src/state.rs",
+    "index": "native/modules/arcane-ai/state/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-core/src/combat/pairs.rs",
+    "index": "native/modules/mtg-ai-core/combat/pairs/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-core/src/prof.rs",
+    "index": "native/modules/mtg-ai-core/prof/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-ai-core/src/statics.rs",
+    "index": "native/modules/mtg-ai-core/statics/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-core/src/upkeep_tax.rs",
+    "index": "native/modules/mtg-ai-core/upkeep_tax/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-hard/src/decisions.rs",
+    "index": "native/modules/mtg-ai-hard/decisions/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-hard/src/lib.rs",
+    "index": "native/modules/mtg-ai-hard/lib/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-hard/src/plays.rs",
+    "index": "native/modules/mtg-ai-hard/plays/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-hard/src/samples.rs",
+    "index": "native/modules/mtg-ai-hard/samples/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-hard/src/view.rs",
+    "index": "native/modules/mtg-ai-hard/view/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/cardflow.rs",
+    "index": "native/modules/mtg-ai-normal/acts/cardflow/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/flow.rs",
+    "index": "native/modules/mtg-ai-normal/acts/flow/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/loyalty.rs",
+    "index": "native/modules/mtg-ai-normal/acts/loyalty/index.json"
+  },
+  {
+    "functions": 9,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/shields.rs",
+    "index": "native/modules/mtg-ai-normal/acts/shields/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/staples.rs",
+    "index": "native/modules/mtg-ai-normal/acts/staples/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/staples_mixed.rs",
+    "index": "native/modules/mtg-ai-normal/acts/staples_mixed/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-normal/src/acts/upgrades.rs",
+    "index": "native/modules/mtg-ai-normal/acts/upgrades/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-ai-normal/src/combat.rs",
+    "index": "native/modules/mtg-ai-normal/combat/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-ai-normal/src/combo.rs",
+    "index": "native/modules/mtg-ai-normal/combo/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-normal/src/etb_tax.rs",
+    "index": "native/modules/mtg-ai-normal/etb_tax/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-normal/src/guard.rs",
+    "index": "native/modules/mtg-ai-normal/guard/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-normal/src/lands.rs",
+    "index": "native/modules/mtg-ai-normal/lands/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-ai-normal/src/pay_gate.rs",
+    "index": "native/modules/mtg-ai-normal/pay_gate/index.json"
+  },
+  {
+    "functions": 12,
+    "sourcePathHint": "crates/mtg-ai-normal/src/picks.rs",
+    "index": "native/modules/mtg-ai-normal/picks/index.json"
+  },
+  {
+    "functions": 11,
+    "sourcePathHint": "crates/mtg-ai-normal/src/priority.rs",
+    "index": "native/modules/mtg-ai-normal/priority/index.json"
+  },
+  {
+    "functions": 6,
+    "sourcePathHint": "crates/mtg-ai-normal/src/script_mana.rs",
+    "index": "native/modules/mtg-ai-normal/script_mana/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-ai-normal/src/selfsac.rs",
+    "index": "native/modules/mtg-ai-normal/selfsac/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-ai-normal/src/sight.rs",
+    "index": "native/modules/mtg-ai-normal/sight/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-normal/src/static_worth.rs",
+    "index": "native/modules/mtg-ai-normal/static_worth/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-ai-normal/src/timing.rs",
+    "index": "native/modules/mtg-ai-normal/timing/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-ai-normal/src/trigger_effects.rs",
+    "index": "native/modules/mtg-ai-normal/trigger_effects/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-combo-db/src/lib.rs",
+    "index": "native/modules/mtg-combo-db/lib/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/allocate.rs",
+    "index": "native/modules/mtg-engine/allocate/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/card/ability.rs",
+    "index": "native/modules/mtg-engine/card/ability/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/activated/mod.rs",
+    "index": "native/modules/mtg-engine/card/activated/mod/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/card/cost/mod.rs",
+    "index": "native/modules/mtg-engine/card/cost/mod/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/card/count/history.rs",
+    "index": "native/modules/mtg-engine/card/count/history/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/count/mod.rs",
+    "index": "native/modules/mtg-engine/card/count/mod/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/count/turn_stats.rs",
+    "index": "native/modules/mtg-engine/card/count/turn_stats/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/card/dialect.rs",
+    "index": "native/modules/mtg-engine/card/dialect/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-engine/src/card/effects/flow.rs",
+    "index": "native/modules/mtg-engine/card/effects/flow/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/effects/flow_rare.rs",
+    "index": "native/modules/mtg-engine/card/effects/flow_rare/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/card/effects/misc.rs",
+    "index": "native/modules/mtg-engine/card/effects/misc/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-engine/src/card/effects/params.rs",
+    "index": "native/modules/mtg-engine/card/effects/params/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/card/effects/variants.rs",
+    "index": "native/modules/mtg-engine/card/effects/variants/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/card/faces.rs",
+    "index": "native/modules/mtg-engine/card/faces/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/filter/players_defined.rs",
+    "index": "native/modules/mtg-engine/card/filter/players_defined/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-engine/src/card/filter/props.rs",
+    "index": "native/modules/mtg-engine/card/filter/props/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/card/filter/valid.rs",
+    "index": "native/modules/mtg-engine/card/filter/valid/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/keyword/mod.rs",
+    "index": "native/modules/mtg-engine/card/keyword/mod/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/card/keyword/rare.rs",
+    "index": "native/modules/mtg-engine/card/keyword/rare/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/card/mod.rs",
+    "index": "native/modules/mtg-engine/card/mod/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/replacement/mod.rs",
+    "index": "native/modules/mtg-engine/card/replacement/mod/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/card/salvage.rs",
+    "index": "native/modules/mtg-engine/card/salvage/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/card/script/copy_face.rs",
+    "index": "native/modules/mtg-engine/card/script/copy_face/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/script/mod.rs",
+    "index": "native/modules/mtg-engine/card/script/mod/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/card/seat.rs",
+    "index": "native/modules/mtg-engine/card/seat/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/statics/mod.rs",
+    "index": "native/modules/mtg-engine/card/statics/mod/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/card/statics/restrictions.rs",
+    "index": "native/modules/mtg-engine/card/statics/restrictions/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/trigger/mod.rs",
+    "index": "native/modules/mtg-engine/card/trigger/mod/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/card/trigger/modes.rs",
+    "index": "native/modules/mtg-engine/card/trigger/modes/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/card/trigger/params.rs",
+    "index": "native/modules/mtg-engine/card/trigger/params/index.json"
+  },
+  {
+    "functions": 21,
+    "sourcePathHint": "crates/mtg-engine/src/casting/actions.rs",
+    "index": "native/modules/mtg-engine/casting/actions/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/casting/announce.rs",
+    "index": "native/modules/mtg-engine/casting/announce/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/casting/combat_costs.rs",
+    "index": "native/modules/mtg-engine/casting/combat_costs/index.json"
+  },
+  {
+    "functions": 16,
+    "sourcePathHint": "crates/mtg-engine/src/casting/costs.rs",
+    "index": "native/modules/mtg-engine/casting/costs/index.json"
+  },
+  {
+    "functions": 12,
+    "sourcePathHint": "crates/mtg-engine/src/casting/mana_produce.rs",
+    "index": "native/modules/mtg-engine/casting/mana_produce/index.json"
+  },
+  {
+    "functions": 20,
+    "sourcePathHint": "crates/mtg-engine/src/casting/pay_search.rs",
+    "index": "native/modules/mtg-engine/casting/pay_search/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/casting/pay_value.rs",
+    "index": "native/modules/mtg-engine/casting/pay_value/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/casting/spend_goals.rs",
+    "index": "native/modules/mtg-engine/casting/spend_goals/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-engine/src/casting/variable_costs.rs",
+    "index": "native/modules/mtg-engine/casting/variable_costs/index.json"
+  },
+  {
+    "functions": 10,
+    "sourcePathHint": "crates/mtg-engine/src/combat/mod.rs",
+    "index": "native/modules/mtg-engine/combat/mod/index.json"
+  },
+  {
+    "functions": 6,
+    "sourcePathHint": "crates/mtg-engine/src/count/history.rs",
+    "index": "native/modules/mtg-engine/count/history/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/count/turn_stats.rs",
+    "index": "native/modules/mtg-engine/count/turn_stats/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-engine/src/db.rs",
+    "index": "native/modules/mtg-engine/db/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/deck_notes.rs",
+    "index": "native/modules/mtg-engine/deck_notes/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/dev.rs",
+    "index": "native/modules/mtg-engine/dev/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/digital.rs",
+    "index": "native/modules/mtg-engine/digital/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/effects/choice.rs",
+    "index": "native/modules/mtg-engine/effects/choice/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/effects/control.rs",
+    "index": "native/modules/mtg-engine/effects/control/index.json"
+  },
+  {
+    "functions": 6,
+    "sourcePathHint": "crates/mtg-engine/src/effects/extra/misc.rs",
+    "index": "native/modules/mtg-engine/effects/extra/misc/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/extra/mod.rs",
+    "index": "native/modules/mtg-engine/effects/extra/mod/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-engine/src/effects/extra/rare.rs",
+    "index": "native/modules/mtg-engine/effects/extra/rare/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-engine/src/effects/extra/variants.rs",
+    "index": "native/modules/mtg-engine/effects/extra/variants/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/effects/extra/zone.rs",
+    "index": "native/modules/mtg-engine/effects/extra/zone/index.json"
+  },
+  {
+    "functions": 15,
+    "sourcePathHint": "crates/mtg-engine/src/effects/flow_rare.rs",
+    "index": "native/modules/mtg-engine/effects/flow_rare/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/memo.rs",
+    "index": "native/modules/mtg-engine/effects/memo/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/misc.rs",
+    "index": "native/modules/mtg-engine/effects/misc/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/mod.rs",
+    "index": "native/modules/mtg-engine/effects/mod/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/numbers.rs",
+    "index": "native/modules/mtg-engine/effects/numbers/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-engine/src/effects/objects/copy.rs",
+    "index": "native/modules/mtg-engine/effects/objects/copy/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/objects/exec.rs",
+    "index": "native/modules/mtg-engine/effects/objects/exec/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/objects/extra_phase.rs",
+    "index": "native/modules/mtg-engine/effects/objects/extra_phase/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/effects/objects/mod.rs",
+    "index": "native/modules/mtg-engine/effects/objects/mod/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/effects/objects/play.rs",
+    "index": "native/modules/mtg-engine/effects/objects/play/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/effects/objects/retarget.rs",
+    "index": "native/modules/mtg-engine/effects/objects/retarget/index.json"
+  },
+  {
+    "functions": 14,
+    "sourcePathHint": "crates/mtg-engine/src/effects/params.rs",
+    "index": "native/modules/mtg-engine/effects/params/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/effects/subgame.rs",
+    "index": "native/modules/mtg-engine/effects/subgame/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/effects/text_change.rs",
+    "index": "native/modules/mtg-engine/effects/text_change/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/engine.rs",
+    "index": "native/modules/mtg-engine/engine/index.json"
+  },
+  {
+    "functions": 24,
+    "sourcePathHint": "crates/mtg-engine/src/faces.rs",
+    "index": "native/modules/mtg-engine/faces/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/filter/players_defined.rs",
+    "index": "native/modules/mtg-engine/filter/players_defined/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/filter/props.rs",
+    "index": "native/modules/mtg-engine/filter/props/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/filter/stack.rs",
+    "index": "native/modules/mtg-engine/filter/stack/index.json"
+  },
+  {
+    "functions": 5,
+    "sourcePathHint": "crates/mtg-engine/src/group_pick.rs",
+    "index": "native/modules/mtg-engine/group_pick/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/interact.rs",
+    "index": "native/modules/mtg-engine/interact/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/abilities.rs",
+    "index": "native/modules/mtg-engine/keywords/abilities/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/abilities_more.rs",
+    "index": "native/modules/mtg-engine/keywords/abilities_more/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/alt_more.rs",
+    "index": "native/modules/mtg-engine/keywords/alt_more/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/banding.rs",
+    "index": "native/modules/mtg-engine/keywords/banding/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/cast.rs",
+    "index": "native/modules/mtg-engine/keywords/cast/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/cast_more.rs",
+    "index": "native/modules/mtg-engine/keywords/cast_more/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/dice_modify.rs",
+    "index": "native/modules/mtg-engine/keywords/dice_modify/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/effects.rs",
+    "index": "native/modules/mtg-engine/keywords/effects/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/etb_more.rs",
+    "index": "native/modules/mtg-engine/keywords/etb_more/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/merge.rs",
+    "index": "native/modules/mtg-engine/keywords/merge/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/misc_more.rs",
+    "index": "native/modules/mtg-engine/keywords/misc_more/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/triggers.rs",
+    "index": "native/modules/mtg-engine/keywords/triggers/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/keywords/turn.rs",
+    "index": "native/modules/mtg-engine/keywords/turn/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-engine/src/knowledge.rs",
+    "index": "native/modules/mtg-engine/knowledge/index.json"
+  },
+  {
+    "functions": 6,
+    "sourcePathHint": "crates/mtg-engine/src/loops.rs",
+    "index": "native/modules/mtg-engine/loops/index.json"
+  },
+  {
+    "functions": 9,
+    "sourcePathHint": "crates/mtg-engine/src/mana.rs",
+    "index": "native/modules/mtg-engine/mana/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/memory.rs",
+    "index": "native/modules/mtg-engine/memory/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/opening_hand.rs",
+    "index": "native/modules/mtg-engine/opening_hand/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/order/layers.rs",
+    "index": "native/modules/mtg-engine/order/layers/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/order/library.rs",
+    "index": "native/modules/mtg-engine/order/library/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/order/replacement.rs",
+    "index": "native/modules/mtg-engine/order/replacement/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/order/triggers.rs",
+    "index": "native/modules/mtg-engine/order/triggers/index.json"
+  },
+  {
+    "functions": 8,
+    "sourcePathHint": "crates/mtg-engine/src/pipeline.rs",
+    "index": "native/modules/mtg-engine/pipeline/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/replacement/ask.rs",
+    "index": "native/modules/mtg-engine/replacement/ask/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/replacement/events.rs",
+    "index": "native/modules/mtg-engine/replacement/events/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/replacement/midway.rs",
+    "index": "native/modules/mtg-engine/replacement/midway/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/replacement/mod.rs",
+    "index": "native/modules/mtg-engine/replacement/mod/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/replacement/turn_structure.rs",
+    "index": "native/modules/mtg-engine/replacement/turn_structure/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-engine/src/resolve.rs",
+    "index": "native/modules/mtg-engine/resolve/index.json"
+  },
+  {
+    "functions": 31,
+    "sourcePathHint": "crates/mtg-engine/src/rng.rs",
+    "index": "native/modules/mtg-engine/rng/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/sba.rs",
+    "index": "native/modules/mtg-engine/sba/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/scenario.rs",
+    "index": "native/modules/mtg-engine/scenario/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/seat/control.rs",
+    "index": "native/modules/mtg-engine/seat/control/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/seat/dungeon.rs",
+    "index": "native/modules/mtg-engine/seat/dungeon/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/seat/effects.rs",
+    "index": "native/modules/mtg-engine/seat/effects/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-engine/src/seat/identity.rs",
+    "index": "native/modules/mtg-engine/seat/identity/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/seat/land_variant.rs",
+    "index": "native/modules/mtg-engine/seat/land_variant/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/seat/mod.rs",
+    "index": "native/modules/mtg-engine/seat/mod/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/seat/planechase.rs",
+    "index": "native/modules/mtg-engine/seat/planechase/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/seat/scheme.rs",
+    "index": "native/modules/mtg-engine/seat/scheme/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/seat/team.rs",
+    "index": "native/modules/mtg-engine/seat/team/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/simul.rs",
+    "index": "native/modules/mtg-engine/simul/index.json"
+  },
+  {
+    "functions": 1716,
+    "sourcePathHint": "crates/mtg-engine/src/state.rs",
+    "index": "native/modules/mtg-engine/state/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/statics/combat.rs",
+    "index": "native/modules/mtg-engine/statics/combat/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/statics/layer_mods.rs",
+    "index": "native/modules/mtg-engine/statics/layer_mods/index.json"
+  },
+  {
+    "functions": 985,
+    "sourcePathHint": "crates/mtg-engine/src/statics/layers.rs",
+    "index": "native/modules/mtg-engine/statics/layers/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "crates/mtg-engine/src/statics/zone_chars.rs",
+    "index": "native/modules/mtg-engine/statics/zone_chars/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "crates/mtg-engine/src/suspend.rs",
+    "index": "native/modules/mtg-engine/suspend/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "crates/mtg-engine/src/track.rs",
+    "index": "native/modules/mtg-engine/track/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/triggers/combat_state.rs",
+    "index": "native/modules/mtg-engine/triggers/combat_state/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/triggers/mod.rs",
+    "index": "native/modules/mtg-engine/triggers/mod/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-engine/src/triggers/params.rs",
+    "index": "native/modules/mtg-engine/triggers/params/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "crates/mtg-match/src/identities.rs",
+    "index": "native/modules/mtg-match/identities/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "crates/mtg-match/src/lib.rs",
+    "index": "native/modules/mtg-match/lib/index.json"
+  },
+  {
+    "functions": 19,
+    "sourcePathHint": "crates/mtg-meter/src/lib.rs",
+    "index": "native/modules/mtg-meter/lib/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/ability_text.rs",
+    "index": "native/modules/application/ability_text/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/ai.rs",
+    "index": "native/modules/application/ai/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "src/atrec.rs",
+    "index": "native/modules/application/atrec/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/board_export.rs",
+    "index": "native/modules/application/board_export/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/board_setup.rs",
+    "index": "native/modules/application/board_setup/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/choice_text.rs",
+    "index": "native/modules/application/choice_text/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "src/copy_plan.rs",
+    "index": "native/modules/application/copy_plan/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/cost_labels.rs",
+    "index": "native/modules/application/cost_labels/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/counter_pick.rs",
+    "index": "native/modules/application/counter_pick/index.json"
+  },
+  {
+    "functions": 4,
+    "sourcePathHint": "src/devtools.rs",
+    "index": "native/modules/application/devtools/index.json"
+  },
+  {
+    "functions": 7,
+    "sourcePathHint": "src/diy.rs",
+    "index": "native/modules/application/diy/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "src/dungeon_map.rs",
+    "index": "native/modules/application/dungeon_map/index.json"
+  },
+  {
+    "functions": 11,
+    "sourcePathHint": "src/frames.rs",
+    "index": "native/modules/application/frames/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/global_effects.rs",
+    "index": "native/modules/application/global_effects/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "src/grave_pick.rs",
+    "index": "native/modules/application/grave_pick/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/group_frames.rs",
+    "index": "native/modules/application/group_frames/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "src/lasting.rs",
+    "index": "native/modules/application/lasting/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/main.rs",
+    "index": "native/modules/application/main/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "src/payment.rs",
+    "index": "native/modules/application/payment/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/printing.rs",
+    "index": "native/modules/application/printing/index.json"
+  },
+  {
+    "functions": 30,
+    "sourcePathHint": "src/prompts.rs",
+    "index": "native/modules/application/prompts/index.json"
+  },
+  {
+    "functions": 22,
+    "sourcePathHint": "src/session.rs",
+    "index": "native/modules/application/session/index.json"
+  },
+  {
+    "functions": 41,
+    "sourcePathHint": "src/stable.rs",
+    "index": "native/modules/application/stable/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "src/stack_text.rs",
+    "index": "native/modules/application/stack_text/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/stand_in.rs",
+    "index": "native/modules/application/stand_in/index.json"
+  },
+  {
+    "functions": 1,
+    "sourcePathHint": "src/stops.rs",
+    "index": "native/modules/application/stops/index.json"
+  },
+  {
+    "functions": 3,
+    "sourcePathHint": "src/trigger_rules.rs",
+    "index": "native/modules/application/trigger_rules/index.json"
+  },
+  {
+    "functions": 2,
+    "sourcePathHint": "src/trophy.rs",
+    "index": "native/modules/application/trophy/index.json"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "va": "0x140595c20",
+  "rva": 5856288,
+  "endRva": 5857617,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/group_frames.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140595c20.asm",
+  "assemblySha256": "948468857fa15ab5d06604ed943d443db79bd72ea9bde223280389c1a2507c4d",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427b69a0",
+      "instruction": "0x1405960db",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427b69a0",
+      "instruction": "0x14059610e",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140595c20.c",
+  "pseudocodeSha256": "ba9d711f593e0fd031acd3defffcd24901dc3964949e251120f7643968d6b0e2",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

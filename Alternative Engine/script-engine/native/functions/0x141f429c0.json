@@ -1,0 +1,25 @@
+{
+  "va": "0x141f429c0",
+  "rva": 32778688,
+  "endRva": 32778917,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141f429c0.asm",
+  "assemblySha256": "589c1dff5cec7005108ef9c56da27fe5fac91e89077dc37192b532c2d683cc26",
+  "literalReferences": [
+    {
+      "dataVa": "0x142d0157e",
+      "instruction": "0x141f42a59",
+      "preview": "ArmyC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\params.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141f429c0.c",
+  "pseudocodeSha256": "75d9cfb895c2e042bbf0b1117475590448e8a4666cef21611dde10efb00200b3",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

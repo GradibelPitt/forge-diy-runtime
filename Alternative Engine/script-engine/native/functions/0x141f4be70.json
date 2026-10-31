@@ -1,0 +1,19 @@
+{
+  "va": "0x141f4be70",
+  "rva": 32816752,
+  "endRva": 32816863,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141f4be70.asm",
+  "assemblySha256": "e9c2a6c7a8075282c0b5ba22f2f37489fd8bcca18847fe59bd00546d408330ff",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ca7298",
+      "instruction": "0x141f4be8a",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

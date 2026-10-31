@@ -1,0 +1,91 @@
+{
+  "va": "0x1406649c0",
+  "rva": 6703552,
+  "endRva": 6705143,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1406649c0.asm",
+  "assemblySha256": "e01c713dd2710297ede1b7e85f9a066cff976073daca8047c93ffcab4f4ff0c4",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427c43f8",
+      "instruction": "0x140664e0f",
+      "preview": "DealDamageDamageAllPumpDestroyDestroyAllChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c4420",
+      "instruction": "0x140664e1d",
+      "preview": "ChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c442a",
+      "instruction": "0x140664e24",
+      "preview": "ChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c4437",
+      "instruction": "0x140664f23",
+      "preview": "TapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c440b",
+      "instruction": "0x140664f31",
+      "preview": "PumpDestroyDestroyAllChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c440f",
+      "instruction": "0x140664f3f",
+      "preview": "DestroyDestroyAllChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c4402",
+      "instruction": "0x140664f4b",
+      "preview": "DamageAllPumpDestroyDestroyAllChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c4416",
+      "instruction": "0x140664f5c",
+      "preview": "DestroyAllChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c444a",
+      "instruction": "0x140664f6d",
+      "preview": "CounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c443a",
+      "instruction": "0x140664f80",
+      "preview": "DiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c4441",
+      "instruction": "0x140664f8c",
+      "preview": "SacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c440b",
+      "instruction": "0x140664fb9",
+      "preview": "PumpDestroyDestroyAllChangeZoneChangeZoneAllTapDiscardSacrificeCounterC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\samples.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1406649c0.c",
+  "pseudocodeSha256": "25d4d5548460d0906a606072c123dbc155f6a1d41d3939ec434d54961fc688f3",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

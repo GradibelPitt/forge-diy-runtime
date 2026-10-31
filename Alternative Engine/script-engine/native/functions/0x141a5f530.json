@@ -1,0 +1,43 @@
+{
+  "va": "0x141a5f530",
+  "rva": 27653424,
+  "endRva": 27654726,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/dialect.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a5f530.asm",
+  "assemblySha256": "8a6d15075e45e779d37a6a5c06862df94fcaf242d4c388033340e80754e6fb3f",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c878dd",
+      "instruction": "0x141a5f578",
+      "preview": "CardManaValue",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c86e58",
+      "instruction": "0x141a5f597",
+      "preview": "CardManaCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c878dd",
+      "instruction": "0x141a5f5b5",
+      "preview": "CardManaValue",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142771590",
+      "instruction": "0x141a5f74e",
+      "preview": "        ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141a5f530.c",
+  "pseudocodeSha256": "d01b2cfbabf2337acf5484a7713a7ff0947f47e044392f933182bbda4a6b5983",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

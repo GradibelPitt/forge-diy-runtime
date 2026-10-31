@@ -1,0 +1,255 @@
+{
+  "va": "0x1406424f0",
+  "rva": 6563056,
+  "endRva": 6585005,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-hard/src/lib.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1406424f0.asm",
+  "assemblySha256": "6fcd90e47b67f104c6689a8a60642b9e67b50bc2c96cd2d17815e954c6112eb6",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427c07f8",
+      "instruction": "0x1406431b6",
+      "preview": "ARCANE_AI_DISABLE",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0788",
+      "instruction": "0x1406435b5",
+      "preview": "列候选",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0838",
+      "instruction": "0x140643ec4",
+      "preview": "局面视图战斗推演ARCANE_AI_DUMPview",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0844",
+      "instruction": "0x140643f86",
+      "preview": "战斗推演ARCANE_AI_DUMPview",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c06b4",
+      "instruction": "0x140644052",
+      "preview": "cards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0850",
+      "instruction": "0x1406449fc",
+      "preview": "ARCANE_AI_DUMPview",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0690",
+      "instruction": "0x140644a5b",
+      "preview": "kind",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c085e",
+      "instruction": "0x140644d31",
+      "preview": "view",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c06b4",
+      "instruction": "0x140644dc9",
+      "preview": "cards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c086e",
+      "instruction": "0x140644ff6",
+      "preview": "困难 AIanswertuckCardsViaMulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0877",
+      "instruction": "0x140645350",
+      "preview": "answertuckCardsViaMulligan",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0602",
+      "instruction": "0x140645408",
+      "preview": "keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0928",
+      "instruction": "0x140645a1a",
+      "preview": "resultchooseColor",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05bc",
+      "instruction": "0x140645de9",
+      "preview": "excludeplaytargetsxManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05c3",
+      "instruction": "0x140646031",
+      "preview": "playtargetsxManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05b8",
+      "instruction": "0x140646127",
+      "preview": "passexcludeplaytargetsxManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05f6",
+      "instruction": "0x140646173",
+      "preview": "blockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05ef",
+      "instruction": "0x140646244",
+      "preview": "attacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05fc",
+      "instruction": "0x1406462e7",
+      "preview": "powderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0602",
+      "instruction": "0x140646340",
+      "preview": "keep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05bc",
+      "instruction": "0x1406463da",
+      "preview": "excludeplaytargetsxManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0940",
+      "instruction": "0x1406468d8",
+      "preview": ".\t|B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0928",
+      "instruction": "0x140646e12",
+      "preview": "resultchooseColor",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05c3",
+      "instruction": "0x140646ee9",
+      "preview": "playtargetsxManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05c7",
+      "instruction": "0x140646f84",
+      "preview": "targetsxManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x14064710e",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x14064714d",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05ce",
+      "instruction": "0x140647193",
+      "preview": "xManasacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05d3",
+      "instruction": "0x1406471d6",
+      "preview": "sacrificeconvokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05dc",
+      "instruction": "0x140647249",
+      "preview": "convokeKeepcostKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c05e7",
+      "instruction": "0x1406472bc",
+      "preview": "costKeepattacksblockspowderkeep",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x14064745a",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x140647499",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x1406474eb",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x14064752a",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x140647569",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x140647650",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x14064768f",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427c0628",
+      "instruction": "0x1406476ce",
+      "preview": "called `Result::unwrap()` on an `Err` value?",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1406424f0.c",
+  "pseudocodeSha256": "2fc695da3a0c4a39f129e8850dc3090fcc5133eb4e73fb13489c1550aa9fe68e",
+  "pseudocodeOrigin": "expanded source/callee recovery",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x140130d50",
+  "rva": 1248592,
+  "endRva": 1248817,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140130d50.asm",
+  "assemblySha256": "ba56288bf3a963f21f3d5f6a378a8378ff870e33ff3533621783b33de81fe23e",
+  "literalReferences": [
+    {
+      "dataVa": "0x142777593",
+      "instruction": "0x140130d69",
+      "preview": "sourceItems/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\collections\\btree\\navigate.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

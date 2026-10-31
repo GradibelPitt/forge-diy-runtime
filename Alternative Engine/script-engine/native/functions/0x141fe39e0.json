@@ -1,0 +1,61 @@
+{
+  "va": "0x141fe39e0",
+  "rva": 33438176,
+  "endRva": 33441186,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/filter/players_defined.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fe39e0.asm",
+  "assemblySha256": "2a5b6dc047da54acf9c791c59088821828181dc168e69902916456d557788c23",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9530",
+      "instruction": "0x141fe3ab6",
+      "preview": "CumulativeUpkeeptPayGenericCostsCantPayGenericCoastSpellFromHandCantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUnti",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9540",
+      "instruction": "0x141fe3abe",
+      "preview": "tPayGenericCostsCantPayGenericCoastSpellFromHandCantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUntilHostLeavesPmemb",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9550",
+      "instruction": "0x141fe3ac6",
+      "preview": "CantPayGenericCoastSpellFromHandCantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9560",
+      "instruction": "0x141fe3acf",
+      "preview": "astSpellFromHandCantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard.IsTriggerRetOf ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9570",
+      "instruction": "0x141fe3ad8",
+      "preview": "CantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard.IsTriggerRetOf ParentTargetPlay",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9580",
+      "instruction": "0x141fe3ae1",
+      "preview": "onArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard.IsTriggerRetOf ParentTargetPlayer.OpponentOTarg",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9590",
+      "instruction": "0x141fe3aea",
+      "preview": "CantCastNonArtifrgetedControllerNonTargetedContrTargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard.IsTriggerRetOf ParentTargetPlayer.OpponentOTargetedNextTurnUnti",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141fe39e0.c",
+  "pseudocodeSha256": "cdda72d84aa73a45b386d0d0c8254c8ef9d2a1583a1343a0fcae3653e50e6d9c",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

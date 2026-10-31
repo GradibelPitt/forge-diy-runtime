@@ -1,0 +1,32 @@
+{
+  "va": "0x141bd72e0",
+  "rva": 29192928,
+  "endRva": 29200867,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/resolve.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141bd72e0.asm",
+  "assemblySha256": "914758854d1eb94d4010d578bf6ced0af4d882984272909b134908a92effc867",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c945f7",
+      "instruction": "0x141bd82b2",
+      "preview": "要先选替代效果的顺序C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\order\\library.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c945d0",
+      "instruction": "0x141bd909a",
+      "preview": "要把每个替代效果都排上顺序要先选替代效果的顺序C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\order\\library.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141bd72e0.c",
+  "pseudocodeSha256": "9f68275cb923330fc1747e4ac5cd0236bad2cf7546db929fd1b3ddfba659be0c",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,26 @@
+{
+  "va": "0x140a07f30",
+  "rva": 10518320,
+  "endRva": 10519532,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/guard.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140a07f30.asm",
+  "assemblySha256": "d062345f86d94c9befb3fafc6b71ba83ea21709be351a400c959b95dfd898b3b",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427f5378",
+      "instruction": "0x140a083c2",
+      "preview": "堆叠上至少有自己的咒语",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140a07f30.c",
+  "pseudocodeSha256": "65d92b515cf1e0db6827414a0dcce59a9c32364bb35d680ee10e5d1b299295fe",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

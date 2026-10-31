@@ -1,0 +1,20 @@
+{
+  "va": "0x1417e5580",
+  "rva": 25056640,
+  "endRva": 25059438,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-core/src/combat/pairs.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1417e5580.asm",
+  "assemblySha256": "5183018d78ab302dbe73bbd2fc3b485cc55ee7916dc4a2aa9356b991101cc5ec",
+  "literalReferences": [],
+  "pseudocode": "functions/0x1417e5580.c",
+  "pseudocodeSha256": "1673b9aeecfc8b1d6b9f83f892fd03123d7ceb349e96a654639782fad5e7d53a",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

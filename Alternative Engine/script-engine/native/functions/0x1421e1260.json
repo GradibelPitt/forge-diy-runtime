@@ -1,0 +1,18 @@
+{
+  "va": "0x1421e1260",
+  "rva": 35525216,
+  "endRva": 35525681,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/group_pick.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421e1260.asm",
+  "assemblySha256": "015619dde8c81059c427e5fd4d1881aa45d599851e6270a1c7fb4af25fb437bd",
+  "literalReferences": [],
+  "pseudocode": "functions/0x1421e1260.c",
+  "pseudocodeSha256": "3f6664de51e8384647c664cb01c956e11e095ee315f7cbc2dad7e0d05c6e27ae",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

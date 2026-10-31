@@ -1,0 +1,49 @@
+{
+  "va": "0x142385930",
+  "rva": 37247280,
+  "endRva": 37250842,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/casting/spend_goals.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142385930.asm",
+  "assemblySha256": "3ac745938ac6dbe118d360bf6fd3422c5fa3689591cf41cb1d6b62af55a1f3cb",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ceb5ca",
+      "instruction": "0x142385968",
+      "preview": "AdamantAdamant$ConditionManaSpent$ ManaSpent$$ConvergeAny",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb5d1",
+      "instruction": "0x142385e61",
+      "preview": "Adamant$ConditionManaSpent$ ManaSpent$$ConvergeAny",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb5d9",
+      "instruction": "0x142386040",
+      "preview": "ConditionManaSpent$ ManaSpent$$ConvergeAny",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb5ec",
+      "instruction": "0x142386053",
+      "preview": " ManaSpent$$ConvergeAny",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb5f7",
+      "instruction": "0x142386648",
+      "preview": "$ConvergeAny",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x142385930.c",
+  "pseudocodeSha256": "ff27f18ad927a39c8fbcd1f20a70340dee829db145ef9bf6fd2ec9b01d745b59",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

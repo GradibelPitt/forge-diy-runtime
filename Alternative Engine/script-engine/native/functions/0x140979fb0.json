@@ -1,0 +1,39 @@
+{
+  "va": "0x140979fb0",
+  "rva": 9936816,
+  "endRva": 9942681,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/combo.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140979fb0.asm",
+  "assemblySha256": "0ae91ce8de76953970521811b86698a32c9397c0a65bdf6072946025c9dc710a",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427f0f84",
+      "instruction": "0x14097aa9e",
+      "preview": "ARCANE_COMBO_TRACE",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f0f84",
+      "instruction": "0x14097b11f",
+      "preview": "ARCANE_COMBO_TRACE",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f0f84",
+      "instruction": "0x14097b511",
+      "preview": "ARCANE_COMBO_TRACE",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140979fb0.c",
+  "pseudocodeSha256": "bf2a79ea31816bbe3d375be309b08cc05c7f1a7a2b33d1d98738556873d23861",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

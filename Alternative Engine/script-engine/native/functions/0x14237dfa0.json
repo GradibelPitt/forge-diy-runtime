@@ -1,0 +1,121 @@
+{
+  "va": "0x14237dfa0",
+  "rva": 37216160,
+  "endRva": 37220292,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/seat.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14237dfa0.asm",
+  "assemblySha256": "acbfcca92cb104828c283a8eb683af5245832133b96dc60f20f1428ee298b976",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ceb190",
+      "instruction": "0x14237e2a8",
+      "preview": "DBDestinationZone$ PlanarDeckOptional$ TrueDB$ RunChaos",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceacb0",
+      "instruction": "0x14237e305",
+      "preview": "AmountTotalCommanderCastFromCommandZoneYourSpeedInitiativeHighestSpeedMonarchStartingPlayerMaxSpeedEmblemIsCommanderTargetedPlayerCtrlActivePlayerCtrlDefenderCtrlEnchantedPlayerCtr",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce60e3",
+      "instruction": "0x14237e351",
+      "preview": "PeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce60ed",
+      "instruction": "0x14237e3f8",
+      "preview": "SubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce60ed",
+      "instruction": "0x14237e65a",
+      "preview": "SubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb1bb",
+      "instruction": "0x14237e76d",
+      "preview": "DB$ RunChaos",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb1ee",
+      "instruction": "0x14237e7e7",
+      "preview": "ImprintFound$ TrueLibraryPosition$ 0DB$ PlaneswalkDontPlaneswalkAway$ TrueDB$ Planeswalk | Defined$ RememberedDB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb200",
+      "instruction": "0x14237e84d",
+      "preview": "LibraryPosition$ 0DB$ PlaneswalkDontPlaneswalkAway$ TrueDB$ Planeswalk | Defined$ RememberedDB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb212",
+      "instruction": "0x14237e88d",
+      "preview": "DB$ PlaneswalkDontPlaneswalkAway$ TrueDB$ Planeswalk | Defined$ RememberedDB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb192",
+      "instruction": "0x14237e90c",
+      "preview": "DestinationZone$ PlanarDeckOptional$ TrueDB$ RunChaos",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb1ad",
+      "instruction": "0x14237e93b",
+      "preview": "Optional$ TrueDB$ RunChaos",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb220",
+      "instruction": "0x14237ea19",
+      "preview": "DontPlaneswalkAway$ TrueDB$ Planeswalk | Defined$ RememberedDB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb238",
+      "instruction": "0x14237eaae",
+      "preview": "DB$ Planeswalk | Defined$ RememberedDB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb238",
+      "instruction": "0x14237eafc",
+      "preview": "DB$ Planeswalk | Defined$ RememberedDB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb25c",
+      "instruction": "0x14237ecae",
+      "preview": "DB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb25c",
+      "instruction": "0x14237ecec",
+      "preview": "DB$ ChaosEnsues | Defined$ Remembered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ceb160",
+      "instruction": "0x14237ef5e",
+      "preview": "no entry found for key",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14237dfa0.c",
+  "pseudocodeSha256": "13cdea03ca2577898b0cbb18715a4f635cc518f246186bb9c2c758b74280be07",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

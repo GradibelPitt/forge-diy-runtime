@@ -1,0 +1,31 @@
+{
+  "va": "0x141a828e0",
+  "rva": 27797728,
+  "endRva": 27798535,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/faces.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a828e0.asm",
+  "assemblySha256": "a9348f2fb7ee6d37cbb922b64830964ede98de8920db212a2baf4c748ffd25ce",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c865e5",
+      "instruction": "0x141a82a15",
+      "preview": "CreatureEnchantmentInstantKindredLandPlaneswalkerSorceryWhiteBlueBlackRedGreenmid > len",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c86203",
+      "instruction": "0x141a82bbd",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\effects\\flow.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141a828e0.c",
+  "pseudocodeSha256": "c34314423a20fda8b31f2efcc194e9f5f30d0fabfdee9f1430032e95bb3ddd7e",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

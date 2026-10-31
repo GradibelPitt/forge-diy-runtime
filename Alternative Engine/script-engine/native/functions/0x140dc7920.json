@@ -1,0 +1,31 @@
+{
+  "va": "0x140dc7920",
+  "rva": 14448928,
+  "endRva": 14449404,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140dc7920.asm",
+  "assemblySha256": "a4088ee1ea52cedf1d2941db2777031c9aa507fa639d385d2d77b3c504327fac",
+  "literalReferences": [
+    {
+      "dataVa": "0x142819690",
+      "instruction": "0x140dc79a8",
+      "preview": "ValidExpr { alts: [Alt { base: Card, props: [Mem(RememberedPlayerCtrl)] }] }C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\flow.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14281964e",
+      "instruction": "0x140dc7a0c",
+      "preview": "Mem(Opponent",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140dc7920.c",
+  "pseudocodeSha256": "6d0f001c972ead288f4965c95656aa300af320ee1d10d26cc1df649947802389",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

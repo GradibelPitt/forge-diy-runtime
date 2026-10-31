@@ -1,0 +1,20 @@
+{
+  "va": "0x141c76330",
+  "rva": 29844272,
+  "endRva": 29847577,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/casting/mana_produce.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c76330.asm",
+  "assemblySha256": "16be18f1246084660215ab3f502e37a5dfd9f8a7b4879c73a8fad497b633de8f",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141c76330.c",
+  "pseudocodeSha256": "f9562da31de2fc02295dccaa6d5038aa15b03c19ee30d9fa708d73c14b87cf4b",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

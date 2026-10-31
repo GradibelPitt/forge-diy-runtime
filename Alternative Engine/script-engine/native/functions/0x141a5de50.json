@@ -1,0 +1,37 @@
+{
+  "va": "0x141a5de50",
+  "rva": 27647568,
+  "endRva": 27647873,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a5de50.asm",
+  "assemblySha256": "84a3762a98958764c8f69a238891090ec1ca8c6d4975d6f7d74cd0ad15fadbc2",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c85430",
+      "instruction": "0x141a5de8a",
+      "preview": "tCardUID",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85440",
+      "instruction": "0x141a5de92",
+      "preview": "Card.CardUID_Hosts$Amount/Minus.TargetedObjects$edObjects$Amounttivated_",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8759c",
+      "instruction": "0x141a5deae",
+      "preview": ".YouCtrlC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c87568",
+      "instruction": "0x141a5decc",
+      "preview": ".ControlledBy Player.PlayerUID_HostCardControllerUID.YouCtrlC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,25 @@
+{
+  "va": "0x140597190",
+  "rva": 5861776,
+  "endRva": 5862708,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/diy.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140597190.asm",
+  "assemblySha256": "7133beabb8ae711a4ca171536111a7c475119e9abed99a0146af2a0b73f3b67e",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427b69a0",
+      "instruction": "0x1405974df",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140597190.c",
+  "pseudocodeSha256": "bbddf0adfaec74d7cbed4c20181788b4bcdae66db3126c233c6609459b10f7ea",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

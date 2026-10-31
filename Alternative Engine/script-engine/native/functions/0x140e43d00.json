@@ -1,0 +1,19 @@
+{
+  "va": "0x140e43d00",
+  "rva": 14957824,
+  "endRva": 14958448,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140e43d00.asm",
+  "assemblySha256": "a74d484da5e6b4799e4adf3ce7fdff1a38b45959d76555321e7c85a143d1e848",
+  "literalReferences": [
+    {
+      "dataVa": "0x14281f6aa",
+      "instruction": "0x140e43eb3",
+      "preview": "ChosenCardManaCostC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

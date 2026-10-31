@@ -1,0 +1,18 @@
+{
+  "va": "0x1422957e0",
+  "rva": 36263904,
+  "endRva": 36263971,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/faces.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422957e0.asm",
+  "assemblySha256": "b820a643f86b8b5af5d22760f0e7cb58b60ee76cad1510257910e1f8647ea272",
+  "literalReferences": [],
+  "pseudocode": "functions/0x1422957e0.c",
+  "pseudocodeSha256": "634cb8c2c9f8f0e2d3a337228819ecf26245d4f29cb7e586e5a2254ba339e15b",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

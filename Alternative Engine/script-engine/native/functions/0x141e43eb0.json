@@ -1,0 +1,26 @@
+{
+  "va": "0x141e43eb0",
+  "rva": 31735472,
+  "endRva": 31742522,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/casting/costs.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141e43eb0.asm",
+  "assemblySha256": "0269ed88dc99384b29aa9004788e8976217039b8845a5d581ea757c47bcc0746",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c99fc0",
+      "instruction": "0x141e457e9",
+      "preview": "刚判过C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\objects\\extra_phase.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141e43eb0.c",
+  "pseudocodeSha256": "b0eb84eb35e1117a5c496fcdddeb121b8228d78681252ce6204a72f16102b2fa",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

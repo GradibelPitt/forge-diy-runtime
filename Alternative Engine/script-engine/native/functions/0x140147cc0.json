@@ -1,0 +1,91 @@
+{
+  "va": "0x140147cc0",
+  "rva": 1342656,
+  "endRva": 1350547,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/session.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140147cc0.asm",
+  "assemblySha256": "cac188fd17f6c0091ec4047bdb5d35bb300e9bf4a2eca1be253e33e4dbd5fe9b",
+  "literalReferences": [
+    {
+      "dataVa": "0x142777417",
+      "instruction": "0x140147dd5",
+      "preview": "accepttypemainCountplayer|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777417",
+      "instruction": "0x14014822b",
+      "preview": "accepttypemainCountplayer|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778816",
+      "instruction": "0x140148953",
+      "preview": "和局提议已被拒绝The draw offer was declined双方已同意和局Both players agreed to a draw",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277882e",
+      "instruction": "0x14014895a",
+      "preview": "The draw offer was declined双方已同意和局Both players agreed to a draw",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777410",
+      "instruction": "0x140148977",
+      "preview": "declineaccepttypemainCountplayer|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778849",
+      "instruction": "0x1401489bc",
+      "preview": "双方已同意和局Both players agreed to a draw",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14277885e",
+      "instruction": "0x1401489c3",
+      "preview": "Both players agreed to a draw",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427788b0",
+      "instruction": "0x1401493a3",
+      "preview": "localResponsePending",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778898",
+      "instruction": "0x1401498f4",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777640",
+      "instruction": "0x140149900",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778760",
+      "instruction": "0x140149925",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142778880",
+      "instruction": "0x140149aba",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140147cc0.c",
+  "pseudocodeSha256": "be259f655bc16be132f57059f21e59e1b8562b6146b6f0729a3fcbdf916f3c6f",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

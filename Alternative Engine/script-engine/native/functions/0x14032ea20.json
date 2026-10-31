@@ -1,0 +1,55 @@
+{
+  "va": "0x14032ea20",
+  "rva": 3336736,
+  "endRva": 3339820,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14032ea20.asm",
+  "assemblySha256": "f1851bfe6c7d62d5755009039d0ecff95da712438c6995bc560a465dea3c9ae6",
+  "literalReferences": [
+    {
+      "dataVa": "0x142790643",
+      "instruction": "0x14032ec8d",
+      "preview": "Doesn't empty until end of combat.回合结束前不会消失。Doesn't empty until end of turn.colorWUBRGC",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142790625",
+      "instruction": "0x14032ec94",
+      "preview": "战斗结束前不会消失。Doesn't empty until end of combat.回合结束前不会消失。Doesn't empty until end of turn.colorWUBRGC",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142790683",
+      "instruction": "0x14032ed18",
+      "preview": "Doesn't empty until end of turn.colorWUBRGC",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142790665",
+      "instruction": "0x14032ed1f",
+      "preview": "回合结束前不会消失。Doesn't empty until end of turn.colorWUBRGC",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279071b",
+      "instruction": "0x14032f1c0",
+      "preview": "\n/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427905dd",
+      "instruction": "0x14032f27c",
+      "preview": "This mana has a spending restriction and can only pay for certain costs.战斗结束前不会消失。Doesn't empty until end of combat.回合结束前不会消失。Doesn't empty ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142790598",
+      "instruction": "0x14032f283",
+      "preview": "这点法术力有用途限制，只能用来支付特定的费用。This mana has a spending restriction and can only pay for certain costs.战斗结束前不会消失。Doesn't e",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

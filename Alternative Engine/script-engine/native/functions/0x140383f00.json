@@ -1,0 +1,25 @@
+{
+  "va": "0x140383f00",
+  "rva": 3686144,
+  "endRva": 3687926,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/stack_text.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140383f00.asm",
+  "assemblySha256": "0bc309a93b69ecbb999f524b8c4270bba67cedbbb7180f3af9a1a8c598fe04b7",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427976e0",
+      "instruction": "0x1403842bf",
+      "preview": "\\nTriggerDescription$每当Whenever 时，, ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140383f00.c",
+  "pseudocodeSha256": "38bdad4855c3dc07f83a7d0bce64037ed11610a3096629e74cd71c1bb649aa51",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

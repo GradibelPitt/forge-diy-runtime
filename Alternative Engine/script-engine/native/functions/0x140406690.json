@@ -1,0 +1,51 @@
+{
+  "va": "0x140406690",
+  "rva": 4220560,
+  "endRva": 4225229,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/global_effects.rs",
+    "crates/mtg-engine/src/state.rs",
+    "src/stable.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140406690.asm",
+  "assemblySha256": "1f0b9ddec1676915fe0a5b8a97e12009e0738154c87c0d67485a2605b3b2d973",
+  "literalReferences": [
+    {
+      "dataVa": "0x14279b000",
+      "instruction": "0x140406d43",
+      "preview": "CARDNAMENICKNAMEsrc\\stable.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279b008",
+      "instruction": "0x140406e45",
+      "preview": "NICKNAMEsrc\\stable.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279b038",
+      "instruction": "0x1404073e4",
+      "preview": "controllerPlayerIdDefined$ ExiledWithUntilHostLeavesPlayImprintExiledWith",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279afe8",
+      "instruction": "0x1404077fb",
+      "preview": "ЯyB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x14279ab78",
+      "instruction": "0x140407807",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140406690.c",
+  "pseudocodeSha256": "e7bb298c0badf570c38ec8d0a86f1a0659f89ca40c21e4c2a893f79d1626e3c2",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

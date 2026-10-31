@@ -1,0 +1,19 @@
+{
+  "va": "0x141780540",
+  "rva": 24642880,
+  "endRva": 24643011,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141780540.asm",
+  "assemblySha256": "8d78cda4c04f159393635429c8189eae488560bbaef5bfd87e147beaf729d0eb",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c4b548",
+      "instruction": "0x1417805a9",
+      "preview": "overflow in Duration::new/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

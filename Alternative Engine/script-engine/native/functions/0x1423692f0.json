@@ -1,0 +1,25 @@
+{
+  "va": "0x1423692f0",
+  "rva": 37130992,
+  "endRva": 37131429,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/db.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1423692f0.asm",
+  "assemblySha256": "b8117b79a88dfb1fcaccaa2a2435d5d9234e9dab34f5d3ef0da362350c794095",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ce5ed7",
+      "instruction": "0x142369473",
+      "preview": "name-fold.json 读得了C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\db.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1423692f0.c",
+  "pseudocodeSha256": "b5d1a4e63d2c5876361ccc5f522c8bdd76aa21e646bf0bcf21bd62c9606adc0a",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

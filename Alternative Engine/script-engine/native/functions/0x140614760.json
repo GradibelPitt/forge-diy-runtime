@@ -1,0 +1,93 @@
+{
+  "va": "0x140614760",
+  "rva": 6375264,
+  "endRva": 6378197,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/diy.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140614760.asm",
+  "assemblySha256": "cf627f3e45097fda97c6286bd1a97b399921f4668d9e0218ca6e613f3d7361a7",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427ba122",
+      "instruction": "0x140614806",
+      "preview": "imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba122",
+      "instruction": "0x140614a2c",
+      "preview": "imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba122",
+      "instruction": "0x140614a50",
+      "preview": "imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba150",
+      "instruction": "0x140614a78",
+      "preview": "imageimageExt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba155",
+      "instruction": "0x140614abd",
+      "preview": "imageExt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba8b2",
+      "instruction": "0x140614afc",
+      "preview": "faceImagesdiyCards",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba122",
+      "instruction": "0x140614c2c",
+      "preview": "imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba122",
+      "instruction": "0x140614c4c",
+      "preview": "imageHashsrc\\diy.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba150",
+      "instruction": "0x140614c74",
+      "preview": "imageimageExt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba155",
+      "instruction": "0x140614cb5",
+      "preview": "imageExt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba150",
+      "instruction": "0x140614cec",
+      "preview": "imageimageExt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba150",
+      "instruction": "0x140614d2f",
+      "preview": "imageimageExt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427ba240",
+      "instruction": "0x14061527d",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

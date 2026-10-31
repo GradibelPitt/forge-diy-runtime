@@ -1,0 +1,25 @@
+{
+  "va": "0x142297b20",
+  "rva": 36272928,
+  "endRva": 36273024,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142297b20.asm",
+  "assemblySha256": "0115260a159890bb69e95cc1f489bb2e4e9c558f696df073e3175dbd51c45005",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdc862",
+      "instruction": "0x142297b41",
+      "preview": "ed 缺 ValidCardCantBeSuspected 缺 ValidCardCantBecomeMonarch 缺 ValidPlayerCantVenture 缺 ValidPlayerCantTarget 缺 ValidTargetBlockTapped 缺 ValidCardAttackVigilance 缺 Vali",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc858",
+      "instruction": "0x142297b4c",
+      "preview": "CantBeCopied 缺 ValidCardCantBeSuspected 缺 ValidCardCantBecomeMonarch 缺 ValidPlayerCantVenture 缺 ValidPlayerCantTarget 缺 ValidTargetBlockTapped 缺 ValidCardAttackVigilanc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

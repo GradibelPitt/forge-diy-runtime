@@ -1,0 +1,25 @@
+{
+  "va": "0x1421daf10",
+  "rva": 35499792,
+  "endRva": 35504653,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/count/history.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421daf10.asm",
+  "assemblySha256": "95f3e112b7e1536564d56c3d51b02b2ceb614e33be78281e66652ff9f6b4e270",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cd1ad0",
+      "instruction": "0x1421daf5c",
+      "preview": "TiedForHighestLife",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1421daf10.c",
+  "pseudocodeSha256": "fbe1aad1435e6d1dc9181d2746ab7afbbde3af268d7e01f6828b17ac5f6758e4",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

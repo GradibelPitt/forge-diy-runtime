@@ -1,0 +1,31 @@
+{
+  "va": "0x14252c510",
+  "rva": 38978832,
+  "endRva": 38979593,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/casting/costs.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14252c510.asm",
+  "assemblySha256": "2554be916b33d20a897e00a7aba128e7cffe8a06aabd3fe2fa5caffd7b19c927",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc8bf8",
+      "instruction": "0x14252c77a",
+      "preview": "匹配过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8bf8",
+      "instruction": "0x14252c794",
+      "preview": "匹配过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14252c510.c",
+  "pseudocodeSha256": "33454e19204bac293d9132b16236d92d3624c95c0217e46a040f58d8874f8810",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

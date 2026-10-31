@@ -1,0 +1,19 @@
+{
+  "va": "0x14096f720",
+  "rva": 9893664,
+  "endRva": 9893922,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14096f720.asm",
+  "assemblySha256": "98ea5d69af75ecf92a869b2c7ce5d0fd0e72cd29bb7c9d8dd8e138e3d0ff2458",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427f0a9c",
+      "instruction": "0x14096f740",
+      "preview": "Card.ExiledWithSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

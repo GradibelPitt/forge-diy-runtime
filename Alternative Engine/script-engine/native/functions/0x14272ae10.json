@@ -1,0 +1,19 @@
+{
+  "va": "0x14272ae10",
+  "rva": 41070096,
+  "endRva": 41070306,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14272ae10.asm",
+  "assemblySha256": "ca2d8f440d514637b431cdced86aae33a45e982e89645902ca1ca65053cafa4a",
+  "literalReferences": [
+    {
+      "dataVa": "0x142d14db8",
+      "instruction": "0x14272aeb6",
+      "preview": "fatal runtime error: the System allocator may not use TLS with destructors, aborting\n",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

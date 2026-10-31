@@ -1,0 +1,25 @@
+{
+  "va": "0x141b5cd70",
+  "rva": 28691824,
+  "endRva": 28692323,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b5cd70.asm",
+  "assemblySha256": "18e830286ab14c16cb6ee69d9605c0ef81f9fcbee0bcec13627d6b558a0df4f9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c91744",
+      "instruction": "0x141b5ce9c",
+      "preview": "传奇规则要恰好留一个",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c91729",
+      "instruction": "0x141b5ced2",
+      "preview": "只能从同名传奇里留传奇规则要恰好留一个",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

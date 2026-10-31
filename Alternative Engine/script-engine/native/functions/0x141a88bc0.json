@@ -1,0 +1,67 @@
+{
+  "va": "0x141a88bc0",
+  "rva": 27823040,
+  "endRva": 27826949,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/dialect.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141a88bc0.asm",
+  "assemblySha256": "f2d19d184725af6ec32534af3162627ac0d4d1a7083e2f3f7b0f2f3648ce2561",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c86cf1",
+      "instruction": "0x141a88fda",
+      "preview": "Protection from blueblackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c87868",
+      "instruction": "0x141a8941f",
+      "preview": ", and from  and from , from , and  and  or ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c87873",
+      "instruction": "0x141a89460",
+      "preview": " and from , from , and  and  or ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8787d",
+      "instruction": "0x141a894a0",
+      "preview": ", from , and  and  or ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c87884",
+      "instruction": "0x141a894e0",
+      "preview": ", and  and  or ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8788a",
+      "instruction": "0x141a89520",
+      "preview": " and  or ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8788f",
+      "instruction": "0x141a8955d",
+      "preview": " or ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c87994",
+      "instruction": "0x141a8991e",
+      "preview": "\nSpellOngoingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141a88bc0.c",
+  "pseudocodeSha256": "fd1e6f2f7ba47743f7cba3ae3f557350f2d1b3cb69c2785b14251ee9438153f7",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x141f58400",
+  "rva": 32867328,
+  "endRva": 32868647,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141f58400.asm",
+  "assemblySha256": "d089122c6b364c69d63bd64b49b7307cf368ec150b8f587f777786ab325bba05",
+  "literalReferences": [
+    {
+      "dataVa": "0x142ca6760",
+      "instruction": "0x141f5874d",
+      "preview": "CARDNAME count as ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

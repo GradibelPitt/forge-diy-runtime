@@ -1,0 +1,25 @@
+{
+  "va": "0x1425df6d0",
+  "rva": 39712464,
+  "endRva": 39713021,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1425df6d0.asm",
+  "assemblySha256": "63bb9bb1bc41ccd36d049d7031f3f82750dfbd87178ec6ac243f8e730af2db20",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c8734c",
+      "instruction": "0x1425df898",
+      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x1425df6d0.c",
+  "pseudocodeSha256": "ca8b68281fa2e43797a33920a50cdd064a9b3a4ab57707b68e3cdcd5f20618e1",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

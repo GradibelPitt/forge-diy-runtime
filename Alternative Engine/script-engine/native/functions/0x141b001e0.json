@@ -1,0 +1,19 @@
+{
+  "va": "0x141b001e0",
+  "rva": 28312032,
+  "endRva": 28312216,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/count/turn_stats.rs",
+    "crates/mtg-engine/src/track.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b001e0.asm",
+  "assemblySha256": "46224df216b497b81628544d94aa25007cb4b53bfe1b7e5e7ef10dce6d2c08e9",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141b001e0.c",
+  "pseudocodeSha256": "38b9433ec8fd1427d527a12cba7bd2c25143c7900d4fc2eddd47650980ce7738",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,31 @@
+{
+  "va": "0x1420d2f70",
+  "rva": 34418544,
+  "endRva": 34421862,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1420d2f70.asm",
+  "assemblySha256": "dc17ce05555102bf832fda1f9d162d18827b081ef8fe83819c159843a0141a3f",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc4a75",
+      "instruction": "0x1420d3404",
+      "preview": "要说出一个牌名",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc4ad8",
+      "instruction": "0x1420d345c",
+      "preview": "这张牌不能在调度时放逐整手",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc4a4b",
+      "instruction": "0x1420d35d0",
+      "preview": "每张牌都要分进某一堆，各一次要说出一个牌名",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

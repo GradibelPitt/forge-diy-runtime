@@ -1,0 +1,31 @@
+{
+  "va": "0x140a90180",
+  "rva": 11075968,
+  "endRva": 11076923,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140a90180.asm",
+  "assemblySha256": "7cc16fc236fbc47d57120408fb70ebeaf75dbff5b9052c44faebeb7f583489f0",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427f8bf6",
+      "instruction": "0x140a90300",
+      "preview": "普通·选牌一轮普通·施放即反击普通·费用挑法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f8c0a",
+      "instruction": "0x140a90377",
+      "preview": "普通·施放即反击普通·费用挑法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x1427f8c21",
+      "instruction": "0x140a90413",
+      "preview": "普通·费用挑法",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x140eb4410",
+  "rva": 15418384,
+  "endRva": 15418879,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/picks.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140eb4410.asm",
+  "assemblySha256": "3e35201ae03ec1c65664bb5cebe1e4a7ed5958a8f1cb3f1f9bafc3e006de9802",
+  "literalReferences": [],
+  "pseudocode": "functions/0x140eb4410.c",
+  "pseudocodeSha256": "03a7c3fc71ce88f18e616159ac1b18482fee9d6ba57de1def44b440f07f7a2e2",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

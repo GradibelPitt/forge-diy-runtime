@@ -1,0 +1,61 @@
+{
+  "va": "0x142439b00",
+  "rva": 37985024,
+  "endRva": 37991263,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142439b00.asm",
+  "assemblySha256": "bc2ab8f9febb76fc02bfd704cef2f81645751530a0be87a720c88c0a66dbde27",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cf26e8",
+      "instruction": "0x142439b33",
+      "preview": "ModeAlternativeCostOptionalCostMayPlayValidPlayerContinuousAffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf296b",
+      "instruction": "0x142439ba4",
+      "preview": "ValidSA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf2803",
+      "instruction": "0x142439bcf",
+      "preview": "ValidCardIgnoreEffectCostAffectedDefined",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf296b",
+      "instruction": "0x142439efc",
+      "preview": "ValidSA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf2803",
+      "instruction": "0x142439f36",
+      "preview": "ValidCardIgnoreEffectCostAffectedDefined",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf270e",
+      "instruction": "0x14243a156",
+      "preview": "ValidPlayerContinuousAffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf2787",
+      "instruction": "0x14243a3cd",
+      "preview": "EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cf2787",
+      "instruction": "0x14243a793",
+      "preview": "EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

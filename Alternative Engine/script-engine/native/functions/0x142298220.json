@@ -1,0 +1,25 @@
+{
+  "va": "0x142298220",
+  "rva": 36274720,
+  "endRva": 36274816,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142298220.asm",
+  "assemblySha256": "b156d7297ea9dccf79f8c2addb1cad729e35af6b9895a626630847f1455c6b43",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdca74",
+      "instruction": "0x142298241",
+      "preview": "rm 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanAdapt 缺 Va",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdca69",
+      "instruction": "0x14229824c",
+      "preview": "CantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

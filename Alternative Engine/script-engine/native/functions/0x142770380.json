@@ -1,0 +1,19 @@
+{
+  "va": "0x142770380",
+  "rva": 41354112,
+  "endRva": 41354148,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142770380.asm",
+  "assemblySha256": "1ccd8276ca3d6c8f583f65bd536a79ac8de326da5db29b8ed610a2c0156c88cb",
+  "literalReferences": [
+    {
+      "dataVa": "0x142d1e6e8",
+      "instruction": "0x14277038a",
+      "preview": "user-provided comparison function does not correctly implement a total order/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\slice\\sort\\shared\\smallsort.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x14006c150",
+  "rva": 442704,
+  "endRva": 443781,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14006c150.asm",
+  "assemblySha256": "ed5f1723c879eec5687ab1f2c9962dd8d365830fc53e3ea036beae4560400fed",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427896d9",
+      "instruction": "0x14006c17c",
+      "preview": "WUBRGC这不像局面文件（Forge 的 [state] 格式：p0life=20、p0hand=牌名;牌名……）This doesn't look like a state file (Forge's [state] format: p0life=20, p0hand=Car",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

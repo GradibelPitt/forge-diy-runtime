@@ -1,0 +1,67 @@
+{
+  "va": "0x14015dc00",
+  "rva": 1432576,
+  "endRva": 1434981,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "src/session.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14015dc00.asm",
+  "assemblySha256": "d88362c1a411388248b9d3ef1f68f875f96ccdb0486f68723526f0f16de8c036",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427783e8",
+      "instruction": "0x14015e0a1",
+      "preview": "timeLimitSecondsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-match\\src\\lib.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142779680",
+      "instruction": "0x14015e39d",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777640",
+      "instruction": "0x14015e3a9",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142779680",
+      "instruction": "0x14015e3d6",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777640",
+      "instruction": "0x14015e3e2",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777430",
+      "instruction": "0x14015e410",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142777640",
+      "instruction": "0x14015e41c",
+      "preview": "called `Result::unwrap()` on an `Err` value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142779648",
+      "instruction": "0x14015e43e",
+      "preview": "|qwB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14015dc00.c",
+  "pseudocodeSha256": "e52ba06e9ea7134a6d3593b13bddc58a2f5d58d8c74903ea785982f1065a3c74",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,31 @@
+{
+  "va": "0x14214f970",
+  "rva": 34929008,
+  "endRva": 34930687,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14214f970.asm",
+  "assemblySha256": "9e25976f6a2f28779b1cc798e6dd4f5fe8f64d5240fc5fe4010bec4e4654ecb4",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc8c29",
+      "instruction": "0x14214fad5",
+      "preview": "AnnounceResultSVar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8c29",
+      "instruction": "0x14214fbb0",
+      "preview": "AnnounceResultSVar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccb76e",
+      "instruction": "0x14214fbea",
+      "preview": "AnnounceMaxDBSubAbility替代效果里要做选择ReplaceManaReplaceColorReplaceOnlyReplaceMana 同时换种类与颜色ReplaceTypeReplaceAmountReplaceMana 没有改什么",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

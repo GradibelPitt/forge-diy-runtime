@@ -1,0 +1,19 @@
+{
+  "va": "0x141b54890",
+  "rva": 28657808,
+  "endRva": 28661203,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/opening_hand.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b54890.asm",
+  "assemblySha256": "2cc9e2031257214d90f812f2ac56bb36a23478e82f8659dec88754a5983a8c76",
+  "literalReferences": [],
+  "pseudocode": "functions/0x141b54890.c",
+  "pseudocodeSha256": "7c209d17ac3780c075ebebf40dcf6aa5a6a8225510246a540043ba9a290d5f45",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

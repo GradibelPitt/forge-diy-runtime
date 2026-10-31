@@ -1,0 +1,43 @@
+{
+  "va": "0x14276b860",
+  "rva": 41334880,
+  "endRva": 41338230,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14276b860.asm",
+  "assemblySha256": "ee82c1a4fc3469dfa5717c21d52e89cfd37fdd39a3f04fb117bab4830fd88dca",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc17c0",
+      "instruction": "0x14276b921",
+      "preview": "ernateMode:SplitAlternateMode:Spom colorsYouCtrl from cardColors/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc17d0",
+      "instruction": "0x14276b929",
+      "preview": "AlternateMode:Spom colorsYouCtrl from cardColors/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce5ad3",
+      "instruction": "0x14276bf02",
+      "preview": " // editionsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\combat\\mod.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc1a0b",
+      "instruction": "0x14276c2a0",
+      "preview": "Variant:UniversesWithin:FlavorName:txtC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\mana_produce.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ce5510",
+      "instruction": "0x14276c544",
+      "preview": "reentrant init/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\cell\\once.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

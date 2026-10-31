@@ -1,0 +1,104 @@
+{
+  "va": "0x141c5e800",
+  "rva": 29747200,
+  "endRva": 29757657,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141c5e800.asm",
+  "assemblySha256": "35c22f2863ffeeda50aca4c68a7e23c91e9486908a4ead1633711cc2232f85de",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c8ffc0",
+      "instruction": "0x141c5efca",
+      "preview": "PlainsIslandSwampMountainForest",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8ffc6",
+      "instruction": "0x141c5efee",
+      "preview": "IslandSwampMountainForest",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8ffcc",
+      "instruction": "0x141c5f00b",
+      "preview": "SwampMountainForest",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8ffd1",
+      "instruction": "0x141c5f028",
+      "preview": "MountainForest",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c8ffd9",
+      "instruction": "0x141c5f047",
+      "preview": "Forest",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9477f",
+      "instruction": "0x141c5f158",
+      "preview": "ClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c94773",
+      "instruction": "0x141c5f17c",
+      "preview": "RogueWarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c94785",
+      "instruction": "0x141c5f199",
+      "preview": "WarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9478c",
+      "instruction": "0x141c5f1b8",
+      "preview": "Wizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9475c",
+      "instruction": "0x141c5fb2f",
+      "preview": "AssassinMercenaryPirateRogueWarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c94764",
+      "instruction": "0x141c5fb53",
+      "preview": "MercenaryPirateRogueWarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c9476d",
+      "instruction": "0x141c5fb70",
+      "preview": "PirateRogueWarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c94773",
+      "instruction": "0x141c5fb8d",
+      "preview": "RogueWarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c94778",
+      "instruction": "0x141c5fbac",
+      "preview": "WarlockClericWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141c5e800.c",
+  "pseudocodeSha256": "82d50d73cca0d41a9e5c97bbb924a10af253dfd172c04d138a1ff5b6581d9b63",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
+}

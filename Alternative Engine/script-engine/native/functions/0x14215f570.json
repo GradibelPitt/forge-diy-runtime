@@ -1,0 +1,67 @@
+{
+  "va": "0x14215f570",
+  "rva": 34993520,
+  "endRva": 34999389,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/trigger/params.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14215f570.asm",
+  "assemblySha256": "fd2843c5f2bbf707293e32085ea51ad5270be7ee796f7148d367a3c6207050fe",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc87c0",
+      "instruction": "0x14215f640",
+      "preview": "ManaFromCreature_",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89f0",
+      "instruction": "0x14215f650",
+      "preview": "ManaFromTreasureManaFromArtifactEquippedByValid ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8780",
+      "instruction": "0x14215f659",
+      "preview": "er.Other",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc8790",
+      "instruction": "0x14215f662",
+      "preview": "ManaSpentBy Playard.StrictlySelfManaFromCard.StrManaFromCreature_",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc87a0",
+      "instruction": "0x14215f66b",
+      "preview": "ard.StrictlySelfManaFromCard.StrManaFromCreature_",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc87b0",
+      "instruction": "0x14215f674",
+      "preview": "ManaFromCard.StrManaFromCreature_",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc070",
+      "instruction": "0x14215fd9c",
+      "preview": "CastSa Spell.WarpCastSa Spell.MayPlaySourcePhaseCount 只认行动阶段->",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142ccc081",
+      "instruction": "0x14215ff1b",
+      "preview": "CastSa Spell.MayPlaySourcePhaseCount 只认行动阶段->",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14215f570.c",
+  "pseudocodeSha256": "42a27b8a0abc393ee46e0555c15e059066cc356ab8b0efa02e0d0f04ac25d843",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

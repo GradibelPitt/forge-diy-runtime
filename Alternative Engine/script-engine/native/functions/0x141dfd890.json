@@ -1,0 +1,32 @@
+{
+  "va": "0x141dfd890",
+  "rva": 31447184,
+  "endRva": 31460696,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/casting/actions.rs",
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141dfd890.asm",
+  "assemblySha256": "078a53f2ad7de65f3ec79313e27883542c3779025e3d8e32d0939904255e73d1",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c903d0",
+      "instruction": "0x141dfe73b",
+      "preview": "自动付费要疼的生命会让你死掉：要付请亲手点法术力来源法术力付不起固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c90bed",
+      "instruction": "0x141dfe8bb",
+      "preview": "付不起费用付不起C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\seat\\planechase.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x141dfd890.c",
+  "pseudocodeSha256": "b29278feabf9bfc4de520abd5d7ba548668fc28ae1b6f7babd02b2403f9352e9",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

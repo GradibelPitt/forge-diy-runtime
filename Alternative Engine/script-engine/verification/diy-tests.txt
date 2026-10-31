@@ -1,0 +1,125 @@
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling cpufeatures v0.2.17
+   Compiling cfg-if v1.0.5
+   Compiling generic-array v0.14.7
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling solo-hearthstone-rules v0.1.0 (C:\Users\Marsh\AppData\Local\ForgeDIY\repo\Alternative Engine\patch-source)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.89s
+     Running unittests src\lib.rs (work/rules-backend/diy-check-target\debug\deps\solo_hearthstone_rules-cc99cdee69a49578.exe)
+
+running 17 tests
+test mystery::tests::control_change_and_other_zone_moves_do_not_hide_cards ... ok
+test mystery::tests::shared_back_retains_java_characteristics_and_image_identity ... ok
+test mystery::tests::entry_replacement_restores_only_a_newly_concealed_card ... ok
+test mystery::tests::face_up_spell_is_rejected_without_affecting_ordinary_spells_or_abilities ... ok
+test mystery::tests::non_cast_entry_is_concealed_before_entering_battlefield ... ok
+test mystery::tests::definition_uses_java_record_precedence_without_reordering_script_fields ... ok
+test mystery::tests::definition_requires_enchantment_mystery_and_db_effect ... ok
+test mystery::tests::pending_trigger_delays_sacrifice_until_it_leaves_stack ... ok
+test mystery::tests::replaced_flip_remains_hidden_and_does_not_schedule_retirement ... ok
+test mystery::tests::reveal_requires_opponent_turn_controller_and_native_permissions ... ok
+test mystery::tests::revealed_or_non_battlefield_card_cannot_reveal_again ... ok
+test mystery::tests::all_subability_target_minima_are_checked_again_on_execution ... ok
+test mystery::tests::targetless_and_optional_targets_work_but_missing_effect_does_not ... ok
+test diy_rules::tests::damage_counts_distinct_characters_and_resets_each_turn ... ok
+test diy_rules::tests::quest_requirements_are_independent_and_historic_includes_artifacts ... ok
+test native_patch::tests::refuses_an_unknown_engine ... ok
+test diy_compat::tests::emblem_variables_do_not_rename_effect_api_names ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\hearthstone_launcher.rs (work/rules-backend/diy-check-target\debug\deps\hearthstone_launcher-81d69bbff1d1b738.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\prepare_discover_engine.rs (work/rules-backend/diy-check-target\debug\deps\prepare_discover_engine-c1b55f6cb4d0cc6a.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\prepare_engine.rs (work/rules-backend/diy-check-target\debug\deps\prepare_engine-efc37a7e75338cb4.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\prepare_experimental_engine.rs (work/rules-backend/diy-check-target\debug\deps\prepare_experimental_engine-6286e4dd6a14deac.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\sidecar_bridge.rs (work/rules-backend/diy-check-target\debug\deps\sidecar_bridge-aa6339e81e45b6bf.exe)
+
+running 19 tests
+test deck_filter::tests::supports_plain_lists_and_all_land_decks ... ok
+test deck_filter::tests::land_type_is_an_exact_type_and_uses_front_face ... ok
+test tests::tagged_mode_without_deck_validation ... ok
+test deck_filter::tests::removes_lands_from_main_sideboard_and_commander_before_loading ... ok
+test tests::incremental_registration_keeps_cards_and_tokens_for_mode_replay ... ok
+test tests::ordinary_requests_unchanged ... ok
+test discover::tests::subtype_color_prefilter_keeps_dynamic_mana_values ... ok
+test discover::tests::normal_conjure_stays_byte_identical ... ok
+test discover::tests::starting_deck_conjure_preserves_copies_and_following_ability ... ok
+test discover::tests::preserves_cost_delayed_chain_and_remembers_only_moved_card ... ok
+test discover::tests::explicit_illegal_set_toggle_and_explicit_set_filter_are_independent ... ok
+test discover::tests::fixed_custom_conjure_keeps_six_copies_and_bypasses_random_pool_exclusions ... ok
+test deck_filter::tests::leaves_nonlands_comments_and_printing_details_unchanged ... ok
+test diy_support::tests::both_set_codes_preserve_names_and_strip_artist ... ok
+test discover::tests::database_excludes_sets_and_rule_cards_before_sampling ... ok
+test land_search::tests::only_marked_land_allocations_change ... ok
+test deck_filter::tests::current_scripts_and_diy_override_cached_types_and_support_printings ... ok
+test deck_filter::tests::failed_preparation_keeps_request_and_source_and_removes_partial_files ... ok
+test deck_filter::tests::prepares_both_players_without_changing_sources_and_cleans_up ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running tests\ai_land.rs (work/rules-backend/diy-check-target\debug\deps\ai_land-5c42acc52b9f0791.exe)
+
+running 7 tests
+test script_costs_ignore_oracle_color_words_and_support_custom_lands ... ok
+test lands_already_in_hand_count_and_lost_sources_are_reconsidered ... ok
+test repeated_pips_and_dual_lands_do_not_double_count_a_single_source ... ok
+test empty_hand_uses_deck_and_returns_original_option_index ... ok
+test hybrid_is_one_alternative_and_deck_demand_breaks_the_tie ... ok
+test multicolor_hand_fills_the_missing_color_before_repeating_a_popular_color ... ok
+test all_monocolor_decks_choose_the_matching_land_instead_of_option_zero ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\hearthstone.rs (work/rules-backend/diy-check-target\debug\deps\hearthstone-3c19627c42646abf.exe)
+
+running 12 tests
+test starts_at_thirty_life_seven_cards_and_ten_maximum ... ok
+test constructed_cleanup_respects_no_cleanup_damage ... ok
+test constructed_initialization_is_unchanged ... ok
+test opposing_creatures_become_defenders_and_friendly_creatures_do_not ... ok
+test upkeep_conjures_one_chosen_basic_land_with_no_visible_rule_object ... ok
+test fatigue_is_per_player_and_prevention_does_not_reset_it ... ok
+test explicit_attackable_rules_remain_available_outside_hearthstone ... ok
+test three_failed_draws_lose_one_then_two_then_three_life ... ok
+test snapshots_copy_fatigue_and_new_games_start_with_fresh_counters ... ok
+test attack_legality_reuses_reversed_pairwise_blocking_restrictions ... ok
+test cleanup_preserves_damage_and_clears_deathtouch ... ok
+test constructed_empty_draw_uses_normal_loss_flag_unless_keyword_grants_fatigue ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests solo_hearthstone_rules
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

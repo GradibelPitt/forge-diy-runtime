@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-30",
+  "originalImageSha256": "ded7eb5f02d6b6df2186cb78144881d6350028a474c6658577c3fe7388a59e7b",
+  "keywordParser": {
+    "entry": "0x141a66e20",
+    "inputs": 2765,
+    "accepted": 1650,
+    "normalizedTags": 181,
+    "host": "isolated initialized upstream --standby process"
+  },
+  "wholeCardParser": {
+    "entry": "0x141a71ee0",
+    "inputs": 2525,
+    "accepted": 2365,
+    "errors": {
+      "读不懂的行 ALTERNATE": 115,
+      "关键字 Hidden agenda": 2,
+      "脚本行 SPECIALIZE": 10,
+      "关键字 Double team": 1,
+      "关键字 StickerSheet": 1,
+      "ChangeZone 的参数 ConditionGameTypes": 1,
+      "关键字 Visit": 18,
+      "MakeCard 只认写死的牌名（Name$）或 DefinedName$": 1,
+      "Token 的参数 Destination": 1,
+      "关键字 Before drawing your opening hand, choose 1, 2, or 3.": 1,
+      "脚本行 Lights": 1,
+      "关键字 Once each turn, you may pay {1} to reroll one or more dice you rolled.": 1,
+      "触发 Stationed": 1,
+      "效果 Draft": 1,
+      "关键字 Blitz": 1,
+      "MakeCard 牌名 ChosenName": 1,
+      "关键字 Your starting hand size is five.": 1,
+      "关键字 Double agenda": 1,
+      "筛选条件 powerLTTriggeredCard$CardPower": 1
+    },
+    "scope": "Direct whole-card/single-face parser; upstream outer multi-face splitting and gameplay are not tested"
+  },
+  "reconstructedBasicMatcher": {
+    "entry": "0x141a66030",
+    "inputs": 9668,
+    "canonicalInputs": 76,
+    "observedTagValues": 71,
+    "uncoveredTagValues": [],
+    "rustDifferentialTest": "passed"
+  },
+  "diyRustTests": {
+    "passed": 55,
+    "failed": 0
+  },
+  "gameplayCoverage": "No blanket claim; use prior per-feature regression evidence and new focused scenarios."
+}

@@ -1,0 +1,19 @@
+{
+  "va": "0x140597b40",
+  "rva": 5864256,
+  "endRva": 5864544,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140597b40.asm",
+  "assemblySha256": "35dc294834e07ccb99060439abc47bef59d15e7a28d546f971601086bb8b5459",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427b662a",
+      "instruction": "0x140597b75",
+      "preview": "typeA:AB$src\\dungeon_map.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

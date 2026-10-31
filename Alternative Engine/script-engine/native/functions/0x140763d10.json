@@ -1,0 +1,19 @@
+{
+  "va": "0x140763d10",
+  "rva": 7748880,
+  "endRva": 7749338,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140763d10.asm",
+  "assemblySha256": "214575cb68b80c681d8128d69a3e4e8cc2f326785ceb13b5b42be478a72254cf",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427cc0b0",
+      "instruction": "0x140763d5c",
+      "preview": "Cost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

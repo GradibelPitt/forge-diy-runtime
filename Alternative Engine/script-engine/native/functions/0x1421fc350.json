@@ -1,0 +1,31 @@
+{
+  "va": "0x1421fc350",
+  "rva": 35636048,
+  "endRva": 35636360,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421fc350.asm",
+  "assemblySha256": "f56b70dc20320903e7047606ecc8380d53c69ce76eb7c6b061d9c40be7e1a4c3",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cd2f64",
+      "instruction": "0x1421fc393",
+      "preview": "ValidTgts$TgtPrompt$TargetType$AdditionalActivationZone$",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd2f6e",
+      "instruction": "0x1421fc39a",
+      "preview": "TgtPrompt$TargetType$AdditionalActivationZone$",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd2f78",
+      "instruction": "0x1421fc3f5",
+      "preview": "TargetType$AdditionalActivationZone$",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

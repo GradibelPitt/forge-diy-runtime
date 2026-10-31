@@ -1,0 +1,19 @@
+{
+  "va": "0x140b0d8a0",
+  "rva": 11589792,
+  "endRva": 11589919,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b0d8a0.asm",
+  "assemblySha256": "bdcef315c78a424a902b05fc4d436f1bc167d9944c646bc975248d8c823f4164",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427fb8d5",
+      "instruction": "0x140b0d8e6",
+      "preview": "Counters(YouCtrlWinsGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

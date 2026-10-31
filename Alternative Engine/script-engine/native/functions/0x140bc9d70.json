@@ -1,0 +1,25 @@
+{
+  "va": "0x140bc9d70",
+  "rva": 12361072,
+  "endRva": 12364277,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140bc9d70.asm",
+  "assemblySha256": "a5a9c0ae3f22f2b3a0359b3073aa369b8da87aabbf9e4f6e035994026360c74e",
+  "literalReferences": [
+    {
+      "dataVa": "0x142804ce9",
+      "instruction": "0x140bca459",
+      "preview": "ouCtrlC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\trigger_effects.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140bc9d70.c",
+  "pseudocodeSha256": "1b6213af36ebed39183dbd03fa78c13fcbd6a705f43676f3ea1a86990edc2014",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

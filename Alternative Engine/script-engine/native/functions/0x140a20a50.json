@@ -1,0 +1,25 @@
+{
+  "va": "0x140a20a50",
+  "rva": 10619472,
+  "endRva": 10620279,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140a20a50.asm",
+  "assemblySha256": "8757b1296cfe5ff2590f88ad5ed1ba19e69f2b3cfa3e873b9e9a00ea0a594265",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427f5a0b",
+      "instruction": "0x140a20b63",
+      "preview": "普通·献祭挑代表",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140a20a50.c",
+  "pseudocodeSha256": "8f3749a2f0c70f72e3c7696161d75e20c519db8a6286f3d8118f5752b7386375",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

@@ -1,0 +1,25 @@
+{
+  "va": "0x141b56e90",
+  "rva": 28667536,
+  "endRva": 28668142,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b56e90.asm",
+  "assemblySha256": "5f8d14992cc8114d7c9aa842f9181890482b8d96b45523eed4bec113bea8aac3",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c913f8",
+      "instruction": "0x141b56f0b",
+      "preview": "用开发者工具",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c913c8",
+      "instruction": "0x141b56f2c",
+      "preview": "事件做到一半在等人回答，先回答再用开发者工具",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

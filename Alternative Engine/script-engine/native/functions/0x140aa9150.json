@@ -1,0 +1,25 @@
+{
+  "va": "0x140aa9150",
+  "rva": 11178320,
+  "endRva": 11178802,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-ai-normal/src/priority.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140aa9150.asm",
+  "assemblySha256": "7e32f553ff779f7fbe7685ceeea02081a3fcd5eab486baec038306424ac7b1cd",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427d96b8",
+      "instruction": "0x140aa9323",
+      "preview": "ؕ}B",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140aa9150.c",
+  "pseudocodeSha256": "298f9cccf908d3163553e9a2ed79a576ef7e80340abaca7ccb8314f107569876",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

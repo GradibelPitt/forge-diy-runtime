@@ -1,0 +1,25 @@
+{
+  "va": "0x140b5cbf0",
+  "rva": 11914224,
+  "endRva": 11914673,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/state.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x140b5cbf0.asm",
+  "assemblySha256": "3bf136e8ce3930782118a79eec8c2372a4a37fb132cb453c76a96b8fbc5d1801",
+  "literalReferences": [
+    {
+      "dataVa": "0x1427feb5b",
+      "instruction": "0x140b5cc8d",
+      "preview": "who: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x140b5cbf0.c",
+  "pseudocodeSha256": "49752ed0a4081c0d586d6347db31a75f51a06ad7af50a6cc546be935bf9db673",
+  "pseudocodeOrigin": "prior PE-bounded decompilation",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

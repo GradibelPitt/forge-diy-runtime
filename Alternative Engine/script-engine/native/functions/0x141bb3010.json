@@ -1,0 +1,24 @@
+{
+  "va": "0x141bb3010",
+  "rva": 29044752,
+  "endRva": 29063039,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/filter/props.rs",
+    "crates/mtg-engine/src/effects/memo.rs",
+    "crates/mtg-engine/src/state.rs",
+    "crates/mtg-engine/src/statics/layers.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141bb3010.asm",
+  "assemblySha256": "f2e3a7b185795361fac7fa73f1d608f93b972ed6085b4706d34ee109696b6c82",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c950a8",
+      "instruction": "0x141bb760e",
+      "preview": "internal error: entered unreachable code: exec_memo 只管记忆类",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

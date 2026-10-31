@@ -1,0 +1,18 @@
+{
+  "va": "0x1421da610",
+  "rva": 35497488,
+  "endRva": 35497589,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/ability.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1421da610.asm",
+  "assemblySha256": "1c38b3938d36358757b933348b837ad6b57ec1057cf631721673dbd9b75095ee",
+  "literalReferences": [],
+  "pseudocode": "functions/0x1421da610.c",
+  "pseudocodeSha256": "b613fd69d0a73065d9f4f415c748dd87fb22fbceac0b5d1d2d533b6b085cf419",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

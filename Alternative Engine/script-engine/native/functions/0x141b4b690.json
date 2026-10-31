@@ -1,0 +1,19 @@
+{
+  "va": "0x141b4b690",
+  "rva": 28620432,
+  "endRva": 28620528,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141b4b690.asm",
+  "assemblySha256": "7b9fc3e885664e577e3ca2af31688394cf6138e41466a4f86c7a71e6c1c45021",
+  "literalReferences": [
+    {
+      "dataVa": "0x142c904bd",
+      "instruction": "0x141b4b6bc",
+      "preview": "不能用这种方式施放这张牌没有增幅没有这个可选费用",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

@@ -1,0 +1,795 @@
+{
+  "va": "0x1422d44b0",
+  "rva": 36521136,
+  "endRva": 36562285,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/statics/restrictions.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x1422d44b0.asm",
+  "assemblySha256": "2fac55af6fe6062766dd38b4ff75d95c55f2db3d808af7e6d1172babeb2c22cc",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdf84e",
+      "instruction": "0x1422d455c",
+      "preview": "RaiseToResultMaxNum",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb340",
+      "instruction": "0x1422d4631",
+      "preview": "amageAsUnblockedAssignCombatDamaStack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb350",
+      "instruction": "0x1422d4639",
+      "preview": "AssignCombatDamaStack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde8a6",
+      "instruction": "0x1422d465b",
+      "preview": "OptionalRestRandomOrderDigNumDigMultiple 的 ChooseAmount／ChosenZone 不成对Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | RaiseCost$ 2 | Affected$ Card.IsRe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb1d0",
+      "instruction": "0x1422d46e3",
+      "preview": "CantBecomeMonarcCantChangeDayTimGainLifeRadiatioAttackRequiremene,ChangesZoneAllChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDama",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb1e0",
+      "instruction": "0x1422d4712",
+      "preview": "CantChangeDayTimGainLifeRadiatioAttackRequiremene,ChangesZoneAllChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgno",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb1f0",
+      "instruction": "0x1422d4741",
+      "preview": "GainLifeRadiatioAttackRequiremene,ChangesZoneAllChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlay",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb200",
+      "instruction": "0x1422d4770",
+      "preview": "AttackRequiremene,ChangesZoneAllChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb0d0",
+      "instruction": "0x1422d479f",
+      "preview": "CanAttackDefendeActivated.!Loyalty",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb1b0",
+      "instruction": "0x1422d489c",
+      "preview": "sIfHaste",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb1c0",
+      "instruction": "0x1422d48a4",
+      "preview": "ActivateAbilityACantBecomeMonarcCantChangeDayTimGainLifeRadiatioAttackRequiremene,ChangesZoneAllChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d493c",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3f8",
+      "instruction": "0x1422d4966",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb190",
+      "instruction": "0x1422d4acf",
+      "preview": "lessDamageSourceColorlessDamageSsIfHaste",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb1a0",
+      "instruction": "0x1422d4ad7",
+      "preview": "ColorlessDamageSsIfHaste",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf409",
+      "instruction": "0x1422d4f91",
+      "preview": "IgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdc40f",
+      "instruction": "0x1422d4fb5",
+      "preview": "AffectedAffectedDefinedAffectedZoneEffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d5350",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85620",
+      "instruction": "0x1422d53b2",
+      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c856c0",
+      "instruction": "0x1422d53ba",
+      "preview": "Spell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb290",
+      "instruction": "0x1422d543c",
+      "preview": "IgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb2a0",
+      "instruction": "0x1422d5457",
+      "preview": "PlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb2b0",
+      "instruction": "0x1422d5472",
+      "preview": "CanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb2c0",
+      "instruction": "0x1422d548d",
+      "preview": "CanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d593e",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d5c0c",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf911",
+      "instruction": "0x1422d5d25",
+      "preview": "NewTime",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf72d",
+      "instruction": "0x1422d5e49",
+      "preview": "MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf738",
+      "instruction": "0x1422d5e89",
+      "preview": "ValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf8f7",
+      "instruction": "0x1422d5f46",
+      "preview": "cmcGTTurnsOnlySorcerySpeedNewTime",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf8f7",
+      "instruction": "0x1422d5f70",
+      "preview": "cmcGTTurnsOnlySorcerySpeedNewTime",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb250",
+      "instruction": "0x1422d60ba",
+      "preview": ".VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb260",
+      "instruction": "0x1422d60ec",
+      "preview": "+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde448",
+      "instruction": "0x1422d6209",
+      "preview": "TypeActivationPhasesActivationFirstCombatPlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf84e",
+      "instruction": "0x1422d6258",
+      "preview": "RaiseToResultMaxNum",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde448",
+      "instruction": "0x1422d62a4",
+      "preview": "TypeActivationPhasesActivationFirstCombatPlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3f8",
+      "instruction": "0x1422d631d",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d638c",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb2d0",
+      "instruction": "0x1422d647b",
+      "preview": "nt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb2e0",
+      "instruction": "0x1422d6483",
+      "preview": "Opponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3f8",
+      "instruction": "0x1422d64fc",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ff",
+      "instruction": "0x1422d6571",
+      "preview": "MustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf46b",
+      "instruction": "0x1422d66e1",
+      "preview": "ValidModeValidTrigger",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdea02",
+      "instruction": "0x1422d67c1",
+      "preview": "CounterTypeCounterNumEachExistingCounterNumValue",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf85b",
+      "instruction": "0x1422d6825",
+      "preview": "MaxNum",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c856b0",
+      "instruction": "0x1422d6943",
+      "preview": "Activated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c856a0",
+      "instruction": "0x1422d6972",
+      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf300",
+      "instruction": "0x1422d69e3",
+      "preview": "ValidSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf8ba",
+      "instruction": "0x1422d6a30",
+      "preview": "InvertValidSource+inZoneBattlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdca9e",
+      "instruction": "0x1422d6b36",
+      "preview": "ColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanAdapt 缺 ValidCardCantBeBeamedUp 缺 ValidCard\tMinLim",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ff",
+      "instruction": "0x1422d6dd9",
+      "preview": "MustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3f8",
+      "instruction": "0x1422d6eea",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d6f2b",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf59d",
+      "instruction": "0x1422d7324",
+      "preview": "SaddleStation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf5a3",
+      "instruction": "0x1422d734c",
+      "preview": "Station",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdea2d",
+      "instruction": "0x1422d737f",
+      "preview": "Value",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf745",
+      "instruction": "0x1422d74bb",
+      "preview": "MaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde8a6",
+      "instruction": "0x1422d7529",
+      "preview": "OptionalRestRandomOrderDigNumDigMultiple 的 ChooseAmount／ChosenZone 不成对Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | RaiseCost$ 2 | Affected$ Card.IsRe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf855",
+      "instruction": "0x1422d75d0",
+      "preview": "ResultMaxNum",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf855",
+      "instruction": "0x1422d7615",
+      "preview": "ResultMaxNum",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf602",
+      "instruction": "0x1422d7899",
+      "preview": "ValidEntityAttacks,AttackersDeclared,AttackersDeclaredOneTargetDamageDone,DamageDoneOnce,DamageDealtOnce,DamageAllSpellCast,SpellCopy,SpellCastOrCopy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf602",
+      "instruction": "0x1422d792b",
+      "preview": "ValidEntityAttacks,AttackersDeclared,AttackersDeclaredOneTargetDamageDone,DamageDoneOnce,DamageDealtOnce,DamageAllSpellCast,SpellCopy,SpellCastOrCopy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf738",
+      "instruction": "0x1422d7a58",
+      "preview": "ValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdea2a",
+      "instruction": "0x1422d80da",
+      "preview": "NumValue",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf8cb",
+      "instruction": "0x1422d8180",
+      "preview": "+inZoneBattlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422d86c0",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf548",
+      "instruction": "0x1422d88cf",
+      "preview": "CantPutCounter 缺对象阻挡费用不只是法术力AttackerTapPowerValue 缺 ValueSaddleStation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf57e",
+      "instruction": "0x1422d8c1a",
+      "preview": "AttackerTapPowerValue 缺 ValueSaddleStation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf738",
+      "instruction": "0x1422d8d56",
+      "preview": "ValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf586",
+      "instruction": "0x1422d8e47",
+      "preview": "TapPowerValue 缺 ValueSaddleStation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf31b",
+      "instruction": "0x1422d9214",
+      "preview": "Caster进攻费用不只是法术力RememberingAttacker静态能力 CantAttackUnlessRememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf901",
+      "instruction": "0x1422d93f0",
+      "preview": "OnlySorcerySpeedNewTime",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf751",
+      "instruction": "0x1422d9549",
+      "preview": "DefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf751",
+      "instruction": "0x1422d9573",
+      "preview": "DefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf12f",
+      "instruction": "0x1422d95ce",
+      "preview": "ManaConversion",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd25e0",
+      "instruction": "0x1422d9638",
+      "preview": "AnyType->AnyColoAnyType->AnyType/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdcdc2",
+      "instruction": "0x1422d99c4",
+      "preview": "YouAttackingPlayer",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde227",
+      "instruction": "0x1422d99d8",
+      "preview": "OpponentCharmNum对手选的模式又带模式或选几项",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf6fe",
+      "instruction": "0x1422d9a58",
+      "preview": "ValidZonePanharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf738",
+      "instruction": "0x1422d9c11",
+      "preview": "ValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf738",
+      "instruction": "0x1422d9c65",
+      "preview": "ValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb230",
+      "instruction": "0x1422d9cd7",
+      "preview": "ion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOppo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb240",
+      "instruction": "0x1422d9cdf",
+      "preview": "Player.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85770",
+      "instruction": "0x1422da1ac",
+      "preview": "RememberedPlayerNamedByRemembereriggerRememberedIsTriggerRemembeNotChosenEvenOddcmcNotChosenEvenThisTargetedPlayThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDela",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb310",
+      "instruction": "0x1422da1ef",
+      "preview": "yer.IsRememberedPlayer.IsRemembehantedControlleramageAsUnblockedAssignCombatDamaStack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb320",
+      "instruction": "0x1422da1f7",
+      "preview": "Player.IsRemembehantedControlleramageAsUnblockedAssignCombatDamaStack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb330",
+      "instruction": "0x1422da21b",
+      "preview": "hantedControlleramageAsUnblockedAssignCombatDamaStack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd20e0",
+      "instruction": "0x1422da223",
+      "preview": "EnchantedControlthSharedCardTypeRememberedWithShana.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb2f0",
+      "instruction": "0x1422da294",
+      "preview": "tive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb300",
+      "instruction": "0x1422da29c",
+      "preview": "Remembered.NonAcyer.IsRememberedPlayer.IsRemembehantedControlleramageAsUnblockedAssignCombatDamaStack,BattlefielBattlefield,Stack",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf641",
+      "instruction": "0x1422da68b",
+      "preview": "DamageDone,DamageDoneOnce,DamageDealtOnce,DamageAllSpellCast,SpellCopy,SpellCastOrCopy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf60d",
+      "instruction": "0x1422da6fe",
+      "preview": "Attacks,AttackersDeclared,AttackersDeclaredOneTargetDamageDone,DamageDoneOnce,DamageDealtOnce,DamageAllSpellCast,SpellCopy,SpellCastOrCopy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde471",
+      "instruction": "0x1422da73d",
+      "preview": "PlayerTurnOpponentTurnActivationChooseEachClericRogueWarriorWizard",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb270",
+      "instruction": "0x1422da83e",
+      "preview": "eOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb280",
+      "instruction": "0x1422da846",
+      "preview": "DamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.NotedDefenderOpponent.NotedDetive",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf674",
+      "instruction": "0x1422da865",
+      "preview": "SpellCast,SpellCopy,SpellCastOrCopy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf31b",
+      "instruction": "0x1422daa61",
+      "preview": "Caster进攻费用不只是法术力RememberingAttacker静态能力 CantAttackUnlessRememberingAttacker 的 X",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdea02",
+      "instruction": "0x1422db191",
+      "preview": "CounterTypeCounterNumEachExistingCounterNumValue",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf46b",
+      "instruction": "0x1422db2db",
+      "preview": "ValidModeValidTrigger",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf474",
+      "instruction": "0x1422db301",
+      "preview": "ValidTrigger",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf46b",
+      "instruction": "0x1422db35a",
+      "preview": "ValidModeValidTrigger",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb210",
+      "instruction": "0x1422db3a9",
+      "preview": "e,ChangesZoneAllChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdb220",
+      "instruction": "0x1422db3b1",
+      "preview": "ChangesZone,Chanion Counters.RADPlayer.Condition.VenturedThisTur+VenturedThisTureOnce,DamageDoneDamageDoneOnce,DIgnoreLegendRulePlayerMustAttackCanAttackIfHasteCanBlockIfShadownt.N",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf5c7",
+      "instruction": "0x1422db468",
+      "preview": "ManaConvert 缺 ManaConversion->",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf560",
+      "instruction": "0x1422db5b9",
+      "preview": "阻挡费用不只是法术力AttackerTapPowerValue 缺 ValueSaddleStation",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf89a",
+      "instruction": "0x1422db8c9",
+      "preview": "MinLimitActivations 缺 MinLimitInvertValidSource+inZoneBattlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf8a2",
+      "instruction": "0x1422db9ba",
+      "preview": "Activations 缺 MinLimitInvertValidSource+inZoneBattlefield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422dbbf7",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf300",
+      "instruction": "0x1422dbcab",
+      "preview": "ValidSource",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf6b6",
+      "instruction": "0x1422dbd2d",
+      "preview": "ValidTurnedValidActivatorPanharmonicon 的牌手写了两种CombatDamageValidZonePanharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouIn",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422dbe79",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3f8",
+      "instruction": "0x1422dbec5",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cd25f0",
+      "instruction": "0x1422dbfcc",
+      "preview": "AnyType->AnyType/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf248",
+      "instruction": "0x1422dc5c9",
+      "preview": "Target静态能力 CantAttackAddKeywordYouCtrl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf707",
+      "instruction": "0x1422dc6f4",
+      "preview": "Panharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf463",
+      "instruction": "0x1422dcdb1",
+      "preview": "ManaTypeValidModeValidTrigger",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3f8",
+      "instruction": "0x1422dcf93",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf3ee",
+      "instruction": "0x1422dd1d3",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf474",
+      "instruction": "0x1422dd628",
+      "preview": "ValidTrigger",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf6c1",
+      "instruction": "0x1422dd729",
+      "preview": "ValidActivatorPanharmonicon 的牌手写了两种CombatDamageValidZonePanharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirec",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf6cf",
+      "instruction": "0x1422dd807",
+      "preview": "Panharmonicon 的牌手写了两种CombatDamageValidZonePanharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85710",
+      "instruction": "0x1422dd8e1",
+      "preview": "ll.MayPlaySourceSpell.MayPlaySouDown",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85720",
+      "instruction": "0x1422dd8e9",
+      "preview": "Spell.MayPlaySouDown",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85710",
+      "instruction": "0x1422dd9c3",
+      "preview": "ll.MayPlaySourceSpell.MayPlaySouDown",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c85720",
+      "instruction": "0x1422dd9cb",
+      "preview": "Spell.MayPlaySouDown",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cde8a6",
+      "instruction": "0x1422ddc9a",
+      "preview": "OptionalRestRandomOrderDigNumDigMultiple 的 ChooseAmount／ChosenZone 不成对Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | RaiseCost$ 2 | Affected$ Card.IsRe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf6f2",
+      "instruction": "0x1422de019",
+      "preview": "CombatDamageValidZonePanharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf6fe",
+      "instruction": "0x1422de19c",
+      "preview": "ValidZonePanharmonicon 的起因写了好几种MaxBlockersValidDefenderMaxAttackersDefenderNotNearestToYouInChosenDirection刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf779",
+      "instruction": "0x1422de3e9",
+      "preview": "刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cdf779",
+      "instruction": "0x1422de407",
+      "preview": "刚判过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "timeout"
+}

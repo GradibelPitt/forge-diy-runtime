@@ -1,0 +1,61 @@
+{
+  "va": "0x14209ec80",
+  "rva": 34204800,
+  "endRva": 34206031,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14209ec80.asm",
+  "assemblySha256": "d908060b44ab2b4cf044e0e7914a9b66a823b4dcf0eb0b7a2e62bb8577ce2fe9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc3388",
+      "instruction": "0x14209eca9",
+      "preview": "CalcKeywordNAddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc3394",
+      "instruction": "0x14209ecda",
+      "preview": "AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc33a2",
+      "instruction": "0x14209ed61",
+      "preview": ":NProtection from EachCMCAmongDefinedKeywordDefinedProtection from NotCommanderColorIDUpkeepMain2",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc3394",
+      "instruction": "0x14209ed86",
+      "preview": "AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc3394",
+      "instruction": "0x14209ee29",
+      "preview": "AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc33a4",
+      "instruction": "0x14209eefa",
+      "preview": "Protection from EachCMCAmongDefinedKeywordDefinedProtection from NotCommanderColorIDUpkeepMain2",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc3394",
+      "instruction": "0x14209ef9d",
+      "preview": "AddKeyword",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cc33c7",
+      "instruction": "0x14209efd8",
+      "preview": "KeywordDefinedProtection from NotCommanderColorIDUpkeepMain2",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

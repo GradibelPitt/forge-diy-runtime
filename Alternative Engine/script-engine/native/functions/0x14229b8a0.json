@@ -1,0 +1,25 @@
+{
+  "va": "0x14229b8a0",
+  "rva": 36288672,
+  "endRva": 36291359,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/cost/mod.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14229b8a0.asm",
+  "assemblySha256": "ff5174aa36544b9a13dbe60b1203b4bbf27fe1fbc685d3c7e8acc368de350299",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cdcf23",
+      "instruction": "0x14229c304",
+      "preview": "刚查过",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14229b8a0.c",
+  "pseudocodeSha256": "b65d2865f9a835e8e11427fd726e2382df8df14c642f310d233e7290990815c6",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
+}

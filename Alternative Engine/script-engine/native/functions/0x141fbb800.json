@@ -1,0 +1,19 @@
+{
+  "va": "0x141fbb800",
+  "rva": 33273856,
+  "endRva": 33273955,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fbb800.asm",
+  "assemblySha256": "1e6ff6fda21549e49ae32b0d01627ae131929d17fc5cb0c4b4384c258c6aeee9",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb9f4c",
+      "instruction": "0x141fbb821",
+      "preview": "PumpAll 缺 ValidCardsRevealTgtChoose 没有目标You",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

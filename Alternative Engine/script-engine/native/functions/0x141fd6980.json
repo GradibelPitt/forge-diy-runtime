@@ -1,0 +1,961 @@
+{
+  "va": "0x141fd6980",
+  "rva": 33384832,
+  "endRva": 33405225,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x141fd6980.asm",
+  "assemblySha256": "446f3e151b43a38e0c8709962802c0d4dff0d78e5740bd8924231d1fdaed982e",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cb88a0",
+      "instruction": "0x141fd6b84",
+      "preview": "tProminentColor MostProminentColKeywordLandwalk:hasKeywordLandwahasKeywordEnchant:",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb88b0",
+      "instruction": "0x141fd6b8c",
+      "preview": "MostProminentColKeywordLandwalk:hasKeywordLandwahasKeywordEnchant:",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb88c0",
+      "instruction": "0x141fd6fbc",
+      "preview": "KeywordLandwalk:hasKeywordLandwahasKeywordEnchant:",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb88d0",
+      "instruction": "0x141fd6fc4",
+      "preview": "hasKeywordLandwahasKeywordEnchant:",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb88e0",
+      "instruction": "0x141fd6fec",
+      "preview": "hasKeywordEnchant:",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbacc6",
+      "instruction": "0x141fd76ce",
+      "preview": "NotDefinedReplacedSimultaneousETB+",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8940",
+      "instruction": "0x141fd7760",
+      "preview": "edValidThisTurn blockedValidThisByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8950",
+      "instruction": "0x141fd7768",
+      "preview": "blockedValidThisByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8960",
+      "instruction": "0x141fd7792",
+      "preview": "ByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8970",
+      "instruction": "0x141fd779a",
+      "preview": "blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8900",
+      "instruction": "0x141fd7834",
+      "preview": "dTypesWithOther sharesAllCardTypReceiveCounters canReceiveCounteedValidThisTurn blockedValidThisByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTa",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8910",
+      "instruction": "0x141fd783c",
+      "preview": "sharesAllCardTypReceiveCounters canReceiveCounteedValidThisTurn blockedValidThisByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8920",
+      "instruction": "0x141fd7862",
+      "preview": "ReceiveCounters canReceiveCounteedValidThisTurn blockedValidThisByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8930",
+      "instruction": "0x141fd786a",
+      "preview": "canReceiveCounteedValidThisTurn blockedValidThisByValidThisTurn blockedByValidThackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8980",
+      "instruction": "0x141fd78b7",
+      "preview": "ackedThisCombat tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c835e0",
+      "instruction": "0x141fd78bf",
+      "preview": "attackedThisCombblockingRememberth",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8990",
+      "instruction": "0x141fd78f7",
+      "preview": "tDamageThisTurn dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89a0",
+      "instruction": "0x141fd78ff",
+      "preview": "dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89b0",
+      "instruction": "0x141fd792c",
+      "preview": "IsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89d0",
+      "instruction": "0x141fd79a2",
+      "preview": "eceivedThisTurn_countersReceivedManaFromTreasureManaFromArtifactEquippedByValid ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89e0",
+      "instruction": "0x141fd79aa",
+      "preview": "countersReceivedManaFromTreasureManaFromArtifactEquippedByValid ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a10",
+      "instruction": "0x141fd7c90",
+      "preview": "EquippedByValid ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a20",
+      "instruction": "0x141fd7ce3",
+      "preview": "ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9d31",
+      "instruction": "0x141fd7f91",
+      "preview": "Creature ControlledBy ParentTargetControlledBy ParentTargetedControllerControlledBy TargetedOrControllerRemoveCounterAll 缺 ValidCardsEachDamage 对自己缺 ValidCardsParentTarge",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbadff",
+      "instruction": "0x141fd8018",
+      "preview": "WarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c83470",
+      "instruction": "0x141fd80c8",
+      "preview": "SharesColorWith greatestToughnesActivatedAbilityhasNonManaActivaBySourceThisTurnblockedBySourceThasABasicLandTypDiscardedThisTurblockedRemembereblockedThisCombaTriggeredAttackeTrig",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbadee",
+      "instruction": "0x141fd82cc",
+      "preview": "AtLeastAsManyLandWarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a50",
+      "instruction": "0x141fd83f5",
+      "preview": "sColorWithOther SharesColorWithOthOther ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a60",
+      "instruction": "0x141fd83fd",
+      "preview": "SharesColorWithOthOther ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a70",
+      "instruction": "0x141fd8436",
+      "preview": "thOther ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c83460",
+      "instruction": "0x141fd843e",
+      "preview": "sharesCardTypeWiSharesColorWith greatestToughnesActivatedAbilityhasNonManaActivaBySourceThisTurnblockedBySourceThasABasicLandTypDiscardedThisTurblockedRemembereblockedThisCombaTrig",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a80",
+      "instruction": "0x141fd8488",
+      "preview": "sharesOwnerWith sControllerWith sharesControllertureTypeWithAll dTypeWith Valid sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a90",
+      "instruction": "0x141fd84af",
+      "preview": "sControllerWith sharesControllertureTypeWithAll dTypeWith Valid sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8aa0",
+      "instruction": "0x141fd84b7",
+      "preview": "sharesControllertureTypeWithAll dTypeWith Valid sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ab0",
+      "instruction": "0x141fd84e7",
+      "preview": "tureTypeWithAll dTypeWith Valid sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c83440",
+      "instruction": "0x141fd84ef",
+      "preview": "sharesCreatureTyresCardTypeWith sharesCardTypeWiSharesColorWith greatestToughnesActivatedAbilityhasNonManaActivaBySourceThisTurnblockedBySourceThasABasicLandTypDiscardedThisTurbloc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbade2",
+      "instruction": "0x141fd862d",
+      "preview": "ControlledByAtLeastAsManyLandWarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbae09",
+      "instruction": "0x141fd86c5",
+      "preview": "MayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbae03",
+      "instruction": "0x141fd86e2",
+      "preview": "MayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89f0",
+      "instruction": "0x141fd8708",
+      "preview": "ManaFromTreasureManaFromArtifactEquippedByValid ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8a00",
+      "instruction": "0x141fd8726",
+      "preview": "ManaFromArtifactEquippedByValid ControllerControls",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbadc2",
+      "instruction": "0x141fd8988",
+      "preview": "ActivationColorTriggeredProducedControlledByAtLeastAsManyLandWarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb90a0",
+      "instruction": "0x141fd8a7f",
+      "preview": "NonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ac0",
+      "instruction": "0x141fd8ae6",
+      "preview": "dTypeWith Valid sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ad0",
+      "instruction": "0x141fd8aee",
+      "preview": "sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b00",
+      "instruction": "0x141fd8b60",
+      "preview": "lor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b10",
+      "instruction": "0x141fd8b68",
+      "preview": "canProduceManaCoility Activated.hasAbility Activated",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b40",
+      "instruction": "0x141fd8b93",
+      "preview": "ated",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b30",
+      "instruction": "0x141fd8b9b",
+      "preview": "hasAbility Activated",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ae0",
+      "instruction": "0x141fd8f47",
+      "preview": "otShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8af0",
+      "instruction": "0x141fd8f4f",
+      "preview": "doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b00",
+      "instruction": "0x141fd8f7a",
+      "preview": "lor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b10",
+      "instruction": "0x141fd8f82",
+      "preview": "canProduceManaCoility Activated.hasAbility Activated",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b20",
+      "instruction": "0x141fd8fad",
+      "preview": "ility Activated.hasAbility Activated",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b30",
+      "instruction": "0x141fd8fb5",
+      "preview": "hasAbility Activated",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbadd1",
+      "instruction": "0x141fd90c6",
+      "preview": "TriggeredProducedControlledByAtLeastAsManyLandWarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\players_defined.rs",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb88b0",
+      "instruction": "0x141fd90f7",
+      "preview": "MostProminentColKeywordLandwalk:hasKeywordLandwahasKeywordEnchant:",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbadb2",
+      "instruction": "0x141fd9125",
+      "preview": "LastCastThisTurnActivationColorTriggeredProducedControlledByAtLeastAsManyLandWarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\filter\\",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142776f30",
+      "instruction": "0x141fd94d4",
+      "preview": "ield",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b50",
+      "instruction": "0x141fd94dc",
+      "preview": "OtherYourBattleftrlForRememberedDefenderCtrlForRgEnchantedPlayerNameNotEnchantinThisGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbada0",
+      "instruction": "0x141fd9598",
+      "preview": "Permanent.nonTokenLastCastThisTurnActivationColorTriggeredProducedControlledByAtLeastAsManyLandWarpMayhemMayPlaySource & C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engin",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad5d",
+      "instruction": "0x141fd96c4",
+      "preview": "YourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad49",
+      "instruction": "0x141fd96e9",
+      "preview": "OtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad6a",
+      "instruction": "0x141fd970e",
+      "preview": "ThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbacf0",
+      "instruction": "0x141fd98b9",
+      "preview": "otherAbilitySameColorblockedOrBeenBlockedSinceYourLastUpkeepAffinitySelfRememberedExhaustOtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9010",
+      "instruction": "0x141fd9962",
+      "preview": "ngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasA",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c83570",
+      "instruction": "0x141fd996a",
+      "preview": "attackingYouOrYogreatestCMC_CreablockedBySourceLKI",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9020",
+      "instruction": "0x141fd9995",
+      "preview": "gCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9030",
+      "instruction": "0x141fd999d",
+      "preview": "blockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9040",
+      "instruction": "0x141fd99c8",
+      "preview": "nEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9050",
+      "instruction": "0x141fd99d0",
+      "preview": "ThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9060",
+      "instruction": "0x141fd99fb",
+      "preview": "pellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9070",
+      "instruction": "0x141fd9a03",
+      "preview": "SecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9080",
+      "instruction": "0x141fd9a2e",
+      "preview": "ermanentTypeWithsharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9090",
+      "instruction": "0x141fd9a36",
+      "preview": "sharesPermanentTNonLandPermanentackedThisTurnBy wasAttackedThisTLostLifeThisTurn ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d40",
+      "instruction": "0x141fd9a70",
+      "preview": "kButNotAttackingcouldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOut",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d50",
+      "instruction": "0x141fd9a78",
+      "preview": "couldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphas",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d60",
+      "instruction": "0x141fd9aa3",
+      "preview": "SameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWith",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d70",
+      "instruction": "0x141fd9aab",
+      "preview": "canProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwith",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b80",
+      "instruction": "0x141fd9ae5",
+      "preview": "gEnchantedPlayerNameNotEnchantinThisGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b90",
+      "instruction": "0x141fd9aed",
+      "preview": "NameNotEnchantinThisGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c10",
+      "instruction": "0x141fd9b27",
+      "preview": "ngAssignmentWithsharesBlockingAsssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c20",
+      "instruction": "0x141fd9b2f",
+      "preview": "sharesBlockingAsssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c30",
+      "instruction": "0x141fd9b5a",
+      "preview": "ssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c40",
+      "instruction": "0x141fd9b62",
+      "preview": "wasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ef0",
+      "instruction": "0x141fd9b9f",
+      "preview": "CanBeSacrificedBcanBeTurnedFaceUpowerNOTbasePoweblockingEnchanteblockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcoun",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f00",
+      "instruction": "0x141fd9bd5",
+      "preview": "canBeTurnedFaceUpowerNOTbasePoweblockingEnchanteblockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f10",
+      "instruction": "0x141fd9c0b",
+      "preview": "powerNOTbasePoweblockingEnchanteblockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerbloc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f20",
+      "instruction": "0x141fd9c41",
+      "preview": "blockingEnchanteblockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddeal",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f30",
+      "instruction": "0x141fd9c77",
+      "preview": "blockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnte",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f40",
+      "instruction": "0x141fd9cad",
+      "preview": "yardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanE",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f50",
+      "instruction": "0x141fd9ce3",
+      "preview": "phasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanB",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f60",
+      "instruction": "0x141fd9d19",
+      "preview": "ChosenColorSourcackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYo",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8fa0",
+      "instruction": "0x141fd9d4c",
+      "preview": "counters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThis",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8fb0",
+      "instruction": "0x141fd9d6e",
+      "preview": "powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpell",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8fc0",
+      "instruction": "0x141fd9d90",
+      "preview": "blockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSeco",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8fd0",
+      "instruction": "0x141fd9db2",
+      "preview": "dealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTerma",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8fe0",
+      "instruction": "0x141fd9dd4",
+      "preview": "EnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithshar",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ff0",
+      "instruction": "0x141fd9df6",
+      "preview": "CanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonL",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb9000",
+      "instruction": "0x141fd9e18",
+      "preview": "CanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnteredYourHandThisTurnEnteredYpellCastThisTurnSecondSpellCastTermanentTypeWithsharesPermanentTNonLandPermanentacke",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c00",
+      "instruction": "0x141fd9e4e",
+      "preview": "DamageThisCombatngAssignmentWithsharesBlockingAsssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89a0",
+      "instruction": "0x141fd9e56",
+      "preview": "dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ba0",
+      "instruction": "0x141fd9ea0",
+      "preview": "ThisGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8bb0",
+      "instruction": "0x141fd9ea8",
+      "preview": "wasDealtDamageByLastTurn",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8bc0",
+      "instruction": "0x141fd9ed3",
+      "preview": "LastTurn",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8bd0",
+      "instruction": "0x141fd9edb",
+      "preview": "EnteredSinceYouratDamageThisTurnwasDealtNonCombaDamageThisCombatngAssignmentWithsharesBlockingAsssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad2c",
+      "instruction": "0x141fd9f87",
+      "preview": "AffinitySelfRememberedExhaustOtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8be0",
+      "instruction": "0x141fda3b0",
+      "preview": "atDamageThisTurnwasDealtNonCombaDamageThisCombatngAssignmentWithsharesBlockingAsssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8bf0",
+      "instruction": "0x141fda3b8",
+      "preview": "wasDealtNonCombaDamageThisCombatngAssignmentWithsharesBlockingAsssDamageThisTurnwasDealtExcessDacker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f70",
+      "instruction": "0x141fda626",
+      "preview": "ackersBandedWithattackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCre",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f80",
+      "instruction": "0x141fda62e",
+      "preview": "attackersBandedWlowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlbloc",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8dd0",
+      "instruction": "0x141fda659",
+      "preview": "estRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8f90",
+      "instruction": "0x141fda661",
+      "preview": "lowestRememberedcounters_GE_M1M1powerGTbasePowerblockingEquippeddealtDamagetoAnyEnteredUnder YouCanEnchantSourceCanBeEnchantedByngYouOrYourPWLKIgCreatureYouCtrlblockingCreaturenEnt",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c50",
+      "instruction": "0x141fda6a2",
+      "preview": "cker",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c60",
+      "instruction": "0x141fda6aa",
+      "preview": "LessPowerThanBloTurn",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c70",
+      "instruction": "0x141fda6d5",
+      "preview": "Turn",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c80",
+      "instruction": "0x141fda6dd",
+      "preview": "turnedFaceUpThisedBy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8c90",
+      "instruction": "0x141fda708",
+      "preview": "edBy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ca0",
+      "instruction": "0x141fda710",
+      "preview": "CanEnchantEquippered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8cb0",
+      "instruction": "0x141fda73b",
+      "preview": "ered",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8cc0",
+      "instruction": "0x141fda743",
+      "preview": "CanEnchantRemembWith",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8cd0",
+      "instruction": "0x141fda76e",
+      "preview": "With",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8aa0",
+      "instruction": "0x141fda776",
+      "preview": "sharesControllertureTypeWithAll dTypeWith Valid sharesLandTypeWiotShareNameWith doesNotShareNamelor ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ce0",
+      "instruction": "0x141fda7a1",
+      "preview": "Type",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8cf0",
+      "instruction": "0x141fda7a9",
+      "preview": "hasANonBasicLandCrewedBySourceThedBattleThisTurnattackedBattleThombatDamagetoAnykButNotAttackingcouldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCower",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c834b0",
+      "instruction": "0x141fda8ba",
+      "preview": "BySourceThisTurnblockedBySourceThasABasicLandTypDiscardedThisTurblockedRemembereblockedThisCombaTriggeredAttackeTriggeredDefenderiggeredAttackerblockingTriggereTopGraveyardCreaurPW",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d00",
+      "instruction": "0x141fda8c2",
+      "preview": "CrewedBySourceThedBattleThisTurnattackedBattleThombatDamagetoAnykButNotAttackingcouldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLess",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d10",
+      "instruction": "0x141fda8ed",
+      "preview": "edBattleThisTurnattackedBattleThombatDamagetoAnykButNotAttackingcouldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d20",
+      "instruction": "0x141fda8f5",
+      "preview": "attackedBattleThombatDamagetoAnykButNotAttackingcouldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestR",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d30",
+      "instruction": "0x141fda920",
+      "preview": "ombatDamagetoAnykButNotAttackingcouldAttackButNoSameManaTypeWithcanProduceSameMaAttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgrea",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb89a0",
+      "instruction": "0x141fda928",
+      "preview": "dealtCombatDamagIsTargeting Valid ",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d80",
+      "instruction": "0x141fdaa9a",
+      "preview": "AttackThisCombathadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurv",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8d90",
+      "instruction": "0x141fdaaa2",
+      "preview": "hadToAttackThisCowerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotE",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8da0",
+      "instruction": "0x141fdaacd",
+      "preview": "owerThanAttackerLessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCost",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8db0",
+      "instruction": "0x141fdaad5",
+      "preview": "LessPowerThanAttisBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142c836d0",
+      "instruction": "0x141fdab00",
+      "preview": "ckedByRememberedblockedByRemembeackedYouThisTurnattackedYouThisTwasDealtDamageThWithEffectSourceExiledWithEffectdTheTurnUntappedstartedTheTurnUnTriggeredBlockerCopy",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8dc0",
+      "instruction": "0x141fdab08",
+      "preview": "isBlockedByRememestRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8dd0",
+      "instruction": "0x141fdab33",
+      "preview": "estRememberedCMCgreatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8de0",
+      "instruction": "0x141fdab3b",
+      "preview": "greatestRememberdOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8df0",
+      "instruction": "0x141fdab66",
+      "preview": "dOutIsRememberedphasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e00",
+      "instruction": "0x141fdab6e",
+      "preview": "phasedOutIsRememWithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e10",
+      "instruction": "0x141fdac3e",
+      "preview": "WithDifferentNamwithSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e20",
+      "instruction": "0x141fdac74",
+      "preview": "withSharedCardTysurveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e30",
+      "instruction": "0x141fdacaa",
+      "preview": "surveilledThisTunotExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e40",
+      "instruction": "0x141fdace0",
+      "preview": "notExertedThisTuCostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e50",
+      "instruction": "0x141fdad16",
+      "preview": "CostsPhyrexianMana",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e70",
+      "instruction": "0x141fdad4c",
+      "preview": "EnchantedPlayerCtr",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8e90",
+      "instruction": "0x141fdad82",
+      "preview": "EnchantedPlayerOwn",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8eb0",
+      "instruction": "0x141fdadb8",
+      "preview": "OwnerDoesntControl",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ed0",
+      "instruction": "0x141fdadee",
+      "preview": "phasedOutPermaneIsTargeting PlayCanBeSacrificedBcanBeTurnedFaceUpowerNOTbasePoweblockingEnchanteblockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithatta",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8ee0",
+      "instruction": "0x141fdae24",
+      "preview": "IsTargeting PlayCanBeSacrificedBcanBeTurnedFaceUpowerNOTbasePoweblockingEnchanteblockedByThisTuryardGreatestPowephasedOutCreaturChosenColorSourcackersBandedWithattackersBandedWlowe",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b60",
+      "instruction": "0x141fdae66",
+      "preview": "trlForRememberedDefenderCtrlForRgEnchantedPlayerNameNotEnchantinThisGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cb8b70",
+      "instruction": "0x141fdae6e",
+      "preview": "DefenderCtrlForRgEnchantedPlayerNameNotEnchantinThisGame",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbacc6",
+      "instruction": "0x141fdae94",
+      "preview": "NotDefinedReplacedSimultaneousETB+",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad05",
+      "instruction": "0x141fdaee1",
+      "preview": "blockedOrBeenBlockedSinceYourLastUpkeepAffinitySelfRememberedExhaustOtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad42",
+      "instruction": "0x141fdafdc",
+      "preview": "ExhaustOtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad38",
+      "instruction": "0x141fdb484",
+      "preview": "RememberedExhaustOtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    },
+    {
+      "dataVa": "0x142cbad34",
+      "instruction": "0x141fdb793",
+      "preview": "SelfRememberedExhaustOtherYourBattlefieldYourGraveyardThisTurnCast",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}

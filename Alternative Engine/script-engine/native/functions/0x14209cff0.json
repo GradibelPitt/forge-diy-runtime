@@ -1,0 +1,25 @@
+{
+  "va": "0x14209cff0",
+  "rva": 34197488,
+  "endRva": 34202065,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [
+    "crates/mtg-engine/src/card/salvage.rs"
+  ],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x14209cff0.asm",
+  "assemblySha256": "2c3446c86eb849451340156c8dfe0170162d49997c528638a75b77ae18243cd3",
+  "literalReferences": [
+    {
+      "dataVa": "0x142cc2920",
+      "instruction": "0x14209de30",
+      "preview": "\nAdvisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbaria",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocode": "functions/0x14209cff0.c",
+  "pseudocodeSha256": "7f0ef5fb5446ad094dbd368aab395efd796e24d89da215cc66eb389b9f347b55",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
+}

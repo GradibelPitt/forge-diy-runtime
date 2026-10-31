@@ -1,0 +1,19 @@
+{
+  "va": "0x142770300",
+  "rva": 41353984,
+  "endRva": 41354016,
+  "boundary": "pe_runtime_function",
+  "sourcePathHints": [],
+  "sourceAssociation": "Observed reference may belong to inlined code",
+  "assembly": "functions/0x142770300.asm",
+  "assemblySha256": "09d0d628e4ed065a718faebf0c6bfa4961763705c262990b181c448f70b9a49f",
+  "literalReferences": [
+    {
+      "dataVa": "0x142d1a1b0",
+      "instruction": "0x14277030d",
+      "preview": "attempt to divide by zeroattempt to calculate the remainder with a divisor of zeroattempt to divide with overflowattempt to calculate the remainder with overflowassertion failed: !",
+      "note": "bounded data preview, not proof of string length or semantic ownership"
+    }
+  ],
+  "pseudocodeStatus": "not_decompiled"
+}
