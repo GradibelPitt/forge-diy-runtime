@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0034156,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141b4b690.asm",
   "assemblySha256": "7b9fc3e885664e577e3ca2af31688394cf6138e41466a4f86c7a71e6c1c45021",
   "literalReferences": [
     {
-      "dataVa": "0x142c904bd",
       "instruction": "0x141b4b6bc",
-      "preview": "不能用这种方式施放这张牌没有增幅没有这个可选费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c904bd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "不能用这种方式施放这张牌没有增幅没有这个可选费用"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141b4b690.c",
+  "pseudocodeSha256": "0ac85aa7988a7ea3407c20509e1b8d4dc6d1d4d9046fc79fd9559705ffd4d055",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

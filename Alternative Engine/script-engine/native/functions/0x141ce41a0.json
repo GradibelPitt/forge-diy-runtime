@@ -9,14 +9,20 @@
     "crates/mtg-engine/src/statics/zone_chars.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141ce41a0: process: timeout\n",
+    "seconds": 12.2666675,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141ce41a0.asm",
   "assemblySha256": "2bcf6c546ac037d5926a0054f610d55262ea066757008a36b112c95848fd2433",
   "literalReferences": [
     {
-      "dataVa": "0x142cf7fdd",
       "instruction": "0x141ce655b",
-      "preview": "capacity overflow",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf7fdd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "capacity overflow"
     }
   ],
   "pseudocodeStatus": "timeout"

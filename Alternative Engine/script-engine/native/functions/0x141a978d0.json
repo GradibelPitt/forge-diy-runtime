@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0309071,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a978d0.asm",
   "assemblySha256": "8a0d97a3cb104242c68bf1b804af6d8e69f10b3f65bc5a7681234e6be75d49d1",
   "literalReferences": [
     {
-      "dataVa": "0x142c880b0",
       "instruction": "0x141a97b64",
-      "preview": "子异能自己取目标ChoiceTitleChoiceDescValidDescListTitleChoiceTitleAppendRevealTitleChoicePromptShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c880b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "子异能自己取目标ChoiceTitleChoiceDescValidDescListTitleChoiceTitleAppendRevealTitleChoicePromptShuffle"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a978d0.c",
+  "pseudocodeSha256": "5880e17f3eb45852be436f784f0f68c6b43d3a27aba46e67c8b5f625dddd5cfb",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

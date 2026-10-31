@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/rng.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0034285
+  },
   "assembly": "functions/0x141a27760.asm",
   "assemblySha256": "62e148d8667fa2d0891817676539e0ce9105b9096d41ddc0e10f2dc29f7eb5f5",
   "literalReferences": [
     {
-      "dataVa": "0x142c83d30",
       "instruction": "0x141a277e0",
-      "preview": "assertion failed: n > 0",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83d30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "assertion failed: n > 0"
     }
   ],
   "pseudocode": "functions/0x141a27760.c",

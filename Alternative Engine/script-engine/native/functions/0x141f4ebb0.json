@@ -7,110 +7,116 @@
     "crates/mtg-engine/src/card/keyword/rare.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.5758538,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f4ebb0.asm",
   "assemblySha256": "56dce24953a451fdd9279f53bd4c269a1e6c71359cddf8f0843c29a080715e03",
   "literalReferences": [
     {
-      "dataVa": "0x142ca6e86",
       "instruction": "0x141f4ee82",
-      "preview": "狂欢／分级不是模式咒语",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6e86",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "狂欢／分级不是模式咒语"
     },
     {
-      "dataVa": "0x142ca8537",
       "instruction": "0x141f4f905",
-      "preview": "ModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8537",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeCostGiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca91d4",
       "instruction": "0x141f50586",
-      "preview": "Announce",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca91d4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Announce"
     },
     {
-      "dataVa": "0x142ca6eba",
       "instruction": "0x141f5078d",
-      "preview": "模式缺 ModeCostConditionZone$ Stack | ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6eba",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "模式缺 ModeCostConditionZone$ Stack | ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0"
     },
     {
-      "dataVa": "0x142ca6fc8",
       "instruction": "0x141f50a73",
-      "preview": "Condition$ GiftPromisedConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+bargainedCondition$ BargainedConditionPresent$ Card.bargained",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6fc8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Condition$ GiftPromisedConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+bargainedCondition$ BargainedConditionPresent$ Card.bargained"
     },
     {
-      "dataVa": "0x142ca7027",
       "instruction": "0x141f50a7a",
-      "preview": "Condition$ BargainedConditionPresent$ Card.bargained",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7027",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Condition$ BargainedConditionPresent$ Card.bargained"
     },
     {
-      "dataVa": "0x142ca8507",
       "instruction": "0x141f50cf9",
-      "preview": "PromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8507",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca84fe",
       "instruction": "0x141f50d17",
-      "preview": "bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca84fe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca6f0b",
       "instruction": "0x141f50d3e",
-      "preview": "ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6ecc",
-      "instruction": "0x141f50d63",
-      "preview": "ConditionZone$ Stack | ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNot",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6f6e",
-      "instruction": "0x141f50d8e",
-      "preview": "Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCompare$ EQ0Condition$ GiftPromisedConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+barg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6f33",
-      "instruction": "0x141f50dba",
-      "preview": "ConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCompare$ EQ0Condition$ GiftPromisedConditio",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6f88",
-      "instruction": "0x141f50dfa",
-      "preview": "ConditionPresent$ Card.Self+PromisedGift | ConditionCompare$ EQ0Condition$ GiftPromisedConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+bargainedCondition$ BargainedC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ca6f0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCom"
+    },
+    {
+      "instruction": "0x141f50d63",
+      "dataVa": "0x142ca6ecc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionZone$ Stack | ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNot"
+    },
+    {
+      "instruction": "0x141f50d8e",
+      "dataVa": "0x142ca6f6e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCompare$ EQ0Condition$ GiftPromisedConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+barg"
+    },
+    {
+      "instruction": "0x141f50dba",
+      "dataVa": "0x142ca6f33",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCompare$ EQ0Condition$ GiftPromisedConditio"
+    },
+    {
+      "instruction": "0x141f50dfa",
+      "dataVa": "0x142ca6f88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.Self+PromisedGift | ConditionCompare$ EQ0Condition$ GiftPromisedConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+bargainedCondition$ BargainedC"
+    },
+    {
       "instruction": "0x141f50e3d",
-      "preview": "ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6f0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.Self+PromisedGiftConditionPresent$ Card.PromisedGift | ConditionCompare$ EQ0Condition$ GiftNotPromisedConditionPresent$ Card.Self+PromisedGift | ConditionCom"
     },
     {
-      "dataVa": "0x142ca6fdf",
       "instruction": "0x141f50e7d",
-      "preview": "ConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+bargainedCondition$ BargainedConditionPresent$ Card.bargained",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6fdf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.PromisedGiftConditionPresent$ Card.Self+bargainedCondition$ BargainedConditionPresent$ Card.bargained"
     },
     {
-      "dataVa": "0x142ca7002",
       "instruction": "0x141f50ec0",
-      "preview": "ConditionPresent$ Card.Self+bargainedCondition$ BargainedConditionPresent$ Card.bargained",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7002",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.Self+bargainedCondition$ BargainedConditionPresent$ Card.bargained"
     },
     {
-      "dataVa": "0x142ca703b",
       "instruction": "0x141f50f03",
-      "preview": "ConditionPresent$ Card.bargained",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca703b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresent$ Card.bargained"
     }
   ],
   "pseudocode": "functions/0x141f4ebb0.c",

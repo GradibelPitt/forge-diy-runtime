@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0441387
+  },
   "assembly": "functions/0x1424ea5c0.asm",
   "assemblySha256": "8d31fbd86c47c9f4873d50f78f71baa7a5803a161cab6eeff506676788c27891",
   "literalReferences": [
     {
-      "dataVa": "0x142c8734c",
       "instruction": "0x1424ea8a8",
-      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8734c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c8734c",
       "instruction": "0x1424eaa9c",
-      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8734c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     }
   ],
   "pseudocode": "functions/0x1424ea5c0.c",

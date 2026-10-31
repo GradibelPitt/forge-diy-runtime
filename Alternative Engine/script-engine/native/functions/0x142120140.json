@@ -7,14 +7,20 @@
     "crates/mtg-engine/src/card/effects/params.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0101241,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142120140.asm",
   "assemblySha256": "2d9e5b058dd21db100c077fd7f8325d91f6f4fcc2308d21c694f4b3735459a62",
   "literalReferences": [
     {
-      "dataVa": "0x142cc19fe",
       "instruction": "0x142120214",
-      "preview": "eMaySkipName:Variant:UniversesWithin:FlavorName:txtC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\mana_produce.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc19fe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eMaySkipName:Variant:UniversesWithin:FlavorName:txtC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\mana_produce.rs"
     }
   ],
   "pseudocode": "functions/0x142120140.c",

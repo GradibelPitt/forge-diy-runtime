@@ -7,56 +7,61 @@
     "src/stack_text.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0868226
+  },
   "assembly": "functions/0x1403834d0.asm",
   "assemblySha256": "d8196013d6ec99ecb727a454153ac74b3e3acbd3374f5c5810afdfe063f0cad2",
   "literalReferences": [
     {
-      "dataVa": "0x1427976e0",
       "instruction": "0x14038356e",
-      "preview": "\\nTriggerDescription$每当Whenever 时，, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427976e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "\\nTriggerDescription$每当Whenever 时，, "
     },
     {
-      "dataVa": "0x142797728",
       "instruction": "0x14038388e",
-      "preview": "CARDNAME如果你如此作，则If you do, | Triggers$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797728",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CARDNAME如果你如此作，则If you do, | Triggers$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x142796cc8",
       "instruction": "0x140383d88",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142796cc8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
+    },
+    {
       "instruction": "0x140383da1",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796cc8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     },
     {
-      "dataVa": "0x142796c98",
       "instruction": "0x140383db3",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142796cb0",
-      "instruction": "0x140383dc5",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142796cb0",
-      "instruction": "0x140383dde",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142796c98",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
+    },
+    {
+      "instruction": "0x140383dc5",
+      "dataVa": "0x142796cb0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
+    },
+    {
+      "instruction": "0x140383dde",
+      "dataVa": "0x142796cb0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
+    },
+    {
       "instruction": "0x140383e02",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796c98",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     }
   ],
   "pseudocode": "functions/0x1403834d0.c",

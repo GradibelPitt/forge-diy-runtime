@@ -9,20 +9,25 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.087402
+  },
   "assembly": "functions/0x140078e70.asm",
   "assemblySha256": "4e38e0fde388318a8697d723d57cc4744bf911dfdc01da9271bca73f6dd126a5",
   "literalReferences": [
     {
-      "dataVa": "0x142771bd8",
       "instruction": "0x1400796c7",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142771bd8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142771bd8",
       "instruction": "0x1400796fd",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142771bd8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x140078e70.c",

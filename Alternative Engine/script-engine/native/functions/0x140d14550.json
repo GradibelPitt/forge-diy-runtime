@@ -7,6 +7,12 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompile_failed",
+    "diagnostic": "\nLow-level Error: Free varnode has multiple descendants",
+    "seconds": 0.012928,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140d14550.asm",
   "assemblySha256": "fa5e53b966a92cf3b163fb299420e3c741406ddd39dbccee241137681db5024d",
   "literalReferences": [],

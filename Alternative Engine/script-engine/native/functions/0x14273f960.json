@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0100412,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14273f960.asm",
   "assemblySha256": "5d3fd82ca733a23c4dd057e3d31a4ef75fe3c9f960ffeeaeecd724ab917b38b9",
   "literalReferences": [
     {
-      "dataVa": "0x142d1988a",
       "instruction": "0x14273f97b",
-      "preview": "000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d1988a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889"
     },
     {
-      "dataVa": "0x142d1988a",
       "instruction": "0x14273f9fe",
-      "preview": "000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d1988a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889"
     },
     {
-      "dataVa": "0x142d1988a",
       "instruction": "0x14273fa22",
-      "preview": "000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d1988a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14273f960.c",
+  "pseudocodeSha256": "ff1a5815beadb761f7e10aec0ee63dbddcf93afa16a50b4ecd4cf791a5a41df4",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

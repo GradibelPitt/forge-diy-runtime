@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.004107,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422979f0.asm",
   "assemblySha256": "6c608b162be28671081b941ca0558ea492dd66a7c22104ced1d2fe892645721b",
   "literalReferences": [
     {
-      "dataVa": "0x142cdc7ff",
       "instruction": "0x142297a11",
-      "preview": "ed 缺 ValidCardCantPayLife 缺 ValidPlayerMustAttack 缺 ValidCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc7ff",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ed 缺 ValidCardCantPayLife 缺 ValidPlayerMustAttack 缺 ValidCreature"
     },
     {
-      "dataVa": "0x142cdc7f4",
       "instruction": "0x142297a1c",
-      "preview": "geAsUnblocked 缺 ValidCardCantPayLife 缺 ValidPlayerMustAttack 缺 ValidCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc7f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "geAsUnblocked 缺 ValidCardCantPayLife 缺 ValidPlayerMustAttack 缺 ValidCreature"
     },
     {
-      "dataVa": "0x142cdc7e4",
       "instruction": "0x142297a27",
-      "preview": "AssignCombatDamageAsUnblocked 缺 ValidCardCantPayLife 缺 ValidPlayerMustAttack 缺 ValidCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc7e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AssignCombatDamageAsUnblocked 缺 ValidCardCantPayLife 缺 ValidPlayerMustAttack 缺 ValidCreature"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422979f0.c",
+  "pseudocodeSha256": "c92b4b0d8f86c770478ab952f73a0e4b2326d42590b6ba962d6bb53a81d4d698",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

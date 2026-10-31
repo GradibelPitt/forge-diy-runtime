@@ -7,62 +7,68 @@
     "crates/mtg-engine/src/card/effects/params.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1337526,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421120a0.asm",
   "assemblySha256": "e96df438d9c570467102d8ba9db9486969ee3aeceae3de59865540f781f008ad",
   "literalReferences": [
     {
-      "dataVa": "0x142c854b0",
       "instruction": "0x142112335",
-      "preview": "DifferentResultsAME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c854b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentResultsAME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary"
     },
     {
-      "dataVa": "0x142cc9218",
       "instruction": "0x1421124f6",
-      "preview": "StoreSVarEvenOddResults$DifferentResults$NoteDoubles$MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9218",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StoreSVarEvenOddResults$DifferentResults$NoteDoubles$MaxRollsResults$"
     },
     {
-      "dataVa": "0x142cc9221",
       "instruction": "0x142112905",
-      "preview": "EvenOddResults$DifferentResults$NoteDoubles$MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9221",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EvenOddResults$DifferentResults$NoteDoubles$MaxRollsResults$"
     },
     {
-      "dataVa": "0x142cc9230",
       "instruction": "0x142112b70",
-      "preview": "DifferentResults$NoteDoubles$MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9241",
-      "instruction": "0x142112bb4",
-      "preview": "NoteDoubles$MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cc9230",
-      "instruction": "0x142112c1c",
-      "preview": "DifferentResults$NoteDoubles$MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentResults$NoteDoubles$MaxRollsResults$"
     },
     {
+      "instruction": "0x142112bb4",
       "dataVa": "0x142cc9241",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteDoubles$MaxRollsResults$"
+    },
+    {
+      "instruction": "0x142112c1c",
+      "dataVa": "0x142cc9230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentResults$NoteDoubles$MaxRollsResults$"
+    },
+    {
       "instruction": "0x142112c33",
-      "preview": "NoteDoubles$MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9241",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteDoubles$MaxRollsResults$"
     },
     {
-      "dataVa": "0x142cc924d",
       "instruction": "0x142112c4a",
-      "preview": "MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc924d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MaxRollsResults$"
     },
     {
-      "dataVa": "0x142cc924d",
       "instruction": "0x142112c82",
-      "preview": "MaxRollsResults$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc924d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MaxRollsResults$"
     }
   ],
   "pseudocode": "functions/0x1421120a0.c",

@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0152635,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140301390.asm",
   "assemblySha256": "849f43d4994ab47c4651becffc48b0e13ed88b09eb3b4d98f6521fd8a37bfeba",
   "literalReferences": [
     {
-      "dataVa": "0x14278cdde",
       "instruction": "0x140301461",
-      "preview": "先点一个生物Click a creature first、, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cdde",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "先点一个生物Click a creature first、, "
     },
     {
-      "dataVa": "0x14278cdf0",
       "instruction": "0x140301468",
-      "preview": "Click a creature first、, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cdf0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Click a creature first、, "
     },
     {
-      "dataVa": "0x14278cdbe",
       "instruction": "0x1403015da",
-      "preview": "没有这个选项No such option先点一个生物Click a creature first、, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cdbe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没有这个选项No such option先点一个生物Click a creature first、, "
     },
     {
-      "dataVa": "0x14278cdd0",
       "instruction": "0x1403015e1",
-      "preview": "No such option先点一个生物Click a creature first、, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cdd0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "No such option先点一个生物Click a creature first、, "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140301390.c",
+  "pseudocodeSha256": "7233c035aaadcc58e2d6bcec646cb8a9cb736dfd37cfbf9bf9a97a4d0a142560",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0247761,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140382b40.asm",
   "assemblySha256": "d4480b99918eaeb08ba265a860b875fadc03c56a6ee272d00315054a8ec14b25",
   "literalReferences": [
     {
-      "dataVa": "0x1427976e2",
       "instruction": "0x140382c34",
-      "preview": "TriggerDescription$每当Whenever 时，, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427976e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggerDescription$每当Whenever 时，, "
     },
     {
-      "dataVa": "0x1427976f5",
       "instruction": "0x140382d60",
-      "preview": "每当Whenever 时，, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427976f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "每当Whenever 时，, "
     },
     {
-      "dataVa": "0x1427976fb",
       "instruction": "0x140382d67",
-      "preview": "Whenever 时，, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427976fb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Whenever 时，, "
     },
     {
-      "dataVa": "0x142797704",
       "instruction": "0x140382db6",
-      "preview": "时，, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797704",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "时，, "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140382b40.c",
+  "pseudocodeSha256": "172340b29eb1999fd3438f30f68cf04ed1fbaa3412c2cd1dfd6cc1a12fb2dc56",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

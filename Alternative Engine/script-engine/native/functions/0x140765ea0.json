@@ -9,109 +9,115 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 12.0213563,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140765ea0.asm",
   "assemblySha256": "b43a5f61db6a79d875e12f62f45add6d3e7ad9cc90643cca6031e0b059f93503",
   "literalReferences": [
     {
-      "dataVa": "0x1427cbe90",
       "instruction": "0x140766384",
-      "preview": "ostPaid.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cbe90",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ostPaid."
     },
     {
-      "dataVa": "0x1427cbea0",
       "instruction": "0x14076638c",
-      "preview": "OptionalGenericC/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cbea0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalGenericC/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     },
     {
-      "dataVa": "0x1427cc098",
       "instruction": "0x140766421",
-      "preview": "abilitySubAbilityChoicesCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc098",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "abilitySubAbilityChoicesCost"
     },
     {
-      "dataVa": "0x1427cc284",
       "instruction": "0x14076646a",
-      "preview": "spellabilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc284",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "spellabilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x1427cc280",
       "instruction": "0x14076648c",
-      "preview": "landspellabilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc280",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "landspellabilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x1427cc289",
       "instruction": "0x140766608",
-      "preview": "abilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cbfc8",
-      "instruction": "0x14076682f",
-      "preview": "PermanentNoncreaturePermanentCreaturesvars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cbfdc",
-      "instruction": "0x140766836",
-      "preview": "PermanentCreaturesvars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cc300",
-      "instruction": "0x140766e8b",
-      "preview": "ValidTgtsCreature.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cbfed",
-      "instruction": "0x1407678fd",
-      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cc309",
-      "instruction": "0x14076843c",
-      "preview": "Creature.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cc3b7",
-      "instruction": "0x140768e8f",
-      "preview": "keywords None",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cc3b0",
-      "instruction": "0x14076902d",
-      "preview": "staticskeywords None",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427cc289",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "abilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
+    },
+    {
+      "instruction": "0x14076682f",
+      "dataVa": "0x1427cbfc8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PermanentNoncreaturePermanentCreaturesvars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
+    },
+    {
+      "instruction": "0x140766836",
+      "dataVa": "0x1427cbfdc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PermanentCreaturesvars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
+    },
+    {
+      "instruction": "0x140766e8b",
+      "dataVa": "0x1427cc300",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgtsCreature.YouCtrl"
+    },
+    {
+      "instruction": "0x1407678fd",
+      "dataVa": "0x1427cbfed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
+    },
+    {
+      "instruction": "0x14076843c",
+      "dataVa": "0x1427cc309",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.YouCtrl"
+    },
+    {
+      "instruction": "0x140768e8f",
+      "dataVa": "0x1427cc3b7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "keywords None"
+    },
+    {
+      "instruction": "0x14076902d",
+      "dataVa": "0x1427cc3b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "staticskeywords None"
+    },
+    {
       "instruction": "0x1407692d3",
-      "preview": "abilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc289",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "abilitiesC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x1427cc3bf",
       "instruction": "0x14076983a",
-      "preview": " None",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc3bf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " None"
     },
     {
-      "dataVa": "0x1427cc31d",
       "instruction": "0x140769e3e",
-      "preview": "entryeot",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc31d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "entryeot"
     }
   ],
   "pseudocode": "functions/0x140765ea0.c",
   "pseudocodeSha256": "07f0ce601842fda45a10946cbc81420f642781832f42ce5018cc3efca19cba83",
-  "pseudocodeOrigin": "expanded source/callee recovery",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
   "controlFlowWarning": false,
   "typePropagationWarning": true
 }

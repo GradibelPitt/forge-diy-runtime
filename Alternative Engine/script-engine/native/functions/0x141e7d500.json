@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/keywords/banding.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0923784
+  },
   "assembly": "functions/0x141e7d500.asm",
   "assemblySha256": "dd208ac17708faaddd2884ab4d2e2c13a6d0aba23c60409ccc96b6f6beb8bdd5",
   "literalReferences": [
     {
-      "dataVa": "0x142c9c240",
       "instruction": "0x141e7d5ed",
-      "preview": "要分配战斗伤害和鸣只能横置你的一个未横置生物施放不横置生物作费用协力要横置总力量够的未横置生物连用要选全部模式不能连结这",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9c240",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "要分配战斗伤害和鸣只能横置你的一个未横置生物施放不横置生物作费用协力要横置总力量够的未横置生物连用要选全部模式不能连结这"
     }
   ],
   "pseudocode": "functions/0x141e7d500.c",

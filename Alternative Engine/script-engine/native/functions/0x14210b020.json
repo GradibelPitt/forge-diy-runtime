@@ -7,57 +7,67 @@
     "crates/mtg-engine/src/interact.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 5.8550837,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14210b020.asm",
   "assemblySha256": "59d123466b3a80f20585cdeca4f362c5fab58380c519c28955c0ac42c1979f98",
   "literalReferences": [
     {
-      "dataVa": "0x142ca6910",
       "instruction": "0x14210b0f3",
-      "preview": "AI:RemoveDeck:Alinternal error: entered unreachable code/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\sys\\thread_local\\native\\lazy.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6910",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AI:RemoveDeck:Alinternal error: entered unreachable code/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\sys\\thread_local\\native\\lazy.rs"
     },
     {
-      "dataVa": "0x142cc82c0",
       "instruction": "0x14210c94b",
-      "preview": "ernateMode:ModalAlternateMode:MoMode:DoubleFacedAlternateMode:Do",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc82c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ernateMode:ModalAlternateMode:MoMode:DoubleFacedAlternateMode:Do"
     },
     {
-      "dataVa": "0x142cc82d0",
       "instruction": "0x14210c953",
-      "preview": "AlternateMode:MoMode:DoubleFacedAlternateMode:Do",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc82d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlternateMode:MoMode:DoubleFacedAlternateMode:Do"
     },
     {
-      "dataVa": "0x142cc82e0",
       "instruction": "0x14210c95b",
-      "preview": "Mode:DoubleFacedAlternateMode:Do",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc82e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode:DoubleFacedAlternateMode:Do"
     },
     {
-      "dataVa": "0x142cc82f0",
       "instruction": "0x14210c964",
-      "preview": "AlternateMode:Do",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc82f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlternateMode:Do"
     },
     {
-      "dataVa": "0x142cc17c0",
       "instruction": "0x14210cc0b",
-      "preview": "ernateMode:SplitAlternateMode:Spom colorsYouCtrl from cardColors/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc17c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ernateMode:SplitAlternateMode:Spom colorsYouCtrl from cardColors/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs"
     },
     {
-      "dataVa": "0x142cc17d0",
       "instruction": "0x14210cc13",
-      "preview": "AlternateMode:Spom colorsYouCtrl from cardColors/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc17d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlternateMode:Spom colorsYouCtrl from cardColors/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs"
     },
     {
-      "dataVa": "0x142cc99a0",
       "instruction": "0x14210cdf4",
-      "preview": " // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc99a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs"
     }
   ],
-  "pseudocodeStatus": "timeout"
+  "pseudocode": "functions/0x14210b020.c",
+  "pseudocodeSha256": "3fdfce6e9b723020eef1a28aff48cf401948dac5405eb3f3e25798ec809ce183",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0038281,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a5d420.asm",
   "assemblySha256": "1055dcf72b8537f4ad0c9cad1fa6b647ce9875511fdae0dd0b81eb5d33153f41",
   "literalReferences": [
     {
-      "dataVa": "0x142c862ce",
       "instruction": "0x141a5d42a",
-      "preview": "Type$ AdditiveForEachStoreSVar 缺 SVarStoreSVar 缺 ExpressionDB$ TokenLifePaidAmountRepeat 的衍生物",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c862ce",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Type$ AdditiveForEachStoreSVar 缺 SVarStoreSVar 缺 ExpressionDB$ TokenLifePaidAmountRepeat 的衍生物"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a5d420.c",
+  "pseudocodeSha256": "b732dec48be3a7e6ce02951a7b799577ef60e16824b54c4b577432d3adbdcb67",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -8,14 +8,19 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.4961784
+  },
   "assembly": "functions/0x141e43eb0.asm",
   "assemblySha256": "0269ed88dc99384b29aa9004788e8976217039b8845a5d581ea757c47bcc0746",
   "literalReferences": [
     {
-      "dataVa": "0x142c99fc0",
       "instruction": "0x141e457e9",
-      "preview": "刚判过C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\objects\\extra_phase.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99fc0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "刚判过C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\objects\\extra_phase.rs"
     }
   ],
   "pseudocode": "functions/0x141e43eb0.c",

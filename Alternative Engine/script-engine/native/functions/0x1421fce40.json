@@ -5,69 +5,79 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0675943,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421fce40.asm",
   "assemblySha256": "b26f5f4aa306adcec6d8694762a3718ad13ee52713b74fce19aaedf4beaa674c",
   "literalReferences": [
     {
-      "dataVa": "0x142cd3301",
       "instruction": "0x1421fce8c",
-      "preview": "AnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurvei",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3301",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurvei"
     },
     {
-      "dataVa": "0x142cd3be2",
       "instruction": "0x1421fcf83",
-      "preview": "RememberRevealedCostRevealValidPrecostDesc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3be2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberRevealedCostRevealValidPrecostDesc"
     },
     {
-      "dataVa": "0x142cd2d19",
       "instruction": "0x1421fd065",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cd3bf6",
       "instruction": "0x1421fd167",
-      "preview": "RevealValidPrecostDesc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3bf6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RevealValidPrecostDesc"
     },
     {
-      "dataVa": "0x142cd341a",
       "instruction": "0x1421fd1c8",
-      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd341a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
     },
     {
-      "dataVa": "0x142cd278b",
       "instruction": "0x1421fd261",
-      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd278b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs"
     },
     {
-      "dataVa": "0x142cd2fae",
       "instruction": "0x1421fd2b9",
-      "preview": "ProducedChosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2fae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ProducedChosen"
     },
     {
-      "dataVa": "0x142cd3073",
       "instruction": "0x1421fd2ef",
-      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3073",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
     },
     {
-      "dataVa": "0x142cd1d20",
       "instruction": "0x1421fd34b",
-      "preview": "Remembered$AmounlActivationZone$AdditionalActiva",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd1d20",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Remembered$AmounlActivationZone$AdditionalActiva"
     },
     {
-      "dataVa": "0x142cd3cf0",
       "instruction": "0x1421fd397",
-      "preview": "/Twice | STDiscardMessageInstantSpeedXTapCreaturesForManaManaRestriction",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3cf0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "/Twice | STDiscardMessageInstantSpeedXTapCreaturesForManaManaRestriction"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421fce40.c",
+  "pseudocodeSha256": "64301fcef08e04b903ff700114ba3eb8d1aa0785d7bd4cb02d7d9c90c157fa39",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/faces.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0058074
+  },
   "assembly": "functions/0x142368e40.asm",
   "assemblySha256": "2df83861adb663ee07c3ce211dfd28d76218641540bc8293824137a74ff0c3ba",
   "literalReferences": [
     {
-      "dataVa": "0x142ce5f50",
       "instruction": "0x142368e73",
-      "preview": "Name:\nManaCost:no cost\nTypes:Creature\nPT:2/2固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5f50",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Name:\nManaCost:no cost\nTypes:Creature\nPT:2/2固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs"
     },
     {
-      "dataVa": "0x142ce5f7c",
       "instruction": "0x142368f2b",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5f7c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs"
     }
   ],
   "pseudocode": "functions/0x142368e40.c",

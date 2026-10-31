@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2102022
+  },
   "assembly": "functions/0x140ed2540.asm",
   "assemblySha256": "ed4cada316890c6a4bdb51d55962d45bbc9aa6f6ac394e69043817f250bfda68",
   "literalReferences": [
     {
-      "dataVa": "0x1428233e0",
       "instruction": "0x140ed3f6f",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428233e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     }
   ],
   "pseudocode": "functions/0x140ed2540.c",

@@ -8,152 +8,157 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.1140559
+  },
   "assembly": "functions/0x140972090.asm",
   "assemblySha256": "2364ad4949484353d5bc7177db236f76722344ccbbccb16b239016366f236dad",
   "literalReferences": [
     {
-      "dataVa": "0x1427f0e08",
       "instruction": "0x1409736f0",
-      "preview": "whostop: truekeywords: [landwalk: truefirstsecond",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0e0b",
-      "instruction": "0x140973749",
-      "preview": "stop: truekeywords: [landwalk: truefirstsecond",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0e2e",
-      "instruction": "0x1409739f4",
-      "preview": "firstsecond",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0e33",
-      "instruction": "0x140973a1a",
-      "preview": "second",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0cc8",
-      "instruction": "0x1409742a2",
-      "preview": "choose: Some((on_entry: falsetargetType(Creature)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0a1e",
-      "instruction": "0x1409742c4",
-      "preview": "ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0cd6",
-      "instruction": "0x1409742e4",
-      "preview": "on_entry: falsetargetType(Creature)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0ce5",
-      "instruction": "0x14097430d",
-      "preview": "targetType(Creature)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0ceb",
-      "instruction": "0x1409743ec",
-      "preview": "Type(Creature)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0a08",
-      "instruction": "0x1409745f3",
-      "preview": "controller: Some(who: ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427f0a19",
-      "instruction": "0x14097461c",
-      "preview": "who: ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427f0e08",
-      "instruction": "0x1409746bd",
-      "preview": "whostop: truekeywords: [landwalk: truefirstsecond",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "whostop: truekeywords: [landwalk: truefirstsecond"
     },
     {
-      "dataVa": "0x1427f0e15",
-      "instruction": "0x140974881",
-      "preview": "keywords: [landwalk: truefirstsecond",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x140973749",
+      "dataVa": "0x1427f0e0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "stop: truekeywords: [landwalk: truefirstsecond"
     },
     {
-      "dataVa": "0x1427f011a",
-      "instruction": "0x1409748d5",
-      "preview": "], landwalk: ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1409739f4",
+      "dataVa": "0x1427f0e2e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "firstsecond"
     },
     {
+      "instruction": "0x140973a1a",
+      "dataVa": "0x1427f0e33",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "second"
+    },
+    {
+      "instruction": "0x1409742a2",
+      "dataVa": "0x1427f0cc8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "choose: Some((on_entry: falsetargetType(Creature)"
+    },
+    {
+      "instruction": "0x1409742c4",
       "dataVa": "0x1427f0a1e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
+    },
+    {
+      "instruction": "0x1409742e4",
+      "dataVa": "0x1427f0cd6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "on_entry: falsetargetType(Creature)"
+    },
+    {
+      "instruction": "0x14097430d",
+      "dataVa": "0x1427f0ce5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "targetType(Creature)"
+    },
+    {
+      "instruction": "0x1409743ec",
+      "dataVa": "0x1427f0ceb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Type(Creature)"
+    },
+    {
+      "instruction": "0x1409745f3",
+      "dataVa": "0x1427f0a08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "controller: Some(who: ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
+    },
+    {
+      "instruction": "0x14097461c",
+      "dataVa": "0x1427f0a19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "who: ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
+    },
+    {
+      "instruction": "0x1409746bd",
+      "dataVa": "0x1427f0e08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "whostop: truekeywords: [landwalk: truefirstsecond"
+    },
+    {
+      "instruction": "0x140974881",
+      "dataVa": "0x1427f0e15",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "keywords: [landwalk: truefirstsecond"
+    },
+    {
+      "instruction": "0x1409748d5",
+      "dataVa": "0x1427f011a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "], landwalk: "
+    },
+    {
       "instruction": "0x140974958",
-      "preview": "ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a1e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExiledWithSourcePaid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0a49",
       "instruction": "0x140974993",
-      "preview": "non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a49",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0a5c",
       "instruction": "0x1409749b4",
-      "preview": "at_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a5c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "at_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0a69",
       "instruction": "0x1409749d8",
-      "preview": "pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a69",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0a7e",
       "instruction": "0x1409749fc",
-      "preview": " power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a7e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0a8b",
       "instruction": "0x140974a21",
-      "preview": " toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a8b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0e20",
       "instruction": "0x140974d4e",
-      "preview": "landwalk: truefirstsecond",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0e20",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "landwalk: truefirstsecond"
     },
     {
-      "dataVa": "0x1427f0a2e",
       "instruction": "0x14097571d",
-      "preview": "Paid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a2e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Paid(Exiled)Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f0a3a",
       "instruction": "0x1409759f4",
-      "preview": "Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f0a3a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(Remembered)non_legendary: trueat_eot: Some(pump_keywords: [Haste power: Some( toughness: Some(Card.ExiledWithSource"
     },
     {
-      "dataVa": "0x1427f010c",
       "instruction": "0x140975be9",
-      "preview": "PickedManaCost], landwalk: ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f010c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PickedManaCost], landwalk: "
     }
   ],
   "pseudocode": "functions/0x140972090.c",

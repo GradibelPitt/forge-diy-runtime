@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/casting/variable_costs.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0024274
+  },
   "assembly": "functions/0x142386990.asm",
   "assemblySha256": "8a0ce7d497dd51a48369463307c32c3d460f0868f3482e7756d7430e7e1c3a21",
   "literalReferences": [
     {
-      "dataVa": "0x142ceb638",
       "instruction": "0x142386c15",
-      "preview": "CardC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\variable_costs.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb638",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\variable_costs.rs"
     },
     {
-      "dataVa": "0x142ce5f7c",
       "instruction": "0x1423873ae",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5f7c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs"
     }
   ],
   "pseudocode": "functions/0x142386990.c",

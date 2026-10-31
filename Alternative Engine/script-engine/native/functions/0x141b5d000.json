@@ -9,32 +9,38 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141b5d000: process: timeout\n",
+    "seconds": 12.2583814,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141b5d000.asm",
   "assemblySha256": "dc0821ddc65e0228e73a4e5e1588e76686ac57762db1a6f17a334883cdd76d90",
   "literalReferences": [
     {
-      "dataVa": "0x142c8754b",
       "instruction": "0x141b5d283",
-      "preview": "ALTY",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8754b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ALTY"
     },
     {
-      "dataVa": "0x142c87548",
       "instruction": "0x141b5d28c",
-      "preview": "LOYALTY",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87548",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LOYALTY"
     },
     {
-      "dataVa": "0x142c87643",
       "instruction": "0x141b5d5b3",
-      "preview": "ENSERoom // ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87643",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ENSERoom // "
     },
     {
-      "dataVa": "0x142c87640",
       "instruction": "0x141b5d5bc",
-      "preview": "DEFENSERoom // ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87640",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DEFENSERoom // "
     }
   ],
   "pseudocodeStatus": "timeout"

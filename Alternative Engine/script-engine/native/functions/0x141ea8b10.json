@@ -5,8 +5,14 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141ea8b10: process: timeout\n",
+    "seconds": 2.0181279,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141ea8b10.asm",
   "assemblySha256": "a760820fc7a5006943a59f3bc72dd240ee69f859d8ac74d3c13146fbf7d6a067",
   "literalReferences": [],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocodeStatus": "timeout"
 }

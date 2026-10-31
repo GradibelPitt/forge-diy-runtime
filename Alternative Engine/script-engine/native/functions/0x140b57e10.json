@@ -9,44 +9,49 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3451633
+  },
   "assembly": "functions/0x140b57e10.asm",
   "assemblySha256": "25172e9685afa753ba45f5bc7503eda20b4bc8d58db87e6ff423bcb80d327a57",
   "literalReferences": [
     {
-      "dataVa": "0x1427feb7d",
       "instruction": "0x140b57ea3",
-      "preview": "Type(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427feb8b",
-      "instruction": "0x140b57ec8",
-      "preview": "Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427fea60",
-      "instruction": "0x140b58660",
-      "preview": "Type(Artifact)Play(Defined$ EnchantedControllerDefined$ EnchantedPlayerDefined$ Player.EnchantedByDefined$ Enchanted$ Tap $ Destroy $ Sacrifice $ PutCounterM1M1$ LoseLife$ DealDama",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427fea60",
-      "instruction": "0x140b5878f",
-      "preview": "Type(Artifact)Play(Defined$ EnchantedControllerDefined$ EnchantedPlayerDefined$ Player.EnchantedByDefined$ Enchanted$ Tap $ Destroy $ Sacrifice $ PutCounterM1M1$ LoseLife$ DealDama",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427feb48",
-      "instruction": "0x140b59417",
-      "preview": "OpponentYouControlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427feb7d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Type(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
+    },
+    {
+      "instruction": "0x140b57ec8",
+      "dataVa": "0x1427feb8b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
+    },
+    {
+      "instruction": "0x140b58660",
+      "dataVa": "0x1427fea60",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Type(Artifact)Play(Defined$ EnchantedControllerDefined$ EnchantedPlayerDefined$ Player.EnchantedByDefined$ Enchanted$ Tap $ Destroy $ Sacrifice $ PutCounterM1M1$ LoseLife$ DealDama"
+    },
+    {
+      "instruction": "0x140b5878f",
+      "dataVa": "0x1427fea60",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Type(Artifact)Play(Defined$ EnchantedControllerDefined$ EnchantedPlayerDefined$ Player.EnchantedByDefined$ Enchanted$ Tap $ Destroy $ Sacrifice $ PutCounterM1M1$ LoseLife$ DealDama"
+    },
+    {
+      "instruction": "0x140b59417",
+      "dataVa": "0x1427feb48",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentYouControlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
+    },
+    {
       "instruction": "0x140b59980",
-      "preview": "Type(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427feb7d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Type(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
     }
   ],
   "pseudocode": "functions/0x140b57e10.c",

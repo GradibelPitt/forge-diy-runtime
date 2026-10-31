@@ -8,38 +8,43 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0039307
+  },
   "assembly": "functions/0x141c475a0.asm",
   "assemblySha256": "725ac43af08e2ac8ffede2d5fe315ee3162339841dbab7b038a292accd3ef699",
   "literalReferences": [
     {
-      "dataVa": "0x142c8ffc0",
       "instruction": "0x141c47a01",
-      "preview": "PlainsIslandSwampMountainForest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8ffc0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlainsIslandSwampMountainForest"
     },
     {
-      "dataVa": "0x142c8ffc6",
       "instruction": "0x141c47a14",
-      "preview": "IslandSwampMountainForest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8ffc6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IslandSwampMountainForest"
     },
     {
-      "dataVa": "0x142c8ffcc",
       "instruction": "0x141c47a27",
-      "preview": "SwampMountainForest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8ffcc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SwampMountainForest"
     },
     {
-      "dataVa": "0x142c8ffd1",
       "instruction": "0x141c47a3a",
-      "preview": "MountainForest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8ffd1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MountainForest"
     },
     {
-      "dataVa": "0x142c8ffd9",
       "instruction": "0x141c47a4d",
-      "preview": "Forest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8ffd9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Forest"
     }
   ],
   "pseudocode": "functions/0x141c475a0.c",

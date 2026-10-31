@@ -7,32 +7,38 @@
     "crates/mtg-engine/src/card/dialect.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1140662,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a5f530.asm",
   "assemblySha256": "8a6d15075e45e779d37a6a5c06862df94fcaf242d4c388033340e80754e6fb3f",
   "literalReferences": [
     {
-      "dataVa": "0x142c878dd",
       "instruction": "0x141a5f578",
-      "preview": "CardManaValue",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c86e58",
-      "instruction": "0x141a5f597",
-      "preview": "CardManaCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c878dd",
-      "instruction": "0x141a5f5b5",
-      "preview": "CardManaValue",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardManaValue"
     },
     {
-      "dataVa": "0x142771590",
+      "instruction": "0x141a5f597",
+      "dataVa": "0x142c86e58",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardManaCost"
+    },
+    {
+      "instruction": "0x141a5f5b5",
+      "dataVa": "0x142c878dd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardManaValue"
+    },
+    {
       "instruction": "0x141a5f74e",
-      "preview": "        ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142771590",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "        "
     }
   ],
   "pseudocode": "functions/0x141a5f530.c",

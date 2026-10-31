@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/mana.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2713532
+  },
   "assembly": "functions/0x1402b48a0.asm",
   "assemblySha256": "0997f506ac3fb4658ecbbfe763dedc6914fef577ab2c1875db37966659b74dc0",
   "literalReferences": [
     {
-      "dataVa": "0x1427887a4",
       "instruction": "0x1402b5013",
-      "preview": " ／宿主精英徽记先锋邪计时空异象地城诡局树林山脉沼泽海岛平原部族地战役长效世界雪境传奇基本src\\printing.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427887a4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " ／宿主精英徽记先锋邪计时空异象地城诡局树林山脉沼泽海岛平原部族地战役长效世界雪境传奇基本src\\printing.rs"
     }
   ],
   "pseudocode": "functions/0x1402b48a0.c",

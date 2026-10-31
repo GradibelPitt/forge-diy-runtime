@@ -7,32 +7,37 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1124605
+  },
   "assembly": "functions/0x141baa4b0.asm",
   "assemblySha256": "145ec774ac604165af0c7635bc44979ce458349f760b3bf48c6dd791f78d5e1c",
   "literalReferences": [
     {
-      "dataVa": "0x142c93720",
       "instruction": "0x141baadad",
-      "preview": "中途问题缺回放起点C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\suspend.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c93720",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "中途问题缺回放起点C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\suspend.rs"
     },
     {
-      "dataVa": "0x142c933a0",
       "instruction": "0x141bab993",
-      "preview": "收一步·备份收一步·照做收一步·推进",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c933a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "收一步·备份收一步·照做收一步·推进"
     },
     {
-      "dataVa": "0x142c933b1",
       "instruction": "0x141babab4",
-      "preview": "收一步·照做收一步·推进",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c933b1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "收一步·照做收一步·推进"
     },
     {
-      "dataVa": "0x142c933c2",
       "instruction": "0x141babc52",
-      "preview": "收一步·推进",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c933c2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "收一步·推进"
     }
   ],
   "pseudocode": "functions/0x141baa4b0.c",

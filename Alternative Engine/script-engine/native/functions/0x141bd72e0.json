@@ -8,20 +8,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.5025297
+  },
   "assembly": "functions/0x141bd72e0.asm",
   "assemblySha256": "914758854d1eb94d4010d578bf6ced0af4d882984272909b134908a92effc867",
   "literalReferences": [
     {
-      "dataVa": "0x142c945f7",
       "instruction": "0x141bd82b2",
-      "preview": "要先选替代效果的顺序C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\order\\library.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c945f7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "要先选替代效果的顺序C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\order\\library.rs"
     },
     {
-      "dataVa": "0x142c945d0",
       "instruction": "0x141bd909a",
-      "preview": "要把每个替代效果都排上顺序要先选替代效果的顺序C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\order\\library.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c945d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "要把每个替代效果都排上顺序要先选替代效果的顺序C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\order\\library.rs"
     }
   ],
   "pseudocode": "functions/0x141bd72e0.c",

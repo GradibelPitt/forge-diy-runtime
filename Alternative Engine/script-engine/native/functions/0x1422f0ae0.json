@@ -7,80 +7,86 @@
     "crates/mtg-engine/src/card/statics/restrictions.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.5492147,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422f0ae0.asm",
   "assemblySha256": "10494e848f29db64de252faa9969e5bc129c81f74af2f8f497bb633038b8f72b",
   "literalReferences": [
     {
-      "dataVa": "0x142c85610",
       "instruction": "0x1422f0ce5",
-      "preview": "Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85610",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142c856a0",
       "instruction": "0x1422f0d17",
-      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c856a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
+    },
+    {
       "instruction": "0x1422f0d69",
-      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c856a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
-      "dataVa": "0x142cdffeb",
       "instruction": "0x1422f0ed4",
-      "preview": "CostDesc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdb470",
-      "instruction": "0x1422f1021",
-      "preview": "card<1/CARDNAME>Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDamagePreventedOerPl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdb480",
-      "instruction": "0x1422f1029",
-      "preview": "Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDamagePreventedOerPlayerAddedAllCoun",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cdffeb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CostDesc"
+    },
+    {
+      "instruction": "0x1422f1021",
+      "dataVa": "0x142cdb470",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "card<1/CARDNAME>Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDamagePreventedOerPl"
+    },
+    {
+      "instruction": "0x1422f1029",
+      "dataVa": "0x142cdb480",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDamagePreventedOerPlayerAddedAllCoun"
+    },
+    {
       "instruction": "0x1422f1040",
-      "preview": "CostDesc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdffeb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CostDesc"
     },
     {
-      "dataVa": "0x142cdc432",
       "instruction": "0x1422f125f",
-      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc432",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectZoneAddSVarIsPresentCheckSVarSVarCompareCondition"
     },
     {
-      "dataVa": "0x142cdb490",
       "instruction": "0x1422f142b",
-      "preview": "Count$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDamagePreventedOerPlayerAddedAllCounterPlayerAddkerU",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb490",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDamagePreventedOerPlayerAddedAllCounterPlayerAddkerU"
     },
     {
-      "dataVa": "0x142cdb420",
       "instruction": "0x1422f1480",
-      "preview": "nvertedManaCost>PayLife<ConverteCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb420",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "nvertedManaCost>PayLife<ConverteCost"
     },
     {
-      "dataVa": "0x142cdb430",
       "instruction": "0x1422f1488",
-      "preview": "PayLife<ConverteCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PayLife<ConverteCost"
     },
     {
-      "dataVa": "0x142cdc0e5",
       "instruction": "0x1422f1b00",
-      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc0e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ",C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\faces.rs"
     }
   ],
   "pseudocode": "functions/0x1422f0ae0.c",

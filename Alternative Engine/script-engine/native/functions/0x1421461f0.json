@@ -5,51 +5,61 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0906307,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421461f0.asm",
   "assemblySha256": "e56e2691d6236c638852afd341674c2bc46994345d74cfd1ba87fe83a81b5c85",
   "literalReferences": [
     {
-      "dataVa": "0x142cca27b",
       "instruction": "0x142146222",
-      "preview": "PumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca27b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cca283",
       "instruction": "0x1421462da",
-      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca283",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cca724",
       "instruction": "0x142146319",
-      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca724",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
     },
     {
-      "dataVa": "0x142cca72a",
       "instruction": "0x142146430",
-      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca72a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
     },
     {
-      "dataVa": "0x142cca722",
       "instruction": "0x142146539",
-      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca722",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
     },
     {
-      "dataVa": "0x142cc9b68",
       "instruction": "0x1421466aa",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cca54d",
       "instruction": "0x142146798",
-      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca54d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421461f0.c",
+  "pseudocodeSha256": "74eea4bca667c6f9b68a994d0a674f2a1b389e3ce02861ab6b158476ebafe6a8",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

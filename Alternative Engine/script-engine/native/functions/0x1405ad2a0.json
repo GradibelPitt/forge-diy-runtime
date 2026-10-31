@@ -7,32 +7,37 @@
     "src/lasting.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.8834625
+  },
   "assembly": "functions/0x1405ad2a0.asm",
   "assemblySha256": "5dc9086fdff3dfb1d3271c94b45cd6bd5a1f86c439cd9b958199bde7caf2370b",
   "literalReferences": [
     {
-      "dataVa": "0x1427b6a80",
       "instruction": "0x1405ad2e4",
-      "preview": "、,  → ；; 再调度一次Mulligan again留手Keep",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b6a80",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "、,  → ；; 再调度一次Mulligan again留手Keep"
     },
     {
-      "dataVa": "0x1427b6a83",
       "instruction": "0x1405ad2eb",
-      "preview": ",  → ；; 再调度一次Mulligan again留手Keep",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b6a83",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ",  → ；; 再调度一次Mulligan again留手Keep"
     },
     {
-      "dataVa": "0x1427b69a0",
       "instruction": "0x1405af23d",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b69a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x1427b69a0",
       "instruction": "0x1405af27c",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b69a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x1405ad2a0.c",

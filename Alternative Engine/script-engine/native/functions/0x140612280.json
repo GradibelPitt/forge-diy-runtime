@@ -5,45 +5,55 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0031844,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140612280.asm",
   "assemblySha256": "f808c1111206a06aa0b4d778b29c4995468fd80830667e7656929ce828978fac",
   "literalReferences": [
     {
-      "dataVa": "0x1427ba0c7",
       "instruction": "0x1406122fc",
-      "preview": "| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba0c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs"
     },
     {
-      "dataVa": "0x1427ba473",
       "instruction": "0x140612308",
-      "preview": "AddReplacementEffect$AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba473",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddReplacementEffect$AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs"
     },
     {
-      "dataVa": "0x1427ba0aa",
       "instruction": "0x140612311",
-      "preview": "| Triggers$| StaticAbilities$| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba0aa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "| Triggers$| StaticAbilities$| Replacements$| Abilities$\nName:$ ConvertedManaCost$ Count$CardManaCostCARDNAMEAddAbility$imageHashsrc\\diy.rs"
     },
     {
-      "dataVa": "0x1427ba468",
       "instruction": "0x14061231d",
-      "preview": "AddTrigger$AddReplacementEffect$AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba468",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddTrigger$AddReplacementEffect$AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs"
     },
     {
-      "dataVa": "0x1427ba499",
       "instruction": "0x140612330",
-      "preview": "| staticAbilities$| SpellDescription$src\\ability_text.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba499",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "| staticAbilities$| SpellDescription$src\\ability_text.rs"
     },
     {
-      "dataVa": "0x1427ba488",
       "instruction": "0x14061233c",
-      "preview": "AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba488",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddStaticAbility$| staticAbilities$| SpellDescription$src\\ability_text.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140612280.c",
+  "pseudocodeSha256": "be0ae2b17a5b3587fb796d8622952455dc4b2b3a15f5643f61986276e73dc326",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

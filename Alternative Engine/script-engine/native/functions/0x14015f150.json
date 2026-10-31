@@ -7,14 +7,19 @@
     "src/session.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0623423
+  },
   "assembly": "functions/0x14015f150.asm",
   "assemblySha256": "8aae085c9a55fd536de1a5bf9e48557c95f61828a0037185d884aa3a222b4ea6",
   "literalReferences": [
     {
-      "dataVa": "0x1427796b0",
       "instruction": "0x14015fb68",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427796b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     }
   ],
   "pseudocode": "functions/0x14015f150.c",

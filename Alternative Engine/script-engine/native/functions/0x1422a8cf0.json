@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0120259,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422a8cf0.asm",
   "assemblySha256": "dbc60ed3d457cbcb7a11dea2521ecee74f4b564d9ef4eac6110017dcac3e4d2e",
   "literalReferences": [
     {
-      "dataVa": "0x142cdd499",
       "instruction": "0x1422a8cf9",
-      "preview": "WerewolfTransformConditionWerewolfUntransformCondition",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdd499",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WerewolfTransformConditionWerewolfUntransformCondition"
     },
     {
-      "dataVa": "0x142cdd4b3",
       "instruction": "0x1422a8dc6",
-      "preview": "WerewolfUntransformCondition",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdd4b3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WerewolfUntransformCondition"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422a8cf0.c",
+  "pseudocodeSha256": "66dc774f7378d56eaea9552b4258307b79e5d5c3a48317f1c17facc93cde9c4d",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

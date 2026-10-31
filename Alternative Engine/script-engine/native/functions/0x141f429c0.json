@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0067648
+  },
   "assembly": "functions/0x141f429c0.asm",
   "assemblySha256": "589c1dff5cec7005108ef9c56da27fe5fac91e89077dc37192b532c2d683cc26",
   "literalReferences": [
     {
-      "dataVa": "0x142d0157e",
       "instruction": "0x141f42a59",
-      "preview": "ArmyC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\params.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d0157e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ArmyC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\params.rs"
     }
   ],
   "pseudocode": "functions/0x141f429c0.c",

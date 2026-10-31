@@ -12,146 +12,152 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 28.4811824,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141dc84a0.asm",
   "assemblySha256": "3f2e135696036f52fa4f107d0e6940dff0fe9ab06ae8875b8b9af6f41e291cd2",
   "literalReferences": [
     {
-      "dataVa": "0x142c91cb0",
       "instruction": "0x141dc8e46",
-      "preview": "Creature.YouCtrl+Other",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c91cb0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.YouCtrl+Other"
     },
     {
-      "dataVa": "0x142c993f8",
       "instruction": "0x141dc943f",
-      "preview": "2C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c993f8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "2C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities.rs"
     },
     {
-      "dataVa": "0x142c99468",
       "instruction": "0x141dc9d4b",
-      "preview": "Creature.attacking+unblocked",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99468",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.attacking+unblocked"
     },
     {
-      "dataVa": "0x142c87361",
       "instruction": "0x141dcc3f1",
-      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87361",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c87365",
       "instruction": "0x141dcc3fd",
-      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87365",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dcc72b",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142c8737e",
       "instruction": "0x141dccae4",
-      "preview": "Identity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8737e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Identity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142ca7eeb",
       "instruction": "0x141dcd249",
-      "preview": "Creature固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ca7eeb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs"
+    },
+    {
       "instruction": "0x141dcd80a",
-      "preview": "Creature固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7eeb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs"
     },
     {
-      "dataVa": "0x142c91cb0",
       "instruction": "0x141dce459",
-      "preview": "Creature.YouCtrl+Other",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c96ed0",
-      "instruction": "0x141dcfc63",
-      "preview": "Land.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c87647",
-      "instruction": "0x141dd0cf3",
-      "preview": "Room // ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c90430",
-      "instruction": "0x141dd1841",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c90430",
-      "instruction": "0x141dd1942",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c91cb0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.YouCtrl+Other"
+    },
+    {
+      "instruction": "0x141dcfc63",
+      "dataVa": "0x142c96ed0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Land.YouCtrl"
+    },
+    {
+      "instruction": "0x141dd0cf3",
+      "dataVa": "0x142c87647",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Room // "
+    },
+    {
+      "instruction": "0x141dd1841",
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
+    },
+    {
+      "instruction": "0x141dd1942",
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
+    },
+    {
       "instruction": "0x141dd1d0e",
-      "preview": "Creature.YouCtrl+Other",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c91cb0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.YouCtrl+Other"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dd2501",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dd2550",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142ca7ef3",
       "instruction": "0x141dd25a0",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ca7ef3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs"
+    },
+    {
       "instruction": "0x141dd25f0",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7ef3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\abilities_more.rs"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dd29f4",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dd2b8d",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dd30a0",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141dd34ea",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     }
   ],
   "pseudocode": "functions/0x141dc84a0.c",

@@ -5,39 +5,45 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 140dcc530: process: timeout\n",
+    "seconds": 2.0157963,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140dcc530.asm",
   "assemblySha256": "ae33e2ffd26ee2cdc4328bcddae47f49bd65ec695de5e6e9d91587133387ebb5",
   "literalReferences": [
     {
-      "dataVa": "0x14281964e",
       "instruction": "0x140dcc5f0",
-      "preview": "Mem(Opponent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142819980",
-      "instruction": "0x140dcc611",
-      "preview": "TargetedCostPaidItselfC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14281964e",
-      "instruction": "0x140dcc7c0",
-      "preview": "Mem(Opponent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(Opponent"
     },
     {
+      "instruction": "0x140dcc611",
       "dataVa": "0x142819980",
-      "instruction": "0x140dcc7e1",
-      "preview": "TargetedCostPaidItselfC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetedCostPaidItselfC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x142819988",
+      "instruction": "0x140dcc7c0",
+      "dataVa": "0x14281964e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(Opponent"
+    },
+    {
+      "instruction": "0x140dcc7e1",
+      "dataVa": "0x142819980",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetedCostPaidItselfC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
+    },
+    {
       "instruction": "0x140dcc802",
-      "preview": "CostPaidItselfC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142819988",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CostPaidItselfC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocodeStatus": "timeout"
 }

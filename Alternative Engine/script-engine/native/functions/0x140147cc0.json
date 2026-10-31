@@ -7,80 +7,85 @@
     "src/session.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.1813822
+  },
   "assembly": "functions/0x140147cc0.asm",
   "assemblySha256": "cac188fd17f6c0091ec4047bdb5d35bb300e9bf4a2eca1be253e33e4dbd5fe9b",
   "literalReferences": [
     {
-      "dataVa": "0x142777417",
       "instruction": "0x140147dd5",
-      "preview": "accepttypemainCountplayer|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142777417",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "accepttypemainCountplayer|qwB"
+    },
+    {
       "instruction": "0x14014822b",
-      "preview": "accepttypemainCountplayer|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777417",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "accepttypemainCountplayer|qwB"
     },
     {
-      "dataVa": "0x142778816",
       "instruction": "0x140148953",
-      "preview": "和局提议已被拒绝The draw offer was declined双方已同意和局Both players agreed to a draw",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142778816",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "和局提议已被拒绝The draw offer was declined双方已同意和局Both players agreed to a draw"
     },
     {
-      "dataVa": "0x14277882e",
       "instruction": "0x14014895a",
-      "preview": "The draw offer was declined双方已同意和局Both players agreed to a draw",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277882e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "The draw offer was declined双方已同意和局Both players agreed to a draw"
     },
     {
-      "dataVa": "0x142777410",
       "instruction": "0x140148977",
-      "preview": "declineaccepttypemainCountplayer|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777410",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "declineaccepttypemainCountplayer|qwB"
     },
     {
-      "dataVa": "0x142778849",
       "instruction": "0x1401489bc",
-      "preview": "双方已同意和局Both players agreed to a draw",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142778849",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "双方已同意和局Both players agreed to a draw"
     },
     {
-      "dataVa": "0x14277885e",
       "instruction": "0x1401489c3",
-      "preview": "Both players agreed to a draw",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277885e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Both players agreed to a draw"
     },
     {
-      "dataVa": "0x1427788b0",
       "instruction": "0x1401493a3",
-      "preview": "localResponsePending",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427788b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "localResponsePending"
     },
     {
-      "dataVa": "0x142778898",
       "instruction": "0x1401498f4",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142778898",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     },
     {
-      "dataVa": "0x142777640",
       "instruction": "0x140149900",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777640",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142778760",
       "instruction": "0x140149925",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142778760",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     },
     {
-      "dataVa": "0x142778880",
       "instruction": "0x140149aba",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142778880",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     }
   ],
   "pseudocode": "functions/0x140147cc0.c",

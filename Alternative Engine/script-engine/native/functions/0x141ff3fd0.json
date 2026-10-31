@@ -7,488 +7,494 @@
     "crates/mtg-engine/src/card/effects/misc.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 21.6286226,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141ff3fd0.asm",
   "assemblySha256": "8938f69bc51e27af2aab4f8a6a8865a04b55ba0cecce04cfa80933091076f7ca",
   "literalReferences": [
     {
-      "dataVa": "0x142825c60",
       "instruction": "0x141ff40a7",
-      "preview": "angeTopOfLibraryRearrangeTopOfLi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142825c60",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "angeTopOfLibraryRearrangeTopOfLi"
     },
     {
-      "dataVa": "0x142825c70",
       "instruction": "0x141ff40af",
-      "preview": "RearrangeTopOfLi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142825c70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RearrangeTopOfLi"
     },
     {
-      "dataVa": "0x142cbb7fc",
       "instruction": "0x141ff40ca",
-      "preview": "RearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb7fc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
     },
     {
-      "dataVa": "0x142cbb869",
       "instruction": "0x141ff4211",
-      "preview": "Land.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb869",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Land.YouCtrl"
     },
     {
-      "dataVa": "0x142cbb980",
       "instruction": "0x141ff428e",
-      "preview": "DamageDescEachToItselfToEachOtherNumDmgEachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb980",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageDescEachToItselfToEachOtherNumDmgEachDamage 互相但只有一个目标"
     },
     {
-      "dataVa": "0x142cbb98a",
       "instruction": "0x141ff42ce",
-      "preview": "EachToItselfToEachOtherNumDmgEachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb98a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachToItselfToEachOtherNumDmgEachDamage 互相但只有一个目标"
     },
     {
-      "dataVa": "0x142cbb7d3",
       "instruction": "0x141ff43ce",
-      "preview": "RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb7d3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
     },
     {
-      "dataVa": "0x142cba69e",
       "instruction": "0x141ff43f6",
-      "preview": "NumVarValue",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba69e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumVarValue"
     },
     {
-      "dataVa": "0x142cba69e",
       "instruction": "0x141ff44c6",
-      "preview": "NumVarValue",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb81d",
-      "instruction": "0x141ff45a5",
-      "preview": "AllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba452",
-      "instruction": "0x141ff4687",
-      "preview": "ValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter 改成别的事ValidExplorerExtraTu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb7e5",
-      "instruction": "0x141ff478d",
-      "preview": "RememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff48a5",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb21a",
-      "instruction": "0x141ff49b1",
-      "preview": "Duration",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb908",
-      "instruction": "0x141ff49fa",
-      "preview": "StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9630",
-      "instruction": "0x141ff4a6f",
-      "preview": "TargetedNextTurnUntilTheEndOfTarRemoveCounterAllRemoveFromCombatAddOrRemoveCountDefined.ImprinteDefined.UntappedDefined.SacrificDefined.ExiledWi.ValidGraveyard Defined.ValidGraPerm",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9640",
-      "instruction": "0x141ff4a77",
-      "preview": "UntilTheEndOfTarRemoveCounterAllRemoveFromCombatAddOrRemoveCountDefined.ImprinteDefined.UntappedDefined.SacrificDefined.ExiledWi.ValidGraveyard Defined.ValidGraPermanentNoncreaPerm",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb6c0",
-      "instruction": "0x141ff4ae0",
-      "preview": "FaceDownFaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8c7",
-      "instruction": "0x141ff4c21",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb756",
-      "instruction": "0x141ff4cef",
-      "preview": "CounterTypeSourceMoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbba28",
-      "instruction": "0x141ff4da7",
-      "preview": "Attributes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8c7",
-      "instruction": "0x141ff4f13",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb996",
-      "instruction": "0x141ff4fbe",
-      "preview": "ToEachOtherNumDmgEachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb825",
-      "instruction": "0x141ff50ed",
-      "preview": "PhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb74a",
-      "instruction": "0x141ff51f0",
-      "preview": "ValidDefinedCounterTypeSourceMoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb80b",
-      "instruction": "0x141ff543c",
-      "preview": "MayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb9e2",
-      "instruction": "0x141ff550e",
-      "preview": "DefinedDamagersEachDamage 没有受伤者EachDamage 没有伤害来源Attributes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb815",
-      "instruction": "0x141ff563b",
-      "preview": "NumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb831",
-      "instruction": "0x141ff5713",
-      "preview": "RememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb756",
-      "instruction": "0x141ff580a",
-      "preview": "CounterTypeSourceMoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb761",
-      "instruction": "0x141ff5868",
-      "preview": "SourceMoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff58a2",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb841",
-      "instruction": "0x141ff59f2",
-      "preview": "RememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb84f",
-      "instruction": "0x141ff5ad3",
-      "preview": "WontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb860",
-      "instruction": "0x141ff5ba1",
-      "preview": "AnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c3a",
-      "instruction": "0x141ff5c6c",
-      "preview": "TappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff5dd2",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff5e2b",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff5f67",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb7f7",
-      "instruction": "0x141ff5fe9",
-      "preview": "TimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb4b2",
-      "instruction": "0x141ff61b5",
-      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cba69e",
-      "instruction": "0x141ff648d",
-      "preview": "NumVarValue",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumVarValue"
     },
     {
-      "dataVa": "0x142cbb79b",
-      "instruction": "0x141ff697c",
-      "preview": "CounterNumNonZeroMoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValids",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff45a5",
+      "dataVa": "0x142cbb81d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
     },
     {
-      "dataVa": "0x142cbb9a1",
-      "instruction": "0x141ff6b49",
-      "preview": "NumDmgEachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff4687",
+      "dataVa": "0x142cba452",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter 改成别的事ValidExplorerExtraTu"
     },
     {
-      "dataVa": "0x142cbb942",
-      "instruction": "0x141ff6c7b",
-      "preview": "UnblockCreaturesBlockedOnlyBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff478d",
+      "dataVa": "0x142cbb7e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
     },
     {
-      "dataVa": "0x142c83760",
-      "instruction": "0x141ff6cd9",
-      "preview": "TriggeredBlockerCopy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff48a5",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
     },
     {
-      "dataVa": "0x142cbb9a1",
-      "instruction": "0x141ff6eec",
-      "preview": "NumDmgEachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff49b1",
+      "dataVa": "0x142cbb21a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Duration"
     },
     {
+      "instruction": "0x141ff49fa",
+      "dataVa": "0x142cbb908",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff4a6f",
+      "dataVa": "0x142cb9630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetedNextTurnUntilTheEndOfTarRemoveCounterAllRemoveFromCombatAddOrRemoveCountDefined.ImprinteDefined.UntappedDefined.SacrificDefined.ExiledWi.ValidGraveyard Defined.ValidGraPerm"
+    },
+    {
+      "instruction": "0x141ff4a77",
+      "dataVa": "0x142cb9640",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilTheEndOfTarRemoveCounterAllRemoveFromCombatAddOrRemoveCountDefined.ImprinteDefined.UntappedDefined.SacrificDefined.ExiledWi.ValidGraveyard Defined.ValidGraPermanentNoncreaPerm"
+    },
+    {
+      "instruction": "0x141ff4ae0",
+      "dataVa": "0x142cbb6c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDownFaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
+    },
+    {
+      "instruction": "0x141ff4c21",
       "dataVa": "0x142cbb8c7",
-      "instruction": "0x141ff7164",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
     },
     {
-      "dataVa": "0x142cbb888",
-      "instruction": "0x141ff723b",
-      "preview": "DefinedPilesLeftRightPileChosenPileUnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb894",
-      "instruction": "0x141ff735b",
-      "preview": "LeftRightPileChosenPileUnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8a1",
-      "instruction": "0x141ff7384",
-      "preview": "ChosenPileUnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8ab",
-      "instruction": "0x141ff7413",
-      "preview": "UnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8b7",
-      "instruction": "0x141ff75f8",
-      "preview": "ZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbba0b",
-      "instruction": "0x141ff76f1",
-      "preview": "EachDamage 没有伤害来源Attributes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff7760",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb9a1",
-      "instruction": "0x141ff7812",
-      "preview": "NumDmgEachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb9a7",
-      "instruction": "0x141ff7b9d",
-      "preview": "EachDamage 互相但只有一个目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff7c6c",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb939",
-      "instruction": "0x141ff7e8e",
-      "preview": "StepPhaseUnblockCreaturesBlockedOnlyBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb93d",
-      "instruction": "0x141ff7ecd",
-      "preview": "PhaseUnblockCreaturesBlockedOnlyBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9e9d",
-      "instruction": "0x141ff800a",
-      "preview": "SkipPhase 的步骤TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8bb",
-      "instruction": "0x141ff818d",
-      "preview": "DefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8bb",
-      "instruction": "0x141ff81d8",
-      "preview": "DefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb761",
-      "instruction": "0x141ff8488",
-      "preview": "SourceMoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff86a1",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x141ff4cef",
       "dataVa": "0x142cbb756",
-      "instruction": "0x141ff89af",
-      "preview": "CounterTypeSourceMoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeSourceMoveCounter 缺 CounterType"
     },
     {
-      "dataVa": "0x142cbb767",
-      "instruction": "0x141ff8a29",
-      "preview": "MoveCounter 缺 CounterType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff4da7",
+      "dataVa": "0x142cbba28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Attributes"
     },
     {
-      "dataVa": "0x142cbb79b",
-      "instruction": "0x141ff8b17",
-      "preview": "CounterNumNonZeroMoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValids",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9e56",
-      "instruction": "0x141ff8dae",
-      "preview": "MoveCounter 没有去处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb7a5",
-      "instruction": "0x141ff8e7d",
-      "preview": "NonZeroMoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseI",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb7ac",
-      "instruction": "0x141ff8fd5",
-      "preview": "MoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8f6",
-      "instruction": "0x141ff91f6",
-      "preview": "TwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x141ff4f13",
       "dataVa": "0x142cbb8c7",
-      "instruction": "0x141ff926b",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
     },
     {
-      "dataVa": "0x142cbb9f1",
-      "instruction": "0x141ff92c0",
-      "preview": "EachDamage 没有受伤者EachDamage 没有伤害来源Attributes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff4fbe",
+      "dataVa": "0x142cbb996",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ToEachOtherNumDmgEachDamage 互相但只有一个目标"
     },
     {
-      "dataVa": "0x142cbb8d1",
-      "instruction": "0x141ff98b0",
-      "preview": "SeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff50ed",
+      "dataVa": "0x142cbb825",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
     },
     {
-      "dataVa": "0x142cb9f98",
-      "instruction": "0x141ff9a3a",
-      "preview": "ChooserExileWithCountersToken 缺 TokenScriptManaReflected 缺 ValidAnimateAll 缺 ValidCards",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff51f0",
+      "dataVa": "0x142cbb74a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidDefinedCounterTypeSourceMoveCounter 缺 CounterType"
     },
     {
-      "dataVa": "0x142cbb8da",
-      "instruction": "0x141ff9b83",
-      "preview": "RememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff543c",
+      "dataVa": "0x142cbb80b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
     },
     {
-      "dataVa": "0x142cbb8e8",
-      "instruction": "0x141ff9ba5",
-      "preview": "KeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141ff550e",
+      "dataVa": "0x142cbb9e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedDamagersEachDamage 没有受伤者EachDamage 没有伤害来源Attributes"
     },
     {
+      "instruction": "0x141ff563b",
+      "dataVa": "0x142cbb815",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ff5713",
+      "dataVa": "0x142cbb831",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ff580a",
+      "dataVa": "0x142cbb756",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeSourceMoveCounter 缺 CounterType"
+    },
+    {
+      "instruction": "0x141ff5868",
+      "dataVa": "0x142cbb761",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SourceMoveCounter 缺 CounterType"
+    },
+    {
+      "instruction": "0x141ff58a2",
       "dataVa": "0x142cb9c88",
-      "instruction": "0x141ff9be7",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
     },
     {
+      "instruction": "0x141ff59f2",
+      "dataVa": "0x142cbb841",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ff5ad3",
+      "dataVa": "0x142cbb84f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WontPhaseInNormalAnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ff5ba1",
+      "dataVa": "0x142cbb860",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ff5c6c",
+      "dataVa": "0x142cb9c3a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff5dd2",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff5e2b",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff5f67",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff5fe9",
+      "dataVa": "0x142cbb7f7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormalAnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ff61b5",
+      "dataVa": "0x142cbb4b2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith"
+    },
+    {
+      "instruction": "0x141ff648d",
+      "dataVa": "0x142cba69e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumVarValue"
+    },
+    {
+      "instruction": "0x141ff697c",
+      "dataVa": "0x142cbb79b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumNonZeroMoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValids"
+    },
+    {
+      "instruction": "0x141ff6b49",
+      "dataVa": "0x142cbb9a1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgEachDamage 互相但只有一个目标"
+    },
+    {
+      "instruction": "0x141ff6c7b",
+      "dataVa": "0x142cbb942",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UnblockCreaturesBlockedOnlyBy"
+    },
+    {
+      "instruction": "0x141ff6cd9",
+      "dataVa": "0x142c83760",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredBlockerCopy"
+    },
+    {
+      "instruction": "0x141ff6eec",
+      "dataVa": "0x142cbb9a1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgEachDamage 互相但只有一个目标"
+    },
+    {
+      "instruction": "0x141ff7164",
+      "dataVa": "0x142cbb8c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff723b",
+      "dataVa": "0x142cbb888",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedPilesLeftRightPileChosenPileUnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff735b",
+      "dataVa": "0x142cbb894",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LeftRightPileChosenPileUnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff7384",
+      "dataVa": "0x142cbb8a1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenPileUnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff7413",
+      "dataVa": "0x142cbb8ab",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UnchosenPileZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff75f8",
+      "dataVa": "0x142cbb8b7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff76f1",
+      "dataVa": "0x142cbba0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachDamage 没有伤害来源Attributes"
+    },
+    {
+      "instruction": "0x141ff7760",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff7812",
+      "dataVa": "0x142cbb9a1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgEachDamage 互相但只有一个目标"
+    },
+    {
+      "instruction": "0x141ff7b9d",
+      "dataVa": "0x142cbb9a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachDamage 互相但只有一个目标"
+    },
+    {
+      "instruction": "0x141ff7c6c",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff7e8e",
+      "dataVa": "0x142cbb939",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StepPhaseUnblockCreaturesBlockedOnlyBy"
+    },
+    {
+      "instruction": "0x141ff7ecd",
+      "dataVa": "0x142cbb93d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PhaseUnblockCreaturesBlockedOnlyBy"
+    },
+    {
+      "instruction": "0x141ff800a",
+      "dataVa": "0x142cb9e9d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SkipPhase 的步骤TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1"
+    },
+    {
+      "instruction": "0x141ff818d",
       "dataVa": "0x142cbb8bb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff81d8",
+      "dataVa": "0x142cbb8bb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff8488",
+      "dataVa": "0x142cbb761",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SourceMoveCounter 缺 CounterType"
+    },
+    {
+      "instruction": "0x141ff86a1",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ff89af",
+      "dataVa": "0x142cbb756",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeSourceMoveCounter 缺 CounterType"
+    },
+    {
+      "instruction": "0x141ff8a29",
+      "dataVa": "0x142cbb767",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MoveCounter 缺 CounterType"
+    },
+    {
+      "instruction": "0x141ff8b17",
+      "dataVa": "0x142cbb79b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumNonZeroMoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValids"
+    },
+    {
+      "instruction": "0x141ff8dae",
+      "dataVa": "0x142cb9e56",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MoveCounter 没有去处"
+    },
+    {
+      "instruction": "0x141ff8e7d",
+      "dataVa": "0x142cbb7a5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NonZeroMoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseI"
+    },
+    {
+      "instruction": "0x141ff8fd5",
+      "dataVa": "0x142cbb7ac",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MoveCounter 分到多个去处的写法RememberDiscoveredRememberManifestedTimesRearrangePlayerMayShuffleNumCardsAllValidPhaseInOrOutRememberAffectedRememberValidsWontPhaseInNormal"
+    },
+    {
+      "instruction": "0x141ff91f6",
+      "dataVa": "0x142cbb8f6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff926b",
+      "dataVa": "0x142cbb8c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff92c0",
+      "dataVa": "0x142cbb9f1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachDamage 没有受伤者EachDamage 没有伤害来源Attributes"
+    },
+    {
+      "instruction": "0x141ff98b0",
+      "dataVa": "0x142cbb8d1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff9a3a",
+      "dataVa": "0x142cb9f98",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserExileWithCountersToken 缺 TokenScriptManaReflected 缺 ValidAnimateAll 缺 ValidCards"
+    },
+    {
+      "instruction": "0x141ff9b83",
+      "dataVa": "0x142cbb8da",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff9ba5",
+      "dataVa": "0x142cbb8e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x141ff9be7",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
       "instruction": "0x141ff9d72",
-      "preview": "DefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb8bb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
     }
   ],
   "pseudocode": "functions/0x141ff3fd0.c",

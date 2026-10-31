@@ -7,20 +7,25 @@
     "src/session.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0149401
+  },
   "assembly": "functions/0x14013af80.asm",
   "assemblySha256": "3d3b9f82eb3f35955e72fe131dcd7d1a69b06fa28d8b2b1886a32edb5000de1f",
   "literalReferences": [
     {
-      "dataVa": "0x1427780f0",
       "instruction": "0x14013b15e",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427780f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     },
     {
-      "dataVa": "0x142777640",
       "instruction": "0x14013b16a",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777640",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x14013af80.c",

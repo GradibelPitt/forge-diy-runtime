@@ -13,6 +13,12 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141bf4870: process: timeout\n",
+    "seconds": 12.2417865,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141bf4870.asm",
   "assemblySha256": "5e296230647d8d955ceca4dd6340ee086bb481b619711d0c1a522fbeb9cfbe29",
   "literalReferences": [],

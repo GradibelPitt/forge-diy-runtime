@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0757009
+  },
   "assembly": "functions/0x140b29930.asm",
   "assemblySha256": "449936c0cbcbe298ccb16553d7d7011327401f13e23abc4ba7fed36755b2d572",
   "literalReferences": [
     {
-      "dataVa": "0x1427fb420",
       "instruction": "0x140b29e39",
-      "preview": "e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb420",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     },
     {
-      "dataVa": "0x1427fb430",
       "instruction": "0x140b29e41",
-      "preview": "More(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "More(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     }
   ],
   "pseudocode": "functions/0x140b29930.c",

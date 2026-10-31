@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0043569,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a61bb0.asm",
   "assemblySha256": "f678552e690ac6ab9c4483a5ba84cf20357adc449a434dd0bbdaac0204fbe6ac",
   "literalReferences": [
     {
-      "dataVa": "0x142c86438",
       "instruction": "0x141a61bd1",
-      "preview": "RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestructibleLifelinkMenaceReachShadowTrampleVigilanceExalted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86438",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestructibleLifelinkMenaceReachShadowTrampleVigilanceExalted"
     },
     {
-      "dataVa": "0x142c8642d",
       "instruction": "0x141a61bdc",
-      "preview": "Repeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestructibleLifelinkMenaceReachShadowTrampleVigilanceExalted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8642d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Repeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestructibleLifelinkMenaceReachShadowTrampleVigilanceExalted"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a61bb0.c",
+  "pseudocodeSha256": "4b6e9ba7e0eba649dfb6a649f036e0ce1d57c357e0c77250da5b9f29ee156222",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

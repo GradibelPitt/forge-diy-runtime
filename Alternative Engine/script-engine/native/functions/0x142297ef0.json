@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0032927,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142297ef0.asm",
   "assemblySha256": "d3c7dc745390f53386428b04b4b0bc78266c6e9a2780d52a019224a9d86f5598",
   "literalReferences": [
     {
-      "dataVa": "0x142cdc981",
       "instruction": "0x142297f11",
-      "preview": "sIfHaste 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc981",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sIfHaste 缺 ValidCard"
     },
     {
-      "dataVa": "0x142cdc971",
       "instruction": "0x142297f1c",
-      "preview": "ActivateAbilityAsIfHaste 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc971",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivateAbilityAsIfHaste 缺 ValidCard"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142297ef0.c",
+  "pseudocodeSha256": "dc3b254959d6318427bdfa36b2ce4d5fe1dbb26c6dd049c0916e6ec2277d5325",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

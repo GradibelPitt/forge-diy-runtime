@@ -8,44 +8,49 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.0292342
+  },
   "assembly": "functions/0x141d07140.asm",
   "assemblySha256": "0795f0c95f599be061b189f924bb9f0e483cda187536ed8b09c442fb35afe8a4",
   "literalReferences": [
     {
-      "dataVa": "0x142c974c8",
       "instruction": "0x141d07277",
-      "preview": "Discard<1/Card>这个永久物不能横来付这个咒语的费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c974c8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Discard<1/Card>这个永久物不能横来付这个咒语的费用"
     },
     {
-      "dataVa": "0x142c973b0",
       "instruction": "0x141d07567",
-      "preview": "Discard<1/Land>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c973b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Discard<1/Land>"
     },
     {
-      "dataVa": "0x142c98a38",
       "instruction": "0x141d0b350",
-      "preview": "Return<1/Creature.YouCtrl+beamable>Return<1/Creature.attacking+unblocked>Return<1/Creature.tapped>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c98a38",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Return<1/Creature.YouCtrl+beamable>Return<1/Creature.attacking+unblocked>Return<1/Creature.tapped>"
     },
     {
-      "dataVa": "0x142c98a5b",
       "instruction": "0x141d0b4c0",
-      "preview": "Return<1/Creature.attacking+unblocked>Return<1/Creature.tapped>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c98a5b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Return<1/Creature.attacking+unblocked>Return<1/Creature.tapped>"
     },
     {
-      "dataVa": "0x142c98a81",
       "instruction": "0x141d0b7c4",
-      "preview": "Return<1/Creature.tapped>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c98a81",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Return<1/Creature.tapped>"
     },
     {
-      "dataVa": "0x142c98a29",
       "instruction": "0x141d0b888",
-      "preview": "Sac<1/Creature>Return<1/Creature.YouCtrl+beamable>Return<1/Creature.attacking+unblocked>Return<1/Creature.tapped>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c98a29",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Sac<1/Creature>Return<1/Creature.YouCtrl+beamable>Return<1/Creature.attacking+unblocked>Return<1/Creature.tapped>"
     }
   ],
   "pseudocode": "functions/0x141d07140.c",

@@ -16,26 +16,32 @@
     "crates/mtg-engine/src/statics/zone_chars.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141bbe710: process: timeout\n",
+    "seconds": 12.2527569,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141bbe710.asm",
   "assemblySha256": "da762afe167e7579da42088b4f3ae3a908e29dfb13c3fce676e48eb1d8f834fe",
   "literalReferences": [
     {
-      "dataVa": "0x142c9b2cd",
       "instruction": "0x141bc068f",
-      "preview": "STUNSHIELD有批",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c9b2cd",
-      "instruction": "0x141bc2fc9",
-      "preview": "STUNSHIELD有批",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "STUNSHIELD有批"
     },
     {
-      "dataVa": "0x142c91ee8",
+      "instruction": "0x141bc2fc9",
+      "dataVa": "0x142c9b2cd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "STUNSHIELD有批"
+    },
+    {
       "instruction": "0x141bc900a",
-      "preview": "选的牌不合要求",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c91ee8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "选的牌不合要求"
     }
   ],
   "pseudocodeStatus": "timeout"

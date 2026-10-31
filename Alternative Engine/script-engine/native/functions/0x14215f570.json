@@ -7,56 +7,62 @@
     "crates/mtg-engine/src/card/trigger/params.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.2231496,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14215f570.asm",
   "assemblySha256": "fd2843c5f2bbf707293e32085ea51ad5270be7ee796f7148d367a3c6207050fe",
   "literalReferences": [
     {
-      "dataVa": "0x142cc87c0",
       "instruction": "0x14215f640",
-      "preview": "ManaFromCreature_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc87c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaFromCreature_"
     },
     {
-      "dataVa": "0x142cb89f0",
       "instruction": "0x14215f650",
-      "preview": "ManaFromTreasureManaFromArtifactEquippedByValid ControllerControls",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb89f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaFromTreasureManaFromArtifactEquippedByValid ControllerControls"
     },
     {
-      "dataVa": "0x142cc8780",
       "instruction": "0x14215f659",
-      "preview": "er.Other",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8780",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "er.Other"
     },
     {
-      "dataVa": "0x142cc8790",
       "instruction": "0x14215f662",
-      "preview": "ManaSpentBy Playard.StrictlySelfManaFromCard.StrManaFromCreature_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8790",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaSpentBy Playard.StrictlySelfManaFromCard.StrManaFromCreature_"
     },
     {
-      "dataVa": "0x142cc87a0",
       "instruction": "0x14215f66b",
-      "preview": "ard.StrictlySelfManaFromCard.StrManaFromCreature_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc87a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ard.StrictlySelfManaFromCard.StrManaFromCreature_"
     },
     {
-      "dataVa": "0x142cc87b0",
       "instruction": "0x14215f674",
-      "preview": "ManaFromCard.StrManaFromCreature_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc87b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaFromCard.StrManaFromCreature_"
     },
     {
-      "dataVa": "0x142ccc070",
       "instruction": "0x14215fd9c",
-      "preview": "CastSa Spell.WarpCastSa Spell.MayPlaySourcePhaseCount 只认行动阶段->",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ccc070",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CastSa Spell.WarpCastSa Spell.MayPlaySourcePhaseCount 只认行动阶段->"
     },
     {
-      "dataVa": "0x142ccc081",
       "instruction": "0x14215ff1b",
-      "preview": "CastSa Spell.MayPlaySourcePhaseCount 只认行动阶段->",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ccc081",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CastSa Spell.MayPlaySourcePhaseCount 只认行动阶段->"
     }
   ],
   "pseudocode": "functions/0x14215f570.c",

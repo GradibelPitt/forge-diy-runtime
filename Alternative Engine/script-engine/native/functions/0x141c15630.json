@@ -10,56 +10,62 @@
     "crates/mtg-engine/src/triggers/params.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141c15630: process: timeout\n",
+    "seconds": 12.2604581,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141c15630.asm",
   "assemblySha256": "da3bab5de463a6fc63676d6331d688c6c5ba37144690b03b06fd3473918fff10",
   "literalReferences": [
     {
-      "dataVa": "0x142c99930",
       "instruction": "0x141c1a9e7",
-      "preview": "ChangesZoneAttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99930",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangesZoneAttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
     },
     {
-      "dataVa": "0x142c99942",
       "instruction": "0x141c1aa01",
-      "preview": "AttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c9993b",
-      "instruction": "0x141c1aa3b",
-      "preview": "AttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c99953",
-      "instruction": "0x141c1aa70",
-      "preview": "ChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c99961",
-      "instruction": "0x141c1aa7f",
-      "preview": "CounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c9996d",
-      "instruction": "0x141c1aa94",
-      "preview": "AttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c99942",
-      "instruction": "0x141c1aaa3",
-      "preview": "AttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
     },
     {
-      "dataVa": "0x142c91c08",
+      "instruction": "0x141c1aa3b",
+      "dataVa": "0x142c9993b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
+    },
+    {
+      "instruction": "0x141c1aa70",
+      "dataVa": "0x142c99953",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
+    },
+    {
+      "instruction": "0x141c1aa7f",
+      "dataVa": "0x142c99961",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterAddedAttackersDeclaredOneTarget"
+    },
+    {
+      "instruction": "0x141c1aa94",
+      "dataVa": "0x142c9996d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackersDeclaredOneTarget"
+    },
+    {
+      "instruction": "0x141c1aaa3",
+      "dataVa": "0x142c99942",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
+    },
+    {
       "instruction": "0x141c1e5df",
-      "preview": "Siege",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c91c08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Siege"
     }
   ],
   "pseudocodeStatus": "timeout"

@@ -5,19 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0969751,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141b86a00.asm",
   "assemblySha256": "573a6a4ba2cb40bfbf148ce565289595ce2313ef8a4359aa0a4557a718f499e8",
   "literalReferences": [
     {
-      "dataVa": "0x142c9097e",
       "instruction": "0x141b86cac",
-      "preview": "付不起阻挡的费用VerminRound",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9097e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "付不起阻挡的费用VerminRound"
     }
   ],
   "pseudocode": "functions/0x141b86a00.c",
-  "pseudocodeSha256": "6018fdc26d3afbbd34aedb7213129e927852bb66f8c295454e62a004f490c520",
-  "pseudocodeOrigin": "prior REA analysis",
+  "pseudocodeSha256": "cbb19f67083750f1df4281831d60e0dee132b9678ea97c6c24fbd1eec230a967",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
   "controlFlowWarning": false,
-  "typePropagationWarning": true
+  "typePropagationWarning": false
 }

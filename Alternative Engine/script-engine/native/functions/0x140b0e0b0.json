@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0080569,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140b0e0b0.asm",
   "assemblySha256": "6c2bc7d7778f41529f689e5013403a1cd58cd48f11d9f51760218500e135e570",
   "literalReferences": [
     {
-      "dataVa": "0x1427fbba8",
       "instruction": "0x140b0e0d0",
-      "preview": "Card.ExiledWithSourceMem(TargetedCostPaidAlt {props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fbba8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Card.ExiledWithSourceMem(TargetedCostPaidAlt {props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140b0e0b0.c",
+  "pseudocodeSha256": "7c54183abd3a4dd92984c02cae1a7fbf40aa55d9f7ac6a76990dd337d133cd59",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -1,4 +1,4 @@
-/* Ghidra pseudocode, NOT recovered original Rust. Evidence: ev_f67622aa1c89664c72da691c132be90ed9a9f57db597b9d45134906cc52c8f53 */
+/* Decompiled original binary; inferred C types, NOT original Rust source. */
 
 ulonglong * FUN_141c3b480(ulonglong *param_1,longlong param_2,ulonglong *param_3)
 
@@ -113,7 +113,7 @@ LAB_141c3b541:
                     /* WARNING: Could not recover jumptable at 0x000141c3b59d. Too many branches */
                     /* WARNING: Treating indirect jump as call */
   puVar20 = (ulonglong *)
-            (*(code *)(&DAT_142ca1228 + *(int *)(&DAT_142ca1228 + lVar24 * 4)))
+            (*(code *)(&UNK_142ca1228 + *(int *)(&UNK_142ca1228 + lVar24 * 4)))
                       ((undefined8 *)((longlong)param_3 + 0x2a),
                        (undefined4 *)((longlong)param_3 + 0x3a),*(undefined1 *)(param_2 + 0x20f5));
   return puVar20;

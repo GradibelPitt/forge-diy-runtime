@@ -7,14 +7,19 @@
     "crates/mtg-ai-normal/src/acts/cardflow.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0033832
+  },
   "assembly": "functions/0x140b29740.asm",
   "assemblySha256": "adad9a79301b61d76272e490ce83834e035f51b976ceb0b9b297de78d0811b3b",
   "literalReferences": [
     {
-      "dataVa": "0x1427fbce0",
       "instruction": "0x140b29759",
-      "preview": "DivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fbce0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DivDown(Num(caster: Some(controlled_by: Some(face_down: true free: truezones: [Exile]ExiledWithSourceIsImprintedfrom: Who(from: Zone {MayPlay {IsRememberedfree: true"
     }
   ],
   "pseudocode": "functions/0x140b29740.c",

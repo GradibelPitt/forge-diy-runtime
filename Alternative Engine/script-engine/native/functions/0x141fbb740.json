@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0031621,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fbb740.asm",
   "assemblySha256": "482ba3cbff4a8ecb8fdf8ee95cd74f654a272b666a95ae650abc7f0b5877a090",
   "literalReferences": [
     {
-      "dataVa": "0x142cb9f28",
       "instruction": "0x141fbb761",
-      "preview": "Untap 缺 UntapTypeMana 缺 ProducedPumpAll 缺 ValidCardsRevealTgtChoose 没有目标You",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9f28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Untap 缺 UntapTypeMana 缺 ProducedPumpAll 缺 ValidCardsRevealTgtChoose 没有目标You"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fbb740.c",
+  "pseudocodeSha256": "f4f83eea15986afe8a173f45d5f4ee5e7f59519a0d5a89841ad16fbe9c9cb292",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -7,20 +7,26 @@
     "crates/mtg-engine/src/card/faces.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2611063,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14229f3c0.asm",
   "assemblySha256": "fc7bff8f1122e3478320c21a2bec7969a74c9a831f46496e2f1d452fa520569c",
   "literalReferences": [
     {
-      "dataVa": "0x142cdd50f",
       "instruction": "0x14229fcb9",
-      "preview": "多面牌的面数",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdd50f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "多面牌的面数"
     },
     {
-      "dataVa": "0x142cdd4e2",
       "instruction": "0x1422a01dd",
-      "preview": "冒险／预兆那一面不是瞬间或法术多面牌的面数",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdd4e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "冒险／预兆那一面不是瞬间或法术多面牌的面数"
     }
   ],
   "pseudocode": "functions/0x14229f3c0.c",

@@ -5,39 +5,49 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0556076,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fd4520.asm",
   "assemblySha256": "71cdf823aaefba5c07961f753184a8dbc60be6fa0f8e03c0484031bf5639b09b",
   "literalReferences": [
     {
-      "dataVa": "0x142cbac32",
       "instruction": "0x141fd4548",
-      "preview": "Activation",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbac32",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activation"
     },
     {
-      "dataVa": "0x142cbac5e",
       "instruction": "0x141fd46e1",
-      "preview": "SorcerySpeedInstantSpeedActivationPhasesActivationZoneGraveyardCommand",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbac5e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SorcerySpeedInstantSpeedActivationPhasesActivationZoneGraveyardCommand"
     },
     {
-      "dataVa": "0x142cbac6a",
       "instruction": "0x141fd47ae",
-      "preview": "InstantSpeedActivationPhasesActivationZoneGraveyardCommand",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbac6a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "InstantSpeedActivationPhasesActivationZoneGraveyardCommand"
     },
     {
-      "dataVa": "0x142cbac76",
       "instruction": "0x141fd487b",
-      "preview": "ActivationPhasesActivationZoneGraveyardCommand",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbac76",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationPhasesActivationZoneGraveyardCommand"
     },
     {
-      "dataVa": "0x142cbac86",
       "instruction": "0x141fd493f",
-      "preview": "ActivationZoneGraveyardCommand",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbac86",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationZoneGraveyardCommand"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fd4520.c",
+  "pseudocodeSha256": "f2be323e4173f2045940a6732e8ef9195282d755dbd80af40a570b1aede6dbe5",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

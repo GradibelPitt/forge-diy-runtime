@@ -7,32 +7,37 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.197431
+  },
   "assembly": "functions/0x14025cc00.asm",
   "assemblySha256": "6cece7aa690fee24d546b4c8d35f5823ff2995b6aba306cb2392c70b18ee9b94",
   "literalReferences": [
     {
-      "dataVa": "0x142785407",
       "instruction": "0x14025ccea",
-      "preview": "面朝下的牌a face-down card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785407",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "面朝下的牌a face-down card、"
     },
     {
-      "dataVa": "0x142785416",
       "instruction": "0x14025ccf1",
-      "preview": "a face-down card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785416",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "a face-down card、"
     },
     {
-      "dataVa": "0x1427853f8",
       "instruction": "0x14025cd76",
-      "preview": "一张牌a card面朝下的牌a face-down card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427853f8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "一张牌a card面朝下的牌a face-down card、"
     },
     {
-      "dataVa": "0x142785401",
       "instruction": "0x14025cd7d",
-      "preview": "a card面朝下的牌a face-down card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785401",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "a card面朝下的牌a face-down card、"
     }
   ],
   "pseudocode": "functions/0x14025cc00.c",

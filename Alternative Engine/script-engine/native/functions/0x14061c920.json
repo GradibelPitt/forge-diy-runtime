@@ -9,56 +9,61 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2889718
+  },
   "assembly": "functions/0x14061c920.asm",
   "assemblySha256": "ab719e3f3a6fead741d53e350dc3b432a4f0e9fff7f35437d8f684737b484860",
   "literalReferences": [
     {
-      "dataVa": "0x1427baedd",
       "instruction": "0x14061cee9",
-      "preview": "sourceCardIdsourceNameoriginNameoriginCardId",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427ba187",
-      "instruction": "0x14061d023",
-      "preview": "Gained activated abilitysrc\\copy_plan.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427ba16f",
-      "instruction": "0x14061d02a",
-      "preview": "获得的起动式异能Gained activated abilitysrc\\copy_plan.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427baedd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sourceCardIdsourceNameoriginNameoriginCardId"
+    },
+    {
+      "instruction": "0x14061d023",
+      "dataVa": "0x1427ba187",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Gained activated abilitysrc\\copy_plan.rs"
+    },
+    {
+      "instruction": "0x14061d02a",
+      "dataVa": "0x1427ba16f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "获得的起动式异能Gained activated abilitysrc\\copy_plan.rs"
+    },
+    {
       "instruction": "0x14061d72b",
-      "preview": "sourceCardIdsourceNameoriginNameoriginCardId",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427baedd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sourceCardIdsourceNameoriginNameoriginCardId"
     },
     {
-      "dataVa": "0x1427baee9",
       "instruction": "0x14061d806",
-      "preview": "sourceNameoriginNameoriginCardId",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427baee9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sourceNameoriginNameoriginCardId"
+    },
+    {
       "instruction": "0x14061d935",
-      "preview": "sourceNameoriginNameoriginCardId",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427baee9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sourceNameoriginNameoriginCardId"
     },
     {
-      "dataVa": "0x1427baef3",
       "instruction": "0x14061da29",
-      "preview": "originNameoriginCardId",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427baef3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "originNameoriginCardId"
     },
     {
-      "dataVa": "0x1427baefd",
       "instruction": "0x14061dac1",
-      "preview": "originCardId",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427baefd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "originCardId"
     }
   ],
   "pseudocode": "functions/0x14061c920.c",

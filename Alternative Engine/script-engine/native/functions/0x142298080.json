@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0039008,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142298080.asm",
   "assemblySha256": "643986e47b0559c2de121a200500864630bab14919ceb0dd8b89e626f1196bb7",
   "literalReferences": [
     {
-      "dataVa": "0x142cdca11",
       "instruction": "0x1422980a1",
-      "preview": "vated 缺 PhasesCantBeActivated 缺 ValidCardCantAttach 缺 TargetCantCrew 缺 ValidCardCantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCant",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdca11",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "vated 缺 PhasesCantBeActivated 缺 ValidCardCantAttach 缺 TargetCantCrew 缺 ValidCardCantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCant"
     },
     {
-      "dataVa": "0x142cdca07",
       "instruction": "0x1422980ac",
-      "preview": "CantBeActivated 缺 PhasesCantBeActivated 缺 ValidCardCantAttach 缺 TargetCantCrew 缺 ValidCardCantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 Val",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdca07",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CantBeActivated 缺 PhasesCantBeActivated 缺 ValidCardCantAttach 缺 TargetCantCrew 缺 ValidCardCantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 Val"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142298080.c",
+  "pseudocodeSha256": "14f0765ac98beb80e61cdd583efbb5c8430c478842d3f730e511d0ffbd616757",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

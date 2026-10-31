@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0379682,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140d19b90.asm",
   "assemblySha256": "4d34176fb5a8f16552d2807f73da495428d712eee04b48df9e4d4700a17f46d1",
   "literalReferences": [
     {
-      "dataVa": "0x14280e1b0",
       "instruction": "0x140d19e3b",
-      "preview": "DamageDonecombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e1b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageDonecombat: Some(true)"
     },
     {
-      "dataVa": "0x14280e124",
       "instruction": "0x140d19e5f",
-      "preview": "action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e124",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield"
     },
     {
-      "dataVa": "0x14280e1ba",
       "instruction": "0x140d19e83",
-      "preview": "combat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e1ba",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "combat: Some(true)"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140d19b90.c",
+  "pseudocodeSha256": "4fd715723bdd88fe5ef13233b405ff7cea2ed26494ede527ddaaea1f62ef071b",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

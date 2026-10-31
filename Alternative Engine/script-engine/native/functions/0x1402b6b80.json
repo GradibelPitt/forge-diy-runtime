@@ -7,219 +7,229 @@
     "src/devtools.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 6.6806341,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1402b6b80.asm",
   "assemblySha256": "f2def3cdb337574918b1619067a8a5d43bf129e1fbf6b7880b048102418cf085",
   "literalReferences": [
     {
-      "dataVa": "0x142771590",
       "instruction": "0x1402b6d38",
-      "preview": "        ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142771590",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "        "
     },
     {
-      "dataVa": "0x1427874d0",
       "instruction": "0x1402b6d64",
-      "preview": "ummoningsicknessremovesummoningsAttachedToPlayer:",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427874d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ummoningsicknessremovesummoningsAttachedToPlayer:"
     },
     {
-      "dataVa": "0x1427874e0",
       "instruction": "0x1402b6d6d",
-      "preview": "removesummoningsAttachedToPlayer:",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427874e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "removesummoningsAttachedToPlayer:"
     },
     {
-      "dataVa": "0x142787a95",
       "instruction": "0x1402b7146",
-      "preview": "UNTAPUPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427874b0",
-      "instruction": "0x1402b727e",
-      "preview": "puzzlecreatorstate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787b1a",
-      "instruction": "0x1402b7753",
-      "preview": "END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787aa9",
-      "instruction": "0x1402b7768",
-      "preview": "COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787b25",
-      "instruction": "0x1402b777d",
-      "preview": "CLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787b0b",
-      "instruction": "0x1402b7792",
-      "preview": "COMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787aa0",
-      "instruction": "0x1402b77a7",
-      "preview": "DRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787aa4",
-      "instruction": "0x1402b77b3",
-      "preview": "MAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787ae4",
-      "instruction": "0x1402b77c5",
-      "preview": "COMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787a9a",
-      "instruction": "0x1402b77d7",
-      "preview": "UPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787ab5",
-      "instruction": "0x1402b77e9",
-      "preview": "COMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787acd",
-      "instruction": "0x1402b77fb",
-      "preview": "COMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787b15",
-      "instruction": "0x1402b7807",
-      "preview": "MAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787afe",
-      "instruction": "0x1402b7819",
-      "preview": "COMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142787a95",
-      "instruction": "0x1402b78ab",
-      "preview": "UNTAPUPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UNTAPUPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
     },
     {
-      "dataVa": "0x142787510",
-      "instruction": "0x1402b812e",
-      "preview": "FaceDown:Manifest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1402b727e",
+      "dataVa": "0x1427874b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "puzzlecreatorstate"
     },
     {
-      "dataVa": "0x1427874f0",
-      "instruction": "0x1402b852d",
-      "preview": "AttachedToPlayer:",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787a9a",
-      "instruction": "0x1402b9d5f",
-      "preview": "UPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787aa0",
-      "instruction": "0x1402b9d74",
-      "preview": "DRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787aa4",
-      "instruction": "0x1402b9d83",
-      "preview": "MAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787aa9",
-      "instruction": "0x1402b9d98",
-      "preview": "COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787ab5",
-      "instruction": "0x1402b9dad",
-      "preview": "COMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787acd",
-      "instruction": "0x1402b9dbf",
-      "preview": "COMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787ae4",
-      "instruction": "0x1402b9dd1",
-      "preview": "COMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787afe",
-      "instruction": "0x1402b9de3",
-      "preview": "COMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787b0b",
-      "instruction": "0x1402b9df5",
-      "preview": "COMBAT_ENDMAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787b15",
-      "instruction": "0x1402b9e01",
-      "preview": "MAIN2END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x1402b7753",
       "dataVa": "0x142787b1a",
-      "instruction": "0x1402b9e13",
-      "preview": "END_OF_TURNCLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "END_OF_TURNCLEANUP"
     },
     {
+      "instruction": "0x1402b7768",
+      "dataVa": "0x142787aa9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b777d",
       "dataVa": "0x142787b25",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CLEANUP"
+    },
+    {
+      "instruction": "0x1402b7792",
+      "dataVa": "0x142787b0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b77a7",
+      "dataVa": "0x142787aa0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b77b3",
+      "dataVa": "0x142787aa4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b77c5",
+      "dataVa": "0x142787ae4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b77d7",
+      "dataVa": "0x142787a9a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b77e9",
+      "dataVa": "0x142787ab5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b77fb",
+      "dataVa": "0x142787acd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b7807",
+      "dataVa": "0x142787b15",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b7819",
+      "dataVa": "0x142787afe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b78ab",
+      "dataVa": "0x142787a95",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UNTAPUPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b812e",
+      "dataVa": "0x142787510",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDown:Manifest"
+    },
+    {
+      "instruction": "0x1402b852d",
+      "dataVa": "0x1427874f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachedToPlayer:"
+    },
+    {
+      "instruction": "0x1402b9d5f",
+      "dataVa": "0x142787a9a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UPKEEPDRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9d74",
+      "dataVa": "0x142787aa0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DRAWMAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9d83",
+      "dataVa": "0x142787aa4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MAIN1COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9d98",
+      "dataVa": "0x142787aa9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_BEGINCOMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9dad",
+      "dataVa": "0x142787ab5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_DECLARE_ATTACKERSCOMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9dbf",
+      "dataVa": "0x142787acd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_DECLARE_BLOCKERSCOMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9dd1",
+      "dataVa": "0x142787ae4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_FIRST_STRIKE_DAMAGECOMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9de3",
+      "dataVa": "0x142787afe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_DAMAGECOMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9df5",
+      "dataVa": "0x142787b0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "COMBAT_ENDMAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9e01",
+      "dataVa": "0x142787b15",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MAIN2END_OF_TURNCLEANUP"
+    },
+    {
+      "instruction": "0x1402b9e13",
+      "dataVa": "0x142787b1a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "END_OF_TURNCLEANUP"
+    },
+    {
       "instruction": "0x1402b9e25",
-      "preview": "CLEANUP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787b25",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CLEANUP"
     },
     {
-      "dataVa": "0x1427896df",
       "instruction": "0x1402b9fbd",
-      "preview": "这不像局面文件（Forge 的 [state] 格式：p0life=20、p0hand=牌名;牌名……）This doesn't look like a state file (Forge's [state] format: p0life=20, p0hand=Card;Card",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427896df",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "这不像局面文件（Forge 的 [state] 格式：p0life=20、p0hand=牌名;牌名……）This doesn't look like a state file (Forge's [state] format: p0life=20, p0hand=Card;Card"
     },
     {
-      "dataVa": "0x14278973b",
       "instruction": "0x1402b9fc4",
-      "preview": "This doesn't look like a state file (Forge's [state] format: p0life=20, p0hand=Card;Card…)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278973b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "This doesn't look like a state file (Forge's [state] format: p0life=20, p0hand=Card;Card…)"
     },
     {
-      "dataVa": "0x142789798",
       "instruction": "0x1402ba84c",
-      "preview": "6zxB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789798",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "6zxB"
     }
   ],
-  "pseudocodeStatus": "timeout"
+  "pseudocode": "functions/0x1402b6b80.c",
+  "pseudocodeSha256": "361c4702e142be1afe8e560ccae9d62fce91fc75040ae1359dc4aa8decf147fd",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
 }

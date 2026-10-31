@@ -1,4 +1,5 @@
 {
+  "functionDirectory": "native/functions",
   "functions": [
     "0x14012efe0",
     "0x14013a440",
@@ -23,7 +24,6 @@
     "0x140185880",
     "0x140194770"
   ],
-  "functionDirectory": "native/functions",
-  "sourcePathHint": "src/session.rs",
-  "association": "Observed source/panic references; not original source ownership"
+  "association": "Observed source/panic references; not original source ownership",
+  "sourcePathHint": "src/session.rs"
 }

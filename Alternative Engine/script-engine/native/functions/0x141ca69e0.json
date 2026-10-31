@@ -10,20 +10,26 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141ca69e0: process: timeout\n",
+    "seconds": 12.2335919,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141ca69e0.asm",
   "assemblySha256": "296d6a86a216c23490193fc8c226070cb6445d53936753139daef12b907f2c62",
   "literalReferences": [
     {
-      "dataVa": "0x142c8734c",
       "instruction": "0x141cacde9",
-      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8734c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c95849",
       "instruction": "0x141cb02c7",
-      "preview": "刚选好",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c95849",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "刚选好"
     }
   ],
   "pseudocodeStatus": "timeout"

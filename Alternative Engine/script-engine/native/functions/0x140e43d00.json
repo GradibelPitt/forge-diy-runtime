@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0177855,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140e43d00.asm",
   "assemblySha256": "a74d484da5e6b4799e4adf3ce7fdff1a38b45959d76555321e7c85a143d1e848",
   "literalReferences": [
     {
-      "dataVa": "0x14281f6aa",
       "instruction": "0x140e43eb3",
-      "preview": "ChosenCardManaCostC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f6aa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenCardManaCostC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140e43d00.c",
+  "pseudocodeSha256": "3b9c7034e1e6baa18e421d66f5f52c905096a73e49ea7397ed80ff5f7929d4ff",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

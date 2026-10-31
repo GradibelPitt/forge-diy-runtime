@@ -5,117 +5,127 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.9731348,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421f5a10.asm",
   "assemblySha256": "c73ff958946d6c3b9a89b3051908c11795d3ef7c99c33ca0ad3d14165b27f767",
   "literalReferences": [
     {
-      "dataVa": "0x142cd3909",
       "instruction": "0x1421f5a43",
-      "preview": "ConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3909",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent"
     },
     {
-      "dataVa": "0x142cd305d",
       "instruction": "0x1421f5bf4",
-      "preview": "ConditionHighestLowestAmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd305d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionHighestLowestAmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
     },
     {
-      "dataVa": "0x142cd305d",
       "instruction": "0x1421f5cac",
-      "preview": "ConditionHighestLowestAmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd39ac",
-      "instruction": "0x1421f5db0",
-      "preview": "ConditionDefinedConditionPresentConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd39bc",
-      "instruction": "0x1421f5df6",
-      "preview": "ConditionPresentConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd39bc",
-      "instruction": "0x1421f5e82",
-      "preview": "ConditionPresentConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd39d9",
-      "instruction": "0x1421f5ebf",
-      "preview": "ConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd395d",
-      "instruction": "0x1421f5f5f",
-      "preview": "ConditionOptionalPaid",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd305d",
-      "instruction": "0x1421f5fe8",
-      "preview": "ConditionHighestLowestAmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionHighestLowestAmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
     },
     {
-      "dataVa": "0x142cd395d",
-      "instruction": "0x1421f6031",
-      "preview": "ConditionOptionalPaid",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421f5db0",
+      "dataVa": "0x142cd39ac",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionDefinedConditionPresentConditionZoneConditionCompare"
     },
     {
-      "dataVa": "0x142cd398b",
-      "instruction": "0x1421f60b0",
-      "preview": "Count$OptionalGenericCostPaid.1.0ConditionDefinedConditionPresentConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421f5df6",
+      "dataVa": "0x142cd39bc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresentConditionZoneConditionCompare"
     },
     {
-      "dataVa": "0x142cd39cc",
-      "instruction": "0x1421f61bd",
-      "preview": "ConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421f5e82",
+      "dataVa": "0x142cd39bc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPresentConditionZoneConditionCompare"
     },
     {
+      "instruction": "0x1421f5ebf",
       "dataVa": "0x142cd39d9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionCompare"
+    },
+    {
+      "instruction": "0x1421f5f5f",
+      "dataVa": "0x142cd395d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionOptionalPaid"
+    },
+    {
+      "instruction": "0x1421f5fe8",
+      "dataVa": "0x142cd305d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionHighestLowestAmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
+    },
+    {
+      "instruction": "0x1421f6031",
+      "dataVa": "0x142cd395d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionOptionalPaid"
+    },
+    {
+      "instruction": "0x1421f60b0",
+      "dataVa": "0x142cd398b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$OptionalGenericCostPaid.1.0ConditionDefinedConditionPresentConditionZoneConditionCompare"
+    },
+    {
+      "instruction": "0x1421f61bd",
+      "dataVa": "0x142cd39cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionZoneConditionCompare"
+    },
+    {
       "instruction": "0x1421f656f",
-      "preview": "ConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd39d9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionCompare"
     },
     {
-      "dataVa": "0x142cd39f9",
       "instruction": "0x1421f65fd",
-      "preview": "ConditionCheckSVarConditionSVarCompareIsPresentPresentZoneCheckSVarSVarCompareIsPresent2PresentCompare2PresentZone2ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd39f9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionCheckSVarConditionSVarCompareIsPresentPresentZoneCheckSVarSVarCompareIsPresent2PresentCompare2PresentZone2ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType"
     },
     {
-      "dataVa": "0x142cd3a0b",
       "instruction": "0x1421f6643",
-      "preview": "ConditionSVarCompareIsPresentPresentZoneCheckSVarSVarCompareIsPresent2PresentCompare2PresentZone2ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3a0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionSVarCompareIsPresentPresentZoneCheckSVarSVarCompareIsPresent2PresentCompare2PresentZone2ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType"
     },
     {
-      "dataVa": "0x142cd2f43",
       "instruction": "0x1421f6699",
-      "preview": "PresentCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2f43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PresentCompare"
     },
     {
-      "dataVa": "0x142cd39cc",
       "instruction": "0x1421f6720",
-      "preview": "ConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd39cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionZoneConditionCompare"
     },
     {
-      "dataVa": "0x142cd39cc",
       "instruction": "0x1421f6f91",
-      "preview": "ConditionZoneConditionCompare",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd39cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionZoneConditionCompare"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421f5a10.c",
+  "pseudocodeSha256": "284bb3a5bac69207a752070c7604477560706818baabce8bd2d753e61736f381",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

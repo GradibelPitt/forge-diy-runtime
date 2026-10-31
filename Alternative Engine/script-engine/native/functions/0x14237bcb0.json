@@ -5,39 +5,49 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0490414,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14237bcb0.asm",
   "assemblySha256": "3e337a90f41fe01d70aa84656d888db15336b4fc4c5c41b6eb48abeead139ec3",
   "literalReferences": [
     {
-      "dataVa": "0x142cb9510",
       "instruction": "0x14237bd0d",
-      "preview": "edCardControllerReplacedCardContCumulativeUpkeeptPayGenericCostsCantPayGenericCoastSpellFromHandCantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTarg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9510",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "edCardControllerReplacedCardContCumulativeUpkeeptPayGenericCostsCantPayGenericCoastSpellFromHandCantCastSpellFroonArtifactSpellsCantCastNonArtifrgetedControllerNonTargetedContrTarg"
     },
     {
-      "dataVa": "0x142cc8650",
       "instruction": "0x14237bd15",
-      "preview": "TriggeredCardConst Strike DamageFirst Strike DamDeclare BlockersDeclare AttackerSpell.withEmergeBecomesTargetOncature.targetedByCreature.targete EQ1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8650",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardConst Strike DamageFirst Strike DamDeclare BlockersDeclare AttackerSpell.withEmergeBecomesTargetOncature.targetedByCreature.targete EQ1"
     },
     {
-      "dataVa": "0x142c85890",
       "instruction": "0x14237bd53",
-      "preview": "SourceControllerEffectSourceContRememberedCardLKI",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85890",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SourceControllerEffectSourceContRememberedCardLKI"
     },
     {
-      "dataVa": "0x142cc8700",
       "instruction": "0x14237bd5b",
-      "preview": "TriggeredSourceCPlayer.CardOwneriginalControllerTriggeredOriginaSpellAbility.OppSpellAbility.YouaAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8700",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSourceCPlayer.CardOwneriginalControllerTriggeredOriginaSpellAbility.OppSpellAbility.YouaAbility"
     },
     {
-      "dataVa": "0x142cc8470",
       "instruction": "0x14237be67",
-      "preview": "TriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTarg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8470",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTarg"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14237bcb0.c",
+  "pseudocodeSha256": "f99a1cf66703fb2e4b00b9a2b7abd4e5b395aaa2a31c8e1d13edc4e67116ac74",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

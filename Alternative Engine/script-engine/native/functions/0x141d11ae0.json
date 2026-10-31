@@ -10,38 +10,44 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompile_failed",
+    "diagnostic": "\nRecoverable Error: Unable to find unique hash for varnode",
+    "seconds": 4.4788118,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141d11ae0.asm",
   "assemblySha256": "0f82f4ad71b5eb2c3ab7fbe08616640f8b10fbd97b102d907507ac4a8813fe39",
   "literalReferences": [
     {
-      "dataVa": "0x142c98111",
       "instruction": "0x141d11c00",
-      "preview": "不能这样协助",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c98111",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "不能这样协助"
     },
     {
-      "dataVa": "0x142c90610",
       "instruction": "0x141d11d25",
-      "preview": "没选协助的牌手",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90610",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没选协助的牌手"
     },
     {
-      "dataVa": "0x142c94d78",
       "instruction": "0x141d12ecb",
-      "preview": "CardC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\announce.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c94d78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\announce.rs"
     },
     {
-      "dataVa": "0x142c980f0",
       "instruction": "0x141d15361",
-      "preview": "没有通用法术力可以协助不能这样协助",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c980f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没有通用法术力可以协助不能这样协助"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141d15729",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     }
   ],
   "pseudocodeStatus": "decompile_failed"

@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0180531,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140e44910.asm",
   "assemblySha256": "c07bd4e597d21295eee09de9b91a137c26e48fe757c78b4b73e86178b1f9aeb8",
   "literalReferences": [
     {
-      "dataVa": "0x14281f3b0",
       "instruction": "0x140e4495f",
-      "preview": "mbered))",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f3b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mbered))"
     },
     {
-      "dataVa": "0x14281f3c0",
       "instruction": "0x140e44967",
-      "preview": "Defined(Mem(RemeFlow·ChooseCardStx·IgnoreStatic",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f3c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined(Mem(RemeFlow·ChooseCardStx·IgnoreStatic"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140e44910.c",
+  "pseudocodeSha256": "5154b19f2ddef32b3c973bf9936e3e8da6fd86609175f24a77683c3435082745",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

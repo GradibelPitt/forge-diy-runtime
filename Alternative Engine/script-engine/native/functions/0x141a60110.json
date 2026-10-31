@@ -7,20 +7,26 @@
     "crates/mtg-engine/src/card/effects/flow.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0071194,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a60110.asm",
   "assemblySha256": "a76534fccf5c38480f2995dd0757bc4d3dbac2ac829b45c7656f4b1846dad03d",
   "literalReferences": [
     {
-      "dataVa": "0x142c861fa",
       "instruction": "0x141a60126",
-      "preview": "Permanent固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\effects\\flow.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c861fa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Permanent固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\effects\\flow.rs"
     },
     {
-      "dataVa": "0x142c86203",
       "instruction": "0x141a60174",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\effects\\flow.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86203",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\effects\\flow.rs"
     }
   ],
   "pseudocode": "functions/0x141a60110.c",

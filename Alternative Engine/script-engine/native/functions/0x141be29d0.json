@@ -11,27 +11,37 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 9.6094152,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141be29d0.asm",
   "assemblySha256": "616702f6381016905933a9e652532e1427b4100c68e2a713d216a5ff62b2bb15",
   "literalReferences": [
     {
-      "dataVa": "0x142c937a0",
       "instruction": "0x141be2a7c",
-      "preview": "换区C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c937a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "换区C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs"
     },
     {
-      "dataVa": "0x142c9b2c5",
       "instruction": "0x141be2d19",
-      "preview": "FINALITYSTUNSHIELD有批",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b2c5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FINALITYSTUNSHIELD有批"
     },
     {
-      "dataVa": "0x142c870c8",
       "instruction": "0x141be5911",
-      "preview": "internal error: entered unreachable codeOptionalDeciderNoResolvingCheckStaticActivatorThisTurnCastTargetsValidNumberActivationLimitExecuteXColorXMaxXMax 没有费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c870c8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable codeOptionalDeciderNoResolvingCheckStaticActivatorThisTurnCastTargetsValidNumberActivationLimitExecuteXColorXMaxXMax 没有费用"
     }
   ],
-  "pseudocodeStatus": "timeout"
+  "pseudocode": "functions/0x141be29d0.c",
+  "pseudocodeSha256": "c95c0fff792b27dd4151640f1708c097f24cf56c9275861f81364ae654e4c520",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
 }

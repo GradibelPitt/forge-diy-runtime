@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0055754,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14272ae10.asm",
   "assemblySha256": "ca2d8f440d514637b431cdced86aae33a45e982e89645902ca1ca65053cafa4a",
   "literalReferences": [
     {
-      "dataVa": "0x142d14db8",
       "instruction": "0x14272aeb6",
-      "preview": "fatal runtime error: the System allocator may not use TLS with destructors, aborting\n",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d14db8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "fatal runtime error: the System allocator may not use TLS with destructors, aborting\n"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14272ae10.c",
+  "pseudocodeSha256": "9521ba2dcf5c702a5a0f56ed2a63ce17431dff6e91f03ec80e80fa889c48c0ea",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

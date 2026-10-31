@@ -7,14 +7,19 @@
     "crates/mtg-ai-normal/src/selfsac.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0103748
+  },
   "assembly": "functions/0x140826e20.asm",
   "assemblySha256": "21503023da745c4ad4d4cf750d7b77a3372f0029982c837dc11db60fbf8f74bc",
   "literalReferences": [
     {
-      "dataVa": "0x1427d9590",
       "instruction": "0x14082701f",
-      "preview": "Ȕ}B",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427d9590",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Ȕ}B"
     }
   ],
   "pseudocode": "functions/0x140826e20.c",

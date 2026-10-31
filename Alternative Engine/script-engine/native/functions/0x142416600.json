@@ -5,45 +5,55 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0894949,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142416600.asm",
   "assemblySha256": "ac2e0bb94e43e067c23ec8fc308b6a4c7f6bf7d84548fb17e0365c135213391e",
   "literalReferences": [
     {
-      "dataVa": "0x142cf2422",
       "instruction": "0x142416635",
-      "preview": "CloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2422",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget"
     },
     {
-      "dataVa": "0x142c857e0",
       "instruction": "0x142416682",
-      "preview": "ThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDelayTriggerRemerintedControllerImprintedControlller",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c857e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDelayTriggerRemerintedControllerImprintedControlller"
     },
     {
-      "dataVa": "0x142cb8830",
       "instruction": "0x142416751",
-      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8830",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
     },
     {
-      "dataVa": "0x142cb8840",
       "instruction": "0x142416759",
-      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb93d0",
-      "instruction": "0x142416789",
-      "preview": "llAbilityTargetsCastSA>CollectedTriggeredTargetsckedTargetAndYountroller",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cb8840",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
+    },
+    {
+      "instruction": "0x142416789",
+      "dataVa": "0x142cb93d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "llAbilityTargetsCastSA>CollectedTriggeredTargetsckedTargetAndYountroller"
+    },
+    {
       "instruction": "0x142416791",
-      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8840",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142416600.c",
+  "pseudocodeSha256": "bae655a2deff1dc6d227954661a6eb6284f15b5eff640483237979895c5fd648",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

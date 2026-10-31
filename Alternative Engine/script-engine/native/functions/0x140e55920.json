@@ -9,404 +9,410 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 140e55920: process: timeout\n",
+    "seconds": 12.260749,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140e55920.asm",
   "assemblySha256": "f54ce564c5d1db7aaba59aca80f7802ec468b4ce4122ea8ff5ba48a09a1e7a67",
   "literalReferences": [
     {
-      "dataVa": "0x14281f3b0",
       "instruction": "0x140e55a22",
-      "preview": "mbered))",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f3b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mbered))"
     },
     {
-      "dataVa": "0x14281f3c0",
       "instruction": "0x140e55a2a",
-      "preview": "Defined(Mem(RemeFlow·ChooseCardStx·IgnoreStatic",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f3c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined(Mem(RemeFlow·ChooseCardStx·IgnoreStatic"
     },
     {
-      "dataVa": "0x14281f460",
       "instruction": "0x140e55eac",
-      "preview": "End]",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f460",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "End]"
     },
     {
-      "dataVa": "0x14281f470",
       "instruction": "0x140e55eb5",
-      "preview": "Phase { steps: [Tail(SpellKeyworExtraLoyaltyActsStx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f470",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Phase { steps: [Tail(SpellKeyworExtraLoyaltyActsStx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage"
     },
     {
-      "dataVa": "0x14281f9e0",
       "instruction": "0x140e55fb5",
-      "preview": "SacrificeAllKeyword·Gatepayer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f9e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SacrificeAllKeyword·Gatepayer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: ["
     },
     {
-      "dataVa": "0x14281f8b5",
       "instruction": "0x140e55fd1",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281fee6",
       "instruction": "0x140e560ef",
-      "preview": "EffectSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281fee6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectSource"
     },
     {
-      "dataVa": "0x14281f8b5",
       "instruction": "0x140e56157",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281f8a7",
       "instruction": "0x140e56190",
-      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281f8b5",
       "instruction": "0x140e562ac",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281f8a7",
       "instruction": "0x140e562ce",
-      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281f8ab",
       "instruction": "0x140e56507",
-      "preview": "DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8ab",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageDoneIsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x142820012",
       "instruction": "0x140e5652b",
-      "preview": "DrawToughnessCounterKinds",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142820012",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DrawToughnessCounterKinds"
     },
     {
-      "dataVa": "0x1428201ff",
       "instruction": "0x140e566bf",
-      "preview": "Twicedestination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428201ff",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Twicedestination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)"
     },
     {
-      "dataVa": "0x1428204d0",
       "instruction": "0x140e569d2",
-      "preview": "TriggeredAmountamount: ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428204d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredAmountamount: "
     },
     {
-      "dataVa": "0x14281f8b5",
       "instruction": "0x140e56ba2",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281fa90",
       "instruction": "0x140e56c36",
-      "preview": "ChosenCardTopOfLibraryto: ExileDefined(Itself)Color(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281fa90",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenCardTopOfLibraryto: ExileDefined(Itself)Color("
     },
     {
-      "dataVa": "0x1428200a8",
       "instruction": "0x140e56c7b",
-      "preview": "IsChosenCardMem(ChosenType)Mem(ChosenColor)OpponentPlayerIsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428200a8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsChosenCardMem(ChosenType)Mem(ChosenColor)OpponentPlayerIsImprintedRemembered"
     },
     {
-      "dataVa": "0x14281f8b5",
       "instruction": "0x140e56cb2",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281fee6",
       "instruction": "0x140e56cfd",
-      "preview": "EffectSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281fee6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectSource"
     },
     {
-      "dataVa": "0x1428200b4",
       "instruction": "0x140e56d7e",
-      "preview": "Mem(ChosenType)Mem(ChosenColor)OpponentPlayerIsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428200b4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(ChosenType)Mem(ChosenColor)OpponentPlayerIsImprintedRemembered"
     },
     {
-      "dataVa": "0x1428200c3",
       "instruction": "0x140e56dc2",
-      "preview": "Mem(ChosenColor)OpponentPlayerIsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428200c3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(ChosenColor)OpponentPlayerIsImprintedRemembered"
     },
     {
-      "dataVa": "0x14281f8a7",
       "instruction": "0x140e56de2",
-      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fd36",
-      "instruction": "0x140e56f5e",
-      "preview": "AttachedByDefined$ EnchantedAffectedDefined$ EnchantedCantAttackCantBlockAddPower$ -AddToughness$ -SetPower$ 0SetToughness$ 0RemoveAllAbilitiesCantBeActivateddoesn't untapMustAttac",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1428200d3",
-      "instruction": "0x140e5709f",
-      "preview": "OpponentPlayerIsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1428200db",
-      "instruction": "0x140e570cd",
-      "preview": "PlayerIsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fca0",
-      "instruction": "0x140e570fb",
-      "preview": "[You]",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f8b5",
-      "instruction": "0x140e57128",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f8b5",
-      "instruction": "0x140e5718f",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fee6",
-      "instruction": "0x140e5723e",
-      "preview": "EffectSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1428200e1",
-      "instruction": "0x140e57299",
-      "preview": "IsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f8b5",
-      "instruction": "0x140e572e7",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1428200e1",
-      "instruction": "0x140e57307",
-      "preview": "IsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fee6",
-      "instruction": "0x140e5749e",
-      "preview": "EffectSource",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1428200ec",
-      "instruction": "0x140e57506",
-      "preview": "Remembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f8b5",
-      "instruction": "0x140e58818",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f480",
-      "instruction": "0x140e59018",
-      "preview": "Tail(SpellKeyworExtraLoyaltyActsStx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820515",
-      "instruction": "0x140e59118",
-      "preview": "base: PlayerProtectionFromx: Some(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fca0",
-      "instruction": "0x140e5913c",
-      "preview": "[You]",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820521",
-      "instruction": "0x140e591b0",
-      "preview": "ProtectionFromx: Some(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820470",
-      "instruction": "0x140e59629",
-      "preview": "CantAttackOrBlockmagnet: Some(Defined(Itself))",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fdb3",
-      "instruction": "0x140e596fa",
-      "preview": "RemoveAllAbilitiesCantBeActivateddoesn't untapMustAttackCantBeCast",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1428200d3",
-      "instruction": "0x140e5a69f",
-      "preview": "OpponentPlayerIsImprintedRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14282052f",
-      "instruction": "0x140e5a929",
-      "preview": "x: Some(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f490",
-      "instruction": "0x140e5a9af",
-      "preview": "ExtraLoyaltyActsStx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f4a0",
-      "instruction": "0x140e5a9b7",
-      "preview": "Stx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa5e",
-      "instruction": "0x140e5ab41",
-      "preview": "generic: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f4c0",
-      "instruction": "0x140e5b15b",
-      "preview": "l·SpellKeywordsTail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f4d0",
-      "instruction": "0x140e5b163",
-      "preview": "Tail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820243",
-      "instruction": "0x140e5b1d1",
-      "preview": "[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f4b0",
-      "instruction": "0x140e5b30a",
-      "preview": "Stx·ManaConvertl·SpellKeywordsTail·SpellKeywomage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820235",
-      "instruction": "0x140e5b374",
-      "preview": "any_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f8b5",
-      "instruction": "0x140e5b788",
-      "preview": "IsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f8c1",
-      "instruction": "0x140e5b7b6",
-      "preview": "combat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f4e0",
-      "instruction": "0x140e5b985",
-      "preview": "mage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f4f0",
-      "instruction": "0x140e5b98d",
-      "preview": "Tail·NoCombatDaAttackerUnblockeStx·CantPhaseInd",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f868",
-      "instruction": "0x140e5b9f2",
-      "preview": "Stx·CantPhaseOutTail·CantRegenerateNoCombatDamageReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f879",
-      "instruction": "0x140e5ba24",
-      "preview": "Tail·CantRegenerateNoCombatDamageReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f500",
-      "instruction": "0x140e5bae8",
-      "preview": "AttackerUnblockeStx·CantPhaseInd",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f88d",
-      "instruction": "0x140e5bbf4",
-      "preview": "NoCombatDamageReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f89b",
-      "instruction": "0x140e5bd64",
-      "preview": "ReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14281f8a7",
-      "instruction": "0x140e5beb4",
-      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)"
     },
     {
-      "dataVa": "0x14281f510",
-      "instruction": "0x140e5bf10",
-      "preview": "Stx·CantPhaseInd",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x140e56f5e",
+      "dataVa": "0x14281fd36",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachedByDefined$ EnchantedAffectedDefined$ EnchantedCantAttackCantBlockAddPower$ -AddToughness$ -SetPower$ 0SetToughness$ 0RemoveAllAbilitiesCantBeActivateddoesn't untapMustAttac"
     },
     {
-      "dataVa": "0x142820500",
-      "instruction": "0x140e5d3d3",
-      "preview": "dig: Expr(dig: Fixed(base: PlayerProtectionFromx: Some(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x140e5709f",
+      "dataVa": "0x1428200d3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentPlayerIsImprintedRemembered"
     },
     {
+      "instruction": "0x140e570cd",
+      "dataVa": "0x1428200db",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlayerIsImprintedRemembered"
+    },
+    {
+      "instruction": "0x140e570fb",
+      "dataVa": "0x14281fca0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "[You]"
+    },
+    {
+      "instruction": "0x140e57128",
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5718f",
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5723e",
+      "dataVa": "0x14281fee6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectSource"
+    },
+    {
+      "instruction": "0x140e57299",
+      "dataVa": "0x1428200e1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsImprintedRemembered"
+    },
+    {
+      "instruction": "0x140e572e7",
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e57307",
+      "dataVa": "0x1428200e1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsImprintedRemembered"
+    },
+    {
+      "instruction": "0x140e5749e",
+      "dataVa": "0x14281fee6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectSource"
+    },
+    {
+      "instruction": "0x140e57506",
       "dataVa": "0x1428200ec",
-      "instruction": "0x140e5d536",
-      "preview": "Remembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Remembered"
     },
     {
-      "dataVa": "0x14282050a",
+      "instruction": "0x140e58818",
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e59018",
+      "dataVa": "0x14281f480",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Tail(SpellKeyworExtraLoyaltyActsStx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage"
+    },
+    {
+      "instruction": "0x140e59118",
+      "dataVa": "0x142820515",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "base: PlayerProtectionFromx: Some("
+    },
+    {
+      "instruction": "0x140e5913c",
+      "dataVa": "0x14281fca0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "[You]"
+    },
+    {
+      "instruction": "0x140e591b0",
+      "dataVa": "0x142820521",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ProtectionFromx: Some("
+    },
+    {
+      "instruction": "0x140e59629",
+      "dataVa": "0x142820470",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CantAttackOrBlockmagnet: Some(Defined(Itself))"
+    },
+    {
+      "instruction": "0x140e596fa",
+      "dataVa": "0x14281fdb3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveAllAbilitiesCantBeActivateddoesn't untapMustAttackCantBeCast"
+    },
+    {
+      "instruction": "0x140e5a69f",
+      "dataVa": "0x1428200d3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentPlayerIsImprintedRemembered"
+    },
+    {
+      "instruction": "0x140e5a929",
+      "dataVa": "0x14282052f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "x: Some("
+    },
+    {
+      "instruction": "0x140e5a9af",
+      "dataVa": "0x14281f490",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExtraLoyaltyActsStx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage"
+    },
+    {
+      "instruction": "0x140e5a9b7",
+      "dataVa": "0x14281f4a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Stx·ExtraLoyaltStx·ManaConvertl·SpellKeywordsTail·SpellKeywomage"
+    },
+    {
+      "instruction": "0x140e5ab41",
+      "dataVa": "0x14281fa5e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "generic: colored: ["
+    },
+    {
+      "instruction": "0x140e5b15b",
+      "dataVa": "0x14281f4c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "l·SpellKeywordsTail·SpellKeywomage"
+    },
+    {
+      "instruction": "0x140e5b163",
+      "dataVa": "0x14281f4d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Tail·SpellKeywomage"
+    },
+    {
+      "instruction": "0x140e5b1d1",
+      "dataVa": "0x142820243",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)"
+    },
+    {
+      "instruction": "0x140e5b30a",
+      "dataVa": "0x14281f4b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Stx·ManaConvertl·SpellKeywordsTail·SpellKeywomage"
+    },
+    {
+      "instruction": "0x140e5b374",
+      "dataVa": "0x142820235",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "any_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)"
+    },
+    {
+      "instruction": "0x140e5b788",
+      "dataVa": "0x14281f8b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5b7b6",
+      "dataVa": "0x14281f8c1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "combat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5b985",
+      "dataVa": "0x14281f4e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mage"
+    },
+    {
+      "instruction": "0x140e5b98d",
+      "dataVa": "0x14281f4f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Tail·NoCombatDaAttackerUnblockeStx·CantPhaseInd"
+    },
+    {
+      "instruction": "0x140e5b9f2",
+      "dataVa": "0x14281f868",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Stx·CantPhaseOutTail·CantRegenerateNoCombatDamageReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5ba24",
+      "dataVa": "0x14281f879",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Tail·CantRegenerateNoCombatDamageReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5bae8",
+      "dataVa": "0x14281f500",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackerUnblockeStx·CantPhaseInd"
+    },
+    {
+      "instruction": "0x140e5bbf4",
+      "dataVa": "0x14281f88d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoCombatDamageReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5bd64",
+      "dataVa": "0x14281f89b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReplacedCardMem(DamageDoneIsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5beb4",
+      "dataVa": "0x14281f8a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mem(DamageDoneIsRememberedcombat: Some(true)"
+    },
+    {
+      "instruction": "0x140e5bf10",
+      "dataVa": "0x14281f510",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Stx·CantPhaseInd"
+    },
+    {
+      "instruction": "0x140e5d3d3",
+      "dataVa": "0x142820500",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "dig: Expr(dig: Fixed(base: PlayerProtectionFromx: Some("
+    },
+    {
+      "instruction": "0x140e5d536",
+      "dataVa": "0x1428200ec",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Remembered"
+    },
+    {
       "instruction": "0x140e5d6a6",
-      "preview": "dig: Fixed(base: PlayerProtectionFromx: Some(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14282050a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "dig: Fixed(base: PlayerProtectionFromx: Some("
     }
   ],
   "pseudocodeStatus": "timeout"

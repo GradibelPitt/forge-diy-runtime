@@ -5,93 +5,103 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1457968,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422b5800.asm",
   "assemblySha256": "92427be49382445ed21c185685e0ea84b9c8acff55922ac59a780ba01053e7c2",
   "literalReferences": [
     {
-      "dataVa": "0x142cde409",
       "instruction": "0x1422b5866",
-      "preview": "ReflectPropertyColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde409",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReflectPropertyColorOrTypeValidProduced"
     },
     {
-      "dataVa": "0x142cde418",
       "instruction": "0x1422b598e",
-      "preview": "ColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde418",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorOrTypeValidProduced"
     },
     {
-      "dataVa": "0x142cde423",
       "instruction": "0x1422b5abb",
-      "preview": "ValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde423",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidProduced"
     },
     {
-      "dataVa": "0x142cde409",
       "instruction": "0x1422b5bf1",
-      "preview": "ReflectPropertyColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde409",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReflectPropertyColorOrTypeValidProduced"
     },
     {
-      "dataVa": "0x142cde418",
       "instruction": "0x1422b5c35",
-      "preview": "ColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde418",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorOrTypeValidProduced"
     },
     {
-      "dataVa": "0x142cde423",
       "instruction": "0x1422b5c80",
-      "preview": "ValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdc286",
-      "instruction": "0x1422b5ccd",
-      "preview": "Defined.VillainousChoice 缺 ChoicesExchangeLife 没有牌手",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cde409",
-      "instruction": "0x1422b5dc5",
-      "preview": "ReflectPropertyColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cde418",
-      "instruction": "0x1422b5e2e",
-      "preview": "ColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cde423",
-      "instruction": "0x1422b5f49",
-      "preview": "ValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidProduced"
     },
     {
-      "dataVa": "0x142cde428",
-      "instruction": "0x1422b6034",
-      "preview": "Produced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1422b5ccd",
+      "dataVa": "0x142cdc286",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined.VillainousChoice 缺 ChoicesExchangeLife 没有牌手"
     },
     {
+      "instruction": "0x1422b5dc5",
       "dataVa": "0x142cde409",
-      "instruction": "0x1422b6116",
-      "preview": "ReflectPropertyColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReflectPropertyColorOrTypeValidProduced"
     },
     {
+      "instruction": "0x1422b5e2e",
       "dataVa": "0x142cde418",
-      "instruction": "0x1422b615a",
-      "preview": "ColorOrTypeValidProduced",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorOrTypeValidProduced"
     },
     {
-      "dataVa": "0x142cdc2f0",
+      "instruction": "0x1422b5f49",
+      "dataVa": "0x142cde423",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidProduced"
+    },
+    {
+      "instruction": "0x1422b6034",
+      "dataVa": "0x142cde428",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Produced"
+    },
+    {
+      "instruction": "0x1422b6116",
+      "dataVa": "0x142cde409",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReflectPropertyColorOrTypeValidProduced"
+    },
+    {
+      "instruction": "0x1422b615a",
+      "dataVa": "0x142cde418",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorOrTypeValidProduced"
+    },
+    {
       "instruction": "0x1422b619e",
-      "preview": "DefinedMultiplePiles 的堆数ChangeX 缺 Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc2f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedMultiplePiles 的堆数ChangeX 缺 Defined"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422b5800.c",
+  "pseudocodeSha256": "301062732b34180c88eacee9e5ec3be02823b88141e131c67e4f2c27219c2fc1",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

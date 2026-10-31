@@ -7,212 +7,218 @@
     "crates/mtg-engine/src/card/count/mod.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 32.0994189,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142112f30.asm",
   "assemblySha256": "6f5d755676604113dc571945ce0d8568c0f37b7dfc20e835a26f1aa772cc069f",
   "literalReferences": [
     {
-      "dataVa": "0x142cc8330",
       "instruction": "0x14211304e",
-      "preview": "sVisitedThisTurnAttractionsVisiteYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8330",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sVisitedThisTurnAttractionsVisiteYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc8340",
       "instruction": "0x142113056",
-      "preview": "AttractionsVisiteYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8340",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttractionsVisiteYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc9ab5",
       "instruction": "0x14211384c",
-      "preview": "RememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9ab5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberedChosenCardTriggeredCard"
     },
     {
-      "dataVa": "0x142c85790",
       "instruction": "0x14211398d",
-      "preview": "riggerRememberedIsTriggerRemembeNotChosenEvenOddcmcNotChosenEvenThisTargetedPlayThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDelayTriggerRemerintedControllerImpr",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85790",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "riggerRememberedIsTriggerRemembeNotChosenEvenOddcmcNotChosenEvenThisTargetedPlayThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDelayTriggerRemerintedControllerImpr"
     },
     {
-      "dataVa": "0x142c85880",
       "instruction": "0x142113a08",
-      "preview": "gerRememberedLKISourceControllerEffectSourceContRememberedCardLKI",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85880",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "gerRememberedLKISourceControllerEffectSourceContRememberedCardLKI"
     },
     {
-      "dataVa": "0x142c85820",
       "instruction": "0x142113a10",
-      "preview": "DelayTriggerRemerintedControllerImprintedControlller",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85820",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DelayTriggerRemerintedControllerImprintedControlller"
     },
     {
-      "dataVa": "0x142cc8430",
       "instruction": "0x142113a6c",
-      "preview": "edNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "edNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivi"
     },
     {
-      "dataVa": "0x142cc8440",
       "instruction": "0x142113a74",
-      "preview": "TriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCou",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8440",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCou"
     },
     {
-      "dataVa": "0x142cc8450",
       "instruction": "0x142113a98",
-      "preview": "ObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8450",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCost"
     },
     {
-      "dataVa": "0x142cc8460",
       "instruction": "0x142113aa0",
-      "preview": "TriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUnti",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8460",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUnti"
     },
     {
-      "dataVa": "0x142c857d0",
       "instruction": "0x142113bd5",
-      "preview": "ThisTargetedPlayThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDelayTriggerRemerintedControllerImprintedControlller",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c857d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisTargetedPlayThisTargetedCardbraryRoundedDownTopThirdOfLibrarmberedControllerDelayTriggerRemerintedControllerImprintedControlller"
     },
     {
-      "dataVa": "0x142cc8470",
       "instruction": "0x142113c04",
-      "preview": "TriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTarg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8470",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTarg"
     },
     {
-      "dataVa": "0x142cb95c0",
       "instruction": "0x142113c33",
-      "preview": "TargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard.IsTriggerRetOf ParentTargetPlayer.OpponentOTargetedNextTurnUntilTheEndOfTarRemoveCounterAllRemoveFromCombatAddO",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb95c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetedControllilHostLeavesPlayUntilHostLeavesPmembered+YouCtrlCard.IsTriggerRetOf ParentTargetPlayer.OpponentOTargetedNextTurnUntilTheEndOfTarRemoveCounterAllRemoveFromCombatAddO"
     },
     {
-      "dataVa": "0x142cb8830",
       "instruction": "0x142113c8b",
-      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8830",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
     },
     {
-      "dataVa": "0x142cb8840",
       "instruction": "0x142113c93",
-      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8840",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
     },
     {
-      "dataVa": "0x142cc8420",
       "instruction": "0x142113cd0",
-      "preview": "AmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8420",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCard"
     },
     {
-      "dataVa": "0x142c83770",
       "instruction": "0x142113d01",
-      "preview": "Copy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83770",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Copy"
     },
     {
-      "dataVa": "0x142c83780",
       "instruction": "0x142113d09",
-      "preview": "TriggeredCardLKIC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\rng.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83780",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardLKIC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\rng.rs"
     },
     {
-      "dataVa": "0x142cc83d0",
       "instruction": "0x142114187",
-      "preview": "otal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc83d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "otal"
     },
     {
-      "dataVa": "0x142cc83e0",
       "instruction": "0x14211418f",
-      "preview": "OppGreatestLifeTLifeOppsLostThisYourStartingLifeRememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDiff",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc83e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OppGreatestLifeTLifeOppsLostThisYourStartingLifeRememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDiff"
     },
     {
-      "dataVa": "0x142cb8c70",
       "instruction": "0x1421141b5",
-      "preview": "Turn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8c70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Turn"
     },
     {
-      "dataVa": "0x142cc83f0",
       "instruction": "0x1421141bd",
-      "preview": "LifeOppsLostThisYourStartingLifeRememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDiff",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc83f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeOppsLostThisYourStartingLifeRememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDiff"
     },
     {
-      "dataVa": "0x142cc8370",
       "instruction": "0x1421142d8",
-      "preview": "ouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8370",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc8380",
       "instruction": "0x1421142e0",
-      "preview": "LifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8380",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc8390",
       "instruction": "0x142114306",
-      "preview": "ntedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8390",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ntedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc83a0",
       "instruction": "0x14211430e",
-      "preview": "ImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc83a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc83b0",
       "instruction": "0x142114334",
-      "preview": "eredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc83b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc83c0",
       "instruction": "0x14211433c",
-      "preview": "TriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc83c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc8350",
       "instruction": "0x142114521",
-      "preview": "eYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8350",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc8360",
       "instruction": "0x142114529",
-      "preview": "LifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8360",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     },
     {
-      "dataVa": "0x142cc8400",
       "instruction": "0x14211455f",
-      "preview": "YourStartingLifeRememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDiff",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8400",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "YourStartingLifeRememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDiff"
     },
     {
-      "dataVa": "0x142cc8410",
       "instruction": "0x14211457b",
-      "preview": "RememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCast",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8410",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberedNumberAmountManaProducedNewCardLKICopyTriggeredNewCardObjectsAttackersTriggerObjectsAtTriggeredActivatrentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCast"
     },
     {
-      "dataVa": "0x142cc9b97",
       "instruction": "0x14211468b",
-      "preview": "ThisTurnEntered_Graveyard_from_Battlefield_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9b97",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisTurnEntered_Graveyard_from_Battlefield_"
     },
     {
-      "dataVa": "0x142cc9c09",
       "instruction": "0x142114ad4",
-      "preview": "Card.escaped",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9c09",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Card.escaped"
     }
   ],
   "pseudocode": "functions/0x142112f30.c",

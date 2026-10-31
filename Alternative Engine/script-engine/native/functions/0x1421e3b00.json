@@ -7,896 +7,902 @@
     "crates/mtg-engine/src/card/ability.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 1421e3b00: process: timeout\n",
+    "seconds": 35.0147671,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421e3b00.asm",
   "assemblySha256": "0d164e15e723b1b66a5207aec9b12e1d85e68c8df0ff3fad13240cd750010407",
   "literalReferences": [
     {
-      "dataVa": "0x142cd37e8",
       "instruction": "0x1421e3b59",
-      "preview": "异能嵌套太深OpponentActivePlayerTargetedOwnerTriggeredCardTriggeredNewCardTriggeredCardControllerTriggeredPlayerTriggeredAttackerTriggeredBlockerTriggeredTargetEnchantedEquip",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd37e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "异能嵌套太深OpponentActivePlayerTargetedOwnerTriggeredCardTriggeredNewCardTriggeredCardControllerTriggeredPlayerTriggeredAttackerTriggeredBlockerTriggeredTargetEnchantedEquip"
     },
     {
-      "dataVa": "0x142cd2d17",
       "instruction": "0x1421e3bb5",
-      "preview": "ABDefined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd32d8",
-      "instruction": "0x1421e3c92",
-      "preview": "SPDealDamageCounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTa",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd2d17",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ABDefined"
+    },
+    {
+      "instruction": "0x1421e3c92",
+      "dataVa": "0x142cd32d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SPDealDamageCounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTa"
+    },
+    {
       "instruction": "0x1421e3ce0",
-      "preview": "ABDefined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2d17",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ABDefined"
     },
     {
-      "dataVa": "0x142cd278b",
       "instruction": "0x1421e3d32",
-      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd278b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs"
     },
     {
-      "dataVa": "0x142cd32e4",
       "instruction": "0x1421e3de3",
-      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd32e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll"
     },
     {
-      "dataVa": "0x142cd32ee",
       "instruction": "0x1421e3f18",
-      "preview": "CounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd32ee",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDi"
     },
     {
-      "dataVa": "0x142cd32f9",
       "instruction": "0x1421e4311",
-      "preview": "OptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillSc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3301",
-      "instruction": "0x1421e433c",
-      "preview": "AnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurvei",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd32f9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillSc"
+    },
+    {
+      "instruction": "0x1421e433c",
+      "dataVa": "0x142cd3301",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurvei"
+    },
+    {
       "instruction": "0x1421e437f",
-      "preview": "OptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillSc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd32f9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillSc"
     },
     {
-      "dataVa": "0x142cd330e",
       "instruction": "0x1421e447b",
-      "preview": "OptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCou",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd330e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCou"
     },
     {
-      "dataVa": "0x142cd3a6c",
       "instruction": "0x1421e44e9",
-      "preview": "ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3a6c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgtsTargetsWithDefinedControllerTgtZoneTargetType"
     },
     {
-      "dataVa": "0x142cd3a75",
       "instruction": "0x1421e4582",
-      "preview": "TargetsWithDefinedControllerTgtZoneTargetType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3a75",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithDefinedControllerTgtZoneTargetType"
     },
     {
-      "dataVa": "0x142cd3ae8",
       "instruction": "0x1421e4668",
-      "preview": "TargetMinTargetMaxTargetMin 没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3ae8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetMinTargetMaxTargetMin 没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs"
     },
     {
-      "dataVa": "0x142cd3af1",
       "instruction": "0x1421e4695",
-      "preview": "TargetMaxTargetMin 没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3af1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetMaxTargetMin 没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs"
     },
     {
-      "dataVa": "0x142cd3b04",
       "instruction": "0x1421e46de",
-      "preview": "没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3b04",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs"
     },
     {
-      "dataVa": "0x142cd3afa",
       "instruction": "0x1421e46e9",
-      "preview": "TargetMin 没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3afa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetMin 没有 ValidTgtsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\activated\\mod.rs"
     },
     {
-      "dataVa": "0x142cd32e4",
       "instruction": "0x1421e48e9",
-      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd32e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll"
     },
     {
-      "dataVa": "0x142cd3a91",
       "instruction": "0x1421e49d3",
-      "preview": "TgtZoneTargetType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3a91",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TgtZoneTargetType"
     },
     {
-      "dataVa": "0x142cd3a98",
       "instruction": "0x1421e4a13",
-      "preview": "TargetType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3a98",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetType"
     },
     {
-      "dataVa": "0x142cd3327",
       "instruction": "0x1421e542c",
-      "preview": "VarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3327",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "VarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd36e0",
       "instruction": "0x1421e5709",
-      "preview": "OriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd36e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OriginTappedShuffle"
     },
     {
-      "dataVa": "0x142cd3335",
       "instruction": "0x1421e5905",
-      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3335",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd333d",
       "instruction": "0x1421e5939",
-      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd333d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd3335",
       "instruction": "0x1421e599a",
-      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3335",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd3335",
       "instruction": "0x1421e5a56",
-      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd333d",
-      "instruction": "0x1421e5a8a",
-      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd3335",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
+    },
+    {
+      "instruction": "0x1421e5a8a",
+      "dataVa": "0x142cd333d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
+    },
+    {
       "instruction": "0x1421e5aeb",
-      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3335",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd329d",
       "instruction": "0x1421e5c27",
-      "preview": "HandGraveyardLibraryExileStackCommandSideboard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd329d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HandGraveyardLibraryExileStackCommandSideboard"
     },
     {
-      "dataVa": "0x142cd32aa",
       "instruction": "0x1421e5c43",
-      "preview": "LibraryExileStackCommandSideboard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd32aa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryExileStackCommandSideboard"
     },
     {
-      "dataVa": "0x142cd378c",
       "instruction": "0x1421e6181",
-      "preview": "OptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd378c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalDecider"
     },
     {
-      "dataVa": "0x142cd34f6",
       "instruction": "0x1421e63a2",
-      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd34f6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
     },
     {
-      "dataVa": "0x142cd364b",
       "instruction": "0x1421e6cb3",
-      "preview": "SacValidScryNumNumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd364b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SacValidScryNumNumCardsModeRandom"
     },
     {
-      "dataVa": "0x142cd345a",
       "instruction": "0x1421e6e36",
-      "preview": "RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd345a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RegenerationAbility"
     },
     {
-      "dataVa": "0x142cd333d",
       "instruction": "0x1421e7130",
-      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36ab",
-      "instruction": "0x1421e7a00",
-      "preview": "TokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3758",
-      "instruction": "0x1421e7b57",
-      "preview": "LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3696",
-      "instruction": "0x1421e7bd8",
-      "preview": "ETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd333d",
-      "instruction": "0x1421e7cc4",
-      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd376e",
-      "instruction": "0x1421e7dcb",
-      "preview": "NumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421e7a00",
+      "dataVa": "0x142cd36ab",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
     },
     {
-      "dataVa": "0x142cd3699",
-      "instruction": "0x1421e7e4b",
-      "preview": "DividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd367c",
-      "instruction": "0x1421e7ecc",
-      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3762",
-      "instruction": "0x1421e7f65",
-      "preview": "NumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34f6",
-      "instruction": "0x1421e7fe5",
-      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36d6",
-      "instruction": "0x1421e8041",
-      "preview": "ChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x1421e7b57",
       "dataVa": "0x142cd3758",
-      "instruction": "0x1421e817d",
-      "preview": "LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
     },
     {
-      "dataVa": "0x142cd365a",
-      "instruction": "0x1421e81b1",
-      "preview": "NumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3758",
-      "instruction": "0x1421e8216",
-      "preview": "LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3662",
-      "instruction": "0x1421e8297",
-      "preview": "ModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3662",
-      "instruction": "0x1421e82f4",
-      "preview": "ModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd365a",
-      "instruction": "0x1421e8348",
-      "preview": "NumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd365a",
-      "instruction": "0x1421e8391",
-      "preview": "NumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd367c",
-      "instruction": "0x1421e8411",
-      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3630",
-      "instruction": "0x1421e8488",
-      "preview": "Destination",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd32ee",
-      "instruction": "0x1421e857b",
-      "preview": "CounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd32e4",
-      "instruction": "0x1421e85e7",
-      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd341a",
-      "instruction": "0x1421e89f7",
-      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd367c",
-      "instruction": "0x1421e8ef8",
-      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3768",
-      "instruction": "0x1421e8fbb",
-      "preview": "NumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36e0",
-      "instruction": "0x1421e90ae",
-      "preview": "OriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3445",
-      "instruction": "0x1421e922e",
-      "preview": "嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd367c",
-      "instruction": "0x1421e9278",
-      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd365a",
-      "instruction": "0x1421e9301",
-      "preview": "NumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36e0",
-      "instruction": "0x1421e9381",
-      "preview": "OriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3662",
-      "instruction": "0x1421e943d",
-      "preview": "ModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd358e",
-      "instruction": "0x1421e94ea",
-      "preview": "ReflectPropertyAmountDescChooserYouEach",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3780",
-      "instruction": "0x1421e9551",
-      "preview": "DamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34f6",
-      "instruction": "0x1421e9756",
-      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36b5",
-      "instruction": "0x1421e9a73",
-      "preview": "TokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3653",
-      "instruction": "0x1421e9f27",
-      "preview": "ScryNumNumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3699",
-      "instruction": "0x1421e9fa7",
-      "preview": "DividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3073",
-      "instruction": "0x1421ea040",
-      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3073",
-      "instruction": "0x1421ea11e",
-      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd365a",
-      "instruction": "0x1421ea16a",
-      "preview": "NumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36c0",
-      "instruction": "0x1421ea1c8",
-      "preview": "TokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3686",
-      "instruction": "0x1421ea2c9",
-      "preview": "ControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3686",
-      "instruction": "0x1421ea32b",
-      "preview": "ControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd26d0",
-      "instruction": "0x1421ea39b",
-      "preview": "TargetedC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd367c",
-      "instruction": "0x1421ea4a9",
-      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34f6",
-      "instruction": "0x1421ea578",
-      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36d6",
-      "instruction": "0x1421ea5cc",
-      "preview": "ChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3774",
-      "instruction": "0x1421ea612",
-      "preview": "ValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3630",
-      "instruction": "0x1421ea7a9",
-      "preview": "Destination",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3630",
-      "instruction": "0x1421ea908",
-      "preview": "Destination",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3630",
-      "instruction": "0x1421ea9f0",
-      "preview": "Destination",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd376e",
-      "instruction": "0x1421eab26",
-      "preview": "NumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421ead64",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421eada1",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3073",
-      "instruction": "0x1421eadf2",
-      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd367c",
-      "instruction": "0x1421eb00f",
-      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3762",
-      "instruction": "0x1421eb2ec",
-      "preview": "NumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3762",
-      "instruction": "0x1421eb380",
-      "preview": "NumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36e0",
-      "instruction": "0x1421eb3fe",
-      "preview": "OriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3630",
-      "instruction": "0x1421eb460",
-      "preview": "Destination",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36e0",
-      "instruction": "0x1421eb4b4",
-      "preview": "OriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36cb",
-      "instruction": "0x1421eb4fc",
-      "preview": "TokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3768",
-      "instruction": "0x1421eb725",
-      "preview": "NumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3768",
-      "instruction": "0x1421eb79d",
-      "preview": "NumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x1421e7bd8",
       "dataVa": "0x142cd3696",
-      "instruction": "0x1421eb843",
-      "preview": "ETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
     },
     {
-      "dataVa": "0x142cd32ee",
-      "instruction": "0x1421eb897",
-      "preview": "CounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421e7cc4",
+      "dataVa": "0x142cd333d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDiscardMillScrySurveilSacrificeCounterAttachRegenerate"
     },
     {
-      "dataVa": "0x142cd32e4",
-      "instruction": "0x1421eb903",
-      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421e7dcb",
+      "dataVa": "0x142cd376e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgValidPlayersDamageSourceOptionalDecider"
     },
     {
-      "dataVa": "0x142cd36e6",
-      "instruction": "0x1421ebcd2",
-      "preview": "TappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421e7e4b",
+      "dataVa": "0x142cd3699",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
     },
     {
-      "dataVa": "0x142cd36ec",
-      "instruction": "0x1421ebcef",
-      "preview": "Shuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421e7ecc",
+      "dataVa": "0x142cd367c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
     },
     {
-      "dataVa": "0x142cd352e",
-      "instruction": "0x1421ebd0c",
-      "preview": "LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421e7f65",
+      "dataVa": "0x142cd3762",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
     },
     {
-      "dataVa": "0x142cd3400",
-      "instruction": "0x1421ec0ff",
-      "preview": "ChoicesCharmNumMinCharmNumSubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3407",
-      "instruction": "0x1421ec15b",
-      "preview": "CharmNumMinCharmNumSubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34ff",
-      "instruction": "0x1421ec29d",
-      "preview": "DestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd350e",
-      "instruction": "0x1421ec2fa",
-      "preview": "DestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd351e",
-      "instruction": "0x1421ec352",
-      "preview": "LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd352e",
-      "instruction": "0x1421ec3a0",
-      "preview": "LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2fae",
-      "instruction": "0x1421ec441",
-      "preview": "ProducedChosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd359d",
-      "instruction": "0x1421ec48e",
-      "preview": "AmountDescChooserYouEach",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd35a7",
-      "instruction": "0x1421ec4ce",
-      "preview": "ChooserYouEach",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd35a7",
-      "instruction": "0x1421ec547",
-      "preview": "ChooserYouEach",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3073",
-      "instruction": "0x1421ec6ce",
-      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd365a",
-      "instruction": "0x1421ecba6",
-      "preview": "NumCardsModeRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421ecdb2",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb93a0",
-      "instruction": "0x1421ecdec",
-      "preview": "TriggeredSourceSA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd340f",
-      "instruction": "0x1421ecf02",
-      "preview": "MinCharmNumSubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd35b1",
-      "instruction": "0x1421ed1b3",
-      "preview": "Each",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd1be0",
-      "instruction": "0x1421ed1f4",
-      "preview": "Combo AnyDifferelockerControllerbilityControllerurceSAControllertackerControllerTargetControllerTriggeredTargetCredTargetLKICopyTriggeredTargetLredObjectLKICopyTriggeredObjectLredS",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd347d",
-      "instruction": "0x1421ed349",
-      "preview": "PowerToughnessRemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3482",
-      "instruction": "0x1421ed44f",
-      "preview": "ToughnessRemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd348b",
-      "instruction": "0x1421ed5b2",
-      "preview": "RemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd349e",
-      "instruction": "0x1421ed5f5",
-      "preview": "Types",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34b5",
-      "instruction": "0x1421edbbc",
-      "preview": "KeywordsColorsOverwriteColorsAnimate 加颜色Colorless",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421edd32",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3703",
-      "instruction": "0x1421ede06",
-      "preview": "TransformedGainControlMandatoryCardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421ede3b",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421edf15",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd370e",
-      "instruction": "0x1421edf41",
-      "preview": "GainControlMandatoryCardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd373a",
-      "instruction": "0x1421ee07d",
-      "preview": "Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34bd",
-      "instruction": "0x1421ee11f",
-      "preview": "ColorsOverwriteColorsAnimate 加颜色Colorless",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34c3",
-      "instruction": "0x1421ee16d",
-      "preview": "OverwriteColorsAnimate 加颜色Colorless",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd34d2",
-      "instruction": "0x1421ee55b",
-      "preview": "Animate 加颜色Colorless",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd353d",
-      "instruction": "0x1421ee5df",
-      "preview": "ForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3554",
-      "instruction": "0x1421ee630",
-      "preview": "DigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd355a",
-      "instruction": "0x1421ee6d5",
-      "preview": "ChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3719",
-      "instruction": "0x1421ee7d9",
-      "preview": "MandatoryCardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd36d6",
-      "instruction": "0x1421ee819",
-      "preview": "ChangeTypeOriginTappedShuffle",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3565",
-      "instruction": "0x1421ee8ef",
-      "preview": "RestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2d19",
-      "instruction": "0x1421eef56",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3726",
-      "instruction": "0x1421ef251",
-      "preview": "ChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd341a",
-      "instruction": "0x1421ef7b9",
-      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3722",
-      "instruction": "0x1421efa79",
-      "preview": "CardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x1421e7fe5",
       "dataVa": "0x142cd34f6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421e8041",
+      "dataVa": "0x142cd36d6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e817d",
+      "dataVa": "0x142cd3758",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421e81b1",
+      "dataVa": "0x142cd365a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421e8216",
+      "dataVa": "0x142cd3758",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421e8297",
+      "dataVa": "0x142cd3662",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeRandom"
+    },
+    {
+      "instruction": "0x1421e82f4",
+      "dataVa": "0x142cd3662",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeRandom"
+    },
+    {
+      "instruction": "0x1421e8348",
+      "dataVa": "0x142cd365a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421e8391",
+      "dataVa": "0x142cd365a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421e8411",
+      "dataVa": "0x142cd367c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e8488",
+      "dataVa": "0x142cd3630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Destination"
+    },
+    {
+      "instruction": "0x1421e857b",
+      "dataVa": "0x142cd32ee",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDi"
+    },
+    {
+      "instruction": "0x1421e85e7",
+      "dataVa": "0x142cd32e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll"
+    },
+    {
+      "instruction": "0x1421e89f7",
+      "dataVa": "0x142cd341a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
+    },
+    {
+      "instruction": "0x1421e8ef8",
+      "dataVa": "0x142cd367c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e8fbb",
+      "dataVa": "0x142cd3768",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421e90ae",
+      "dataVa": "0x142cd36e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e922e",
+      "dataVa": "0x142cd3445",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "嵌套的模式咒语RegenerationAbility"
+    },
+    {
+      "instruction": "0x1421e9278",
+      "dataVa": "0x142cd367c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e9301",
+      "dataVa": "0x142cd365a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421e9381",
+      "dataVa": "0x142cd36e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e943d",
+      "dataVa": "0x142cd3662",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeRandom"
+    },
+    {
+      "instruction": "0x1421e94ea",
+      "dataVa": "0x142cd358e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReflectPropertyAmountDescChooserYouEach"
+    },
+    {
+      "instruction": "0x1421e9551",
+      "dataVa": "0x142cd3780",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421e9756",
+      "dataVa": "0x142cd34f6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421e9a73",
+      "dataVa": "0x142cd36b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421e9f27",
+      "dataVa": "0x142cd3653",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ScryNumNumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421e9fa7",
+      "dataVa": "0x142cd3699",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ea040",
+      "dataVa": "0x142cd3073",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
+    },
+    {
+      "instruction": "0x1421ea11e",
+      "dataVa": "0x142cd3073",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
+    },
+    {
+      "instruction": "0x1421ea16a",
+      "dataVa": "0x142cd365a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421ea1c8",
+      "dataVa": "0x142cd36c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ea2c9",
+      "dataVa": "0x142cd3686",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ea32b",
+      "dataVa": "0x142cd3686",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ea39b",
+      "dataVa": "0x142cd26d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetedC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
+    },
+    {
+      "instruction": "0x1421ea4a9",
+      "dataVa": "0x142cd367c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ea578",
+      "dataVa": "0x142cd34f6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ea5cc",
+      "dataVa": "0x142cd36d6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ea612",
+      "dataVa": "0x142cd3774",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ea7a9",
+      "dataVa": "0x142cd3630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Destination"
+    },
+    {
+      "instruction": "0x1421ea908",
+      "dataVa": "0x142cd3630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Destination"
+    },
+    {
+      "instruction": "0x1421ea9f0",
+      "dataVa": "0x142cd3630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Destination"
+    },
+    {
+      "instruction": "0x1421eab26",
+      "dataVa": "0x142cd376e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ead64",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421eada1",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421eadf2",
+      "dataVa": "0x142cd3073",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
+    },
+    {
+      "instruction": "0x1421eb00f",
+      "dataVa": "0x142cd367c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsControllerUntapsETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421eb2ec",
+      "dataVa": "0x142cd3762",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421eb380",
+      "dataVa": "0x142cd3762",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421eb3fe",
+      "dataVa": "0x142cd36e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421eb460",
+      "dataVa": "0x142cd3630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Destination"
+    },
+    {
+      "instruction": "0x1421eb4b4",
+      "dataVa": "0x142cd36e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421eb4fc",
+      "dataVa": "0x142cd36cb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421eb725",
+      "dataVa": "0x142cd3768",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421eb79d",
+      "dataVa": "0x142cd3768",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421eb843",
+      "dataVa": "0x142cd3696",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ETBDividedAsYouChooseTokenOwnerTokenScriptTokenAmountTokenTappedChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421eb897",
+      "dataVa": "0x142cd32ee",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAllUntapAllDi"
+    },
+    {
+      "instruction": "0x1421eb903",
+      "dataVa": "0x142cd32e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumCounterTypeOptionalAnyNumberPlayOptionQuestionAnimatePumpVarNamePumpAllPumpZoneDurationDamageAllDrawGainLifeLoseLifeDestroyDestroyAllPutCounterPutCounterAllTapUntapTapAll"
+    },
+    {
+      "instruction": "0x1421ebcd2",
+      "dataVa": "0x142cd36e6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TappedShuffle"
+    },
+    {
+      "instruction": "0x1421ebcef",
+      "dataVa": "0x142cd36ec",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Shuffle"
+    },
+    {
+      "instruction": "0x1421ebd0c",
+      "dataVa": "0x142cd352e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ec0ff",
+      "dataVa": "0x142cd3400",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesCharmNumMinCharmNumSubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
+    },
+    {
+      "instruction": "0x1421ec15b",
+      "dataVa": "0x142cd3407",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CharmNumMinCharmNumSubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
+    },
+    {
+      "instruction": "0x1421ec29d",
+      "dataVa": "0x142cd34ff",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ec2fa",
+      "dataVa": "0x142cd350e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ec352",
+      "dataVa": "0x142cd351e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ec3a0",
+      "dataVa": "0x142cd352e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ec441",
+      "dataVa": "0x142cd2fae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ProducedChosen"
+    },
+    {
+      "instruction": "0x1421ec48e",
+      "dataVa": "0x142cd359d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountDescChooserYouEach"
+    },
+    {
+      "instruction": "0x1421ec4ce",
+      "dataVa": "0x142cd35a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserYouEach"
+    },
+    {
+      "instruction": "0x1421ec547",
+      "dataVa": "0x142cd35a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserYouEach"
+    },
+    {
+      "instruction": "0x1421ec6ce",
+      "dataVa": "0x142cd3073",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AmountC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\count\\history.rs"
+    },
+    {
+      "instruction": "0x1421ecba6",
+      "dataVa": "0x142cd365a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsModeRandom"
+    },
+    {
+      "instruction": "0x1421ecdb2",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421ecdec",
+      "dataVa": "0x142cb93a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSourceSA"
+    },
+    {
+      "instruction": "0x1421ecf02",
+      "dataVa": "0x142cd340f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MinCharmNumSubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
+    },
+    {
+      "instruction": "0x1421ed1b3",
+      "dataVa": "0x142cd35b1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Each"
+    },
+    {
+      "instruction": "0x1421ed1f4",
+      "dataVa": "0x142cd1be0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Combo AnyDifferelockerControllerbilityControllerurceSAControllertackerControllerTargetControllerTriggeredTargetCredTargetLKICopyTriggeredTargetLredObjectLKICopyTriggeredObjectLredS"
+    },
+    {
+      "instruction": "0x1421ed349",
+      "dataVa": "0x142cd347d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PowerToughnessRemoveCreatureTypesTypes"
+    },
+    {
+      "instruction": "0x1421ed44f",
+      "dataVa": "0x142cd3482",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ToughnessRemoveCreatureTypesTypes"
+    },
+    {
+      "instruction": "0x1421ed5b2",
+      "dataVa": "0x142cd348b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCreatureTypesTypes"
+    },
+    {
+      "instruction": "0x1421ed5f5",
+      "dataVa": "0x142cd349e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Types"
+    },
+    {
+      "instruction": "0x1421edbbc",
+      "dataVa": "0x142cd34b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KeywordsColorsOverwriteColorsAnimate 加颜色Colorless"
+    },
+    {
+      "instruction": "0x1421edd32",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421ede06",
+      "dataVa": "0x142cd3703",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TransformedGainControlMandatoryCardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ede3b",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421edf15",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421edf41",
+      "dataVa": "0x142cd370e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainControlMandatoryCardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ee07d",
+      "dataVa": "0x142cd373a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ee11f",
+      "dataVa": "0x142cd34bd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorsOverwriteColorsAnimate 加颜色Colorless"
+    },
+    {
+      "instruction": "0x1421ee16d",
+      "dataVa": "0x142cd34c3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OverwriteColorsAnimate 加颜色Colorless"
+    },
+    {
+      "instruction": "0x1421ee55b",
+      "dataVa": "0x142cd34d2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Animate 加颜色Colorless"
+    },
+    {
+      "instruction": "0x1421ee5df",
+      "dataVa": "0x142cd353d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForceRevealToControllerDigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ee630",
+      "dataVa": "0x142cd3554",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DigNumChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ee6d5",
+      "dataVa": "0x142cd355a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeValidRestRandomOrder"
+    },
+    {
+      "instruction": "0x1421ee7d9",
+      "dataVa": "0x142cd3719",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MandatoryCardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ee819",
+      "dataVa": "0x142cd36d6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeOriginTappedShuffle"
+    },
+    {
+      "instruction": "0x1421ee8ef",
+      "dataVa": "0x142cd3565",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RestRandomOrder"
+    },
+    {
+      "instruction": "0x1421eef56",
+      "dataVa": "0x142cd2d19",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421ef251",
+      "dataVa": "0x142cd3726",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
+      "instruction": "0x1421ef7b9",
+      "dataVa": "0x142cd341a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SubAbility模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
+    },
+    {
+      "instruction": "0x1421efa79",
+      "dataVa": "0x142cd3722",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardChangeZone 的来源Transformed 不是放进战场LifeAmountNumAttNumDefNumDmgValidPlayersDamageSourceOptionalDecider"
+    },
+    {
       "instruction": "0x1421effe1",
-      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd34f6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeNumDestinationZoneDestinationZone2LibraryPosition2LibraryPositionForceRevealToControllerDigNumChangeValidRestRandomOrder"
     },
     {
-      "dataVa": "0x142cd3424",
       "instruction": "0x1421f029d",
-      "preview": "模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3424",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "模式咒语的子异能取目标嵌套的模式咒语RegenerationAbility"
     },
     {
-      "dataVa": "0x142cd3606",
       "instruction": "0x1421f0657",
-      "preview": "至少两点",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3606",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "至少两点"
     }
   ],
   "pseudocodeStatus": "timeout"

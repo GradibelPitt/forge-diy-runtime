@@ -11,32 +11,37 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0115558
+  },
   "assembly": "functions/0x141d73fb0.asm",
   "assemblySha256": "cbbb2637182b337ed2bbf72cb0aa42e259bf0464840221fb73836eb63d17a164",
   "literalReferences": [
     {
-      "dataVa": "0x142c9b2cd",
       "instruction": "0x141d76131",
-      "preview": "STUNSHIELD有批",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b2cd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "STUNSHIELD有批"
     },
     {
-      "dataVa": "0x142c9cba0",
       "instruction": "0x141d7a631",
-      "preview": "新目标选得不对",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9cba0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "新目标选得不对"
     },
     {
-      "dataVa": "0x142c8f4a7",
       "instruction": "0x141d7ec66",
-      "preview": "internal error: entered unreachable code",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8f4a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable code"
     },
     {
-      "dataVa": "0x142c9a10c",
       "instruction": "0x141d7ed6f",
-      "preview": "进场复制有候选",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9a10c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场复制有候选"
     }
   ],
   "pseudocode": "functions/0x141d73fb0.c",

@@ -5,45 +5,55 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0132395,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140408630.asm",
   "assemblySha256": "992597e95b1e7faa1483a47619c8103244f0467ad5ffbe01c46aeda32e3e5589",
   "literalReferences": [
     {
-      "dataVa": "0x14279aa78",
       "instruction": "0x1404086a9",
-      "preview": "Origin$ BattlefieldValidCard$ Card.Selfactive",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279aa78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Origin$ BattlefieldValidCard$ Card.Selfactive"
     },
     {
-      "dataVa": "0x14279aa8b",
       "instruction": "0x1404086b0",
-      "preview": "ValidCard$ Card.Selfactive",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279aa8b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCard$ Card.Selfactive"
     },
     {
-      "dataVa": "0x14279b04a",
       "instruction": "0x1404087ae",
-      "preview": "Defined$ ExiledWithUntilHostLeavesPlayImprintExiledWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b04a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined$ ExiledWithUntilHostLeavesPlayImprintExiledWith"
     },
     {
-      "dataVa": "0x14279b05d",
       "instruction": "0x1404087cb",
-      "preview": "UntilHostLeavesPlayImprintExiledWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b05d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilHostLeavesPlayImprintExiledWith"
     },
     {
-      "dataVa": "0x14279b070",
       "instruction": "0x1404087e7",
-      "preview": "ImprintExiledWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b070",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ImprintExiledWith"
     },
     {
-      "dataVa": "0x14279b077",
       "instruction": "0x140408800",
-      "preview": "ExiledWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b077",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExiledWith"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140408630.c",
+  "pseudocodeSha256": "f1074395e7e6a44049a31f44917d9116f0af3be757e9b96bb014031bb7006ffd",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

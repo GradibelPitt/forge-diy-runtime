@@ -8,200 +8,206 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 14077c420: process: timeout\n",
+    "seconds": 12.0010876,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14077c420.asm",
   "assemblySha256": "00adb28edd9d7bf379310aa7b82a731fd0f109464df66d56a0f69d62af81785f",
   "literalReferences": [
     {
-      "dataVa": "0x1427cd2d8",
       "instruction": "0x14077ce60",
-      "preview": "namecardIdapi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd2d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "namecardIdapi"
     },
     {
-      "dataVa": "0x1427cd2d8",
       "instruction": "0x14077d189",
-      "preview": "namecardIdapi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd2d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "namecardIdapi"
     },
     {
-      "dataVa": "0x1427cd2d8",
       "instruction": "0x14077d467",
-      "preview": "namecardIdapi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd2d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "namecardIdapi"
     },
     {
-      "dataVa": "0x1427cd2dc",
       "instruction": "0x14077d53a",
-      "preview": "cardIdapi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd2dc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "cardIdapi"
     },
     {
-      "dataVa": "0x1427cd11f",
       "instruction": "0x14077da3d",
-      "preview": "paramsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd11f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "paramsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs"
     },
     {
-      "dataVa": "0x1427cdb00",
       "instruction": "0x14077e050",
-      "preview": "PithingNeedleDigOwnLibrarySac<1/Permanent>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cdb00",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PithingNeedleDigOwnLibrarySac<1/Permanent>"
     },
     {
-      "dataVa": "0x1427cdb0d",
       "instruction": "0x14077e05d",
-      "preview": "DigOwnLibrarySac<1/Permanent>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cdb0d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DigOwnLibrarySac<1/Permanent>"
     },
     {
-      "dataVa": "0x1427cd118",
       "instruction": "0x14077e7cb",
-      "preview": "targetsparamsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd378",
-      "instruction": "0x14077e843",
-      "preview": "minTargets",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd3a0",
-      "instruction": "0x14077e8bb",
-      "preview": "maxTargets",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd6a3",
-      "instruction": "0x14077f16b",
-      "preview": "eEntityForEffect",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd698",
-      "instruction": "0x14077f176",
-      "preview": "chooseSingleEntityForEffect",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd2d8",
-      "instruction": "0x14077f396",
-      "preview": "namecardIdapi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd2d8",
-      "instruction": "0x14077f833",
-      "preview": "namecardIdapi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd960",
-      "instruction": "0x14077fac7",
-      "preview": "ChoiceschooseModeForAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cda70",
-      "instruction": "0x14078019e",
-      "preview": "assignCombatDamage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427cd118",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "targetsparamsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs"
+    },
+    {
+      "instruction": "0x14077e843",
+      "dataVa": "0x1427cd378",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "minTargets"
+    },
+    {
+      "instruction": "0x14077e8bb",
+      "dataVa": "0x1427cd3a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "maxTargets"
+    },
+    {
+      "instruction": "0x14077f16b",
+      "dataVa": "0x1427cd6a3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eEntityForEffect"
+    },
+    {
+      "instruction": "0x14077f176",
+      "dataVa": "0x1427cd698",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "chooseSingleEntityForEffect"
+    },
+    {
+      "instruction": "0x14077f396",
+      "dataVa": "0x1427cd2d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "namecardIdapi"
+    },
+    {
+      "instruction": "0x14077f833",
+      "dataVa": "0x1427cd2d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "namecardIdapi"
+    },
+    {
+      "instruction": "0x14077fac7",
+      "dataVa": "0x1427cd960",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceschooseModeForAbility"
+    },
+    {
+      "instruction": "0x14078019e",
+      "dataVa": "0x1427cda70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "assignCombatDamage"
+    },
+    {
       "instruction": "0x14078190c",
-      "preview": "targetsparamsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd118",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "targetsparamsC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-hard\\src\\decisions.rs"
     },
     {
-      "dataVa": "0x1427cd7b8",
       "instruction": "0x14078197f",
-      "preview": "dudTargetscopy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd7b8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "dudTargetscopy"
     },
     {
-      "dataVa": "0x1427cd918",
       "instruction": "0x140781b09",
-      "preview": "dungeondungeon_room",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd918",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "dungeondungeon_room"
     },
     {
-      "dataVa": "0x1427cd91f",
       "instruction": "0x140781b10",
-      "preview": "dungeon_room",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd91f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "dungeon_room"
     },
     {
-      "dataVa": "0x1427cd5c6",
       "instruction": "0x1407827cc",
-      "preview": "CostSacrificechooseCardsForCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd5c6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CostSacrificechooseCardsForCost"
     },
     {
-      "dataVa": "0x1427cd186",
       "instruction": "0x14078323a",
-      "preview": "LibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd186",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities"
     },
     {
-      "dataVa": "0x1427cd186",
       "instruction": "0x140783773",
-      "preview": "LibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd1a7",
-      "instruction": "0x1407845a1",
-      "preview": "StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd1b3",
-      "instruction": "0x1407845af",
-      "preview": "Sideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd18d",
-      "instruction": "0x1407845bd",
-      "preview": "BattlefieldGraveyardExile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cd198",
-      "instruction": "0x1407845cb",
-      "preview": "GraveyardExile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427cd186",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities"
+    },
+    {
+      "instruction": "0x1407845a1",
+      "dataVa": "0x1427cd1a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StackCommandSideboardtriggersabilities"
+    },
+    {
+      "instruction": "0x1407845af",
+      "dataVa": "0x1427cd1b3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Sideboardtriggersabilities"
+    },
+    {
+      "instruction": "0x1407845bd",
+      "dataVa": "0x1427cd18d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "BattlefieldGraveyardExile?StackCommandSideboardtriggersabilities"
+    },
+    {
+      "instruction": "0x1407845cb",
+      "dataVa": "0x1427cd198",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GraveyardExile?StackCommandSideboardtriggersabilities"
+    },
+    {
       "instruction": "0x1407845d4",
-      "preview": "LibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd186",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities"
     },
     {
-      "dataVa": "0x1427cd182",
       "instruction": "0x1407845e2",
-      "preview": "HandLibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd182",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HandLibraryBattlefieldGraveyardExile?StackCommandSideboardtriggersabilities"
     },
     {
-      "dataVa": "0x1427cd1a1",
       "instruction": "0x1407845f0",
-      "preview": "Exile?StackCommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd1a1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Exile?StackCommandSideboardtriggersabilities"
     },
     {
-      "dataVa": "0x1427cd1ac",
       "instruction": "0x1407845f9",
-      "preview": "CommandSideboardtriggersabilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd1ac",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CommandSideboardtriggersabilities"
     },
     {
-      "dataVa": "0x1427cd7c2",
       "instruction": "0x140784a2b",
-      "preview": "copy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cd7c2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "copy"
     }
   ],
   "pseudocodeStatus": "timeout"

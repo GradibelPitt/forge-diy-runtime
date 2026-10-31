@@ -7,44 +7,49 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0207781
+  },
   "assembly": "functions/0x1401391d0.asm",
   "assemblySha256": "1beffcf0f80df73bdfe202e7e300140d1e5d462972f5094c947439080ea88ff0",
   "literalReferences": [
     {
-      "dataVa": "0x142777448",
       "instruction": "0x140139222",
-      "preview": "card一张牌a card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777448",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "card一张牌a card、"
     },
     {
-      "dataVa": "0x142777f72",
       "instruction": "0x140139284",
-      "preview": "缺少牌的编号Missing card iddev_dump",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777f72",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "缺少牌的编号Missing card iddev_dump"
     },
     {
-      "dataVa": "0x142777f84",
       "instruction": "0x14013928b",
-      "preview": "Missing card iddev_dump",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777f84",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Missing card iddev_dump"
     },
     {
-      "dataVa": "0x1427772d5",
       "instruction": "0x140139388",
-      "preview": "找不到这张牌（局面可能已经变了）Card not found (the game state may have changed)C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427772d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "找不到这张牌（局面可能已经变了）Card not found (the game state may have changed)C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
     },
     {
-      "dataVa": "0x142777305",
       "instruction": "0x14013938f",
-      "preview": "Card not found (the game state may have changed)C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777305",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Card not found (the game state may have changed)C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
     },
     {
-      "dataVa": "0x1427b6568",
       "instruction": "0x140139413",
-      "preview": "(e{B",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b6568",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "(e{B"
     }
   ],
   "pseudocode": "functions/0x1401391d0.c",

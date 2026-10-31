@@ -9,27 +9,37 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 11.2171321,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141d68660.asm",
   "assemblySha256": "3189f02385a84882fa3194234df6d525942c034bfd435c91a66e79fee09bc193",
   "literalReferences": [
     {
-      "dataVa": "0x142c99e10",
       "instruction": "0x141d6c2f6",
-      "preview": "挑的这组牌不合卡面的搭配要求挑的牌名字要各不相同",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99e10",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "挑的这组牌不合卡面的搭配要求挑的牌名字要各不相同"
     },
     {
-      "dataVa": "0x142c99e3a",
       "instruction": "0x141d6c5b8",
-      "preview": "挑的牌名字要各不相同",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99e3a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "挑的牌名字要各不相同"
     },
     {
-      "dataVa": "0x142c99df8",
       "instruction": "0x141d6c62d",
-      "preview": "挑的牌要各属一类挑的这组牌不合卡面的搭配要求挑的牌名字要各不相同",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99df8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "挑的牌要各属一类挑的这组牌不合卡面的搭配要求挑的牌名字要各不相同"
     }
   ],
-  "pseudocodeStatus": "timeout"
+  "pseudocode": "functions/0x141d68660.c",
+  "pseudocodeSha256": "9524221eb438b6616bf0da7f7ebd59acea5d15b6d6a933be6490de4b148fae0e",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
 }

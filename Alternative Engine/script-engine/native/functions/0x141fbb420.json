@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0035829,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fbb420.asm",
   "assemblySha256": "43dedbd11e2fd5e148275743c765bdeaab782a6516c50b4c30db91d53f484134",
   "literalReferences": [
     {
-      "dataVa": "0x142cb9e46",
       "instruction": "0x141fbb441",
-      "preview": "Empower 缺 TypeMoveCounter 没有去处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9e46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Empower 缺 TypeMoveCounter 没有去处"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fbb420.c",
+  "pseudocodeSha256": "c688b9e65b972124d826b9651ccfcd8fead5ebd2f8171aadcd5b310092541e95",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

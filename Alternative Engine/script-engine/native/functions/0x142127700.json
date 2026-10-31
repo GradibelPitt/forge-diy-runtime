@@ -5,1311 +5,1317 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 142127700: process: timeout\n",
+    "seconds": 12.2614258,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142127700.asm",
   "assemblySha256": "6c99e0e64ec8389e5a35b391340548f9b273071fe1e316e7a5a7b1f5a7225420",
   "literalReferences": [
     {
-      "dataVa": "0x142cca2cd",
       "instruction": "0x1421277d2",
-      "preview": "CardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca2cd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x1429bad90",
       "instruction": "0x14212788c",
-      "preview": "CopySpellAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1429bad90",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CopySpellAbility"
     },
     {
-      "dataVa": "0x142cca1cc",
       "instruction": "0x1421278be",
-      "preview": "ValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca1cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZ"
     },
     {
-      "dataVa": "0x142cc9b68",
       "instruction": "0x142127979",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cc9b68",
       "instruction": "0x142127a74",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cca2c4",
       "instruction": "0x142127ace",
-      "preview": "UntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cca2c4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
       "instruction": "0x142127af3",
-      "preview": "UntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca2c4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cca5b5",
       "instruction": "0x142127b2d",
-      "preview": "UntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142127c01",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1c8",
-      "instruction": "0x142127d17",
-      "preview": "UptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1b5",
-      "instruction": "0x142127d5e",
-      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142127da5",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1bc",
-      "instruction": "0x142127e62",
-      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca39f",
-      "instruction": "0x142127f8e",
-      "preview": "NumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca128",
-      "instruction": "0x14212809e",
-      "preview": "RelativeTargetExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounter",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1bc",
-      "instruction": "0x1421280c2",
-      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca3a5",
-      "instruction": "0x142128124",
-      "preview": "RelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x142128225",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca191",
-      "instruction": "0x142128394",
-      "preview": "RememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142128462",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142128504",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9ed8",
-      "instruction": "0x142128609",
-      "preview": "AttachAfterRandomNumControllerAttachedToDefinedNameTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2f5",
-      "instruction": "0x142128665",
-      "preview": "ChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca255",
-      "instruction": "0x14212879f",
-      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca28b",
-      "instruction": "0x14212887e",
-      "preview": "NoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca820",
-      "instruction": "0x142128963",
-      "preview": "DefinedAttackerBlockAllDefined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1b5",
-      "instruction": "0x142128aae",
-      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9ef6",
-      "instruction": "0x142128b95",
-      "preview": "AttachedToDefinedNameTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1ae",
-      "instruction": "0x142128c75",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca167",
-      "instruction": "0x142128d52",
-      "preview": "TypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x1421290d9",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x1421290fb",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca54d",
-      "instruction": "0x142129155",
-      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca575",
-      "instruction": "0x142129204",
-      "preview": "SacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x1421292f8",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca23b",
-      "instruction": "0x142129333",
-      "preview": "ChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca5a2",
-      "instruction": "0x142129355",
-      "preview": "DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca5a2",
-      "instruction": "0x14212939a",
-      "preview": "DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca5af",
-      "instruction": "0x1421293d4",
-      "preview": "HiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca11d",
-      "instruction": "0x142129449",
-      "preview": "GainControlRelativeTargetExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValid",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2d8",
-      "instruction": "0x142129463",
-      "preview": "LibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca255",
-      "instruction": "0x1421294d6",
-      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1fc",
-      "instruction": "0x1421295f8",
-      "preview": "MaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefine",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1f4",
-      "instruction": "0x14212963a",
-      "preview": "ForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForTh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1ae",
-      "instruction": "0x1421296f6",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1e8",
-      "instruction": "0x1421297ef",
-      "preview": "ChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNot",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1ae",
-      "instruction": "0x142129814",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x1421298e4",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1e8",
-      "instruction": "0x142129987",
-      "preview": "ChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNot",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca56b",
-      "instruction": "0x142129aed",
-      "preview": "LifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca730",
-      "instruction": "0x142129c66",
-      "preview": "AnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca67a",
-      "instruction": "0x142129c85",
-      "preview": "MinChoiceAmountPlacerEachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1e8",
-      "instruction": "0x142129cec",
-      "preview": "ChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNot",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca167",
-      "instruction": "0x142129dbf",
-      "preview": "TypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca167",
-      "instruction": "0x142129e12",
-      "preview": "TypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca16c",
-      "instruction": "0x142129e5d",
-      "preview": "HiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEac",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca245",
-      "instruction": "0x14212a058",
-      "preview": "WithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChoo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca245",
-      "instruction": "0x14212a081",
-      "preview": "WithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChoo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca294",
-      "instruction": "0x14212a175",
-      "preview": "ClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca701",
-      "instruction": "0x14212a19d",
-      "preview": "NoteCardsForNoteCards 只认 SelfKWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca294",
-      "instruction": "0x14212a1bd",
-      "preview": "ClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca255",
-      "instruction": "0x14212a27f",
-      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9ef6",
-      "instruction": "0x14212a2b9",
-      "preview": "AttachedToDefinedNameTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9ef6",
-      "instruction": "0x14212a367",
-      "preview": "AttachedToDefinedNameTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9ed8",
-      "instruction": "0x14212a46f",
-      "preview": "AttachAfterRandomNumControllerAttachedToDefinedNameTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1cc",
-      "instruction": "0x14212a5f7",
-      "preview": "ValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1cc",
-      "instruction": "0x14212a615",
-      "preview": "ValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1a0",
-      "instruction": "0x14212a6ed",
-      "preview": "RememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTyp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2fc",
-      "instruction": "0x14212a993",
-      "preview": "Object",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca255",
-      "instruction": "0x14212aa22",
-      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca255",
-      "instruction": "0x14212aa44",
-      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212ac0d",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca28b",
-      "instruction": "0x14212ac59",
-      "preview": "NoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca70d",
-      "instruction": "0x14212acb8",
-      "preview": "NoteCards 只认 SelfKWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2f5",
-      "instruction": "0x14212af7c",
-      "preview": "ChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1ae",
-      "instruction": "0x14212b033",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca82f",
-      "instruction": "0x14212b13e",
-      "preview": "BlockAllDefined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca283",
-      "instruction": "0x14212b186",
-      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc8510",
-      "instruction": "0x14212b1cc",
-      "preview": "UntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca54d",
-      "instruction": "0x14212b375",
-      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1f4",
-      "instruction": "0x14212b466",
-      "preview": "ForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForTh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1ae",
-      "instruction": "0x14212b4ad",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9684",
-      "instruction": "0x14212b4fa",
-      "preview": "ChosenColorDefinedKW 没有 KW",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca5e2",
-      "instruction": "0x14212b514",
-      "preview": "ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x14212b550",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x14212b5f8",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca283",
-      "instruction": "0x14212b665",
-      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca54d",
-      "instruction": "0x14212b6a6",
-      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca722",
-      "instruction": "0x14212b77c",
-      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2b8",
-      "instruction": "0x14212b8a8",
-      "preview": "UntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cca5b5",
-      "instruction": "0x14212b8e2",
-      "preview": "UntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
     },
     {
+      "instruction": "0x142127c01",
       "dataVa": "0x142cc9b68",
-      "instruction": "0x14212b9b6",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
+      "instruction": "0x142127d17",
+      "dataVa": "0x142cca1c8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomP"
+    },
+    {
+      "instruction": "0x142127d5e",
       "dataVa": "0x142cca1b5",
-      "instruction": "0x14212bab6",
-      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy"
     },
     {
-      "dataVa": "0x142cca5be",
-      "instruction": "0x14212baf0",
-      "preview": "ETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x14212bb2a",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x142127da5",
       "dataVa": "0x142cc9b68",
-      "instruction": "0x14212bbb7",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cca1e1",
-      "instruction": "0x14212bca7",
-      "preview": "TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1e1",
-      "instruction": "0x14212bcc5",
-      "preview": "TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212bcff",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x14212be06",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x14212bed1",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca17a",
-      "instruction": "0x14212c246",
-      "preview": "NameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCount",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca17e",
-      "instruction": "0x14212c35d",
-      "preview": "IncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca283",
-      "instruction": "0x14212c598",
-      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca43d",
-      "instruction": "0x14212c623",
-      "preview": "PowerToughnessAbilitiesTriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentT",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca442",
-      "instruction": "0x14212c63c",
-      "preview": "ToughnessAbilitiesTriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9c9a",
-      "instruction": "0x14212c680",
-      "preview": "ColorsConvergeGreatestLeast计数嵌套太深PlusNMinusMinusTimesThriceHalfUpHalfDownThirdUpThirdDownNegativeAbsModPowLimitMaxLimitMin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca44b",
-      "instruction": "0x14212c699",
-      "preview": "AbilitiesTriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCrea",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca454",
-      "instruction": "0x14212c6b2",
-      "preview": "TriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca45c",
-      "instruction": "0x14212c6cb",
-      "preview": "staticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca46b",
-      "instruction": "0x14212c6e4",
-      "preview": "RemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca47d",
-      "instruction": "0x14212c6fd",
-      "preview": "RemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca48c",
-      "instruction": "0x14212c716",
-      "preview": "RemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca49f",
-      "instruction": "0x14212c72f",
-      "preview": "RemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca4aa",
-      "instruction": "0x14212c748",
-      "preview": "RemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca4b4",
-      "instruction": "0x14212c761",
-      "preview": "RemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca4c2",
-      "instruction": "0x14212c77a",
-      "preview": "RemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca4d0",
-      "instruction": "0x14212c793",
-      "preview": "RemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca4df",
-      "instruction": "0x14212c7ac",
-      "preview": "RemoveEnchantmentTypesAddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca4f5",
-      "instruction": "0x14212c7c5",
-      "preview": "AddAllCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2f1",
-      "instruction": "0x14212cb18",
-      "preview": "ModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2e7",
-      "instruction": "0x14212cb65",
-      "preview": "UnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca563",
-      "instruction": "0x14212cc13",
-      "preview": "NumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142878010",
-      "instruction": "0x14212ccb5",
-      "preview": "RevealDiscardAllacks",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca75b",
-      "instruction": "0x14212ccda",
-      "preview": "DiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca76b",
-      "instruction": "0x14212cd2a",
-      "preview": "DiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2a6",
-      "instruction": "0x14212cd78",
-      "preview": "ThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2a6",
-      "instruction": "0x14212cdab",
-      "preview": "ThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca033",
-      "instruction": "0x14212cebb",
-      "preview": "TokenScriptTypeAddToken",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9f0b",
-      "instruction": "0x14212cf0c",
-      "preview": "TokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212d047",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca54d",
-      "instruction": "0x14212d145",
-      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x14212d240",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x14212d259",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca581",
-      "instruction": "0x14212d272",
-      "preview": "ValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca1d5",
-      "instruction": "0x14212d28b",
-      "preview": "CounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurati",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca58c",
-      "instruction": "0x14212d2a4",
-      "preview": "CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca597",
-      "instruction": "0x14212d2bd",
-      "preview": "ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212d63d",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca136",
-      "instruction": "0x14212da6d",
-      "preview": "ExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneCh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca136",
-      "instruction": "0x14212da9a",
-      "preview": "ExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneCh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212db8f",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x142127e62",
       "dataVa": "0x142cca1bc",
-      "instruction": "0x14212dbcb",
-      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA"
     },
     {
-      "dataVa": "0x142cca54d",
-      "instruction": "0x14212dc8a",
-      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142127f8e",
+      "dataVa": "0x142cca39f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgRelativeTarget 的伤害来源"
     },
     {
-      "dataVa": "0x142cca189",
-      "instruction": "0x14212dd90",
-      "preview": "ManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeCh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x14212809e",
+      "dataVa": "0x142cca128",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RelativeTargetExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounter"
     },
     {
-      "dataVa": "0x142cca563",
-      "instruction": "0x14212e1a6",
-      "preview": "NumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421280c2",
+      "dataVa": "0x142cca1bc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA"
     },
     {
-      "dataVa": "0x142cca283",
-      "instruction": "0x14212e44e",
-      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142128124",
+      "dataVa": "0x142cca3a5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RelativeTarget 的伤害来源"
     },
     {
-      "dataVa": "0x142cca23b",
-      "instruction": "0x14212e4f0",
-      "preview": "ChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142128225",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
     },
     {
-      "dataVa": "0x142cca739",
-      "instruction": "0x14212e5f4",
-      "preview": "UseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142128394",
+      "dataVa": "0x142cca191",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeType"
     },
     {
-      "dataVa": "0x142cca74a",
-      "instruction": "0x14212e630",
-      "preview": "OriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142128462",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cca1ae",
-      "instruction": "0x14212e6f2",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142128504",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
+      "instruction": "0x142128609",
+      "dataVa": "0x142cc9ed8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachAfterRandomNumControllerAttachedToDefinedNameTokenOwner"
+    },
+    {
+      "instruction": "0x142128665",
       "dataVa": "0x142cca2f5",
-      "instruction": "0x14212e756",
-      "preview": "ChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserObject"
     },
     {
-      "dataVa": "0x142cca689",
-      "instruction": "0x14212e854",
-      "preview": "PlacerEachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x14212879f",
+      "dataVa": "0x142cca255",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cca230",
-      "instruction": "0x14212e88e",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x14212887e",
+      "dataVa": "0x142cca28b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212e8eb",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142128963",
+      "dataVa": "0x142cca820",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedAttackerBlockAllDefined"
     },
     {
-      "dataVa": "0x142cca262",
-      "instruction": "0x14212ea82",
-      "preview": "DestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca269",
-      "instruction": "0x14212ea9a",
-      "preview": "StrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca275",
-      "instruction": "0x14212eab3",
-      "preview": "RandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca230",
-      "instruction": "0x14212eb97",
-      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x14212ec54",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca5c1",
-      "instruction": "0x14212ecf9",
-      "preview": "ForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca722",
-      "instruction": "0x14212ed55",
-      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212f061",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca033",
-      "instruction": "0x14212f301",
-      "preview": "TokenScriptTypeAddToken",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9f0b",
-      "instruction": "0x14212f352",
-      "preview": "TokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca724",
-      "instruction": "0x14212fa0c",
-      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca72a",
-      "instruction": "0x14212fadc",
-      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212fb7f",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca557",
-      "instruction": "0x14212fc93",
-      "preview": "ValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x14212fe57",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca5e2",
-      "instruction": "0x14212fecc",
-      "preview": "ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca142",
-      "instruction": "0x14212ff08",
-      "preview": "DividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountFo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x14212ff52",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca701",
-      "instruction": "0x142130026",
-      "preview": "NoteCardsForNoteCards 只认 SelfKWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca283",
-      "instruction": "0x14213028e",
-      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca777",
-      "instruction": "0x142130411",
-      "preview": "DefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142130569",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca722",
-      "instruction": "0x1421305ab",
-      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca658",
-      "instruction": "0x1421307d4",
-      "preview": "ChoiceAmount 又点名别的对象MinChoiceAmountPlacerEachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca724",
-      "instruction": "0x142130948",
-      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca72a",
-      "instruction": "0x142130a18",
-      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x142130cea",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x142130f77",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x142130fc0",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x142128aae",
       "dataVa": "0x142cca1b5",
-      "instruction": "0x14213117b",
-      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy"
     },
     {
+      "instruction": "0x142128b95",
+      "dataVa": "0x142cc9ef6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachedToDefinedNameTokenOwner"
+    },
+    {
+      "instruction": "0x142128c75",
       "dataVa": "0x142cca1ae",
-      "instruction": "0x1421311bb",
-      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
     },
     {
+      "instruction": "0x142128d52",
+      "dataVa": "0x142cca167",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefin"
+    },
+    {
+      "instruction": "0x1421290d9",
       "dataVa": "0x142cc9b68",
-      "instruction": "0x1421312d6",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
+      "instruction": "0x1421290fb",
       "dataVa": "0x142cc9b68",
-      "instruction": "0x14213166b",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cc9abf",
-      "instruction": "0x142131672",
-      "preview": "ChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129155",
+      "dataVa": "0x142cca54d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre"
     },
     {
+      "instruction": "0x142129204",
+      "dataVa": "0x142cca575",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x1421292f8",
       "dataVa": "0x142cc9b68",
-      "instruction": "0x142131a81",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
     },
     {
-      "dataVa": "0x142cca658",
-      "instruction": "0x142131afa",
-      "preview": "ChoiceAmount 又点名别的对象MinChoiceAmountPlacerEachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129333",
+      "dataVa": "0x142cca23b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTy"
     },
     {
-      "dataVa": "0x142cca1bc",
-      "instruction": "0x142131dbf",
-      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129355",
+      "dataVa": "0x142cca5a2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
     },
     {
-      "dataVa": "0x142cca67a",
-      "instruction": "0x142131ffb",
-      "preview": "MinChoiceAmountPlacerEachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x14212939a",
+      "dataVa": "0x142cca5a2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
     },
     {
-      "dataVa": "0x142cca750",
-      "instruction": "0x1421320f1",
-      "preview": "DestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421293d4",
+      "dataVa": "0x142cca5af",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
     },
     {
-      "dataVa": "0x142cca21d",
-      "instruction": "0x1421323eb",
-      "preview": "EachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129449",
+      "dataVa": "0x142cca11d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainControlRelativeTargetExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValid"
     },
     {
-      "dataVa": "0x142cca68f",
-      "instruction": "0x14213243d",
-      "preview": "EachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129463",
+      "dataVa": "0x142cca2d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cca209",
-      "instruction": "0x1421324d1",
-      "preview": "CounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntap",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421294d6",
+      "dataVa": "0x142cca255",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
     },
     {
-      "dataVa": "0x142cca724",
-      "instruction": "0x142132b23",
-      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca72a",
-      "instruction": "0x142132bdf",
-      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142132cd2",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca372",
-      "instruction": "0x142132da2",
-      "preview": "ExcessDamageConditionRememberRedirectedExcessNumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca7dd",
-      "instruction": "0x142132eaa",
-      "preview": "PlayerChoicesAttach 既选牌手又选牌RememberAttached",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca806",
-      "instruction": "0x14213301c",
-      "preview": "RememberAttached",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca387",
-      "instruction": "0x142133459",
-      "preview": "RememberRedirectedExcessNumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca39f",
-      "instruction": "0x14213349f",
-      "preview": "NumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca7ea",
-      "instruction": "0x1421338bf",
-      "preview": "Attach 既选牌手又选牌RememberAttached",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x1421295f8",
       "dataVa": "0x142cca1fc",
-      "instruction": "0x142133929",
-      "preview": "MaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefine",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefine"
     },
     {
-      "dataVa": "0x142cca1b5",
-      "instruction": "0x142133979",
-      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x14212963a",
+      "dataVa": "0x142cca1f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForTh"
     },
     {
-      "dataVa": "0x142cca39f",
-      "instruction": "0x142133acb",
-      "preview": "NumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421296f6",
+      "dataVa": "0x142cca1ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
     },
     {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x142133e3e",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421297ef",
+      "dataVa": "0x142cca1e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNot"
     },
     {
-      "dataVa": "0x142cc9b68",
-      "instruction": "0x142134195",
-      "preview": "Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129814",
+      "dataVa": "0x142cca1ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
     },
     {
-      "dataVa": "0x142cca5be",
-      "instruction": "0x1421343b9",
-      "preview": "ETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x1421298e4",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
     },
     {
-      "dataVa": "0x142cc9a9c",
-      "instruction": "0x142134447",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x142129987",
+      "dataVa": "0x142cca1e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNot"
     },
     {
+      "instruction": "0x142129aed",
+      "dataVa": "0x142cca56b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x142129c66",
+      "dataVa": "0x142cca730",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x142129c85",
       "dataVa": "0x142cca67a",
-      "instruction": "0x14213477e",
-      "preview": "MinChoiceAmountPlacerEachExistingCounter 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MinChoiceAmountPlacerEachExistingCounter 的写法"
     },
     {
+      "instruction": "0x142129cec",
+      "dataVa": "0x142cca1e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNot"
+    },
+    {
+      "instruction": "0x142129dbf",
+      "dataVa": "0x142cca167",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefin"
+    },
+    {
+      "instruction": "0x142129e12",
+      "dataVa": "0x142cca167",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefin"
+    },
+    {
+      "instruction": "0x142129e5d",
+      "dataVa": "0x142cca16c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEac"
+    },
+    {
+      "instruction": "0x14212a058",
+      "dataVa": "0x142cca245",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChoo"
+    },
+    {
+      "instruction": "0x14212a081",
+      "dataVa": "0x142cca245",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChoo"
+    },
+    {
+      "instruction": "0x14212a175",
+      "dataVa": "0x142cca294",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212a19d",
+      "dataVa": "0x142cca701",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteCardsForNoteCards 只认 SelfKWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212a1bd",
+      "dataVa": "0x142cca294",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212a27f",
+      "dataVa": "0x142cca255",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212a2b9",
+      "dataVa": "0x142cc9ef6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachedToDefinedNameTokenOwner"
+    },
+    {
+      "instruction": "0x14212a367",
+      "dataVa": "0x142cc9ef6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachedToDefinedNameTokenOwner"
+    },
+    {
+      "instruction": "0x14212a46f",
+      "dataVa": "0x142cc9ed8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttachAfterRandomNumControllerAttachedToDefinedNameTokenOwner"
+    },
+    {
+      "instruction": "0x14212a5f7",
+      "dataVa": "0x142cca1cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZ"
+    },
+    {
+      "instruction": "0x14212a615",
+      "dataVa": "0x142cca1cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZ"
+    },
+    {
+      "instruction": "0x14212a6ed",
+      "dataVa": "0x142cca1a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTyp"
+    },
+    {
+      "instruction": "0x14212a993",
+      "dataVa": "0x142cca2fc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Object"
+    },
+    {
+      "instruction": "0x14212aa22",
+      "dataVa": "0x142cca255",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212aa44",
+      "dataVa": "0x142cca255",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212ac0d",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212ac59",
+      "dataVa": "0x142cca28b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212acb8",
+      "dataVa": "0x142cca70d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteCards 只认 SelfKWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212af7c",
+      "dataVa": "0x142cca2f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserObject"
+    },
+    {
+      "instruction": "0x14212b033",
+      "dataVa": "0x142cca1ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
+    },
+    {
+      "instruction": "0x14212b13e",
+      "dataVa": "0x142cca82f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "BlockAllDefined"
+    },
+    {
+      "instruction": "0x14212b186",
+      "dataVa": "0x142cca283",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212b1cc",
+      "dataVa": "0x142cc8510",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilEndOfCombatTargetedOrControing "
+    },
+    {
+      "instruction": "0x14212b375",
+      "dataVa": "0x142cca54d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre"
+    },
+    {
+      "instruction": "0x14212b466",
+      "dataVa": "0x142cca1f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForTh"
+    },
+    {
+      "instruction": "0x14212b4ad",
+      "dataVa": "0x142cca1ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
+    },
+    {
+      "instruction": "0x14212b4fa",
+      "dataVa": "0x142cc9684",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenColorDefinedKW 没有 KW"
+    },
+    {
+      "instruction": "0x14212b514",
+      "dataVa": "0x142cca5e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212b550",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
+    },
+    {
+      "instruction": "0x14212b5f8",
       "dataVa": "0x142cc9a9c",
-      "instruction": "0x14213490d",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
     },
     {
+      "instruction": "0x14212b665",
+      "dataVa": "0x142cca283",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212b6a6",
+      "dataVa": "0x142cca54d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre"
+    },
+    {
+      "instruction": "0x14212b77c",
+      "dataVa": "0x142cca722",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212b8a8",
+      "dataVa": "0x142cca2b8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212b8e2",
+      "dataVa": "0x142cca5b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212b9b6",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212bab6",
+      "dataVa": "0x142cca1b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy"
+    },
+    {
+      "instruction": "0x14212baf0",
+      "dataVa": "0x142cca5be",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212bb2a",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
+    },
+    {
+      "instruction": "0x14212bbb7",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212bca7",
+      "dataVa": "0x142cca1e1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsC"
+    },
+    {
+      "instruction": "0x14212bcc5",
+      "dataVa": "0x142cca1e1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsC"
+    },
+    {
+      "instruction": "0x14212bcff",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212be06",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
+    },
+    {
+      "instruction": "0x14212bed1",
       "dataVa": "0x142cc9a9c",
-      "instruction": "0x142134b28",
-      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
     },
     {
+      "instruction": "0x14212c246",
+      "dataVa": "0x142cca17a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCount"
+    },
+    {
+      "instruction": "0x14212c35d",
+      "dataVa": "0x142cca17e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCo"
+    },
+    {
+      "instruction": "0x14212c598",
+      "dataVa": "0x142cca283",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212c623",
+      "dataVa": "0x142cca43d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PowerToughnessAbilitiesTriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentT"
+    },
+    {
+      "instruction": "0x14212c63c",
+      "dataVa": "0x142cca442",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ToughnessAbilitiesTriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesA"
+    },
+    {
+      "instruction": "0x14212c680",
+      "dataVa": "0x142cc9c9a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorsConvergeGreatestLeast计数嵌套太深PlusNMinusMinusTimesThriceHalfUpHalfDownThirdUpThirdDownNegativeAbsModPowLimitMaxLimitMin"
+    },
+    {
+      "instruction": "0x14212c699",
+      "dataVa": "0x142cca44b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AbilitiesTriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCrea"
+    },
+    {
+      "instruction": "0x14212c6b2",
+      "dataVa": "0x142cca454",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggersstaticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c6cb",
+      "dataVa": "0x142cca45c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "staticAbilitiesRemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c6e4",
+      "dataVa": "0x142cca46b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveAllAbilitiesRemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c6fd",
+      "dataVa": "0x142cca47d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCardTypesRemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c716",
+      "dataVa": "0x142cca48c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCreatureTypesRemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c72f",
+      "dataVa": "0x142cca49f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveTypesRemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c748",
+      "dataVa": "0x142cca4aa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveTypeRemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c761",
+      "dataVa": "0x142cca4b4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveSubTypesRemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c77a",
+      "dataVa": "0x142cca4c2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveKeywordsRemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c793",
+      "dataVa": "0x142cca4d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveLandTypesRemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c7ac",
+      "dataVa": "0x142cca4df",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveEnchantmentTypesAddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212c7c5",
+      "dataVa": "0x142cca4f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddAllCreatureTypes"
+    },
+    {
+      "instruction": "0x14212cb18",
+      "dataVa": "0x142cca2f1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeChooserObject"
+    },
+    {
+      "instruction": "0x14212cb65",
+      "dataVa": "0x142cca2e7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212cc13",
+      "dataVa": "0x142cca563",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212ccb5",
+      "dataVa": "0x142878010",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RevealDiscardAllacks"
+    },
+    {
+      "instruction": "0x14212ccda",
+      "dataVa": "0x142cca75b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212cd2a",
+      "dataVa": "0x142cca76b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212cd78",
+      "dataVa": "0x142cca2a6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212cdab",
+      "dataVa": "0x142cca2a6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212cebb",
+      "dataVa": "0x142cca033",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenScriptTypeAddToken"
+    },
+    {
+      "instruction": "0x14212cf0c",
+      "dataVa": "0x142cc9f0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenOwner"
+    },
+    {
+      "instruction": "0x14212d047",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212d145",
+      "dataVa": "0x142cca54d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre"
+    },
+    {
+      "instruction": "0x14212d240",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
+    },
+    {
+      "instruction": "0x14212d259",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x14212d272",
+      "dataVa": "0x142cca581",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212d28b",
+      "dataVa": "0x142cca1d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurati"
+    },
+    {
+      "instruction": "0x14212d2a4",
+      "dataVa": "0x142cca58c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212d2bd",
+      "dataVa": "0x142cca597",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212d63d",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212da6d",
+      "dataVa": "0x142cca136",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneCh"
+    },
+    {
+      "instruction": "0x14212da9a",
+      "dataVa": "0x142cca136",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExcessDamageDividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneCh"
+    },
+    {
+      "instruction": "0x14212db8f",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212dbcb",
+      "dataVa": "0x142cca1bc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA"
+    },
+    {
+      "instruction": "0x14212dc8a",
+      "dataVa": "0x142cca54d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGre"
+    },
+    {
+      "instruction": "0x14212dd90",
+      "dataVa": "0x142cca189",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeCh"
+    },
+    {
+      "instruction": "0x14212e1a6",
+      "dataVa": "0x142cca563",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212e44e",
+      "dataVa": "0x142cca283",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212e4f0",
+      "dataVa": "0x142cca23b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTy"
+    },
+    {
+      "instruction": "0x14212e5f4",
+      "dataVa": "0x142cca739",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212e630",
+      "dataVa": "0x142cca74a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212e6f2",
+      "dataVa": "0x142cca1ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
+    },
+    {
+      "instruction": "0x14212e756",
+      "dataVa": "0x142cca2f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserObject"
+    },
+    {
+      "instruction": "0x14212e854",
+      "dataVa": "0x142cca689",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlacerEachExistingCounter 的写法"
+    },
+    {
+      "instruction": "0x14212e88e",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
+    },
+    {
+      "instruction": "0x14212e8eb",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212ea82",
+      "dataVa": "0x142cca262",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212ea9a",
+      "dataVa": "0x142cca269",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212eab3",
+      "dataVa": "0x142cca275",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x14212eb97",
+      "dataVa": "0x142cca230",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPosit"
+    },
+    {
+      "instruction": "0x14212ec54",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x14212ecf9",
+      "dataVa": "0x142cca5c1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212ed55",
+      "dataVa": "0x142cca722",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212f061",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212f301",
+      "dataVa": "0x142cca033",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenScriptTypeAddToken"
+    },
+    {
+      "instruction": "0x14212f352",
+      "dataVa": "0x142cc9f0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenOwner"
+    },
+    {
+      "instruction": "0x14212fa0c",
+      "dataVa": "0x142cca724",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212fadc",
+      "dataVa": "0x142cca72a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14212fb7f",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212fc93",
+      "dataVa": "0x142cca557",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidPlayersNumCardsLifeAmountSacValidSelfValidCards0CounterNum2ValidCards2DefinedPlayerHiddenUntapTypeETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212fe57",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14212fecc",
+      "dataVa": "0x142cca5e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x14212ff08",
+      "dataVa": "0x142cca142",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DividedAsYouChooseReplaceDyingDefinedTypesHiddenKeywordsNameIncorporateManaCostRememberNewCardRememberCopiesChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountFo"
+    },
+    {
+      "instruction": "0x14212ff52",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x142130026",
+      "dataVa": "0x142cca701",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NoteCardsForNoteCards 只认 SelfKWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x14213028e",
+      "dataVa": "0x142cca283",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCardChoicesLibraryPositionUnlessTypeModeChooserObject"
+    },
+    {
+      "instruction": "0x142130411",
+      "dataVa": "0x142cca777",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x142130569",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421305ab",
+      "dataVa": "0x142cca722",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWNumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x1421307d4",
+      "dataVa": "0x142cca658",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceAmount 又点名别的对象MinChoiceAmountPlacerEachExistingCounter 的写法"
+    },
+    {
+      "instruction": "0x142130948",
+      "dataVa": "0x142cca724",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x142130a18",
+      "dataVa": "0x142cca72a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x142130cea",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x142130f77",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x142130fc0",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x14213117b",
+      "dataVa": "0x142cca1b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy"
+    },
+    {
+      "instruction": "0x1421311bb",
+      "dataVa": "0x142cca1ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesUpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlocking"
+    },
+    {
+      "instruction": "0x1421312d6",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x14213166b",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x142131672",
+      "dataVa": "0x142cc9abf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x142131a81",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x142131afa",
+      "dataVa": "0x142cca658",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoiceAmount 又点名别的对象MinChoiceAmountPlacerEachExistingCounter 的写法"
+    },
+    {
+      "instruction": "0x142131dbf",
+      "dataVa": "0x142cca1bc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictA"
+    },
+    {
+      "instruction": "0x142131ffb",
+      "dataVa": "0x142cca67a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MinChoiceAmountPlacerEachExistingCounter 的写法"
+    },
+    {
+      "instruction": "0x1421320f1",
+      "dataVa": "0x142cca750",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x1421323eb",
+      "dataVa": "0x142cca21d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntapExactlyUntapUpToCard"
+    },
+    {
+      "instruction": "0x14213243d",
+      "dataVa": "0x142cca68f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachExistingCounter 的写法"
+    },
+    {
+      "instruction": "0x1421324d1",
+      "dataVa": "0x142cca209",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefinedAndTgtsUntap"
+    },
+    {
+      "instruction": "0x142132b23",
+      "dataVa": "0x142cca724",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumAttNumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x142132bdf",
+      "dataVa": "0x142cca72a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDefAnyNumberUseAllOriginZonesOriginDestinationDiscardValidDescDiscardValidDefinedCardsTgtChoose"
+    },
+    {
+      "instruction": "0x142132cd2",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x142132da2",
+      "dataVa": "0x142cca372",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExcessDamageConditionRememberRedirectedExcessNumDmgRelativeTarget 的伤害来源"
+    },
+    {
+      "instruction": "0x142132eaa",
+      "dataVa": "0x142cca7dd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlayerChoicesAttach 既选牌手又选牌RememberAttached"
+    },
+    {
+      "instruction": "0x14213301c",
+      "dataVa": "0x142cca806",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberAttached"
+    },
+    {
+      "instruction": "0x142133459",
+      "dataVa": "0x142cca387",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberRedirectedExcessNumDmgRelativeTarget 的伤害来源"
+    },
+    {
+      "instruction": "0x14213349f",
       "dataVa": "0x142cca39f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgRelativeTarget 的伤害来源"
+    },
+    {
+      "instruction": "0x1421338bf",
+      "dataVa": "0x142cca7ea",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Attach 既选牌手又选牌RememberAttached"
+    },
+    {
+      "instruction": "0x142133929",
+      "dataVa": "0x142cca1fc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroyStrictAmountRandomPumpZoneDurationNoteCardsClearNotedCardsForThisDefine"
+    },
+    {
+      "instruction": "0x142133979",
+      "dataVa": "0x142cca1b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UpToAnyDamageSourceUptoValidZoneCounterType2TgtZoneChoiceAmountForColorMaxFromEffectCounterNumPerDefinedEachExistingCounterCounterTypeChangeTypeWithCountersTypeTokenBlockingDestroy"
+    },
+    {
+      "instruction": "0x142133acb",
+      "dataVa": "0x142cca39f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgRelativeTarget 的伤害来源"
+    },
+    {
+      "instruction": "0x142133e3e",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x142134195",
+      "dataVa": "0x142cc9b68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined"
+    },
+    {
+      "instruction": "0x1421343b9",
+      "dataVa": "0x142cca5be",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ETBForColor 的 Choices 不看颜色ChoiceTitleWhiteBlueBlackRedGreen"
+    },
+    {
+      "instruction": "0x142134447",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x14213477e",
+      "dataVa": "0x142cca67a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MinChoiceAmountPlacerEachExistingCounter 的写法"
+    },
+    {
+      "instruction": "0x14213490d",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
+      "instruction": "0x142134b28",
+      "dataVa": "0x142cc9a9c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CounterNumTriggeredPlayerRememberedChosenCardTriggeredCard"
+    },
+    {
       "instruction": "0x142134d9f",
-      "preview": "NumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca39f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumDmgRelativeTarget 的伤害来源"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocodeStatus": "timeout"
 }

@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0251329,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422b8980.asm",
   "assemblySha256": "edd5ba83ba624b3ca57359b36cd1e65e45326b61cd60845401452a2f57a4e7ee",
   "literalReferences": [
     {
-      "dataVa": "0x142cde5ef",
       "instruction": "0x1422b89a6",
-      "preview": "WithDifferentPowersWithTotalPowerControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde5ef",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WithDifferentPowersWithTotalPowerControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana"
     },
     {
-      "dataVa": "0x142cde602",
       "instruction": "0x1422b8a69",
-      "preview": "WithTotalPowerControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde602",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WithTotalPowerControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana"
     },
     {
-      "dataVa": "0x142cde610",
       "instruction": "0x1422b8b1f",
-      "preview": "ControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde610",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana"
     },
     {
-      "dataVa": "0x142cde61d",
       "instruction": "0x1422b8be3",
-      "preview": "IncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde61d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422b8980.c",
+  "pseudocodeSha256": "066e70406dc644fe2807f6a0abc30f053275c04bda8f6dac6d569cf15ea6e9f9",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

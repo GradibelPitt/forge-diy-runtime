@@ -18,7 +18,12 @@ if len(sys.argv) >= 4 and sys.argv[1] == 'rules':
         if not matches: matches = [r for r in probes if value.casefold() in r['input'].casefold()]
         tags = {r['normalizedTag'] for r in matches if r['accepted']}
         dispatch = [r for r in read_json(atlas/'catalog/keyword-dispatch.json') if r['tag'] in tags]
-        rows = {'matchedInputs':len(matches), 'examples':matches[:24], 'dispatchCandidates':dispatch[:80],
+        keyword_map = atlas/'catalog/keyword-map.json'
+        overview = []
+        if keyword_map.exists():
+            overview = [{k:v for k,v in row.items() if k not in ('forms','dispatchCandidates')}
+                        for row in read_json(keyword_map)['keywords'] if row['keyword'].casefold()==value.casefold()]
+        rows = {'corpusSummary':overview,'matchedInputs':len(matches), 'examples':matches[:24], 'dispatchCandidates':dispatch[:80],
                 'note':'Individual keyword parsing and static dispatch associations do not prove complete card or gameplay support.'}
     elif operation == 'api':
         data = read_json(atlas/'catalog/script-vocabulary.json')
@@ -45,7 +50,7 @@ if len(sys.argv) >= 4 and sys.argv[1] == 'rules':
             found=[r for r in item.get('literalReferences',[]) if value.casefold() in r['preview'].casefold()]
             if found:rows.append({'va':item['va'],'sourcePathHints':item['sourcePathHints'],'literalReferences':found[:5]})
             if len(rows)==50:break
-    elif operation in ('callers','callees'):
+    elif operation in ('callers','callees','boundaries'):
         cache = project/'work/query-cache'
         cache.mkdir(parents=True,exist_ok=True)
         index = cache/'script-engine-index.sqlite'
@@ -54,12 +59,16 @@ if len(sys.argv) >= 4 and sys.argv[1] == 'rules':
                 shutil.copyfileobj(source,target)
         connection=sqlite3.connect(f'file:{index.as_posix()}?mode=ro',uri=True)
         connection.row_factory=sqlite3.Row
-        address=int(value,0); rva=address-0x140000000 if address>=0x140000000 else address
-        column='target' if operation=='callers' else 'source'
-        rows=[dict(row) for row in connection.execute(f'SELECT * FROM edges WHERE {column}=? ORDER BY source,site',(rva,))]
+        if operation=='boundaries':
+            if value!='all': raise SystemExit('Use: rules boundaries all')
+            rows=[dict(row) for row in connection.execute('SELECT rva,end_rva AS endRva FROM functions ORDER BY rva')]
+        else:
+            address=int(value,0); rva=address-0x140000000 if address>=0x140000000 else address
+            column='target' if operation=='callers' else 'source'
+            rows=[dict(row) for row in connection.execute(f'SELECT * FROM edges WHERE {column}=? ORDER BY source,site',(rva,))]
         connection.close()
     else:
-        raise SystemExit('rules operations: keyword, api, module, request, function, literal, callers, callees')
+        raise SystemExit('rules operations: keyword, api, module, request, function, literal, callers, callees, boundaries')
     print(json.dumps(rows,ensure_ascii=False,indent=2))
     raise SystemExit(0)
 root = pathlib.Path(__file__).resolve().parent.parent/'native'/sys.argv[1]

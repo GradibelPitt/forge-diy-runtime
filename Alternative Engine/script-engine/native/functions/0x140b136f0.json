@@ -8,38 +8,43 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.4170649
+  },
   "assembly": "functions/0x140b136f0.asm",
   "assemblySha256": "61289ecfddad4f3bed00bbade5d73e72fb88573d12b33b6ca57b031bfd0b994d",
   "literalReferences": [
     {
-      "dataVa": "0x1427fb8de",
       "instruction": "0x140b138e4",
-      "preview": "YouCtrlWinsGame",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8de",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "YouCtrlWinsGame"
     },
     {
-      "dataVa": "0x1427fbbd1",
       "instruction": "0x140b142b5",
-      "preview": "Alt {props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fbbd1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Alt {props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs"
     },
     {
-      "dataVa": "0x1427fbbd6",
       "instruction": "0x140b14366",
-      "preview": "props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fbbd6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "props: [Itself]C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\cardflow.rs"
     },
     {
-      "dataVa": "0x1427fb8cc",
       "instruction": "0x140b14538",
-      "preview": "NamedCardCounters(YouCtrlWinsGame",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NamedCardCounters(YouCtrlWinsGame"
     },
     {
-      "dataVa": "0x1427fb8c8",
       "instruction": "0x140b1495a",
-      "preview": "TIMENamedCardCounters(YouCtrlWinsGame",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8c8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TIMENamedCardCounters(YouCtrlWinsGame"
     }
   ],
   "pseudocode": "functions/0x140b136f0.c",

@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/seat/identity.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0066735
+  },
   "assembly": "functions/0x142369160.asm",
   "assemblySha256": "567c3a3e82106fb7fb28181720dd71017f4fdb3d223a42bcd626310eff68435b",
   "literalReferences": [
     {
-      "dataVa": "0x142ce615c",
       "instruction": "0x142369193",
-      "preview": "Name:\nManaCost:no cost\nTypes:IdentityC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\seat\\identity.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce615c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Name:\nManaCost:no cost\nTypes:IdentityC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\seat\\identity.rs"
     },
     {
-      "dataVa": "0x142ce5f7c",
       "instruction": "0x14236924b",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5f7c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs"
     }
   ],
   "pseudocode": "functions/0x142369160.c",

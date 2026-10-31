@@ -9,26 +9,32 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 5.1454864,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141cb4bd0.asm",
   "assemblySha256": "a7bfe45e83e43ef03cec10a7bf6b041f5f1a5c56c345763b1b200238e6c0f1de",
   "literalReferences": [
     {
-      "dataVa": "0x142c95908",
       "instruction": "0x141cba5cf",
-      "preview": "internal error: entered unreachable code: exec_control 只管控制流",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c95908",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable code: exec_control 只管控制流"
     },
     {
-      "dataVa": "0x142c8f368",
       "instruction": "0x141cba7d1",
-      "preview": "在改点C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\dice_modify.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8f368",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "在改点C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\dice_modify.rs"
     },
     {
-      "dataVa": "0x142c8f418",
       "instruction": "0x141cbab2e",
-      "preview": "能改点",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8f418",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "能改点"
     }
   ],
   "pseudocode": "functions/0x141cb4bd0.c",

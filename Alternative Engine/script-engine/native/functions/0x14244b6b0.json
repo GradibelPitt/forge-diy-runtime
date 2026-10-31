@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.020151,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14244b6b0.asm",
   "assemblySha256": "43a2e20abf0d27ae2d38d49a6f1cc36a8286451629d648f0c42f124ffc397df3",
   "literalReferences": [
     {
-      "dataVa": "0x142cb8830",
       "instruction": "0x14244b6df",
-      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8830",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eredSpellAbilityTriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
     },
     {
-      "dataVa": "0x142cb8840",
       "instruction": "0x14244b6e7",
-      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb93d0",
-      "instruction": "0x14244b718",
-      "preview": "llAbilityTargetsCastSA>CollectedTriggeredTargetsckedTargetAndYountroller",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cb8840",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
+    },
+    {
+      "instruction": "0x14244b718",
+      "dataVa": "0x142cb93d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "llAbilityTargetsCastSA>CollectedTriggeredTargetsckedTargetAndYountroller"
+    },
+    {
       "instruction": "0x14244b720",
-      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8840",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAb+withTotalCMCEQX;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,;;;;;;;;"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14244b6b0.c",
+  "pseudocodeSha256": "3541601c5bea4da5cc128195299063f9ba7eb6d2c5cf706bb6b5e47297f22683",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

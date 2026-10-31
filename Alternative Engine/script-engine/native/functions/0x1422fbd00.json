@@ -7,56 +7,62 @@
     "crates/mtg-engine/src/card/trigger/modes.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.641228,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422fbd00.asm",
   "assemblySha256": "a281bf6bfa8bcf4f860ee97e63068c5271a76aeead801aaaede9c373ab569289",
   "literalReferences": [
     {
-      "dataVa": "0x142cb89f0",
       "instruction": "0x1422fbda5",
-      "preview": "ManaFromTreasureManaFromArtifactEquippedByValid ControllerControls",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb89f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaFromTreasureManaFromArtifactEquippedByValid ControllerControls"
     },
     {
-      "dataVa": "0x142cdb5e0",
       "instruction": "0x1422fbdad",
-      "preview": "rsRemovedToPayGE",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb5e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rsRemovedToPayGE"
     },
     {
-      "dataVa": "0x142cd2200",
       "instruction": "0x1422fbdb5",
-      "preview": "CountersRemovedTNumCombatDamageTNumDamageThisTurn ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2200",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CountersRemovedTNumCombatDamageTNumDamageThisTurn "
     },
     {
-      "dataVa": "0x142cdcdc2",
       "instruction": "0x1422fc119",
-      "preview": "YouAttackingPlayer",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcdc2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "YouAttackingPlayer"
     },
     {
-      "dataVa": "0x142cde227",
       "instruction": "0x1422fc404",
-      "preview": "OpponentCharmNum对手选的模式又带模式或选几项",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde227",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentCharmNum对手选的模式又带模式或选几项"
     },
     {
-      "dataVa": "0x142cfe774",
       "instruction": "0x1422fc898",
-      "preview": "PermanentnonInstant+nonSorcery",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cfe774",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PermanentnonInstant+nonSorcery"
     },
     {
-      "dataVa": "0x142cfe77c",
       "instruction": "0x1422fc8a4",
-      "preview": "tnonInstant+nonSorcery",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cfe77c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "tnonInstant+nonSorcery"
     },
     {
-      "dataVa": "0x142cfe77d",
       "instruction": "0x1422fc8b9",
-      "preview": "nonInstant+nonSorcery",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cfe77d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "nonInstant+nonSorcery"
     }
   ],
   "pseudocode": "functions/0x1422fbd00.c",

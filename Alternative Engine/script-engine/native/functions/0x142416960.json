@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0065245,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142416960.asm",
   "assemblySha256": "f0e26ac90cd562100ed6af0a1f26e2b4d5270b4799f5b88052155b18f053c7d9",
   "literalReferences": [
     {
-      "dataVa": "0x142cf2459",
       "instruction": "0x142416981",
-      "preview": "ieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2459",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ieldEffectTarget"
     },
     {
-      "dataVa": "0x142cf244e",
       "instruction": "0x14241698c",
-      "preview": "lity 缺 ShieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf244e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "lity 缺 ShieldEffectTarget"
     },
     {
-      "dataVa": "0x142cf243e",
       "instruction": "0x142416997",
-      "preview": "PreventionSubAbility 缺 ShieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf243e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PreventionSubAbility 缺 ShieldEffectTarget"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142416960.c",
+  "pseudocodeSha256": "3c4d3ae6c6e84902385c4277eec5bb4c8e2ec4852388ff2815fe9f56ef4e9671",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

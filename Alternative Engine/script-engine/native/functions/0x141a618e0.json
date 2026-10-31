@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0042421,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a618e0.asm",
   "assemblySha256": "e6936ce038e66e6d383a62c867287c2f73b8dc741e6e27474d3a7449ab1d8732",
   "literalReferences": [
     {
-      "dataVa": "0x142c863c7",
       "instruction": "0x141a61901",
-      "preview": "gger 缺 ExecuteBranch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c863c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "gger 缺 ExecuteBranch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouc"
     },
     {
-      "dataVa": "0x142c863bb",
       "instruction": "0x141a6190c",
-      "preview": "ImmediateTrigger 缺 ExecuteBranch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble Str",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c863bb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ImmediateTrigger 缺 ExecuteBranch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble Str"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a618e0.c",
+  "pseudocodeSha256": "10845a4d796722b3185948f8359d68b8232e4eb1d9e44312067e4186adf17aa0",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

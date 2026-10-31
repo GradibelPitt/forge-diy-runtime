@@ -5,63 +5,73 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2278599,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141ff24c0.asm",
   "assemblySha256": "12c957797289701eb5fe78abc90c07a4cf5d0baf70d923bb0e5befd82849da16",
   "literalReferences": [
     {
-      "dataVa": "0x142cbb6c0",
       "instruction": "0x141ff252b",
-      "preview": "FaceDownFaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cbb6c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDownFaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
+    },
+    {
       "instruction": "0x141ff2683",
-      "preview": "FaceDownFaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb6c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDownFaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
     },
     {
-      "dataVa": "0x142cbb160",
       "instruction": "0x141ff26ea",
-      "preview": "WithMayLookExiledWithEffectSourceNoExiledWithWithNotedCountersForetoldForetoldCostStaticEffect",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb160",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WithMayLookExiledWithEffectSourceNoExiledWithWithNotedCountersForetoldForetoldCostStaticEffect"
     },
     {
-      "dataVa": "0x142cbb6c8",
       "instruction": "0x141ff27a6",
-      "preview": "FaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb6c8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDownSetTypeFaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
     },
     {
-      "dataVa": "0x142cb9d39",
       "instruction": "0x141ff284f",
-      "preview": " ControlledBy ParentTargetControlledBy ParentTargetedControllerControlledBy TargetedOrControllerRemoveCounterAll 缺 ValidCardsEachDamage 对自己缺 ValidCardsParentTarget 但没",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9d39",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " ControlledBy ParentTargetControlledBy ParentTargetedControllerControlledBy TargetedOrControllerRemoveCounterAll 缺 ValidCardsEachDamage 对自己缺 ValidCardsParentTarget 但没"
     },
     {
-      "dataVa": "0x142cbb719",
       "instruction": "0x141ff28f5",
-      "preview": "面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb719",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "面朝下但不是放逐或进战场 | "
     },
     {
-      "dataVa": "0x142cbb6d7",
       "instruction": "0x141ff2997",
-      "preview": "FaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb6d7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDownPowerFaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
     },
     {
-      "dataVa": "0x142cbb6e4",
       "instruction": "0x141ff29b4",
-      "preview": "FaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb6e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FaceDownToughness面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
     },
     {
-      "dataVa": "0x142cbb6f5",
       "instruction": "0x141ff2aed",
-      "preview": "面朝下只给了力量或防御力面朝下但不是放逐或进战场 | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb6f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "面朝下只给了力量或防御力面朝下但不是放逐或进战场 | "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141ff24c0.c",
+  "pseudocodeSha256": "e25bdaa15e517b25159d3b00c5fa0fb840fae630a6ae7406373af7d7937ee428",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

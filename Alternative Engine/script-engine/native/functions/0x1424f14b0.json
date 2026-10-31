@@ -7,32 +7,37 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0139582
+  },
   "assembly": "functions/0x1424f14b0.asm",
   "assemblySha256": "6e028023412520fce9553d98fa530d7d3803e9c462ab88351bae9998500937d3",
   "literalReferences": [
     {
-      "dataVa": "0x142cd2890",
       "instruction": "0x1424f1549",
-      "preview": "LessonC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2894",
-      "instruction": "0x1424f1555",
-      "preview": "onC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd2890",
-      "instruction": "0x1424f1629",
-      "preview": "LessonC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LessonC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs"
     },
     {
+      "instruction": "0x1424f1555",
       "dataVa": "0x142cd2894",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "onC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs"
+    },
+    {
+      "instruction": "0x1424f1629",
+      "dataVa": "0x142cd2890",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LessonC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs"
+    },
+    {
       "instruction": "0x1424f1635",
-      "preview": "onC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2894",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "onC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\flow_rare.rs"
     }
   ],
   "pseudocode": "functions/0x1424f14b0.c",

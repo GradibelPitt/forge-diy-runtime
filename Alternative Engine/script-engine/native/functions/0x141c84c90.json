@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0175906,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141c84c90.asm",
   "assemblySha256": "00b797cf5973e675c4b5ead3ed9995bf7bd00110d00dff5d7d3a0010dded9d1d",
   "literalReferences": [
     {
-      "dataVa": "0x142ca7298",
       "instruction": "0x141c84fa9",
-      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7298",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian"
     },
     {
-      "dataVa": "0x142ca7298",
       "instruction": "0x141c850e0",
-      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7298",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141c84c90.c",
+  "pseudocodeSha256": "a51040474559d3f5c9ff55d811dbc5136cf65c2788e25fa814750fc016fc7a02",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

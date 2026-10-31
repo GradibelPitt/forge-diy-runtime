@@ -7,32 +7,38 @@
     "crates/mtg-engine/src/card/seat.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0456606,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14237f3c0.asm",
   "assemblySha256": "e33119cdf8e2baaa52ef99c8ce77eaa707881322d62ea09ed912bab30fea26bb",
   "literalReferences": [
     {
-      "dataVa": "0x142ceb2e9",
       "instruction": "0x14237f407",
-      "preview": "CheckDefinedPlayerAttacked",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb2e9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CheckDefinedPlayerAttacked"
     },
     {
-      "dataVa": "0x142c85540",
       "instruction": "0x14237f561",
-      "preview": "AttackersDeclareH",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85540",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackersDeclareH"
     },
     {
-      "dataVa": "0x142ceaefe",
       "instruction": "0x14237f588",
-      "preview": "AttackedTargetAttackingPlayerWon",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceaefe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackedTargetAttackingPlayerWon"
     },
     {
-      "dataVa": "0x142ceb2fb",
       "instruction": "0x14237f72b",
-      "preview": "Attacked",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb2fb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Attacked"
     }
   ],
   "pseudocode": "functions/0x14237f3c0.c",

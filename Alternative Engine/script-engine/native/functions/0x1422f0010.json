@@ -5,69 +5,79 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0579364,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422f0010.asm",
   "assemblySha256": "b748b6e939184994b028f9605a491b35f1a71b1095ba7a45f10a07e9d52bb5ec",
   "literalReferences": [
     {
-      "dataVa": "0x142cdb440",
       "instruction": "0x1422f0075",
-      "preview": "Cost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb440",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cost"
     },
     {
-      "dataVa": "0x142cdb450",
       "instruction": "0x1422f007d",
-      "preview": "Activated.hasTapAbility+!Loyaltycard<1/CARDNAME>Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOageP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb450",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.hasTapAbility+!Loyaltycard<1/CARDNAME>Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOageP"
     },
     {
-      "dataVa": "0x142cdff9a",
       "instruction": "0x1422f009f",
-      "preview": "Activated.nonLand,Activated.ManaAbilityCantPaidFor",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdff9a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.nonLand,Activated.ManaAbilityCantPaidFor"
     },
     {
-      "dataVa": "0x142c85690",
       "instruction": "0x1422f00de",
-      "preview": "Activated.LoyaltActivated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85690",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.LoyaltActivated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
-      "dataVa": "0x142c85610",
       "instruction": "0x1422f010d",
-      "preview": "Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85610",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142c856a0",
       "instruction": "0x1422f013c",
-      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c856a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
-      "dataVa": "0x142c85620",
       "instruction": "0x1422f016b",
-      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85620",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142c85630",
       "instruction": "0x1422f0173",
-      "preview": "Activated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdb460",
-      "instruction": "0x1422f0196",
-      "preview": "Ability+!Loyaltycard<1/CARDNAME>Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDama",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c85630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
+    },
+    {
+      "instruction": "0x1422f0196",
+      "dataVa": "0x142cdb460",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Ability+!Loyaltycard<1/CARDNAME>Discard<1/CARDNACount$CardManaCoaryCreatureNamesAllNonLegendaryCCounterRemovedOnPayCumulativeUpkackerBlockedOnceAttackerBlockedOagePreventedOnceDama"
+    },
+    {
       "instruction": "0x1422f019e",
-      "preview": "Activated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422f0010.c",
+  "pseudocodeSha256": "69226723efd76185b6df8abd32e679f44d81c7793c01378ddde33fdfc953823b",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

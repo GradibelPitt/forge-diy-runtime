@@ -10,20 +10,26 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141c890b0: process: timeout\n",
+    "seconds": 12.2311645,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141c890b0.asm",
   "assemblySha256": "a24c61664bea4995d20230cecd24f1578d7311316e97c7bbf2af785a718f910d",
   "literalReferences": [
     {
-      "dataVa": "0x142d0157e",
       "instruction": "0x141c8c5b8",
-      "preview": "ArmyC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\params.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d0157e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ArmyC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\effects\\params.rs"
     },
     {
-      "dataVa": "0x142c9527a",
       "instruction": "0x141c92883",
-      "preview": "internal error: entered unreachable code: exec_misc 管其余",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9527a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable code: exec_misc 管其余"
     }
   ],
   "pseudocodeStatus": "timeout"

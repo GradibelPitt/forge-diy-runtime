@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/casting/combat_costs.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0831677
+  },
   "assembly": "functions/0x141c72c10.asm",
   "assemblySha256": "aaca7c1f3b7fc4682eff4b04253b50c829210838b1d8e137be439063a39b25f7",
   "literalReferences": [
     {
-      "dataVa": "0x142c94b08",
       "instruction": "0x141c732f6",
-      "preview": "编译时查过",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c94b08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "编译时查过"
     }
   ],
   "pseudocode": "functions/0x141c72c10.c",

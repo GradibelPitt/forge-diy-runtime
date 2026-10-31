@@ -5,135 +5,145 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.4369023,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142170830.asm",
   "assemblySha256": "39f1fb647867e5d91a2d4911184cbf885d9b189c8ea51fed114f48b0b3191028",
   "literalReferences": [
     {
-      "dataVa": "0x142ccc740",
       "instruction": "0x14217085f",
-      "preview": "TargetTypeDefinedMagnetChangeSingleTargetConditionTargetValidTargetingConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ccc740",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetTypeDefinedMagnetChangeSingleTargetConditionTargetValidTargetingConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRe"
     },
     {
-      "dataVa": "0x142ccc74a",
       "instruction": "0x1421708a3",
-      "preview": "DefinedMagnetChangeSingleTargetConditionTargetValidTargetingConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionR",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ccc74a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedMagnetChangeSingleTargetConditionTargetValidTargetingConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionR"
     },
     {
-      "dataVa": "0x142cf36cd",
       "instruction": "0x142170900",
-      "preview": "TriggeredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf36d2",
-      "instruction": "0x142170915",
-      "preview": "eredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf3578",
-      "instruction": "0x14217094c",
-      "preview": "TriggeredSpellAbilityTargetsAtEOTSacrifice",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf3584",
-      "instruction": "0x142170961",
-      "preview": "llAbilityTargetsAtEOTSacrifice",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc757",
-      "instruction": "0x142170a61",
-      "preview": "ChangeSingleTargetConditionTargetValidTargetingConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc82e",
-      "instruction": "0x142170b5c",
-      "preview": "et 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc81e",
-      "instruction": "0x142170b67",
-      "preview": "ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc786",
-      "instruction": "0x142170bc5",
-      "preview": "ConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 De",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc7a2",
-      "instruction": "0x142170cd5",
-      "preview": "ConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc7c9",
-      "instruction": "0x142170e39",
-      "preview": "RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-en",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc7d5",
-      "instruction": "0x142170f0e",
-      "preview": "TargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\fil",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc7e6",
-      "instruction": "0x142170ffd",
-      "preview": "RandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc80d",
-      "instruction": "0x1421710ba",
-      "preview": "riction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ccc7fd",
-      "instruction": "0x1421710c5",
-      "preview": "RandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cca2f5",
-      "instruction": "0x142171208",
-      "preview": "ChooserObject",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cf36cd",
-      "instruction": "0x14217125d",
-      "preview": "TriggeredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary"
     },
     {
+      "instruction": "0x142170915",
       "dataVa": "0x142cf36d2",
-      "instruction": "0x142171272",
-      "preview": "eredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary"
     },
     {
+      "instruction": "0x14217094c",
       "dataVa": "0x142cf3578",
-      "instruction": "0x1421712a9",
-      "preview": "TriggeredSpellAbilityTargetsAtEOTSacrifice",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAbilityTargetsAtEOTSacrifice"
     },
     {
+      "instruction": "0x142170961",
       "dataVa": "0x142cf3584",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "llAbilityTargetsAtEOTSacrifice"
+    },
+    {
+      "instruction": "0x142170a61",
+      "dataVa": "0x142ccc757",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeSingleTargetConditionTargetValidTargetingConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRe"
+    },
+    {
+      "instruction": "0x142170b5c",
+      "dataVa": "0x142ccc82e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "et 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs"
+    },
+    {
+      "instruction": "0x142170b67",
+      "dataVa": "0x142ccc81e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs"
+    },
+    {
+      "instruction": "0x142170bc5",
+      "dataVa": "0x142ccc786",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionTargetsSingleTargetConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 De"
+    },
+    {
+      "instruction": "0x142170cd5",
+      "dataVa": "0x142ccc7a2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionTargetValidTargeting 的写法RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万"
+    },
+    {
+      "instruction": "0x142170e39",
+      "dataVa": "0x142ccc7c9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RandomTargetTargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-en"
+    },
+    {
+      "instruction": "0x142170f0e",
+      "dataVa": "0x142ccc7d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetRestrictionRandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\fil"
+    },
+    {
+      "instruction": "0x142170ffd",
+      "dataVa": "0x142ccc7e6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RandomTargetRestrictionRandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defin"
+    },
+    {
+      "instruction": "0x1421710ba",
+      "dataVa": "0x142ccc80d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "riction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs"
+    },
+    {
+      "instruction": "0x1421710c5",
+      "dataVa": "0x142ccc7fd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RandomTargetRestriction 的写法ChangeSingleTarget 没有 DefinedMagnetC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\filter\\players_defined.rs"
+    },
+    {
+      "instruction": "0x142171208",
+      "dataVa": "0x142cca2f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserObject"
+    },
+    {
+      "instruction": "0x14217125d",
+      "dataVa": "0x142cf36cd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary"
+    },
+    {
+      "instruction": "0x142171272",
+      "dataVa": "0x142cf36d2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eredSpellAbilityNewNameRemoveCardTypesRemoveSubTypesNonLegendary"
+    },
+    {
+      "instruction": "0x1421712a9",
+      "dataVa": "0x142cf3578",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredSpellAbilityTargetsAtEOTSacrifice"
+    },
+    {
       "instruction": "0x1421712be",
-      "preview": "llAbilityTargetsAtEOTSacrifice",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf3584",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "llAbilityTargetsAtEOTSacrifice"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142170830.c",
+  "pseudocodeSha256": "ccce6ccf179efecd5be3886effe6f8c43a7bb1eccbe74fd40033359616d13cc4",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

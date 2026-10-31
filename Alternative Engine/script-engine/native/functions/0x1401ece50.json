@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0208349
+  },
   "assembly": "functions/0x1401ece50.asm",
   "assemblySha256": "99bced8c44033bbc7a246deb8a83e20649ebd5b18d974b51f173ef5aac19b95c",
   "literalReferences": [
     {
-      "dataVa": "0x14277e11d",
       "instruction": "0x1401ed045",
-      "preview": " ＋ 从手牌中选择牌Choose cards from your hand选择永久物Choose permanents从坟墓场中选择牌Choose cards from the graveyard从放逐区中选择牌Choose cards fro",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277e11d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " ＋ 从手牌中选择牌Choose cards from your hand选择永久物Choose permanents从坟墓场中选择牌Choose cards from the graveyard从放逐区中选择牌Choose cards fro"
     }
   ],
   "pseudocode": "functions/0x1401ece50.c",

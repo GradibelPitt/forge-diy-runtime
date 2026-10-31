@@ -7,32 +7,38 @@
     "crates/mtg-engine/src/card/keyword/mod.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.7407457,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a66e20.asm",
   "assemblySha256": "9c65ae0d6d4e7d3261d73de9fb8b4291826986a77dd9550776ea8adc832c2786",
   "literalReferences": [
     {
-      "dataVa": "0x1429bddc0",
       "instruction": "0x141a679d4",
-      "preview": "Cumulative upkeep",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1429bddc0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cumulative upkeep"
     },
     {
-      "dataVa": "0x142c86ed0",
       "instruction": "0x141a67d17",
-      "preview": "ReduceCost$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86ed0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReduceCost$ "
     },
     {
-      "dataVa": "0x142c86e78",
       "instruction": "0x141a6822c",
-      "preview": "Land.Basic",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86e78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Land.Basic"
     },
     {
-      "dataVa": "0x142c86f10",
       "instruction": "0x141a68379",
-      "preview": "结附牌或牌手的灵气ModeChangesZonePhaseAttacksAttackersDeclaredBlocksAttackerBlockedSpellCastDamageDoneDrawnLifeGainedDiscarded",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86f10",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "结附牌或牌手的灵气ModeChangesZonePhaseAttacksAttackersDeclaredBlocksAttackerBlockedSpellCastDamageDoneDrawnLifeGainedDiscarded"
     }
   ],
   "pseudocode": "functions/0x141a66e20.c",

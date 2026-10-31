@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/casting/mana_produce.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0126654
+  },
   "assembly": "functions/0x141e1e790.asm",
   "assemblySha256": "3563af44c8607463850b00ed5b77717ce801d7fcb05a542e6e63d2ece0fbf6eb",
   "literalReferences": [
     {
-      "dataVa": "0x142c9b680",
       "instruction": "0x141e1e7f0",
-      "preview": "没有这种颜色",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b680",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没有这种颜色"
     }
   ],
   "pseudocode": "functions/0x141e1e790.c",

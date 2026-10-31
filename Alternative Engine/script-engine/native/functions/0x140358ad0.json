@@ -5,39 +5,49 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0209665,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140358ad0.asm",
   "assemblySha256": "023dbeba549a0509b7fb7c5f55f848d421c604e9e7c1b7c15e7b5371cc736559",
   "literalReferences": [
     {
-      "dataVa": "0x142796cf8",
       "instruction": "0x140358d31",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796cf8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     },
     {
-      "dataVa": "0x142796ce0",
       "instruction": "0x140358d49",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796ce0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     },
     {
-      "dataVa": "0x142796d28",
       "instruction": "0x140358d5d",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796d28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     },
     {
-      "dataVa": "0x142796d10",
       "instruction": "0x140358d6e",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796d10",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     },
     {
-      "dataVa": "0x142797cc0",
       "instruction": "0x140358d82",
-      "preview": "AlyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797cc0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AlyB"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140358ad0.c",
+  "pseudocodeSha256": "15c29888c948180e2f3649b02e90bd04c39ebcb1b5885a6e509d1e20b979203e",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

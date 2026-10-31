@@ -7,20 +7,26 @@
     "crates/mtg-engine/src/card/script/copy_face.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0729129,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140359150.asm",
   "assemblySha256": "7f1e2453c424c4c2eb052f15bce19cc1e6092c0619cfbddfd44dcbf1c46e4892",
   "literalReferences": [
     {
-      "dataVa": "0x142797098",
       "instruction": "0x14035924f",
-      "preview": "8pyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797098",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "8pyB"
     },
     {
-      "dataVa": "0x142796ba8",
       "instruction": "0x140359267",
-      "preview": "XkyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796ba8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "XkyB"
     }
   ],
   "pseudocode": "functions/0x140359150.c",

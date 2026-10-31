@@ -5,111 +5,121 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.9012464,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14050ad60.asm",
   "assemblySha256": "40be780672bbe5e289d5bfa618789288bdecf8d5c93dfd84b29fedbe51f04892",
   "literalReferences": [
     {
-      "dataVa": "0x1427a396c",
       "instruction": "0x14050adb8",
-      "preview": "UntilEndOfTurnUntilEndOfCombatThisTurnAndNextTurnUntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatY",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a396c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilEndOfTurnUntilEndOfCombatThisTurnAndNextTurnUntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatY"
     },
     {
-      "dataVa": "0x1427a3ab4",
       "instruction": "0x14050adca",
-      "preview": "UntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3ab4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilFacedown"
     },
     {
-      "dataVa": "0x1427a3a9a",
       "instruction": "0x14050addc",
-      "preview": "UntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a9a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilUntapsUntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a3a4f",
       "instruction": "0x14050adee",
-      "preview": "UntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a4f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a399d",
       "instruction": "0x14050ae00",
-      "preview": "UntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a399d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUn"
     },
     {
-      "dataVa": "0x1427a3a62",
       "instruction": "0x14050ae15",
-      "preview": "UntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a62",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a3a0f",
       "instruction": "0x14050ae27",
-      "preview": "UntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a0f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a397a",
       "instruction": "0x14050ae3c",
-      "preview": "UntilEndOfCombatThisTurnAndNextTurnUntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUnt",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a397a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilEndOfCombatThisTurnAndNextTurnUntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUnt"
     },
     {
-      "dataVa": "0x1427a3aa5",
       "instruction": "0x14050ae48",
-      "preview": "UntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3aa5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a398a",
       "instruction": "0x14050ae5a",
-      "preview": "ThisTurnAndNextTurnUntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUnt",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a398a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisTurnAndNextTurnUntilYourNextTurnUntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUnt"
     },
     {
-      "dataVa": "0x1427a39da",
       "instruction": "0x14050ae69",
-      "preview": "UntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayO",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a39da",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayO"
     },
     {
-      "dataVa": "0x1427a39ae",
       "instruction": "0x14050ae7b",
-      "preview": "UntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a39ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilTheEndOfYourNextTurnUntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlay"
     },
     {
-      "dataVa": "0x1427a3a7a",
       "instruction": "0x14050ae8d",
-      "preview": "UntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a7a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a39c7",
       "instruction": "0x14050ae9c",
-      "preview": "UntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTU",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a39c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilYourNextUpkeepUntilTheEndOfYourNextUpkeepUntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTU"
     },
     {
-      "dataVa": "0x1427a3a3b",
       "instruction": "0x14050aeb4",
-      "preview": "UntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a3b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown"
     },
     {
-      "dataVa": "0x1427a39f5",
       "instruction": "0x14050aec6",
-      "preview": "UntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUnti",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a39f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilTheEndOfYourNextUntapUntilEndOfCombatYourNextTurnUntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUnti"
     },
     {
-      "dataVa": "0x1427a3a2b",
       "instruction": "0x14050aed8",
-      "preview": "UntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3a2b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UntilNextEndStepUntilYourNextEndStepUntilHostLeavesPlayUntilHostLeavesPlayOrEOTUntilHostLeavesPlayOrEndOfCombatUntilUntapsUntilUnattachedUntilFacedown"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14050ad60.c",
+  "pseudocodeSha256": "2fee6317bc32a0aacb7af25f94fdfdcc5465f5bb872b3829c63846ef607d1d4f",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

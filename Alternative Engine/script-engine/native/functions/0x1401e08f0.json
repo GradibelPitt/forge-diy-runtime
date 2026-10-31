@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0045765,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1401e08f0.asm",
   "assemblySha256": "0c8b482b4a23ef08f70d1bcbee054d3141035228858ba426fdc97552d3c8787b",
   "literalReferences": [
     {
-      "dataVa": "0x14277dc7a",
       "instruction": "0x1401e092f",
-      "preview": "搭载Crewtypeplayercard选择此牌Choose this card选为目标Target this取消选择Deselect你You",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277dc7a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "搭载Crewtypeplayercard选择此牌Choose this card选为目标Target this取消选择Deselect你You"
     },
     {
-      "dataVa": "0x14277dc80",
       "instruction": "0x1401e0936",
-      "preview": "Crewtypeplayercard选择此牌Choose this card选为目标Target this取消选择Deselect你You",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277dc80",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Crewtypeplayercard选择此牌Choose this card选为目标Target this取消选择Deselect你You"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1401e08f0.c",
+  "pseudocodeSha256": "af4adcfe888bf349eeccfe6a5492706f2235d00e5c6fc098679ee6903e6dc061",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1126067,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140854b30.asm",
   "assemblySha256": "13c8b886e861fdd2c3c7f5eeeca11d2f54e1e42eb29a91179befed1eced4399b",
   "literalReferences": [
     {
-      "dataVa": "0x1427d99c5",
       "instruction": "0x140854be2",
-      "preview": ", spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427d99c5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ", spell: , free:controller: Some(Defined(TargetedController(CopyPermanentPlayCopySpellPermanentDB$ CounterDB$ ChangeTargetsDB$ CopySpellAbilityDB$ ControlSpell"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140854b30.c",
+  "pseudocodeSha256": "5be21aa1e7dadffda582d08555c093f0eaacdb0e7925de508bd0f041e7243294",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": true
 }

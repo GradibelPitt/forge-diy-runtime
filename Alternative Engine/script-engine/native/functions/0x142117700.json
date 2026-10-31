@@ -5,45 +5,55 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1835757,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142117700.asm",
   "assemblySha256": "87af5b1340f7a0d827a63cdfc67452a88bc49594de609117e56df3848e706b32",
   "literalReferences": [
     {
-      "dataVa": "0x142cc84d0",
       "instruction": "0x14211784b",
-      "preview": "CardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc84d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     },
     {
-      "dataVa": "0x142cc8480",
       "instruction": "0x142117941",
-      "preview": "rentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8480",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rentCardManaCostDifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     },
     {
-      "dataVa": "0x142cc8490",
       "instruction": "0x142117949",
-      "preview": "DifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8490",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentCardManDifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     },
     {
-      "dataVa": "0x142cc84a0",
       "instruction": "0x14211797f",
-      "preview": "DifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc84a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     },
     {
-      "dataVa": "0x142cc84b0",
       "instruction": "0x1421179ae",
-      "preview": "DifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc84b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     },
     {
-      "dataVa": "0x142cc84c0",
       "instruction": "0x1421179dd",
-      "preview": "CastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc84c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142117700.c",
+  "pseudocodeSha256": "5eed190a37393bd688ddd0b7fde9427020f7a35a5757f69ebbcd91efc1a9ed74",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

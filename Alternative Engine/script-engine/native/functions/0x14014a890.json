@@ -8,32 +8,37 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1220145
+  },
   "assembly": "functions/0x14014a890.asm",
   "assemblySha256": "155a5d573f93cb15b4b8eadce18239a97bc54bcc95ea0b2a19ab6ac385d3a856",
   "literalReferences": [
     {
-      "dataVa": "0x142778910",
       "instruction": "0x14014b2a3",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142778910",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     },
     {
-      "dataVa": "0x142777640",
       "instruction": "0x14014b2af",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777640",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x1427788c8",
       "instruction": "0x14014b2f8",
-      "preview": "|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427788c8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|qwB"
     },
     {
-      "dataVa": "0x1427b6568",
       "instruction": "0x14014b43b",
-      "preview": "(e{B",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b6568",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "(e{B"
     }
   ],
   "pseudocode": "functions/0x14014a890.c",

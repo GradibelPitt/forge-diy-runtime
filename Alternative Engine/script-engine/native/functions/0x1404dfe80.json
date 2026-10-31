@@ -10,56 +10,61 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.1628088
+  },
   "assembly": "functions/0x1404dfe80.asm",
   "assemblySha256": "20507959c3d9d7deeafa9dad8e5f5e77c36f9680a282de9580af13fcab94f5ed",
   "literalReferences": [
     {
-      "dataVa": "0x1427a2ba8",
       "instruction": "0x1404e0b7c",
-      "preview": "preparedSpellCardIdcloneOriginCardIdmanaAbilitiesKeptlostKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2ba8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "preparedSpellCardIdcloneOriginCardIdmanaAbilitiesKeptlostKeywords"
     },
     {
-      "dataVa": "0x1427a2bbb",
       "instruction": "0x1404e10a5",
-      "preview": "cloneOriginCardIdmanaAbilitiesKeptlostKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2bbb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "cloneOriginCardIdmanaAbilitiesKeptlostKeywords"
     },
     {
-      "dataVa": "0x1427a2c1a",
       "instruction": "0x1404e11e0",
-      "preview": "textExchangedWithvisibleBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2c1a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "textExchangedWithvisibleBy"
     },
     {
-      "dataVa": "0x1427a2bcc",
       "instruction": "0x1404e13a2",
-      "preview": "manaAbilitiesKeptlostKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2bcc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "manaAbilitiesKeptlostKeywords"
     },
     {
-      "dataVa": "0x1427a2c08",
       "instruction": "0x1404e1b05",
-      "preview": "lostActivatedCounttextExchangedWithvisibleBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2c08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "lostActivatedCounttextExchangedWithvisibleBy"
     },
     {
-      "dataVa": "0x1427a2338",
       "instruction": "0x1404e2082",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x1427a2338",
       "instruction": "0x1404e20c1",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x1427a2338",
       "instruction": "0x1404e2100",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x1404dfe80.c",

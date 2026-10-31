@@ -9,12 +9,18 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 5.6614765,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140935220.asm",
   "assemblySha256": "24b56f4374235e05ae8a91ad4543a48e626fdf5d7b9bc3d388d72c1e01eb1e02",
   "literalReferences": [],
   "pseudocode": "functions/0x140935220.c",
   "pseudocodeSha256": "9f223ad7a5a8428bd2dae01e44e3f3e0f649b5c2e5eb5c0ac9457b0f66fa489a",
-  "pseudocodeOrigin": "expanded source/callee recovery",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
   "controlFlowWarning": false,
   "typePropagationWarning": true
 }

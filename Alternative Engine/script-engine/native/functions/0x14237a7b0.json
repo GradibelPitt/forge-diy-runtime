@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0530053,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14237a7b0.asm",
   "assemblySha256": "23658cb30e1487c087439dec9e18252d6ea6b89287758f422663deab161fbd64",
   "literalReferences": [
     {
-      "dataVa": "0x142ceb0db",
       "instruction": "0x14237a834",
-      "preview": "反身触发上的 OptionalDecidertapXType<1/Creature.Other+YouCtrl/another untapped creature you control>",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb0db",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "反身触发上的 OptionalDecidertapXType<1/Creature.Other+YouCtrl/another untapped creature you control>"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14237a7b0.c",
+  "pseudocodeSha256": "1c94a39f3a91462bc4e5a4b51452ceda44f6f0b022f72711dc7967e7e7229d22",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

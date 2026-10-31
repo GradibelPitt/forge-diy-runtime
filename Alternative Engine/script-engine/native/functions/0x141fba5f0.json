@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0037707,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fba5f0.asm",
   "assemblySha256": "68faf8303454445c71bfb8b4fea701b8b4c2774b852c0f991e3152a23372318a",
   "literalReferences": [
     {
-      "dataVa": "0x142cb9c0a",
       "instruction": "0x141fba61c",
-      "preview": "ParentTarget 但没有父目标OriginDestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9c0a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ParentTarget 但没有父目标OriginDestinationTappedShuffleLibraryPositionTransformedGainControlMandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZ"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fba5f0.c",
+  "pseudocodeSha256": "a05758ea02a5aada89e299fc4805808108d8e98239996e6e76f5b58a2f11c284",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

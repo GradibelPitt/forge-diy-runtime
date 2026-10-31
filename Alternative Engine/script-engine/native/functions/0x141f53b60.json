@@ -5,39 +5,49 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0285354,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f53b60.asm",
   "assemblySha256": "2a1e0e85e0d60d2933ce44cafa962694c2e7231861b9e1111a72be3021045453",
   "literalReferences": [
     {
-      "dataVa": "0x142ca860d",
       "instruction": "0x141f53bb3",
-      "preview": "KeywordsPermanent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca860d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KeywordsPermanent"
     },
     {
-      "dataVa": "0x142ca84a0",
       "instruction": "0x141f53ca8",
-      "preview": "DurationNumAttNumDefKWPumpAllDefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca84a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DurationNumAttNumDefKWPumpAllDefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTo"
     },
     {
-      "dataVa": "0x142ca84bd",
       "instruction": "0x141f53d95",
-      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca84bd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142c83770",
       "instruction": "0x141f53dcd",
-      "preview": "Copy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83770",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Copy"
     },
     {
-      "dataVa": "0x142c83780",
       "instruction": "0x141f53dd5",
-      "preview": "TriggeredCardLKIC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\rng.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83780",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardLKIC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\rng.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141f53b60.c",
+  "pseudocodeSha256": "a84e1e92542890de17e6c8fb61e2fc0525109558c9c52f20237d414899ddb10d",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

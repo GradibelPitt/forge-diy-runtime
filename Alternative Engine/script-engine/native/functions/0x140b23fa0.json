@@ -9,44 +9,49 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0256867
+  },
   "assembly": "functions/0x140b23fa0.asm",
   "assemblySha256": "71d98d25b663f19d49033e0f80a267700fb702cd5a759c9773c6ed830faedfeb",
   "literalReferences": [
     {
-      "dataVa": "0x1427fc250",
       "instruction": "0x140b24022",
-      "preview": "CopyPermanent {",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fc250",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CopyPermanent {"
     },
     {
-      "dataVa": "0x1427fc260",
       "instruction": "0x140b2406a",
-      "preview": "ԵB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fc260",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ԵB"
     },
     {
-      "dataVa": "0x1427fbc58",
       "instruction": "0x140b240ae",
-      "preview": "non_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fbc58",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "non_legendary: trueat_eot: Some(firstsecondowner: Defined(You)amountzone: Battlefieldzone: Handcontroller: Some(LosesGameCountersRemovedDivDown(Num(caster: Some(controlled_by: Some"
     },
     {
-      "dataVa": "0x1427fb400",
       "instruction": "0x140b240d9",
-      "preview": " who: Some(Slot(CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb400",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " who: Some(Slot(CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     },
     {
-      "dataVa": "0x1427fb410",
       "instruction": "0x140b240e1",
-      "preview": "CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb410",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     },
     {
-      "dataVa": "0x1427fc278",
       "instruction": "0x140b240fe",
-      "preview": "CopyPermanent { who: Some(Defined(Triggered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fc278",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CopyPermanent { who: Some(Defined(Triggered"
     }
   ],
   "pseudocode": "functions/0x140b23fa0.c",

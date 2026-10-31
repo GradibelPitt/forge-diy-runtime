@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0079186
+  },
   "assembly": "functions/0x1405a1fb0.asm",
   "assemblySha256": "5550c647293bd76bcb5c202f0570738814a31e692ae67d3d083ebc0c1fe4c6a2",
   "literalReferences": [
     {
-      "dataVa": "0x1427a2008",
       "instruction": "0x1405a20bd",
-      "preview": "EmblemC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2008",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EmblemC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x1427a200c",
       "instruction": "0x1405a20c5",
-      "preview": "emC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a200c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "emC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     }
   ],
   "pseudocode": "functions/0x1405a1fb0.c",

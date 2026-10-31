@@ -8,44 +8,49 @@
     "src/dungeon_map.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0998809
+  },
   "assembly": "functions/0x14050f6d0.asm",
   "assemblySha256": "862531e0bc7dec5547527b86ff41c1ed2e54143c6b784981e17cbf88438eb144",
   "literalReferences": [
     {
-      "dataVa": "0x1427a32d8",
       "instruction": "0x14051016a",
-      "preview": "^\"zB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a32d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "^\"zB"
     },
     {
-      "dataVa": "0x1427a2338",
       "instruction": "0x140510176",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x1427a32f0",
       "instruction": "0x1405101bb",
-      "preview": "^\"zB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a2338",
-      "instruction": "0x1405101c7",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427a32f0",
-      "instruction": "0x1405101f4",
-      "preview": "^\"zB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "^\"zB"
     },
     {
+      "instruction": "0x1405101c7",
       "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
+    },
+    {
+      "instruction": "0x1405101f4",
+      "dataVa": "0x1427a32f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "^\"zB"
+    },
+    {
       "instruction": "0x140510200",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x14050f6d0.c",

@@ -5,51 +5,61 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0060937,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1401eff90.asm",
   "assemblySha256": "57d4c01d1f0abf9e192633cfd4e370a22de17c58b1a3815ce6218eb436837136",
   "literalReferences": [
     {
-      "dataVa": "0x1427800e8",
       "instruction": "0x1401effc9",
-      "preview": "modal_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142780167",
-      "instruction": "0x1401f0028",
-      "preview": "allocation_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142780146",
-      "instruction": "0x1401f003b",
-      "preview": "number_resolvedcard_list_resolvedallocation_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142780138",
-      "instruction": "0x1401f006e",
-      "preview": "order_resolvednumber_resolvedcard_list_resolvedallocation_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142780155",
-      "instruction": "0x1401f0075",
-      "preview": "card_list_resolvedallocation_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142780138",
-      "instruction": "0x1401f008d",
-      "preview": "order_resolvednumber_resolvedcard_list_resolvedallocation_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427800e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "modal_resolved"
+    },
+    {
+      "instruction": "0x1401f0028",
+      "dataVa": "0x142780167",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "allocation_resolved"
+    },
+    {
+      "instruction": "0x1401f003b",
+      "dataVa": "0x142780146",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "number_resolvedcard_list_resolvedallocation_resolved"
+    },
+    {
+      "instruction": "0x1401f006e",
+      "dataVa": "0x142780138",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "order_resolvednumber_resolvedcard_list_resolvedallocation_resolved"
+    },
+    {
+      "instruction": "0x1401f0075",
+      "dataVa": "0x142780155",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "card_list_resolvedallocation_resolved"
+    },
+    {
+      "instruction": "0x1401f008d",
+      "dataVa": "0x142780138",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "order_resolvednumber_resolvedcard_list_resolvedallocation_resolved"
+    },
+    {
       "instruction": "0x1401f00a7",
-      "preview": "modal_resolved",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427800e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "modal_resolved"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1401eff90.c",
+  "pseudocodeSha256": "870a7aeb12c79d20bf4494a315b3453e0cf4f8100f29aaba4568ec27d6d840d5",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

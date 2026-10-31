@@ -7,20 +7,25 @@
     "src/dungeon_map.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0437353
+  },
   "assembly": "functions/0x140510a90.asm",
   "assemblySha256": "5618e4120b2631eba6fbcac128f6fe0c9a55e54665bba076d0fb6c057061c9cf",
   "literalReferences": [
     {
-      "dataVa": "0x1427a3308",
       "instruction": "0x140510f27",
-      "preview": "^\"zB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3308",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "^\"zB"
     },
     {
-      "dataVa": "0x1427a2338",
       "instruction": "0x140510f33",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2338",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x140510a90.c",

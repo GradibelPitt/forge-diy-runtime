@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.002364,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f4bee0.asm",
   "assemblySha256": "107d75a3bf88238cf6b53d52220621e1c36a708376159b6132b58a5c25678aa8",
   "literalReferences": [
     {
-      "dataVa": "0x142ca7c7d",
       "instruction": "0x141f4befa",
-      "preview": "Ajani\nAminatou\nAngrath\nArlinn\nArzakon\nAshiok\nBahamut\nBasri\nBolas\nCalix\nChandra\nComet\nDack\nDakkon\nDaretti\nDavriel\nDellian\nDihada\nDomri\nDovin\nDyfed\nEllywick\nElminster\nElspeth\nEstrid\n",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7c7d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Ajani\nAminatou\nAngrath\nArlinn\nArzakon\nAshiok\nBahamut\nBasri\nBolas\nCalix\nChandra\nComet\nDack\nDakkon\nDaretti\nDavriel\nDellian\nDihada\nDomri\nDovin\nDyfed\nEllywick\nElminster\nElspeth\nEstrid\n"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141f4bee0.c",
+  "pseudocodeSha256": "14c9146e6fc1ee0ba83d21d0a32de44578a1549bff9d3db857507eaf8c3f98b7",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

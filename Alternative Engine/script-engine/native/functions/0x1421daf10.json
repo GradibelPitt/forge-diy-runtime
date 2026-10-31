@@ -7,14 +7,20 @@
     "crates/mtg-engine/src/card/count/history.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.4042103,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421daf10.asm",
   "assemblySha256": "95f3e112b7e1536564d56c3d51b02b2ceb614e33be78281e66652ff9f6b4e270",
   "literalReferences": [
     {
-      "dataVa": "0x142cd1ad0",
       "instruction": "0x1421daf5c",
-      "preview": "TiedForHighestLife",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd1ad0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TiedForHighestLife"
     }
   ],
   "pseudocode": "functions/0x1421daf10.c",

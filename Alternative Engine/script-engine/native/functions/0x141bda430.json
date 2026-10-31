@@ -9,14 +9,19 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1938419
+  },
   "assembly": "functions/0x141bda430.asm",
   "assemblySha256": "88ef199e5b5a5886a81c748e65f4ef0dd878bc5e36124087457cac967de4dc2c",
   "literalReferences": [
     {
-      "dataVa": "0x142c8734c",
       "instruction": "0x141bdb10d",
-      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8734c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Aura灵气缺 EnchantPlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     }
   ],
   "pseudocode": "functions/0x141bda430.c",

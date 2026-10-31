@@ -9,182 +9,187 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.1378138
+  },
   "assembly": "functions/0x140d15e10.asm",
   "assemblySha256": "21f4417d83a90c4d0b9c812c88271a53faae815811988999d50d6aa1f4b9b18d",
   "literalReferences": [
     {
-      "dataVa": "0x14280dcf9",
       "instruction": "0x140d164f2",
-      "preview": "TokenMayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280dcf9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenMayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield"
     },
     {
-      "dataVa": "0x14280e022",
       "instruction": "0x140d167e2",
-      "preview": "who: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }] }Creature.YouCtrlCreature.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e022",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "who: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }] }Creature.YouCtrlCreature."
     },
     {
-      "dataVa": "0x14280deaa",
       "instruction": "0x140d16a4d",
-      "preview": "Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples_mixed.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280deaa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples_mixed.rs"
     },
     {
-      "dataVa": "0x14280deb7",
       "instruction": "0x140d16a76",
-      "preview": "Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples_mixed.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14280deb7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples_mixed.rs"
+    },
+    {
       "instruction": "0x140d16c63",
-      "preview": "Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples_mixed.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280deb7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\staples_mixed.rs"
     },
     {
-      "dataVa": "0x14280e133",
       "instruction": "0x140d16fb9",
-      "preview": "Obj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e133",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Obj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield"
     },
     {
-      "dataVa": "0x14280e145",
       "instruction": "0x140d16fe4",
-      "preview": "Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14280e145",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Move { who: Defined(Mem(Imprinted)), to: Battlefield"
+    },
+    {
       "instruction": "0x140d1702e",
-      "preview": "Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e145",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Move { who: Defined(Mem(Imprinted)), to: Battlefield"
     },
     {
-      "dataVa": "0x14280db4a",
       "instruction": "0x140d1710b",
-      "preview": "DestroyAll {",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280db4a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DestroyAll {"
     },
     {
-      "dataVa": "0x14280dda9",
       "instruction": "0x140d1735a",
-      "preview": "Flow(CreateEffect(mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainL",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280dda9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Flow(CreateEffect(mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainL"
     },
     {
-      "dataVa": "0x14280ddbb",
       "instruction": "0x140d17389",
-      "preview": "mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainLife { player: Vali",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14280ddbb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainLife { player: Vali"
+    },
+    {
       "instruction": "0x140d173cb",
-      "preview": "mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainLife { player: Vali",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280ddbb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainLife { player: Vali"
     },
     {
-      "dataVa": "0x14280de0a",
       "instruction": "0x140d173f1",
-      "preview": "Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280de0a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { "
     },
     {
-      "dataVa": "0x14280de3f",
       "instruction": "0x140d17428",
-      "preview": "remember: [Slot(def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280de3f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "remember: [Slot(def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代"
     },
     {
-      "dataVa": "0x14280d0b0",
       "instruction": "0x140d174ec",
-      "preview": "id: ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280d0b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "id: "
     },
     {
-      "dataVa": "0x14280d0c0",
       "instruction": "0x140d174f4",
-      "preview": "AnimateAll { val/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280d0c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnimateAll { val/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     },
     {
-      "dataVa": "0x14280dffe",
       "instruction": "0x140d175ba",
-      "preview": ", mods: [], duration: ToughnessPowerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [Y",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280dffe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ", mods: [], duration: ToughnessPowerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [Y"
     },
     {
-      "dataVa": "0x14280e007",
       "instruction": "0x140d17615",
-      "preview": "], duration: ToughnessPowerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }]",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e007",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "], duration: ToughnessPowerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }]"
     },
     {
-      "dataVa": "0x14280e01d",
       "instruction": "0x140d182f3",
-      "preview": "Powerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }] }Creature.YouCtrlCrea",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e01d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Powerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }] }Creature.YouCtrlCrea"
     },
     {
-      "dataVa": "0x14280e014",
       "instruction": "0x140d1838d",
-      "preview": "ToughnessPowerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }] }Creature.Yo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e014",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ToughnessPowerwho: Defined(Mem(TopOfLibrary))to: ExileFlow(Delayed(to: HandExpr(InZones { zones: [Hand], valid: ValidExpr { alts: [Alt { base: Card, props: [YouOwn] }] }Creature.Yo"
     },
     {
-      "dataVa": "0x14280dda9",
       "instruction": "0x140d18458",
-      "preview": "Flow(CreateEffect(mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainL",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14280de4f",
-      "instruction": "0x140d18483",
-      "preview": "def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-a",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14280de4f",
-      "instruction": "0x140d184c5",
-      "preview": "def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-a",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14280dda9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Flow(CreateEffect(mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainL"
+    },
+    {
+      "instruction": "0x140d18483",
+      "dataVa": "0x14280de4f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-a"
+    },
+    {
+      "instruction": "0x140d184c5",
+      "dataVa": "0x14280de4f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "def: CantGainLife { player: ValidExpr { alts: [Alt { base: Player, props: [Opponent] }] } }Flow(Repeat {Mill { amount: Fixed(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-a"
+    },
+    {
       "instruction": "0x140d18517",
-      "preview": "Flow(CreateEffect(mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainL",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280dda9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Flow(CreateEffect(mode: ChangesZone { origin: Some([Battlefield]), destination: Some([Graveyard])Move { who: Defined(Mem(Remembered)), to: Battlefieldremember: [Slot(def: CantGainL"
     },
     {
-      "dataVa": "0x14280e0f4",
       "instruction": "0x140d1854a",
-      "preview": "replacements: [ReplacementDef { event: Counter {action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14280e0f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "replacements: [ReplacementDef { event: Counter {action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield"
+    },
+    {
       "instruction": "0x140d1860f",
-      "preview": "replacements: [ReplacementDef { event: Counter {action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e0f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "replacements: [ReplacementDef { event: Counter {action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield"
     },
     {
-      "dataVa": "0x14280e124",
       "instruction": "0x140d18628",
-      "preview": "action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280e124",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "action: PreventObj(SacrificeAll {Move { who: Defined(Mem(Imprinted)), to: Battlefield"
     },
     {
-      "dataVa": "0x14280dcd8",
       "instruction": "0x140d186a3",
-      "preview": "MayPlay {zones: [Graveyard]CycledTokenMayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280dcd8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayPlay {zones: [Graveyard]CycledTokenMayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield"
     },
     {
-      "dataVa": "0x14280dce1",
       "instruction": "0x140d186c2",
-      "preview": "zones: [Graveyard]CycledTokenMayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14280dce1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "zones: [Graveyard]CycledTokenMayEach { who: Defined(TargetedController(Tail(Fetch(to: Battlefield"
     }
   ],
   "pseudocode": "functions/0x140d15e10.c",

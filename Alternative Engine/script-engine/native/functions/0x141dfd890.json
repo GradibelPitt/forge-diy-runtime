@@ -8,20 +8,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.9315452
+  },
   "assembly": "functions/0x141dfd890.asm",
   "assemblySha256": "078a53f2ad7de65f3ec79313e27883542c3779025e3d8e32d0939904255e73d1",
   "literalReferences": [
     {
-      "dataVa": "0x142c903d0",
       "instruction": "0x141dfe73b",
-      "preview": "自动付费要疼的生命会让你死掉：要付请亲手点法术力来源法术力付不起固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keyword",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c903d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "自动付费要疼的生命会让你死掉：要付请亲手点法术力来源法术力付不起固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keyword"
     },
     {
-      "dataVa": "0x142c90bed",
       "instruction": "0x141dfe8bb",
-      "preview": "付不起费用付不起C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\seat\\planechase.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90bed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "付不起费用付不起C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\seat\\planechase.rs"
     }
   ],
   "pseudocode": "functions/0x141dfd890.c",

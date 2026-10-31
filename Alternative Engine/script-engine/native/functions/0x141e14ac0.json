@@ -9,56 +9,62 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141e14ac0: process: timeout\n",
+    "seconds": 12.2539381,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141e14ac0.asm",
   "assemblySha256": "daf8914acc82b83ad055d8f8ba16bbbe097639f2b542911a2b45b934388c3e40",
   "literalReferences": [
     {
-      "dataVa": "0x142c87361",
       "instruction": "0x141e14ce9",
-      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87361",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c87365",
       "instruction": "0x141e14cf5",
-      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87365",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c87361",
       "instruction": "0x141e14ed9",
-      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87361",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c87365",
       "instruction": "0x141e14ee5",
-      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87365",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c87361",
       "instruction": "0x141e14fd9",
-      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c87365",
-      "instruction": "0x141e14fe5",
-      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c87361",
-      "instruction": "0x141e15ab9",
-      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
+      "instruction": "0x141e14fe5",
       "dataVa": "0x142c87365",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
+    },
+    {
+      "instruction": "0x141e15ab9",
+      "dataVa": "0x142c87361",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
+    },
+    {
       "instruction": "0x141e15ac5",
-      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87365",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ePhenomenonVanguardSchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     }
   ],
   "pseudocodeStatus": "timeout"

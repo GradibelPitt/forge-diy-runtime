@@ -7,14 +7,19 @@
     "crates/mtg-ai-normal/src/priority.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0060814
+  },
   "assembly": "functions/0x140824d60.asm",
   "assemblySha256": "443e4dfb0b5067cd66056509fb4a585e2c03270b89a200af1b56ae37fa76078a",
   "literalReferences": [
     {
-      "dataVa": "0x1427d96e8",
       "instruction": "0x140824e75",
-      "preview": "ؕ}B",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427d96e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ؕ}B"
     }
   ],
   "pseudocode": "functions/0x140824d60.c",

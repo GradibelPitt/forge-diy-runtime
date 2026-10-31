@@ -5,57 +5,67 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1451064,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1407a7f20.asm",
   "assemblySha256": "80d72cd562218777730237e36dde3777ec3c2f53c5f0b3fc40ad1c0ef992dd29",
   "literalReferences": [
     {
-      "dataVa": "0x1427ce108",
       "instruction": "0x1407a7f98",
-      "preview": "ARCANE_AI_ROLLOUTSLimited打出看结果（真实化等）试走（斩杀搜索等）NotYourDecisionGameOver",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ce108",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ARCANE_AI_ROLLOUTSLimited打出看结果（真实化等）试走（斩杀搜索等）NotYourDecisionGameOver"
     },
     {
-      "dataVa": "0x1427ce11b",
       "instruction": "0x1407a80b4",
-      "preview": "imited打出看结果（真实化等）试走（斩杀搜索等）NotYourDecisionGameOver",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ce11b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "imited打出看结果（真实化等）试走（斩杀搜索等）NotYourDecisionGameOver"
     },
     {
-      "dataVa": "0x1427cdf20",
       "instruction": "0x1407a80e8",
-      "preview": "LLLLLLLLLLLLLLLLddddddddddddddddopponent_turn_end",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cdf20",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LLLLLLLLLLLLLLLLddddddddddddddddopponent_turn_end"
     },
     {
-      "dataVa": "0x1427cdf30",
       "instruction": "0x1407a80f0",
-      "preview": "ddddddddddddddddopponent_turn_end",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cdf30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ddddddddddddddddopponent_turn_end"
     },
     {
-      "dataVa": "0x1427cdf20",
       "instruction": "0x1407a8171",
-      "preview": "LLLLLLLLLLLLLLLLddddddddddddddddopponent_turn_end",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cdf30",
-      "instruction": "0x1407a8179",
-      "preview": "ddddddddddddddddopponent_turn_end",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427cdf20",
-      "instruction": "0x1407a82fc",
-      "preview": "LLLLLLLLLLLLLLLLddddddddddddddddopponent_turn_end",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LLLLLLLLLLLLLLLLddddddddddddddddopponent_turn_end"
     },
     {
+      "instruction": "0x1407a8179",
       "dataVa": "0x1427cdf30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ddddddddddddddddopponent_turn_end"
+    },
+    {
+      "instruction": "0x1407a82fc",
+      "dataVa": "0x1427cdf20",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LLLLLLLLLLLLLLLLddddddddddddddddopponent_turn_end"
+    },
+    {
       "instruction": "0x1407a8304",
-      "preview": "ddddddddddddddddopponent_turn_end",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cdf30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ddddddddddddddddopponent_turn_end"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1407a7f20.c",
+  "pseudocodeSha256": "3be04a212ce3a1b2ec11d95848c706e2abd2d456f8bed8897371a107583d3b00",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

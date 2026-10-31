@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0349507,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142110c70.asm",
   "assemblySha256": "dc6d103b17582ebb99fdd0bce1e02874b1d7b0634ce71fe88480fee280c50bc7",
   "literalReferences": [
     {
-      "dataVa": "0x142cc99a0",
       "instruction": "0x142110d14",
-      "preview": " // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc99a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " // C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\interact.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142110c70.c",
+  "pseudocodeSha256": "ab9246e54863e218fff0423d6716638c3b90c73231ee87c85db1dabcd282e006",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

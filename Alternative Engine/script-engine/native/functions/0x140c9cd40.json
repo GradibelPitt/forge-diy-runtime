@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0093441,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140c9cd40.asm",
   "assemblySha256": "bedb50d2d16ae6068a956d7ea091b4f9933f9196400c81d427023b6b348d26d4",
   "literalReferences": [
     {
-      "dataVa": "0x142808d68",
       "instruction": "0x140c9ce52",
-      "preview": "capacity overflow/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\vec\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142808d68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "capacity overflow/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\vec\\mod.rs"
     },
     {
-      "dataVa": "0x142808d68",
       "instruction": "0x140c9ce6c",
-      "preview": "capacity overflow/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\vec\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142808d68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "capacity overflow/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\vec\\mod.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140c9cd40.c",
+  "pseudocodeSha256": "1a87b460b0c8c8c93c66a75f096f1b9e99de3d3a246c5459074c76f1a51949db",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

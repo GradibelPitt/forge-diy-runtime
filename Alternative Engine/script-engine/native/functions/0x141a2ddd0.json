@@ -5,39 +5,49 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0381508,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a2ddd0.asm",
   "assemblySha256": "d5e4a4e84fb17abbad6f42a9d0a5489154eaa8d32eaed3cae8fd99b5560cf2c7",
   "literalReferences": [
     {
-      "dataVa": "0x142c83760",
       "instruction": "0x141a2df3b",
-      "preview": "TriggeredBlockerCopy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83760",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredBlockerCopy"
     },
     {
-      "dataVa": "0x142c83510",
       "instruction": "0x141a2df68",
-      "preview": "TriggeredAttackeTriggeredDefenderiggeredAttackerblockingTriggereTopGraveyardCreaurPW",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83510",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredAttackeTriggeredDefenderiggeredAttackerblockingTriggereTopGraveyardCreaurPW"
     },
     {
-      "dataVa": "0x142c83770",
       "instruction": "0x141a2e088",
-      "preview": "Copy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83770",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Copy"
     },
     {
-      "dataVa": "0x142c83780",
       "instruction": "0x141a2e090",
-      "preview": "TriggeredCardLKIC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\rng.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83780",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardLKIC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\rng.rs"
     },
     {
-      "dataVa": "0x142c83ed9",
       "instruction": "0x141a2e0b7",
-      "preview": "TriggeredCardTriggeredCardsTriggeredAttackerTriggeredSourceTriggeredDefenderattackedOrBlockedSinceYourLastUpkeepRememberedSilverGoldPower, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83ed9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardTriggeredCardsTriggeredAttackerTriggeredSourceTriggeredDefenderattackedOrBlockedSinceYourLastUpkeepRememberedSilverGoldPower, "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a2ddd0.c",
+  "pseudocodeSha256": "a7ab0b67ae21a79bf001af7fed7e0597bb62bb8fdcca635153973d8ba0cd631b",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

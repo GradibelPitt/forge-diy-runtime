@@ -9,14 +9,19 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2705867
+  },
   "assembly": "functions/0x141d2ec10.asm",
   "assemblySha256": "6b5299569bf186987f415afb7b33a27ad45ae6c65ba4bfa0649c4c5088cf28ec",
   "literalReferences": [
     {
-      "dataVa": "0x142c8737e",
       "instruction": "0x141d2eddd",
-      "preview": "Identity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8737e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Identity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     }
   ],
   "pseudocode": "functions/0x141d2ec10.c",

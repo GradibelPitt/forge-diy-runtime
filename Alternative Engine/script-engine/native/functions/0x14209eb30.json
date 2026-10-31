@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.009341,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14209eb30.asm",
   "assemblySha256": "72b6fa7734ce029ef8f018e1b161d0738e13601c24eaeed4f4715153b87b86a2",
   "literalReferences": [
     {
-      "dataVa": "0x142cc2921",
       "instruction": "0x14209eb53",
-      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc2921",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Advisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbarian"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14209eb30.c",
+  "pseudocodeSha256": "cef8f8d0c2a61b811508a9140f2b0101058a7a737f4068401fb6cdddcd9844dc",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

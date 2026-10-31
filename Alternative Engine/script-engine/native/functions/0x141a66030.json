@@ -5,176 +5,182 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2983024,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a66030.asm",
   "assemblySha256": "d8371a3ff2e5700ba2dda469d8334c41b0f2e389dec829061af9c37e287e2d12",
   "literalReferences": [
     {
-      "dataVa": "0x142c86848",
       "instruction": "0x141a6609b",
-      "preview": "You assign combat damage of each creature attacking you.You may pay 0 rather than pay the echo cost for permanents you control.During your next untap step, as you untap your perman",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86848",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "You assign combat damage of each creature attacking you.You may pay 0 rather than pay the echo cost for permanents you control.During your next untap step, as you untap your perman"
     },
     {
-      "dataVa": "0x142c86880",
       "instruction": "0x141a660c7",
-      "preview": "You may pay 0 rather than pay the echo cost for permanents you control.During your next untap step, as you untap your permanents, return CARDNAME to its owner's hand.RiotDamage tha",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86880",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "You may pay 0 rather than pay the echo cost for permanents you control.During your next untap step, as you untap your permanents, return CARDNAME to its owner's hand.RiotDamage tha"
     },
     {
-      "dataVa": "0x142c854c0",
       "instruction": "0x141a660fc",
-      "preview": "AME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c854d0",
-      "instruction": "0x141a66104",
-      "preview": "CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c86c67",
-      "instruction": "0x141a66127",
-      "preview": "Spend only colored mana on X. No more than one mana of each color may be spent this way.HIDDEN CARDNAME's power and toughness are switchedProtection from blueblackredgreenEnchantEq",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c86abc",
-      "instruction": "0x141a66150",
-      "preview": "While you're searching your library, you may cast CARDNAME from your library.UnleashHIDDEN This card doesn't untap during your next untap step.This card doesn't untap during your n",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c869d0",
-      "instruction": "0x141a661a9",
-      "preview": "You may assign CARDNAME's combat damage divided as you choose among defending player and/or any number of creatures they control.If CARDNAME is unblocked, you may have it assign it",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c86800",
-      "instruction": "0x141a661d5",
-      "preview": "Spells and abilities you control can't cause you to search your library.You assign combat damage of each creature attacking you.You may pay 0 rather than pay the echo cost for perm",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c854f0",
-      "instruction": "0x141a6620d",
-      "preview": "LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c8692a",
-      "instruction": "0x141a6623f",
-      "preview": "Damage that would be dealt to CARDNAME can't be redirected.CARDNAME can't be destroyed by lethal damage unless lethal damage dealt by a single source is marked on it.You may assign",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c86b10",
-      "instruction": "0x141a6625c",
-      "preview": "HIDDEN This card doesn't untap during your next untap step.This card doesn't untap during your next untap step.CascadeReboundYou may choose not to untap CARDNAME during your untap ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c86bc9",
-      "instruction": "0x141a663a9",
-      "preview": "As an additional cost to cast creature spells, you may pay any amount of mana. If you do, that creature enters with that many additional +1/+1 counters on it.Spend only colored man",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c8679c",
-      "instruction": "0x141a66447",
-      "preview": "You draw cards from the bottom of your library instead of the top of your library.LimitSearchLibrarySpells and abilities you control can't cause you to search your library.You assi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c854c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary"
+    },
+    {
+      "instruction": "0x141a66104",
+      "dataVa": "0x142c854d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary"
+    },
+    {
+      "instruction": "0x141a66127",
+      "dataVa": "0x142c86c67",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Spend only colored mana on X. No more than one mana of each color may be spent this way.HIDDEN CARDNAME's power and toughness are switchedProtection from blueblackredgreenEnchantEq"
+    },
+    {
+      "instruction": "0x141a66150",
+      "dataVa": "0x142c86abc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "While you're searching your library, you may cast CARDNAME from your library.UnleashHIDDEN This card doesn't untap during your next untap step.This card doesn't untap during your n"
+    },
+    {
+      "instruction": "0x141a661a9",
+      "dataVa": "0x142c869d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "You may assign CARDNAME's combat damage divided as you choose among defending player and/or any number of creatures they control.If CARDNAME is unblocked, you may have it assign it"
+    },
+    {
+      "instruction": "0x141a661d5",
+      "dataVa": "0x142c86800",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Spells and abilities you control can't cause you to search your library.You assign combat damage of each creature attacking you.You may pay 0 rather than pay the echo cost for perm"
+    },
+    {
+      "instruction": "0x141a6620d",
+      "dataVa": "0x142c854f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LimitSearchLibrary"
+    },
+    {
+      "instruction": "0x141a6623f",
+      "dataVa": "0x142c8692a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Damage that would be dealt to CARDNAME can't be redirected.CARDNAME can't be destroyed by lethal damage unless lethal damage dealt by a single source is marked on it.You may assign"
+    },
+    {
+      "instruction": "0x141a6625c",
+      "dataVa": "0x142c86b10",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HIDDEN This card doesn't untap during your next untap step.This card doesn't untap during your next untap step.CascadeReboundYou may choose not to untap CARDNAME during your untap "
+    },
+    {
+      "instruction": "0x141a663a9",
+      "dataVa": "0x142c86bc9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "As an additional cost to cast creature spells, you may pay any amount of mana. If you do, that creature enters with that many additional +1/+1 counters on it.Spend only colored man"
+    },
+    {
+      "instruction": "0x141a66447",
+      "dataVa": "0x142c8679c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "You draw cards from the bottom of your library instead of the top of your library.LimitSearchLibrarySpells and abilities you control can't cause you to search your library.You assi"
+    },
+    {
       "instruction": "0x141a6666b",
-      "preview": "AME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c854c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary"
     },
     {
-      "dataVa": "0x142c854e0",
       "instruction": "0x141a66673",
-      "preview": "HIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c854e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HIDDEN CARDNAME LimitSearchLibrary"
     },
     {
-      "dataVa": "0x142c85510",
       "instruction": "0x141a666a3",
-      "preview": "ny player's turnForetell on any Protection from AttackersDeclareH",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85510",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ny player's turnForetell on any Protection from AttackersDeclareH"
     },
     {
-      "dataVa": "0x142c85520",
       "instruction": "0x141a666ab",
-      "preview": "Foretell on any Protection from AttackersDeclareH",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85520",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Foretell on any Protection from AttackersDeclareH"
     },
     {
-      "dataVa": "0x142c86b4b",
       "instruction": "0x141a66908",
-      "preview": "This card doesn't untap during your next untap step.CascadeReboundYou may choose not to untap CARDNAME during your untap step.As an additional cost to cast creature spells, you may",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86b4b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "This card doesn't untap during your next untap step.CascadeReboundYou may choose not to untap CARDNAME during your untap step.As an additional cost to cast creature spells, you may"
     },
     {
-      "dataVa": "0x142c86cbf",
       "instruction": "0x141a66931",
-      "preview": "HIDDEN CARDNAME's power and toughness are switchedProtection from blueblackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjuts",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86cbf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HIDDEN CARDNAME's power and toughness are switchedProtection from blueblackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjuts"
     },
     {
-      "dataVa": "0x142c86b8d",
       "instruction": "0x141a6695d",
-      "preview": "You may choose not to untap CARDNAME during your untap step.As an additional cost to cast creature spells, you may pay any amount of mana. If you do, that creature enters with that",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86b8d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "You may choose not to untap CARDNAME during your untap step.As an additional cost to cast creature spells, you may pay any amount of mana. If you do, that creature enters with that"
     },
     {
-      "dataVa": "0x142c86965",
       "instruction": "0x141a66982",
-      "preview": "CARDNAME can't be destroyed by lethal damage unless lethal damage dealt by a single source is marked on it.You may assign CARDNAME's combat damage divided as you choose among defen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86965",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CARDNAME can't be destroyed by lethal damage unless lethal damage dealt by a single source is marked on it.You may assign CARDNAME's combat damage divided as you choose among defen"
     },
     {
-      "dataVa": "0x142c86a51",
       "instruction": "0x141a6699f",
-      "preview": "If CARDNAME is unblocked, you may have it assign its combat damage to a creature defending player controls.While you're searching your library, you may cast CARDNAME from your libr",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86a51",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "If CARDNAME is unblocked, you may have it assign its combat damage to a creature defending player controls.While you're searching your library, you may cast CARDNAME from your libr"
     },
     {
-      "dataVa": "0x142c868c7",
       "instruction": "0x141a669c7",
-      "preview": "During your next untap step, as you untap your permanents, return CARDNAME to its owner's hand.RiotDamage that would be dealt to CARDNAME can't be redirected.CARDNAME can't be dest",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c868c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "During your next untap step, as you untap your permanents, return CARDNAME to its owner's hand.RiotDamage that would be dealt to CARDNAME can't be redirected.CARDNAME can't be dest"
     },
     {
-      "dataVa": "0x142c85530",
       "instruction": "0x141a669e8",
-      "preview": "Protection from AttackersDeclareH",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85530",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Protection from AttackersDeclareH"
     },
     {
-      "dataVa": "0x142c86d05",
       "instruction": "0x141a66a37",
-      "preview": "blackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpectacleS",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86d05",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "blackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpectacleS"
     },
     {
-      "dataVa": "0x142c86d0d",
       "instruction": "0x141a66a51",
-      "preview": "greenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpectacleSurgePlot",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86d0d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "greenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpectacleSurgePlot"
     },
     {
-      "dataVa": "0x142c86d01",
       "instruction": "0x141a66a6e",
-      "preview": "blueblackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpecta",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86d01",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "blueblackredgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpecta"
     },
     {
-      "dataVa": "0x142c86d0a",
       "instruction": "0x141a66a8c",
-      "preview": "redgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpectacleSurgeP",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86d0a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "redgreenEnchantEquipCyclingFlashbackSuspendKickerWardTypeCyclingAffinityMadnessUnearthForetellEchoNinjutsuToxicMobilizePoisonousBuybackProtectionEvokeDashBlitzEscapeSpectacleSurgeP"
     }
   ],
   "pseudocode": "functions/0x141a66030.c",

@@ -8,86 +8,91 @@
     "src/grave_pick.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.0153065
+  },
   "assembly": "functions/0x140546b10.asm",
   "assemblySha256": "cff48c8647e2b1402eb775859655721eb1b199a24fcbcccde98828da76a47973",
   "literalReferences": [
     {
-      "dataVa": "0x1427a64cb",
       "instruction": "0x140547638",
-      "preview": "selectsrc\\grave_pick.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a64cb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "selectsrc\\grave_pick.rs"
     },
     {
-      "dataVa": "0x1427a653c",
       "instruction": "0x1405483d8",
-      "preview": "确定OK取消Cancel挑的牌还不够Not enough cards chosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a653c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "确定OK取消Cancel挑的牌还不够Not enough cards chosen"
     },
     {
-      "dataVa": "0x1427a6542",
       "instruction": "0x1405483df",
-      "preview": "OK取消Cancel挑的牌还不够Not enough cards chosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6542",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OK取消Cancel挑的牌还不够Not enough cards chosen"
     },
     {
-      "dataVa": "0x1427a6544",
       "instruction": "0x1405484b2",
-      "preview": "取消Cancel挑的牌还不够Not enough cards chosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6544",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "取消Cancel挑的牌还不够Not enough cards chosen"
     },
     {
-      "dataVa": "0x1427a654a",
       "instruction": "0x1405484b9",
-      "preview": "Cancel挑的牌还不够Not enough cards chosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a654a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cancel挑的牌还不够Not enough cards chosen"
     },
     {
-      "dataVa": "0x1427a6030",
       "instruction": "0x14054880b",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6030",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x1427a6060",
       "instruction": "0x140548812",
-      "preview": "pt&@",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6060",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "pt&@"
     },
     {
-      "dataVa": "0x1427a6030",
       "instruction": "0x140548843",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6060",
-      "instruction": "0x14054884a",
-      "preview": "pt&@",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427a6030",
-      "instruction": "0x14054887b",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
+      "instruction": "0x14054884a",
       "dataVa": "0x1427a6060",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "pt&@"
+    },
+    {
+      "instruction": "0x14054887b",
+      "dataVa": "0x1427a6030",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
+    },
+    {
       "instruction": "0x140548882",
-      "preview": "pt&@",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6060",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "pt&@"
     },
     {
-      "dataVa": "0x1427a6288",
       "instruction": "0x1405488b8",
-      "preview": " bzB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6288",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " bzB"
     },
     {
-      "dataVa": "0x1427a6288",
       "instruction": "0x1405488d4",
-      "preview": " bzB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6288",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " bzB"
     }
   ],
   "pseudocode": "functions/0x140546b10.c",

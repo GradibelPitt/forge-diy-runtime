@@ -7,26 +7,32 @@
     "crates/mtg-engine/src/card/faces.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 2.4458588,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422a09c0.asm",
   "assemblySha256": "a28c63e742ed75feb9db2e8615f8e009d48b92c5d77835f8f45745fdb1977acf",
   "literalReferences": [
     {
-      "dataVa": "0x142cdaf70",
       "instruction": "0x1422a130c",
-      "preview": "an Meets the EyeMore Than Meets ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernCho",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdaf70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "an Meets the EyeMore Than Meets ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernCho"
     },
     {
-      "dataVa": "0x142cdaf80",
       "instruction": "0x1422a1314",
-      "preview": "More Than Meets ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNext",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdaf80",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "More Than Meets ted.Crew+VehicleActivated.Crew+VCard.TopLibrary+ValidLibrary CarActivePlayerCtrlClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNext"
     },
     {
-      "dataVa": "0x142ca68a0",
       "instruction": "0x1422a15d7",
-      "preview": "ActivationLimit$ 1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca68a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationLimit$ 1"
     }
   ],
   "pseudocode": "functions/0x1422a09c0.c",

@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2643147,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14085ac00.asm",
   "assemblySha256": "6b8fc09b864fea3b2cb0aa41c5dbb2294bd9e628bbaab81b75e9f1a984c8cc24",
   "literalReferences": [
     {
-      "dataVa": "0x1427d8ee0",
       "instruction": "0x14085ac29",
-      "preview": "s: [Alt { base: ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427d8ee0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "s: [Alt { base: ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs"
     },
     {
-      "dataVa": "0x1427d8ef0",
       "instruction": "0x14085ac31",
-      "preview": "ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427d8ef0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidExpr { alts/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\local.rs"
     },
     {
-      "dataVa": "0x1427d9ab8",
       "instruction": "0x14085ac60",
-      "preview": ", props: [Token",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427d9ab8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ", props: [Token"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14085ac00.c",
+  "pseudocodeSha256": "40a11ef02551412db4fd3e5bdf00f23d6dc0e5a3a0825e1dc79b637d1bf22e19",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

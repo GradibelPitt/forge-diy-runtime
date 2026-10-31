@@ -151,6 +151,7 @@ public class BuildScriptBackend {
         stage(older, "prior extended CardDiscover analysis");
         stage(work.resolve("decompiled"), "expanded source/callee recovery");
         stage(work.resolve("corrected"), "expanded recovery with verified stack-probe call fixup");
+        stage(work.resolve("corrected-fast"), "remaining helper recovery with verified stack-probe call fixup");
         Path destination = output.resolve("native/functions");
         Files.createDirectories(destination);
         AssemblyReader input = new AssemblyReader();
@@ -175,6 +176,12 @@ public class BuildScriptBackend {
             }
             item.add("sourcePathHints", sourcePaths);
             item.addProperty("sourceAssociation", "Observed reference may belong to inlined code");
+            if (outcomes.containsKey(rva)) {
+                JsonObject attempt = new JsonObject(), prior = outcomes.get(rva);
+                for (String key : List.of("status", "diagnostic", "seconds", "stackProbeFixup"))
+                    if (prior.has(key)) attempt.add(key, prior.get(key));
+                item.add("latestAttempt", attempt);
+            }
             if (!f.get("endRva").isJsonNull()) {
                 bounded++;
                 long end = BASE + f.get("endRva").getAsLong();
@@ -271,8 +278,68 @@ public class BuildScriptBackend {
         report.put("controlFlowWarningFunctions",flowWarnings);report.put("sourcePathModules",modules.size());
         report.put("keywordSwitchLabels",switches.size());report.put("originalRustSourceRecovered",false);
         report.put("completeBuildableOriginalEngine",false);report.put("allGameplayBehaviorsVerified",false);
-        report.put("selection","All observed mtg-engine source-reference functions and their direct bounded call/jump targets; full binary and full call index also retained.");
+        report.put("selection","All observed mtg-engine source-reference functions, application DIY registration/global effects/trigger rules/cost labels, and their direct bounded call/jump targets; full binary and full call index also retained.");
         report.put("excludedModes",List.of("story","puzzle","ascent"));
-        save(output.resolve("coverage.json"),report);System.out.println(JSON.toJson(report));
+        save(output.resolve("coverage.json"),report);
+        JsonArray gaps = new JsonArray(), retry = new JsonArray();
+        int unbounded = 0, missingCode = 0, questionableCode = 0;
+        for (JsonObject row : index) {
+            JsonArray reasons = new JsonArray();
+            if (row.get("endRva").isJsonNull()) { reasons.add("no proven PE end boundary"); unbounded++; }
+            if (!row.has("pseudocode")) { reasons.add("pseudocode missing"); missingCode++; }
+            if ((row.has("controlFlowWarning") && row.get("controlFlowWarning").getAsBoolean()) ||
+                    (row.has("typePropagationWarning") && row.get("typePropagationWarning").getAsBoolean())) {
+                reasons.add("decompiler control-flow or type warning"); questionableCode++;
+            }
+            if (reasons.isEmpty()) continue;
+            JsonObject gap = new JsonObject();
+            for (String key : List.of("va", "rva", "endRva", "sourcePathHints", "pseudocodeOrigin", "latestAttempt"))
+                if (row.has(key)) gap.add(key, row.get(key));
+            gap.add("reasons", reasons); gaps.add(gap);
+            if (!row.get("endRva").isJsonNull()) {
+                JsonObject target = new JsonObject();
+                target.add("rva",row.get("rva")); target.add("endRva",row.get("endRva"));
+                target.add("sources",row.get("sourcePathHints")); target.add("reasons",reasons);
+                target.addProperty("timeout",row.getAsJsonArray("sourcePathHints").isEmpty()?35:90);
+                retry.add(target);
+            }
+        }
+        save(output.resolve("recovery/remaining.json"),gaps);
+        save(output.resolve("recovery/remaining-request.json"),Map.of("sha256",sha(image),"targets",retry));
+        save(output.resolve("recovery/status.json"),Map.of("missingPseudocode",missingCode,
+                "unprovenEndBoundaries",unbounded,"pseudocodeWithWarnings",questionableCode,
+                "retryTargets",retry.size(),"note","Longer timeouts alone do not repair incorrect function boundaries or inferred types. Inspect assembly and call sites before trusting decompiled C."));
+        Path requestFile = work.resolve("corrected-request.json");
+        if (Files.exists(requestFile)) {
+            JsonArray requested = new JsonArray(), attempts = new JsonArray();
+            Set<Long> expected = new HashSet<>(), attempted = new HashSet<>();
+            for (JsonElement element : read(requestFile).getAsJsonObject().getAsJsonArray("targets")) {
+                JsonObject source = element.getAsJsonObject(), target = new JsonObject();
+                for (String key : List.of("rva","endRva","sources","timeout"))
+                    if (source.has(key)) target.add(key,source.get(key));
+                requested.add(target); expected.add(source.get("rva").getAsLong());
+            }
+            Map<String,Integer> counts = new TreeMap<>();
+            for (String pass : List.of("corrected","corrected-fast")) {
+                Path journal = work.resolve(pass).resolve("results.jsonl");
+                if (!Files.exists(journal)) continue;
+                for (String line : Files.readAllLines(journal)) {
+                    JsonObject source;
+                    try { source = JsonParser.parseString(line).getAsJsonObject(); }
+                    catch (JsonParseException incomplete) { continue; }
+                    JsonObject row = new JsonObject(); row.addProperty("pass",pass);
+                    for (String key : List.of("rva","endRva","status","seconds","timeout","diagnostic","stackProbeFixup"))
+                        if (source.has(key)) row.add(key,source.get(key));
+                    attempted.add(source.get("rva").getAsLong()); attempts.add(row);
+                    counts.merge(source.get("status").getAsString(),1,Integer::sum);
+                }
+            }
+            save(output.resolve("recovery/attempts.json"),attempts);
+            save(output.resolve("recovery/pass-request.json"),Map.of("sha256",sha(image),"targets",requested));
+            save(output.resolve("recovery/pass-summary.json"),Map.of("requested",expected.size(),
+                    "attempted",attempted.size(),"allRequestedAttempted",attempted.containsAll(expected),
+                    "results",counts,"note","Attempt completion is not decompilation success or gameplay verification."));
+        }
+        System.out.println(JSON.toJson(report));
     }
 }

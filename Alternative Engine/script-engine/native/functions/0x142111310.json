@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0362888,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142111310.asm",
   "assemblySha256": "d811e70e3619d9f70f4976623f9626ccbb2008b46244fcc5aa1bf89e3b3c6ca5",
   "literalReferences": [
     {
-      "dataVa": "0x142cc8320",
       "instruction": "0x142111419",
-      "preview": "CardsInGraveyardsVisitedThisTurnAttractionsVisiteYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc8320",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardsInGraveyardsVisitedThisTurnAttractionsVisiteYouLostThisTurnLifeYouLostThisTouGainedThisTurnLifeYouGainedThintedCardManaCostImprintedCardManeredCardManaCostTriggeredCardManotal"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142111310.c",
+  "pseudocodeSha256": "fdc4e809c4bcd98ca965f138c314cb9310d573465002aad50ce5bd99d3609f56",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

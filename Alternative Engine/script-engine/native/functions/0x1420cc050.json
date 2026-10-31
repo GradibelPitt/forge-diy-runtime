@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/faces.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1201524
+  },
   "assembly": "functions/0x1420cc050.asm",
   "assemblySha256": "c02afc2a06012c8ba7bf548f089ecd98d41538b02cdfcdb085f7e9725a2401e9",
   "literalReferences": [
     {
-      "dataVa": "0x142cc4860",
       "instruction": "0x1420ccdd8",
-      "preview": "mid > lenassertion failed: mid <= self.len()",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc4860",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > lenassertion failed: mid <= self.len()"
     }
   ],
   "pseudocode": "functions/0x1420cc050.c",

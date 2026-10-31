@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.032175,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141e7c1b0.asm",
   "assemblySha256": "12eb11b72c4a236a591b7a4913a0e2f01dbbfe3707911cb130e98bcfc14e09f8",
   "literalReferences": [
     {
-      "dataVa": "0x142c9c1a0",
       "instruction": "0x141e7c3e2",
-      "preview": "其他……结队的，全队都要符合）C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\banding.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9c1a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "其他……结队的，全队都要符合）C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\banding.rs"
     },
     {
-      "dataVa": "0x142c9c170",
       "instruction": "0x141e7c403",
-      "preview": "一队里没有结队的生物至多一个（与其他……结队的，全队都要符合）C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\banding.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9c170",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "一队里没有结队的生物至多一个（与其他……结队的，全队都要符合）C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\banding.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141e7c1b0.c",
+  "pseudocodeSha256": "8ec501d07ada30cda195e48262502cbd243ebf2a2a2d1260cc588256782e61ce",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

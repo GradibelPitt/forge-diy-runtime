@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0035447,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142298860.asm",
   "assemblySha256": "63fd37f8834178176fac5bc5c0b35dd568a71523d83d0ba3ed09617fa48a86b8",
   "literalReferences": [
     {
-      "dataVa": "0x142cdcb73",
       "instruction": "0x142298881",
-      "preview": "MaxCounter 缺 ValidCardMaxCounter 缺 CounterTypeDevotion 缺 ValidPlayerFlipCoinDoubler 缺 ValidPlayerFlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcb73",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MaxCounter 缺 ValidCardMaxCounter 缺 CounterTypeDevotion 缺 ValidPlayerFlipCoinDoubler 缺 ValidPlayerFlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswal"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142298860.c",
+  "pseudocodeSha256": "3f549ed1c999fc8f359822718fb6a081ede05d830d7d61999ee0f069fa5e8eb8",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

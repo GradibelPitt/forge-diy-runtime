@@ -5,75 +5,85 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.121437,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422a82d0.asm",
   "assemblySha256": "6c2ec9c0c8a00eea6939a7952a22c8716c66bd3fd99858209aa4fc1ae3c46f12",
   "literalReferences": [
     {
-      "dataVa": "0x142cdafe0",
       "instruction": "0x1422a8459",
-      "preview": "ClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNextPlayerInChosgeControlVariantExchangeControlVVillainousChoiceReverseTurnOrderChangeCombatantspOnt",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdafe0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ClassLevelGainedGainControlVariaayerToTheirRightChooseFromPlayernChosenDirectionNextPlayerInChosgeControlVariantExchangeControlVVillainousChoiceReverseTurnOrderChangeCombatantspOnt"
     },
     {
-      "dataVa": "0x142cdc1a0",
       "instruction": "0x1422a847c",
-      "preview": "ValidCardClassLevelGained 缺等级",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc1a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardClassLevelGained 缺等级"
     },
     {
-      "dataVa": "0x142cdd40f",
       "instruction": "0x1422a84f0",
-      "preview": "ClassLevel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdd40f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ClassLevel"
     },
     {
-      "dataVa": "0x142cdc1a0",
       "instruction": "0x1422a8551",
-      "preview": "ValidCardClassLevelGained 缺等级",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc1a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardClassLevelGained 缺等级"
     },
     {
-      "dataVa": "0x142cdc1a0",
       "instruction": "0x1422a87b4",
-      "preview": "ValidCardClassLevelGained 缺等级",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdd3ed",
-      "instruction": "0x1422a8912",
-      "preview": "ThisDoorUnlockDoor 不是这扇门ClassLevel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdd3ff",
-      "instruction": "0x1422a8a02",
-      "preview": " 不是这扇门ClassLevel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdd3f5",
-      "instruction": "0x1422a8a0d",
-      "preview": "UnlockDoor 不是这扇门ClassLevel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdc1b3",
-      "instruction": "0x1422a8a55",
-      "preview": "Gained 缺等级",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdc1a9",
-      "instruction": "0x1422a8a60",
-      "preview": "ClassLevelGained 缺等级",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cdc1a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardClassLevelGained 缺等级"
+    },
+    {
+      "instruction": "0x1422a8912",
+      "dataVa": "0x142cdd3ed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisDoorUnlockDoor 不是这扇门ClassLevel"
+    },
+    {
+      "instruction": "0x1422a8a02",
+      "dataVa": "0x142cdd3ff",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " 不是这扇门ClassLevel"
+    },
+    {
+      "instruction": "0x1422a8a0d",
+      "dataVa": "0x142cdd3f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UnlockDoor 不是这扇门ClassLevel"
+    },
+    {
+      "instruction": "0x1422a8a55",
+      "dataVa": "0x142cdc1b3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Gained 缺等级"
+    },
+    {
+      "instruction": "0x1422a8a60",
+      "dataVa": "0x142cdc1a9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ClassLevelGained 缺等级"
+    },
+    {
       "instruction": "0x1422a8a8c",
-      "preview": "ValidCardClassLevelGained 缺等级",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc1a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardClassLevelGained 缺等级"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422a82d0.c",
+  "pseudocodeSha256": "768abdc63e748e9957b0eab2580bd366ffbebdf56b2a3f8a124017511563ddf8",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

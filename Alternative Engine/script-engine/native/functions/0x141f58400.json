@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0564533,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f58400.asm",
   "assemblySha256": "d089122c6b364c69d63bd64b49b7307cf368ec150b8f587f777786ab325bba05",
   "literalReferences": [
     {
-      "dataVa": "0x142ca6760",
       "instruction": "0x141f5874d",
-      "preview": "CARDNAME count as ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6760",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CARDNAME count as "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141f58400.c",
+  "pseudocodeSha256": "a9e5536eab633c638b461c630e4341cc216b5cb644bb3e733c01e81a93c241ef",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

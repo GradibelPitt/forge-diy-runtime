@@ -5,99 +5,109 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.2410664,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142436990.asm",
   "assemblySha256": "8cb68fc7925f7658578a659e4c96faacaab1de97a669c61b9beee040b6a32ecc",
   "literalReferences": [
     {
-      "dataVa": "0x142cf26e8",
       "instruction": "0x1424369c7",
-      "preview": "ModeAlternativeCostOptionalCostMayPlayValidPlayerContinuousAffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefield",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf26e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeAlternativeCostOptionalCostMayPlayValidPlayerContinuousAffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefield"
     },
     {
-      "dataVa": "0x142cf2707",
       "instruction": "0x142436a13",
-      "preview": "MayPlayValidPlayerContinuousAffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2707",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayPlayValidPlayerContinuousAffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,"
     },
     {
-      "dataVa": "0x142cf272b",
       "instruction": "0x142436a87",
-      "preview": "AddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf272b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack"
     },
     {
-      "dataVa": "0x142cf27de",
       "instruction": "0x142436afd",
-      "preview": "AffectedZone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf2723",
-      "instruction": "0x142436d00",
-      "preview": "AffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf2b4f",
-      "instruction": "0x14243723f",
-      "preview": "CharacteristicDefiningFromDraftNotes静态能力 ContinuousLockInTextAddAbilityAddAbilities持续效果没有作用对象AddPowerAddToughnessSetPowerSetToughnessAddType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf2723",
-      "instruction": "0x142437323",
-      "preview": "AffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cf2deb",
-      "instruction": "0x142437493",
-      "preview": "Card.Self",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cf27de",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AffectedZone"
+    },
+    {
+      "instruction": "0x142436d00",
+      "dataVa": "0x142cf2723",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack"
+    },
+    {
+      "instruction": "0x14243723f",
+      "dataVa": "0x142cf2b4f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CharacteristicDefiningFromDraftNotes静态能力 ContinuousLockInTextAddAbilityAddAbilities持续效果没有作用对象AddPowerAddToughnessSetPowerSetToughnessAddType"
+    },
+    {
+      "instruction": "0x142437323",
+      "dataVa": "0x142cf2723",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AffectedAddKeywordYou draw cards from the bottom of your library instead of the top of your library.EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack"
+    },
+    {
+      "instruction": "0x142437493",
+      "dataVa": "0x142cf2deb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Card.Self"
+    },
+    {
       "instruction": "0x142437792",
-      "preview": "AffectedZone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf27de",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AffectedZone"
     },
     {
-      "dataVa": "0x142cf2787",
       "instruction": "0x142437864",
-      "preview": "EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2787",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectZoneBattlefieldGraveyard,Hand,Library,Command,Stack"
     },
     {
-      "dataVa": "0x142cf2e0e",
       "instruction": "0x142437a11",
-      "preview": "MayPlayWithoutManaCostMayLookAtMayLookAt 的牌手静态能力 MayPlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2e0e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayPlayWithoutManaCostMayLookAtMayLookAt 的牌手静态能力 MayPlay"
     },
     {
-      "dataVa": "0x142cf2859",
       "instruction": "0x142437aff",
-      "preview": "RaiseCostCastWithFlashCantBeCastCantBeActivatedCanAttackDefenderMinMaxBlockerCantGainLifeCombatDamageToughnessCombatDamageNegatePowerCantTargetPanharmoniconMustAttackValidCreatureV",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2859",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RaiseCostCastWithFlashCantBeCastCantBeActivatedCanAttackDefenderMinMaxBlockerCantGainLifeCombatDamageToughnessCombatDamageNegatePowerCantTargetPanharmoniconMustAttackValidCreatureV"
     },
     {
-      "dataVa": "0x142cf2e24",
       "instruction": "0x142437d28",
-      "preview": "MayLookAtMayLookAt 的牌手静态能力 MayPlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2e24",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayLookAtMayLookAt 的牌手静态能力 MayPlay"
     },
     {
-      "dataVa": "0x142cf2e40",
       "instruction": "0x142437f41",
-      "preview": "静态能力 MayPlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2e40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "静态能力 MayPlay"
     },
     {
-      "dataVa": "0x142cf2e2d",
       "instruction": "0x1424380c9",
-      "preview": "MayLookAt 的牌手静态能力 MayPlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2e2d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayLookAt 的牌手静态能力 MayPlay"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142436990.c",
+  "pseudocodeSha256": "0942377da12a2ad86560c8366a90a86983e22db17ea5a41dc17cd3555ab3ffd4",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

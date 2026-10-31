@@ -1,4 +1,4 @@
-/* Ghidra pseudocode, NOT recovered original Rust. Evidence: ev_9ef18e681d62e8ad52fb8cccd24500a65dd89b7a392bca55eb0e5e68a41fdc0f */
+/* Decompiled original binary; inferred C types, NOT original Rust source. */
 
 void FUN_1425224c0(longlong *param_1,int *param_2)
 
@@ -16,23 +16,23 @@ void FUN_1425224c0(longlong *param_1,int *param_2)
   int *piVar11;
   int *piVar12;
   longlong lVar13;
-  longlong local_90;
-  int *local_88;
-  longlong local_80;
-  longlong local_78;
+  longlong lStack_90;
+  int *piStack_88;
+  longlong lStack_80;
+  longlong lStack_78;
   undefined4 uStack_70;
   undefined3 uStack_6c;
-  int *local_68;
-  undefined4 local_60;
-  undefined2 local_5c;
-  undefined1 local_5a;
-  int *local_58;
-  char local_49;
-  undefined8 local_48;
+  int *piStack_68;
+  undefined4 uStack_60;
+  undefined2 uStack_5c;
+  undefined1 uStack_5a;
+  int *piStack_58;
+  char cStack_49;
+  undefined8 uStack_48;
   
-  local_48 = 0xfffffffffffffffe;
-  local_68 = *(int **)((longlong)param_2 + 8);
-  if ((*(int **)param_2 == local_68) || (*(longlong *)((longlong)param_2 + 0x28) == 0)) {
+  uStack_48 = 0xfffffffffffffffe;
+  piStack_68 = *(int **)((longlong)param_2 + 8);
+  if ((*(int **)param_2 == piStack_68) || (*(longlong *)((longlong)param_2 + 0x28) == 0)) {
 LAB_142522661:
     *param_1 = 0;
     param_1[1] = 4;
@@ -45,7 +45,7 @@ LAB_142522661:
   lVar13 = *(longlong *)((longlong)param_2 + 0x28) << 3;
   uVar6 = *(undefined8 *)((longlong)param_2 + 0x30);
   piVar11 = *(int **)param_2;
-  local_58 = param_2;
+  piStack_58 = param_2;
 LAB_14252253a:
   piVar12 = piVar11 + 3;
   *(int **)param_2 = piVar12;
@@ -76,33 +76,33 @@ LAB_14252253a:
   goto LAB_142522530;
 LAB_1425225cb:
   cVar9 = FUN_141b7e1e0(uVar6);
-  param_2 = local_58;
+  param_2 = piStack_58;
   if ((cVar9 != '\0') && ((char)piVar11[1] != '\x02')) {
-    local_58 = (int *)CONCAT71(local_58._1_7_,(char)piVar11[1]);
+    piStack_58 = (int *)CONCAT71(piStack_58._1_7_,(char)piVar11[1]);
     uStack_70 = *(undefined4 *)((longlong)piVar11 + 5);
     uStack_6c = (undefined3)((uint)piVar11[2] >> 8);
-    FUN_1403fecb0();
-    local_88 = (int *)thunk_FUN_14271e700(0x30,4);
-    if (local_88 == (int *)0x0) {
+    func_0x0001403fecb0();
+    piStack_88 = (int *)func_0x000140639cf0(0x30,4);
+    if (piStack_88 == (int *)0x0) {
       FUN_14276fccb(4,0x30);
                     /* WARNING: Does not return */
       pcVar8 = (code *)invalidInstructionException();
       (*pcVar8)();
     }
-    *local_88 = iVar2;
-    *(undefined1 *)(local_88 + 1) = local_58._0_1_;
-    *(undefined4 *)((longlong)local_88 + 5) = uStack_70;
-    local_88[2] = CONCAT31(uStack_6c,uStack_70._3_1_);
-    local_90 = 4;
-    local_80 = 1;
-    if (piVar12 == local_68) goto LAB_1425227d2;
-    local_78 = 1;
-    local_58 = local_88;
+    *piStack_88 = iVar2;
+    *(undefined1 *)(piStack_88 + 1) = piStack_58._0_1_;
+    *(undefined4 *)((longlong)piStack_88 + 5) = uStack_70;
+    piStack_88[2] = CONCAT31(uStack_6c,uStack_70._3_1_);
+    lStack_90 = 4;
+    lStack_80 = 1;
+    if (piVar12 == piStack_68) goto LAB_1425227d2;
+    lStack_78 = 1;
+    piStack_58 = piStack_88;
     goto LAB_1425226da;
   }
 LAB_142522530:
   piVar11 = piVar12;
-  if (piVar12 == local_68) goto LAB_142522661;
+  if (piVar12 == piStack_68) goto LAB_142522661;
   goto LAB_14252253a;
 LAB_1425226da:
   piVar11 = piVar12 + 3;
@@ -134,28 +134,28 @@ LAB_1425226da:
 LAB_142522757:
   cVar9 = FUN_141b7e1e0(uVar6);
   if ((cVar9 != '\0') && (cVar9 = (char)piVar12[1], cVar9 != '\x02')) {
-    local_60 = *(undefined4 *)((longlong)piVar12 + 5);
-    local_5c = *(undefined2 *)((longlong)piVar12 + 9);
-    local_5a = *(undefined1 *)((longlong)piVar12 + 0xb);
-    local_49 = cVar9;
-    if (local_78 == local_90) {
-      FUN_142750c00(&local_90,local_78,1,4,0xc);
-      local_58 = local_88;
+    uStack_60 = *(undefined4 *)((longlong)piVar12 + 5);
+    uStack_5c = *(undefined2 *)((longlong)piVar12 + 9);
+    uStack_5a = *(undefined1 *)((longlong)piVar12 + 0xb);
+    cStack_49 = cVar9;
+    if (lStack_78 == lStack_90) {
+      FUN_142750c00(&lStack_90,lStack_78,1,4,0xc);
+      piStack_58 = piStack_88;
     }
-    local_58[local_78 * 3] = iVar2;
-    *(char *)(local_58 + local_78 * 3 + 1) = local_49;
-    *(undefined4 *)((longlong)local_58 + local_78 * 0xc + 5) = local_60;
-    local_58[local_78 * 3 + 2] = CONCAT13(local_5a,CONCAT21(local_5c,local_60._3_1_));
-    local_80 = local_78 + 1;
-    local_78 = local_80;
+    piStack_58[lStack_78 * 3] = iVar2;
+    *(char *)(piStack_58 + lStack_78 * 3 + 1) = cStack_49;
+    *(undefined4 *)((longlong)piStack_58 + lStack_78 * 0xc + 5) = uStack_60;
+    piStack_58[lStack_78 * 3 + 2] = CONCAT13(uStack_5a,CONCAT21(uStack_5c,uStack_60._3_1_));
+    lStack_80 = lStack_78 + 1;
+    lStack_78 = lStack_80;
   }
 LAB_1425226d0:
   piVar12 = piVar11;
-  if (piVar11 == local_68) {
+  if (piVar11 == piStack_68) {
 LAB_1425227d2:
-    param_1[2] = local_80;
-    *param_1 = local_90;
-    param_1[1] = (longlong)local_88;
+    param_1[2] = lStack_80;
+    *param_1 = lStack_90;
+    param_1[1] = (longlong)piStack_88;
     return;
   }
   goto LAB_1425226da;

@@ -7,38 +7,43 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0810722
+  },
   "assembly": "functions/0x1400769a0.asm",
   "assemblySha256": "0e717242f77f396be47266575b18e2ac40d4d15c55ae017ed911b36e1860ca76",
   "literalReferences": [
     {
-      "dataVa": "0x1427718ec",
       "instruction": "0x140076bd4",
-      "preview": "typesrc\\frames.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427718ec",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "typesrc\\frames.rs"
     },
     {
-      "dataVa": "0x142771900",
       "instruction": "0x140076d51",
-      "preview": "zhName",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142771900",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "zhName"
+    },
+    {
       "instruction": "0x140076e6f",
-      "preview": "zhName",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142771900",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "zhName"
     },
     {
-      "dataVa": "0x142771955",
       "instruction": "0x140076f12",
-      "preview": "loyaltydefense",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142771955",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "loyaltydefense"
     },
     {
-      "dataVa": "0x14277195c",
       "instruction": "0x140076f3c",
-      "preview": "defense",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277195c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "defense"
     }
   ],
   "pseudocode": "functions/0x1400769a0.c",

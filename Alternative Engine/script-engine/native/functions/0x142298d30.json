@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0035927,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142298d30.asm",
   "assemblySha256": "d1f9621a805e1b1e5bc29ace5b0033bf09ce0d2317d3d95fb77a26316105ea21",
   "literalReferences": [
     {
-      "dataVa": "0x142cdccd8",
       "instruction": "0x142298d5c",
-      "preview": "PlayerMustAttack 缺 ValidPlayerCanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdccd8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlayerMustAttack 缺 ValidPlayerCanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethal"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142298d30.c",
+  "pseudocodeSha256": "d5d60eccd62f82e564b3dd28863f181a2b875a96a39178c8e30f4675826a139c",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

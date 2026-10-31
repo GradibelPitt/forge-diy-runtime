@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.054435,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422b05c0.asm",
   "assemblySha256": "9a5a3a81c89925b4695e2f2dbf0b1d13a0bfc07109558b8b3571bbfc01d4a797",
   "literalReferences": [
     {
-      "dataVa": "0x142cddfe8",
       "instruction": "0x1422b06c4",
-      "preview": "SaveNumFlipsToSVarRememberNumber",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cddfe8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SaveNumFlipsToSVarRememberNumber"
     },
     {
-      "dataVa": "0x142cddffa",
       "instruction": "0x1422b0883",
-      "preview": "RememberNumber",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cddffa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberNumber"
     },
     {
-      "dataVa": "0x142cde01a",
       "instruction": "0x1422b0a11",
-      "preview": "FlipUntilYouLoseRememberResultETBInstantSpeedToVisitYourAttractionsChosenSVarOtherSVarEvenOddResultsDifferentResultsNoteDoublesMaxRollsResultsStoreResultsRerollResultsGainControlNo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde01a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FlipUntilYouLoseRememberResultETBInstantSpeedToVisitYourAttractionsChosenSVarOtherSVarEvenOddResultsDifferentResultsNoteDoublesMaxRollsResultsStoreResultsRerollResultsGainControlNo"
     },
     {
-      "dataVa": "0x142cde02a",
       "instruction": "0x1422b0ad3",
-      "preview": "RememberResultETBInstantSpeedToVisitYourAttractionsChosenSVarOtherSVarEvenOddResultsDifferentResultsNoteDoublesMaxRollsResultsStoreResultsRerollResultsGainControlNoMoveFoundNoMoveR",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde02a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberResultETBInstantSpeedToVisitYourAttractionsChosenSVarOtherSVarEvenOddResultsDifferentResultsNoteDoublesMaxRollsResultsStoreResultsRerollResultsGainControlNoMoveFoundNoMoveR"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422b05c0.c",
+  "pseudocodeSha256": "f06f1744d4e359968d9a81be3d13edb6e1a312a0a69df814f2627683dd98ca61",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

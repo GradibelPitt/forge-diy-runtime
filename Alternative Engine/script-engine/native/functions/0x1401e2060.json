@@ -7,56 +7,61 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0293999
+  },
   "assembly": "functions/0x1401e2060.asm",
   "assemblySha256": "3ced120673558b60a1ab6253b9f89d9d584335270bbcbc279aa6c4d20f189ecf",
   "literalReferences": [
     {
-      "dataVa": "0x1427807a5",
       "instruction": "0x1401e20ea",
-      "preview": "置于手上Put into hand不要Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807a5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "置于手上Put into hand不要Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerC"
     },
     {
-      "dataVa": "0x1427807b1",
       "instruction": "0x1401e20f1",
-      "preview": "Put into hand不要Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatessel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807b1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Put into hand不要Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatessel"
     },
     {
-      "dataVa": "0x1427807c9",
       "instruction": "0x1401e2189",
-      "preview": "继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDef",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807c9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDef"
     },
     {
-      "dataVa": "0x1427807cf",
       "instruction": "0x1401e2190",
-      "preview": "Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807cf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderC"
     },
     {
-      "dataVa": "0x1427807be",
       "instruction": "0x1401e21ab",
-      "preview": "不要Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttacker",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807be",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "不要Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttacker"
     },
     {
-      "dataVa": "0x1427807c4",
       "instruction": "0x1401e21b2",
-      "preview": "Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdatta",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807c4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Don't继续Keep going继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdatta"
     },
     {
-      "dataVa": "0x1427807d9",
       "instruction": "0x1401e21d0",
-      "preview": "继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdecl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807d9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "继续放逐Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdecl"
     },
     {
-      "dataVa": "0x1427807e5",
       "instruction": "0x1401e21d7",
-      "preview": "Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttacker",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427807e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Keep exilingkindhasAvailableActionscandidatePlayerIdsselectedPlayerIdsstartingHandsRemainingstartingPlayerIdblockerCandidatesselectedAttackerIdattackDefenderCardIdsdeclaredAttacker"
     }
   ],
   "pseudocode": "functions/0x1401e2060.c",

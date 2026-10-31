@@ -5,8 +5,14 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompile_failed",
+    "diagnostic": "\nLow-level Error: Trying to construct memory range beyond end of address space: ram",
+    "seconds": 1.352102,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140637140.asm",
   "assemblySha256": "a4d509b061af9ba44cb1b16759c9d8bd0fde737d724ca5db4ca6b89da2a77d44",
   "literalReferences": [],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocodeStatus": "decompile_failed"
 }

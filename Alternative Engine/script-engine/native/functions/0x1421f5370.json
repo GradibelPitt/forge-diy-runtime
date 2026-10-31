@@ -5,39 +5,49 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0257789,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421f5370.asm",
   "assemblySha256": "80eede1d9bcb8225ec5376fb1c5eb19ea55846cac644ef1ce131e409474d1b90",
   "literalReferences": [
     {
-      "dataVa": "0x142cd38f4",
       "instruction": "0x1421f53b9",
-      "preview": "DefinedKWChosenTypeKWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3907",
-      "instruction": "0x1421f54e1",
-      "preview": "KWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd3907",
-      "instruction": "0x1421f55bc",
-      "preview": "KWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd38f4",
-      "instruction": "0x1421f5728",
-      "preview": "DefinedKWChosenTypeKWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedKWChosenTypeKWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent"
     },
     {
+      "instruction": "0x1421f54e1",
       "dataVa": "0x142cd3907",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent"
+    },
+    {
+      "instruction": "0x1421f55bc",
+      "dataVa": "0x142cd3907",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent"
+    },
+    {
+      "instruction": "0x1421f5728",
+      "dataVa": "0x142cd38f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedKWChosenTypeKWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent"
+    },
+    {
       "instruction": "0x1421f5760",
-      "preview": "KWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3907",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KWConditionDescriptionNotKickedPlayerTurnThresholdDeliriumMetalcraftHellbent"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421f5370.c",
+  "pseudocodeSha256": "c5cc40a1dcd618197948350fda6982f09570b001e134c755ffdf2c672eaeb6e7",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

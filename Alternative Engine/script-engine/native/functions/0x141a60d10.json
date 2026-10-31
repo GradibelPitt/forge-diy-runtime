@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0036418,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a60d10.asm",
   "assemblySha256": "eb44b6864345d1524e7f5cd93177a4383f32dbdc1947078a7dbd46f363a07309",
   "literalReferences": [
     {
-      "dataVa": "0x142c86324",
       "instruction": "0x141a60d31",
-      "preview": "Repeat 的衍生物",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86324",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Repeat 的衍生物"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a60d10.c",
+  "pseudocodeSha256": "468a1227c79ff68cabe27d789051cc1ee769efcb0b97fa8971f21f87f1b16b5a",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

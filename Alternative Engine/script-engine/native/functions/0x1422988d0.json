@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0037409,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422988d0.asm",
   "assemblySha256": "7d6cf7ea721db155719c4a26e6023ced73b7c3ca38d15ca8b6e81e1b9b9dcd3f",
   "literalReferences": [
     {
-      "dataVa": "0x142cdcb95",
       "instruction": "0x1422988f1",
-      "preview": " 缺 CounterTypeDevotion 缺 ValidPlayerFlipCoinDoubler 缺 ValidPlayerFlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcb95",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " 缺 CounterTypeDevotion 缺 ValidPlayerFlipCoinDoubler 缺 ValidPlayerFlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgn"
     },
     {
-      "dataVa": "0x142cdcb8b",
       "instruction": "0x1422988fc",
-      "preview": "MaxCounter 缺 CounterTypeDevotion 缺 ValidPlayerFlipCoinDoubler 缺 ValidPlayerFlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 A",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcb8b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MaxCounter 缺 CounterTypeDevotion 缺 ValidPlayerFlipCoinDoubler 缺 ValidPlayerFlipCoinMod 缺 ValidPlayerGainLifeRadiation 缺 ValidPlayerIgnorePlaneswalkerZeroLoyaltyRule 缺 A"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422988d0.c",
+  "pseudocodeSha256": "09491c9d10c60a2d0083a808d393d41f8c184ff5900af03e78c7d58f4584b8eb",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

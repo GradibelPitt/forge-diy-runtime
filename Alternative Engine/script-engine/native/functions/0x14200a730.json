@@ -5,147 +5,157 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 4.9962453,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14200a730.asm",
   "assemblySha256": "807eecbd05023e97c119ef22ed646330e1c9a58a60ab78cc4191e38dc47b7ad3",
   "literalReferences": [
     {
-      "dataVa": "0x142cbc247",
       "instruction": "0x14200a8b0",
-      "preview": "RemoveThisAbilityRevertCostTransferActivatorRevertCost 不带 RemoveThisAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc247",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveThisAbilityRevertCostTransferActivatorRevertCost 不带 RemoveThisAbility"
     },
     {
-      "dataVa": "0x142cbc258",
       "instruction": "0x14200a986",
-      "preview": "RevertCostTransferActivatorRevertCost 不带 RemoveThisAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc258",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RevertCostTransferActivatorRevertCost 不带 RemoveThisAbility"
     },
     {
-      "dataVa": "0x142cbc262",
       "instruction": "0x14200ab8e",
-      "preview": "TransferActivatorRevertCost 不带 RemoveThisAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc262",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TransferActivatorRevertCost 不带 RemoveThisAbility"
     },
     {
-      "dataVa": "0x142cbc273",
       "instruction": "0x14200ad61",
-      "preview": "RevertCost 不带 RemoveThisAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc273",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RevertCost 不带 RemoveThisAbility"
     },
     {
-      "dataVa": "0x142cbb21a",
       "instruction": "0x14200ae21",
-      "preview": "Duration",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8c7",
-      "instruction": "0x14200b1d3",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbc302",
-      "instruction": "0x14200b635",
-      "preview": "KeywordsColorsOverwriteColorsTriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x14200bbc6",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8c7",
-      "instruction": "0x14200bbfb",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb8b7",
-      "instruction": "0x14200bc55",
-      "preview": "ZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cbb21a",
-      "instruction": "0x14200bcc9",
-      "preview": "Duration",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Duration"
     },
     {
-      "dataVa": "0x142cbc30a",
-      "instruction": "0x14200be9b",
-      "preview": "ColorsOverwriteColorsTriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeyw",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba52f",
-      "instruction": "0x14200bef9",
-      "preview": "Colorless",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbc310",
-      "instruction": "0x14200c0a1",
-      "preview": "OverwriteColorsTriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSh",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
+      "instruction": "0x14200b1d3",
       "dataVa": "0x142cbb8c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x14200b635",
+      "dataVa": "0x142cbc302",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KeywordsColorsOverwriteColorsTriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSh"
+    },
+    {
+      "instruction": "0x14200bbc6",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x14200bbfb",
+      "dataVa": "0x142cbb8c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x14200bc55",
+      "dataVa": "0x142cbb8b7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ZoneDefinedCardsValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
+    },
+    {
+      "instruction": "0x14200bcc9",
+      "dataVa": "0x142cbb21a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Duration"
+    },
+    {
+      "instruction": "0x14200be9b",
+      "dataVa": "0x142cbc30a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorsOverwriteColorsTriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeyw"
+    },
+    {
+      "instruction": "0x14200bef9",
+      "dataVa": "0x142cba52f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Colorless"
+    },
+    {
+      "instruction": "0x14200c0a1",
+      "dataVa": "0x142cbc310",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OverwriteColorsTriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSh"
+    },
+    {
       "instruction": "0x14200c143",
-      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb8c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardsSeparatorRememberChosenKeepRememberedTwoPiles 没有牌StartNextThisTurn"
     },
     {
-      "dataVa": "0x142cbc31f",
       "instruction": "0x14200c4ea",
-      "preview": "TriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDef",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbc327",
-      "instruction": "0x14200c526",
-      "preview": "AbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedShar",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbdb3",
-      "instruction": "0x14200c562",
-      "preview": "staticAbilitiesNumAttNumDefKW增益同时给静态能力与攻防／关键字NoteNumber点名牌手加的这种法术力UntapUpToUntapTypeSacEachValidSacValid逐类牺牲的数量D",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cbc31f",
-      "instruction": "0x14200c7ad",
-      "preview": "TriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDef",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDef"
     },
     {
+      "instruction": "0x14200c526",
       "dataVa": "0x142cbc327",
-      "instruction": "0x14200ca50",
-      "preview": "AbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedShar",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedShar"
     },
     {
+      "instruction": "0x14200c562",
       "dataVa": "0x142cbbdb3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "staticAbilitiesNumAttNumDefKW增益同时给静态能力与攻防／关键字NoteNumber点名牌手加的这种法术力UntapUpToUntapTypeSacEachValidSacValid逐类牺牲的数量D"
+    },
+    {
+      "instruction": "0x14200c7ad",
+      "dataVa": "0x142cbc31f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggersAbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDef"
+    },
+    {
+      "instruction": "0x14200ca50",
+      "dataVa": "0x142cbc327",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AbilitiessVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedShar"
+    },
+    {
       "instruction": "0x14200ccfc",
-      "preview": "staticAbilitiesNumAttNumDefKW增益同时给静态能力与攻防／关键字NoteNumber点名牌手加的这种法术力UntapUpToUntapTypeSacEachValidSacValid逐类牺牲的数量D",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbdb3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "staticAbilitiesNumAttNumDefKW增益同时给静态能力与攻防／关键字NoteNumber点名牌手加的这种法术力UntapUpToUntapTypeSacEachValidSacValid逐类牺牲的数量D"
     },
     {
-      "dataVa": "0x142cbc330",
       "instruction": "0x14200d1d5",
-      "preview": "sVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedSharedKeyword",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc330",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sVarsReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedSharedKeyword"
     },
     {
-      "dataVa": "0x142cbc335",
       "instruction": "0x14200d233",
-      "preview": "ReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedSharedKeywordsZone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc335",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReplacementsETBBolsterAdaptMonstrositySupport支援又带目标Creature.OtherEachFromSourceEachFromSource 的写法CounterTypesSharedKeywordsSharedKeywordsDefinedSharedKeywordsZone"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14200a730.c",
+  "pseudocodeSha256": "2ccc6d0da78588b939ba88fd6c09358a346546b210c42820ec4d5f846fc938ef",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0166917,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14243d750.asm",
   "assemblySha256": "9beb24bca06c9a2ec7b35e6e5b34d1b0b6026bbb8a182d776e1f8573c95bdf71",
   "literalReferences": [
     {
-      "dataVa": "0x142cf2f76",
       "instruction": "0x14243d771",
-      "preview": "PumpDurationPumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f76",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpDurationPumpKeywords"
     },
     {
-      "dataVa": "0x142cf2f82",
       "instruction": "0x14243d8b9",
-      "preview": "PumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f82",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PumpKeywords"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14243d750.c",
+  "pseudocodeSha256": "1bac5166b772589603e0f0ecf832a19d98e8bd1ef73eb63b2844b772aec3c006",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

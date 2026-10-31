@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0468742,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422b2920.asm",
   "assemblySha256": "722f226eda3e467e20911fa6d6e16f6d2bcb4e64c43c987e1252282b960bd37b",
   "literalReferences": [
     {
-      "dataVa": "0x142cde220",
       "instruction": "0x1422b2979",
-      "preview": "ChooserOpponentCharmNum对手选的模式又带模式或选几项",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cde237",
-      "instruction": "0x1422b2b57",
-      "preview": "对手选的模式又带模式或选几项",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cde22f",
-      "instruction": "0x1422b2b82",
-      "preview": "CharmNum对手选的模式又带模式或选几项",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cde220",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserOpponentCharmNum对手选的模式又带模式或选几项"
+    },
+    {
+      "instruction": "0x1422b2b57",
+      "dataVa": "0x142cde237",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "对手选的模式又带模式或选几项"
+    },
+    {
+      "instruction": "0x1422b2b82",
+      "dataVa": "0x142cde22f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CharmNum对手选的模式又带模式或选几项"
+    },
+    {
       "instruction": "0x1422b2c45",
-      "preview": "ChooserOpponentCharmNum对手选的模式又带模式或选几项",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde220",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserOpponentCharmNum对手选的模式又带模式或选几项"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422b2920.c",
+  "pseudocodeSha256": "3c6486ca2373f438b561b69733e4a59499ad7b09f666daa89f448beb5378e2aa",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

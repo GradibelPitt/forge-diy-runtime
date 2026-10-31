@@ -5,141 +5,151 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.669629,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14220dc50.asm",
   "assemblySha256": "3bcab0d70d278da4b9fcd06c2fc013e33b4b068a6f087f934c2b9dac5eadc028",
   "literalReferences": [
     {
-      "dataVa": "0x142cd40b4",
       "instruction": "0x14220dcb2",
-      "preview": "Count$YourSpeed",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd40b4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$YourSpeed"
     },
     {
-      "dataVa": "0x142cd4016",
       "instruction": "0x14220ddaa",
-      "preview": "BeenDealtCombatDamageSinceLastTurnTotalCommanderCastFromCommandZoneValid",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd4016",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "BeenDealtCombatDamageSinceLastTurnTotalCommanderCastFromCommandZoneValid"
     },
     {
-      "dataVa": "0x142cd23a0",
       "instruction": "0x14220ddf4",
-      "preview": "ageDealtThisTurnNonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAtta",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd23a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ageDealtThisTurnNonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAtta"
     },
     {
-      "dataVa": "0x142cd23b0",
       "instruction": "0x14220ddfc",
-      "preview": "NonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd23b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRe"
     },
     {
-      "dataVa": "0x142cd2410",
       "instruction": "0x14220de2a",
-      "preview": "LifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamag",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2410",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamag"
     },
     {
-      "dataVa": "0x142cd2420",
       "instruction": "0x14220de45",
-      "preview": "LandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy More",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2420",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy More"
     },
     {
-      "dataVa": "0x142cd4038",
       "instruction": "0x14220de6b",
-      "preview": "TotalCommanderCastFromCommandZoneValid",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd4038",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TotalCommanderCastFromCommandZoneValid"
     },
     {
-      "dataVa": "0x142cd408d",
       "instruction": "0x14220de9d",
-      "preview": "Count$TotalCommanderCastFromCommandZoneCount$YourSpeed",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd408d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$TotalCommanderCastFromCommandZoneCount$YourSpeed"
     },
     {
-      "dataVa": "0x142cd23e0",
       "instruction": "0x14220df98",
-      "preview": "SpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDa",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd23e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDa"
     },
     {
-      "dataVa": "0x142cd23f0",
       "instruction": "0x14220dfc7",
-      "preview": "NumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasD",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd23f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasD"
     },
     {
-      "dataVa": "0x142cd2380",
       "instruction": "0x14220e002",
-      "preview": "entTypesThisTurnSacrificedPermanageDealtThisTurnNonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2380",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "entTypesThisTurnSacrificedPermanageDealtThisTurnNonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtack"
     },
     {
-      "dataVa": "0x142cd2390",
       "instruction": "0x14220e00a",
-      "preview": "SacrificedPermanageDealtThisTurnNonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOppo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2390",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SacrificedPermanageDealtThisTurnNonCombatDamageDrtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOppo"
     },
     {
-      "dataVa": "0x142cb8c70",
       "instruction": "0x14220e0ee",
-      "preview": "Turn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb8c70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Turn"
     },
     {
-      "dataVa": "0x142cd2400",
       "instruction": "0x14220e0f6",
-      "preview": "DamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2400",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeen"
     },
     {
-      "dataVa": "0x142cd23c0",
       "instruction": "0x14220e129",
-      "preview": "rtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresI",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd23c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rtedThisTurnWithLifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresI"
     },
     {
-      "dataVa": "0x142cd23d0",
       "instruction": "0x14220e131",
-      "preview": "LifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasF",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd23d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LifeStartedThisTSpellsCastThisTuNumPowerSurgeLanDamageToOppsThisLifeLostLastTurnLandsInGraveyardtackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasF"
     },
     {
-      "dataVa": "0x142cd2430",
       "instruction": "0x14220e160",
-      "preview": "tackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "tackedThisCombatOpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_"
     },
     {
-      "dataVa": "0x142cd2440",
       "instruction": "0x14220e168",
-      "preview": "OpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cd2450",
-      "instruction": "0x14220e19c",
-      "preview": "AttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cd2440",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_"
+    },
+    {
+      "instruction": "0x14220e19c",
+      "dataVa": "0x142cd2450",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_"
+    },
+    {
       "instruction": "0x14220e1a4",
-      "preview": "OpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2440",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentsAttackeAttackedThisTurnIsRememberedOrCoresInPlayThanYouhasFewerCreatureatDamageLastTurnwasDealtCombatDaBeenAttackedThisamageThisTurnBy MoreLandsThanYouard_"
     },
     {
-      "dataVa": "0x142c83420",
       "instruction": "0x14220e1d1",
-      "preview": "ThisTurnEntered_CreatureTypeWithsharesCreatureTyresCardTypeWith sharesCardTypeWiSharesColorWith greatestToughnesActivatedAbilityhasNonManaActivaBySourceThisTurnblockedBySourceThasA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83420",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ThisTurnEntered_CreatureTypeWithsharesCreatureTyresCardTypeWith sharesCardTypeWiSharesColorWith greatestToughnesActivatedAbilityhasNonManaActivaBySourceThisTurnblockedBySourceThasA"
     },
     {
-      "dataVa": "0x142cd4077",
       "instruction": "0x14220e6ef",
-      "preview": "Count$YourStartingLifeCount$TotalCommanderCastFromCommandZoneCount$YourSpeed",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd4077",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$YourStartingLifeCount$TotalCommanderCastFromCommandZoneCount$YourSpeed"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14220dc50.c",
+  "pseudocodeSha256": "2625e70e9e5d86c23d0d5eb25ed4162c328f964b2bfc990fc78ea1993fa5e6e1",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -16,44 +16,50 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141b9b1a0: process: timeout\n",
+    "seconds": 12.0061016,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141b9b1a0.asm",
   "assemblySha256": "c6d96a5da45617ee9ec8532617d5f5795306b33a60e572349d8a3a358cab3301",
   "literalReferences": [
     {
-      "dataVa": "0x142c932c0",
       "instruction": "0x141b9b496",
-      "preview": "推进·状态动作推进·接着结算推进·触发上堆叠",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c932c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "推进·状态动作推进·接着结算推进·触发上堆叠"
     },
     {
-      "dataVa": "0x142c932d4",
       "instruction": "0x141b9de6d",
-      "preview": "推进·接着结算推进·触发上堆叠",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c932d4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "推进·接着结算推进·触发上堆叠"
     },
     {
-      "dataVa": "0x142c932e8",
       "instruction": "0x141b9e8ba",
-      "preview": "推进·触发上堆叠",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c932e8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "推进·触发上堆叠"
     },
     {
-      "dataVa": "0x142c93240",
       "instruction": "0x141ba0f68",
-      "preview": "引擎推进十万步还没停下来",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c93240",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "引擎推进十万步还没停下来"
     },
     {
-      "dataVa": "0x142c83d30",
       "instruction": "0x141ba0ff1",
-      "preview": "assertion failed: n > 0",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83d30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "assertion failed: n > 0"
     },
     {
-      "dataVa": "0x142c93b08",
       "instruction": "0x141ba1053",
-      "preview": "有待放的触发C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\triggers\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c93b08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "有待放的触发C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\triggers\\mod.rs"
     }
   ],
   "pseudocode": "functions/0x141b9b1a0.c",

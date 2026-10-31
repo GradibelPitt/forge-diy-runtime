@@ -1,0 +1,127 @@
+/* Decompiled original binary; inferred C types, NOT original Rust source. */
+
+ulonglong FUN_1424c3a20(undefined8 *param_1,undefined8 param_2)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  longlong lVar3;
+  undefined8 unaff_RBX;
+  undefined8 uStack_1c8;
+  undefined8 uStack_1c0;
+  undefined8 uStack_1b8;
+  undefined8 uStack_1b0;
+  undefined8 uStack_1a8;
+  undefined8 uStack_1a0;
+  undefined8 uStack_198;
+  undefined8 uStack_190;
+  undefined8 uStack_188;
+  undefined8 uStack_180;
+  undefined8 uStack_178;
+  undefined8 uStack_170;
+  undefined8 uStack_168;
+  undefined8 uStack_160;
+  undefined8 uStack_158;
+  undefined8 uStack_150;
+  undefined8 uStack_148;
+  undefined8 uStack_140;
+  undefined8 uStack_138;
+  undefined8 uStack_130;
+  undefined8 uStack_128;
+  undefined8 uStack_120;
+  undefined8 uStack_118;
+  undefined8 uStack_110;
+  undefined8 uStack_108;
+  undefined8 uStack_100;
+  undefined8 uStack_f8;
+  undefined8 uStack_f0;
+  undefined8 uStack_e8;
+  undefined8 uStack_e0;
+  undefined8 uStack_d8;
+  undefined8 uStack_d0;
+  undefined8 uStack_c8;
+  undefined8 uStack_c0;
+  undefined8 uStack_b8;
+  undefined8 uStack_b0;
+  undefined8 uStack_a8;
+  undefined8 uStack_a0;
+  undefined8 uStack_98;
+  undefined8 uStack_80;
+  undefined4 uStack_68;
+  undefined1 uStack_60;
+  undefined8 uStack_50;
+  undefined8 uStack_48;
+  undefined4 uStack_40;
+  undefined1 uStack_3c;
+  undefined1 uStack_3a;
+  undefined4 uStack_38;
+  longlong *plStack_30;
+  undefined8 uStack_28;
+  
+  uStack_28 = 0xfffffffffffffffe;
+  uStack_1b8 = 0;
+  uStack_1b0 = 8;
+  uStack_1a8 = 0;
+  uStack_1a0 = 0;
+  uStack_198 = 8;
+  uStack_190 = 0;
+  uStack_188 = 0;
+  uStack_180 = 4;
+  uStack_178 = 0;
+  uStack_170 = 0;
+  uStack_168 = 4;
+  uStack_160 = 0;
+  uStack_158 = 0;
+  uStack_150 = 8;
+  uStack_148 = 0;
+  uStack_140 = 0;
+  uStack_60 = 0xff;
+  uStack_138 = 8;
+  uStack_130 = 0;
+  uStack_50 = 0;
+  uStack_48 = 0;
+  uStack_1c8 = 1;
+  uStack_38 = 0;
+  uStack_128 = 0;
+  uStack_120 = 4;
+  uStack_40 = 0;
+  uStack_118 = 0;
+  uStack_110 = 0;
+  uStack_108 = 4;
+  uStack_3c = 0;
+  uStack_3a = 0;
+  uStack_100 = 0;
+  uStack_f8 = 0;
+  uStack_f0 = 4;
+  uStack_e8 = 0;
+  uStack_e0 = 0;
+  uStack_68 = 0;
+  uStack_98 = 0xffffffffffffffff;
+  uStack_d8 = 4;
+  uStack_d0 = 0;
+  uStack_c8 = 0;
+  uStack_c0 = 4;
+  uStack_b8 = 0;
+  uStack_b0 = 0;
+  uStack_80 = 0xffffffffffffffff;
+  uStack_a8 = 8;
+  uStack_a0 = 0;
+  uStack_1c0 = param_2;
+  plStack_30 = (longlong *)FUN_141b79170(*param_1,*(undefined4 *)param_1[1],&uStack_1c8);
+  lVar1 = plStack_30[0x16];
+  lVar2 = 0;
+  do {
+    lVar3 = lVar2;
+    if (lVar1 == lVar3) break;
+    lVar2 = lVar3 + 1;
+  } while (*(char *)(plStack_30[0x15] + lVar3) != '\x06');
+  LOCK();
+  *plStack_30 = *plStack_30 + -1;
+  UNLOCK();
+  if (*plStack_30 == 0) {
+    FUN_141a80e60(&plStack_30);
+  }
+  FUN_140019b20(&uStack_1c8);
+  return CONCAT71((int7)((ulonglong)unaff_RBX >> 8),lVar1 == lVar3) & 0xffffffff;
+}
+

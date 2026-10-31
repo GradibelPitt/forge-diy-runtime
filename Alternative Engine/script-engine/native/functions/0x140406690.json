@@ -9,38 +9,43 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3618799
+  },
   "assembly": "functions/0x140406690.asm",
   "assemblySha256": "1f0b9ddec1676915fe0a5b8a97e12009e0738154c87c0d67485a2605b3b2d973",
   "literalReferences": [
     {
-      "dataVa": "0x14279b000",
       "instruction": "0x140406d43",
-      "preview": "CARDNAMENICKNAMEsrc\\stable.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b000",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CARDNAMENICKNAMEsrc\\stable.rs"
     },
     {
-      "dataVa": "0x14279b008",
       "instruction": "0x140406e45",
-      "preview": "NICKNAMEsrc\\stable.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b008",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NICKNAMEsrc\\stable.rs"
     },
     {
-      "dataVa": "0x14279b038",
       "instruction": "0x1404073e4",
-      "preview": "controllerPlayerIdDefined$ ExiledWithUntilHostLeavesPlayImprintExiledWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279b038",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "controllerPlayerIdDefined$ ExiledWithUntilHostLeavesPlayImprintExiledWith"
     },
     {
-      "dataVa": "0x14279afe8",
       "instruction": "0x1404077fb",
-      "preview": "ЯyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279afe8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ЯyB"
     },
     {
-      "dataVa": "0x14279ab78",
       "instruction": "0x140407807",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14279ab78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x140406690.c",

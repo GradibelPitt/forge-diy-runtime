@@ -5,63 +5,73 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1744567,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142017c60.asm",
   "assemblySha256": "6fdc0193e87d4cb3b6999e60324eec74948f3a09097f01f70491ddc0c100d46a",
   "literalReferences": [
     {
-      "dataVa": "0x142cbc658",
       "instruction": "0x142017cc6",
-      "preview": "SPAILogic永久物咒语附加费用写了两处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142825a70",
-      "instruction": "0x142017df0",
-      "preview": "ture",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8d5",
-      "instruction": "0x142017e75",
-      "preview": "Cost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbc670",
-      "instruction": "0x142017f9f",
-      "preview": "附加费用写了两处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cbc658",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SPAILogic永久物咒语附加费用写了两处"
+    },
+    {
+      "instruction": "0x142017df0",
+      "dataVa": "0x142825a70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ture"
+    },
+    {
+      "instruction": "0x142017e75",
+      "dataVa": "0x142cba8d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cost"
+    },
+    {
+      "instruction": "0x142017f9f",
+      "dataVa": "0x142cbc670",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "附加费用写了两处"
+    },
+    {
       "instruction": "0x1420182d3",
-      "preview": "SPAILogic永久物咒语附加费用写了两处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc658",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SPAILogic永久物咒语附加费用写了两处"
     },
     {
-      "dataVa": "0x142cbbf81",
       "instruction": "0x142018319",
-      "preview": "AdditionalDescFromBottomDestZone2OptionalForceRevealDefinedExilerImprintRevealedForEachColorPairWithDifferentPowersDestinationZoneDestinationZone2LibraryPosition2ChoserRandomChange",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbf81",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AdditionalDescFromBottomDestZone2OptionalForceRevealDefinedExilerImprintRevealedForEachColorPairWithDifferentPowersDestinationZoneDestinationZone2LibraryPosition2ChoserRandomChange"
     },
     {
-      "dataVa": "0x142cbbd40",
       "instruction": "0x142018332",
-      "preview": "PrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbd40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
     },
     {
-      "dataVa": "0x142cbc65a",
       "instruction": "0x14201834b",
-      "preview": "AILogic永久物咒语附加费用写了两处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc65a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AILogic永久物咒语附加费用写了两处"
     },
     {
-      "dataVa": "0x142cbc661",
       "instruction": "0x14201844f",
-      "preview": "永久物咒语附加费用写了两处",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc661",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "永久物咒语附加费用写了两处"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142017c60.c",
+  "pseudocodeSha256": "e9ffd18e0acfdc389d82240f18b102b3659396c38649973743651a1fc1fa0986",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

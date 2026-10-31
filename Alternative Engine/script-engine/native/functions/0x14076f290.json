@@ -5,45 +5,55 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.4141298,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14076f290.asm",
   "assemblySha256": "fd126b5a76592177158336c5a580bbfe932db6c9ff7aa9676fdf8d09c5354c14",
   "literalReferences": [
     {
-      "dataVa": "0x1427cc09f",
       "instruction": "0x14076f494",
-      "preview": "SubAbilityChoicesCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cbfed",
-      "instruction": "0x14076f52b",
-      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cc0a9",
-      "instruction": "0x14076f7c7",
-      "preview": "ChoicesCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427cbfed",
-      "instruction": "0x14076f931",
-      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427cc09f",
-      "instruction": "0x14076fb14",
-      "preview": "SubAbilityChoicesCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SubAbilityChoicesCost"
     },
     {
+      "instruction": "0x14076f52b",
       "dataVa": "0x1427cbfed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
+    },
+    {
+      "instruction": "0x14076f7c7",
+      "dataVa": "0x1427cc0a9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChoicesCost"
+    },
+    {
+      "instruction": "0x14076f931",
+      "dataVa": "0x1427cbfed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
+    },
+    {
+      "instruction": "0x14076fb14",
+      "dataVa": "0x1427cc09f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SubAbilityChoicesCost"
+    },
+    {
       "instruction": "0x14076fbcf",
-      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cbfed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "svars| Produced$C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14076f290.c",
+  "pseudocodeSha256": "d3582b75b236248f2891cc5165b46e68f3060e2b142ca3f2fc23550c76bc00f1",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

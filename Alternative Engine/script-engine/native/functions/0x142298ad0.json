@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0037973,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142298ad0.asm",
   "assemblySha256": "0ce1cfbd7c8fce0d47ce7d58842ebb305065a6101ae91d2ccb448e449792f3a5",
   "literalReferences": [
     {
-      "dataVa": "0x142cdcc28",
       "instruction": "0x142298afc",
-      "preview": "erZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttackRequirement 缺 ValidCardAttackRequirement 缺 ValidAttackerPlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcc28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "erZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttackRequirement 缺 ValidCardAttackRequirement 缺 ValidAttackerPlay"
     },
     {
-      "dataVa": "0x142cdcc18",
       "instruction": "0x142298b07",
-      "preview": "IgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttackRequirement 缺 ValidCardAttackRequirement 缺 V",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcc18",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IgnorePlaneswalkerZeroLoyaltyRule 缺 AffectedIgnoreShroud 缺 ValidEntitySurveilNum 缺 ValidPlayerMustTarget 缺 ValidTargetAttackRequirement 缺 ValidCardAttackRequirement 缺 V"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142298ad0.c",
+  "pseudocodeSha256": "af745315cf1c5cae405c80876fdf9bb2b55de2d5a200e8fc83317cb12ad4ce40",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

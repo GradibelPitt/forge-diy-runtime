@@ -8,32 +8,37 @@
     "src/stable.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0412231
+  },
   "assembly": "functions/0x1404e3430.asm",
   "assemblySha256": "fa79ceecd5f42e1f21353c31c8f3423e41d248ae4499f0083aae35dffcdf297d",
   "literalReferences": [
     {
-      "dataVa": "0x1427a2c2b",
       "instruction": "0x1404e34fc",
-      "preview": "visibleBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2c2b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "visibleBy"
     },
     {
-      "dataVa": "0x1427a3e30",
       "instruction": "0x1404e3672",
-      "preview": "4'zB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a3e30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "4'zB"
     },
     {
-      "dataVa": "0x1427a26d7",
       "instruction": "0x1404e3864",
-      "preview": "controllerPlayerId徽记\nOriginalcommand",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a26d7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "controllerPlayerId徽记\nOriginalcommand"
     },
     {
-      "dataVa": "0x1427a2a80",
       "instruction": "0x1404e39a8",
-      "preview": "playableByexiledWithCardIduntilLeavesBattlefieldCardIds",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2a80",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "playableByexiledWithCardIduntilLeavesBattlefieldCardIds"
     }
   ],
   "pseudocode": "functions/0x1404e3430.c",

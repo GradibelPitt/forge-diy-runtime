@@ -7,86 +7,92 @@
     "crates/mtg-engine/src/card/filter/valid.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0500158,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14233b710.asm",
   "assemblySha256": "baea29f2d5b0e5635e3aa81c30545d115977d8fb2d655b0e6cf76ee0656a654f",
   "literalReferences": [
     {
-      "dataVa": "0x142c83e04",
       "instruction": "0x14233b7ac",
-      "preview": "SourceWhiteBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCan",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e04",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SourceWhiteBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCan"
     },
     {
-      "dataVa": "0x142c83e08",
       "instruction": "0x14233b7b6",
-      "preview": "ceWhiteBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTa",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ceWhiteBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTa"
     },
     {
-      "dataVa": "0x142c83e0f",
       "instruction": "0x14233b940",
-      "preview": "BlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e0f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "BlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedB"
     },
     {
-      "dataVa": "0x142ce5180",
       "instruction": "0x14233baeb",
-      "preview": "ChosenCardStricteredOrControllerPlayer.EnchantedCountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5180",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenCardStricteredOrControllerPlayer.EnchantedCountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendi"
     },
     {
-      "dataVa": "0x142c835d0",
       "instruction": "0x14233bb91",
-      "preview": "NotDefinedTargetattackedThisCombblockingRememberth",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c835d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NotDefinedTargetattackedThisCombblockingRememberth"
     },
     {
-      "dataVa": "0x142ce5160",
       "instruction": "0x14233bcb3",
-      "preview": "nedTriggeredCardNotDefinedTriggeChosenCardStricteredOrControllerPlayer.EnchantedCountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTarg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5160",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "nedTriggeredCardNotDefinedTriggeChosenCardStricteredOrControllerPlayer.EnchantedCountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTarg"
     },
     {
-      "dataVa": "0x142ce5170",
       "instruction": "0x14233bcbb",
-      "preview": "NotDefinedTriggeChosenCardStricteredOrControllerPlayer.EnchantedCountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedCo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5170",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NotDefinedTriggeChosenCardStricteredOrControllerPlayer.EnchantedCountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedCo"
     },
     {
-      "dataVa": "0x142ce95c0",
       "instruction": "0x14233bcdd",
-      "preview": "TriggeredCardAdventure\nAdvisor\nAetherborn\nAjani\nAlara\nAlfava Metraxis\nAlien\nAlly\nAminatou\nAmonkhet\nAndorian\nAndrozani Minor\nAngel\nAngrath\nAntausia\nAntelope\nApalapucia\nApe\nArcane\nAr",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce95c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCardAdventure\nAdvisor\nAetherborn\nAjani\nAlara\nAlfava Metraxis\nAlien\nAlly\nAminatou\nAmonkhet\nAndorian\nAndrozani Minor\nAngel\nAngrath\nAntausia\nAntelope\nApalapucia\nApe\nArcane\nAr"
     },
     {
-      "dataVa": "0x142c83e0a",
       "instruction": "0x14233bda0",
-      "preview": "WhiteBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTarg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e0a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WhiteBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTarg"
     },
     {
-      "dataVa": "0x142c83e0e",
       "instruction": "0x14233bdaa",
-      "preview": "eBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargeted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e0e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "eBlueBlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargeted"
     },
     {
-      "dataVa": "0x142c83e13",
       "instruction": "0x14233bdc4",
-      "preview": "BlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedByTri",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e13",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "BlackRedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedByTri"
     },
     {
-      "dataVa": "0x142c83e1b",
       "instruction": "0x14233bde1",
-      "preview": "GreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedByTriggeredSp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e1b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedByTriggeredSp"
     },
     {
-      "dataVa": "0x142c83e18",
       "instruction": "0x14233bdf7",
-      "preview": "RedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedByTriggere",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83e18",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RedGreenBattlefieldGraveyardpowertoughnesscmctotalPT_numColorsnumTypessharesCardTypeWith EachTopLibrarygreatestPowerleastPowerleastToughnessgreatestToughnessCanBeTargetedByTriggere"
     }
   ],
   "pseudocode": "functions/0x14233b710.c",

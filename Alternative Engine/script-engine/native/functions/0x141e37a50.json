@@ -11,26 +11,31 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.9090232
+  },
   "assembly": "functions/0x141e37a50.asm",
   "assemblySha256": "b9acb751672320950c4ba62d51aa14db403cbeb97c0950a4961be2dbe2f019dd",
   "literalReferences": [
     {
-      "dataVa": "0x142c9b8d0",
       "instruction": "0x141e37e7a",
-      "preview": "付费规划（没记过的）付费规划·搜索",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b8d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "付费规划（没记过的）付费规划·搜索"
     },
     {
-      "dataVa": "0x142c9b8ee",
       "instruction": "0x141e38195",
-      "preview": "付费规划·搜索",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b8ee",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "付费规划·搜索"
     },
     {
-      "dataVa": "0x142c9b7cd",
       "instruction": "0x141e39ddc",
-      "preview": "方案·少疼",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b7cd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "方案·少疼"
     }
   ],
   "pseudocode": "functions/0x141e37a50.c",

@@ -7,32 +7,37 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0074189
+  },
   "assembly": "functions/0x142650320.asm",
   "assemblySha256": "9105b01ba790b0abcce97c9731ea7769364fe7e6658fb56b99ab7cd6055ecc51",
   "literalReferences": [
     {
-      "dataVa": "0x142d01448",
       "instruction": "0x1426503cb",
-      "preview": "ClericRogueWarriorWizardR",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d01448",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ClericRogueWarriorWizardR"
     },
     {
-      "dataVa": "0x142d0144e",
       "instruction": "0x1426503e2",
-      "preview": "RogueWarriorWizardR",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d0144e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RogueWarriorWizardR"
     },
     {
-      "dataVa": "0x142d01453",
       "instruction": "0x142650400",
-      "preview": "WarriorWizardR",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d01453",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WarriorWizardR"
     },
     {
-      "dataVa": "0x142d0145a",
       "instruction": "0x14265041e",
-      "preview": "WizardR",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d0145a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WizardR"
     }
   ],
   "pseudocode": "functions/0x142650320.c",

@@ -5,51 +5,61 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0791463,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a7ee70.asm",
   "assemblySha256": "f69f263f4651e42674df954f94c0a386fde6ac8d6eee4fc51a2de81fc15db4b4",
   "literalReferences": [
     {
-      "dataVa": "0x142825b60",
       "instruction": "0x141a7eef4",
-      "preview": "SpellDescriptionStackDescriptionetbCounter:P1P1:X",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142825b60",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SpellDescriptionStackDescriptionetbCounter:P1P1:X"
     },
     {
-      "dataVa": "0x142825b70",
       "instruction": "0x141a7eefc",
-      "preview": "StackDescriptionetbCounter:P1P1:X",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142825b70",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StackDescriptionetbCounter:P1P1:X"
     },
     {
-      "dataVa": "0x142c855f0",
       "instruction": "0x141a7ef04",
-      "preview": "ValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c855f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142c855e0",
       "instruction": "0x141a7ef0c",
-      "preview": "TriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c855e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142c855b0",
       "instruction": "0x141a7ef1c",
-      "preview": "escriptionSuffixementDescriptionReplacementDescrTriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c855b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "escriptionSuffixementDescriptionReplacementDescrTriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActi"
     },
     {
-      "dataVa": "0x142c855c0",
       "instruction": "0x141a7ef24",
-      "preview": "ementDescriptionReplacementDescrTriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActi",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c855c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ementDescriptionReplacementDescrTriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActi"
     },
     {
-      "dataVa": "0x142c855d0",
       "instruction": "0x141a7ef2c",
-      "preview": "ReplacementDescrTriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c855d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReplacementDescrTriggerDescriptiValidDescriptionetbCounter:EACH Activated.Cyclinted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a7ee70.c",
+  "pseudocodeSha256": "3974247f30050716a5e030281423a3e70354820b186d3d1b35043cd178198825",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

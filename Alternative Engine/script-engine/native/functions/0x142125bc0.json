@@ -7,50 +7,56 @@
     "crates/mtg-engine/src/card/effects/params.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.7628681,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142125bc0.asm",
   "assemblySha256": "f3325eba562dcca394f27d2f7950c1f7eae22e7e0b8486c454fa8dcae7161fa2",
   "literalReferences": [
     {
-      "dataVa": "0x142cca329",
       "instruction": "0x142126396",
-      "preview": "rStack 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca329",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rStack 的写法"
     },
     {
-      "dataVa": "0x142cca320",
       "instruction": "0x1421263a1",
-      "preview": "ValidAfterStack 的写法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca320",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidAfterStack 的写法"
     },
     {
-      "dataVa": "0x142cc9353",
       "instruction": "0x1421268f2",
-      "preview": "目标规则但没有目标ParentTargetedController 但没有父目标离场改放逐的对象多阻挡的对象TargetValidTargeting 没有目标ParentTarget 但没有父目标Must",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc9353",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "目标规则但没有目标ParentTargetedController 但没有父目标离场改放逐的对象多阻挡的对象TargetValidTargeting 没有目标ParentTarget 但没有父目标Must"
     },
     {
-      "dataVa": "0x142cb9410",
       "instruction": "0x14212694e",
-      "preview": "ntroller",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9410",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ntroller"
     },
     {
-      "dataVa": "0x142cb9440",
       "instruction": "0x142126956",
-      "preview": "ParentTargetedCoourcesControllerTriggeredSourceseredCardOpponentTriggeredCardOpplayerToYourRightTriggeredExploitRememberControllalHostControllerOriginalHostContredAttackerOwnerpone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9440",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ParentTargetedCoourcesControllerTriggeredSourceseredCardOpponentTriggeredCardOpplayerToYourRightTriggeredExploitRememberControllalHostControllerOriginalHostContredAttackerOwnerpone"
     },
     {
-      "dataVa": "0x142cca358",
       "instruction": "0x142126e53",
-      "preview": "RememberRevealed 的写法ExcessDamageConditionRememberRedirectedExcessNumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca358",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberRevealed 的写法ExcessDamageConditionRememberRedirectedExcessNumDmgRelativeTarget 的伤害来源"
     },
     {
-      "dataVa": "0x142cca358",
       "instruction": "0x142126efe",
-      "preview": "RememberRevealed 的写法ExcessDamageConditionRememberRedirectedExcessNumDmgRelativeTarget 的伤害来源",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cca358",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberRevealed 的写法ExcessDamageConditionRememberRedirectedExcessNumDmgRelativeTarget 的伤害来源"
     }
   ],
   "pseudocode": "functions/0x142125bc0.c",

@@ -5,63 +5,73 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2791331,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14243c120.asm",
   "assemblySha256": "310f7c48f189b73ed41fc6997c5b71dbdcfd6a5669b61859dca72e350b6cd91c",
   "literalReferences": [
     {
-      "dataVa": "0x142cf2eea",
       "instruction": "0x14243c171",
-      "preview": "PowerToughnessRemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2eea",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PowerToughnessRemoveCreatureTypesTypes"
     },
     {
-      "dataVa": "0x142cf2eef",
       "instruction": "0x14243c297",
-      "preview": "ToughnessRemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2eef",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ToughnessRemoveCreatureTypesTypes"
     },
     {
-      "dataVa": "0x142cf2ef8",
       "instruction": "0x14243c44b",
-      "preview": "RemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2ef8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCreatureTypesTypes"
     },
     {
-      "dataVa": "0x142cf2f0b",
       "instruction": "0x14243c57d",
-      "preview": "Types",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Types"
     },
     {
-      "dataVa": "0x142cf2f25",
       "instruction": "0x14243cb26",
-      "preview": "KeywordsColorsOverwriteColorsAnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f25",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KeywordsColorsOverwriteColorsAnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords"
     },
     {
-      "dataVa": "0x142cf2f2d",
       "instruction": "0x14243ccdf",
-      "preview": "ColorsOverwriteColorsAnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f2d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorsOverwriteColorsAnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords"
     },
     {
-      "dataVa": "0x142cf2f33",
       "instruction": "0x14243cd2d",
-      "preview": "OverwriteColorsAnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f33",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OverwriteColorsAnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords"
     },
     {
-      "dataVa": "0x142cf2f42",
       "instruction": "0x14243cf72",
-      "preview": "AnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f42",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnimateAll 加颜色AnimateAll 没有认识的改动PumpDurationPumpKeywords"
     },
     {
-      "dataVa": "0x142cf2f56",
       "instruction": "0x14243d1e8",
-      "preview": "AnimateAll 没有认识的改动PumpDurationPumpKeywords",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2f56",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnimateAll 没有认识的改动PumpDurationPumpKeywords"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14243c120.c",
+  "pseudocodeSha256": "c917b40c491d2a324e286d2660dcf77651cd033071362a08189eccda1616d382",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

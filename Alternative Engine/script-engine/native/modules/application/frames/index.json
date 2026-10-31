@@ -1,4 +1,5 @@
 {
+  "functionDirectory": "native/functions",
   "functions": [
     "0x140078e70",
     "0x140230490",
@@ -12,7 +13,6 @@
     "0x140500180",
     "0x140511300"
   ],
-  "functionDirectory": "native/functions",
-  "sourcePathHint": "src/frames.rs",
-  "association": "Observed source/panic references; not original source ownership"
+  "association": "Observed source/panic references; not original source ownership",
+  "sourcePathHint": "src/frames.rs"
 }

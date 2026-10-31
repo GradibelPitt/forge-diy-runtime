@@ -7,26 +7,31 @@
     "crates/mtg-engine/src/allocate.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0269126
+  },
   "assembly": "functions/0x141fbc9a0.asm",
   "assemblySha256": "524aef905df326881b16b38c3d854c4295861ca1fc9238bbff566953df2c02f4",
   "literalReferences": [
     {
-      "dataVa": "0x142cba15c",
       "instruction": "0x141fbcbb1",
-      "preview": "只能全部分给其中一个",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba15c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "只能全部分给其中一个"
     },
     {
-      "dataVa": "0x142cba138",
       "instruction": "0x141fbcc65",
-      "preview": "余量才能分给被攻击的一方只能全部分给其中一个",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba138",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "余量才能分给被攻击的一方只能全部分给其中一个"
     },
     {
-      "dataVa": "0x142cba108",
       "instruction": "0x141fbcc86",
-      "preview": "践踏：每个阻挡者都分够致命量后，余量才能分给被攻击的一方只能全部分给其中一个",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba108",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "践踏：每个阻挡者都分够致命量后，余量才能分给被攻击的一方只能全部分给其中一个"
     }
   ],
   "pseudocode": "functions/0x141fbc9a0.c",

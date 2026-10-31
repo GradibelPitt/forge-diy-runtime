@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0034673,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fbb4f0.asm",
   "assemblySha256": "cda319d1e52e0deb3c622aa15b5d2ade2269f0c2621aa3837fe45ffd7c839ef5",
   "literalReferences": [
     {
-      "dataVa": "0x142cb9e88",
       "instruction": "0x141fbb511",
-      "preview": "MoveCounter 的来源SkipPhase 的步骤TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9e88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MoveCounter 的来源SkipPhase 的步骤TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fbb4f0.c",
+  "pseudocodeSha256": "e923037b01f5d8537a29b004aeb1afa82075aae57061382624ddd5aa5fd388ba",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

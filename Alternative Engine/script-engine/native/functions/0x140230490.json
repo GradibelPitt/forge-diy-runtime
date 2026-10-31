@@ -8,20 +8,25 @@
     "src/frames.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0408071
+  },
   "assembly": "functions/0x140230490.asm",
   "assemblySha256": "699d6fbfd67f68fb47f57f96a1acabd8b83ebcfc9d68ef1e5dd92c2ce6e63024",
   "literalReferences": [
     {
-      "dataVa": "0x142785090",
       "instruction": "0x1402309e6",
-      "preview": "vPxB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785090",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "vPxB"
     },
     {
-      "dataVa": "0x142785c40",
       "instruction": "0x1402309f2",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785c40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x140230490.c",

@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0039692,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a611b0.asm",
   "assemblySha256": "4e058fd2b77710677ae62fb335422fd7e2a6053436f7c944271bc87105efe1b1",
   "literalReferences": [
     {
-      "dataVa": "0x142c86357",
       "instruction": "0x141a611d1",
-      "preview": "edDeck 没有目标Shared 缺 TypesFromDefined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86357",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "edDeck 没有目标Shared 缺 TypesFromDefined"
     },
     {
-      "dataVa": "0x142c86347",
       "instruction": "0x141a611dc",
-      "preview": "CreatureInTargetedDeck 没有目标Shared 缺 TypesFromDefined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86347",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CreatureInTargetedDeck 没有目标Shared 缺 TypesFromDefined"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a611b0.c",
+  "pseudocodeSha256": "a405f2113832a6742c8b186b6667cb5254c811abaf3aa1f738c7f1ca156d8ba5",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

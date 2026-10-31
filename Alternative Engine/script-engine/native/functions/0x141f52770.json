@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0559381,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f52770.asm",
   "assemblySha256": "4aa949924c0a139a870232dba60bdfaec65f5aa0d56877458fe68cedb62c2b5c",
   "literalReferences": [
     {
-      "dataVa": "0x142ca85a8",
       "instruction": "0x141f527bc",
-      "preview": "DB$ Pump | Defined$ SelfAnimateNamePrimarySecondaryTappedAttackingSecondaryType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca85a8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ Pump | Defined$ SelfAnimateNamePrimarySecondaryTappedAttackingSecondaryType"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141f52770.c",
+  "pseudocodeSha256": "76e11dbdae12755a935e89c95e8ae551180b136056b11e31d2e592788a441243",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

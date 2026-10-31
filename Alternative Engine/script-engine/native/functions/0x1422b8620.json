@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0227096,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422b8620.asm",
   "assemblySha256": "3e3299b8991ee3208d0177bdb70bb7f3dc7e846ab017c93e38e1ff5adadf132c",
   "literalReferences": [
     {
-      "dataVa": "0x142cde5a4",
       "instruction": "0x1422b864b",
-      "preview": "StartingWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde5a4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StartingWith"
     },
     {
-      "dataVa": "0x142cde5e4",
       "instruction": "0x1422b872d",
-      "preview": "ChooseOrderWithDifferentPowersWithTotalPowerControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cde5e4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooseOrderWithDifferentPowersWithTotalPowerControlAndNotIncludeSpellsOnStackTgtPromptValidTgtsDescStackDescriptionAILogicIsCurseListTitleDrainMana"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422b8620.c",
+  "pseudocodeSha256": "7540d16bb2661dff9cac4a453e7cbf8755dcc0273aa1ae253e64022c8ed5fa93",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

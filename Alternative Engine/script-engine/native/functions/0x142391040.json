@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0247872,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142391040.asm",
   "assemblySha256": "c7f44678dc2b654b6d37bd030ab00b94b0186efd06a4018f261b49370bae9999",
   "literalReferences": [
     {
-      "dataVa": "0x142cebabb",
       "instruction": "0x14239116d",
-      "preview": "->ActivationPhasesActivationFirstCombatIsBoastActivatorActivationActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebabb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "->ActivationPhasesActivationFirstCombatIsBoastActivatorActivationActivationLimitActivationGameTypes"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142391040.c",
+  "pseudocodeSha256": "96774ca4abdc6df298538458ec7b4cbf10fa2bad1a875c3e5bb691335ac1f665",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

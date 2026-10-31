@@ -7,14 +7,19 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0683044
+  },
   "assembly": "functions/0x141db7d20.asm",
   "assemblySha256": "89cc6ddaa0ff184587bf4d205a8319794d33e888004ba6b3a050d85d404e6a20",
   "literalReferences": [
     {
-      "dataVa": "0x142c9ac3a",
       "instruction": "0x141db7dda",
-      "preview": "方案·额外加的少横",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9ac3a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "方案·额外加的少横"
     }
   ],
   "pseudocode": "functions/0x141db7d20.c",

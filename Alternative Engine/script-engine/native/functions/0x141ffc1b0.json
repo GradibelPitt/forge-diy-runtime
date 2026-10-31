@@ -5,399 +5,409 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 4.3187209,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141ffc1b0.asm",
   "assemblySha256": "def61a311476cef358d9c7cf3c76cacbd26eea20aee75d8d4cc23748e48d0525",
   "literalReferences": [
     {
-      "dataVa": "0x142cbbad8",
       "instruction": "0x141ffc223",
-      "preview": "TargetsWithSameControllerTargetingPlayerControlsTargetingPlayerTargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedPa",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbad8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSameControllerTargetingPlayerControlsTargetingPlayerTargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedPa"
     },
     {
-      "dataVa": "0x142cbbaf1",
       "instruction": "0x141ffc310",
-      "preview": "TargetingPlayerControlsTargetingPlayerTargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRela",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbaf1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetingPlayerControlsTargetingPlayerTargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRela"
     },
     {
-      "dataVa": "0x142cbbb08",
       "instruction": "0x141ffc41f",
-      "preview": "TargetingPlayerTargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb08",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetingPlayerTargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb17",
       "instruction": "0x141ffc50b",
-      "preview": "TargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cbbb17",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
+    },
+    {
       "instruction": "0x141ffc63c",
-      "preview": "TargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb17",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSharedCardTypeTargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb30",
       "instruction": "0x141ffc67e",
-      "preview": "TargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSharedTypesValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb46",
       "instruction": "0x141ffc7f2",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cb9edb",
       "instruction": "0x141ffc8da",
-      "preview": "NotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9edb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1"
     },
     {
-      "dataVa": "0x142cb9ecb",
       "instruction": "0x141ffc97d",
-      "preview": " TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9ecb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1"
     },
     {
-      "dataVa": "0x142cb9ec0",
       "instruction": "0x141ffc988",
-      "preview": "ontrols 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9ec0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ontrols 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1"
     },
     {
-      "dataVa": "0x142cb9eb0",
       "instruction": "0x141ffc993",
-      "preview": "TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cb9eb0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetingPlayerControls 缺 TargetingPlayerNotDefinedParentTargetChosenTypeSacrifice 缺 SacValid1"
     },
     {
-      "dataVa": "0x142cbbb67",
       "instruction": "0x141ffcac9",
-      "preview": ".+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb67",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ".+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb4f",
       "instruction": "0x141ffcae7",
-      "preview": ".NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb4f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ".NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb68",
       "instruction": "0x141ffcb38",
-      "preview": "+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb7f",
       "instruction": "0x141ffcb7c",
-      "preview": ".NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb7f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ".NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb46",
       "instruction": "0x141ffcbe6",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbb96",
       "instruction": "0x141ffccdf",
-      "preview": "TargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb96",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142ceb370",
       "instruction": "0x141ffd0f4",
-      "preview": "Parent ParentTarget子异能自己取目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb370",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Parent ParentTarget子异能自己取目标"
     },
     {
-      "dataVa": "0x142ceb374",
       "instruction": "0x141ffd0fc",
-      "preview": "nt ParentTarget子异能自己取目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb374",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "nt ParentTarget子异能自己取目标"
     },
     {
-      "dataVa": "0x142ceb376",
       "instruction": "0x141ffd118",
-      "preview": " ParentTarget子异能自己取目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb376",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " ParentTarget子异能自己取目标"
     },
     {
-      "dataVa": "0x142ceb37b",
       "instruction": "0x141ffd124",
-      "preview": "ntTarget子异能自己取目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb37b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ntTarget子异能自己取目标"
     },
     {
-      "dataVa": "0x142cbbb46",
       "instruction": "0x141ffd20a",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
     },
     {
-      "dataVa": "0x142cbbd04",
       "instruction": "0x141ffdc85",
-      "preview": "ChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbbd04",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
     },
     {
-      "dataVa": "0x142cbb153",
       "instruction": "0x141ffdca8",
-      "preview": "ExileFaceDownWithMayLookExiledWithEffectSourceNoExiledWithWithNotedCountersForetoldForetoldCostStaticEffect",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbb153",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExileFaceDownWithMayLookExiledWithEffectSourceNoExiledWithWithNotedCountersForetoldForetoldCostStaticEffect"
     },
     {
-      "dataVa": "0x142cba2d0",
       "instruction": "0x141ffdcdb",
-      "preview": "TrueTurnFaceUpAttachedRollDiceValidPlayerNumberReplaceWithValidRollVarName$ ResultVarValue$ ChaosActiveZones替代 PlanarDiceResult替代 PlanarDiceResult 改成别的面ValidCause",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbce8",
-      "instruction": "0x141ffdd41",
-      "preview": "RememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbce8",
-      "instruction": "0x141ffddac",
-      "preview": "RememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ffddea",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ffde34",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbcd3",
-      "instruction": "0x141ffde73",
-      "preview": "AdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb4b2",
-      "instruction": "0x141ffdedd",
-      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb4b2",
-      "instruction": "0x141ffdf63",
-      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ffe00c",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ffe09b",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba65a",
-      "instruction": "0x141ffe124",
-      "preview": "OptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbd22",
-      "instruction": "0x141ffe12b",
-      "preview": "ActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbc78",
-      "instruction": "0x141ffe1a6",
-      "preview": "AnnounceAnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbc78",
-      "instruction": "0x141ffe1e0",
-      "preview": "AnnounceAnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlay",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb860",
-      "instruction": "0x141ffe222",
-      "preview": "AnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c6c",
-      "instruction": "0x141ffe245",
-      "preview": "MandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c75",
-      "instruction": "0x141ffe264",
-      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbb860",
-      "instruction": "0x141ffe283",
-      "preview": "AnyNumberLand.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbc80",
-      "instruction": "0x141ffe2c5",
-      "preview": "AnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTrigge",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9aa0",
-      "instruction": "0x141ffe307",
-      "preview": "SubAbilityReplaceCounter 缺 Amount",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c75",
-      "instruction": "0x141ffe32a",
-      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbcbf",
-      "instruction": "0x141ffe354",
-      "preview": "UnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardV",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbcc8",
-      "instruction": "0x141ffe372",
-      "preview": "ImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRando",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbd0f",
-      "instruction": "0x141ffe3f1",
-      "preview": "DamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbd18",
-      "instruction": "0x141ffe5eb",
-      "preview": "SacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbb46",
-      "instruction": "0x141ffe7c7",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbb46",
-      "instruction": "0x141ffe936",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141ffe955",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba65a",
-      "instruction": "0x141ffe99b",
-      "preview": "OptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9f98",
-      "instruction": "0x141ffe9be",
-      "preview": "ChooserExileWithCountersToken 缺 TokenScriptManaReflected 缺 ValidAnimateAll 缺 ValidCards",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba65a",
-      "instruction": "0x141ffea50",
-      "preview": "OptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba65a",
-      "instruction": "0x141ffea9a",
-      "preview": "OptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbb46",
-      "instruction": "0x141ffeb1c",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9ef1",
-      "instruction": "0x141ffeb45",
-      "preview": "ChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbc8c",
-      "instruction": "0x141ffebd7",
-      "preview": "+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescription",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbc97",
-      "instruction": "0x141ffec21",
-      "preview": ".ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDesc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9ef1",
-      "instruction": "0x141ffec6f",
-      "preview": "ChosenTypeSacrifice 缺 SacValid1",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbc80",
-      "instruction": "0x141ffec93",
-      "preview": "AnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTrigge",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbb46",
-      "instruction": "0x141ffecd4",
-      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbbca2",
-      "instruction": "0x141ffecfa",
-      "preview": "TargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacement",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cba2d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TrueTurnFaceUpAttachedRollDiceValidPlayerNumberReplaceWithValidRollVarName$ ResultVarValue$ ChaosActiveZones替代 PlanarDiceResult替代 PlanarDiceResult 改成别的面ValidCause"
+    },
+    {
+      "instruction": "0x141ffdd41",
+      "dataVa": "0x142cbbce8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
+    },
+    {
+      "instruction": "0x141ffddac",
+      "dataVa": "0x142cbbce8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
+    },
+    {
+      "instruction": "0x141ffddea",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffde34",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffde73",
+      "dataVa": "0x142cbbcd3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
+    },
+    {
+      "instruction": "0x141ffdedd",
+      "dataVa": "0x142cbb4b2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith"
+    },
+    {
+      "instruction": "0x141ffdf63",
+      "dataVa": "0x142cbb4b2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedPlayerSearchedTransformed 不是放进战场OriginAlternativeShuffleChangedPileAttachAfterChoiceOptionalDifferentCMCDifferentPowerShareLandTypeWithTotalPowerWithTotalCMCWith"
+    },
+    {
+      "instruction": "0x141ffe00c",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffe09b",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffe124",
+      "dataVa": "0x142cba65a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalDecider"
+    },
+    {
+      "instruction": "0x141ffe12b",
+      "dataVa": "0x142cbbd22",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
+    },
+    {
+      "instruction": "0x141ffe1a6",
+      "dataVa": "0x142cbbc78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnnounceAnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlay"
+    },
+    {
+      "instruction": "0x141ffe1e0",
+      "dataVa": "0x142cbbc78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnnounceAnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlay"
+    },
+    {
+      "instruction": "0x141ffe222",
+      "dataVa": "0x142cbb860",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ffe245",
+      "dataVa": "0x142cb9c6c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MandatoryChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffe264",
+      "dataVa": "0x142cb9c75",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffe283",
+      "dataVa": "0x142cbb860",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyNumberLand.YouCtrl"
+    },
+    {
+      "instruction": "0x141ffe2c5",
+      "dataVa": "0x142cbbc80",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTrigge"
+    },
+    {
+      "instruction": "0x141ffe307",
+      "dataVa": "0x142cb9aa0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SubAbilityReplaceCounter 缺 Amount"
+    },
+    {
+      "instruction": "0x141ffe32a",
+      "dataVa": "0x142cb9c75",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangeTypeChangeNumDefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffe354",
+      "dataVa": "0x142cbbcbf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "UnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardV"
+    },
+    {
+      "instruction": "0x141ffe372",
+      "dataVa": "0x142cbbcc8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRando"
+    },
+    {
+      "instruction": "0x141ffe3f1",
+      "dataVa": "0x142cbbd0f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
+    },
+    {
+      "instruction": "0x141ffe5eb",
+      "dataVa": "0x142cbbd18",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SacMessageActivePlayerTriggerDescriptionPrecostDescReplacementDescriptionPutCounterDiscardValidRandom"
+    },
+    {
+      "instruction": "0x141ffe7c7",
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
+    },
+    {
+      "instruction": "0x141ffe936",
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
+    },
+    {
+      "instruction": "0x141ffe955",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141ffe99b",
+      "dataVa": "0x142cba65a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalDecider"
+    },
+    {
+      "instruction": "0x141ffe9be",
+      "dataVa": "0x142cb9f98",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChooserExileWithCountersToken 缺 TokenScriptManaReflected 缺 ValidAnimateAll 缺 ValidCards"
+    },
+    {
+      "instruction": "0x141ffea50",
+      "dataVa": "0x142cba65a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalDecider"
+    },
+    {
+      "instruction": "0x141ffea9a",
+      "dataVa": "0x142cba65a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OptionalDecider"
+    },
+    {
+      "instruction": "0x141ffeb1c",
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
+    },
+    {
+      "instruction": "0x141ffeb45",
+      "dataVa": "0x142cb9ef1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenTypeSacrifice 缺 SacValid1"
+    },
+    {
+      "instruction": "0x141ffebd7",
+      "dataVa": "0x142cbbc8c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescription"
+    },
+    {
+      "instruction": "0x141ffec21",
+      "dataVa": "0x142cbbc97",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ".ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDesc"
+    },
+    {
+      "instruction": "0x141ffec6f",
+      "dataVa": "0x142cb9ef1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChosenTypeSacrifice 缺 SacValid1"
+    },
+    {
+      "instruction": "0x141ffec93",
+      "dataVa": "0x142cbbc80",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnnounceType+ChosenType.ChosenTypeTargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTrigge"
+    },
+    {
+      "instruction": "0x141ffecd4",
+      "dataVa": "0x142cbbb46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts.NotDefinedParentTarget+.+NotDefinedParentTarget.NotDefinedParentTargetTargetsWithRelatedProperty"
+    },
+    {
+      "instruction": "0x141ffecfa",
+      "dataVa": "0x142cbbca2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSharedCreatureTypeUnimprintImprintLastAdditionalDescriptionRememberInvestigatingPlayersChangeValidDamageMapSacMessageActivePlayerTriggerDescriptionPrecostDescReplacement"
+    },
+    {
       "instruction": "0x141ffed01",
-      "preview": "TrueTurnFaceUpAttachedRollDiceValidPlayerNumberReplaceWithValidRollVarName$ ResultVarValue$ ChaosActiveZones替代 PlanarDiceResult替代 PlanarDiceResult 改成别的面ValidCause",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba2d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TrueTurnFaceUpAttachedRollDiceValidPlayerNumberReplaceWithValidRollVarName$ ResultVarValue$ ChaosActiveZones替代 PlanarDiceResult替代 PlanarDiceResult 改成别的面ValidCause"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141ffc1b0.c",
+  "pseudocodeSha256": "cc92c3199dc5678d8cfc73f354cb5ad3d8272aaaa127ca507a8f775184d0865f",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

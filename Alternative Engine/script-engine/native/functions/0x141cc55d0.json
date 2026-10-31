@@ -10,32 +10,38 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141cc55d0: process: timeout\n",
+    "seconds": 12.2820919,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141cc55d0.asm",
   "assemblySha256": "bb34b3e66b3de2c12e10defd4599b876a51771f94e24283b73a4ce6d19a2f395",
   "literalReferences": [
     {
-      "dataVa": "0x142c96022",
       "instruction": "0x141cc9309",
-      "preview": "w_x_x_spiritC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layer_mods.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c96022",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "w_x_x_spiritC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layer_mods.rs"
     },
     {
-      "dataVa": "0x142c95ca8",
       "instruction": "0x141cd1778",
-      "preview": "w_1_1_human_soldier",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c95ca8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "w_1_1_human_soldier"
     },
     {
-      "dataVa": "0x142c83d30",
       "instruction": "0x141cd1981",
-      "preview": "assertion failed: n > 0",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c83d30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "assertion failed: n > 0"
     },
     {
-      "dataVa": "0x142c95f88",
       "instruction": "0x141cd2882",
-      "preview": "DifferentResults(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c95f88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentResults("
     }
   ],
   "pseudocodeStatus": "timeout"

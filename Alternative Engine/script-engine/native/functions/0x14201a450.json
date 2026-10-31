@@ -7,26 +7,32 @@
     "crates/mtg-engine/src/card/effects/variants.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1306394,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14201a450.asm",
   "assemblySha256": "1add5e9685cba7e726f0b7f65501f46d856a5d33e644108cef9b04592ca22cc5",
   "literalReferences": [
     {
-      "dataVa": "0x142cbc92a",
       "instruction": "0x14201a924",
-      "preview": "进场替代里要取目标进场替代的附加项variant identifierfield identifierstruct Objectives",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc92a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场替代里要取目标进场替代的附加项variant identifierfield identifierstruct Objectives"
     },
     {
-      "dataVa": "0x142cbc945",
       "instruction": "0x14201aa49",
-      "preview": "进场替代的附加项variant identifierfield identifierstruct Objectives",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc945",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场替代的附加项variant identifierfield identifierstruct Objectives"
     },
     {
-      "dataVa": "0x142cbc8f4",
       "instruction": "0x14201abd9",
-      "preview": "进场替代没有效果",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbc8f4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场替代没有效果"
     }
   ],
   "pseudocode": "functions/0x14201a450.c",

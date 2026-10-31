@@ -8,14 +8,20 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141c55bc0: process: timeout\n",
+    "seconds": 12.2581515,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141c55bc0.asm",
   "assemblySha256": "00be843eabf26526e431851c6894bc1df13c011e65e4e5a5150e4b725174f0ac",
   "literalReferences": [
     {
-      "dataVa": "0x142c94748",
       "instruction": "0x141c5605c",
-      "preview": "FortificationVillainAssassinMercenaryPirateRogueWarlockClericWarriorWizard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c94748",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FortificationVillainAssassinMercenaryPirateRogueWarlockClericWarriorWizard"
     }
   ],
   "pseudocodeStatus": "timeout"

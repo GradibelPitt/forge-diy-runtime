@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0017616,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142770320.asm",
   "assemblySha256": "1beb350ef759e3f4ca5a04c8c8ab4f3594f5d4177b1ae9e5c021de05ebd46251",
   "literalReferences": [
     {
-      "dataVa": "0x142d1a1c9",
       "instruction": "0x14277032d",
-      "preview": "attempt to calculate the remainder with a divisor of zeroattempt to divide with overflowattempt to calculate the remainder with overflowassertion failed: !buf.is_empty()",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d1a1c9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "attempt to calculate the remainder with a divisor of zeroattempt to divide with overflowattempt to calculate the remainder with overflowassertion failed: !buf.is_empty()"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142770320.c",
+  "pseudocodeSha256": "60380b15a6503124d67153eabdb7288d03fce282f888224e49dd760d5e672162",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

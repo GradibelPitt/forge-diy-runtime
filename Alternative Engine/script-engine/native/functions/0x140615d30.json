@@ -7,14 +7,19 @@
     "src/diy.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3047992
+  },
   "assembly": "functions/0x140615d30.asm",
   "assemblySha256": "483a149e1f6cd36e99ba1d6a272370ce73eed54082856b4cdaed5c216a394697",
   "literalReferences": [
     {
-      "dataVa": "0x1427ba240",
       "instruction": "0x1406162e7",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ba240",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x140615d30.c",

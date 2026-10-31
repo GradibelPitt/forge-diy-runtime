@@ -5,51 +5,61 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0418117,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422d3ff0.asm",
   "assemblySha256": "26260c1f86e2330f93c3ae96a5d663b9ce2c9e8f58b1e48c4f3913be1ff83741",
   "literalReferences": [
     {
-      "dataVa": "0x142cdf3ee",
       "instruction": "0x1422d4023",
-      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85760",
-      "instruction": "0x1422d4117",
-      "preview": "Ctrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cc8740",
-      "instruction": "0x1422d411f",
-      "preview": "SpellAbility.OppSpellAbility.YouaAbility",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdb180",
-      "instruction": "0x1422d4155",
-      "preview": "Triggered.YouCtrlessDamageSourceColorlessDamageSsIfHaste",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdf3f8",
-      "instruction": "0x1422d4191",
-      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cdf3ee",
-      "instruction": "0x1422d4278",
-      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule"
     },
     {
+      "instruction": "0x1422d4117",
+      "dataVa": "0x142c85760",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Ctrl"
+    },
+    {
+      "instruction": "0x1422d411f",
+      "dataVa": "0x142cc8740",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SpellAbility.OppSpellAbility.YouaAbility"
+    },
+    {
+      "instruction": "0x1422d4155",
+      "dataVa": "0x142cdb180",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Triggered.YouCtrlessDamageSourceColorlessDamageSsIfHaste"
+    },
+    {
+      "instruction": "0x1422d4191",
       "dataVa": "0x142cdf3f8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule"
+    },
+    {
+      "instruction": "0x1422d4278",
+      "dataVa": "0x142cdf3ee",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCauseForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule"
+    },
+    {
       "instruction": "0x1422d42b7",
-      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf3f8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForCostMustAttackIgnorePlaneswalkerZeroLoyaltyRule"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422d3ff0.c",
+  "pseudocodeSha256": "ea83ce9a18c673b3a3b41bd317ed45d439893c8003cfdea59372b1692ca5b859",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

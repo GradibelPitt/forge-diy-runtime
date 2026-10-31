@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0091622,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140b57aa0.asm",
   "assemblySha256": "9475452dc13fa7f9eec7370937dda04fb0569ab7565e5c0e50843b7c031b7a78",
   "literalReferences": [
     {
-      "dataVa": "0x1427feb48",
       "instruction": "0x140b57af0",
-      "preview": "OpponentYouControlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427feb48",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OpponentYouControlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
     },
     {
-      "dataVa": "0x1427feb53",
       "instruction": "0x140b57b11",
-      "preview": "Controlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427feb53",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Controlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
     },
     {
-      "dataVa": "0x1427feb50",
       "instruction": "0x140b57b96",
-      "preview": "YouControlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427feb50",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "YouControlswho: Defined(You)to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140b57aa0.c",
+  "pseudocodeSha256": "d228b40caf4c59124260f5322506dafff2f0cccbdf5068d8d19db90b69f51dd8",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

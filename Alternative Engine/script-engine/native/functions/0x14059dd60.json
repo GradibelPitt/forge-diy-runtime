@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0194015,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14059dd60.asm",
   "assemblySha256": "ef75be12a5ca38aafecf7e76942d24610bc077a38b3db52e98afea206d94fe70",
   "literalReferences": [
     {
-      "dataVa": "0x1427b6703",
       "instruction": "0x14059df80",
-      "preview": "overflow when adding durations/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b6703",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs"
     },
     {
-      "dataVa": "0x1427b6770",
       "instruction": "0x14059df87",
-      "preview": "!g{B",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427b6770",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "!g{B"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14059dd60.c",
+  "pseudocodeSha256": "5e0050df1a1fddb90c3c228e89f52fc4a2c1f28482e09ebcfe98544f49156c7f",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": true,
+  "typePropagationWarning": false
 }

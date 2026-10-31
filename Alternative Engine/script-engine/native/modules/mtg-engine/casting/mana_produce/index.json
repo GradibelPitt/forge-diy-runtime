@@ -1,4 +1,5 @@
 {
+  "functionDirectory": "native/functions",
   "functions": [
     "0x141c76330",
     "0x141e1a630",
@@ -13,7 +14,6 @@
     "0x1425d2d50",
     "0x1425d76a0"
   ],
-  "functionDirectory": "native/functions",
-  "sourcePathHint": "crates/mtg-engine/src/casting/mana_produce.rs",
-  "association": "Observed source/panic references; not original source ownership"
+  "association": "Observed source/panic references; not original source ownership",
+  "sourcePathHint": "crates/mtg-engine/src/casting/mana_produce.rs"
 }

@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.005226,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421dae30.asm",
   "assemblySha256": "b29b63ba057933321cb55e8371a8066efada04d1c36e6115887ce1decfec9139",
   "literalReferences": [
     {
-      "dataVa": "0x142cd3ee7",
       "instruction": "0x1421daea6",
-      "preview": "xPaidTriggeredSpellAbility>TargetedObjectsTriggerObjectsSpellAbilityTargets",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3ee7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "xPaidTriggeredSpellAbility>TargetedObjectsTriggerObjectsSpellAbilityTargets"
     },
     {
-      "dataVa": "0x142cd26d0",
       "instruction": "0x1421daec4",
-      "preview": "TargetedC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd26d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetedC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\statics\\layers.rs"
     },
     {
-      "dataVa": "0x142cd2fb6",
       "instruction": "0x1421daee8",
-      "preview": "Chosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2fb6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Chosen"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421dae30.c",
+  "pseudocodeSha256": "4c8e46cba1088a73c6039a048fd2a199ba92d6dd5a6f99dd69684a1348dc2ed8",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

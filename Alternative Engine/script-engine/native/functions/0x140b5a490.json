@@ -8,44 +8,49 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.007704
+  },
   "assembly": "functions/0x140b5a490.asm",
   "assemblySha256": "012beff3ce0b6c8d66b4dc5f1c70a0624850d1b4a8a3021e08b9674aa668f312",
   "literalReferences": [
     {
-      "dataVa": "0x1427fec18",
       "instruction": "0x140b5a4a5",
-      "preview": "from: [Hand]EachPlayerto: Libraryto: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCant",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fec18",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "from: [Hand]EachPlayerto: Libraryto: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCant"
     },
     {
-      "dataVa": "0x1427fec24",
       "instruction": "0x140b5a4bf",
-      "preview": "EachPlayerto: Libraryto: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCantBlock {CantB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fec24",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EachPlayerto: Libraryto: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCantBlock {CantB"
     },
     {
-      "dataVa": "0x1427fec2e",
       "instruction": "0x140b5a4ec",
-      "preview": "to: Libraryto: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCantBlock {CantBeActivated",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fec2e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "to: Libraryto: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCantBlock {CantBeActivated"
     },
     {
-      "dataVa": "0x1427feb74",
       "instruction": "0x140b5a50d",
-      "preview": "to: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427feb74",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "to: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
     },
     {
-      "dataVa": "0x1427fec39",
       "instruction": "0x140b5a5c2",
-      "preview": "to: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCantBlock {CantBeActivatedMustAttackC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fec39",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "to: BattlefieldGainControlMem(Remembered)who: Some(SlotOppCtrlNot(Memlose: [EndOfTurnfree: trueCantBlockByattacker: SomeCantBeBlockedCantAttackCantBlock {CantBeActivatedMustAttackC"
     },
     {
-      "dataVa": "0x1427feb6c",
       "instruction": "0x140b5a5e2",
-      "preview": "to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427feb6c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "to: Handto: ExileType(Creature)Power(C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\acts\\loyalty.rs"
     }
   ],
   "pseudocode": "functions/0x140b5a490.c",

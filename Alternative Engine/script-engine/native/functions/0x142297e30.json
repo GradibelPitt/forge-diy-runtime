@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0033484,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142297e30.asm",
   "assemblySha256": "aebe85166fbf787e8f4ec36802bb074e6423a644cd3c3b7b7612af3ec61e6c0c",
   "literalReferences": [
     {
-      "dataVa": "0x142cdc943",
       "instruction": "0x142297e51",
-      "preview": "on 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc943",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "on 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard"
     },
     {
-      "dataVa": "0x142cdc938",
       "instruction": "0x142297e5c",
-      "preview": "Panharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc938",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Panharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142297e30.c",
+  "pseudocodeSha256": "36044a72913192dc056497e1a18729ecbb9ffdbfd9e74c1676581168d4e42112",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -1,4 +1,5 @@
 {
+  "functionDirectory": "native/functions",
   "functions": [
     "0x14009fd20",
     "0x14009fe80",
@@ -31,7 +32,6 @@
     "0x14060a120",
     "0x14060a240"
   ],
-  "functionDirectory": "native/functions",
-  "sourcePathHint": "src/prompts.rs",
-  "association": "Observed source/panic references; not original source ownership"
+  "association": "Observed source/panic references; not original source ownership",
+  "sourcePathHint": "src/prompts.rs"
 }

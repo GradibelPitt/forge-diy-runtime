@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0617966,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421fd4c0.asm",
   "assemblySha256": "09cb818340ba3124c551ffc025ec046339b53d9e8f1dfec332c5455f2a679eb9",
   "literalReferences": [
     {
-      "dataVa": "0x142cd1d30",
       "instruction": "0x1421fd553",
-      "preview": "lActivationZone$AdditionalActiva",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd1d30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "lActivationZone$AdditionalActiva"
     },
     {
-      "dataVa": "0x142cd1d40",
       "instruction": "0x1421fd55b",
-      "preview": "AdditionalActiva",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd1d40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AdditionalActiva"
     },
     {
-      "dataVa": "0x142cd3cf6",
       "instruction": "0x1421fd748",
-      "preview": " | STDiscardMessageInstantSpeedXTapCreaturesForManaManaRestriction",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3cf6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " | STDiscardMessageInstantSpeedXTapCreaturesForManaManaRestriction"
     },
     {
-      "dataVa": "0x142cd3cf6",
       "instruction": "0x1421fd7bb",
-      "preview": " | STDiscardMessageInstantSpeedXTapCreaturesForManaManaRestriction",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd3cf6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " | STDiscardMessageInstantSpeedXTapCreaturesForManaManaRestriction"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421fd4c0.c",
+  "pseudocodeSha256": "17be30d508a4d442310bf575c662b907797927b67f057abe3530ed4e1e88debc",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

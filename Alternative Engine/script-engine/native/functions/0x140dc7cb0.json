@@ -7,14 +7,19 @@
     "crates/mtg-ai-normal/src/acts/flow.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1753599
+  },
   "assembly": "functions/0x140dc7cb0.asm",
   "assemblySha256": "28bf9af76573af7e964bde13d087c30b443a63a97f191b6915c5340819545ace",
   "literalReferences": [
     {
-      "dataVa": "0x142819a90",
       "instruction": "0x140dc8422",
-      "preview": "RememberedAnyFlashbackDashBuybackBargainFaceDownBlitzPermit",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142819a90",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RememberedAnyFlashbackDashBuybackBargainFaceDownBlitzPermit"
     }
   ],
   "pseudocode": "functions/0x140dc7cb0.c",

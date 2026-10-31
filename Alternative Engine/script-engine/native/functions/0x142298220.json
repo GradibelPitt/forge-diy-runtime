@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0034707,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142298220.asm",
   "assemblySha256": "b156d7297ea9dccf79f8c2addb1cad729e35af6b9895a626630847f1455c6b43",
   "literalReferences": [
     {
-      "dataVa": "0x142cdca74",
       "instruction": "0x142298241",
-      "preview": "rm 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanAdapt 缺 Va",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdca74",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rm 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanAdapt 缺 Va"
     },
     {
-      "dataVa": "0x142cdca69",
       "instruction": "0x14229824c",
-      "preview": "CantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdca69",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CantTransform 缺 ValidCardCantPhaseOut 缺 ValidCardColorlessDamageSource 缺 ValidCardCantGainControl 缺 ValidCardManaRestriction 缺 ValidSourceCountersRemain 缺 ValidCardCanA"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142298220.c",
+  "pseudocodeSha256": "cb3b3d66ec03ed66b28ed20b5abf4ebccf742b04658e8f0bbcc86438ddc246da",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

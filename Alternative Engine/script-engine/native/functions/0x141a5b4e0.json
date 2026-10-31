@@ -5,81 +5,91 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0451968,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a5b4e0.asm",
   "assemblySha256": "19f7272217526ad696bf377588633fe6de5a85bd775f5e4a4af83b8f9705abf8",
   "literalReferences": [
     {
-      "dataVa": "0x142c85a30",
       "instruction": "0x141a5b583",
-      "preview": "attempt to join into collection with len > usize::MAX",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85a30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "attempt to join into collection with len > usize::MAX"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b8de",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b8fc",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b91a",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b938",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b956",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b974",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b992",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b9ad",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b9c8",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b9e3",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     },
     {
-      "dataVa": "0x142c86633",
       "instruction": "0x141a5b9fe",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c86633",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a5b4e0.c",
+  "pseudocodeSha256": "779bfa1b436133272fbcb8424f5d16cbc856fcf1f836d873c52dc67f415dc98a",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

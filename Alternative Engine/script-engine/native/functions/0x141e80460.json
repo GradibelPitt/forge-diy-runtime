@@ -10,32 +10,37 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2070725
+  },
   "assembly": "functions/0x141e80460.asm",
   "assemblySha256": "48005929e2040343cb11d580128ea1bb665b39b2018c4f4e9bf55226ab225906",
   "literalReferences": [
     {
-      "dataVa": "0x142c96ed0",
       "instruction": "0x141e80630",
-      "preview": "Land.YouCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c96ed0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Land.YouCtrl"
     },
     {
-      "dataVa": "0x142c97f9e",
       "instruction": "0x141e80b47",
-      "preview": "Creature.YouOwn+nonHuman",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c97f9e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.YouOwn+nonHuman"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141e815ba",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     },
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141e81607",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     }
   ],
   "pseudocode": "functions/0x141e80460.c",

@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0046161,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142752520.asm",
   "assemblySha256": "2061a35258011882e0cb466d5c80ba9b827147c0b1265c5ef745ce7294e37e1d",
   "literalReferences": [
     {
-      "dataVa": "0x1427efe60",
       "instruction": "0x142752586",
-      "preview": "reentrant init/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\cell\\once.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427efe60",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "reentrant init/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\cell\\once.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142752520.c",
+  "pseudocodeSha256": "813a8cb1ce626b9a5502ce2e81c26bdcf8328700b4c4fb224692314dd11359f0",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

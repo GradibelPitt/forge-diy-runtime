@@ -7,152 +7,158 @@
     "crates/mtg-engine/src/card/keyword/rare.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 3.343608,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f589c0.asm",
   "assemblySha256": "837814c5819e1ebf6dfb8146917d0a5da84f65de1a325527eea9563d24b69e3a",
   "literalReferences": [
     {
-      "dataVa": "0x142ca9902",
       "instruction": "0x141f58ad9",
-      "preview": "Your deck can't have basic land cards.The number of loyalty counters on CARDNAME is equal to the number of Beebles you control.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca9902",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Your deck can't have basic land cards.The number of loyalty counters on CARDNAME is equal to the number of Beebles you control."
     },
     {
-      "dataVa": "0x142ca9858",
       "instruction": "0x141f58b42",
-      "preview": "A deck can have any number of cards named CARDNAME.Remove CARDNAME from your deck before playing if you're not playing for ante.Your minimum deck size is reduced by five.Your deck ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca9858",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "A deck can have any number of cards named CARDNAME.Remove CARDNAME from your deck before playing if you're not playing for ante.Your minimum deck size is reduced by five.Your deck "
     },
     {
-      "dataVa": "0x142ca988b",
       "instruction": "0x141f58b60",
-      "preview": "Remove CARDNAME from your deck before playing if you're not playing for ante.Your minimum deck size is reduced by five.Your deck can't have basic land cards.The number of loyalty c",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca988b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Remove CARDNAME from your deck before playing if you're not playing for ante.Your minimum deck size is reduced by five.Your deck can't have basic land cards.The number of loyalty c"
     },
     {
-      "dataVa": "0x142ca98d8",
       "instruction": "0x141f58b7e",
-      "preview": "Your minimum deck size is reduced by five.Your deck can't have basic land cards.The number of loyalty counters on CARDNAME is equal to the number of Beebles you control.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca98d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Your minimum deck size is reduced by five.Your deck can't have basic land cards.The number of loyalty counters on CARDNAME is equal to the number of Beebles you control."
     },
     {
-      "dataVa": "0x142ca9928",
       "instruction": "0x141f58bac",
-      "preview": "The number of loyalty counters on CARDNAME is equal to the number of Beebles you control.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca9928",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "The number of loyalty counters on CARDNAME is equal to the number of Beebles you control."
     },
     {
-      "dataVa": "0x142ca9334",
       "instruction": "0x141f58c25",
-      "preview": "GiftAbilityPrevent all damage that would be dealt to CARDNAME.Prevent all combat damage that would be dealt to CARDNAME.Prevent all combat damage that would be dealt to and dealt b",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca9334",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GiftAbilityPrevent all damage that would be dealt to CARDNAME.Prevent all combat damage that would be dealt to CARDNAME.Prevent all combat damage that would be dealt to and dealt b"
     },
     {
-      "dataVa": "0x142ca67a0",
       "instruction": "0x141f58d27",
-      "preview": "leHandOnMulliganMayExileHandOnMu a die, you may After you roll aCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca67a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "leHandOnMulliganMayExileHandOnMu a die, you may After you roll aCreature"
     },
     {
-      "dataVa": "0x142ca67b0",
       "instruction": "0x141f58d2f",
-      "preview": "MayExileHandOnMu a die, you may After you roll aCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca67b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayExileHandOnMu a die, you may After you roll aCreature"
     },
     {
-      "dataVa": "0x142ca6780",
       "instruction": "0x141f58d7e",
-      "preview": "FromOpeningHand:FromOpeningDeck:leHandOnMulliganMayExileHandOnMu a die, you may After you roll aCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6780",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FromOpeningHand:FromOpeningDeck:leHandOnMulliganMayExileHandOnMu a die, you may After you roll aCreature"
     },
     {
-      "dataVa": "0x1429bc910",
       "instruction": "0x141f58d86",
-      "preview": "MayEffectFromOpe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6790",
-      "instruction": "0x141f58dad",
-      "preview": "FromOpeningDeck:leHandOnMulliganMayExileHandOnMu a die, you may After you roll aCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1429bc910",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayEffectFromOpe"
+    },
+    {
+      "instruction": "0x141f58dad",
+      "dataVa": "0x142ca6790",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FromOpeningDeck:leHandOnMulliganMayExileHandOnMu a die, you may After you roll aCreature"
+    },
+    {
       "instruction": "0x141f58db5",
-      "preview": "MayEffectFromOpe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1429bc910",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MayEffectFromOpe"
     },
     {
-      "dataVa": "0x142ca709c",
       "instruction": "0x141f59723",
-      "preview": "赠礼缺 GiftAbility掷骰改点缺 RollModifyCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca709c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "赠礼缺 GiftAbility掷骰改点缺 RollModifyCost"
     },
     {
-      "dataVa": "0x142ca853f",
       "instruction": "0x141f59948",
-      "preview": "GiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca853f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca854e",
       "instruction": "0x141f5999d",
-      "preview": "LockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca854e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "LockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca855d",
       "instruction": "0x141f599dd",
-      "preview": "TokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca855d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TokenOwner"
     },
     {
-      "dataVa": "0x142ca8a43",
       "instruction": "0x141f59c6b",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
     },
     {
-      "dataVa": "0x142ca67c0",
       "instruction": "0x141f59fc8",
-      "preview": " a die, you may After you roll aCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca67c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " a die, you may After you roll aCreature"
     },
     {
-      "dataVa": "0x142ca67d0",
       "instruction": "0x141f59fd0",
-      "preview": "After you roll aCreature",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca67d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "After you roll aCreature"
     },
     {
-      "dataVa": "0x142ca84bd",
       "instruction": "0x141f5a664",
-      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca84bd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca84bd",
       "instruction": "0x141f5a736",
-      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ca84bd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner"
+    },
+    {
       "instruction": "0x141f5a77f",
-      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca84bd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedValidCards不在战场上的牌加攻防PumpZone 的区域bargainedPromisedGiftPairedPairedWithIsSaddledHasDevouredModeCostGiftDescriptionLockTokenScriptTokenOwner"
     },
     {
-      "dataVa": "0x142ca8590",
       "instruction": "0x141f5a786",
-      "preview": "You赠礼里要做选择DB$ Pump | Defined$ SelfAnimateNamePrimarySecondaryTappedAttackingSecondaryType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8590",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "You赠礼里要做选择DB$ Pump | Defined$ SelfAnimateNamePrimarySecondaryTappedAttackingSecondaryType"
     },
     {
-      "dataVa": "0x142ca8593",
       "instruction": "0x141f5a892",
-      "preview": "赠礼里要做选择DB$ Pump | Defined$ SelfAnimateNamePrimarySecondaryTappedAttackingSecondaryType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8593",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "赠礼里要做选择DB$ Pump | Defined$ SelfAnimateNamePrimarySecondaryTappedAttackingSecondaryType"
     }
   ],
   "pseudocode": "functions/0x141f589c0.c",

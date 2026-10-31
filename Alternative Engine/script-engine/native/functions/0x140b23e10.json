@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0052185
+  },
   "assembly": "functions/0x140b23e10.asm",
   "assemblySha256": "0d72de0cec9bcd1ecc1ba9a8afdf86a1de388fd80ab683b07a7097559a66b094",
   "literalReferences": [
     {
-      "dataVa": "0x1427fb8cc",
       "instruction": "0x140b23e88",
-      "preview": "NamedCardCounters(YouCtrlWinsGame",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8cc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NamedCardCounters(YouCtrlWinsGame"
     }
   ],
   "pseudocode": "functions/0x140b23e10.c",

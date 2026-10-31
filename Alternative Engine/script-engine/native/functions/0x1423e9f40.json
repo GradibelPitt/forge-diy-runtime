@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0086558,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1423e9f40.asm",
   "assemblySha256": "2d11aefe0330e1f68e5e53ceb46cc876c26f47f2df9cbcbab3de0a54742b6208",
   "literalReferences": [
     {
-      "dataVa": "0x142d050a0",
       "instruction": "0x1423ea079",
-      "preview": "assertion failed: self.height > 0",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d050a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "assertion failed: self.height > 0"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1423e9f40.c",
+  "pseudocodeSha256": "5c026ca44ebc1fcbceee7af48c65641e32dbb7315b730b10242dbb4a445c305e",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

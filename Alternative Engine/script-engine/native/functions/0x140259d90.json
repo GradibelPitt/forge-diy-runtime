@@ -8,86 +8,91 @@
     "src/trophy.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.2645557
+  },
   "assembly": "functions/0x140259d90.asm",
   "assemblySha256": "1def6871a69626a938638c3ad401515ef20bdd3b1419fa2a720b64adb8af19cc",
   "literalReferences": [
     {
-      "dataVa": "0x142797c51",
       "instruction": "0x14025a173",
-      "preview": "MountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c51",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MountainForestNone"
     },
     {
-      "dataVa": "0x142797c40",
       "instruction": "0x14025a1ae",
-      "preview": "PlainsIslandSwampMountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlainsIslandSwampMountainForestNone"
     },
     {
-      "dataVa": "0x142797c44",
       "instruction": "0x14025a1b9",
-      "preview": "nsIslandSwampMountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c44",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "nsIslandSwampMountainForestNone"
     },
     {
-      "dataVa": "0x142797c46",
       "instruction": "0x14025a1cc",
-      "preview": "IslandSwampMountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IslandSwampMountainForestNone"
     },
     {
-      "dataVa": "0x142797c4a",
       "instruction": "0x14025a1d7",
-      "preview": "ndSwampMountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c4a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ndSwampMountainForestNone"
     },
     {
-      "dataVa": "0x142797c59",
       "instruction": "0x14025a1ea",
-      "preview": "ForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c59",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForestNone"
     },
     {
-      "dataVa": "0x142797c5d",
       "instruction": "0x14025a1f4",
-      "preview": "stNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c5d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "stNone"
     },
     {
-      "dataVa": "0x142797c4c",
       "instruction": "0x14025a212",
-      "preview": "SwampMountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c4c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SwampMountainForestNone"
     },
     {
-      "dataVa": "0x142797c50",
       "instruction": "0x14025a21c",
-      "preview": "pMountainForestNone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142797c50",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "pMountainForestNone"
     },
     {
-      "dataVa": "0x1427851b8",
       "instruction": "0x14025ad08",
-      "preview": "landsOnBattlefieldcardssrc\\prompts.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427851b8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "landsOnBattlefieldcardssrc\\prompts.rs"
     },
     {
-      "dataVa": "0x142785c40",
       "instruction": "0x14025bec8",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142785c40",
-      "instruction": "0x14025bf07",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142785178",
+      "instruction": "0x14025bf07",
+      "dataVa": "0x142785c40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
+    },
+    {
       "instruction": "0x14025bf3e",
-      "preview": " QxB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785178",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " QxB"
     }
   ],
   "pseudocode": "functions/0x140259d90.c",

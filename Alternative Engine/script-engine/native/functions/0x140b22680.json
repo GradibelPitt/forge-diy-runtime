@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0165385
+  },
   "assembly": "functions/0x140b22680.asm",
   "assemblySha256": "b16946553f48044d4c70662017f9f66d8189b883343d07df227e8ac31b23736e",
   "literalReferences": [
     {
-      "dataVa": "0x1427fb5d0",
       "instruction": "0x140b2279f",
-      "preview": "AuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\picks.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb5d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\picks.rs"
     }
   ],
   "pseudocode": "functions/0x140b22680.c",

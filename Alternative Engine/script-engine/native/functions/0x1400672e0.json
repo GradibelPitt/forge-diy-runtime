@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0120953,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1400672e0.asm",
   "assemblySha256": "388d654bedfe1993a510cfb325497624f1dd9096b549eb0273ba46c42d98b8e7",
   "literalReferences": [
     {
-      "dataVa": "0x14277d94a",
       "instruction": "0x140067313",
-      "preview": "AB$ Mana src\\stable.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14277d948",
-      "instruction": "0x140067343",
-      "preview": "A:AB$ Mana src\\stable.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14277d94a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AB$ Mana src\\stable.rs"
+    },
+    {
+      "instruction": "0x140067343",
+      "dataVa": "0x14277d948",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "A:AB$ Mana src\\stable.rs"
+    },
+    {
       "instruction": "0x140067434",
-      "preview": "AB$ Mana src\\stable.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277d94a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AB$ Mana src\\stable.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1400672e0.c",
+  "pseudocodeSha256": "05070fdf5e3fb3883471f829e1a59f4617999dbfee5dde66ea6c3627b408a531",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0181966,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14027fe00.asm",
   "assemblySha256": "2ab6895cba082c9228c33665032df757ae414959f3f15f310a2d8dbe91bd737e",
   "literalReferences": [
     {
-      "dataVa": "0x142787bd5",
       "instruction": "0x14027fe1e",
-      "preview": "ARCANE_CARDSFOLDER牌脚本目录 cardsfolderthe card script folder cardsfolderfailed to spawn thread/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\function",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787bd5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ARCANE_CARDSFOLDER牌脚本目录 cardsfolderthe card script folder cardsfolderfailed to spawn thread/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\function"
     },
     {
-      "dataVa": "0x142787be7",
       "instruction": "0x14028003e",
-      "preview": "牌脚本目录 cardsfolderthe card script folder cardsfolderfailed to spawn thread/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\functions.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787be7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "牌脚本目录 cardsfolderthe card script folder cardsfolderfailed to spawn thread/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\functions.rs"
     },
     {
-      "dataVa": "0x142787c02",
       "instruction": "0x140280045",
-      "preview": "the card script folder cardsfolderfailed to spawn thread/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\functions.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787c02",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "the card script folder cardsfolderfailed to spawn thread/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\thread\\functions.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14027fe00.c",
+  "pseudocodeSha256": "860174284f9d2c216d7f2221469a38bb06cd115aadde03c4d6a9a92eda700fc2",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

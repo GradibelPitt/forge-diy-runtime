@@ -7,32 +7,37 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0140822
+  },
   "assembly": "functions/0x141c3a1e0.asm",
   "assemblySha256": "184cb5d51be7fe92100270507e94b6049968dbbd76d1aea4a66b1ef1db49b0c6",
   "literalReferences": [
     {
-      "dataVa": "0x142c87378",
       "instruction": "0x141c3a2dd",
-      "preview": "SchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87378",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SchemeIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c8737c",
       "instruction": "0x141c3a2e8",
-      "preview": "meIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8737c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "meIdentity| EffectZone$ CommandSPPrecostDescCleaveCostDescNonBasicSpell"
     },
     {
-      "dataVa": "0x142c8799a",
       "instruction": "0x141c3a31d",
-      "preview": "OngoingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8799a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "OngoingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs"
     },
     {
-      "dataVa": "0x142c8799d",
       "instruction": "0x141c3a327",
-      "preview": "oingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8799d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "oingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs"
     }
   ],
   "pseudocode": "functions/0x141c3a1e0.c",

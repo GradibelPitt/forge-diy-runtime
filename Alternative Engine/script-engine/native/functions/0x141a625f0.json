@@ -7,86 +7,92 @@
     "crates/mtg-engine/src/card/script/mod.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 6.370412,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a625f0.asm",
   "assemblySha256": "9c80c6f2156f3ad9cf5c6abe2873991e3f2a960609b229677bb0e9a2788566f4",
   "literalReferences": [
     {
-      "dataVa": "0x142c854a0",
       "instruction": "0x141a627a2",
-      "preview": "HandLifeModifierDifferentResultsAME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c854a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "HandLifeModifierDifferentResultsAME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary"
     },
     {
-      "dataVa": "0x142c85fa8",
       "instruction": "0x141a63b04",
-      "preview": "同化战场上的永久物AssimilateAnimate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142c85fa8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "同化战场上的永久物AssimilateAnimate"
+    },
+    {
       "instruction": "0x141a63c9f",
-      "preview": "同化战场上的永久物AssimilateAnimate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85fa8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "同化战场上的永久物AssimilateAnimate"
     },
     {
-      "dataVa": "0x142c860d0",
       "instruction": "0x141a63f5c",
-      "preview": " | C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\dialect.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c860d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " | C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\dialect.rs"
     },
     {
-      "dataVa": "0x142c85fc3",
       "instruction": "0x141a641bf",
-      "preview": "AssimilateAnimate",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85fc3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AssimilateAnimate"
     },
     {
-      "dataVa": "0x142c877e9",
       "instruction": "0x141a64210",
-      "preview": "atureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c877e9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "atureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal"
     },
     {
-      "dataVa": "0x142c877d9",
       "instruction": "0x141a6421b",
-      "preview": "Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c877d9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal"
     },
     {
-      "dataVa": "0x142c877c9",
       "instruction": "0x141a64226",
-      "preview": "ct & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c877c9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ct & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal"
     },
     {
-      "dataVa": "0x142c877b9",
       "instruction": "0x141a64231",
-      "preview": " AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c877b9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal"
     },
     {
-      "dataVa": "0x142c877a9",
       "instruction": "0x141a6423c",
-      "preview": "d.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c877a9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "d.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal"
     },
     {
-      "dataVa": "0x142c87799",
       "instruction": "0x141a64247",
-      "preview": " | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87799",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDescriptionReveal"
     },
     {
-      "dataVa": "0x142c87789",
       "instruction": "0x141a64252",
-      "preview": "Mode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87789",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTriggerDescriptionDescriptionValidDe"
     },
     {
-      "dataVa": "0x142c854b0",
       "instruction": "0x141a643c2",
-      "preview": "DifferentResultsAME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c854b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentResultsAME can't block.CARDNAME can't bHIDDEN CARDNAME LimitSearchLibrary"
     }
   ],
   "pseudocode": "functions/0x141a625f0.c",

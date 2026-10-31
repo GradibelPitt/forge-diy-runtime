@@ -5,183 +5,193 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 9.8650225,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fcd060.asm",
   "assemblySha256": "dc6ab44497a8f33b0a3aa92182564faa576cfeb5b105654a7843931dfcbd8be9",
   "literalReferences": [
     {
-      "dataVa": "0x142cba8aa",
       "instruction": "0x141fcd12f",
-      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85620",
-      "instruction": "0x141fcd35a",
-      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c856c0",
-      "instruction": "0x141fcd362",
-      "preview": "Spell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9b7c",
-      "instruction": "0x141fcd5e0",
-      "preview": "SpellSpell.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8ae",
-      "instruction": "0x141fcd60b",
-      "preview": "Activated.!ManaAbilityAbilityReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8c4",
-      "instruction": "0x141fcd624",
-      "preview": "AbilityReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9b7c",
-      "instruction": "0x141fcd963",
-      "preview": "SpellSpell.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85730",
-      "instruction": "0x141fcda71",
-      "preview": "Down",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85740",
-      "instruction": "0x141fcda79",
-      "preview": "Spell.isCastFacecmcChosenEvenOddCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8cb",
-      "instruction": "0x141fcdaea",
-      "preview": "ReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85690",
-      "instruction": "0x141fcdb4e",
-      "preview": "Activated.LoyaltActivated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c856b0",
-      "instruction": "0x141fcdb7e",
-      "preview": "Activated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c856a0",
-      "instruction": "0x141fcdbae",
-      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85670",
-      "instruction": "0x141fcdc02",
-      "preview": "Activated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8d5",
-      "instruction": "0x141fcdd5b",
-      "preview": "Cost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85650",
-      "instruction": "0x141fce02b",
-      "preview": "ated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142c85660",
-      "instruction": "0x141fce033",
-      "preview": "Activated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cba8aa",
-      "instruction": "0x141fce05c",
-      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost"
     },
     {
+      "instruction": "0x141fcd35a",
+      "dataVa": "0x142c85620",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
+    },
+    {
+      "instruction": "0x141fcd362",
+      "dataVa": "0x142c856c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Spell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
+    },
+    {
+      "instruction": "0x141fcd5e0",
+      "dataVa": "0x142cb9b7c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SpellSpell."
+    },
+    {
+      "instruction": "0x141fcd60b",
+      "dataVa": "0x142cba8ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.!ManaAbilityAbilityReducePartCost"
+    },
+    {
+      "instruction": "0x141fcd624",
+      "dataVa": "0x142cba8c4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AbilityReducePartCost"
+    },
+    {
+      "instruction": "0x141fcd963",
+      "dataVa": "0x142cb9b7c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SpellSpell."
+    },
+    {
+      "instruction": "0x141fcda71",
+      "dataVa": "0x142c85730",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Down"
+    },
+    {
+      "instruction": "0x141fcda79",
+      "dataVa": "0x142c85740",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Spell.isCastFacecmcChosenEvenOddCtrl"
+    },
+    {
+      "instruction": "0x141fcdaea",
       "dataVa": "0x142cba8cb",
-      "instruction": "0x141fce326",
-      "preview": "ReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReducePartCost"
     },
     {
-      "dataVa": "0x142cba42f",
-      "instruction": "0x141fce373",
-      "preview": "ValidCardValidObjectDBChooseCounterValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141fcdb4e",
+      "dataVa": "0x142c85690",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.LoyaltActivated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
-      "dataVa": "0x142cba8f2",
-      "instruction": "0x141fce4b8",
-      "preview": "Activator减费却写了费用ForEachShard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141fcdb7e",
+      "dataVa": "0x142c856b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
-      "dataVa": "0x142cba625",
-      "instruction": "0x141fce593",
-      "preview": "ValidTargetCheckThirdSVar.lifeGEResultIsDamageMonarchOptionalDecider",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "instruction": "0x141fcdbae",
+      "dataVa": "0x142c856a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
+      "instruction": "0x141fcdc02",
+      "dataVa": "0x142c85670",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.Ninjutsu"
+    },
+    {
+      "instruction": "0x141fcdd5b",
       "dataVa": "0x142cba8d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cost"
+    },
+    {
+      "instruction": "0x141fce02b",
+      "dataVa": "0x142c85650",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
+    },
+    {
+      "instruction": "0x141fce033",
+      "dataVa": "0x142c85660",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.ManaAbActivated.Ninjutsu"
+    },
+    {
+      "instruction": "0x141fce05c",
+      "dataVa": "0x142cba8aa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost"
+    },
+    {
+      "instruction": "0x141fce326",
+      "dataVa": "0x142cba8cb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ReducePartCost"
+    },
+    {
+      "instruction": "0x141fce373",
+      "dataVa": "0x142cba42f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardValidObjectDBChooseCounterValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter "
+    },
+    {
+      "instruction": "0x141fce4b8",
+      "dataVa": "0x142cba8f2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activator减费却写了费用ForEachShard"
+    },
+    {
+      "instruction": "0x141fce593",
+      "dataVa": "0x142cba625",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTargetCheckThirdSVar.lifeGEResultIsDamageMonarchOptionalDecider"
+    },
+    {
       "instruction": "0x141fce789",
-      "preview": "Cost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba8d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cost"
     },
     {
-      "dataVa": "0x142cba910",
       "instruction": "0x141fce96c",
-      "preview": "ForEachShard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba910",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ForEachShard"
     },
     {
-      "dataVa": "0x142cba92c",
       "instruction": "0x141fceab9",
-      "preview": "EffectZoneBattlefieldStack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba92c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectZoneBattlefieldStack"
     },
     {
-      "dataVa": "0x142cba8fb",
       "instruction": "0x141fcec25",
-      "preview": "减费却写了费用ForEachShard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba8fb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "减费却写了费用ForEachShard"
     },
     {
-      "dataVa": "0x142cbaa76",
       "instruction": "0x141fceef1",
-      "preview": "AffectedZone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbaa76",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AffectedZone"
     },
     {
-      "dataVa": "0x142cbaa9b",
       "instruction": "0x141fcf12b",
-      "preview": "费用改变费用改变既加变量点数又另加费用费用改变加的费用TriggersWhenSpent用这份法术力时的触发不是施放咒语或起动异能CombatManaPersisten",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbaa9b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "费用改变费用改变既加变量点数又另加费用费用改变加的费用TriggersWhenSpent用这份法术力时的触发不是施放咒语或起动异能CombatManaPersisten"
     },
     {
-      "dataVa": "0x142cbaaa7",
       "instruction": "0x141fcf681",
-      "preview": "费用改变既加变量点数又另加费用费用改变加的费用TriggersWhenSpent用这份法术力时的触发不是施放咒语或起动异能CombatManaPersistentManaRestric",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbaaa7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "费用改变既加变量点数又另加费用费用改变加的费用TriggersWhenSpent用这份法术力时的触发不是施放咒语或起动异能CombatManaPersistentManaRestric"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fcd060.c",
+  "pseudocodeSha256": "025dbc14d9cf131e80188b12a4494a664a7f12c348b5b836acd81fa4026c6960",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

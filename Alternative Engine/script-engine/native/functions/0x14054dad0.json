@@ -8,194 +8,199 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0809077
+  },
   "assembly": "functions/0x14054dad0.asm",
   "assemblySha256": "6838b557ccc7144bf1ad599f2dcf3142a2f188622bea616ffee2df8d786aa7a2",
   "literalReferences": [
     {
-      "dataVa": "0x1427a69d8",
       "instruction": "0x14054db86",
-      "preview": "牌库library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a69de",
-      "instruction": "0x14054db8d",
-      "preview": "library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427a69d8",
-      "instruction": "0x14054dbd1",
-      "preview": "牌库library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "牌库library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054db8d",
       "dataVa": "0x1427a69de",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054dbd1",
+      "dataVa": "0x1427a69d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "牌库library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
       "instruction": "0x14054dbd8",
-      "preview": "library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a69de",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
-      "dataVa": "0x1427a6a0f",
       "instruction": "0x14054dbfb",
-      "preview": "堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a15",
-      "instruction": "0x14054dc02",
-      "preview": "stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a69ef",
-      "instruction": "0x14054dc29",
-      "preview": "战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a69f5",
-      "instruction": "0x14054dc30",
-      "preview": "battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a00",
-      "instruction": "0x14054dc4f",
-      "preview": "坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a06",
-      "instruction": "0x14054dc56",
-      "preview": "graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a69e5",
-      "instruction": "0x14054dc7f",
-      "preview": "手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a69eb",
-      "instruction": "0x14054dc86",
-      "preview": "hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a1a",
-      "instruction": "0x14054dca5",
-      "preview": "放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a23",
-      "instruction": "0x14054dcac",
-      "preview": "exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a28",
-      "instruction": "0x14054dcc8",
-      "preview": "统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427a6a31",
-      "instruction": "0x14054dccf",
-      "preview": "command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x1427a6a0f",
-      "instruction": "0x14054dd26",
-      "preview": "堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc02",
       "dataVa": "0x1427a6a15",
-      "instruction": "0x14054dd2d",
-      "preview": "stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc29",
       "dataVa": "0x1427a69ef",
-      "instruction": "0x14054dd54",
-      "preview": "战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc30",
       "dataVa": "0x1427a69f5",
-      "instruction": "0x14054dd5b",
-      "preview": "battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc4f",
       "dataVa": "0x1427a6a00",
-      "instruction": "0x14054dd7a",
-      "preview": "坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc56",
       "dataVa": "0x1427a6a06",
-      "instruction": "0x14054dd81",
-      "preview": "graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc7f",
       "dataVa": "0x1427a69e5",
-      "instruction": "0x14054ddab",
-      "preview": "手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dc86",
       "dataVa": "0x1427a69eb",
-      "instruction": "0x14054ddb2",
-      "preview": "hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dca5",
       "dataVa": "0x1427a6a1a",
-      "instruction": "0x14054ddd1",
-      "preview": "放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "放逐区exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dcac",
       "dataVa": "0x1427a6a23",
-      "instruction": "0x14054ddd8",
-      "preview": "exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "exile统帅区command zone"
     },
     {
+      "instruction": "0x14054dcc8",
       "dataVa": "0x1427a6a28",
-      "instruction": "0x14054ddf4",
-      "preview": "统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "统帅区command zone"
     },
     {
+      "instruction": "0x14054dccf",
       "dataVa": "0x1427a6a31",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "command zone"
+    },
+    {
+      "instruction": "0x14054dd26",
+      "dataVa": "0x1427a6a0f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054dd2d",
+      "dataVa": "0x1427a6a15",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054dd54",
+      "dataVa": "0x1427a69ef",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054dd5b",
+      "dataVa": "0x1427a69f5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054dd7a",
+      "dataVa": "0x1427a6a00",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054dd81",
+      "dataVa": "0x1427a6a06",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054ddab",
+      "dataVa": "0x1427a69e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054ddb2",
+      "dataVa": "0x1427a69eb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054ddd1",
+      "dataVa": "0x1427a6a1a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "放逐区exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054ddd8",
+      "dataVa": "0x1427a6a23",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "exile统帅区command zone"
+    },
+    {
+      "instruction": "0x14054ddf4",
+      "dataVa": "0x1427a6a28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "统帅区command zone"
+    },
+    {
       "instruction": "0x14054ddfb",
-      "preview": "command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6a31",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "command zone"
     },
     {
-      "dataVa": "0x1427a69d4",
       "instruction": "0x14054e330",
-      "preview": " · 牌库library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a69d4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " · 牌库library手牌hand战场battlefield坟场graveyard堆叠stack放逐区exile统帅区command zone"
     },
     {
-      "dataVa": "0x1427a6288",
       "instruction": "0x14054e47c",
-      "preview": " bzB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6288",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " bzB"
     },
     {
-      "dataVa": "0x1427a6980",
       "instruction": "0x14054e4af",
-      "preview": "(izB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a6980",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "(izB"
     }
   ],
   "pseudocode": "functions/0x14054dad0.c",

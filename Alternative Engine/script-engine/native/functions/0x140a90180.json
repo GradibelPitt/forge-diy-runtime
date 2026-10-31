@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0388782,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140a90180.asm",
   "assemblySha256": "7cc16fc236fbc47d57120408fb70ebeaf75dbff5b9052c44faebeb7f583489f0",
   "literalReferences": [
     {
-      "dataVa": "0x1427f8bf6",
       "instruction": "0x140a90300",
-      "preview": "普通·选牌一轮普通·施放即反击普通·费用挑法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f8bf6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "普通·选牌一轮普通·施放即反击普通·费用挑法"
     },
     {
-      "dataVa": "0x1427f8c0a",
       "instruction": "0x140a90377",
-      "preview": "普通·施放即反击普通·费用挑法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f8c0a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "普通·施放即反击普通·费用挑法"
     },
     {
-      "dataVa": "0x1427f8c21",
       "instruction": "0x140a90413",
-      "preview": "普通·费用挑法",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f8c21",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "普通·费用挑法"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140a90180.c",
+  "pseudocodeSha256": "9db78fbbb1469138b30f99fe2dc3ec22d7af0448106e61df790f6c00f412cc8b",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

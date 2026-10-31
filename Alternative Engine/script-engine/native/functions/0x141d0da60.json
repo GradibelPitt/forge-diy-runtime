@@ -9,26 +9,31 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0578625
+  },
   "assembly": "functions/0x141d0da60.asm",
   "assemblySha256": "f76145694d005e5b4a3141af1b6bdcd1b6327a75a5e84883750539c162bd9c32",
   "literalReferences": [
     {
-      "dataVa": "0x142c9754c",
       "instruction": "0x141d0dfaf",
-      "preview": "横来抵费的永久物选得不对<",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9754c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "横来抵费的永久物选得不对<"
     },
     {
-      "dataVa": "0x142c974d7",
       "instruction": "0x141d0e073",
-      "preview": "这个永久物不能横来付这个咒语的费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c974d7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "这个永久物不能横来付这个咒语的费用"
     },
     {
-      "dataVa": "0x142c97528",
       "instruction": "0x141d0e10e",
-      "preview": "费用已经抵完了，不用再横横来抵费的永久物选得不对<",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c97528",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "费用已经抵完了，不用再横横来抵费的永久物选得不对<"
     }
   ],
   "pseudocode": "functions/0x141d0da60.c",

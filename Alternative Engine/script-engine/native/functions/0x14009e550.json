@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0283014,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14009e550.asm",
   "assemblySha256": "b59a7af1bebc52f1fffe85a0da0942fd90c28db805fd53ad9623543fa9284543",
   "literalReferences": [
     {
-      "dataVa": "0x1427716fd",
       "instruction": "0x14009e598",
-      "preview": "capacity overflow",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427716fd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "capacity overflow"
     },
     {
-      "dataVa": "0x1427716fd",
       "instruction": "0x14009e8eb",
-      "preview": "capacity overflow",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427716fd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "capacity overflow"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14009e550.c",
+  "pseudocodeSha256": "3064449ca71bb90c362f995241f59b9d0c295e0206d1dba300f224f34ad26b71",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

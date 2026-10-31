@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.027079,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421471c0.asm",
   "assemblySha256": "3a1a0996a31c75c3e4db46ce8a2c9aa87aa3e4ee4181504568c24da418617c5c",
   "literalReferences": [
     {
-      "dataVa": "0x142cc85a0",
       "instruction": "0x1421471de",
-      "preview": "rting intensity:Starting intensiity.!ManaAbilitySpellAbility.!MalockedByCreatureAttackerBlockedBReplaceControlleReplaceSplitDamage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc85a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rting intensity:Starting intensiity.!ManaAbilitySpellAbility.!MalockedByCreatureAttackerBlockedBReplaceControlleReplaceSplitDamage"
     },
     {
-      "dataVa": "0x142cc85b0",
       "instruction": "0x1421471e6",
-      "preview": "Starting intensiity.!ManaAbilitySpellAbility.!MalockedByCreatureAttackerBlockedBReplaceControlleReplaceSplitDamage",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc85b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Starting intensiity.!ManaAbilitySpellAbility.!MalockedByCreatureAttackerBlockedBReplaceControlleReplaceSplitDamage"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421471c0.c",
+  "pseudocodeSha256": "4817df3a6fbbe8f54204c4a7261e4a9185c980555c7a065b81fdc350b5708a2d",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

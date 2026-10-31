@@ -8,26 +8,31 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1730355
+  },
   "assembly": "functions/0x140b1d6d0.asm",
   "assemblySha256": "18f777f78a01ebce3589c03b140bc1442b1311fc28d58d22d1860ac8f412c9c8",
   "literalReferences": [
     {
-      "dataVa": "0x1427fb8e5",
       "instruction": "0x140b1daf5",
-      "preview": "WinsGame",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "WinsGame"
     },
     {
-      "dataVa": "0x1427fb8f0",
       "instruction": "0x140b1dee4",
-      "preview": "ԵB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ԵB"
     },
     {
-      "dataVa": "0x1427fb8f0",
       "instruction": "0x140b1e2e9",
-      "preview": "ԵB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427fb8f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ԵB"
     }
   ],
   "pseudocode": "functions/0x140b1d6d0.c",

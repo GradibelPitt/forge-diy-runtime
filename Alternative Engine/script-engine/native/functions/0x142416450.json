@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0058509,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142416450.asm",
   "assemblySha256": "81aa3c66bd6355a4263e84b64a7f66de52d1b810440e51cf0206ad4e9ec6ac17",
   "literalReferences": [
     {
-      "dataVa": "0x142cf240a",
       "instruction": "0x142416471",
-      "preview": "mmandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf240a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mmandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget"
     },
     {
-      "dataVa": "0x142cf23fb",
       "instruction": "0x14241647c",
-      "preview": "ck 缺 StaticCommandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf23fb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ck 缺 StaticCommandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget"
     },
     {
-      "dataVa": "0x142cf23eb",
       "instruction": "0x142416487",
-      "preview": "StaticCommandCheck 缺 StaticCommandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf23eb",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StaticCommandCheck 缺 StaticCommandSVarCompareTargetedCloneTarget保护缺 ChoicesPreventionSubAbility 缺 ShieldEffectTarget"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142416450.c",
+  "pseudocodeSha256": "9fd8c7fbb334a1d16f5c96834f2492160849f3a2996d54b5d056ca0c41eac783",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

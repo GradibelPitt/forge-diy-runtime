@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0115702,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14273a6c0.asm",
   "assemblySha256": "503ca7495ecd8c2043f1be90701247a86fafe3237606e7250d9428b0ee9c4617",
   "literalReferences": [
     {
-      "dataVa": "0x142d177c0",
       "instruction": "0x14273a82d",
-      "preview": "a formatting trait implementation returned an error when the underlying stream did not/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\fmt.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d177c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "a formatting trait implementation returned an error when the underlying stream did not/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\fmt.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14273a6c0.c",
+  "pseudocodeSha256": "1250eb60cfa85be4759f2340d1ec388e14def4346742d086b3886d146a51e408",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

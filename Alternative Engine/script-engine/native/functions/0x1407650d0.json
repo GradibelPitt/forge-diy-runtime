@@ -7,14 +7,19 @@
     "crates/mtg-ai-hard/src/plays.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0291727
+  },
   "assembly": "functions/0x1407650d0.asm",
   "assemblySha256": "88b5261e50cf7c5c1650f2c08e1fc6b9530542ed33b9a064a0415c598732c9c6",
   "literalReferences": [
     {
-      "dataVa": "0x1427cc0d8",
       "instruction": "0x1407654ab",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427cc0d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x1407650d0.c",

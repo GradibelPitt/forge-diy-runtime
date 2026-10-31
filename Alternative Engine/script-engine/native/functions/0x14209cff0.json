@@ -7,14 +7,20 @@
     "crates/mtg-engine/src/card/salvage.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.374257,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14209cff0.asm",
   "assemblySha256": "2c3446c86eb849451340156c8dfe0170162d49997c528638a75b77ae18243cd3",
   "literalReferences": [
     {
-      "dataVa": "0x142cc2920",
       "instruction": "0x14209de30",
-      "preview": "\nAdvisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbaria",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc2920",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "\nAdvisor\nAetherborn\nAlien\nAlly\nAndorian\nAngel\nAntelope\nApe\nArcher\nArchon\nArmadillo\nArmy\nArtificer\nAssassin\nAssembly-Worker\nAstartes\nAtog\nAurochs\nAvatar\nAzra\nBadger\nBalloon\nBarbaria"
     }
   ],
   "pseudocode": "functions/0x14209cff0.c",

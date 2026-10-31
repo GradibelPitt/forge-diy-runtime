@@ -7,26 +7,31 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1977947
+  },
   "assembly": "functions/0x14012def0.asm",
   "assemblySha256": "185c59ee40c4a343f0d506f13f72f951cd461d223f417b9b36f1e10e7e8894ca",
   "literalReferences": [
     {
-      "dataVa": "0x14277744c",
       "instruction": "0x14012e066",
-      "preview": "一张牌a card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277744c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "一张牌a card、"
     },
     {
-      "dataVa": "0x142777455",
       "instruction": "0x14012e06d",
-      "preview": "a card、",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777455",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "a card、"
     },
     {
-      "dataVa": "0x142777380",
       "instruction": "0x14012e0ef",
-      "preview": "5swB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777380",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "5swB"
     }
   ],
   "pseudocode": "functions/0x14012def0.c",

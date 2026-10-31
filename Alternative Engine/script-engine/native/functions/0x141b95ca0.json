@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3805174
+  },
   "assembly": "functions/0x141b95ca0.asm",
   "assemblySha256": "4f8492886cfdc80231bdc2a8e4327f6491db2fca97671a5c8f07fcb1e10a2cd3",
   "literalReferences": [
     {
-      "dataVa": "0x142c8fbe4",
       "instruction": "0x141b95e86",
-      "preview": "Remove CARDNAME from your deck before playing if you're not playing for ante.",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8fbe4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Remove CARDNAME from your deck before playing if you're not playing for ante."
     }
   ],
   "pseudocode": "functions/0x141b95ca0.c",

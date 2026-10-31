@@ -7,80 +7,85 @@
     "src/counter_pick.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.3469301
+  },
   "assembly": "functions/0x140301b50.asm",
   "assemblySha256": "c1d5c31ce11a25baf3a53f8050b720872c3054cf3a448a1a85f0f44e25244c86",
   "literalReferences": [
     {
-      "dataVa": "0x14278ce06",
       "instruction": "0x140301d6e",
-      "preview": "、, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14278ce06",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "、, "
+    },
+    {
       "instruction": "0x140301f40",
-      "preview": "、, ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278ce06",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "、, "
     },
     {
-      "dataVa": "0x14278cf9d",
       "instruction": "0x14030251b",
-      "preview": "select",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cf9d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "select"
     },
     {
-      "dataVa": "0x14278cfd8",
       "instruction": "0x140302a02",
-      "preview": "移去指示物remove counters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cfd8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "移去指示物remove counters"
     },
     {
-      "dataVa": "0x14278cfe7",
       "instruction": "0x140302a09",
-      "preview": "remove counters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278cfe7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "remove counters"
     },
     {
-      "dataVa": "0x14278d010",
       "instruction": "0x1403037fb",
-      "preview": "取消Cancel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278d010",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "取消Cancel"
     },
     {
-      "dataVa": "0x14278d016",
       "instruction": "0x140303802",
-      "preview": "Cancel",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278d016",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cancel"
     },
     {
-      "dataVa": "0x14278c958",
       "instruction": "0x1403042ff",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278c958",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x14278c958",
       "instruction": "0x14030433e",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278c958",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x14278c958",
       "instruction": "0x14030437d",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278c958",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x14278c958",
       "instruction": "0x1403043d8",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278c958",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x14278c958",
       "instruction": "0x140304417",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278c958",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x140301b50.c",

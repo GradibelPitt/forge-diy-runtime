@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0099931,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a88670.asm",
   "assemblySha256": "db9e4a2e04a3ec3b59d22015ee804e44c7b84eff3d693be1b12e6d60e72b4fff",
   "literalReferences": [
     {
-      "dataVa": "0x142c87982",
       "instruction": "0x141a886f5",
-      "preview": "|DescPromptMessage\nSpellOngoingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87982",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "|DescPromptMessage\nSpellOngoingC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\merge.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a88670.c",
+  "pseudocodeSha256": "41f97b871374b4ebc65b80f4c7de4f429f74ee59a0c9011a3b6f5ca96bacf417",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

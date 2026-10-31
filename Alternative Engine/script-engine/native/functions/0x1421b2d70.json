@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0136314,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421b2d70.asm",
   "assemblySha256": "6ac37add76d19b768c3b96adcdb459286cd236b31ee8930b6b3fb13641044aaf",
   "literalReferences": [
     {
-      "dataVa": "0x142cd278b",
       "instruction": "0x1421b2db3",
-      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd278b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DBManaC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\pipeline.rs"
     },
     {
-      "dataVa": "0x142cd2fae",
       "instruction": "0x1421b2eab",
-      "preview": "ProducedChosen",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2fae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ProducedChosen"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421b2d70.c",
+  "pseudocodeSha256": "eb18bc746d9c30362a99c3547f739f749f9186d90c64c5d0043192b7eddca013",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

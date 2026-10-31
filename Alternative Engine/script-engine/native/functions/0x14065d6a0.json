@@ -7,14 +7,19 @@
     "crates/mtg-ai-hard/src/samples.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0053379
+  },
   "assembly": "functions/0x14065d6a0.asm",
   "assemblySha256": "4104ec5633b4c7888d0a86c9e836295c519941a45bb3142e7a5d0e09356ff3fc",
   "literalReferences": [
     {
-      "dataVa": "0x1427c44d0",
       "instruction": "0x14065d77a",
-      "preview": "QD|B",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427c44d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "QD|B"
     }
   ],
   "pseudocode": "functions/0x14065d6a0.c",

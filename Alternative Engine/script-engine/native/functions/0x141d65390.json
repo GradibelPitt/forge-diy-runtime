@@ -8,6 +8,12 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141d65390: process: timeout\n",
+    "seconds": 12.2486512,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141d65390.asm",
   "assemblySha256": "bcb04c5f0a7bbff54f5c4cb541c10d344a5b96c600c748f280925bd8f611a219",
   "literalReferences": [],

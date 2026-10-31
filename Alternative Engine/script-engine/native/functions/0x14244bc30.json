@@ -5,123 +5,133 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 1.3834524,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14244bc30.asm",
   "assemblySha256": "ea25066dbbf510939083629438012d91892eea50bcc8df743d80c8c9a867102a",
   "literalReferences": [
     {
-      "dataVa": "0x142cf36e2",
       "instruction": "0x14244bc67",
-      "preview": "NewNameRemoveCardTypesRemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf36e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NewNameRemoveCardTypesRemoveSubTypesNonLegendary"
     },
     {
-      "dataVa": "0x142cf36e9",
       "instruction": "0x14244bde0",
-      "preview": "RemoveCardTypesRemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf36e9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCardTypesRemoveSubTypesNonLegendary"
     },
     {
-      "dataVa": "0x142cf36f8",
       "instruction": "0x14244bebf",
-      "preview": "RemoveSubTypesNonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf36f8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveSubTypesNonLegendary"
     },
     {
-      "dataVa": "0x142cf3706",
       "instruction": "0x14244bf9b",
-      "preview": "NonLegendary",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf3706",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NonLegendary"
     },
     {
-      "dataVa": "0x142cf3546",
       "instruction": "0x14244c077",
-      "preview": "AddTypes防腐复制PopulateCreature.token+YouCtrlTriggeredSpellAbilityTargetsAtEOTSacrifice",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf3546",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddTypes防腐复制PopulateCreature.token+YouCtrlTriggeredSpellAbilityTargetsAtEOTSacrifice"
     },
     {
-      "dataVa": "0x142cf3725",
       "instruction": "0x14244c50c",
-      "preview": "SetCreatureTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf3725",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SetCreatureTypes"
     },
     {
-      "dataVa": "0x142cf2bdc",
       "instruction": "0x14244c6c9",
-      "preview": "SetPowerSetToughnessAddType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2bdc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SetPowerSetToughnessAddType"
     },
     {
-      "dataVa": "0x142cf2be4",
       "instruction": "0x14244c6f0",
-      "preview": "SetToughnessAddType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2be4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SetToughnessAddType"
     },
     {
-      "dataVa": "0x142cf3744",
       "instruction": "0x14244cac5",
-      "preview": "AddKeywordsAddTriggersAddStaticAbilitiesAddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf3744",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddKeywordsAddTriggersAddStaticAbilitiesAddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     },
     {
-      "dataVa": "0x142cf2c0b",
       "instruction": "0x14244cda2",
-      "preview": "SetColor",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2c0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SetColor"
     },
     {
-      "dataVa": "0x142cf374f",
       "instruction": "0x14244cfed",
-      "preview": "AddTriggersAddStaticAbilitiesAddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf374f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddTriggersAddStaticAbilitiesAddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     },
     {
-      "dataVa": "0x142cf375a",
       "instruction": "0x14244d2b0",
-      "preview": "AddStaticAbilitiesAddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf375a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddStaticAbilitiesAddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     },
     {
-      "dataVa": "0x142cf2b9e",
       "instruction": "0x14244d56a",
-      "preview": "AddAbilities持续效果没有作用对象AddPowerAddToughnessSetPowerSetToughnessAddType",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2b9e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddAbilities持续效果没有作用对象AddPowerAddToughnessSetPowerSetToughnessAddType"
     },
     {
-      "dataVa": "0x142cf376c",
       "instruction": "0x14244d894",
-      "preview": "AddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf376c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddColorsRemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     },
     {
-      "dataVa": "0x142cf2ef8",
       "instruction": "0x14244da30",
-      "preview": "RemoveCreatureTypesTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2ef8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCreatureTypesTypes"
     },
     {
-      "dataVa": "0x142cf3775",
       "instruction": "0x14244dbad",
-      "preview": "RemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf3775",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveKeywordsSetLoyaltyDoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     },
     {
-      "dataVa": "0x142cf378d",
       "instruction": "0x14244dd5d",
-      "preview": "DoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf378d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DoesntHaveThisAbilityAddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     },
     {
-      "dataVa": "0x142cf353c",
       "instruction": "0x14244dd7d",
-      "preview": "RemoveCostAddTypes防腐复制PopulateCreature.token+YouCtrlTriggeredSpellAbilityTargetsAtEOTSacrifice",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf353c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RemoveCostAddTypes防腐复制PopulateCreature.token+YouCtrlTriggeredSpellAbilityTargetsAtEOTSacrifice"
     },
     {
-      "dataVa": "0x142cf37a2",
       "instruction": "0x14244dd9d",
-      "preview": "AddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf37a2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddSVarsCaveDesertGateLairLocusMinePlanetPower-PlantSphereTowerTownUrza's"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14244bc30.c",
+  "pseudocodeSha256": "d5f1aaebba97d0a4a5b97dfec28fe2d1385a76276c82b978aa7d91bb477b34e9",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

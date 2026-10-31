@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1416326,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14029d550.asm",
   "assemblySha256": "4b15eea013f4fbe176b47e978a55f158114ad2755d3a904037db74fefaa5761a",
   "literalReferences": [
     {
-      "dataVa": "0x142787490",
       "instruction": "0x14029d8ab",
-      "preview": "////////////////",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787490",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "////////////////"
     },
     {
-      "dataVa": "0x142787490",
       "instruction": "0x14029d928",
-      "preview": "////////////////",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142787614",
-      "instruction": "0x14029d95b",
-      "preview": " // ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142787490",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "////////////////"
+    },
+    {
+      "instruction": "0x14029d95b",
+      "dataVa": "0x142787614",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " // "
+    },
+    {
       "instruction": "0x14029da80",
-      "preview": "////////////////",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787490",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "////////////////"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14029d550.c",
+  "pseudocodeSha256": "bd44fcbc68bf648000ebaf8ff6c7173b443419519dd3ecc6e5306a8e0ac68c66",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -8,68 +8,73 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.9440167
+  },
   "assembly": "functions/0x141d178c0.asm",
   "assemblySha256": "8edde5e763b0b71d98718065bb31a1061468836622e16a88e126fc01b80e69c9",
   "literalReferences": [
     {
-      "dataVa": "0x142c97948",
       "instruction": "0x141d17a0d",
-      "preview": "返照与替代费用只能选一个C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\turn.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c97948",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "返照与替代费用只能选一个C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\turn.rs"
     },
     {
-      "dataVa": "0x142c97588",
       "instruction": "0x141d17daf",
-      "preview": "分体牌要选施放哪一半替代费用只用于正面施放这张牌没有附加费用附加费用选得不对",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c97588",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "分体牌要选施放哪一半替代费用只用于正面施放这张牌没有附加费用附加费用选得不对"
     },
     {
-      "dataVa": "0x142c904a8",
       "instruction": "0x141d17e1c",
-      "preview": "这张牌没有返照不能用这种方式施放这张牌没有增幅没有这个可选费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c904a8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "这张牌没有返照不能用这种方式施放这张牌没有增幅没有这个可选费用"
     },
     {
-      "dataVa": "0x142c904d8",
       "instruction": "0x141d18377",
-      "preview": "这张牌没有增幅没有这个可选费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c904d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "这张牌没有增幅没有这个可选费用"
     },
     {
-      "dataVa": "0x142c975a6",
       "instruction": "0x141d1886e",
-      "preview": "替代费用只用于正面施放这张牌没有附加费用附加费用选得不对",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c975a6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "替代费用只用于正面施放这张牌没有附加费用附加费用选得不对"
     },
     {
-      "dataVa": "0x142c97936",
       "instruction": "0x141d18f42",
-      "preview": "可选费用重复返照与替代费用只能选一个C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\turn.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c97936",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "可选费用重复返照与替代费用只能选一个C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\turn.rs"
     },
     {
-      "dataVa": "0x142c904ed",
       "instruction": "0x141d190a4",
-      "preview": "没有这个可选费用",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c904ed",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没有这个可选费用"
     },
     {
-      "dataVa": "0x142c975c7",
       "instruction": "0x141d190f8",
-      "preview": "这张牌没有附加费用附加费用选得不对",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c975c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "这张牌没有附加费用附加费用选得不对"
     },
     {
-      "dataVa": "0x142c975e2",
       "instruction": "0x141d19239",
-      "preview": "附加费用选得不对",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c975e2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "附加费用选得不对"
     },
     {
-      "dataVa": "0x142c97918",
       "instruction": "0x141d1a4b3",
-      "preview": "掘穴放逐的牌选得不对可选费用重复返照与替代费用只能选一个C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\turn.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c97918",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "掘穴放逐的牌选得不对可选费用重复返照与替代费用只能选一个C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\turn.rs"
     }
   ],
   "pseudocode": "functions/0x141d178c0.c",

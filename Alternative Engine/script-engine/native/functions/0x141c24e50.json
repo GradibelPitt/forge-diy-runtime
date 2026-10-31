@@ -7,14 +7,19 @@
     "crates/mtg-engine/src/casting/variable_costs.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0035352
+  },
   "assembly": "functions/0x141c24e50.asm",
   "assemblySha256": "506ba28ee7b10f7dea2012bf64f053e5e3787adef281511da5cebb96ac4e5647",
   "literalReferences": [
     {
-      "dataVa": "0x142c90430",
       "instruction": "0x141c24ea8",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c90430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\cast.rs"
     }
   ],
   "pseudocode": "functions/0x141c24e50.c",

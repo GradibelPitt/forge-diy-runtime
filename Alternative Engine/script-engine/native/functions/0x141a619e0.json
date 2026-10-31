@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.004051,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a619e0.asm",
   "assemblySha256": "0662f6d2cc0bc5b45b866ad1865b19be08674302570844533636cdaec6583854",
   "literalReferences": [
     {
-      "dataVa": "0x142c863e5",
       "instruction": "0x141a61a01",
-      "preview": "nchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestruc",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c863e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "nchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHexproofIndestruc"
     },
     {
-      "dataVa": "0x142c863d7",
       "instruction": "0x141a61a0c",
-      "preview": "Branch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHex",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c863d7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Branch 缺 BranchConditionSVarGenericChoice 缺 ChoicesRepeatEach 缺 RepeatSubAbilityRepeat 缺 RepeatSubAbilityRepeatCountFlyingFirst StrikeDouble StrikeDeathtouchDecayedHasteHex"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a619e0.c",
+  "pseudocodeSha256": "24ddf40b2f1c25f5d3f04357293765abfe44055e91dc935ceef388bb51c9b644",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

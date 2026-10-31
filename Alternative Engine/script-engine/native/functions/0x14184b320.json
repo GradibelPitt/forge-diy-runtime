@@ -7,14 +7,19 @@
     "crates/mtg-ai-core/src/prof.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0074334
+  },
   "assembly": "functions/0x14184b320.asm",
   "assemblySha256": "8a116d2b6ec1eec3d8f8a0c4e074a4547e8194920ac4d078926da5ee37066254",
   "literalReferences": [
     {
-      "dataVa": "0x142c5b628",
       "instruction": "0x14184b47c",
-      "preview": "overflow when adding durations/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c5b628",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\time.rs"
     }
   ],
   "pseudocode": "functions/0x14184b320.c",

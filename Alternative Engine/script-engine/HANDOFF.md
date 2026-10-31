@@ -26,6 +26,8 @@ register_diy_cards 消息
 
 `K:` 的独立解析入口并不等于整卡入口。某些写法由整卡预处理展开；多面牌还有上层拆面流程。因此 `keyword-probes.jsonl` 中的拒绝不能直接解释成整张卡不受支持。完整单面卡入口测试也不能覆盖上层 `ALTERNATE` / `SPECIALIZE` 拆面流程。
 
+对照中有 855 种独立关键字入口拒绝的写法，其原脚本示例至少有一张能通过整卡入口。例如两种 `Ward:PayLife<X/...>` 写法独立解析报费用错误，但对应的 Phyrexian Fleshgorger 和 Raubahn 脚本均通过整卡解析。`keyword-map.json` 保存了逐项对照；这说明应从整卡上下文继续追踪，不能据此断言该关键字的实际结算已经正确。
+
 ## 关键定位点
 
 以下地址均针对 SHA-256 为 `ded7eb5f02d6b6df2186cb78144881d6350028a474c6658577c3fe7388a59e7b` 的原版规则引擎。它们是取证地址和角色描述，不是假称恢复的原始 Rust 函数名。
@@ -51,6 +53,8 @@ register_diy_cards 消息
 | `0x141c623f0` | 动态数量计算；现有发现补丁实际调用 |
 
 脚本头字段、API 名称和参数字段见 `catalog/script-vocabulary.json`。它们来自 34,113 份脚本，是观测到的词汇，不是引擎支持承诺。源码路径引用可能来自内联函数，模块索引也明确保留了这个限制。
+
+`catalog/keyword-map.json` 将这批脚本的 253 类关键字、2,628 种实际写法逐项关联到原版解析结果、原脚本相对路径和候选执行分支。其中 183 类至少有一种写法被独立关键字入口接受；这不是完整卡牌或游戏行为的覆盖率。DIY 新机制从下方的当前 Rust 源码继续查，不以原版是否认识该名称决定取舍。
 
 ## 用小查询代替读取整个目录
 
@@ -96,5 +100,7 @@ cargo test --locked --manifest-path script-engine/reconstructed-rust/Cargo.toml
 原版 EXE 直接映射进另一个 Rust 进程会缺失正确的线程局部存储初始化，因此一般关键字和整卡测试采用独立原进程探针；简单无状态匹配器的探针另行保留。不要用前一种不完整环境的崩溃推断卡牌规则不支持。
 
 重新做 Ghidra 分析时须将 RVA `0x2748650` 的 Windows 栈探测函数设为 `alloca_probe` call fixup；否则大栈帧的参数和变量会失真。本轮工具 `RecoverRules.java` 已处理。函数的 `controlFlowWarning` 和 `typePropagationWarning` 仍需逐项审阅。
+
+还未取得伪代码、没有可靠结束边界或存在反编译告警的函数列在 `recovery/remaining.json`。`recovery/remaining-request.json` 可以直接交给 `RecoverRules.java` 重试；`recovery/README.md` 说明如何只用仓库里的原始证据继续分析。`latestAttempt` 保留最后一次尝试状态，即使该次超时后仍保留了早期已有的伪代码，也不会把超时隐藏掉。
 
 下一步按具体卡牌需求，从脚本字段追到解析对象，再追执行分支和已有 DIY 钩子，用原生场景测实际结算。不要只把未知关键字替换成已有名称，也不要把“登记成功”“解析成功”“执行效果正确”合并成一个结论。

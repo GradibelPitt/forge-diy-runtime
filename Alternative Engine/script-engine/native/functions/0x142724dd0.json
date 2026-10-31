@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0193931,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142724dd0.asm",
   "assemblySha256": "e0d86a42b605ca67f4f4fead090d8668bb8ce0eff13dfb00de12b4bac3c84afb",
   "literalReferences": [
     {
-      "dataVa": "0x142d12f68",
       "instruction": "0x1427250ab",
-      "preview": "internal error: entered unreachable code/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\sys\\pal\\windows\\mod.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142d12f68",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable code/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\std\\src\\sys\\pal\\windows\\mod.rs"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142724dd0.c",
+  "pseudocodeSha256": "785ff61b175548fcf77985b8dea318c6172ccc20fdf419779f6dfda9fb33ee54",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

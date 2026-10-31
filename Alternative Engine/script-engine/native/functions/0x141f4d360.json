@@ -5,99 +5,109 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0360928,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f4d360.asm",
   "assemblySha256": "e2fb60ad692cc348aa931601579e85191b20b94a7a299d45f20756d6e1eb3afa",
   "literalReferences": [
     {
-      "dataVa": "0x142ca81e5",
       "instruction": "0x141f4d3d2",
-      "preview": "SVar:Y:Count$ValidGraveyard Creature.YouOwnSVar:Y:Count$ValidGraveyard CreatureThe Doctor's TombEvent$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.Creat",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca81e5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SVar:Y:Count$ValidGraveyard Creature.YouOwnSVar:Y:Count$ValidGraveyard CreatureThe Doctor's TombEvent$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.Creat"
     },
     {
-      "dataVa": "0x142ca8210",
       "instruction": "0x141f4d3fa",
-      "preview": "SVar:Y:Count$ValidGraveyard CreatureThe Doctor's TombEvent$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.Creature |Event$ Moved | ActiveZones$ Command | ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8210",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SVar:Y:Count$ValidGraveyard CreatureThe Doctor's TombEvent$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.Creature |Event$ Moved | ActiveZones$ Command | "
     },
     {
-      "dataVa": "0x142ca7f86",
       "instruction": "0x141f4d469",
-      "preview": " | RememberTokens$ True | SubAbility$ ClearImprinted | SubAbility$ ClearImprintedDB$ DelayedTrigger | RememberObjects$ Remembered | Mode$ Phase | Phase$ End of Turn | Execute$ Trig",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7f86",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " | RememberTokens$ True | SubAbility$ ClearImprinted | SubAbility$ ClearImprintedDB$ DelayedTrigger | RememberObjects$ Remembered | Mode$ Phase | Phase$ End of Turn | Execute$ Trig"
     },
     {
-      "dataVa": "0x142ca7fba",
       "instruction": "0x141f4d48d",
-      "preview": " | SubAbility$ ClearImprintedDB$ DelayedTrigger | RememberObjects$ Remembered | Mode$ Phase | Phase$ End of Turn | Execute$ TrigExileAll | SubAbility$ DBCleanup |DB$ DelayedTrigger",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7fba",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " | SubAbility$ ClearImprintedDB$ DelayedTrigger | RememberObjects$ Remembered | Mode$ Phase | Phase$ End of Turn | Execute$ TrigExileAll | SubAbility$ DBCleanup |DB$ DelayedTrigger"
     },
     {
-      "dataVa": "0x142ca817a",
       "instruction": "0x141f4d53a",
-      "preview": "A:AB$ Mana | Cost$ T | Produced$ C |K:MayExileHandOnMulligan\nA:AB$ Mana | Cost$ T | Produced$ C |NecromancySVar:Y:Count$ValidGraveyard Creature.YouOwnSVar:Y:Count$ValidGraveyard Cr",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca817a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "A:AB$ Mana | Cost$ T | Produced$ C |K:MayExileHandOnMulligan\nA:AB$ Mana | Cost$ T | Produced$ C |NecromancySVar:Y:Count$ValidGraveyard Creature.YouOwnSVar:Y:Count$ValidGraveyard Cr"
     },
     {
-      "dataVa": "0x142ca819e",
       "instruction": "0x141f4d562",
-      "preview": "K:MayExileHandOnMulligan\nA:AB$ Mana | Cost$ T | Produced$ C |NecromancySVar:Y:Count$ValidGraveyard Creature.YouOwnSVar:Y:Count$ValidGraveyard CreatureThe Doctor's TombEvent$ Moved ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca819e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "K:MayExileHandOnMulligan\nA:AB$ Mana | Cost$ T | Produced$ C |NecromancySVar:Y:Count$ValidGraveyard Creature.YouOwnSVar:Y:Count$ValidGraveyard CreatureThe Doctor's TombEvent$ Moved "
     },
     {
-      "dataVa": "0x142ca831c",
       "instruction": "0x141f4d5c8",
-      "preview": "Types$ Bear,BeserkerTypes$ Bear,Berserker",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca831c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Types$ Bear,BeserkerTypes$ Bear,Berserker"
     },
     {
-      "dataVa": "0x142ca8330",
       "instruction": "0x141f4d5f0",
-      "preview": "Types$ Bear,Berserker",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8330",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Types$ Bear,Berserker"
     },
     {
-      "dataVa": "0x142ca6720",
       "instruction": "0x141f4d636",
-      "preview": "The Doctor's Tomb",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca6720",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "The Doctor's Tomb"
     },
     {
-      "dataVa": "0x142ca8245",
       "instruction": "0x141f4d661",
-      "preview": "Event$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.Creature |Event$ Moved | ActiveZones$ Command | Origin$ Battlefield | Destination$ Graveyard | ValidC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8245",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Event$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.Creature |Event$ Moved | ActiveZones$ Command | Origin$ Battlefield | Destination$ Graveyard | ValidC"
     },
     {
-      "dataVa": "0x142ca829e",
       "instruction": "0x141f4d689",
-      "preview": "Event$ Moved | ActiveZones$ Command | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Creature |Ursine ChampionTypes$ Bear,BeserkerTypes$ Bear,Berserker",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca829e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Event$ Moved | ActiveZones$ Command | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Creature |Ursine ChampionTypes$ Bear,BeserkerTypes$ Bear,Berserker"
     },
     {
-      "dataVa": "0x142ca7fd7",
       "instruction": "0x141f4d6ce",
-      "preview": "DB$ DelayedTrigger | RememberObjects$ Remembered | Mode$ Phase | Phase$ End of Turn | Execute$ TrigExileAll | SubAbility$ DBCleanup |DB$ DelayedTrigger | Mode$ Phase | Phase$ End o",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca7fd7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ DelayedTrigger | RememberObjects$ Remembered | Mode$ Phase | Phase$ End of Turn | Execute$ TrigExileAll | SubAbility$ DBCleanup |DB$ DelayedTrigger | Mode$ Phase | Phase$ End o"
     },
     {
-      "dataVa": "0x142ca805c",
       "instruction": "0x141f4d6f2",
-      "preview": "DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigExileAll |DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Battlefield | Destination$ ExileDB$ Cha",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca805c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigExileAll |DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Battlefield | Destination$ ExileDB$ Cha"
     },
     {
-      "dataVa": "0x142ca80ab",
       "instruction": "0x141f4d764",
-      "preview": "DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Battlefield | Destination$ ExileDB$ ChangeZoneAll | ChangeType$ Card.token+CreatedBySource | Origin$ Battlefield | Des",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca80ab",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Battlefield | Destination$ ExileDB$ ChangeZoneAll | ChangeType$ Card.token+CreatedBySource | Origin$ Battlefield | Des"
     },
     {
-      "dataVa": "0x142ca8109",
       "instruction": "0x141f4d788",
-      "preview": "DB$ ChangeZoneAll | ChangeType$ Card.token+CreatedBySource | Origin$ Battlefield | Destination$ ExileSerum PowderA:AB$ Mana | Cost$ T | Produced$ C |K:MayExileHandOnMulligan\nA:AB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8109",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ ChangeZoneAll | ChangeType$ Card.token+CreatedBySource | Origin$ Battlefield | Destination$ ExileSerum PowderA:AB$ Mana | Cost$ T | Produced$ C |K:MayExileHandOnMulligan\nA:AB$ "
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141f4d360.c",
+  "pseudocodeSha256": "aa5e2288df0503ada31b7d64b40b32bf8f2e2dd2798413fbd10a42a540578925",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

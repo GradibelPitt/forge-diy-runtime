@@ -8,25 +8,31 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 5.7770255,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14093a8c0.asm",
   "assemblySha256": "0b884c90ea83654f496fc11232754467326665247bd150e01fc19e8732ff21e2",
   "literalReferences": [
     {
-      "dataVa": "0x1427ecc38",
       "instruction": "0x14093cffa",
-      "preview": "NORMAL_TRACE",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ecc38",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NORMAL_TRACE"
     },
     {
-      "dataVa": "0x1427ecc38",
       "instruction": "0x14093d6e3",
-      "preview": "NORMAL_TRACE",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427ecc38",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "NORMAL_TRACE"
     }
   ],
   "pseudocode": "functions/0x14093a8c0.c",
   "pseudocodeSha256": "d5b427faff15126db04729e90132253ffdffc0273977ac953e8b8101d6d5c182",
-  "pseudocodeOrigin": "expanded source/callee recovery",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
   "controlFlowWarning": false,
   "typePropagationWarning": true
 }

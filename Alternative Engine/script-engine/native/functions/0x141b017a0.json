@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/keywords/dice_modify.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2814432
+  },
   "assembly": "functions/0x141b017a0.asm",
   "assemblySha256": "bf81ddb86a54bc751ac3485295e785b336f129c3ab862047d18c120d5187e1da",
   "literalReferences": [
     {
-      "dataVa": "0x142c8f368",
       "instruction": "0x141b0278f",
-      "preview": "在改点C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\dice_modify.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8f368",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "在改点C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\keywords\\dice_modify.rs"
     },
     {
-      "dataVa": "0x142c8f418",
       "instruction": "0x141b028dc",
-      "preview": "能改点",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8f418",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "能改点"
     }
   ],
   "pseudocode": "functions/0x141b017a0.c",

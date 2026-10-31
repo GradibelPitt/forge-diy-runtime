@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0865059,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14243da70.asm",
   "assemblySha256": "f2199df1474fb03875552da727733b50c7bb08ead8f45f266070851f4d167af3",
   "literalReferences": [
     {
-      "dataVa": "0x142cf2faa",
       "instruction": "0x14243deb4",
-      "preview": "进场复制的附加项进场复制的写法进场复制的子异能要问人Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2faa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场复制的附加项进场复制的写法进场复制的子异能要问人Defined"
     },
     {
-      "dataVa": "0x142cf2fc2",
       "instruction": "0x14243df89",
-      "preview": "进场复制的写法进场复制的子异能要问人Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2fc2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场复制的写法进场复制的子异能要问人Defined"
     },
     {
-      "dataVa": "0x142cf2fd7",
       "instruction": "0x14243e01c",
-      "preview": "进场复制的子异能要问人Defined",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cf2fd7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进场复制的子异能要问人Defined"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14243da70.c",
+  "pseudocodeSha256": "e9e9111eba5debe5de1896f66988dfbcc841e703899dfebb34610b6f538711c1",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2580894,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140131060.asm",
   "assemblySha256": "44c793e4dd10547b46314d67c30d7eff6b0e05995aa6829eeca11105143d9625",
   "literalReferences": [
     {
-      "dataVa": "0x14277742a",
       "instruction": "0x140131071",
-      "preview": "player|qwB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277742a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "player|qwB"
     },
     {
-      "dataVa": "0x14277782a",
       "instruction": "0x1401310ef",
-      "preview": "没有这位牌手No such playerdev_tokens",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277782a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没有这位牌手No such playerdev_tokens"
     },
     {
-      "dataVa": "0x14277783c",
       "instruction": "0x1401310f6",
-      "preview": "No such playerdev_tokens",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14277783c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "No such playerdev_tokens"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x140131060.c",
+  "pseudocodeSha256": "148387656e5dcd2ab037ca1081ae5a2fc9785b259002b1205daea3fe057e5aae",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -7,92 +7,97 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0632696
+  },
   "assembly": "functions/0x1402b02b0.asm",
   "assemblySha256": "acaf32a8da69bb3e53e17b164debc9c5800e9a5ed44f157a3eed21de5c92722a",
   "literalReferences": [
     {
-      "dataVa": "0x142788e3c",
       "instruction": "0x1402b0323",
-      "preview": "PROBE_RUNOUTPROBE_TIME",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788e3c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PROBE_RUNOUTPROBE_TIME"
     },
     {
-      "dataVa": "0x142788e48",
       "instruction": "0x1402b0818",
-      "preview": "PROBE_TIME",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142788e48",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PROBE_TIME"
+    },
+    {
       "instruction": "0x1402b15e0",
-      "preview": "PROBE_TIME",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788e48",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PROBE_TIME"
     },
     {
-      "dataVa": "0x142787540",
       "instruction": "0x1402b2925",
-      "preview": "0uxB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787540",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "0uxB"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b3460",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b3493",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b34b1",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b34cf",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b34ed",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b350b",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b3529",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x142789117",
       "instruction": "0x1402b3547",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142789117",
-      "instruction": "0x1402b3565",
-      "preview": "overflow when adding durations",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
     },
     {
-      "dataVa": "0x1427899f8",
+      "instruction": "0x1402b3565",
+      "dataVa": "0x142789117",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "overflow when adding durations"
+    },
+    {
       "instruction": "0x1402b35a4",
-      "preview": "a Display implementation returned an error unexpectedly/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\string.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427899f8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "a Display implementation returned an error unexpectedly/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\string.rs"
     }
   ],
   "pseudocode": "functions/0x1402b02b0.c",

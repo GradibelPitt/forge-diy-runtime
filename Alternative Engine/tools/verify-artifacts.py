@@ -16,6 +16,9 @@ if sys.argv[1:] == ['rules']:
     folder=ROOT/'script-engine'
     read=lambda p:json.loads(p.read_text(encoding='utf8'))
     coverage=read(folder/'coverage.json')
+    rows=read(folder/'native/index.json');addresses={r['va'] for r in rows}
+    selected_rvas={r['rva'] for r in rows}
+    excluded=re.compile(read(ROOT/'tools/excluded-modes.json')['nativeSourcePattern'])
     with gzip.open(folder/'evidence/original-sidecar.bin.gz','rb') as source:binary=source.read()
     assert hashlib.sha256(binary).hexdigest()==coverage['binarySha256']
     pe=read(folder/'evidence/pe.json');base=int(pe['imageBase'],16)
@@ -31,8 +34,13 @@ if sys.argv[1:] == ['rules']:
         db=sqlite3.connect(f'file:{index.as_posix()}?mode=ro',uri=True)
         assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
         assert db.execute('SELECT count(*) FROM functions').fetchone()[0]==coverage['indexedFunctions']
+        source_paths=collections.defaultdict(set)
+        for rva,path in db.execute('SELECT DISTINCT source,path FROM source_refs'):
+            if rva in selected_rvas:source_paths[rva].add(path)
+        assert not any(all(excluded.search(p) for p in paths) for paths in source_paths.values())
+        shared_retired_refs=[hex(base+rva) for rva,paths in source_paths.items()
+                             if any(excluded.search(p) for p in paths)]
         db.close()
-    rows=read(folder/'native/index.json');addresses={r['va'] for r in rows}
     assert len(addresses)==len(rows)==coverage['selectedFunctions']
     byte_count=0;asm_count=0;code_count=0
     for row in rows:
@@ -53,7 +61,6 @@ if sys.argv[1:] == ['rules']:
     assert asm_count==coverage['boundedAssemblyFunctions']
     assert byte_count==coverage['byteVerifiedAssemblyBytes']
     assert code_count==coverage['pseudocodeFunctions']
-    excluded=re.compile(read(ROOT/'tools/excluded-modes.json')['nativeSourcePattern'])
     modules=read(folder/'native/modules/index.json')
     for module in modules:
         assert not excluded.search(module['sourcePathHint'])
@@ -66,13 +73,25 @@ if sys.argv[1:] == ['rules']:
     basic=read(folder/'catalog/basic-keyword-probes.json')
     assert not basic['missingTags']
     assert len(basic['results'])==basic['inputs']
-    assert all((folder/'native/functions'/f'{r["function"]}.c').is_file()
-               for r in read(folder/'catalog/keyword-dispatch.json'))
+    dispatch=read(folder/'catalog/keyword-dispatch.json')
+    for row in dispatch:
+        line=(folder/'native/functions'/f'{row["function"]}.c').read_text(encoding='utf8').splitlines()[row['line']-1]
+        case=re.match(r'\s*case (0x[0-9a-f]+|[0-9]+):',line)
+        assert case and int(case[1],0)==row['tag'],row
+    keyword_map=read(folder/'catalog/keyword-map.json')
+    vocabulary=read(folder/'catalog/script-vocabulary.json')['keywords']
+    mapped=[form['input'] for item in keyword_map['keywords'] for form in item['forms']]
+    assert len(keyword_map['keywords'])==keyword_map['keywordHeads']
+    assert len(mapped)==len(set(mapped))==len(vocabulary)==keyword_map['observedForms']
+    assert set(mapped)==set(vocabulary)
     report={'verified':True,'selectedFunctions':len(rows),'assemblyFunctions':asm_count,
             'pseudocodeFunctions':code_count,'assemblyBytesComparedToOriginal':byte_count,
             'indexedNativeEntries':coverage['indexedFunctions'],'sourceModules':len(modules),
             'diyRustFiles':sources['rustFileCount'],'allDiySourceHashesMatch':True,
-            'originalBinaryHashMatches':True,'nativeIndexIntegrity':'ok','excludedModesAbsentFromModuleExports':True}
+            'originalBinaryHashMatches':True,'nativeIndexIntegrity':'ok','excludedModesAbsentFromModuleExports':True,
+            'dedicatedRetiredModeFunctionsExported':0,'sharedEvidenceFunctionsWithMixedModeReferences':shared_retired_refs,
+            'keywordHeads':keyword_map['keywordHeads'],'keywordFormsMapped':len(mapped),
+            'dispatchCaseReferencesVerified':len(dispatch)}
     (folder/'verification/artifact-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     print(json.dumps(report,ensure_ascii=False,indent=2))
     raise SystemExit(0)

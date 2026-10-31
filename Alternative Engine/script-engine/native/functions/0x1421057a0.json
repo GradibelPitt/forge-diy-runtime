@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0051697,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421057a0.asm",
   "assemblySha256": "9c468c8743c68c05138a648c8d567eea4ca5a4aac19ce11eec0f451f4c9c541d",
   "literalReferences": [
     {
-      "dataVa": "0x142cc936e",
       "instruction": "0x1421057d7",
-      "preview": "ParentTargetedController 但没有父目标离场改放逐的对象多阻挡的对象TargetValidTargeting 没有目标ParentTarget 但没有父目标MustBlock 没有阻挡者弃牌",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc936e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ParentTargetedController 但没有父目标离场改放逐的对象多阻挡的对象TargetValidTargeting 没有目标ParentTarget 但没有父目标MustBlock 没有阻挡者弃牌"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421057a0.c",
+  "pseudocodeSha256": "1fa17b17484898f7db7ed5a1027a07580491d1061db16170b3fb54ee8b0a68c3",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

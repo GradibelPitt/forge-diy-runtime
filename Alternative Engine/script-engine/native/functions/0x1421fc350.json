@@ -5,27 +5,37 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.007146,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1421fc350.asm",
   "assemblySha256": "f56b70dc20320903e7047606ecc8380d53c69ce76eb7c6b061d9c40be7e1a4c3",
   "literalReferences": [
     {
-      "dataVa": "0x142cd2f64",
       "instruction": "0x1421fc393",
-      "preview": "ValidTgts$TgtPrompt$TargetType$AdditionalActivationZone$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2f64",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidTgts$TgtPrompt$TargetType$AdditionalActivationZone$"
     },
     {
-      "dataVa": "0x142cd2f6e",
       "instruction": "0x1421fc39a",
-      "preview": "TgtPrompt$TargetType$AdditionalActivationZone$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2f6e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TgtPrompt$TargetType$AdditionalActivationZone$"
     },
     {
-      "dataVa": "0x142cd2f78",
       "instruction": "0x1421fc3f5",
-      "preview": "TargetType$AdditionalActivationZone$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2f78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetType$AdditionalActivationZone$"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1421fc350.c",
+  "pseudocodeSha256": "47d9f6bd40e60adf73bc4aaf24966968ac731a7de1d050004db43a134f366082",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

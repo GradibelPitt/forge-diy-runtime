@@ -7,296 +7,302 @@
     "crates/mtg-engine/src/card/keyword/rare.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 5.5178909,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141f53e00.asm",
   "assemblySha256": "b18889bf2272cb736902df956e2aefb7ef5cd954dd15fcaee23b363b44c73015",
   "literalReferences": [
     {
-      "dataVa": "0x142ca8d32",
       "instruction": "0x141f54046",
-      "preview": "b_0_0_phyrexian_germ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8d32",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "b_0_0_phyrexian_germ"
     },
     {
-      "dataVa": "0x142ca879e",
       "instruction": "0x141f5425e",
-      "preview": "rd | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCreature.OppCtrlMo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca879e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "rd | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCreature.OppCtrlMo"
     },
     {
-      "dataVa": "0x142ca878e",
       "instruction": "0x141f54269",
-      "preview": " Origin$ Graveyard | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCr",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca878e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " Origin$ Graveyard | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCr"
     },
     {
-      "dataVa": "0x142ca877e",
       "instruction": "0x141f54274",
-      "preview": " Defined$ Self | Origin$ Graveyard | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca877e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " Defined$ Self | Origin$ Graveyard | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZo"
     },
     {
-      "dataVa": "0x142ca876e",
       "instruction": "0x141f5427f",
-      "preview": "DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Grave",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca876e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ ExileKwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Grave"
     },
     {
-      "dataVa": "0x142ca87b5",
       "instruction": "0x141f54299",
-      "preview": "KwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCreature.OppCtrlMode$ Attacks | ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca87b5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwRecoverExileMode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCreature.OppCtrlMode$ Attacks | ValidCard"
     },
     {
-      "dataVa": "0x142ca87c3",
       "instruction": "0x141f542ee",
-      "preview": "Mode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCreature.OppCtrlMode$ Attacks | ValidCard$ Card.Self",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca87c3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | ValidCard$ Creature.Other+YouOwn | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ GraveyardCreature.OppCtrlMode$ Attacks | ValidCard$ Card.Self"
     },
     {
-      "dataVa": "0x142ca8644",
       "instruction": "0x141f54557",
-      "preview": "Mode$ SpellCast | ValidActivatingPlayer$ You | TriggerZones$ BattlefieldDB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1UDB$ ChangeZone | Defined$ Self | Origin$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8644",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ SpellCast | ValidActivatingPlayer$ You | TriggerZones$ BattlefieldDB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1UDB$ ChangeZone | Defined$ Self | Origin$ "
     },
     {
-      "dataVa": "0x142ca8d28",
       "instruction": "0x141f546a3",
-      "preview": "c_1_1_herob_0_0_phyrexian_germ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8d28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "c_1_1_herob_0_0_phyrexian_germ"
     },
     {
-      "dataVa": "0x142ca8d1d",
       "instruction": "0x141f5476d",
-      "preview": "r_2_2_rebelc_1_1_herob_0_0_phyrexian_germ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8d1d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "r_2_2_rebelc_1_1_herob_0_0_phyrexian_germ"
     },
     {
-      "dataVa": "0x142ca8a96",
       "instruction": "0x141f54853",
-      "preview": "earRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAb",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a86",
-      "instruction": "0x141f5485e",
-      "preview": "DB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Bat",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a43",
-      "instruction": "0x141f548f8",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8e27",
-      "instruction": "0x141f54b1e",
-      "preview": "DB$ Draw",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8f72",
-      "instruction": "0x141f54dca",
-      "preview": "Count$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVar",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8f89",
-      "instruction": "0x141f54de4",
-      "preview": "KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVar$ KwGraftX | SVarCompar",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8f91",
-      "instruction": "0x141f54ef2",
-      "preview": "Mode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVar$ KwGraftX | SVarCompare$ GE1Mo",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a43",
-      "instruction": "0x141f552df",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8f58",
-      "instruction": "0x141f55508",
-      "preview": "KwBackupSubTrigNotTributeXCount$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | Option",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a43",
-      "instruction": "0x141f55540",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8f71",
-      "instruction": "0x141f55825",
-      "preview": "XCount$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVa",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6740",
-      "instruction": "0x141f5585c",
-      "preview": "Size",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6750",
-      "instruction": "0x141f55864",
-      "preview": "Count$RememberedCARDNAME count as ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca6d00",
-      "instruction": "0x141f55962",
-      "preview": ",Variant:UniversesWithin:FlavorName:\n",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a29",
-      "instruction": "0x141f55a1a",
-      "preview": "tionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a1c",
-      "instruction": "0x141f55a25",
-      "preview": " Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a0c",
-      "instruction": "0x141f55a30",
-      "preview": "onditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ Chang",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca89fc",
-      "instruction": "0x141f55a3b",
-      "preview": "$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChamp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca89ec",
-      "instruction": "0x141f55a46",
-      "preview": "ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca89dc",
-      "instruction": "0x141f55a51",
-      "preview": "DB$ Sacrifice | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a39",
-      "instruction": "0x141f55a5d",
-      "preview": "KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Car",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8a43",
-      "instruction": "0x141f55ab2",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ca8a96",
-      "instruction": "0x141f55c45",
-      "preview": "earRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAb",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "earRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAb"
     },
     {
+      "instruction": "0x141f5485e",
       "dataVa": "0x142ca8a86",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Bat"
+    },
+    {
+      "instruction": "0x141f548f8",
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
+    },
+    {
+      "instruction": "0x141f54b1e",
+      "dataVa": "0x142ca8e27",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ Draw"
+    },
+    {
+      "instruction": "0x141f54dca",
+      "dataVa": "0x142ca8f72",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVar"
+    },
+    {
+      "instruction": "0x141f54de4",
+      "dataVa": "0x142ca8f89",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVar$ KwGraftX | SVarCompar"
+    },
+    {
+      "instruction": "0x141f54ef2",
+      "dataVa": "0x142ca8f91",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVar$ KwGraftX | SVarCompare$ GE1Mo"
+    },
+    {
+      "instruction": "0x141f552df",
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
+    },
+    {
+      "instruction": "0x141f55508",
+      "dataVa": "0x142ca8f58",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwBackupSubTrigNotTributeXCount$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | Option"
+    },
+    {
+      "instruction": "0x141f55540",
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
+    },
+    {
+      "instruction": "0x141f55825",
+      "dataVa": "0x142ca8f71",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "XCount$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ You | CheckSVa"
+    },
+    {
+      "instruction": "0x141f5585c",
+      "dataVa": "0x142ca6740",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Size"
+    },
+    {
+      "instruction": "0x141f55864",
+      "dataVa": "0x142ca6750",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Count$RememberedCARDNAME count as "
+    },
+    {
+      "instruction": "0x141f55962",
+      "dataVa": "0x142ca6d00",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ",Variant:UniversesWithin:FlavorName:\n"
+    },
+    {
+      "instruction": "0x141f55a1a",
+      "dataVa": "0x142ca8a29",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "tionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield "
+    },
+    {
+      "instruction": "0x141f55a25",
+      "dataVa": "0x142ca8a1c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$"
+    },
+    {
+      "instruction": "0x141f55a30",
+      "dataVa": "0x142ca8a0c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "onditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ Chang"
+    },
+    {
+      "instruction": "0x141f55a3b",
+      "dataVa": "0x142ca89fc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChamp"
+    },
+    {
+      "instruction": "0x141f55a46",
+      "dataVa": "0x142ca89ec",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembe"
+    },
+    {
+      "instruction": "0x141f55a51",
+      "dataVa": "0x142ca89dc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ Sacrifice | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanu"
+    },
+    {
+      "instruction": "0x141f55a5d",
+      "dataVa": "0x142ca8a39",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwChampSacMode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Car"
+    },
+    {
+      "instruction": "0x141f55ab2",
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
+    },
+    {
+      "instruction": "0x141f55c45",
+      "dataVa": "0x142ca8a96",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "earRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAb"
+    },
+    {
       "instruction": "0x141f55c50",
-      "preview": "DB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Bat",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8a86",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Bat"
     },
     {
-      "dataVa": "0x142ca8aa9",
       "instruction": "0x141f55c63",
-      "preview": "KwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ KwChampClean",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8aa9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ KwChampClean"
     },
     {
-      "dataVa": "0x142ca8ab5",
       "instruction": "0x141f55cc3",
-      "preview": "Mode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ KwChampClean!DB$ Dig | D",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8ab5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ KwChampClean!DB$ Dig | D"
     },
     {
-      "dataVa": "0x142ca88a2",
       "instruction": "0x141f55dc9",
-      "preview": "Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ TrueDB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Defined$ TriggeredPlayerHDB$ Cha",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca88a2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ TrueDB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Defined$ TriggeredPlayerHDB$ Cha"
     },
     {
-      "dataVa": "0x142ca8a43",
       "instruction": "0x141f561a0",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
     },
     {
-      "dataVa": "0x142ca8cbf",
       "instruction": "0x141f56327",
-      "preview": "KwReflectCopyDB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ KwReflectCopyr_2_2_rebelc_1_1_herob_0_0_phyrexian_germ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8cbf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwReflectCopyDB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ KwReflectCopyr_2_2_rebelc_1_1_herob_0_0_phyrexian_germ"
     },
     {
-      "dataVa": "0x142ca8ccc",
       "instruction": "0x141f5634c",
-      "preview": "DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ KwReflectCopyr_2_2_rebelc_1_1_herob_0_0_phyrexian_germ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8ccc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ KwReflectCopyr_2_2_rebelc_1_1_herob_0_0_phyrexian_germ"
     },
     {
-      "dataVa": "0x142ca8a43",
       "instruction": "0x141f5636a",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca90bf",
-      "instruction": "0x141f564e5",
-      "preview": "ardCounters.P1P1KwModularXDB$ PutCounter | ValidTgts$ Artifact.Creature | CounterType$ P1P1 | CounterNum$ KwModularXPDB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidT",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca90b0",
-      "instruction": "0x141f564f0",
-      "preview": "TriggeredCard$CardCounters.P1P1KwModularXDB$ PutCounter | ValidTgts$ Artifact.Creature | CounterType$ P1P1 | CounterNum$ KwModularXPDB$ ChangeZone | Origin$ Graveyard | Destination",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca90cf",
-      "instruction": "0x141f564fc",
-      "preview": "KwModularXDB$ PutCounter | ValidTgts$ Artifact.Creature | CounterType$ P1P1 | CounterNum$ KwModularXPDB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Spirit.cmcL",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ca8f63",
-      "instruction": "0x141f56701",
-      "preview": "TrigNotTributeXCount$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
+    },
+    {
+      "instruction": "0x141f564e5",
+      "dataVa": "0x142ca90bf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ardCounters.P1P1KwModularXDB$ PutCounter | ValidTgts$ Artifact.Creature | CounterType$ P1P1 | CounterNum$ KwModularXPDB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidT"
+    },
+    {
+      "instruction": "0x141f564f0",
+      "dataVa": "0x142ca90b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredCard$CardCounters.P1P1KwModularXDB$ PutCounter | ValidTgts$ Artifact.Creature | CounterType$ P1P1 | CounterNum$ KwModularXPDB$ ChangeZone | Origin$ Graveyard | Destination"
+    },
+    {
+      "instruction": "0x141f564fc",
+      "dataVa": "0x142ca90cf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "KwModularXDB$ PutCounter | ValidTgts$ Artifact.Creature | CounterType$ P1P1 | CounterNum$ KwModularXPDB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Spirit.cmcL"
+    },
+    {
+      "instruction": "0x141f56701",
+      "dataVa": "0x142ca8f63",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TrigNotTributeXCount$CardCounters.P1P1KwGraftXMode$ ChangesZone | ValidCard$ Creature.Other | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | OptionalDecider$ "
+    },
+    {
       "instruction": "0x141f5673d",
-      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8a43",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.SelfDB$ Cleanup | ClearRemembered$ TrueKwChampCleanMode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.SelfDB$ "
     },
     {
-      "dataVa": "0x142ca8850",
       "instruction": "0x141f56b4b",
-      "preview": "Mode$ Attacks | ValidCard$ Card.Self",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8850",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Mode$ Attacks | ValidCard$ Card.Self"
     },
     {
-      "dataVa": "0x142ca8840",
       "instruction": "0x141f56e08",
-      "preview": "Creature.OppCtrlMode$ Attacks | ValidCard$ Card.Self",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ca8840",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Creature.OppCtrlMode$ Attacks | ValidCard$ Card.Self"
     }
   ],
   "pseudocode": "functions/0x141f53e00.c",

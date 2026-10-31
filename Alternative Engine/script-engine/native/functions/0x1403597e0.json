@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0230945
+  },
   "assembly": "functions/0x1403597e0.asm",
   "assemblySha256": "1b1407decdf38062008dc169aabcbfadba5cd4bb3074b8ef733ddfa1e2592dc5",
   "literalReferences": [
     {
-      "dataVa": "0x1427970d8",
       "instruction": "0x140359831",
-      "preview": "建牌面C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427970d8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "建牌面C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
     },
     {
-      "dataVa": "0x142796ba8",
       "instruction": "0x14035997c",
-      "preview": "XkyB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142796ba8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "XkyB"
     }
   ],
   "pseudocode": "functions/0x1403597e0.c",

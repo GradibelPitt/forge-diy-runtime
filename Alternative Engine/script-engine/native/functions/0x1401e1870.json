@@ -7,32 +7,37 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0304238
+  },
   "assembly": "functions/0x1401e1870.asm",
   "assemblySha256": "efc0c5c9e7c3c4bf2580f22fdc00804de6736f4b18603ba00ce01f0d7a218dbe",
   "literalReferences": [
     {
-      "dataVa": "0x142780238",
       "instruction": "0x1401e1985",
-      "preview": "进战场时上面有一个 +1/+1 指示物Enters with a +1/+1 counter获得敏捷Gains haste",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142780238",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "进战场时上面有一个 +1/+1 指示物Enters with a +1/+1 counter获得敏捷Gains haste"
     },
     {
-      "dataVa": "0x142780263",
       "instruction": "0x1401e198c",
-      "preview": "Enters with a +1/+1 counter获得敏捷Gains haste",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142780263",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Enters with a +1/+1 counter获得敏捷Gains haste"
     },
     {
-      "dataVa": "0x14278027e",
       "instruction": "0x1401e19d5",
-      "preview": "获得敏捷Gains haste",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278027e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "获得敏捷Gains haste"
     },
     {
-      "dataVa": "0x14278028a",
       "instruction": "0x1401e19dc",
-      "preview": "Gains haste",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14278028a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Gains haste"
     }
   ],
   "pseudocode": "functions/0x1401e1870.c",

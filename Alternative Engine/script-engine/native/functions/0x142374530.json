@@ -7,92 +7,98 @@
     "crates/mtg-engine/src/card/seat.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3573317,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142374530.asm",
   "assemblySha256": "95b577ca1914f64cd90b4b2d3a54f763689f68c0098362371d09bb3c49d2d194",
   "literalReferences": [
     {
-      "dataVa": "0x142ce51b0",
       "instruction": "0x142374682",
-      "preview": "CountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlembe",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce51b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CountPropertyYouPlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlembe"
     },
     {
-      "dataVa": "0x142ce51c0",
       "instruction": "0x14237468a",
-      "preview": "PlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTarg",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce51c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlayerCountPropewalkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTarg"
     },
     {
-      "dataVa": "0x142ce51d0",
       "instruction": "0x1423746bf",
-      "preview": "walkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce51d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "walkedToThisTurnPlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl"
     },
     {
-      "dataVa": "0x142ce51e0",
       "instruction": "0x1423746c7",
-      "preview": "PlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce51e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlaneswalkedToThorsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl"
     },
     {
-      "dataVa": "0x142cd1dd0",
       "instruction": "0x142374768",
-      "preview": "DungeonsCompleteTriggeredDevoureValid Card.namedurn ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd1dd0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DungeonsCompleteTriggeredDevoureValid Card.namedurn "
     },
     {
-      "dataVa": "0x142cc84a0",
       "instruction": "0x1423747ad",
-      "preview": "DifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc84a0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DifferentCardNamDifferentCardPowCastTotalManaSpeCardNumNotedTypeDivideEvenlyDowntCountersRemovedCostCountersRemoUntilEndOfCombatTargetedOrControing "
     },
     {
-      "dataVa": "0x142ceac02",
       "instruction": "0x1423747dd",
-      "preview": "TriggeredPlayersOpponentVotedSameTriggeredPlayersOpponentVotedDiffC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\seat.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceac02",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredPlayersOpponentVotedSameTriggeredPlayersOpponentVotedDiffC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\seat.rs"
     },
     {
-      "dataVa": "0x142ceac23",
       "instruction": "0x1423747fc",
-      "preview": "TriggeredPlayersOpponentVotedDiffC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\seat.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceac23",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggeredPlayersOpponentVotedDiffC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\card\\seat.rs"
     },
     {
-      "dataVa": "0x142cea82e",
       "instruction": "0x1423748cc",
-      "preview": "YouValidCardManaAmountEffectOnlyValidTokenValidPlayerValidCounterTypeNotFirstCardInDrawStepPhase",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cea82e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "YouValidCardManaAmountEffectOnlyValidTokenValidPlayerValidCounterTypeNotFirstCardInDrawStepPhase"
     },
     {
-      "dataVa": "0x142cd2520",
       "instruction": "0x142374acc",
-      "preview": "tFromCommandZoneCommanderCastFroReceivedThisTurnExcessDamageReceTotalDamageReceigeDoneByThisTurnTotalDamageDoneBCardTypesPermaneDifferentColorPair",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2520",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "tFromCommandZoneCommanderCastFroReceivedThisTurnExcessDamageReceTotalDamageReceigeDoneByThisTurnTotalDamageDoneBCardTypesPermaneDifferentColorPair"
     },
     {
-      "dataVa": "0x142cd2530",
       "instruction": "0x142374ad4",
-      "preview": "CommanderCastFroReceivedThisTurnExcessDamageReceTotalDamageReceigeDoneByThisTurnTotalDamageDoneBCardTypesPermaneDifferentColorPair",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd2530",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CommanderCastFroReceivedThisTurnExcessDamageReceTotalDamageReceigeDoneByThisTurnTotalDamageDoneBCardTypesPermaneDifferentColorPair"
     },
     {
-      "dataVa": "0x142ceacb6",
       "instruction": "0x142374b22",
-      "preview": "TotalCommanderCastFromCommandZoneYourSpeedInitiativeHighestSpeedMonarchStartingPlayerMaxSpeedEmblemIsCommanderTargetedPlayerCtrlActivePlayerCtrlDefenderCtrlEnchantedPlayerCtrlEncha",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceacb6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TotalCommanderCastFromCommandZoneYourSpeedInitiativeHighestSpeedMonarchStartingPlayerMaxSpeedEmblemIsCommanderTargetedPlayerCtrlActivePlayerCtrlDefenderCtrlEnchantedPlayerCtrlEncha"
     },
     {
-      "dataVa": "0x142ce51f0",
       "instruction": "0x142374ba9",
-      "preview": "orsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce51f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "orsColorIdentityColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl"
     },
     {
-      "dataVa": "0x142ce5200",
       "instruction": "0x142374bb1",
-      "preview": "ColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5200",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ColorsColorIdentTargetedPlayerOwedControllerCtrlendingPlayerCtrlDefendingPlayerChantedPlayerCtrlemberedPlayerOwnTargetedPlayerCtrl"
     }
   ],
   "pseudocode": "functions/0x142374530.c",

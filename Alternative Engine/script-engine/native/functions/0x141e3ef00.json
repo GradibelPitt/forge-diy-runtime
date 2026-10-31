@@ -10,14 +10,19 @@
     "crates/mtg-meter/src/lib.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 3.6113606
+  },
   "assembly": "functions/0x141e3ef00.asm",
   "assemblySha256": "6cb3ad7cd265be7b6d6b693ffdb6fb801a5d8f5129765110760c643546f3d922",
   "literalReferences": [
     {
-      "dataVa": "0x142c9a420",
       "instruction": "0x141e3f6c3",
-      "preview": "付费规划·最优C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\pay_value.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9a420",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "付费规划·最优C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\casting\\pay_value.rs"
     }
   ],
   "pseudocode": "functions/0x141e3ef00.c",

@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0036843,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142298d90.asm",
   "assemblySha256": "cf85f926ef52e8fb1c63a2b5aabad85cb7887de9c4cf9506a64a97313a3ede65",
   "literalReferences": [
     {
-      "dataVa": "0x142cdcd07",
       "instruction": "0x142298db1",
-      "preview": "er 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethalDamageByPower 缺 Affected",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcd07",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "er 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethalDamageByPower 缺 Affected"
     },
     {
-      "dataVa": "0x142cdccf8",
       "instruction": "0x142298dbc",
-      "preview": "CanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethalDamageByPower 缺 Affected",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdccf8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CanAttackDefender 缺 ValidCardCantBlockBy 缺 ValidBlockerChangeColorWordsTo 缺 AffectedPlotZone 缺 ValidCard牌库里的谋划缺 AffectedLethalDamageByPower 缺 Affected"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142298d90.c",
+  "pseudocodeSha256": "1e7abea0265d8bf607099e190185b1509c0c64182b7044e5dd4c915e124a4b03",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

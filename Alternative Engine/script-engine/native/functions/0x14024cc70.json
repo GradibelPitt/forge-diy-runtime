@@ -7,20 +7,25 @@
     "src/trigger_rules.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0209426
+  },
   "assembly": "functions/0x14024cc70.asm",
   "assemblySha256": "46d94a5d2312499494f7bc21d417bf6fa6d45b1e2913f2cf3f12c72a2b51c801",
   "literalReferences": [
     {
-      "dataVa": "0x142785048",
       "instruction": "0x14024cfac",
-      "preview": "/PxB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785048",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "/PxB"
     },
     {
-      "dataVa": "0x142785c40",
       "instruction": "0x14024cfb8",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142785c40",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     }
   ],
   "pseudocode": "functions/0x14024cc70.c",

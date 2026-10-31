@@ -9,26 +9,31 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2713315
+  },
   "assembly": "functions/0x141ddb990.asm",
   "assemblySha256": "5222908554cd5ffaa7e688436033903a69df7cb87f29541cc89dca694ea1f316",
   "literalReferences": [
     {
-      "dataVa": "0x142c9adc1",
       "instruction": "0x141ddc2a0",
-      "preview": "目标不合法（总值、共同类别……）要选至少一个旗手为目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9adc1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "目标不合法（总值、共同类别……）要选至少一个旗手为目标"
     },
     {
-      "dataVa": "0x142c9ada0",
       "instruction": "0x141ddc358",
-      "preview": "目标不合法（附加限制）目标不合法（总值、共同类别……）要选至少一个旗手为目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9ada0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "目标不合法（附加限制）目标不合法（总值、共同类别……）要选至少一个旗手为目标"
     },
     {
-      "dataVa": "0x142c9adf1",
       "instruction": "0x141ddcafe",
-      "preview": "要选至少一个旗手为目标",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9adf1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "要选至少一个旗手为目标"
     }
   ],
   "pseudocode": "functions/0x141ddb990.c",

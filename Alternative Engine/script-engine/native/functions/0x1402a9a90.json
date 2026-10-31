@@ -7,194 +7,200 @@
     "src/atrec.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 1402a9a90: process: timeout\n",
+    "seconds": 12.0105291,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1402a9a90.asm",
   "assemblySha256": "c940e87dc4ff12151cc9a02c61b169ef840a1b876c9688e20c08bd1c5f1f4d49",
   "literalReferences": [
     {
-      "dataVa": "0x142787872",
       "instruction": "0x1402a9aea",
-      "preview": "ksrc\\atrec.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787872",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ksrc\\atrec.rs"
     },
     {
-      "dataVa": "0x142788325",
       "instruction": "0x1402a9b51",
-      "preview": "engineARCANE_ZH_DIR中文牌名表目录 zhthe Chinese card name folder zhARCANE_AI_MEMORY_DIRARCANE_ARCHENEMY_SIDEffaSeatsresumeJournalplayerNameallyAiDeckopponentAiDeck2opponentA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788325",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "engineARCANE_ZH_DIR中文牌名表目录 zhthe Chinese card name folder zhARCANE_AI_MEMORY_DIRARCANE_ARCHENEMY_SIDEffaSeatsresumeJournalplayerNameallyAiDeckopponentAiDeck2opponentA"
     },
     {
-      "dataVa": "0x142788ca8",
       "instruction": "0x1402a9bd8",
-      "preview": "不是原生引擎录的Not recorded by the native engineObjectId(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788ca8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "不是原生引擎录的Not recorded by the native engineObjectId("
     },
     {
-      "dataVa": "0x142788cc0",
       "instruction": "0x1402a9bdf",
-      "preview": "Not recorded by the native engineObjectId(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788cc0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Not recorded by the native engineObjectId("
     },
     {
-      "dataVa": "0x142788a59",
       "instruction": "0x1402a9c27",
-      "preview": "Missing file headerdecks没录开局命令（旧版录的）The start command wasn't recorded (recorded by an older version)boardSetup先锋玩法开局另换化身，转不了Vang",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788a59",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Missing file headerdecks没录开局命令（旧版录的）The start command wasn't recorded (recorded by an older version)boardSetup先锋玩法开局另换化身，转不了Vang"
     },
     {
-      "dataVa": "0x142788a6c",
       "instruction": "0x1402a9c6b",
-      "preview": "decks没录开局命令（旧版录的）The start command wasn't recorded (recorded by an older version)boardSetup先锋玩法开局另换化身，转不了Vanguard games swap ava",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788a6c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "decks没录开局命令（旧版录的）The start command wasn't recorded (recorded by an older version)boardSetup先锋玩法开局另换化身，转不了Vanguard games swap ava"
     },
     {
-      "dataVa": "0x142787881",
       "instruction": "0x1402a9d44",
-      "preview": "typeseatlist",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787881",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "typeseatlist"
     },
     {
-      "dataVa": "0x142787880",
       "instruction": "0x1402a9d94",
-      "preview": "mtypeseatlist",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142787880",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mtypeseatlist"
     },
     {
-      "dataVa": "0x142788c72",
       "instruction": "0x1402a9e31",
-      "preview": "startopaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c72",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "startopaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788c77",
       "instruction": "0x1402a9e86",
-      "preview": "opaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c77",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "opaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788c7d",
       "instruction": "0x1402a9eb2",
-      "preview": "truncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c7d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "truncateseqentry"
     },
     {
-      "dataVa": "0x142788c85",
       "instruction": "0x1402a9eea",
-      "preview": "seqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c85",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "seqentry"
     },
     {
-      "dataVa": "0x142788c88",
       "instruction": "0x1402a9f22",
-      "preview": "entry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142788c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "entry"
+    },
+    {
       "instruction": "0x1402aa0c5",
-      "preview": "entry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "entry"
     },
     {
-      "dataVa": "0x142788a71",
       "instruction": "0x1402aa223",
-      "preview": "没录开局命令（旧版录的）The start command wasn't recorded (recorded by an older version)boardSetup先锋玩法开局另换化身，转不了Vanguard games swap avatars ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788a71",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "没录开局命令（旧版录的）The start command wasn't recorded (recorded by an older version)boardSetup先锋玩法开局另换化身，转不了Vanguard games swap avatars "
     },
     {
-      "dataVa": "0x142788ad5",
       "instruction": "0x1402aa272",
-      "preview": "boardSetup先锋玩法开局另换化身，转不了Vanguard games swap avatars at the start and can't be converted认不出赛制Unknown format魔王／莫秘维开局另有安排",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788ad5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "boardSetup先锋玩法开局另换化身，转不了Vanguard games swap avatars at the start and can't be converted认不出赛制Unknown format魔王／莫秘维开局另有安排"
     },
     {
-      "dataVa": "0x142788c20",
       "instruction": "0x1402aa379",
-      "preview": "有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c20",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788c41",
       "instruction": "0x1402aa380",
-      "preview": "Contains developer actions that can't be recordedstartopaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c41",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Contains developer actions that can't be recordedstartopaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788bf4",
       "instruction": "0x1402aa4ae",
-      "preview": "动作日志有缺口The action log has gaps有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788bf4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "动作日志有缺口The action log has gaps有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788c09",
       "instruction": "0x1402aa4b5",
-      "preview": "The action log has gaps有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c09",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "The action log has gaps有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788059",
       "instruction": "0x1402aa51e",
-      "preview": "localMode开局：载入中文表与 AIseed开局：续局重放",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788059",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "localMode开局：载入中文表与 AIseed开局：续局重放"
     },
     {
-      "dataVa": "0x1427883f1",
       "instruction": "0x1402aa54d",
-      "preview": "vanguardvanguardAvatararchenemySideschemeSourceplanechaseplanarPhenomenadevModesmoothOpeningHandsopponentNamestartingLivesstoryGoalssandboxCardsARCANE_AI_TIERARCANE_RECORDARCANE_VA",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427883f1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "vanguardvanguardAvatararchenemySideschemeSourceplanechaseplanarPhenomenadevModesmoothOpeningHandsopponentNamestartingLivesstoryGoalssandboxCardsARCANE_AI_TIERARCANE_RECORDARCANE_VA"
     },
     {
-      "dataVa": "0x142788b09",
       "instruction": "0x1402aa5d9",
-      "preview": "Vanguard games swap avatars at the start and can't be converted认不出赛制Unknown format魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special set",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788b09",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Vanguard games swap avatars at the start and can't be converted认不出赛制Unknown format魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special set"
     },
     {
-      "dataVa": "0x142788040",
       "instruction": "0x1402aa634",
-      "preview": "gameTypematchStructurebo3localMode开局：载入中文表与 AIseed开局：续局重放",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788040",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "gameTypematchStructurebo3localMode开局：载入中文表与 AIseed开局：续局重放"
     },
     {
-      "dataVa": "0x142788b48",
       "instruction": "0x1402aa703",
-      "preview": "认不出赛制Unknown format魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special setups and can't be converted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788b48",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "认不出赛制Unknown format魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special setups and can't be converted"
     },
     {
-      "dataVa": "0x142788b57",
       "instruction": "0x1402aa70a",
-      "preview": "Unknown format魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special setups and can't be converted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788b57",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Unknown format魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special setups and can't be converted"
     },
     {
-      "dataVa": "0x142788b65",
       "instruction": "0x1402aa780",
-      "preview": "魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special setups and can't be converted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788b65",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "魔王／莫秘维开局另有安排，转不了Archenemy / Momir games have special setups and can't be converted"
     },
     {
-      "dataVa": "0x142788b95",
       "instruction": "0x1402aa787",
-      "preview": "Archenemy / Momir games have special setups and can't be converted",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788b95",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Archenemy / Momir games have special setups and can't be converted"
     },
     {
-      "dataVa": "0x142788048",
       "instruction": "0x1402aa92b",
-      "preview": "matchStructurebo3localMode开局：载入中文表与 AIseed开局：续局重放",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788048",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "matchStructurebo3localMode开局：载入中文表与 AIseed开局：续局重放"
     },
     {
-      "dataVa": "0x142788bf0",
       "instruction": "0x1402aaee7",
-      "preview": "mode动作日志有缺口The action log has gaps有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788bf0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mode动作日志有缺口The action log has gaps有记不下来的开发者动作Contains developer actions that can't be recordedstartopaquetruncateseqentry"
     },
     {
-      "dataVa": "0x142788c90",
       "instruction": "0x1402ab1d1",
-      "preview": "sxxB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142788c90",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "sxxB"
     }
   ],
   "pseudocodeStatus": "timeout"

@@ -7,38 +7,43 @@
     "crates/mtg-engine/src/casting/spend_goals.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2973604
+  },
   "assembly": "functions/0x142385930.asm",
   "assemblySha256": "3ac745938ac6dbe118d360bf6fd3422c5fa3689591cf41cb1d6b62af55a1f3cb",
   "literalReferences": [
     {
-      "dataVa": "0x142ceb5ca",
       "instruction": "0x142385968",
-      "preview": "AdamantAdamant$ConditionManaSpent$ ManaSpent$$ConvergeAny",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb5ca",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AdamantAdamant$ConditionManaSpent$ ManaSpent$$ConvergeAny"
     },
     {
-      "dataVa": "0x142ceb5d1",
       "instruction": "0x142385e61",
-      "preview": "Adamant$ConditionManaSpent$ ManaSpent$$ConvergeAny",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb5d1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Adamant$ConditionManaSpent$ ManaSpent$$ConvergeAny"
     },
     {
-      "dataVa": "0x142ceb5d9",
       "instruction": "0x142386040",
-      "preview": "ConditionManaSpent$ ManaSpent$$ConvergeAny",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb5d9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionManaSpent$ ManaSpent$$ConvergeAny"
     },
     {
-      "dataVa": "0x142ceb5ec",
       "instruction": "0x142386053",
-      "preview": " ManaSpent$$ConvergeAny",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb5ec",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": " ManaSpent$$ConvergeAny"
     },
     {
-      "dataVa": "0x142ceb5f7",
       "instruction": "0x142386648",
-      "preview": "$ConvergeAny",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ceb5f7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "$ConvergeAny"
     }
   ],
   "pseudocode": "functions/0x142385930.c",

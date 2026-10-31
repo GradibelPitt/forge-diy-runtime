@@ -1,4 +1,5 @@
 {
+  "functionDirectory": "native/functions",
   "functions": [
     "0x140001ce0",
     "0x1400022c0",
@@ -42,7 +43,6 @@
     "0x1405aa250",
     "0x14061c920"
   ],
-  "functionDirectory": "native/functions",
-  "sourcePathHint": "src/stable.rs",
-  "association": "Observed source/panic references; not original source ownership"
+  "association": "Observed source/panic references; not original source ownership",
+  "sourcePathHint": "src/stable.rs"
 }

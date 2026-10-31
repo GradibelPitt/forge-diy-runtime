@@ -1,0 +1,35 @@
+/* Decompiled original binary; inferred C types, NOT original Rust source. */
+
+/* WARNING: Removing unreachable block (ram,0x00014271e774) */
+
+void FUN_140d1bfd0(undefined8 *param_1)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  longlong lVar5;
+  longlong lStack_40;
+  
+  lVar1 = param_1[1];
+  lVar2 = param_1[3];
+  lStack_40 = 0;
+  while (lStack_40 != ((ulonglong)(lVar2 - lVar1) >> 3) * 0x2c3f35ba781948b1) {
+    lVar5 = lStack_40 * 0x288 + lVar1;
+    lStack_40 = lStack_40 + 1;
+    FUN_140834f50();
+    FUN_140cef600(lVar5 + 0x260);
+    FUN_140cfa020(lVar5 + 0x80);
+  }
+  if (param_1[2] == 0) {
+    return;
+  }
+  uVar3 = *param_1;
+  uVar4 = GetProcessHeap(uVar3,param_1[2] * 0x288);
+                    /* WARNING: Could not recover jumptable at 0x00014271e78c. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  HeapFree(uVar4,0,uVar3);
+  return;
+}
+

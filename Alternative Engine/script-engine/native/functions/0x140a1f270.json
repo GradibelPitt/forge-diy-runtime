@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.08231
+  },
   "assembly": "functions/0x140a1f270.asm",
   "assemblySha256": "de03b52db4844f76091d6d3424644dd6cc6f449699ba9f07bf978724552acadf",
   "literalReferences": [
     {
-      "dataVa": "0x1427f59c0",
       "instruction": "0x140a1f8a8",
-      "preview": "普通·献祭推演",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f59c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "普通·献祭推演"
     },
     {
-      "dataVa": "0x1427f5a30",
       "instruction": "0x140a1febe",
-      "preview": "普通·献祭推演让过普通·献祭来源要死吗",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427f5a30",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "普通·献祭推演让过普通·献祭来源要死吗"
     }
   ],
   "pseudocode": "functions/0x140a1f270.c",

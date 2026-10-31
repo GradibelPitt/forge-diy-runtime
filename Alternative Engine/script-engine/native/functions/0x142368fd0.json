@@ -7,20 +7,25 @@
     "crates/mtg-engine/src/faces.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0056759
+  },
   "assembly": "functions/0x142368fd0.asm",
   "assemblySha256": "a3846bcccc80d20e60225bf2d28b3dd1cb7e8089822718b86c89fbffebda1431",
   "literalReferences": [
     {
-      "dataVa": "0x142ce5ff0",
       "instruction": "0x142369003",
-      "preview": "Name:\nManaCost:no cost\nTypes:Creature\nPT:2/2\nK:Ward:2",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5ff0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Name:\nManaCost:no cost\nTypes:Creature\nPT:2/2\nK:Ward:2"
     },
     {
-      "dataVa": "0x142ce5f7c",
       "instruction": "0x1423690bb",
-      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce5f7c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "固定写法C:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\faces.rs"
     }
   ],
   "pseudocode": "functions/0x142368fd0.c",

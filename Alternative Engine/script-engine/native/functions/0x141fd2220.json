@@ -5,69 +5,79 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0756768,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fd2220.asm",
   "assemblySha256": "f17a49b1e75314601d55fe3a93224a26e23ce0fc93db5c5918f6ba64149668be",
   "literalReferences": [
     {
-      "dataVa": "0x142cba8aa",
       "instruction": "0x141fd232f",
-      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba42f",
-      "instruction": "0x141fd242f",
-      "preview": "ValidCardValidObjectDBChooseCounterValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8d5",
-      "instruction": "0x141fd24fa",
-      "preview": "Cost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba92c",
-      "instruction": "0x141fd2520",
-      "preview": "EffectZoneBattlefieldStack",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cba8f2",
-      "instruction": "0x141fd25be",
-      "preview": "Activator减费却写了费用ForEachShard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cba8aa",
-      "instruction": "0x141fd2631",
-      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost"
     },
     {
+      "instruction": "0x141fd242f",
       "dataVa": "0x142cba42f",
-      "instruction": "0x141fd2644",
-      "preview": "ValidCardValidObjectDBChooseCounterValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardValidObjectDBChooseCounterValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter "
     },
     {
+      "instruction": "0x141fd24fa",
       "dataVa": "0x142cba8d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cost"
+    },
+    {
+      "instruction": "0x141fd2520",
+      "dataVa": "0x142cba92c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "EffectZoneBattlefieldStack"
+    },
+    {
+      "instruction": "0x141fd25be",
+      "dataVa": "0x142cba8f2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activator减费却写了费用ForEachShard"
+    },
+    {
+      "instruction": "0x141fd2631",
+      "dataVa": "0x142cba8aa",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ModeActivated.!ManaAbilityAbilityReducePartCost"
+    },
+    {
+      "instruction": "0x141fd2644",
+      "dataVa": "0x142cba42f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ValidCardValidObjectDBChooseCounterValidSourceValidCounterTypeAmountStaticAfterReplacementExecute替代 ReplaceCounter替代 AddCounter替代效果里要做选择替代 AddCounter "
+    },
+    {
       "instruction": "0x141fd26d8",
-      "preview": "Cost",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cba8d5",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Cost"
     },
     {
-      "dataVa": "0x142cbab99",
       "instruction": "0x141fd2812",
-      "preview": "附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbab99",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "附加费用里有横置符号AddsCounters"
     },
     {
-      "dataVa": "0x142cbab8d",
       "instruction": "0x141fd28ba",
-      "preview": "附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbab8d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "附加费用附加费用里有横置符号AddsCounters"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fd2220.c",
+  "pseudocodeSha256": "9db1371f76987079f12097e2b3150815e17edfc5fea16e5285ba20464964011d",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

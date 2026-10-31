@@ -5,33 +5,43 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0279493,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1424db1e0.asm",
   "assemblySha256": "b97be5ca88afead820535821a9fd8cd9b3537840e85309678d3592e588a0cf16",
   "literalReferences": [
     {
-      "dataVa": "0x142ce60c7",
       "instruction": "0x1424db21e",
-      "preview": "PlanarDeckOrigin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142ce60d1",
-      "instruction": "0x1424db225",
-      "preview": "Origin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142ce60c7",
-      "instruction": "0x1424db4d0",
-      "preview": "PlanarDeckOrigin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanarDeckOrigin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard"
     },
     {
+      "instruction": "0x1424db225",
       "dataVa": "0x142ce60d1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Origin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard"
+    },
+    {
+      "instruction": "0x1424db4d0",
+      "dataVa": "0x142ce60c7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PlanarDeckOrigin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard"
+    },
+    {
       "instruction": "0x1424db4fc",
-      "preview": "Origin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142ce60d1",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Origin$ PlanarDeckPeekAmountSubAbilityCount$CommanderCastFromCommandZone/Times.2UntapOtherPlayer 缺 ValidCard"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1424db1e0.c",
+  "pseudocodeSha256": "13244ea80c79d6ff334a162731b754772386d822bbe5c727fb87d7d934cb5f16",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

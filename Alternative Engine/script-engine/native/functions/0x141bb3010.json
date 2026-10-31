@@ -10,14 +10,20 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141bb3010: process: timeout\n",
+    "seconds": 35.2490757,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141bb3010.asm",
   "assemblySha256": "f2e3a7b185795361fac7fa73f1d608f93b972ed6085b4706d34ee109696b6c82",
   "literalReferences": [
     {
-      "dataVa": "0x142c950a8",
       "instruction": "0x141bb760e",
-      "preview": "internal error: entered unreachable code: exec_memo 只管记忆类",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c950a8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable code: exec_memo 只管记忆类"
     }
   ],
   "pseudocodeStatus": "timeout"

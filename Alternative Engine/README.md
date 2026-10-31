@@ -6,7 +6,9 @@
 
 - [当前 DIY Rust 工程](patch-source/Cargo.toml)：当前更新版本优先于早期副本。
 - [原版规则后端目录](script-engine/native/modules/index.json)：汇编、伪代码及地址关联。
+- [关键字对应表](script-engine/catalog/keyword-map.json)：原脚本写法、独立解析、整卡解析示例和候选执行分支。
 - [基本关键字重建 Rust](script-engine/reconstructed-rust/src/lib.rs)：与原二进制对照的有限范围重建。
 - [覆盖率与边界](script-engine/coverage.json)、[验证记录](script-engine/verification/verification.json)。
+- [待核实清单](script-engine/recovery/remaining.json)和[继续反编译的方法](script-engine/recovery/README.md)。
 
 原始 Rust 工程尚未完整恢复；伪代码不是可直接编译的原始 Rust。故事、残局、爬塔专用模块继续排除。共享原始二进制只作字节完整的取证材料。

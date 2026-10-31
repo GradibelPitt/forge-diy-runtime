@@ -5,75 +5,85 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3221038,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1423918a0.asm",
   "assemblySha256": "f9319536bbe5b7d01bab72b1f9976ceae73ea63a640157922b718c215b0b653c",
   "literalReferences": [
     {
-      "dataVa": "0x142cebabd",
       "instruction": "0x142391958",
-      "preview": "ActivationPhasesActivationFirstCombatIsBoastActivatorActivationActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebabd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationPhasesActivationFirstCombatIsBoastActivatorActivationActivationLimitActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebacd",
       "instruction": "0x142391a19",
-      "preview": "ActivationFirstCombatIsBoastActivatorActivationActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebacd",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationFirstCombatIsBoastActivatorActivationActivationLimitActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebae2",
       "instruction": "0x142391af1",
-      "preview": "IsBoastActivatorActivationActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebae2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsBoastActivatorActivationActivationLimitActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebae9",
       "instruction": "0x142391bcb",
-      "preview": "ActivatorActivationActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebae9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivatorActivationActivationLimitActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebaf2",
       "instruction": "0x142391ceb",
-      "preview": "ActivationActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebaf2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationActivationLimitActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebafc",
       "instruction": "0x142392112",
-      "preview": "ActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cebafc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationLimitActivationGameTypes"
+    },
+    {
       "instruction": "0x142392204",
-      "preview": "ActivationLimitActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebafc",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationLimitActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebb0b",
       "instruction": "0x142392333",
-      "preview": "ActivationGameTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebb0b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ActivationGameTypes"
     },
     {
-      "dataVa": "0x142cebb35",
       "instruction": "0x1423925b6",
-      "preview": "GameActivationLimitExhaustPowerUp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebb35",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GameActivationLimitExhaustPowerUp"
     },
     {
-      "dataVa": "0x142cebb48",
       "instruction": "0x142392947",
-      "preview": "ExhaustPowerUp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebb48",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExhaustPowerUp"
     },
     {
-      "dataVa": "0x142cebb4f",
       "instruction": "0x142392a42",
-      "preview": "PowerUp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cebb4f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PowerUp"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1423918a0.c",
+  "pseudocodeSha256": "989b785e3c1cadea98945fa22d98060193012ffa1c3d50a98a975b7f9047afdc",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

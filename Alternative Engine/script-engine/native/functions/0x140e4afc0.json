@@ -9,212 +9,218 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 140e4afc0: process: timeout\n",
+    "seconds": 12.0118551,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x140e4afc0.asm",
   "assemblySha256": "fd4f77875b5c2e50d8ddd0eeb9e77743865e021cf1066fb92eb5df7faf1b463b",
   "literalReferences": [
     {
-      "dataVa": "0x14281fe28",
       "instruction": "0x140e4b763",
-      "preview": "from: Rememberedfrom: Colors([from: Choice {all: Some(who",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281fe28",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "from: Rememberedfrom: Colors([from: Choice {all: Some(who"
     },
     {
-      "dataVa": "0x1428204df",
       "instruction": "0x140e4b871",
-      "preview": "amount: ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428204df",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "amount: "
     },
     {
-      "dataVa": "0x14281fe38",
       "instruction": "0x140e4b98c",
-      "preview": "from: Colors([from: Choice {all: Some(who",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fe46",
-      "instruction": "0x140e4b9ac",
-      "preview": "from: Choice {all: Some(who",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14281fe38",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "from: Colors([from: Choice {all: Some(who"
+    },
+    {
+      "instruction": "0x140e4b9ac",
+      "dataVa": "0x14281fe46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "from: Choice {all: Some(who"
+    },
+    {
       "instruction": "0x140e4b9d9",
-      "preview": "from: Colors([from: Choice {all: Some(who",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281fe38",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "from: Colors([from: Choice {all: Some(who"
     },
     {
-      "dataVa": "0x142820170",
       "instruction": "0x140e4baf2",
-      "preview": "from: Choice { options: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142820170",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "from: Choice { options: ["
     },
     {
-      "dataVa": "0x1428203d0",
       "instruction": "0x140e4bd6b",
-      "preview": "combat: true",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1428203d0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "combat: true"
     },
     {
-      "dataVa": "0x14281fabe",
       "instruction": "0x140e4c70e",
-      "preview": "Color(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281fabe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Color("
     },
     {
-      "dataVa": "0x14281f790",
       "instruction": "0x140e4c7aa",
-      "preview": ", EquipmentAuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\punisher.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fe54",
-      "instruction": "0x140e4ca29",
-      "preview": "all: Some(who",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820481",
-      "instruction": "0x140e4d257",
-      "preview": "magnet: Some(Defined(Itself))",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fca0",
-      "instruction": "0x140e4daf8",
-      "preview": "[You]",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x1427fb3f0",
-      "instruction": "0x140e4db8c",
-      "preview": "MoveUnderYourCon who: Some(Slot(CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820204",
-      "instruction": "0x140e4dcf4",
-      "preview": "destination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820222",
-      "instruction": "0x140e4dd14",
-      "preview": "IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa9a",
-      "instruction": "0x140e4e02f",
-      "preview": "TopOfLibraryto: ExileDefined(Itself)Color(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281faa6",
-      "instruction": "0x140e4e0c3",
-      "preview": "to: ExileDefined(Itself)Color(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f430",
-      "instruction": "0x140e4e215",
-      "preview": "Obj·SacrificeAll",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281faaf",
-      "instruction": "0x140e4e2f4",
-      "preview": "Defined(Itself)Color(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281faaf",
-      "instruction": "0x140e4e4d1",
-      "preview": "Defined(Itself)Color(",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f9e0",
-      "instruction": "0x140e4e660",
-      "preview": "SacrificeAllKeyword·Gatepayer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820140",
-      "instruction": "0x140e4e6e0",
-      "preview": "TriggerRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142820140",
-      "instruction": "0x140e4e82e",
-      "preview": "TriggerRemembered",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f6b0",
-      "instruction": "0x140e4fb16",
-      "preview": "CardManaCostC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f3e0",
-      "instruction": "0x140e50196",
-      "preview": "Stx·IgnoreStatic",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f9f9",
-      "instruction": "0x140e50527",
-      "preview": "payer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281f9f9",
-      "instruction": "0x140e5055c",
-      "preview": "payer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa1b",
-      "instruction": "0x140e50574",
-      "preview": "payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa35",
-      "instruction": "0x140e50590",
-      "preview": "payer: Defined(Opponents)parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa4e",
-      "instruction": "0x140e5063c",
-      "preview": "parts: []x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa57",
-      "instruction": "0x140e50658",
-      "preview": "x: Nonegeneric: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa5e",
-      "instruction": "0x140e5067e",
-      "preview": "generic: colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x14281fa67",
-      "instruction": "0x140e506a3",
-      "preview": "colored: [",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x14281f790",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ", EquipmentAuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\punisher.rs"
+    },
+    {
+      "instruction": "0x140e4ca29",
+      "dataVa": "0x14281fe54",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "all: Some(who"
+    },
+    {
+      "instruction": "0x140e4d257",
+      "dataVa": "0x142820481",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "magnet: Some(Defined(Itself))"
+    },
+    {
+      "instruction": "0x140e4daf8",
+      "dataVa": "0x14281fca0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "[You]"
+    },
+    {
+      "instruction": "0x140e4db8c",
+      "dataVa": "0x1427fb3f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "MoveUnderYourCon who: Some(Slot(CopyPermanent { e(ExileFromStackMore(ExileFromStined(ExiledWith)Defined(ExiledWi/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str"
+    },
+    {
+      "instruction": "0x140e4dcf4",
+      "dataVa": "0x142820204",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "destination: Some([Graveyard])IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)"
+    },
+    {
+      "instruction": "0x140e4dd14",
+      "dataVa": "0x142820222",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "IsTriggerRememberedany_type: true[Convoke]Color(W)Color(U)Color(B)Color(R)Color(G)"
+    },
+    {
+      "instruction": "0x140e4e02f",
+      "dataVa": "0x14281fa9a",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TopOfLibraryto: ExileDefined(Itself)Color("
+    },
+    {
+      "instruction": "0x140e4e0c3",
+      "dataVa": "0x14281faa6",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "to: ExileDefined(Itself)Color("
+    },
+    {
+      "instruction": "0x140e4e215",
+      "dataVa": "0x14281f430",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Obj·SacrificeAll"
+    },
+    {
+      "instruction": "0x140e4e2f4",
+      "dataVa": "0x14281faaf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined(Itself)Color("
+    },
+    {
+      "instruction": "0x140e4e4d1",
+      "dataVa": "0x14281faaf",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Defined(Itself)Color("
+    },
+    {
+      "instruction": "0x140e4e660",
+      "dataVa": "0x14281f9e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SacrificeAllKeyword·Gatepayer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e4e6e0",
+      "dataVa": "0x142820140",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggerRemembered"
+    },
+    {
+      "instruction": "0x140e4e82e",
+      "dataVa": "0x142820140",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TriggerRemembered"
+    },
+    {
+      "instruction": "0x140e4fb16",
+      "dataVa": "0x14281f6b0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CardManaCostC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-engine\\src\\state.rs"
+    },
+    {
+      "instruction": "0x140e50196",
+      "dataVa": "0x14281f3e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Stx·IgnoreStatic"
+    },
+    {
+      "instruction": "0x140e50527",
+      "dataVa": "0x14281f9f9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "payer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e5055c",
+      "dataVa": "0x14281f9f9",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "payer: Defined(TargetedController(payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e50574",
+      "dataVa": "0x14281fa1b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "payer: Defined(EachPlayer)payer: Defined(Opponents)parts: []x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e50590",
+      "dataVa": "0x14281fa35",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "payer: Defined(Opponents)parts: []x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e5063c",
+      "dataVa": "0x14281fa4e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "parts: []x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e50658",
+      "dataVa": "0x14281fa57",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "x: Nonegeneric: colored: ["
+    },
+    {
+      "instruction": "0x140e5067e",
+      "dataVa": "0x14281fa5e",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "generic: colored: ["
+    },
+    {
+      "instruction": "0x140e506a3",
+      "dataVa": "0x14281fa67",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "colored: ["
+    },
+    {
       "instruction": "0x140e507df",
-      "preview": ", EquipmentAuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\punisher.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x14281f790",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": ", EquipmentAuraC:\\00Projects\\万智牌桌面游戏\\代码\\crates\\mtg-ai-normal\\src\\punisher.rs"
     }
   ],
   "pseudocode": "functions/0x140e4afc0.c",

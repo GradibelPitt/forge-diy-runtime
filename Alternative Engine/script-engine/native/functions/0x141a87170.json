@@ -5,81 +5,91 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0453838,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a87170.asm",
   "assemblySha256": "4f31a992cfda45ae39e74beac3a2ad0392dd6fcd2cb1715a272869f9099f8536",
   "literalReferences": [
     {
-      "dataVa": "0x142c87698",
       "instruction": "0x141a8719f",
-      "preview": "CantFizzleTargetUniqueTargetMinTargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameC",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87698",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CantFizzleTargetUniqueTargetMinTargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameC"
     },
     {
-      "dataVa": "0x142c876a2",
       "instruction": "0x141a87262",
-      "preview": "TargetUniqueTargetMinTargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTar",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c876a2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetUniqueTargetMinTargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTar"
     },
     {
-      "dataVa": "0x142c876ae",
       "instruction": "0x141a87399",
-      "preview": "TargetMinTargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDiff",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c876ae",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetMinTargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDiff"
     },
     {
-      "dataVa": "0x142c876b7",
       "instruction": "0x141a873d9",
-      "preview": "TargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentName",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c876b7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetMaxTargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentName"
     },
     {
-      "dataVa": "0x142c876c0",
       "instruction": "0x141a87453",
-      "preview": "TargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsW",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c876c0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsForEachPlayerTargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsW"
     },
     {
-      "dataVa": "0x142c876d4",
       "instruction": "0x141a8746a",
-      "preview": "TargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTyp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c876d4",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithDifferentControllersTargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTyp"
     },
     {
-      "dataVa": "0x142c876f3",
       "instruction": "0x141a87481",
-      "preview": "TargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ C",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c876f3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSameControllerTargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ C"
     },
     {
-      "dataVa": "0x142c8770c",
       "instruction": "0x141a87498",
-      "preview": "TargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddTyp",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8770c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithDifferentCMCTargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddTyp"
     },
     {
-      "dataVa": "0x142c87723",
       "instruction": "0x141a874af",
-      "preview": "TargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature ",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87723",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSharedCardTypeTargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature "
     },
     {
-      "dataVa": "0x142c8773c",
       "instruction": "0x141a874c6",
-      "preview": "TargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8773c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSameCardTypeTargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTy"
     },
     {
-      "dataVa": "0x142c87753",
       "instruction": "0x141a874dd",
-      "preview": "TargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescripti",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c87753",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithDifferentNamesTargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescripti"
     },
     {
-      "dataVa": "0x142c8776c",
       "instruction": "0x141a874f4",
-      "preview": "TargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTrigger",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8776c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "TargetsWithSharedCreatureTypeMode$ Continuous | Affected$ Card.IsRemembered | AddType$ Artifact & Creature & Borg | RemoveCreatureTypes$ TrueSpellDescriptionStackDescriptionTrigger"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a87170.c",
+  "pseudocodeSha256": "660104552cbab45b8bf7717abaf9b895afbdc35ef043b3ceb3dd309213beb4a6",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

@@ -5,57 +5,67 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0693422,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141fd1800.asm",
   "assemblySha256": "0e9d9e133eaf83038fbbf082d579ffc91425c54ee702e987c0a6767b4b0dfbd6",
   "literalReferences": [
     {
-      "dataVa": "0x142cbab3c",
       "instruction": "0x141fd182c",
-      "preview": "CombatManaPersistentManaRestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbab3c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CombatManaPersistentManaRestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
     },
     {
-      "dataVa": "0x142cbab61",
       "instruction": "0x141fd1918",
-      "preview": "Produced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbab61",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Produced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
     },
     {
-      "dataVa": "0x142cbab46",
       "instruction": "0x141fd19e5",
-      "preview": "PersistentManaRestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cbab54",
-      "instruction": "0x141fd1aab",
-      "preview": "RestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cb9c88",
-      "instruction": "0x141fd1d9b",
-      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cbab46",
-      "instruction": "0x141fd1f69",
-      "preview": "PersistentManaRestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PersistentManaRestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
     },
     {
+      "instruction": "0x141fd1aab",
       "dataVa": "0x142cbab54",
-      "instruction": "0x141fd2002",
-      "preview": "RestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
     },
     {
-      "dataVa": "0x142cbab69",
+      "instruction": "0x141fd1d9b",
+      "dataVa": "0x142cb9c88",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "DefinedTopGraveyardChangeZoneAll 缺 ChangeTypeChangeZoneAll 缺 Origin"
+    },
+    {
+      "instruction": "0x141fd1f69",
+      "dataVa": "0x142cbab46",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "PersistentManaRestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
+    },
+    {
+      "instruction": "0x141fd2002",
+      "dataVa": "0x142cbab54",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RestrictValidProduced到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
+    },
+    {
       "instruction": "0x141fd2041",
-      "preview": "到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cbab69",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "到战斗结束不消失的法术力附加费用附加费用里有横置符号AddsCounters"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141fd1800.c",
+  "pseudocodeSha256": "9f9afdcb79bf028589d28a343b5c0eee35ac88aeef88e5909c960f6f020c4e82",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1067392,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141d4eab0.asm",
   "assemblySha256": "d016339686e26695613ce998a6f3e4d20621b8eb5f0d8e42766599124e9a1f05",
   "literalReferences": [
     {
-      "dataVa": "0x142c99930",
       "instruction": "0x141d4ecc7",
-      "preview": "ChangesZoneAttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c99930",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ChangesZoneAttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
     },
     {
-      "dataVa": "0x142c9993b",
       "instruction": "0x141d4ed27",
-      "preview": "AttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9993b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttacksAttackersDeclaredChangesZoneAllCounterAddedAttackersDeclaredOneTarget"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141d4eab0.c",
+  "pseudocodeSha256": "be910cafef248a21c1e1faeefe666c33ab39f4c2e9a1cc0e1c4fd16c62a679e1",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

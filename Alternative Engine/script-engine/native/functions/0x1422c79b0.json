@@ -5,153 +5,163 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 3.9271416,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x1422c79b0.asm",
   "assemblySha256": "b73b8e0dd90053c8acc800c03705996ca9fc44c8a173d0868e677fa72184b59c",
   "literalReferences": [
     {
-      "dataVa": "0x142cdf025",
       "instruction": "0x1422c7a2b",
-      "preview": "SetMaxHandSizeRaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdf033",
-      "instruction": "0x1422c7af6",
-      "preview": "RaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cdf025",
-      "instruction": "0x1422c7bbf",
-      "preview": "SetMaxHandSizeRaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SetMaxHandSizeRaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
     },
     {
+      "instruction": "0x1422c7af6",
       "dataVa": "0x142cdf033",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
+    },
+    {
+      "instruction": "0x1422c7bbf",
+      "dataVa": "0x142cdf025",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "SetMaxHandSizeRaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
+    },
+    {
       "instruction": "0x1422c7ce0",
-      "preview": "RaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf033",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "RaiseMaxHandSizeAdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
     },
     {
-      "dataVa": "0x142cdf043",
       "instruction": "0x1422c7f76",
-      "preview": "AdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf043",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AdjustLandPlaysCanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
     },
     {
-      "dataVa": "0x142cdf052",
       "instruction": "0x1422c81ea",
-      "preview": "CanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
-      "dataVa": "0x142cdf060",
-      "instruction": "0x1422c829e",
-      "preview": "CanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142cdf052",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
+    },
+    {
+      "instruction": "0x1422c829e",
+      "dataVa": "0x142cdf060",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
+    },
+    {
       "instruction": "0x1422c837a",
-      "preview": "CanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf052",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "CanBlockAmountCanBlockAnyGainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
     },
     {
-      "dataVa": "0x142cdf06b",
       "instruction": "0x1422c8762",
-      "preview": "GainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf06b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsAbilitiesOfDefinedGainsAbilitiesOfGainsTriggerAbsOf"
     },
     {
-      "dataVa": "0x142cdf082",
       "instruction": "0x1422c898b",
-      "preview": "GainsAbilitiesOfGainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf082",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsAbilitiesOfGainsTriggerAbsOf"
     },
     {
-      "dataVa": "0x142cdf16f",
       "instruction": "0x1422c89d7",
-      "preview": "GainsAbilitiesOf 写了两种AddHiddenKeywordRemoveKeywordRemoveKeywordsCantHaveKeywordRemoveCardTypesRemoveSubTypesRemoveEnchantmentTypesRemoveCreatureTypesRemoveLandTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf16f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsAbilitiesOf 写了两种AddHiddenKeywordRemoveKeywordRemoveKeywordsCantHaveKeywordRemoveCardTypesRemoveSubTypesRemoveEnchantmentTypesRemoveCreatureTypesRemoveLandTypes"
     },
     {
-      "dataVa": "0x142cdf092",
       "instruction": "0x1422c8a93",
-      "preview": "GainsTriggerAbsOf",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf092",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsTriggerAbsOf"
     },
     {
-      "dataVa": "0x142cdf167",
       "instruction": "0x1422c8b8c",
-      "preview": "AddColorGainsAbilitiesOf 写了两种AddHiddenKeywordRemoveKeywordRemoveKeywordsCantHaveKeywordRemoveCardTypesRemoveSubTypesRemoveEnchantmentTypesRemoveCreatureTypesRemoveLandTypes",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf167",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AddColorGainsAbilitiesOf 写了两种AddHiddenKeywordRemoveKeywordRemoveKeywordsCantHaveKeywordRemoveCardTypesRemoveSubTypesRemoveEnchantmentTypesRemoveCreatureTypesRemoveLandTypes"
     },
     {
-      "dataVa": "0x142cdf0b8",
       "instruction": "0x1422c8cdf",
-      "preview": "GainsAbilitiesLimitPerTurn",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf0b8",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsAbilitiesLimitPerTurn"
     },
     {
-      "dataVa": "0x142cdf0f0",
       "instruction": "0x1422c8dd5",
-      "preview": "GainsAbilitiesOfZonesGainsValidAbilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf0f0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsAbilitiesOfZonesGainsValidAbilities"
     },
     {
-      "dataVa": "0x142cdf105",
       "instruction": "0x1422c90dd",
-      "preview": "GainsValidAbilities",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf105",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "GainsValidAbilities"
     },
     {
-      "dataVa": "0x142cdb0e0",
       "instruction": "0x1422c9297",
-      "preview": "Activated.!Loyalty",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdb0e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.!Loyalty"
     },
     {
-      "dataVa": "0x142c85690",
       "instruction": "0x1422c92d3",
-      "preview": "Activated.LoyaltActivated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85690",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.LoyaltActivated.PowerUActivated.ExhausSpell,Activated.tic.isTurnFaceUpStatic.isTurnFacStatic.Foretelling"
     },
     {
-      "dataVa": "0x142c85620",
       "instruction": "0x1422c9309",
-      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85620",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ted.!ManaAbilityActivated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142c85630",
       "instruction": "0x1422c9311",
-      "preview": "Activated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c85630",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Activated.!ManaAActivated.YouCtrated.ManaAbilityActivated.ManaAbActivated.Ninjutsu"
     },
     {
-      "dataVa": "0x142cdf12f",
       "instruction": "0x1422c9549",
-      "preview": "ManaConversion",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf12f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaConversion"
     },
     {
-      "dataVa": "0x142cd25e0",
       "instruction": "0x1422c95b4",
-      "preview": "AnyType->AnyColoAnyType->AnyType/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cd25e0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AnyType->AnyColoAnyType->AnyType/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\core\\src\\str\\pattern.rs"
     },
     {
-      "dataVa": "0x142cdf14f",
       "instruction": "0x1422c96f6",
-      "preview": "ManaConversion 的对象AddColorGainsAbilitiesOf 写了两种AddHiddenKeywordRemoveKeywordRemoveKeywordsCantHaveKeywordRemoveCardTypesRemoveSubTypesRemoveEnchantmentTypesRemoveCrea",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdf14f",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ManaConversion 的对象AddColorGainsAbilitiesOf 写了两种AddHiddenKeywordRemoveKeywordRemoveKeywordsCantHaveKeywordRemoveCardTypesRemoveSubTypesRemoveEnchantmentTypesRemoveCrea"
     },
     {
-      "dataVa": "0x142cdcdc2",
       "instruction": "0x1422c97de",
-      "preview": "YouAttackingPlayer",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdcdc2",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "YouAttackingPlayer"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x1422c79b0.c",
+  "pseudocodeSha256": "df122d67c172474fe671b362746d99900b2c6b1fbe55a4b4950dfa79b6342886",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

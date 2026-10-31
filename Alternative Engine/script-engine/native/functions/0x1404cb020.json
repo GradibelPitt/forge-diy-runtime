@@ -8,14 +8,19 @@
     "src/prompts.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.3054193
+  },
   "assembly": "functions/0x1404cb020.asm",
   "assemblySha256": "fe172ed573a57a6512175d40e7e8ad59416f997014a8d952be6f9d2dfbfa258a",
   "literalReferences": [
     {
-      "dataVa": "0x1427a2308",
       "instruction": "0x1404cb90c",
-      "preview": "mid > len",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2308",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "mid > len"
     }
   ],
   "pseudocode": "functions/0x1404cb020.c",

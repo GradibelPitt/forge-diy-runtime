@@ -8,56 +8,62 @@
     "crates/arcane-ai/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "timeout",
+    "diagnostic": "Exception while decompiling 141085a40: process: timeout\n",
+    "seconds": 5.0161058,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141085a40.asm",
   "assemblySha256": "67f92796b3e7bf553ae6b5c21129f0264b897a280591254fc2aab41112eb4e3c",
   "literalReferences": [
     {
-      "dataVa": "0x142872a78",
       "instruction": "0x141085a85",
-      "preview": "kindminmaxplayer",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142872a78",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "kindminmaxplayer"
     },
     {
-      "dataVa": "0x142872b99",
       "instruction": "0x141087ac2",
-      "preview": "args",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142872b99",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "args"
     },
     {
-      "dataVa": "0x142872ac0",
       "instruction": "0x141087e09",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142872ac0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142872ac0",
       "instruction": "0x141087e48",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142872ac0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142872ac0",
       "instruction": "0x141087e87",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142872ac0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142872ac0",
       "instruction": "0x141087ec6",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
-    },
-    {
       "dataVa": "0x142872ac0",
-      "instruction": "0x141087f05",
-      "preview": "called `Result::unwrap()` on an `Err` value",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
     },
     {
-      "dataVa": "0x142877948",
+      "instruction": "0x141087f05",
+      "dataVa": "0x142872ac0",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "called `Result::unwrap()` on an `Err` value"
+    },
+    {
       "instruction": "0x141087f48",
-      "preview": "a Display implementation returned an error unexpectedly/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\string.rs",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142877948",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "a Display implementation returned an error unexpectedly/rustc/2d8144b7880597b6e6d3dfd63a9a9efae3f533d3/library\\alloc\\src\\string.rs"
     }
   ],
   "pseudocodeStatus": "timeout"

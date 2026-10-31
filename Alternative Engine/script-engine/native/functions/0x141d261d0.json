@@ -8,15 +8,25 @@
     "crates/mtg-engine/src/statics/layers.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 3.7199673,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141d261d0.asm",
   "assemblySha256": "0e82152b3ea4a8e968e0ad4128cbdef2cca2e67de0fb2ca500b3a78984305eeb",
   "literalReferences": [
     {
-      "dataVa": "0x142c9475c",
       "instruction": "0x141d2838f",
-      "preview": "AssassinMercenaryPirateRogueWarlockClericWarriorWizard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9475c",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AssassinMercenaryPirateRogueWarlockClericWarriorWizard"
     }
   ],
-  "pseudocodeStatus": "timeout"
+  "pseudocode": "functions/0x141d261d0.c",
+  "pseudocodeSha256": "1bd51b863c0eb99d0a7ea636dee9b2a9da2978bbc0e1749e71cd36694e64d315",
+  "pseudocodeOrigin": "expanded recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

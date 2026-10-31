@@ -5,45 +5,55 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.1636322,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x14209fc30.asm",
   "assemblySha256": "5d372c24fb6fc56344b9f24a8df76d196f31bc42992e1d2756db3ce2f929060c",
   "literalReferences": [
     {
-      "dataVa": "0x142cc3413",
       "instruction": "0x14209fc5f",
-      "preview": "ExtraPhaseFollowedBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc3413",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ExtraPhaseFollowedBy"
     },
     {
-      "dataVa": "0x142cc341d",
       "instruction": "0x14209fdc1",
-      "preview": "FollowedBy",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc341d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "FollowedBy"
     },
     {
-      "dataVa": "0x142cc33fe",
       "instruction": "0x14209fecd",
-      "preview": "Main2",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc33fe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "Main2"
     },
     {
-      "dataVa": "0x142cc3443",
       "instruction": "0x14209ff66",
-      "preview": "AfterPhaseBeforeFirstPostCombatMainEndConditionPhases",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc3443",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AfterPhaseBeforeFirstPostCombatMainEndConditionPhases"
     },
     {
-      "dataVa": "0x142cc344d",
       "instruction": "0x1420a0038",
-      "preview": "BeforeFirstPostCombatMainEndConditionPhases",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc344d",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "BeforeFirstPostCombatMainEndConditionPhases"
     },
     {
-      "dataVa": "0x142cc3469",
       "instruction": "0x1420a007a",
-      "preview": "ConditionPhases",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cc3469",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ConditionPhases"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x14209fc30.c",
+  "pseudocodeSha256": "e9a8478df06d50248dbe9de79dc114264d06d64e5d17e419a094b3ef3a01680b",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": true
 }

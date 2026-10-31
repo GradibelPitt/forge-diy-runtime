@@ -1,0 +1,127 @@
+/* Decompiled original binary; inferred C types, NOT original Rust source. */
+
+bool FUN_140aa5640(undefined8 *param_1,undefined4 param_2)
+
+{
+  longlong lVar1;
+  int iVar2;
+  longlong lVar3;
+  undefined8 auStack_218 [2];
+  undefined8 uStack_208;
+  undefined8 uStack_200;
+  undefined8 uStack_1f8;
+  undefined8 uStack_1f0;
+  undefined8 uStack_1e8;
+  undefined8 uStack_1e0;
+  undefined8 uStack_1d8;
+  undefined8 uStack_1d0;
+  undefined8 uStack_1c8;
+  undefined8 uStack_1c0;
+  undefined8 uStack_1b8;
+  undefined8 uStack_1b0;
+  undefined8 uStack_1a8;
+  undefined8 uStack_1a0;
+  undefined8 uStack_198;
+  undefined8 uStack_190;
+  undefined8 uStack_188;
+  undefined8 uStack_180;
+  undefined8 uStack_178;
+  undefined8 uStack_170;
+  undefined8 uStack_168;
+  undefined8 uStack_160;
+  undefined8 uStack_158;
+  undefined8 uStack_150;
+  undefined8 uStack_148;
+  undefined8 uStack_140;
+  undefined8 uStack_138;
+  undefined8 uStack_130;
+  undefined8 uStack_128;
+  undefined8 uStack_120;
+  undefined8 uStack_118;
+  undefined8 uStack_110;
+  undefined8 uStack_108;
+  undefined8 uStack_100;
+  undefined8 uStack_f8;
+  undefined8 uStack_f0;
+  undefined8 uStack_e8;
+  undefined8 uStack_d0;
+  undefined4 uStack_b8;
+  undefined1 uStack_b0;
+  undefined8 uStack_a0;
+  undefined4 uStack_98;
+  undefined4 uStack_94;
+  undefined4 uStack_90;
+  undefined1 uStack_8c;
+  undefined1 uStack_8a;
+  undefined4 uStack_88;
+  longlong lStack_80;
+  longlong lStack_78;
+  longlong lStack_70;
+  longlong lStack_68;
+  undefined8 uStack_60;
+  
+  uStack_60 = 0xfffffffffffffffe;
+  FUN_141bd7180(&lStack_80,*param_1,param_2,*(undefined1 *)(param_1 + 0x17));
+  lStack_68 = lStack_78;
+  lVar1 = 0;
+  do {
+    lVar3 = lVar1;
+    if (lStack_70 << 3 == lVar3) break;
+    uStack_208 = 0;
+    uStack_200 = 8;
+    uStack_98 = 0;
+    uStack_1f8 = 0;
+    uStack_1f0 = 0;
+    uStack_1e8 = 8;
+    uStack_1e0 = 0;
+    uStack_1d8 = 0;
+    uStack_1d0 = 4;
+    uStack_1c8 = 0;
+    uStack_1c0 = 0;
+    uStack_1b8 = 4;
+    uStack_1b0 = 0;
+    uStack_1a8 = 0;
+    uStack_1a0 = 8;
+    uStack_198 = 0;
+    uStack_190 = 0;
+    uStack_b0 = 0xff;
+    uStack_188 = 8;
+    uStack_a0 = 0;
+    uStack_94 = 0;
+    auStack_218[0] = 0;
+    uStack_88 = 0;
+    uStack_180 = 0;
+    uStack_178 = 0;
+    uStack_170 = 4;
+    uStack_90 = 0;
+    uStack_168 = 0;
+    uStack_160 = 0;
+    uStack_158 = 4;
+    uStack_8c = 0;
+    uStack_8a = 0;
+    uStack_150 = 0;
+    uStack_148 = 0;
+    uStack_140 = 4;
+    uStack_138 = 0;
+    uStack_130 = 0;
+    uStack_b8 = 0;
+    uStack_e8 = 0xffffffffffffffff;
+    uStack_128 = 4;
+    uStack_120 = 0;
+    uStack_118 = 0;
+    uStack_110 = 4;
+    uStack_108 = 0;
+    uStack_100 = 0;
+    uStack_d0 = 0xffffffffffffffff;
+    uStack_f8 = 8;
+    uStack_f0 = 0;
+    iVar2 = FUN_140a91430(param_1,*(undefined8 *)(lStack_68 + lVar3),auStack_218,0);
+    FUN_140019b20(auStack_218);
+    lVar1 = lVar3 + 8;
+  } while (iVar2 < 0x28);
+  if (lStack_80 != 0) {
+    func_0x000140639d00(lStack_68,lStack_80 << 3,8);
+  }
+  return lStack_70 << 3 != lVar3;
+}
+

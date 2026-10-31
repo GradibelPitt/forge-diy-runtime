@@ -8,14 +8,19 @@
     "src/devtools.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0069751
+  },
   "assembly": "functions/0x1401344a0.asm",
   "assemblySha256": "7dfa46b25d37395ae4a0588f53209a9602602461d971d70c552d3db9bd735c91",
   "literalReferences": [
     {
-      "dataVa": "0x142777380",
       "instruction": "0x1401345aa",
-      "preview": "5swB",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142777380",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "5swB"
     }
   ],
   "pseudocode": "functions/0x1401344a0.c",

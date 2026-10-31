@@ -5,15 +5,25 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0036372,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x141a60a90.asm",
   "assemblySha256": "03aab777263663abf5aacf68c98c38b14ed9461dd2801bb1664fd45a65265e2d",
   "literalReferences": [
     {
-      "dataVa": "0x142c862e3",
       "instruction": "0x141a60ab1",
-      "preview": "StoreSVar 缺 SVarStoreSVar 缺 ExpressionDB$ TokenLifePaidAmountRepeat 的衍生物",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c862e3",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "StoreSVar 缺 SVarStoreSVar 缺 ExpressionDB$ TokenLifePaidAmountRepeat 的衍生物"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x141a60a90.c",
+  "pseudocodeSha256": "35962f11b59134cf9f9128ffa9e1ebd7e40d045df03694085e070de62e645930",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

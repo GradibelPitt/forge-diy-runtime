@@ -8,26 +8,31 @@
     "crates/mtg-engine/src/simul.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.2962972
+  },
   "assembly": "functions/0x141ba5290.asm",
   "assemblySha256": "15b8033f7a3f1323052a6bdca9f9ba5c56d723840d5b3cf8803062f0cd078a31",
   "literalReferences": [
     {
-      "dataVa": "0x142c93352",
       "instruction": "0x141ba7795",
-      "preview": "现在不能下这块地",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c93352",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "现在不能下这块地"
     },
     {
-      "dataVa": "0x142c9b2d7",
       "instruction": "0x141ba84aa",
-      "preview": "有批",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c9b2d7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "有批"
     },
     {
-      "dataVa": "0x142c8f4a7",
       "instruction": "0x141ba84cc",
-      "preview": "internal error: entered unreachable code",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142c8f4a7",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "internal error: entered unreachable code"
     }
   ],
   "pseudocode": "functions/0x141ba5290.c",

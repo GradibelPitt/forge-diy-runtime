@@ -5,21 +5,31 @@
   "boundary": "pe_runtime_function",
   "sourcePathHints": [],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0036111,
+    "stackProbeFixup": "alloca_probe@RVA_0x2748650"
+  },
   "assembly": "functions/0x142297d70.asm",
   "assemblySha256": "c84ac60bd900c09464f58aa7f97dc2f2407399dc900e2158bd7fc195e8e65016",
   "literalReferences": [
     {
-      "dataVa": "0x142cdc90b",
       "instruction": "0x142297d91",
-      "preview": "ce 缺 ValidCardCantBlockBy 缺 ValidAttackerPanharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc90b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "ce 缺 ValidCardCantBlockBy 缺 ValidAttackerPanharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard"
     },
     {
-      "dataVa": "0x142cdc8fe",
       "instruction": "0x142297d9c",
-      "preview": "AttackVigilance 缺 ValidCardCantBlockBy 缺 ValidAttackerPanharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x142cdc8fe",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "AttackVigilance 缺 ValidCardCantBlockBy 缺 ValidAttackerPanharmonicon 缺 ValidCardIgnoreHexproof 缺 ValidEntityActivateAbilityAsIfHaste 缺 ValidCard"
     }
   ],
-  "pseudocodeStatus": "not_decompiled"
+  "pseudocode": "functions/0x142297d70.c",
+  "pseudocodeSha256": "ce1db970430026230ca21767284740e7f3c11f0a7ab688e9cdabcd06d910c689",
+  "pseudocodeOrigin": "remaining helper recovery with verified stack-probe call fixup",
+  "controlFlowWarning": false,
+  "typePropagationWarning": false
 }

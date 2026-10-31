@@ -7,26 +7,31 @@
     "crates/mtg-engine/src/state.rs"
   ],
   "sourceAssociation": "Observed reference may belong to inlined code",
+  "latestAttempt": {
+    "status": "decompiled",
+    "diagnostic": "",
+    "seconds": 0.0811554
+  },
   "assembly": "functions/0x1404d7a30.asm",
   "assemblySha256": "a502446b01ab44cd3b09b1d7ad7dab7f4e06875325a7932848d8648cb54c788f",
   "literalReferences": [
     {
-      "dataVa": "0x1427a2778",
       "instruction": "0x1404d7aa5",
-      "preview": "cloakedbasePowerbaseToughness",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2778",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "cloakedbasePowerbaseToughness"
     },
     {
-      "dataVa": "0x1427a2770",
       "instruction": "0x1404d7adb",
-      "preview": "manifestcloakedbasePowerbaseToughness",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a2770",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "manifestcloakedbasePowerbaseToughness"
     },
     {
-      "dataVa": "0x1427a276b",
       "instruction": "0x1404d7ae2",
-      "preview": "morphmanifestcloakedbasePowerbaseToughness",
-      "note": "bounded data preview, not proof of string length or semantic ownership"
+      "dataVa": "0x1427a276b",
+      "note": "bounded data preview, not proof of string length or semantic ownership",
+      "preview": "morphmanifestcloakedbasePowerbaseToughness"
     }
   ],
   "pseudocode": "functions/0x1404d7a30.c",
