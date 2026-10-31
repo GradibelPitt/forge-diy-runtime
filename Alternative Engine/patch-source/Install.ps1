@@ -10,6 +10,7 @@ if ((Get-FileHash -LiteralPath $original).Hash.ToLowerInvariant() -ne 'ded7eb5f0
     throw 'This integration requires the verified Solo Arcanum 0.3.29 engine.'
 }
 $destination = Join-Path $Installation 'runtime/hearthstone'
+& (Join-Path $PSScriptRoot 'Install-CardImages.ps1') -Installation $Installation
 [System.IO.Directory]::CreateDirectory($destination) | Out-Null
 foreach ($file in $manifest.files) {
     $source = Join-Path $packageRoot $file.name
