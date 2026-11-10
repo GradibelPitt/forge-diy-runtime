@@ -81,8 +81,8 @@ const stateFile=path.join(game,'user-data/style-packs/solo-media/bundled/alterna
 const installed=/--solo-alternative-revision:\s*"([a-f0-9]{40})"/.exec(fs.readFileSync(stateFile,'utf8'))?.[1];
 if(!installed)throw new Error('Installed version is not registered; run the startup BAT first.');
 const baseManifest=git(['show',installed+':Alternative Engine/asset-manifest.json']);
-const headManifest=git(['show','HEAD:Alternative Engine/asset-manifest.json']);
-if(baseManifest!==headManifest)throw new Error('GitHub has newer assets. Close the game and run the startup BAT before publishing; local edits will be preserved.');
+const remoteManifest=git(['show','origin/main:Alternative Engine/asset-manifest.json']);
+if(baseManifest!==remoteManifest)throw new Error('GitHub has newer assets. Close the game and run the startup BAT before publishing; local edits will be preserved.');
 console.log('正在收集本地卡牌、卡组、配图和运行文件…');
 for(const [source,relative] of [
  [path.join(profile,'custom'),'game-files/imported/custom'],[path.join(profile,'decks'),'game-files/imported/decks'],
@@ -131,12 +131,12 @@ for(const [command,args] of [
 }
 git(['add','--','Alternative Engine'],{capture:false});
 const staged=git(['diff','--cached','--name-only']).trim();
-if(!staged){console.log('没有需要推送的新改动。');process.exit(0);}
-if(staged.split('\n').some(p=>!p.startsWith('Alternative Engine/')))throw new Error('Staged files outside Alternative Engine must be handled separately.');
+if(staged&&staged.split('\n').some(p=>!p.startsWith('Alternative Engine/')))throw new Error('Staged files outside Alternative Engine must be handled separately.');
 git(['-c','core.whitespace=cr-at-eol','diff','--cached','--check','--','Alternative Engine/tools','Alternative Engine/patch-source','Alternative Engine/game-files/runtime/updater'],{capture:false});
 if(process.argv.includes('--prepare-only')){console.log('检查完成，已准备提交，尚未推送。');process.exit(0);}
-git(['commit','--quiet','-m',config.message||'Publish local cards, artwork and startup updates'],{capture:false});
-git(['push','origin','HEAD:main'],{capture:false});
+if(staged)git(['commit','--quiet','-m',config.message||'Publish local cards, artwork and startup updates'],{capture:false});
+const pending=Number(git(['rev-list','--count','origin/main..HEAD']).trim());
+if(pending)git(['push','origin','HEAD:main'],{capture:false});
 const revision=git(['rev-parse','HEAD']).trim();
 const updater=path.join(game,'runtime/updater');fs.mkdirSync(updater,{recursive:true});
 fs.copyFileSync(path.join(alt,'asset-manifest.json'),path.join(updater,'installed-manifest.json'));
@@ -144,5 +144,5 @@ fs.writeFileSync(path.join(updater,'state.json'),JSON.stringify({repository:'Gra
 fs.writeFileSync(stateFile,`:root { --solo-alternative-repository: "GradibelPitt/forge-diy-runtime"; --solo-alternative-revision: "${revision}"; }`);
 const report={commit:revision,sourceFilesVerified:copied.length,changedFiles:changes.length,assetFiles:manifest.files.length};
 fs.writeFileSync(path.join(path.dirname(configPath),'last-publication.json'),JSON.stringify(report,null,2));
-console.log('推送完成：'+revision.slice(0,7));
+console.log(pending?'推送完成：'+revision.slice(0,7):'没有需要推送的新改动，版本记录已同步。');
 console.log('https://github.com/GradibelPitt/forge-diy-runtime/tree/main/Alternative%20Engine');
