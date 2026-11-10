@@ -30,8 +30,7 @@ $discoverConfig = Join-Path $destination 'card-discover.json'
 if (!(Test-Path -LiteralPath $discoverConfig)) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'card-discover.json') -Destination $discoverConfig
 }
-$manifest.installation = [System.IO.Path]::GetFullPath($Installation)
-[System.IO.File]::WriteAllText((Join-Path $destination 'release.json'), ($manifest | ConvertTo-Json -Depth 6), [System.Text.UTF8Encoding]::new($false))
+Copy-Item -LiteralPath (Join-Path $packageRoot 'release.json') -Destination (Join-Path $destination 'release.json') -Force
 $launcher = Join-Path $destination 'hearthstone_launcher.exe'
 $verify = Start-Process -FilePath $launcher -ArgumentList '--verify' -WindowStyle Hidden -Wait -PassThru
 if ($verify.ExitCode -ne 0) { throw 'Installed launcher verification failed.' }
