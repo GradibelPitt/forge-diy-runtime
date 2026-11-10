@@ -1,0 +1,15 @@
+Name:凯洛斯的蛋
+ManaCost:1 G G
+Types:Legendary Creature Egg
+PT:0/3
+K:etbCounter:EGGSHELL:4
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | IsPresent$ Card.Self+counters_GE1_EGGSHELL | ReplaceWith$ DBRemoveShell | Description$ 若凯洛斯的蛋将死去，且其上有蛋壳指示物，则改为从其上移去一个蛋壳指示物。
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigKairos | TriggerDescription$ 当凯洛斯的蛋死去时，派出一个名称为凯洛斯、具有践踏的传奇20/20野兽生物衍生物。
+DeckHas:Ability$Counters|Token
+SVar:DBRemoveShell:DB$ RemoveCounter | Defined$ ReplacedCard | CounterType$ EGGSHELL | CounterNum$ 1
+SVar:TrigKairos:DB$ Token | TokenScript$ c_20_20_kairos_trample | TokenAmount$ 1 | TokenOwner$ TriggeredCardController
+Oracle:凯洛斯的蛋进战场时上面有四个蛋壳指示物。\n若凯洛斯的蛋将死去，且其上有蛋壳指示物，则改为从其上移去一个蛋壳指示物。\n当凯洛斯的蛋死去时，派出一个名称为凯洛斯、具有践踏的传奇20/20野兽生物衍生物。
+# 中文规则: 凯洛斯的蛋进战场时上面有四个蛋壳指示物。
+# 中文规则: 若凯洛斯的蛋将死去，且其上有蛋壳指示物，则改为从其上移去一个蛋壳指示物。
+# 中文规则: 当凯洛斯的蛋死去时，派出一个名称为凯洛斯、具有践踏的传奇20/20野兽生物衍生物。
+# 卡面: {"crop":{"x":0.569,"y":0.337,"zoom":1},"frame":"pack:mtgsmith/m15"}

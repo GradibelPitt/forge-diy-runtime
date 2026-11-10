@@ -22,6 +22,10 @@ foreach ($file in $manifest.files) {
     Copy-Item -LiteralPath $source -Destination (Join-Path $destination $file.name)
 }
 Copy-Item -LiteralPath (Join-Path $packageRoot 'hearthstone_launcher.exe') -Destination $destination
+$updater = Join-Path $Installation 'runtime/updater'
+[IO.Directory]::CreateDirectory($updater) | Out-Null
+Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot '../game-files/runtime/updater') -File | Where-Object {$_.Extension -in '.ps1','.psm1'} | ForEach-Object {Copy-Item -LiteralPath $_.FullName -Destination $updater -Force}
+foreach($entry in @('Start.bat','Start.cmd')){Copy-Item -LiteralPath (Join-Path $PSScriptRoot ('../game-files/'+$entry)) -Destination (Join-Path $Installation $entry) -Force}
 $discoverConfig = Join-Path $destination 'card-discover.json'
 if (!(Test-Path -LiteralPath $discoverConfig)) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'card-discover.json') -Destination $discoverConfig
@@ -34,7 +38,7 @@ if ($verify.ExitCode -ne 0) { throw 'Installed launcher verification failed.' }
 & (Join-Path $PSScriptRoot '../tools/Register-InstalledVersion.ps1') -Installation $Installation
 $shortcutBuild = Join-Path $destination 'hearthstone-entry.lnk'
 $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($shortcutBuild)
-$shortcut.TargetPath = $launcher
+$shortcut.TargetPath = Join-Path $Installation 'Start.bat'
 $shortcut.WorkingDirectory = $Installation
 $shortcut.IconLocation = (Join-Path $Installation 'desktop.exe') + ',0'
 $shortcut.Description = 'Forge DIY 炉石模式：30 生命、10 张手牌上限、维持选地、疲劳与生物攻击。'
