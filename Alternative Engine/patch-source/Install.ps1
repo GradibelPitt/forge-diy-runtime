@@ -31,6 +31,7 @@ $manifest.installation = [System.IO.Path]::GetFullPath($Installation)
 $launcher = Join-Path $destination 'hearthstone_launcher.exe'
 $verify = Start-Process -FilePath $launcher -ArgumentList '--verify' -WindowStyle Hidden -Wait -PassThru
 if ($verify.ExitCode -ne 0) { throw 'Installed launcher verification failed.' }
+& (Join-Path $PSScriptRoot '../tools/Register-InstalledVersion.ps1') -Installation $Installation
 $shortcutBuild = Join-Path $destination 'hearthstone-entry.lnk'
 $shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($shortcutBuild)
 $shortcut.TargetPath = $launcher

@@ -52,6 +52,7 @@ fn run() -> io::Result<()> {
         .env("ARCANE_FORGE_RES_DIR", root.join("runtime/forge/forge-gui/res"))
         .env("ARCANE_SETTINGS_FILE", &settings)
         .env("ARCANE_STYLE_PACK_DIR", &style_packs)
+        .env("ARCANE_UPDATE_FEED", "https://api.github.com/repos/GradibelPitt/forge-diy-runtime/commits?sha=main&path=Alternative%20Engine&per_page=1")
         .env("ARCANE_NATIVE_SIDECAR", directory.join("sidecar_bridge.exe"))
         .env("ARCANE_ZH_DIR", root.join("runtime/native/zh"))
         .env("ARCANE_AI_MEMORY_DIR", profile.join("ai-memory"))

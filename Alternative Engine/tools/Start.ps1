@@ -5,4 +5,5 @@ if (!(Test-Path -LiteralPath $launcher)) { throw 'Missing runtime. Run git lfs p
 & (Join-Path $PSScriptRoot 'Initialize-Assets.ps1') -Installation $game
 $verify = Start-Process -FilePath $launcher -ArgumentList '--verify' -WorkingDirectory $game -WindowStyle Hidden -Wait -PassThru
 if ($verify.ExitCode -ne 0) { throw 'Runtime verification failed.' }
+& (Join-Path $PSScriptRoot 'Register-InstalledVersion.ps1') -Installation $game
 Start-Process -FilePath $launcher -WorkingDirectory $game -WindowStyle Hidden

@@ -8,6 +8,7 @@ import {removeRetiredModes, patchRetiredModeAssets} from './retired-modes.mjs';
 import {patchDeckbuilderAsset, patchDeckbuilderAssets} from './deckbuilder-visibility.mjs';
 import {patchLifeDisplayAsset} from './starting-life-display.mjs';
 import {patchMtgsmithAsset} from './mtgsmith-default.mjs';
+import {patchGithubUpdates} from './github-updates.mjs';
 
 const original = process.argv[2];
 const destination = process.argv[3];
@@ -47,6 +48,7 @@ script=patchDeckbuilderAsset('/assets/index-BWEIyD1_.js',script);
 patchDeckbuilderAssets(binary,{includeMain:false});
 patchLifeDisplayAsset(binary);
 patchMtgsmithAsset(binary);
+script=patchGithubUpdates(script);
 changes.push('disable deck construction checks for DIY and DIY Commander');
 changes.push('search the full card pool in DIY deck builders');
 changes.push('copy custom media into the portable game profile before saving');
