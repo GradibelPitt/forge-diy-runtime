@@ -1,0 +1,8 @@
+Name:飞弹舱
+ManaCost:1 R
+Types:Artifact Creature
+PT:1/3
+T:Mode$ SpellCast | ValidCard$ Card.Self | TriggerZones$ Stack | Execute$ TrigDamage | TriggerDescription$ When you cast CARDNAME, it deals 1 damage to each creature you don't control.
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature.YouDontCtrl | NumDmg$ 1
+Oracle:当你施放飞弹舱时，它对每个不由你操控的生物各造成1点伤害。
+# 中文规则: 当你施放飞弹舱时，它对每个不由你操控的生物各造成1点伤害。

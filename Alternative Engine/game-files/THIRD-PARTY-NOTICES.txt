@@ -1,0 +1,56 @@
+SOLO ARCANUM - THIRD-PARTY NOTICES
+
+Solo Arcanum's own terms are in LICENSE.txt. This file lists the third-party
+data and assets shipped with it. Each remains under its own licence; nothing
+in LICENSE.txt restricts the rights those licences give you.
+
+Forge card scripts and skin assets
+----------------------------------
+The per-card rules scripts, set and format lists under runtime/forge are taken
+unmodified from Forge and are licensed under the GNU General Public License
+version 3. Mana symbols, keyword ability icons and the optional sleeves and
+table backgrounds also come from Forge's default skin. The matching Forge
+revision is recorded in runtime/BUILD-PROVENANCE.txt (ForgeCommit); the
+corresponding source is that revision of the Forge repository. A copy of the
+licence is included at runtime/licenses/Forge-GPL-3.0.txt.
+
+Solo Arcanum does not contain or run the Forge program. Games run on Solo
+Arcanum's own rules engine, which reads these scripts as data.
+
+Forge source: https://github.com/Card-Forge/forge
+
+Scryfall
+--------
+Set data and the optional card image packs are built from Scryfall's public
+API. Card data is CC0. Card images are copyright Wizards of the Coast and are
+not part of the program; the image packs are optional and separate.
+
+https://scryfall.com
+
+Simplified Chinese card text
+----------------------------
+Chinese card names, types and rules text come from the mtgch.com community
+translation, licensed under CC-BY-SA-4.0.
+
+https://mtgch.com
+
+Commander Spellbook
+-------------------
+The combo database used by the computer opponents comes from Commander
+Spellbook's published database file (MIT).
+
+https://commanderspellbook.com
+
+Background music
+----------------
+The menu and match music is composed by Kevin MacLeod (incompetech.com) and is
+licensed under Creative Commons Attribution 3.0:
+https://creativecommons.org/licenses/by/3.0/
+
+Magic: The Gathering
+--------------------
+Solo Arcanum is unofficial Fan Content permitted under the Fan Content Policy.
+Not approved/endorsed by Wizards. Portions of the materials used are property
+of Wizards of the Coast. ©Wizards of the Coast LLC.
+
+https://company.wizards.com/en/legal/fancontentpolicy

@@ -1,0 +1,8 @@
+Name:十字军光环
+ManaCost:2 W R
+Types:Enchantment
+K:Vanishing:3
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddTrigger$ CrusaderAttack | AddSVar$ AE | Description$ Creatures you control have "Whenever this creature attacks, it gets +2/+1 permanently."
+SVar:CrusaderAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, it gets +2/+1 permanently.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +2 | NumDef$ +1 | Duration$ Permanent
+Oracle:消逝3（此结界进战场时上面有三个时间指示物。在你的维持开始时，从其上移去一个时间指示物。当最后一个被移去时，将它牺牲。）\n你操控的生物具有「每当该生物攻击时，它永久获得+2/+1。」

@@ -1,0 +1,6 @@
+Name:法术反制
+ManaCost:1 U U
+Types:Instant
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ ExileFromHand<1/Card.Blue+Other> | Condition$ NotPlayerTurn | Description$ 如果当前不是你的回合，则你可以从你手上放逐一张蓝色牌，而不支付此咒语的法术力费用。
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Instant,Sorcery | TgtPrompt$ 选择目标法术或瞬间咒语 | SpellDescription$ 反击目标法术或瞬间咒语。
+Oracle:如果当前不是你的回合，则你可以从你手上放逐一张蓝色牌，而不支付此咒语的法术力费用。\n反击目标法术或瞬间咒语。

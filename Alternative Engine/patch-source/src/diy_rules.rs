@@ -4,6 +4,7 @@ use std::collections::{BTreeMap, BTreeSet};
 pub struct CardRule {
     pub types: BTreeSet<String>,
     pub boarding: Option<usize>,
+    pub boarding_own_turn: bool,
     pub library_triggers: bool,
     pub quest: Option<Vec<String>>,
     pub superreach: bool,
@@ -13,6 +14,7 @@ pub struct CardRule {
     pub storm: bool,
     pub clone_zone: Option<u8>,
     pub keep_clone_on_stack: bool,
+    pub nonland_limit_effects: BTreeSet<String>,
 }
 
 pub fn parse(script: &str) -> Option<(String, CardRule)> {
@@ -22,6 +24,7 @@ pub fn parse(script: &str) -> Option<(String, CardRule)> {
         let line = line.trim();
         if let Some(value) = line.strip_prefix("Name:") { name = Some(value.trim().to_owned()); }
         if let Some(value) = line.strip_prefix("Types:") { rule.types = value.split_whitespace().map(|t|t.to_ascii_lowercase()).collect(); }
+        if let Some(value)=line.strip_prefix("SVar:MaxOneOpponentNonlandEffect:") {rule.nonland_limit_effects.insert(value.trim().to_owned());}
         if line=="K:Superreach" {rule.superreach=true;}
         if line=="K:Storm" {rule.storm=true;}
         if line.contains("$ Clone |") {
@@ -31,7 +34,11 @@ pub fn parse(script: &str) -> Option<(String, CardRule)> {
         if line=="K:Ignore Superreach" {rule.ignore_superreach=true;}
         if line.starts_with("S:Mode$ CanBeAttacked")&&line.contains("ValidDefender$ Card.Self")&&line.contains("ValidAttacker$ Creature.OppCtrl") {rule.can_be_attacked=true;}
         if line.starts_with("T:") && line.split('|').any(|part| part.trim().strip_prefix("TriggerZones$").is_some_and(|zones| zones.split(',').any(|zone|zone.trim()=="Library"))) {rule.library_triggers=true;}
-        if let Some(value) = line.strip_prefix("K:Boarding:") { rule.boarding = value.trim().parse().ok(); }
+        if let Some(value) = line.strip_prefix("K:Boarding:") {
+            let mut parts = value.trim().split(':');
+            rule.boarding = parts.next().and_then(|n| n.parse().ok());
+            rule.boarding_own_turn = parts.next() == Some("YourTurn");
+        }
         if let Some(value) = line.strip_prefix("K:Quest:") {
             if let Some((requirements, _)) = value.split_once(':') {
                 rule.quest = Some(requirements.split(';').map(str::trim).filter(|s|!s.is_empty()).map(str::to_owned).collect());
@@ -160,5 +167,16 @@ mod tests {
         assert!(matches_requirement("Test",&card,"Card.Historic"));
         assert!(matches_requirement("Test",&card,"Equipment"));
         assert!(!matches_requirement("Test",&card,"Pirate"));
+    }
+    #[test]
+    fn boarding_turn_restriction_is_opt_in() {
+        let (_, old) = parse("Name:Old\nK:Boarding:3\n").unwrap();
+        assert_eq!(old.boarding, Some(3));
+        assert!(!old.boarding_own_turn);
+        let script = "Name:Tusk\nK:Boarding:4:YourTurn\n";
+        let (_, rule) = parse(script).unwrap();
+        assert_eq!(rule.boarding, Some(4));
+        assert!(rule.boarding_own_turn);
+        assert!(!lower_script(script).contains("K:Boarding:"));
     }
 }

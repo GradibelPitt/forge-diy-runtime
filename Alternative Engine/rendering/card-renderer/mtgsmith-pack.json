@@ -1,0 +1,840 @@
+{
+  "id": "mtgsmith",
+  "name": "MTGCardsmith 本地资源",
+  "source": "Existing local MTGCardsmith resource archive",
+  "notice": "",
+  "frames": [
+    {
+      "id": "m15",
+      "name": "Cardsmith 标准牌框",
+      "width": 1500,
+      "height": 2100,
+      "radius": 50,
+      "fonts": {
+        "name": {
+          "family": "Solo Card Title",
+          "size": 80,
+          "color": "#17120e"
+        },
+        "type": {
+          "family": "Solo Card Type",
+          "size": 68,
+          "color": "#17120e"
+        },
+        "text": {
+          "family": "Solo Card Rules",
+          "size": 76,
+          "color": "#17120e"
+        },
+        "pt": {
+          "family": "Solo Card PT",
+          "size": 78,
+          "color": "#17120e"
+        },
+        "footer": {
+          "family": "Solo Card Footer",
+          "size": 23,
+          "color": "#ffffff"
+        }
+      },
+      "layout": {
+        "name": [
+          128,
+          110,
+          1244,
+          114
+        ],
+        "cost": [
+          128,
+          129,
+          1266,
+          81
+        ],
+        "art": [
+          115,
+          237,
+          1272,
+          931
+        ],
+        "type": [
+          128,
+          1189,
+          1244,
+          114
+        ],
+        "rarity": [
+          1202,
+          1198,
+          180,
+          86
+        ],
+        "text": [
+          129,
+          1324,
+          1242,
+          588
+        ],
+        "textPadding": [
+          0,
+          0
+        ],
+        "ptBox": [
+          1136,
+          1858,
+          282,
+          154
+        ],
+        "pt": [
+          1189,
+          1894,
+          205,
+          79
+        ],
+        "footer": [
+          97,
+          1980,
+          1305,
+          36
+        ]
+      },
+      "variants": {
+        "w": "frame-W.png",
+        "u": "frame-U.png",
+        "b": "frame-B.png",
+        "r": "frame-R.png",
+        "g": "frame-G.png",
+        "m": "frame-M.png",
+        "a": "frame-A.png",
+        "l": "frame-L.png",
+        "c": "frame-C.png",
+        "wl": "frame-L.png",
+        "ul": "frame-L.png",
+        "bl": "frame-L.png",
+        "rl": "frame-L.png",
+        "gl": "frame-L.png",
+        "ml": "frame-L.png",
+        "cl": "frame-L.png"
+      },
+      "ptBoxes": {
+        "w": "pt-W.png",
+        "u": "pt-U.png",
+        "b": "pt-B.png",
+        "r": "pt-R.png",
+        "g": "pt-G.png",
+        "m": "pt-M.png",
+        "a": "pt-A.png",
+        "l": "pt-L.png",
+        "c": "pt-C.png",
+        "wl": "pt-C.png",
+        "ul": "pt-C.png",
+        "bl": "pt-C.png",
+        "rl": "pt-C.png",
+        "gl": "pt-C.png",
+        "ml": "pt-C.png",
+        "cl": "pt-C.png"
+      },
+      "main": {
+        "crowns": {
+          "normal": {
+            "w": "crown-W.png",
+            "u": "crown-U.png",
+            "b": "crown-B.png",
+            "r": "crown-R.png",
+            "g": "crown-G.png",
+            "m": "crown-M.png",
+            "a": "crown-A.png",
+            "l": "crown-L.png",
+            "wl": "crown-L.png",
+            "ul": "crown-L.png",
+            "bl": "crown-L.png",
+            "rl": "crown-L.png",
+            "gl": "crown-L.png",
+            "ml": "crown-L.png",
+            "cl": "crown-L.png"
+          }
+        },
+        "trims": {
+          "vehicle": "vehicle.png"
+        }
+      },
+      "special": {
+        "planeswalker": {
+          "width": 1500,
+          "height": 2100,
+          "radius": 50,
+          "layout": {
+            "name": [
+              130,
+              78,
+              1240,
+              115
+            ],
+            "cost": [
+              130,
+              101,
+              1264,
+              81
+            ],
+            "art": [
+              102,
+              212,
+              1296,
+              950
+            ],
+            "type": [
+              130,
+              1181,
+              1244,
+              115
+            ],
+            "rarity": [
+              1202,
+              1198,
+              180,
+              86
+            ],
+            "text": [
+              129,
+              1324,
+              1242,
+              540
+            ],
+            "textPadding": [
+              0,
+              0
+            ],
+            "ptBox": [
+              1136,
+              1858,
+              282,
+              154
+            ],
+            "pt": [
+              1189,
+              1894,
+              205,
+              79
+            ],
+            "footer": [
+              97,
+              1980,
+              1305,
+              36
+            ]
+          },
+          "layers": [
+            {
+              "art": true,
+              "box": [
+                102,
+                212,
+                1296,
+                950
+              ]
+            },
+            {
+              "fill": "#e9e1c7",
+              "mask": "pw-MaskText.png"
+            },
+            {
+              "files": {
+                "w": "pw-W.png",
+                "u": "pw-U.png",
+                "b": "pw-B.png",
+                "r": "pw-R.png",
+                "g": "pw-G.png",
+                "m": "pw-M.png",
+                "a": "pw-A.png",
+                "l": "pw-L.png",
+                "c": "pw-C.png"
+              }
+            }
+          ],
+          "abilities": {
+            "count": 4,
+            "top": 1320,
+            "bottom": 1870,
+            "textLeft": 270,
+            "textWidth": 1100,
+            "icon": [
+              48,
+              196,
+              150
+            ],
+            "up": "pw-Plus.png",
+            "down": "pw-Minus.png",
+            "naught": "pw-Neutral.png",
+            "font": {
+              "size": 61,
+              "color": "#ffffff"
+            }
+          },
+          "counter": {
+            "box": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "number": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "font": {
+              "size": 78,
+              "color": "#ffffff"
+            }
+          }
+        },
+        "planeswalker4": {
+          "width": 1500,
+          "height": 2100,
+          "radius": 50,
+          "layout": {
+            "name": [
+              130,
+              78,
+              1240,
+              115
+            ],
+            "cost": [
+              130,
+              101,
+              1264,
+              81
+            ],
+            "art": [
+              102,
+              212,
+              1296,
+              950
+            ],
+            "type": [
+              130,
+              1181,
+              1244,
+              115
+            ],
+            "rarity": [
+              1202,
+              1198,
+              180,
+              86
+            ],
+            "text": [
+              129,
+              1324,
+              1242,
+              540
+            ],
+            "textPadding": [
+              0,
+              0
+            ],
+            "ptBox": [
+              1136,
+              1858,
+              282,
+              154
+            ],
+            "pt": [
+              1189,
+              1894,
+              205,
+              79
+            ],
+            "footer": [
+              97,
+              1980,
+              1305,
+              36
+            ]
+          },
+          "layers": [
+            {
+              "art": true,
+              "box": [
+                102,
+                212,
+                1296,
+                950
+              ]
+            },
+            {
+              "fill": "#e9e1c7",
+              "mask": "pw-MaskText.png"
+            },
+            {
+              "files": {
+                "w": "pw-W.png",
+                "u": "pw-U.png",
+                "b": "pw-B.png",
+                "r": "pw-R.png",
+                "g": "pw-G.png",
+                "m": "pw-M.png",
+                "a": "pw-A.png",
+                "l": "pw-L.png",
+                "c": "pw-C.png"
+              }
+            }
+          ],
+          "abilities": {
+            "count": 4,
+            "top": 1320,
+            "bottom": 1870,
+            "textLeft": 270,
+            "textWidth": 1100,
+            "icon": [
+              48,
+              196,
+              150
+            ],
+            "up": "pw-Plus.png",
+            "down": "pw-Minus.png",
+            "naught": "pw-Neutral.png",
+            "font": {
+              "size": 61,
+              "color": "#ffffff"
+            }
+          },
+          "counter": {
+            "box": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "number": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "font": {
+              "size": 78,
+              "color": "#ffffff"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "large-art",
+      "name": "Cardsmith 大画框",
+      "width": 1500,
+      "height": 2100,
+      "radius": 50,
+      "fonts": {
+        "name": {
+          "family": "Solo Card Title",
+          "size": 80,
+          "color": "#17120e"
+        },
+        "type": {
+          "family": "Solo Card Type",
+          "size": 68,
+          "color": "#17120e"
+        },
+        "text": {
+          "family": "Solo Card Rules",
+          "size": 76,
+          "color": "#17120e"
+        },
+        "pt": {
+          "family": "Solo Card PT",
+          "size": 78,
+          "color": "#17120e"
+        },
+        "footer": {
+          "family": "Solo Card Footer",
+          "size": 23,
+          "color": "#ffffff"
+        }
+      },
+      "layout": {
+        "name": [
+          128,
+          110,
+          1244,
+          114
+        ],
+        "cost": [
+          128,
+          129,
+          1266,
+          81
+        ],
+        "art": [
+          60,
+          237,
+          1380,
+          1700
+        ],
+        "type": [
+          128,
+          1189,
+          1244,
+          114
+        ],
+        "rarity": [
+          1202,
+          1198,
+          180,
+          86
+        ],
+        "text": [
+          129,
+          1324,
+          1242,
+          588
+        ],
+        "textPadding": [
+          0,
+          0
+        ],
+        "ptBox": [
+          1136,
+          1858,
+          282,
+          154
+        ],
+        "pt": [
+          1189,
+          1894,
+          205,
+          79
+        ],
+        "footer": [
+          97,
+          1980,
+          1305,
+          36
+        ]
+      },
+      "variants": {
+        "w": "large-W.png",
+        "u": "large-U.png",
+        "b": "large-B.png",
+        "r": "large-R.png",
+        "g": "large-G.png",
+        "m": "large-M.png",
+        "a": "large-A.png",
+        "l": "large-L.png",
+        "c": "large-C.png",
+        "wl": "large-L.png",
+        "ul": "large-L.png",
+        "bl": "large-L.png",
+        "rl": "large-L.png",
+        "gl": "large-L.png",
+        "ml": "large-L.png",
+        "cl": "large-L.png"
+      },
+      "ptBoxes": {
+        "w": "pt-W.png",
+        "u": "pt-U.png",
+        "b": "pt-B.png",
+        "r": "pt-R.png",
+        "g": "pt-G.png",
+        "m": "pt-M.png",
+        "a": "pt-A.png",
+        "l": "pt-L.png",
+        "c": "pt-C.png",
+        "wl": "pt-C.png",
+        "ul": "pt-C.png",
+        "bl": "pt-C.png",
+        "rl": "pt-C.png",
+        "gl": "pt-C.png",
+        "ml": "pt-C.png",
+        "cl": "pt-C.png"
+      },
+      "main": {
+        "crowns": {
+          "normal": {
+            "w": "crown-W.png",
+            "u": "crown-U.png",
+            "b": "crown-B.png",
+            "r": "crown-R.png",
+            "g": "crown-G.png",
+            "m": "crown-M.png",
+            "a": "crown-A.png",
+            "l": "crown-L.png",
+            "wl": "crown-L.png",
+            "ul": "crown-L.png",
+            "bl": "crown-L.png",
+            "rl": "crown-L.png",
+            "gl": "crown-L.png",
+            "ml": "crown-L.png",
+            "cl": "crown-L.png"
+          }
+        },
+        "trims": {
+          "vehicle": "vehicle.png"
+        }
+      },
+      "special": {
+        "planeswalker": {
+          "width": 1500,
+          "height": 2100,
+          "radius": 50,
+          "layout": {
+            "name": [
+              130,
+              78,
+              1240,
+              115
+            ],
+            "cost": [
+              130,
+              101,
+              1264,
+              81
+            ],
+            "art": [
+              102,
+              212,
+              1296,
+              1710
+            ],
+            "type": [
+              130,
+              1181,
+              1244,
+              115
+            ],
+            "rarity": [
+              1202,
+              1198,
+              180,
+              86
+            ],
+            "text": [
+              129,
+              1324,
+              1242,
+              540
+            ],
+            "textPadding": [
+              0,
+              0
+            ],
+            "ptBox": [
+              1136,
+              1858,
+              282,
+              154
+            ],
+            "pt": [
+              1189,
+              1894,
+              205,
+              79
+            ],
+            "footer": [
+              97,
+              1980,
+              1305,
+              36
+            ]
+          },
+          "layers": [
+            {
+              "art": true,
+              "box": [
+                102,
+                212,
+                1296,
+                1710
+              ]
+            },
+            {
+              "fill": "rgba(233,225,199,0.78)",
+              "mask": "pw-MaskText.png"
+            },
+            {
+              "files": {
+                "w": "pw-W.png",
+                "u": "pw-U.png",
+                "b": "pw-B.png",
+                "r": "pw-R.png",
+                "g": "pw-G.png",
+                "m": "pw-M.png",
+                "a": "pw-A.png",
+                "l": "pw-L.png",
+                "c": "pw-C.png"
+              }
+            }
+          ],
+          "abilities": {
+            "count": 4,
+            "top": 1320,
+            "bottom": 1870,
+            "textLeft": 270,
+            "textWidth": 1100,
+            "icon": [
+              48,
+              196,
+              150
+            ],
+            "up": "pw-Plus.png",
+            "down": "pw-Minus.png",
+            "naught": "pw-Neutral.png",
+            "font": {
+              "size": 61,
+              "color": "#ffffff"
+            }
+          },
+          "counter": {
+            "box": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "number": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "font": {
+              "size": 78,
+              "color": "#ffffff"
+            }
+          }
+        },
+        "planeswalker4": {
+          "width": 1500,
+          "height": 2100,
+          "radius": 50,
+          "layout": {
+            "name": [
+              130,
+              78,
+              1240,
+              115
+            ],
+            "cost": [
+              130,
+              101,
+              1264,
+              81
+            ],
+            "art": [
+              102,
+              212,
+              1296,
+              1710
+            ],
+            "type": [
+              130,
+              1181,
+              1244,
+              115
+            ],
+            "rarity": [
+              1202,
+              1198,
+              180,
+              86
+            ],
+            "text": [
+              129,
+              1324,
+              1242,
+              540
+            ],
+            "textPadding": [
+              0,
+              0
+            ],
+            "ptBox": [
+              1136,
+              1858,
+              282,
+              154
+            ],
+            "pt": [
+              1189,
+              1894,
+              205,
+              79
+            ],
+            "footer": [
+              97,
+              1980,
+              1305,
+              36
+            ]
+          },
+          "layers": [
+            {
+              "art": true,
+              "box": [
+                102,
+                212,
+                1296,
+                1710
+              ]
+            },
+            {
+              "fill": "rgba(233,225,199,0.78)",
+              "mask": "pw-MaskText.png"
+            },
+            {
+              "files": {
+                "w": "pw-W.png",
+                "u": "pw-U.png",
+                "b": "pw-B.png",
+                "r": "pw-R.png",
+                "g": "pw-G.png",
+                "m": "pw-M.png",
+                "a": "pw-A.png",
+                "l": "pw-L.png",
+                "c": "pw-C.png"
+              }
+            }
+          ],
+          "abilities": {
+            "count": 4,
+            "top": 1320,
+            "bottom": 1870,
+            "textLeft": 270,
+            "textWidth": 1100,
+            "icon": [
+              48,
+              196,
+              150
+            ],
+            "up": "pw-Plus.png",
+            "down": "pw-Minus.png",
+            "naught": "pw-Neutral.png",
+            "font": {
+              "size": 61,
+              "color": "#ffffff"
+            }
+          },
+          "counter": {
+            "box": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "number": [
+              1209,
+              1894,
+              210,
+              78
+            ],
+            "font": {
+              "size": 78,
+              "color": "#ffffff"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

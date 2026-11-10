@@ -1,0 +1,13 @@
+Name:巴内斯
+ManaCost:U R G W
+Types:Legendary Creature Human
+PT:3/4
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSeek | TriggerDescription$ When CARDNAME enters, seek and reveal a creature card. Create a token that's a copy of that card, except it's 1/1.
+DeckHas:Ability$Token
+SVar:TrigSeek:DB$ Seek | Type$ Card.Creature | RememberFound$ True | SubAbility$ DBReveal
+SVar:DBReveal:DB$ Reveal | Defined$ You | RevealDefined$ Remembered | RevealToAll$ True | SubAbility$ DBCopy
+SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | SetPower$ 1 | SetToughness$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:当巴内斯进战场时，取出并展示一张生物牌。派出一个衍生物，其为该牌的复制品，但它是1/1。
+# 中文规则: 当巴内斯进战场时，取出并展示一张生物牌。派出一个衍生物，其为该牌的复制品，但它是1/1。
+# 卡面: {"crop":{"x":0.468,"y":0.409,"zoom":1},"frame":"borderless"}

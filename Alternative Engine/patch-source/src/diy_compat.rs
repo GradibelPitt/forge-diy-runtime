@@ -1,5 +1,12 @@
 use std::collections::BTreeMap;
 
+const STARTING_LIFE_GAIN_BASE: i32 = -1_910_000_000;
+
+pub fn starting_life_gain(value: i32) -> Option<i32> {
+    let amount = STARTING_LIFE_GAIN_BASE.checked_sub(value)?;
+    (1..=1000).contains(&amount).then_some(amount)
+}
+
 fn record(line:&str)->Option<(&str,&str)> {
     if line.starts_with("SVar:"){let at=line[5..].find(':')?+6;Some((&line[..at],&line[at..]))}
     else if ["A:","T:","R:","S:"].iter().any(|p|line.starts_with(p)){Some((&line[..2],&line[2..]))}
@@ -58,6 +65,14 @@ pub fn lower(script:&str,catalog:&BTreeMap<String,String>)->String {
         }
         let Some((prefix,body))=record(line) else {lines.push(line.to_owned());continue;};
         let mut p=params(body);let original=p.clone();
+        if p.get("DB").is_some_and(|v|v=="GainLife")
+            && p.get("Defined").is_some_and(|v|v=="You")
+            && p.get("AdjustStartingLife").is_some_and(|v|v=="True") {
+            if let Some(amount)=p.get("LifeAmount").and_then(|v|v.parse::<i32>().ok()).filter(|n|(1..=1000).contains(n)) {
+                p.insert("LifeAmount".into(),(STARTING_LIFE_GAIN_BASE-amount).to_string());
+                p.remove("AdjustStartingLife");
+            }
+        }
         if p.get("Mode").is_some_and(|v|v=="ChangesZone")&&p.get("Destination").is_some_and(|v|v=="Library")
             &&p.get("InvertValidCause").is_some_and(|v|v=="True")&&p.get("NotThisAbility").is_some_and(|v|v=="True") {
             if let Some(name)=p.get("ValidCause").and_then(|v|v.strip_prefix("SpellAbility.named")) {
@@ -198,6 +213,21 @@ pub fn lower_registration(message:&mut serde_json::Value) {
 }
 
 #[cfg(test)]mod tests {
+    #[test]
+    fn starting_life_gain_requires_explicit_opt_in() {
+        let plain="Name:Test\nSVar:Bonus:DB$ GainLife | Defined$ You | LifeAmount$ 10\n";
+        let marked=plain.replace("LifeAmount$ 10","LifeAmount$ 10 | AdjustStartingLife$ True");
+        let catalog=std::collections::BTreeMap::new();
+        let ordinary=super::lower(plain,&catalog);
+        let adjusted=super::lower(&marked,&catalog);
+        assert!(!ordinary.contains("-1910000010"));
+        assert!(adjusted.contains("LifeAmount$ -1910000010"));
+        assert!(!adjusted.contains("AdjustStartingLife"));
+        assert_eq!(super::starting_life_gain(-1910000010),Some(10));
+        assert_eq!(super::starting_life_gain(-1900000003),None);
+        assert_eq!(super::starting_life_gain(10),None);
+        assert_eq!(super::starting_life_gain(i32::MAX),None);
+    }
     use super::*;
     #[test]fn emblem_variables_do_not_rename_effect_api_names(){
         let catalog=BTreeMap::from([("Test Emblem".into(),"Name:Test Emblem\nT:Mode$ Phase | Phase$ Upkeep | Execute$ Cleanup\nSVar:Cleanup:DB$ Cleanup | ClearRemembered$ True\n".into())]);

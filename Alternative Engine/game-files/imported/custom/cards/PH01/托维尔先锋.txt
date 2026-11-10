@@ -1,0 +1,14 @@
+Name:托维尔先锋
+ManaCost:W W
+Types:Creature
+PT:1/4
+K:Vigilance
+K:Reach
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ Trig1 | TriggerDescription$ When CARDNAME enters, you gain 3 life.
+SVar:Trig1:DB$ GainLife | Defined$ You | LifeAmount$ 3
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigGainLifeDeath | TriggerDescription$ When CARDNAME dies, you gain 3 life.
+DeckHas:Ability$LifeGain
+SVar:TrigGainLifeDeath:DB$ GainLife | Defined$ TriggeredCardController | LifeAmount$ 3
+Oracle:警戒，延势。\n当托维尔先锋进战场和死去时，你获得3点生命。
+# 中文规则: 警戒，延势
+# 中文规则: 当托维尔先锋进战场时，你获得3点生命。

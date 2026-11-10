@@ -1,0 +1,10 @@
+Name:召唤师达克玛洛
+ManaCost:2 R R
+Types:Legendary Creature Zombie Warlock
+PT:4/4
+K:Deathtouch
+S:Mode$ Panharmonicon | ValidMode$ ChangesZone,ChangesZoneAll | ValidCard$ Permanent.YouCtrl | ValidCause$ Permanent | Origin$ Battlefield | Description$ If a permanent leaving the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.
+A:AB$ PutCounter | Cost$ B Sac<1/Permanent.!token/nontoken permanent> | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ CreateMunitions | SpellDescription$ Put a +1/+1 counter on CARDNAME. Create a colorless artifact token named Munitions with "When this token leaves the battlefield, it deals 2 damage to any target."
+SVar:CreateMunitions:DB$ Token | TokenScript$ c_a_dakmaro_munitions | TokenOwner$ You
+DeckHas:Ability$Sacrifice|Counters|Token
+Oracle:死触\n如果由你操控之永久物的触发式异能因永久物离开战场而触发，则该异能额外触发一次。\n{B}，牺牲一个非衍生永久物：在达克玛洛上放置一个+1/+1指示物。派出一个名为「军械」的无色衍生神器，且具有「当此衍生物离开战场时，它对任意一个目标造成2点伤害。」

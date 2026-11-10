@@ -1,0 +1,15 @@
+Name:青玉魔像
+ManaCost:0
+Types:Artifact Creature Golem
+PT:0/0
+K:etbCounter:P1P1:X
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | CheckSVar$ JadeEmblemCount | SVarCompare$ EQ0 | Execute$ CreateJadeCounterEmblem | Static$ True | TriggerDescription$ When CARDNAME enters the battlefield, create your Jade Golem counter emblem if you don't have one.
+SVar:CreateJadeCounterEmblem:DB$ Effect | Name$ Emblem — 青玉魔像计数 | Triggers$ InitializeJadeCount,TrackJadeGolems | Duration$ Permanent | Unique$ True | ConditionCheckSVar$ JadeEmblemCount | ConditionSVarCompare$ EQ0
+SVar:InitializeJadeCount:Mode$ Always | TriggerZones$ Command | CheckSVar$ JadeCount | SVarCompare$ EQ0 | Static$ True | Execute$ AddInitialJadeCount | TriggerDescription$ When CARDNAME has no storage counters on it, put a storage counter on it.
+SVar:AddInitialJadeCount:DB$ PutCounter | Defined$ Self | CounterType$ STORAGE | CounterNum$ 1
+SVar:TrackJadeGolems:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.named青玉魔像+YouCtrl | TriggerZones$ Command | Static$ True | Execute$ AddJadeCount | TriggerDescription$ Whenever a Jade Golem enters the battlefield under your control, put a storage counter on CARDNAME.
+SVar:AddJadeCount:DB$ PutCounter | Defined$ Self | CounterType$ STORAGE | CounterNum$ 1
+SVar:JadeCount:Count$CardCounters.STORAGE
+SVar:JadeEmblemCount:Count$ValidCommand Effect.YouCtrl+namedEmblem — 青玉魔像计数
+SVar:X:Count$ValidCommand Effect.YouCtrl+namedEmblem — 青玉魔像计数$CardCounters.STORAGE/Plus.1
+Oracle:青玉魔像进战场时其上有X个+1/+1指示物，其中X为本局游戏中在你的操控下进过战场的青玉魔像数量。

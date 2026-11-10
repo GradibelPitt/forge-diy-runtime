@@ -3,14 +3,16 @@ param(
     [string]$Desktop = [Environment]::GetFolderPath('Desktop')
 )
 $ErrorActionPreference = 'Stop'
-$packageRoot = Join-Path $PSScriptRoot 'release'
+$packageRoot = Join-Path $PSScriptRoot '../game-files/runtime/hearthstone'
 $manifest = Get-Content -LiteralPath (Join-Path $packageRoot 'release.json') -Raw | ConvertFrom-Json
 $original = Join-Path $Installation 'runtime/native/mtg-engine-sidecar.exe'
 if ((Get-FileHash -LiteralPath $original).Hash.ToLowerInvariant() -ne 'ded7eb5f02d6b6df2186cb78144881d6350028a474c6658577c3fe7388a59e7b') {
     throw 'This integration requires the verified Solo Arcanum 0.3.29 engine.'
 }
 $destination = Join-Path $Installation 'runtime/hearthstone'
+& (Join-Path $PSScriptRoot '../tools/Initialize-Assets.ps1') -Installation $Installation
 & (Join-Path $PSScriptRoot 'Install-CardImages.ps1') -Installation $Installation
+& (Join-Path $PSScriptRoot 'Install-CardmakerStyle.ps1') -Installation $Installation
 [System.IO.Directory]::CreateDirectory($destination) | Out-Null
 foreach ($file in $manifest.files) {
     $source = Join-Path $packageRoot $file.name

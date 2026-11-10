@@ -1,0 +1,13 @@
+Name:心灵视界
+ManaCost:U
+Types:Instant
+A:SP$ RevealHand | ValidTgts$ Opponent | Look$ True | RememberRevealed$ True | SubAbility$ DBChooseCard | SpellDescription$ Look at target opponent's hand, then choose a card from it. Conjure a duplicate of the card with the chosen name into your hand. It perpetually gains prismatic and "This spell costs {1} less to cast."
+SVar:DBChooseCard:DB$ ChooseCard | ChoiceZone$ Hand | Choices$ Card.IsRemembered | ChoiceTitle$ Choose a card from that opponent's hand | Mandatory$ True | SubAbility$ DBForgetRevealed
+SVar:DBForgetRevealed:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBConjure
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | DefinedName$ ChosenCard | Zone$ Hand | RememberMade$ True | SubAbility$ GrantPrismatic
+SVar:GrantPrismatic:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ Prismatic,ReduceCost | Duration$ Permanent | SubAbility$ DBCleanup | StackDescription$ None
+SVar:Prismatic:Mode$ ManaConvert | EffectZone$ Command | ValidPlayer$ You | ValidCard$ Card.IsRemembered | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ 虹彩（你可以用任意颜色的法术力支付此咒语的法术力费用）。
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Card.IsRemembered | Type$ Spell | Amount$ 1 | EffectZone$ Command | Description$ This spell costs {1} less to cast.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+AI:RemoveDeck:Random
+Oracle:检视目标对手的手牌，然后从中选择一张牌。将一张与该牌同名之牌幻变到你手上。它永久获得虹彩异能，且减少{1}来施放。

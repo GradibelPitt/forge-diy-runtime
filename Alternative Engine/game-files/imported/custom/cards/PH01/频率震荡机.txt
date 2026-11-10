@@ -1,0 +1,9 @@
+Name:频率震荡机
+ManaCost:1
+Types:Artifact Creature Construct
+PT:2/1
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBoon | TriggerDescription$ When CARDNAME enters, you get a one-time boon with "The next artifact creature spell you cast costs {1} less to cast."
+SVar:TrigBoon:DB$ Effect | Boon$ True | Duration$ Permanent | StaticAbilities$ ReduceCost | ForgetOnCast$ Artifact.Creature+YouCtrl | SpellDescription$ You get a one-time boon with "The next artifact creature spell you cast costs {1} less to cast."
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Artifact.Creature | Type$ Spell | Activator$ You | Amount$ 1 | Description$ The next artifact creature spell you cast costs {1} less to cast.
+Oracle:当频率震荡机进战场时，你的下一张神器生物咒语减少{1}来施放
+# 中文规则: 当频率震荡机进战场时，你的下一张神器生物咒语减少{1}来施放

@@ -1,0 +1,122 @@
+[
+  {
+    "before": "const U=744,Y=1039,",
+    "after": "const U=1500,Y=2100,"
+  },
+  {
+    "before": "function bl(){if(typeof document>\"u\")return Promise.resolve();if(!sa){if(!document.getElementById(\"at-noto-sc-face\")){const e=document.createElement(\"style\");e.id=\"at-noto-sc-face\",e.textContent='@font-face{font-family:\"AT Noto SC\";src:url(\"/fonts/NotoSansSC-subset-3812.woff2\") format(\"woff2\");font-weight:100 900;font-display:swap}',document.head.appendChild(e)}sa=Promise.all([\"400\",\"500\",\"700\",\"800\"].map(e=>document.fonts.load(`${e} 24px \"AT Noto SC\"`,\"卡牌规则\"))).then(()=>{}).catch(()=>{})}return sa}",
+    "after": "function bl(){return soloLoadFonts()}"
+  },
+  {
+    "before": "async function en(e){if(e.frame.kind===\"pack\"){const f=e.frame;await Promise.all(cl(f.frame,e).map(async file=>{const key=`${f.packId}/${file}`;let task=mtgsmithImageTasks.get(key);if(!task){task=(async()=>{const src=G?`/__frame-packs/${key}`:await V(\"frame_pack_image\",{pack:f.packId,file});const img=new Image;await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=()=>reject(new Error(\"牌框资源加载失败：\"+file));img.src=src});Lt.set(key,img);return img})();mtgsmithImageTasks.set(key,task);task.catch(()=>mtgsmithImageTasks.delete(key))}f.images[file]=await task}))}const t=new Set;for(const i of[e.manaCost,...e.rules,e.adventure?.manaCost??\"\",...e.adventure?.rules??[]])for(const s of i.matchAll(zs))t.add(s[1]);const a=new Set([Zs.sheet.url]);for(const i of t){const s=Fr(i);s&&a.add(s.sheet.url)}const n=new Map;return await Promise.all([bl(),...[...a].map(async i=>{try{n.set(i,await Cl(i))}catch{}})]),n}",
+    "after": "async function en(e){return soloPrepareCard(e)}"
+  },
+  {
+    "before": "function yr(e,t,a,n,i,s){const d={title:n.ink,rules:n.ink,foot:t.style?.border===\"white\"?\"#1a1a1a\":\"#e9e5da\",divider:n.boxEdge,shadow:!1};As(e,t),La(e,t,n,{x:26,y:26,width:U-52,height:Y-88},18),s&&(e.save(),je(e,i.art.x,i.art.y,i.art.width,i.art.height,18),e.clip(),pt(e,t,n,i.art,{inset:!1,placeholder:!0}),e.restore()),(t.isLegendary&&t.style?.crown!==\"off\"||t.style?.crown===\"on\")&&(e.save(),e.strokeStyle=Ae(n.frame[0],.3),e.lineWidth=6,je(e,i.name.x-8,i.name.y-10,i.name.width+16,i.name.height+18,30),e.stroke(),e.restore()),ia(e,n,i.name.x,i.name.y,i.name.width,i.name.height),s||pt(e,t,n,i.art,{inset:!0,placeholder:!0}),ia(e,n,i.type.x,i.type.y,i.type.width,i.type.height),Un(e,a,t,i,d),e.save(),s?(e.globalAlpha=.84,je(e,i.text.x,i.text.y,i.text.width,i.text.height,12),e.fillStyle=Ae(n.box,.25),e.fill(),e.globalAlpha=1,e.strokeStyle=n.boxEdge,e.lineWidth=3,e.stroke()):(e.fillStyle=Ae(n.box,.25),e.strokeStyle=n.boxEdge,e.lineWidth=3,e.fillRect(i.text.x,i.text.y,i.text.width,i.text.height),e.strokeRect(i.text.x,i.text.y,i.text.width,i.text.height)),e.restore();const o=!!(t.power||t.toughness||t.loyalty);Wn(t,a,e,d,{...i.text,height:i.text.height-(o?26:0)}),nn(e,t,i.pt,{color:d.title,shadow:!1},u=>ia(e,{...n,box:n.pt},u.x,u.y,u.width,u.height)),tn(e,t,i.footer,d.foot,!1,o?i.pt.x:null)}",
+    "after": "function yr(e,t,a){return an(e,t,a)}"
+  },
+  {
+    "before": "function jl(e,t,a,n,i){const s={title:\"#f6f1e3\",rules:\"#18140e\",foot:\"#ece6d6\",divider:\"#7d6c50\",shadow:!0};As(e,t),La(e,t,n,{x:30,y:30,width:U-60,height:Y-60},10),e.save(),e.lineWidth=4,e.strokeStyle=Ae(n.frame[0],.35),e.strokeRect(46,36,U-92,Y-110),e.strokeStyle=Ae(n.frame[1],-.45),e.strokeRect(50,40,U-100,Y-118),e.restore(),pt(e,t,n,i.art,{inset:!0,placeholder:!0}),e.save(),e.fillStyle=Ae(n.frame[1],-.35),e.globalAlpha=.55,e.fillRect(i.type.x,i.type.y,i.type.width,i.type.height),e.restore(),Un(e,a,t,i,s),e.save(),je(e,i.text.x,i.text.y,i.text.width,i.text.height,16);const d=e.createLinearGradient(0,i.text.y,0,i.text.y+i.text.height);d.addColorStop(0,\"#efe5cb\"),d.addColorStop(1,\"#d9c9a3\"),e.fillStyle=d,e.fill(),e.strokeStyle=Ae(n.frame[1],-.4),e.lineWidth=4,e.stroke(),e.restore(),Wn(t,a,e,{...s,shadow:!1},i.text),nn(e,t,i.pt,{color:s.title,shadow:!0},null),tn(e,t,i.footer,s.foot,!0,t.power||t.toughness||t.loyalty?i.pt.x:null)}",
+    "after": "function jl(e,t,a){return an(e,t,a)}"
+  },
+  {
+    "before": "function kl(e,t,a,n,i){const s={title:\"#f7f4ec\",rules:\"#f3efe4\",foot:\"#efeadf\",divider:\"#ffffff66\",shadow:!0};e.save(),je(e,0,0,U,Y,38),e.clip(),pt(e,t,n,i.art,{inset:!1,placeholder:!0});const d=e.createLinearGradient(0,Y*.5,0,Y);d.addColorStop(0,\"rgba(0,0,0,0)\"),d.addColorStop(1,\"rgba(0,0,0,0.55)\"),e.fillStyle=d,e.fillRect(0,0,U,Y),e.restore(),vn(e,i.name,i.name.height/2.4,.5),vn(e,i.type,i.type.height/2.4,.5),Un(e,a,t,i,s),vn(e,i.text,14,.55);const o=!!(t.power||t.toughness||t.loyalty);Wn(t,a,e,s,{...i.text,height:i.text.height-(o?20:0)}),nn(e,t,i.pt,{color:s.title,shadow:!0},u=>vn(e,u,u.height/2.4,.6)),tn(e,t,i.footer,s.foot,!0,o?i.pt.x:null)}",
+    "after": "function kl(e,t,a){return an(e,t,a)}"
+  },
+  {
+    "before": "function Sl(e,t,a,n,i,s){const d=i.layout,o={title:i.titleInk,rules:i.ink,foot:i.footInk,divider:i.ink,shadow:!1};e.save(),je(e,0,0,U,Y,38),e.clip(),e.fillStyle=\"#0b0a09\",e.fillRect(0,0,U,Y),pt(e,t,n,d.art,{inset:!1,placeholder:!0}),s&&e.drawImage(s,0,0,U,Y),e.restore(),Un(e,a,t,d,o),Wn(t,a,e,o,d.text),nn(e,t,d.pt,{color:o.title,shadow:!1},null),tn(e,t,d.footer,o.foot,!1,null)}",
+    "after": "function Sl(e,t,a){return an(e,t,a)}"
+  },
+  {
+    "before": "function an(e,t,a){const n=nl(t);e.clearRect(0,0,U,Y),e.imageSmoothingEnabled=!0,e.imageSmoothingQuality=\"high\";const i=t.frame;switch(i.kind){case\"old\":return jl(e,t,a,n,ys);case\"borderless\":return kl(e,t,a,n,bs);case\"fullart\":return yr(e,t,a,n,Cs,!0);case\"custom\":return Sl(e,t,a,n,i.frame,i.image);case\"pack\":return Pl(e,t,a,n,i.frame,i.images);default:return yr(e,t,a,n,Ia,!1)}}",
+    "after": "function an(e,t,a){soloEnsureFrame(t);e.clearRect(0,0,U,Y);e.imageSmoothingEnabled=true;e.imageSmoothingQuality=\"high\";return Pl(e,t,a,nl(t),t.frame.frame,t.frame.images)}"
+  },
+  {
+    "before": "function _n(e,t,a){return ut(e)?`700 ${t}px ${Kt}`:`700 ${t}px ${a?`\"${a}\", ${pr}`:pr}`}",
+    "after": "function _n(e,t,a){return soloTextFont(e,t,a)}"
+  },
+  {
+    "before": "const Kt='\"AT Noto SC\", \"Noto Sans SC\", \"Source Han Sans SC\", \"Microsoft YaHei UI\", \"Microsoft YaHei\", \"PingFang SC\", sans-serif',pr='\"Beleren Bold\", \"Beleren\", \"Palatino Linotype\", \"Book Antiqua\", Georgia, serif',ba='\"MPlantin\", \"Plantin MT Pro\", \"Plantin\", Georgia, \"Times New Roman\", serif',Yn='\"Beleren Bold\", \"Beleren\", \"Times New Roman\", Georgia, serif',mr='\"Beleren Small Caps Bold\", \"Beleren Small Caps\", \"Segoe UI\", \"Microsoft YaHei UI\", sans-serif';",
+    "after": "const Kt='\"Solo Card Rules\"',pr='\"Solo Latin Title\"',ba='\"Solo Latin Rules\"',Yn='\"Solo Card PT\"',mr='\"Solo Latin Rules\"';"
+  },
+  {
+    "before": "function ht(e,t,a,n,i,s,d=Yn){let o=n;for(e.font=`700 ${o}px ${d}`;o>6&&e.measureText(t).width>a.width*1.05;)o-=.5,e.font=`700 ${o}px ${d}`;Vn(e,s,()=>{e.fillStyle=i,e.textAlign=\"center\",e.textBaseline=\"alphabetic\",e.fillText(t,a.x+a.width/2,a.y+a.height/2+o*.35)},o/20)}",
+    "after": "function ht(e,t,a,n,i,s,d=Yn){let o=n;for(e.font=`400 ${o}px ${d}`;o>6&&e.measureText(t).width>a.width*1.05;)o-=.5,e.font=`400 ${o}px ${d}`;Vn(e,s,()=>{e.fillStyle=i,e.textAlign=\"center\",e.textBaseline=\"alphabetic\",e.fillText(t,a.x+a.width/2,a.y+a.height/2+o*.35)},o/20)}"
+  },
+  {
+    "before": "const Bn=e=>({cjkFonts:{family:Kt,weight:500,boldWeight:750},latinFonts:{family:e?`\"${e}\", ${ba}`:ba,weight:400,boldWeight:700}});",
+    "after": "const Bn=e=>({cjkFonts:{family:'\"Solo Card Rules\"',weight:400,boldWeight:400},latinFonts:{family:'\"Solo Latin Rules\"',weight:400,boldWeight:400}});"
+  },
+  {
+    "before": "function ks(e,t,a){return`${t.italic?\"italic \":\"\"}${t.bold?e.boldWeight:e.weight} ${a}px ${e.family}`}",
+    "after": "function ks(e,t,a){const family=t.italic?(e.family.includes(\"Solo Card Rules\")?\"Solo Card Type\":\"Solo Latin Italic\"):e.family;return `400 ${a}px ${family.startsWith(\"\\\"\")?family:`\"${family}\"`}`}"
+  },
+  {
+    "before": "function tn(e,t,a,n,i,s){const d=Math.max(11,a.height*.36);Vn(e,i,()=>{e.fillStyle=n,e.textBaseline=\"alphabetic\",e.textAlign=\"left\",e.font=`700 ${d}px ${mr}`;const o=[t.collectorNumber,t.rarity].filter(Boolean).join(\" \"),u=ut(t.title+t.typeLine)?\"ZH\":\"EN\",c=`${t.setCode||\"DIY\"} • ${u}`,p=a.y+a.height*.44,y=a.y+a.height*.9;o&&e.fillText(o,a.x,p),e.fillText(c,a.x,y);const m=t.artist.trim();if(m){const x=a.x+e.measureText(c).width+d*.7;xl(e,x,y,d),e.font=`700 ${d}px ${ut(m)?Kt:mr}`,e.fillText(m,x+d*1.25,y)}e.textAlign=\"right\",e.font=`600 ${d*.92}px ${Kt}`,e.globalAlpha=.85;const b=s!==null?s-d*.6:a.x+a.width;e.fillText(l(\"DIY · 非官方卡牌\"),b,s!==null?p:y)})}",
+    "after": "function tn(e,t,a,n,i,s){e.save();e.fillStyle=n;e.textBaseline='alphabetic';e.textAlign='left';const size=23*U/1500;e.font='400 '+size+'px \"Solo Latin Rules\"';const text=[t.collectorNumber,t.rarity].filter(Boolean).join(' ')+' • '+(t.setCode||'DIY')+' • '+(ut(t.title+t.typeLine)?'ZH':'EN');e.fillText(text.trim(),a.x,a.y+size);e.restore()}"
+  },
+  {
+    "before": "const o=Fr(a),u=o?t.get(o.sheet.url):void 0;",
+    "after": "const own=t.get(\"cardsmith:\"+a);if(own){e.save();e.imageSmoothingQuality=\"high\";e.drawImage(own,n,i,s,s);e.restore();return}const o=Fr(a),u=o?t.get(o.sheet.url):void 0;"
+  },
+  {
+    "before": "function Ts(e,t,a,n,i,s,d=!1){d&&",
+    "after": "function Ts(e,t,a,n,i,s,d=!1){d=false;d&&"
+  },
+  {
+    "before": "o=Math.min(i.height*.78,40),u=o*.06",
+    "after": "o=i.height,u=0"
+  },
+  {
+    "before": "artUnder:o||s!==\"normal\"",
+    "after": "artUnder:true"
+  },
+  {
+    "before": "const p=c*(i?1.3:1.2)",
+    "after": "const p=c*1.08"
+  },
+  {
+    "before": "k=x===0?0:c*.35",
+    "after": "k=x===0?0:c*.16"
+  },
+  {
+    "before": "function _s(e){if(e.some(t=>t.id===\"mtgsmith\"&&t.frames.some(a=>a.id===\"m15\")))return\"pack:mtgsmith/m15\";return e.some(t=>t.id===\"mse\"&&t.frames.some(a=>a.id===\"m15\"))?\"pack:mse/m15\":\"modern\"}",
+    "after": "function _s(e){return \"pack:mtgsmith/m15\"}"
+  },
+  {
+    "before": "function jr(e){return e.flatMap(t=>t.frames.map(a=>({value:Hl(t,a),label:`${t.name}：${a.name}`})))}",
+    "after": "function jr(e){return soloCardsmithFrames.map(frame=>({value:\"pack:mtgsmith/\"+frame.id,label:frame.name}))}"
+  },
+  {
+    "before": "j.useCallback(h=>{if(h===\"auto\"&&(h=We),h.startsWith(\"pack:\")){const f=Os(h,Re);return f?{kind:\"pack\",packId:f.pack.id,frame:f.frame,images:{}}:{kind:\"modern\"}}if(h.startsWith(\"custom:\")){const f=De.find(A=>A.id===h.slice(7));return f?{kind:\"custom\",frame:f,image:Ps(f,()=>ln(A=>A+1))}:{kind:\"modern\"}}return{kind:Rn.some(f=>f.id===h)?h:\"modern\"}},[We,Re,De,sn])",
+    "after": "j.useCallback(h=>soloFrame(h===\"auto\"?We:h,o.face.style),[We,Re,De,sn,o.face.style])"
+  },
+  {
+    "before": "j.useMemo(()=>[{value:\"auto\",label:l(\"跟系列（{frameLabel}）\",{frameLabel:ao(We,De,Re)}),group:l(\"系列\")},...Re.flatMap(h=>h.frames.map(f=>({value:`pack:${h.id}/${f.id}`,label:f.name,group:h.name}))),...Rn.map(h=>({value:h.id,label:h.label,group:l(\"内置（画出来的）\")})),...De.map(h=>({value:`custom:${h.id}`,label:h.name,group:l(\"自定义\")}))],[We,De,Re])",
+    "after": "j.useMemo(()=>soloCardsmithFrames.map(f=>({value:\"pack:mtgsmith/\"+f.id,label:f.name,group:\"Cardsmith\"})),[])"
+  },
+  {
+    "before": "options:F,value:o.face.frame||\"auto\"",
+    "after": "options:F,value:\"pack:mtgsmith/\"+soloFrameId(o.face.frame,o.face.style)"
+  },
+  {
+    "before": "onPick:h=>pe(f=>({...f,face:{...f.face,frame:h}}))",
+    "after": "onPick:h=>pe(f=>({...f,face:{...f.face,frame:h,style:{...f.face.style,art:\"normal\"}}}))"
+  },
+  {
+    "before": "Re.length===0&&!G&&r.jsx(\"small\",{children:l(\"默认使用本地 MTGCardsmith 资源，按颜色、传奇与鹏洛客类型自动选框；也可手动选择其他牌框\")}),r.jsx(\"button\",{type:\"button\",className:\"diy-editor-frame-manage\",onClick:()=>yt(!0),children:l(\"管理牌框…\")})",
+    "after": "r.jsx(\"small\",{children:\"使用指定 Cardsmith 牌框与字体\"})"
+  },
+  {
+    "before": "Rn.map(C=>r.jsx(\"option\",{value:C.id,children:C.label},C.id)),y.map(C=>r.jsx(\"option\",{value:`custom:${C.id}`,children:l(\"自定义：{name}\",{name:C.name})},C.id)),",
+    "after": ""
+  },
+  {
+    "before": "function wl(e,t,a){",
+    "after": "function wl(e,t,a){if(t.frame?.packId===\"mtgsmith\")return;"
+  },
+  {
+    "before": "checked:i.setSymbol!==!1,onChange:c=>s(\"setSymbol\",c.target.checked?void 0:!1)",
+    "after": "checked:e.frame?.packId===\"mtgsmith\"?false:i.setSymbol!==!1,disabled:e.frame?.packId===\"mtgsmith\",onChange:c=>s(\"setSymbol\",c.target.checked?void 0:!1)"
+  }
+]

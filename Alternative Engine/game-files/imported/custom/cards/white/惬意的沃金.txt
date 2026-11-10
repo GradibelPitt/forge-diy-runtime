@@ -1,0 +1,10 @@
+Name:惬意的沃金
+ManaCost:1 W W
+Types:Legendary Creature Troll Monk
+PT:3/3
+K:Lifelink
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When CARDNAME enters, choose two other target creatures. For each of those creatures, put a number of +1/+1 counters on it equal to the other creature's power.
+SVar:TrigCounters:DB$ PutCounter | Defined$ Targeted | CounterType$ P1P1 | CounterNumPerDefined$ X | ValidTgts$ Creature.Other | TargetMin$ 2 | TargetMax$ 2 | TargetUnique$ True | TgtPrompt$ Select two other target creatures
+SVar:X:Count$Valid Targeted.Other$CardPower
+A:AB$ PutCounter | Cost$ G Sac<1/Creature.powerEQ1+toughnessEQ1> | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 2 | TgtPrompt$ Select target creature | SpellDescription$ Put two +1/+1 counters on target creature.
+Oracle:系命\n当惬意的沃金进战场时，选择两个其他目标生物。对每个这类生物而言，在其上各放置等同于另一个生物力量的+1/+1指示物。\n{G}，牺牲一个1/1生物：在目标生物上放置两个+1/+1指示物。

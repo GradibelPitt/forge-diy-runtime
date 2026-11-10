@@ -4,3 +4,4 @@
 *.bat text eol=crlf
 *.command text eol=lf
 *.sh text eol=lf
+Alternative[[:space:]]Engine/game-files/**/*.exe filter=lfs diff=lfs merge=lfs -text

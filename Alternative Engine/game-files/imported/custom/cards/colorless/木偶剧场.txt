@@ -1,0 +1,8 @@
+Name:木偶剧场
+ManaCost:2 U U
+Types:Artifact
+K:Durability:2
+A:AB$ MakeCard | Cost$ T SubCounter<1/DURABILITY> | Conjure$ True | TgtPrompt$ Select target nontoken creature you don't control | ValidTgts$ Creature.YouDontCtrl+!token | DefinedName$ Targeted | Zone$ Hand | RememberMade$ True | SubAbility$ DBAnimate | SpellDescription$ Conjure a duplicate of target nontoken creature you don't control into your hand. Its mana cost perpetually becomes {1}, and it perpetually has base power and toughness 1/1.
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | ManaCost$ 1 | Power$ 1 | Toughness$ 1 | Duration$ Perpetual | SubAbility$ DBCleanup | StackDescription$ None
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:耐久2（此永久物进战场时上面有两个耐久指示物。当最后一个耐久指示物从其上移去时，将它牺牲。）\n{T}，从木偶剧场上移去一个耐久指示物：选择目标不由你操控的非衍生生物。幻变一张它的复制品置入你手中。该复制品的法术力费用永久变为{1}，且其基础力量和基础防御力永久变为1/1。

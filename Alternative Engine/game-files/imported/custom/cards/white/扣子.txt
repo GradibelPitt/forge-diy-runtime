@@ -1,0 +1,17 @@
+Name:扣子
+ManaCost:2 W W
+Types:Legendary Creature Zombie Shaman
+PT:4/4
+K:Extort
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When CARDNAME enters, mill five cards. You may put up to one instant or sorcery card milled this way into your hand.
+SVar:TrigMill:DB$ Mill | Defined$ You | NumCards$ 5 | RememberMilled$ True | SubAbility$ DBReturnMilled
+SVar:DBReturnMilled:DB$ ChangeZone | Hidden$ True | Origin$ Graveyard,Exile | Destination$ Hand | ChangeNum$ 1 | ChangeType$ Instant.IsRemembered,Sorcery.IsRemembered | SelectPrompt$ You may choose an instant or sorcery card milled this way | SubAbility$ DBCleanupMilled
+SVar:DBCleanupMilled:DB$ Cleanup | ClearRemembered$ True
+A:AB$ ImmediateTrigger | Cost$ B Sac<1/Creature> | RememberObjects$ Sacrificed | Execute$ TrigReturnSpell | TriggerDescription$ When you do, return target instant or sorcery card from your graveyard that shares a color with the sacrificed creature to your hand. You may cast that card this turn without paying its mana cost. | SpellDescription$ Return target instant or sorcery card from your graveyard that shares a color with the sacrificed creature to your hand. You may cast that card this turn without paying its mana cost.
+SVar:TrigReturnSpell:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouOwn+SharesColorWith TriggerRemembered,Sorcery.YouOwn+SharesColorWith TriggerRemembered | TgtPrompt$ Select target instant or sorcery card in your graveyard that shares a color with the sacrificed creature | RememberChanged$ True | SubAbility$ DBFreeCastEffect
+SVar:DBFreeCastEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ FreeCast | ForgetOnMoved$ Hand | Duration$ UntilEndOfTurn | SubAbility$ DBCleanupReturned
+SVar:FreeCast:Mode$ Continuous | Affected$ Instant.IsRemembered,Sorcery.IsRemembered | MayPlay$ True | MayPlayWithoutManaCost$ True | AffectedZone$ Hand | Description$ You may cast that card this turn without paying its mana cost.
+SVar:DBCleanupReturned:DB$ Cleanup | ClearRemembered$ True
+DeckHas:Ability$Mill|Sacrifice|Graveyard
+DeckHints:Type$Instant|Sorcery
+Oracle:敲诈\n当扣子进场时，磨五张牌。你可以将至多一张以此法磨掉的瞬间或法术牌置于你手上。\n{B}，牺牲一个生物：将目标瞬间或法术牌从你的坟墓场置于你手上。该牌须与以此法牺牲之生物至少共有一种颜色。于本回合中，你可以施放该牌，且不需支付其法术力费用。

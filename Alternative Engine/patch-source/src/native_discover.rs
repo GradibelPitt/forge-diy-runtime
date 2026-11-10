@@ -65,7 +65,20 @@ unsafe fn sample_database(engine: *mut u8, spec: *const u8, candidates: *mut usi
             }
             let path=std::path::PathBuf::from(rules_path).with_file_name(format!("discover-previews-{}.json",std::process::id()));
             let preview=serde_json::json!({"sourceId":source+1,"sourceName":name(engine,source),"player":player,"cards":cards});
-            let _=std::fs::write(path,preview.to_string());
+            // Several draw replacements can prepare choices before the first
+            // one reaches the UI. Keep each batch instead of replacing it.
+            let mut batches=std::fs::read(&path).ok()
+                .and_then(|bytes|serde_json::from_slice::<serde_json::Value>(&bytes).ok())
+                .and_then(|previous|previous["batches"].as_array().cloned())
+                .unwrap_or_default();
+            batches.retain(|batch|batch!=&preview);
+            batches.push(preview.clone());
+            let mut published=preview;
+            published["batches"]=batches.into();
+            let pending=path.with_extension("json.pending");
+            if std::fs::write(&pending,published.to_string()).is_ok() {
+                let _=std::fs::rename(pending,path);
+            }
         }
     }
 }

@@ -1,0 +1,11 @@
+Name:米斯塔·维斯塔
+ManaCost:4 G G
+Types:Legendary Creature Troll Monk
+PT:5/5
+K:Vigilance
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigRebound | TriggerDescription$ When CARDNAME enters, until the end of your next turn, instant and sorcery spells you control have rebound.
+SVar:TrigRebound:DB$ Effect | StaticAbilities$ GrantRebound | Duration$ UntilTheEndOfYourNextTurn
+SVar:GrantRebound:Mode$ Continuous | AddKeyword$ Rebound | Affected$ Instant.YouCtrl,Sorcery.YouCtrl | AffectedZone$ Stack | Description$ Instant and sorcery spells you control have rebound.
+A:AB$ Tap | Cost$ U Return<1/Land/land> | ValidTgts$ Creature | SubAbility$ DBStun | SpellDescription$ Tap target creature. Put a stun counter on it.
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun | CounterNum$ 1
+Oracle:警戒\n当维斯塔进场时，直到你下一个回合的回合结束，由你操控的瞬间与法术咒语具有弹回异能。\n{U}，将一个由你操控的地移回其拥有者手上：横置目标生物。在其上放置一个晕眩指示物。

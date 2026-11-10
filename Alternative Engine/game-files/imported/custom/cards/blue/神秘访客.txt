@@ -1,0 +1,11 @@
+Name:神秘访客
+ManaCost:U U
+Types:Creature Human Cleric Warlock
+PT:2/3
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ GrantOpponentNamePrismatic | TriggerDescription$ When CARDNAME enters, cards you own with names shared by an opponent's cards gain prismatic and "This spell costs {3} less to cast" for the rest of the game.
+SVar:GrantOpponentNamePrismatic:DB$ Effect | RememberObjects$ ValidAll Card.OppOwn | StaticAbilities$ Prismatic,ReduceCost,GenericCost | Duration$ Permanent
+SVar:Prismatic:Mode$ ManaConvert | EffectZone$ Command | ValidPlayer$ You | ValidCard$ Card.YouOwn+sharesNameWith Remembered | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ 虹彩（你可以用任意颜色的法术力支付此咒语的法术力费用）。
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Card.YouOwn+sharesNameWith Remembered | Type$ Spell | Amount$ 3 | EffectZone$ Command | Description$ This spell costs {3} less to cast.
+SVar:GenericCost:Mode$ AlternativeCost | EffectZone$ Command | ValidSA$ Spell | ValidCard$ Card.cmcGE1+YouOwn+sharesNameWith Remembered | ValidPlayer$ You | Cost$ X | XAlternative$ Count$CardManaCost
+AI:RemoveDeck:All
+Oracle:当神秘访客进战场时，你手牌和牌库中与任一对手的牌同名的牌永久获得虹彩异能（你可以用任意颜色的法术力支付此咒语的法术力费用）和「此咒语的施放费用减少{3}」。

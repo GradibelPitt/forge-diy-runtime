@@ -1,0 +1,10 @@
+Name:了不起的杰弗里斯
+ManaCost:U R
+Types:Legendary Creature Elemental
+PT:3/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | CheckSVar$ StartingDeckDuplicateNonlandNames | SVarCompare$ EQ0 | GameActivationLimit$ 1 | Execute$ TrigConjure | TriggerDescription$ 当了不起的杰弗里斯进战场时，若你起始套牌中每张非地牌的名称均不相同，则从先人的召还、闪现、魔力通道、汲取魔力、均势、黑莲花和时间扭曲中选择一张，将其化生到你手上。此异能每局对战只会触发一次。
+SVar:TrigConjure:DB$ MakeCard | Defined$ You | Conjure$ True | Spellbook$ Ancestral Recall,Flash,Channel,Mana Drain,Balance,Black Lotus,Timetwister | Zone$ Hand
+SVar:StartingDeckDuplicateNonlandNames:Count$StartingDeckDuplicateNonlandNames
+Oracle:当了不起的杰弗里斯进战场时，若你起始套牌中每张非地牌的名称均不相同，则从先人的召还、闪现、魔力通道、汲取魔力、均势、黑莲花和时间扭曲中选择一张，将其化生到你手上。此异能每局对战只会触发一次。
+# 中文规则: 当了不起的杰弗里斯进战场时，若你起始套牌中每张非地牌的名称均不相同，则从先人的召还、闪现、魔力通道、汲取魔力、均势、黑莲花和时间扭曲中选择一张，将其化生到你手上。此异能每局对战只会触发一次。
+# 卡面: {"crop":{"x":0.481,"y":0.387,"zoom":1},"frame":"borderless"}

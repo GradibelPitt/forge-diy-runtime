@@ -1,0 +1,13 @@
+Name:枯须铸甲师
+ManaCost:1 W
+Types:Creature Kobold Artificer
+PT:2/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters, you gain 2 life. Then repeat this process once for each creature you don't control.
+DeckHas:Ability$LifeGain
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ DBRepeat
+SVar:DBRepeat:DB$ Repeat | MaxRepeat$ X | RepeatSubAbility$ DBGainLifeAgain | Mandatory$ True | AILogic$ MaxX
+SVar:DBGainLifeAgain:DB$ GainLife | Defined$ You | LifeAmount$ 2
+SVar:X:Count$Valid Creature.YouDontCtrl
+Oracle:当枯须铸甲师进战场时，你获得2点生命。然后每有一个不由你操控的生物，便重复此流程一次。
+# 中文类别: 生物
+# 中文规则: 当枯须铸甲师进战场时，你获得2点生命。然后每有一个不由你操控的生物，便重复此流程一次。

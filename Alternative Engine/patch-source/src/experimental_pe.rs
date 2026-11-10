@@ -57,7 +57,7 @@ pub fn build_mode(original: &[u8], hearthstone: bool) -> io::Result<Vec<u8>> {
     let rva = align(u32_at(&b, last + 12) as usize + u32_at(&b, last + 8) as usize, section_align);
     let raw = align(b.len(), file_align);
     let names = ["HsEmptyDraw", "HsCloneState", "HsMoveState", "HsDropState", "HsCollectDefenders",
-        "HsCanAttack", "HsCanAttackWithoutCost", "HsUpkeep", "HsMoveChoiceSnapshot", "HsDiscoverCandidates", "AiChooseLand", "DiyEvent", "DiySba", "DiyTriggerSources", "DiyEffect", "DiyRegister", "DiyAmount", "DiyCanBlockPair", "DiyValidAtom", "DiyCloneTargets", "DiyMoveCard", "HsSearchFallback"];
+        "HsCanAttack", "HsCanAttackWithoutCost", "HsUpkeep", "HsMoveChoiceSnapshot", "HsDiscoverCandidates", "AiChooseLand", "DiyEvent", "DiySba", "DiyTriggerSources", "DiyEffect", "DiyRegister", "DiyAmount", "DiyCanBlockPair", "DiyValidAtom", "DiyCloneTargets", "DiyMoveCard", "HsSearchFallback", "HsStartGame", "HsTurnDraw"];
     let descriptor_bytes = descriptors.len() + 40;
     let ilt = align(descriptor_bytes, 8);
     let iat = ilt + (names.len() + 1) * 8;
@@ -170,6 +170,34 @@ pub fn build_mode(original: &[u8], hearthstone: bool) -> io::Result<Vec<u8>> {
         b[offset+1..offset+5].copy_from_slice(&relative(stubs[site["name"].as_str().unwrap()], site_rva + 5)?);
     }
     if hearthstone {
+        // The native start player has been finalized; no opening hands or
+        // mulligan choices have been processed yet.
+        let opening_rva = 0x1b962f5;
+        let opening = file_offset(&b, opening_rva)?;
+        let before = [0x41,0x88,0x87,0xc0,0x2d,0,0];
+        if b[opening..opening+before.len()] != before {
+            return Err(io::Error::other("Opening bonus hook preimage mismatch"));
+        }
+        let opening_stub = rva + section.len();
+        section.extend_from_slice(&before);
+        section.extend_from_slice(&[0x4c,0x89,0xf9,0xff,0x15]); // RCX = R15 GameState
+        section.extend_from_slice(&relative(imports["HsStartGame"], rva+section.len()+4)?);
+        section.push(0xe9);
+        section.extend_from_slice(&relative(opening_rva+before.len(), rva+section.len()+4)?);
+        b[opening] = 0xe9;
+        b[opening+1..opening+5].copy_from_slice(&relative(opening_stub, opening_rva+5)?);
+        b[opening+5..opening+before.len()].fill(0x90);
+
+        // Only the turn-based draw; opening hands and spell draws stay native.
+        let turn_draw_rva = 0x1b92e1d;
+        let turn_draw = file_offset(&b, turn_draw_rva)?;
+        let mut before = vec![0xe8];
+        before.extend_from_slice(&relative(0x1bed000, turn_draw_rva+5)?);
+        if b[turn_draw..turn_draw+5] != before {
+            return Err(io::Error::other("Turn draw hook preimage mismatch"));
+        }
+        b[turn_draw+1..turn_draw+5].copy_from_slice(&relative(stubs["HsTurnDraw"], turn_draw_rva+5)?);
+
         // Extended ChangeZone: candidate filtering and requested amount have
         // completed. First ask for a land/allocation; on continuation restore
         // the requested quantity so native ChangeZone moves all selected lands.

@@ -1,0 +1,12 @@
+Name:埃辛诺斯壁垒
+ManaCost:1 W W
+Types:Legendary Artifact
+K:Durability:7
+K:Hexproof
+K:Indestructible
+A:AB$ ChooseSource | Cost$ SubCounter<1/DURABILITY> | Choices$ Card,Emblem | AILogic$ NeedsPrevention | SubAbility$ DBEffect | SpellDescription$ Choose a source. Prevent the next damage that source would deal to target player or the next effect from that source that would cause that player to lose life this turn.
+SVar:DBEffect:DB$ Effect | ValidTgts$ Player | TgtPrompt$ Select target player to protect | ReplacementEffects$ RepDamage,RepLifeLoss | RememberObjects$ Targeted | ConditionDefined$ ChosenCard | ConditionPresent$ Card,Emblem | ConditionCompare$ GE1
+SVar:RepDamage:Event$ DamageDone | ValidTarget$ Player.IsRemembered | ValidSource$ Card.ChosenCardStrict,Emblem.ChosenCard | ReplaceWith$ ExileEffect | PreventionEffect$ True | Description$ The next time the chosen source would deal damage to the targeted player this turn, prevent that damage.
+SVar:RepLifeLoss:Event$ LifeReduced | ValidPlayer$ Player.IsRemembered | ValidSource$ Card.ChosenCardStrict,Emblem.ChosenCard | IsDamage$ False | ReplaceWith$ ExileEffect | Description$ The next time an effect from the chosen source would cause the targeted player to lose life this turn, prevent that life loss.
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:辟邪，不灭。\n耐久7（此永久物进战场时上面有七个耐久指示物。当最后一个耐久指示物从其上移去时，将它牺牲。）\n从埃辛诺斯壁垒上移去一个耐久指示物：选择一个来源。于本回合中，防止该来源下一次将对目标牌手造成的伤害，或防止该来源的效应下一次将使该牌手失去的生命。

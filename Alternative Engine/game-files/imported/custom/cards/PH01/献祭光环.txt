@@ -1,0 +1,8 @@
+Name:献祭光环
+ManaCost:1 R
+Types:Sorcery
+A:SP$ DamageAll | NumDmg$ 1 | ValidCards$ Creature | SubAbility$ DBGrantFlashback | SpellDescription$ 献祭光环对每个生物造成1点伤害。直到本回合结束，你可以从你的坟墓场中施放献祭光环，且不需支付其法术力费用。若你如此做，改为放逐献祭光环。
+DeckHas:Ability$Graveyard
+SVar:DBGrantFlashback:DB$ Effect | RememberObjects$ Self | StaticAbilities$ STFlashback | Duration$ UntilEndOfTurn
+SVar:STFlashback:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | AddKeyword$ Flashback:0 | Description$ 直到本回合结束，你可以从你的坟墓场免费施放献祭光环。若以此法施放，则改为放逐之。
+Oracle:献祭光环对每个生物造成1点伤害。\n直到本回合结束，献祭光环具有闪回0

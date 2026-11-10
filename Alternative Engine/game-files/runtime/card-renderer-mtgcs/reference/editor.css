@@ -1,0 +1,386 @@
+/*fonts*/
+@font-face {
+	font-family: notosans;
+	src: url('../fonts/NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: gothambold;
+	src: url("../fonts/gothambold.otf") format('opentype');
+}
+@font-face {
+	font-family: dinnextbold;
+	src: url('/fonts/DIN-Next-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: dinnext;
+	src: url('/fonts/DIN-Next-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: dinnextmedium;
+	src: url('/fonts/DIN-Next-Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: gillsans;
+	src: url('../fonts/Gill Sans Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: gillsansbold;
+	src: url('../fonts/Gill Sans Condensed Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: gillsansitalic;
+	src: url('../fonts/Gill Sans Medium Italic') format('opentype');
+}
+@font-face {
+	font-family: gillsansbolditalic;
+	src: url('../fonts/Gill Sans Bold Italic.otf') format('opentype');
+}
+@font-face {
+	font-family: specialelite;
+	src: url('../fonts/SpecialElite-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: neosans;
+	src: url('../fonts/NeoSansProRegular.OTF') format('opentype');
+}
+@font-face {
+	font-family: neosansitalic;
+	src: url('../fonts/NeoSansProItalic.OTF') format('opentype');
+}
+@font-face {
+	font-family: ocra;
+	src: url('../fonts/OCR A Std Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: decour;
+	src: url('../fonts/decour-cnd-regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: decouritalic;
+	src: url('../fonts/decour-cnd-regular-italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: officina;
+	src: url('../fonts/officina-ser-itc-black.otf') format('opentype');
+}
+@font-face {
+	font-family: davisonamericana;
+	src: url('../fonts/Davison Americana CG Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: saloongirl;
+	src: url('../fonts/saloon-girl.ttf') format('truetype');
+}
+@font-face {
+	font-family: arialblack;
+	src: url('../fonts/arial_black.ttf') format('truetype');
+}
+@font-face {
+	font-family: SpecialElite-Regular;
+	src: url("/fonts/new/SpecialElite-Regular.ttf") format('truetype');
+}
+@font-face {
+	font-family: Amanda-Std-Regular;
+	src: url("/fonts/new/Amanda Std Regular.otf") format('truetype');
+}
+@font-face {
+	font-family: arial_black;
+	src: url("/fonts/new/arial_black.ttf") format('truetype');
+}
+@font-face {
+	font-family: Davison-Americana-CG-Regular;
+	src: url("/fonts/new/Davison Americana CG Regular.otf") format('truetype');
+}
+@font-face {
+	font-family: decour-cnd-regular;
+	src: url("/fonts/new/decour-cnd-regular.ttf") format('truetype');
+}
+@font-face {
+	font-family: decour-cnd-regular-italic;
+	src: url("/fonts/new/decour-cnd-regular-italic.ttf") format('truetype');
+}
+@font-face {
+	font-family: Gill-Sans-Bold-Italic;
+	src: url("/fonts/new/Gill Sans Bold Italic.otf") format('truetype');
+}
+@font-face {
+	font-family: Gill-Sans-Condensed-Bold;
+	src: url("/fonts/new/Gill Sans Condensed Bold.otf") format('truetype');
+}
+@font-face {
+	font-family: Gill-Sans-Medium-Italic;
+	src: url("/fonts/new/Gill Sans Medium Italic.otf") format('truetype');
+}
+@font-face {
+	font-family: Gill-Sans-Medium;
+	src: url("/fonts/new/Gill Sans Medium.otf") format('truetype');
+}
+@font-face {
+	font-family: NeoSansProItalic;
+	src: url("/fonts/new/NeoSansProItalic.OTF") format('truetype');
+}
+@font-face {
+	font-family: NeoSansProRegular;
+	src: url("/fonts/new/NeoSansProRegular.OTF") format('truetype');
+}
+@font-face {
+	font-family: OCR-A-Std-Regular;
+	src: url("/fonts/OCR A Std Regular.ttf") format('truetype');
+}
+@font-face {
+	font-family: officina-ser-itc-black;
+	src: url("/fonts/new/officina-ser-itc-black.otf") format('truetype');
+}
+@font-face {
+	font-family: plantin-semibold;
+	src: url("/fonts/new/plantin-semibold.otf") format('truetype');
+}
+@font-face {
+	font-family: Plantin-SemiboldItalic;
+	src: url("/fonts/new/Plantin-SemiboldItalic.otf") format('truetype');
+}
+@font-face {
+	font-family: saloon-girl;
+	src: url("/fonts/new/saloon-girl.ttf") format('truetype');
+}
+@font-face {
+	font-family: shango-gothic-bold;
+	src: url("/fonts/new/shango-gothic-bold.ttf") format('truetype');
+}
+@font-face {
+	font-family: Souvenir-Itc-T-OT-Bold;
+	src: url("/fonts/new/Souvenir-Itc-T-OT-Bold.otf") format('truetype');
+}
+
+
+@font-face {
+	font-family: Phyrexian_normal;
+	src: url("/fonts/new/Phyrexian_normal.ttf") format('truetype');
+}
+@font-face {
+	font-family: Phyrexian_horizontal;
+	src: url("/fonts/new/Phyrexian_horizontal.ttf") format('truetype');
+}
+
+
+
+
+
+@font-face {
+	font-family: chiller;
+	src: url("/fonts/chiller.TTF") format('truetype');
+}
+@font-face {
+	font-family: enchanted-land;
+	src: url("/fonts/enchanted-land.otf") format('truetype');
+}
+@font-face {
+	font-family: berry-rotunda;
+	src: url("/fonts/berry-rotunda.ttf") format('truetype');
+}
+@font-face {
+	font-family: vanilla-caramel;
+	src: url("/fonts/vanilla-caramel.otf") format('truetype');
+}
+@font-face {
+	font-family: belwe;
+	src: url("/fonts/belwe.ttf") format('truetype');
+}
+@font-face {
+	font-family: grobold;
+	src: url("/fonts/grobold.ttf") format('truetype');
+}
+@font-face {
+	font-family: gothammedium;
+	src: url("/fonts/gotham-medium.ttf") format('truetype');
+}
+@font-face {
+	font-family: belerenb;
+	src: url("/fonts/beleren-b.ttf") format('truetype');
+}
+@font-face {
+	font-family: belerenbsc;
+	src: url("/fonts/beleren-bsc.ttf") format('truetype');
+}
+@font-face {
+	font-family: matrix;
+	src: url("/fonts/matrix.ttf") format('truetype');
+}
+@font-face {
+	font-family: matrixb;
+	src: url("/fonts/matrix-b.ttf") format('truetype');
+}
+@font-face {
+	font-family: matrixbsc;
+	src: url("/fonts/Matrix Bold Small Caps.ttf") format('truetype');
+}
+@font-face {
+	font-family: mplantin;
+	src: url("/fonts/mplantin.ttf") format('truetype');
+}
+@font-face {
+	font-family: mplantini;
+	src: url("/fonts/mplantin-i.ttf") format('truetype');
+}
+@font-face {
+	font-family: plantinsemibold;
+	src: url("/fonts/plantin-semibold.otf") format('opentype');
+}
+@font-face {
+	font-family: plantinsemibolditalic;
+	src: url("/fonts/Plantin-SemiboldItalic.otf") format('opentype');
+}
+@font-face {
+	font-family: goudymedieval;
+	src: url("/fonts/goudy-medieval.ttf") format('truetype');
+}
+@font-face {
+	font-family: phyrexianold;
+	src: url("/fonts/phyrexian.ttf") format('truetype');
+}
+@font-face {
+	font-family: phyrexian;
+	src: url("/fonts/phy.woff2") format("woff2");
+}
+@font-face {
+	font-family: Montserrat-SemiBold;
+	src: url("/fonts/Montserrat-SemiBold.ttf") format('truetype');
+}
+@font-face {
+	font-family: Montserrat-Medium;
+	src: url("/fonts/Montserrat-Medium.ttf") format('truetype');
+}
+@font-face {
+	font-family: Acme-Regular;
+	src: url("/fonts/Acme-Regular.ttf") format('truetype');
+}
+@font-face {
+	font-family: fritz-quadrata;
+	src: url("/fonts/fritz-quadrata.ttf") format('truetype');
+}
+@font-face {
+	font-family: japanese-title;
+	src: url("/fonts/NudMotoyaExAporo_W6.ttf") format('truetype');
+}
+@font-face {
+	font-family: japanese;
+	src: url('/fonts/2012c863631ba71f874aba70590795a1.otf') format('opentype');
+}
+@font-face {
+	font-family: invocation;
+	src: url('/fonts/Invocation.ttf') format('truetype');
+}
+@font-face {
+	font-family: invocation-text;
+	src: url('/fonts/shango-gothic-bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: souvenir;
+	src: url('/fonts/Souvenir-Itc-T-OT-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: palatino;
+	src: url('/fonts/Palatino Font.ttf') format('truetype');
+}
+@font-face {
+	font-family: amanda;
+	src: url('/fonts/Amanda Std Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: PixelFont-Regular;
+	src: url('/beta-assets/fonts/PixelFont-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: "Plantin-MT-Pro-Bold";
+	src: url('/beta-assets/fonts/PlantinMTProBold.woff2') format('woff2');
+}
+@font-face {
+	font-family: "Plantin-MT-Pro-Rg";
+	src: url('/beta-assets/fonts/PlantinMTProRg.woff2') format('woff2');
+}
+@font-face {
+	font-family: "Plantin MT Pro";
+	src: url('/beta-assets/fonts/PlantinMTProRg.woff2') format('woff2');
+}
+@font-face {
+	font-family: "Plantin-MT-Pro-Rg-It";
+	src: url('/beta-assets/fonts/PlantinMTProRgIt.woff2') format('woff2');
+}
+@font-face {
+	font-family: "Plantin-MT-Pro-SemiBd-It";
+	src: url('/beta-assets/fonts/PlantinMTProSemiBdIt.woff2') format('woff2');
+}
+@font-face {
+	font-family: "Magic-Fomalhaut";
+	src: url('/beta-assets/fonts/Magic-Fomalhaut.woff2') format('woff2');
+}
+@font-face {
+	font-family: thunderman;
+	src: url('/beta-assets/fonts/Thunderman.ttf') format('truetype');
+}
+@font-face {
+	font-family: sewertmt-ccrumble;
+	src: url('/beta-assets/fonts/SewerTMT-CCRumble.ttf') format('truetype');
+}
+@font-face {
+	font-family: MightyMouth;
+	src: url('/beta-assets/fonts/MightyMouth.otf') format('opentype');
+}
+
+.modal-frameworkspace-header2{
+	position: sticky;
+				top: 0;
+				right: 0;
+				z-index: 999;
+				justify-content: right;
+				height: 0;
+}
+ @media (max-width: 768px) {
+	.modal-frameworkspace-header2{
+				
+				height: 25px;
+	}
+}
+
+
+ @media (max-width: 768px) {
+            .middle-bar.forPhone {
+              display: flex;
+              justify-content: space-between;
+              position: fixed;
+              top: 30px;
+              left: 0;
+              right: 0;
+              padding: 0 15px;
+              z-index: 99999;
+              pointer-events: none; /* prevent blocking other elements */
+            }
+
+            .phone-btn {
+              pointer-events: auto; /* re-enable pointer events for buttons */
+              background-color: #4896a5;
+              color: #fff;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 8px;
+              font-size: 14px;
+              font-weight: bold;
+              cursor: pointer;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+
+            .left-btn {
+              align-self: flex-start;
+            }
+
+            .right-btn {
+              align-self: flex-end;
+            }
+          }
+
+          /* Hide on larger screens */
+          @media (min-width: 769px) {
+            .middle-bar.forPhone {
+              display: none !important;
+            }
+          }

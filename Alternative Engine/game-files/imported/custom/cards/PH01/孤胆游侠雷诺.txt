@@ -1,0 +1,15 @@
+Name:孤胆游侠雷诺
+ManaCost:3 W R U B G
+Types:Sorcery
+A:SP$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Exile | SpellDescription$ 放逐孤胆游侠雷诺。
+T:Mode$ SpellCast | ValidCard$ Card.Self | TriggerZones$ Stack | CheckSVar$ StartingDeckDuplicateNonlandNames | SVarCompare$ EQ0 | Execute$ ExileNonlands | TriggerDescription$ 当你施放孤胆游侠雷诺时，若你的起始套牌中每张非地牌的牌名均不相同，放逐所有不由你操控的非地永久物。直到你的下个维持开始，每位对手至多能操控一个非地永久物。
+SVar:StartingDeckDuplicateNonlandNames:Number$-1900000002
+SVar:ExileNonlands:DB$ ChangeZoneAll | ChangeType$ Permanent.nonLand+!YouCtrl | Origin$ Battlefield | Destination$ Exile | SubAbility$ CreateLimit
+SVar:CreateLimit:DB$ Effect | Name$ Emblem — 孤胆游侠雷诺的决斗 | EffectOwner$ You | Duration$ UntilYourNextUpkeep | Triggers$ ExpireLimit
+SVar:MaxOneOpponentNonlandEffect:Emblem — 孤胆游侠雷诺的决斗
+SVar:ExpireLimit:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | Static$ True | Execute$ RemoveLimit | TriggerDescription$ 在你的下个维持开始时，结束孤胆游侠雷诺的限制。
+SVar:RemoveLimit:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Oracle:当你施放孤胆游侠雷诺时，若你的起始套牌中每张非地牌的牌名均不相同，放逐所有不由你操控的非地永久物。直到你的下个维持开始，每位对手至多能操控一个非地永久物。（若一位对手操控多个非地永久物，其选择其中一个，其余置入其拥有者的坟墓场。）\n放逐孤胆游侠雷诺。
+# 中文规则: 当你施放孤胆游侠雷诺时，若你的起始套牌中每张非地牌的牌名均不相同，放逐所有不由你操控的非地永久物。直到你的下个维持开始，每位对手至多能操控一个非地永久物。（若一位对手操控多个非地永久物，其选择其中一个，其余置入其拥有者的坟墓场。）
+# 中文规则: 放逐孤胆游侠雷诺。
+# 卡面: {"frame":"borderless"}

@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "downloadedMtgCardsmithFiles": 664,
+  "additionalChineseFonts": 3,
+  "renderedCards": 203,
+  "verifiedPrintingAliases": 212,
+  "planeswalkerVersions": 18,
+  "gameApiLookupsPassed": 415,
+  "nativeGuiProof": [
+    "examples/game-guff-normal.png",
+    "examples/game-guff-large.png",
+    "examples/game-guff-persisted.png"
+  ],
+  "checks": [
+    "All downloaded asset SHA256 values verified",
+    "All deployed cache PNGs are 750x1050",
+    "All exact-printing files match their recorded version hash",
+    "Nine planeswalkers each have distinct normal and large-art images and native printing entries",
+    "All source art hashes unchanged",
+    "Existing PH01 edition bytes preserved; only nine printing rows appended",
+    "Java regression checks passed including normal/large-art layouts, loyalty parsing and overflow",
+    "Native printing selector switches both ways and retains the selected large-art version after application restart"
+  ],
+  "limitations": [
+    "Pre-render cache integration; no live native generation hook",
+    "Six test cards have no art",
+    "Thirteen existing full images preserved",
+    "Saga uses ordinary text box"
+  ],
+  "printingSelectionPersistsAfterRestart": {
+    "passed": true,
+    "card": "野性之心古夫",
+    "collectorNumber": "110b",
+    "artIndex": 2,
+    "method": "Selected in native printing UI, closed application, relaunched desktop shortcut launcher, reopened card detail"
+  }
+}

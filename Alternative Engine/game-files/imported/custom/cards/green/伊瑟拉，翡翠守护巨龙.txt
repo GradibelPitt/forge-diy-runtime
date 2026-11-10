@@ -1,0 +1,18 @@
+Name:伊瑟拉，翡翠守护巨龙
+ManaCost:5 G G G G
+Types:Legendary Creature Dragon
+PT:4/12
+K:Flying
+K:MayEffectFromOpeningDeck:ChooseReveal
+SVar:ChooseReveal:DB$ GenericChoice | Choices$ RevealYsera,KeepHidden | SpellDescription$ 游戏开始时，你可以展示伊瑟拉，并使每位牌手获得具有以下异能的五次恩泽～「在你的维持开始时，从炉石传说的法术书中选择一张基本地牌，将它横置放入战场。」
+SVar:RevealYsera:DB$ Reveal | RevealDefined$ Self | SubAbility$ GrantBoon | SpellDescription$ 展示伊瑟拉，使每位牌手获得五次恩泽。
+SVar:KeepHidden:DB$ Cleanup | ClearRemembered$ True | SpellDescription$ 不展示。
+SVar:GrantBoon:DB$ Effect | Name$ 伊瑟拉的恩泽 | Boon$ True | Duration$ Permanent | EffectOwner$ Player | Triggers$ UpkeepBoon
+SVar:UpkeepBoon:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Command | BoonAmount$ 5 | Execute$ ChooseLand | TriggerDescription$ 在你的维持开始时，从炉石传说的法术书中选择一张基本地牌，将它横置放入战场。
+SVar:ChooseLand:DB$ GenericChoice | Choices$ MakePlains,MakeIsland,MakeSwamp,MakeMountain,MakeForest | SpellDescription$ 从炉石传说的法术书中选择一张基本地牌，将它横置放入战场。
+SVar:MakePlains:DB$ MakeCard | Name$ Plains | Zone$ Battlefield | Tapped$ True | Conjure$ True | Defined$ You | SpellDescription$ 平原
+SVar:MakeIsland:DB$ MakeCard | Name$ Island | Zone$ Battlefield | Tapped$ True | Conjure$ True | Defined$ You | SpellDescription$ 海岛
+SVar:MakeSwamp:DB$ MakeCard | Name$ Swamp | Zone$ Battlefield | Tapped$ True | Conjure$ True | Defined$ You | SpellDescription$ 沼泽
+SVar:MakeMountain:DB$ MakeCard | Name$ Mountain | Zone$ Battlefield | Tapped$ True | Conjure$ True | Defined$ You | SpellDescription$ 山脉
+SVar:MakeForest:DB$ MakeCard | Name$ Forest | Zone$ Battlefield | Tapped$ True | Conjure$ True | Defined$ You | SpellDescription$ 树林
+Oracle:飞行。\n游戏开始时，你可以展示伊瑟拉，并使每位牌手获得具有以下异能的五次恩泽～「在你的维持开始时，从炉石传说的法术书中选择一张基本地牌，将它横置放入战场。」

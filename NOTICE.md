@@ -1,12 +1,9 @@
-# Notices and source offer
+# Notices
 
-Forge DIY Runtime distributes a modified build of Forge, whose upstream project is:
+This repository currently maintains the Alternative Engine integration for Solo Arcanum 0.3.29. The legacy Forge DIY Java runtime and its publishing tools have been removed from the current branch.
 
-- https://github.com/Card-Forge/forge
-- Licensed under GNU General Public License version 3.
+The maintained Rust integration declares GPL-3.0-or-later. See COPYING and Alternative Engine/patch-source/Cargo.toml. Forge-compatible card scripts and resource data remain necessary to the native engine; their directory names do not imply inclusion of the former Java runtime.
 
-The runtime repository, bootstrap scripts, modified Forge engine, and build scripts are distributed under GNU GPL version 3. The corresponding public source revision is identified by `release.json`.
+Upstream game notices are preserved in Alternative Engine/game-files/LICENSE.txt, THIRD-PARTY-NOTICES.txt and runtime/licenses. Imported artwork, music, fonts and card-frame assets retain their respective owners and license terms; inclusion here does not relicense them under the code license.
 
-The Release does not include the user's downloaded official card-image cache. Custom artwork is distributed only where the project has permission to distribute it; artwork does not change the GPL terms of the Forge program code.
-
-No warranty is provided. See `COPYING` for the full license text.
+Original shared binaries and analysis evidence are preserved byte-for-byte. Their residual code is not an entry point for the retired story, puzzle or ascent modes.

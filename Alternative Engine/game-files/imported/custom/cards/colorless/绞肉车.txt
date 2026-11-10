@@ -1,0 +1,10 @@
+Name:绞肉车
+ManaCost:3
+Types:Artifact Creature Juggernaut
+PT:1/4
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRecruit | OptionalDecider$ TriggeredCardController | TriggerDescription$ When CARDNAME dies, you may search your library for a creature card with power less than or equal to CARDNAME's power, put it onto the battlefield, then shuffle.
+SVar:TrigRecruit:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.powerLEX | ChangeNum$ 1
+SVar:X:TriggeredCard$CardPower
+A:AB$ Sacrifice | Cost$ 1 T | SpellDescription$ Sacrifice CARDNAME.
+DeckHas:Ability$Sacrifice|Tutor
+Oracle:当绞肉车死去时，你可以从你的牌库中搜寻一张力量不大于绞肉车力量的生物牌，将其放进战场，然后将你的牌库洗牌。\n{1}，{T}：牺牲绞肉车。

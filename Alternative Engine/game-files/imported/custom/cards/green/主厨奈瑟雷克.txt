@@ -1,0 +1,10 @@
+Name:主厨奈瑟雷克
+ManaCost:1 G G
+Types:Legendary Creature Spider
+PT:3/3
+K:Companion:Card.cmcLE3:Each card in your starting deck has mana value 3 or less.
+K:Reach
+S:Mode$ CantBeCast | ValidCard$ Card.Self | EffectZone$ All | CheckSVar$ Count$YourTurns | SVarCompare$ LT5 | Description$ You can't cast CARDNAME unless you have taken five or more turns.
+T:Mode$ SpellCast | ValidCard$ Card.Self+IsCompanion | TriggerZones$ Stack | Execute$ TrigLands | TriggerDescription$ When you cast CARDNAME, if it is your companion, reveal cards from the top of your library until you reveal ten land cards that each have a basic land type. Put those land cards onto the battlefield and the rest on the bottom of your library in a random order.
+SVar:TrigLands:DB$ DigUntil | Amount$ 10 | Valid$ Land.hasABasicLandType | ValidDescription$ land | FoundDestination$ Battlefield | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | RevealRandomOrder$ True
+Oracle:行侣～你起始套牌中每张牌的法术力值均等于或小于3。\n延势\n除非你已经进行过五个或更多回合，否则你不能施放主厨奈瑟雷克。\n当你施放主厨奈瑟雷克时，如果此牌为你的行侣，则从你的牌库顶开始展示牌，直到展示出十张各具有基本地类别的地牌为止。将这些地牌放进战场，其余则以随机顺序置于你的牌库底。

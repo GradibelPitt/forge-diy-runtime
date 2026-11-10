@@ -1,0 +1,11 @@
+Name:阳光汲取者莱妮莎
+ManaCost:2 W W
+Types:Legendary Creature Troll Monk
+PT:2/6
+K:Flying
+T:Mode$ SpellCast | ValidCard$ Instant.cmcLE2,Sorcery.cmcLE2 | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever you cast an instant or sorcery spell with mana value 2 or less, copy that spell. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+A:AB$ Effect | Cost$ U ExileFromGrave<3/Card/cards> | StaticAbilities$ STPlay | Duration$ EndOfTurn | SpellDescription$ This turn, you may cast sorcery spells as though they had flash.
+SVar:STPlay:Mode$ CastWithFlash | ValidCard$ Sorcery | ValidSA$ Spell | Caster$ You | Description$ This turn, you may cast sorcery spells as though they had flash.
+DeckHints:Type$Instant|Sorcery
+Oracle:飞行\n每当你施放法术力值等于或小于2的瞬间或法术咒语时，复制该咒语。你可以为该复制品选择新的目标。\n{U}，从你的坟墓场放逐三张牌：本回合中，你可以将法术咒语视同具有闪现异能地来施放。

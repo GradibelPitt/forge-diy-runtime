@@ -1,0 +1,8 @@
+Name:雷达探测
+ManaCost:1 U
+Types:Sorcery
+A:SP$ Dig | DigNum$ 5 | FromBottom$ True | Reveal$ True | ChangeNum$ Any | ChangeValid$ Creature.Artifact | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition2$ -1 | SkipReorder$ True | RestRandomOrder$ True | SubAbility$ DBShuffle | StackDescription$ SpellDescription | SpellDescription$ 展示你牌库底的五张牌，你可以将以此法展示的神器生物牌置于你手上，然后洗牌。
+SVar:DBShuffle:DB$ Shuffle | Defined$ You
+Oracle:展示你牌库底的五张牌，你可以将以此法展示的神器生物牌置于你手上，然后洗牌。
+# 中文规则: 展示你牌库底的五张牌，你可以将以此法展示的神器生物牌置于你手上，然后洗牌。
+# 卡面: {"frame":"pack:mtgsmith/m15"}

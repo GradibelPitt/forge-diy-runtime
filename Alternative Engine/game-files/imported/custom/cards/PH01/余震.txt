@@ -1,0 +1,12 @@
+Name:余震
+ManaCost:3 R
+Types:Sorcery
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 3 | EffectZone$ All | CheckSVar$ X | SVarCompare$ GE1 | Description$ This spell costs {3} less to cast if you cast an instant or sorcery spell during your last turn.
+A:SP$ DamageAll | ValidCards$ Creature | NumDmg$ 1 | SubAbility$ DBRepeat | SpellDescription$ CARDNAME deals 1 damage to each creature. Repeat this process three times.
+DeckHints:Type$Instant|Sorcery
+SVar:X:SVar$Y/Minus.Z
+SVar:Y:Count$CastSinceBeginningOfYourLastTurn_Instant.YouCtrl,Sorcery.YouCtrl
+SVar:Z:Count$ThisTurnCast_Instant.YouCtrl,Sorcery.YouCtrl
+SVar:DBRepeat:DB$ Repeat | MaxRepeat$ 3 | RepeatSubAbility$ DB damage | Mandatory$ True
+SVar:DB damage:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 1
+Oracle:如果你在你的上个回合施放过瞬间或法术咒语，则此咒语减少{3}来施放。\n余震对每个生物造成1点伤害。重复此流程三次。

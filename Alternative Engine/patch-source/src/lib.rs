@@ -3,7 +3,6 @@
 
 use std::collections::BTreeMap;
 
-pub mod mystery;
 pub mod diy_rules;
 pub mod diy_compat;
 #[cfg(windows)]
@@ -19,6 +18,8 @@ mod native_hooks;
 mod native_combat;
 #[cfg(windows)]
 mod native_upkeep;
+#[cfg(windows)]
+mod native_opening;
 #[cfg(windows)]
 mod native_land_search;
 #[cfg(windows)]

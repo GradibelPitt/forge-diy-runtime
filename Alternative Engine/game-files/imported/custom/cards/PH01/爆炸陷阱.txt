@@ -1,0 +1,7 @@
+Name:爆炸陷阱
+ManaCost:1 R
+Types:Enchantment
+A:AB$ DealDamage | Cost$ Sac<1/CARDNAME> | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumDmg$ 2 | SpellDescription$ CARDNAME deals 2 damage to target creature you don't control.
+A:SP$ DamageAll | NumDmg$ 2 | ValidCards$ Creature.attacking | ValidDescription$ each attacking creature. | SpellDescription$ CARDNAME deals 2 damage to each attacking creature.
+Oracle:爆炸陷阱对每个正在进行攻击的生物造成2点伤害。
+# 中文规则: 牺牲爆炸陷阱：爆炸陷阱对每个正在进行攻击的生物造成2点伤害。

@@ -1,0 +1,10 @@
+Name:泡泡机器人
+ManaCost:4
+Types:Artifact Creature Construct
+PT:4/4
+S:Mode$ Continuous | Affected$ Creature.Construct+YouCtrl | AddKeyword$ Vigilance | Description$ Construct creatures you control have vigilance.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigShield | TriggerDescription$ When CARDNAME enters, put a shield counter on each other Construct creature you control.
+DeckHas:Ability$Counters
+DeckHints:Type$Construct
+SVar:TrigShield:DB$ PutCounterAll | ValidCards$ Creature.Construct+YouCtrl+StrictlyOther | CounterType$ SHIELD | CounterNum$ 1
+Oracle:你操控的组构体具有警戒。当泡泡机器人进战场时，在每个由你操控的其他组构体上各放置一个后盾指示物。

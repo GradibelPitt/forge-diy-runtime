@@ -1,0 +1,10 @@
+Name:浪潮涌起
+ManaCost:2 U
+Types:Sorcery
+A:SP$ DamageAll | NumDmg$ 2 | ValidCards$ Creature | SpellDescription$ CARDNAME deals 2 damage to each creature.
+T:Mode$ ChangesZone | Origin$ Stack | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigSecondWave | TriggerDescription$ 浪潮涌起对每个生物各造成2点伤害。\n当浪潮涌起从堆叠置入坟墓场时，若本回合没有生物死去，你可以从坟墓场再次施放它，且不需支付其法术力费用，然后放逐浪潮涌起。
+DeckHas:Ability$Graveyard
+SVar:TrigSecondWave:DB$ Play | Defined$ TriggeredNewCardLKICopy | ValidZone$ Graveyard | ValidSA$ Spell | Controller$ You | WithoutManaCost$ True | Optional$ True | ReplaceGraveyard$ Exile | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ0
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature
+Oracle:浪潮涌起对每个生物各造成2点伤害。\n当浪潮涌起从堆叠置入坟墓场时，若本回合没有生物死去，你可以从坟墓场再次施放它，且不需支付其法术力费用，然后放逐浪潮涌起。
+# 中文规则: 浪潮涌起对每个生物各造成2点伤害。

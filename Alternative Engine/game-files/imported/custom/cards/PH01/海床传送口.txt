@@ -1,0 +1,8 @@
+Name:海床传送口
+ManaCost:3
+Types:Sorcery
+A:SP$ Seek | Num$ 1 | Type$ Artifact.Creature | SubAbility$ DBAnimate | StackDescription$ SpellDescription | SpellDescription$ Seek an artifact creature card,
+SVar:DBAnimate:DB$ AnimateAll | ValidCards$ Artifact.Creature+YouOwn | Zone$ Hand | staticAbilities$ ReduceCost | Duration$ Perpetual | StackDescription$ SpellDescription | SpellDescription$ then artifact creature cards in your hand perpetually gain "This spell costs {1} less to cast."
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 1 | EffectZone$ All | Description$ This spell costs {1} less to cast.
+Oracle:取出一张神器生物牌，然后你手中的神器生物牌永久获得“此咒语减少1来施放。”
+# 中文规则: 取出一张神器生物牌，然后你手中的神器生物牌永久获得“此咒语减少1来施放。”

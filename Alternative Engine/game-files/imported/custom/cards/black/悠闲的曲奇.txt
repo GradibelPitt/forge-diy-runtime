@@ -1,0 +1,14 @@
+Name:悠闲的曲奇
+ManaCost:1 B B
+Types:Legendary Creature Frog Pirate Shaman
+PT:2/2
+K:Flash
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.!token+YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigNameCard | TriggerDescription$ Whenever another nontoken creature you control dies, conjure a random creature card with mana value X onto the battlefield, where X is 1 plus that creature's mana value.
+SVar:TrigNameCard:DB$ NameCard | AtRandom$ True | ValidCards$ Creature.cmcEQX | SubAbility$ DBConjure
+SVar:DBConjure:DB$ MakeCard | Name$ ChosenName | Conjure$ True | Zone$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearNamedCard$ True
+SVar:X:TriggeredCard$CardManaCost/Plus.1
+A:AB$ Pump | Cost$ G | ValidTgts$ Creature.ThisTurnEntered | TgtPrompt$ Select target creature that entered this turn | NumAtt$ +Y | NumDef$ +Y | KW$ Trample | ActivationLimit$ 1 | SubAbility$ DBPumpCookie | SpellDescription$ CARDNAME and target creature that entered this turn each get +X/+X and gain trample until end of turn, where X is that creature's mana value. Activate only once each turn.
+SVar:DBPumpCookie:DB$ Pump | Defined$ Self | NumAtt$ +Y | NumDef$ +Y | KW$ Trample
+SVar:Y:Targeted$CardManaCost
+Oracle:闪现\n每当另一个由你操控的非衍生生物死去时，将一张随机的法术力值为X的生物牌幻变到战场上，X为该生物的法术力值加1。\n{G}：悠闲的曲奇和目标本回合进场的生物各得+X/+X且获得践踏异能直到回合结束，X为该目标生物的法术力值。每回合只能起动一次。

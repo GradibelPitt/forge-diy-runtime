@@ -1,0 +1,7 @@
+Name:缩小药水
+ManaCost:W
+Types:Instant
+A:SP$ Effect | StaticAbilities$ STShrink,STCantAttack | Duration$ UntilYourNextUpkeep | SpellDescription$ Until your next upkeep, creatures you don't control get -3/-0, and creatures with power 0 or less can't attack.
+SVar:STShrink:Mode$ Continuous | Affected$ Creature.YouDontCtrl | AffectedZone$ Battlefield | AddPower$ -3 | Description$ Creatures you don't control get -3/-0.
+SVar:STCantAttack:Mode$ CantAttack | ValidCard$ Creature.powerLE0 | Description$ Creatures with power 0 or less can't attack.
+Oracle:直到你的下个维持开始，所有不由你操控的生物得-3/-0，且力量为0或更低的生物不能攻击。

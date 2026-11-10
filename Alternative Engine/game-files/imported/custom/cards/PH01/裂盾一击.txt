@@ -1,0 +1,8 @@
+Name:裂盾一击
+ManaCost:10
+Types:Sorcery
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each 1 life you gained this turn.
+A:SP$ DamageAll | ValidCards$ Creature,Planeswalker | NumDmg$ 5 | SpellDescription$ CARDNAME deals 5 damage to each creature and each planeswalker.
+DeckHints:Ability$LifeGain
+SVar:X:Count$LifeYouGainedThisTurn
+Oracle:你本回合中每获得过1点生命，便能为此咒语支付{1}。\n裂盾一击对每个生物和鹏洛客各造成5点伤害。

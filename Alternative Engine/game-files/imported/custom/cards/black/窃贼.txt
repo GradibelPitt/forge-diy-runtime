@@ -1,0 +1,8 @@
+Name:窃贼
+ManaCost:1 B
+Types:Creature Zombie Rogue
+PT:2/2
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks, create a Treasure token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_treasure_sac | TokenOwner$ You
+DeckHas:Ability$Token
+Oracle:每当窃贼攻击时，派出一个珍宝衍生物。

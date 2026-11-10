@@ -1,0 +1,9 @@
+Name:吵吵歌迷
+ManaCost:1
+Types:Artifact Creature Construct
+PT:1/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | TriggerDescription$ When CARDNAME enters the battlefield, tap target creature you don't control. That creature doesn't untap during its controller's untap step for as long as CARDNAME remains on the battlefield.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature you don't control | SubAbility$ DBLock
+SVar:DBLock:DB$ Effect | RememberObjects$ Targeted | ForgetOnMoved$ Battlefield | ReplacementEffects$ DontUntap | Duration$ UntilHostLeavesPlay
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | ValidStepTurnToController$ You | Layer$ CantHappen | Description$ That creature doesn't untap during its controller's untap step for as long as EFFECTSOURCE remains on the battlefield.
+Oracle:当吵吵歌迷进战场时，横置至多一个目标不由你操控的生物。直到吵吵歌迷离开战场，该生物不能于其操控者的重置步骤中重置。

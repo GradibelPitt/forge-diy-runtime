@@ -1,0 +1,32 @@
+{
+  "installation": ".",
+  "mode": "per-match",
+  "files": [
+    {
+      "sha256": "df5f315f17f3176ec24f04328c506f96b053fd4c1424380f8f1d4f5a4455f998",
+      "name": "desktop-hearthstone.exe"
+    },
+    {
+      "sha256": "ff3b578de355b1a54d75b6515e03a67928f1897e50af0a6fe08d8d86e1204d5a",
+      "name": "mtg-engine-hearthstone.exe"
+    },
+    {
+      "sha256": "a68c2e6d35f5e285769c8b78bfb4c276e869320677814f3bd51e170921a29145",
+      "name": "solo_hearthstone_rules.dll"
+    },
+    {
+      "sha256": "c0017db4f7e96342bdc800984fc7881ab96df76a63c2e1033791a5ba20aa7a30",
+      "name": "sidecar_bridge.exe"
+    },
+    {
+      "name": "mtg-engine-discover.exe",
+      "sha256": "753b54a4d5b4ed9e679113df1a63d0b314bb9aed4e9d2305f8d5c02d3f5536c1"
+    }
+  ],
+  "status": "core-mode-integrated",
+  "pendingDependencies": [
+    "custom Superreach and IgnoreSuperreach",
+    "additional custom effect APIs"
+  ],
+  "soloVersion": "0.3.29"
+}

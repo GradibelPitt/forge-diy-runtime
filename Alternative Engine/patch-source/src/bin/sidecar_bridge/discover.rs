@@ -332,8 +332,13 @@ mod tests {
 pub fn attach_previews(state:&mut Value,choice:&Value,path:&Path){
     if choice["type"]!="choice_request"||choice["kind"]!="select"{return;}
     let Some(previews)=fs::read(path).ok().and_then(|b|serde_json::from_slice::<Value>(&b).ok()) else{return;};
-    if previews["sourceName"]!=choice["targetSource"]["name"]||previews["player"]!=state["viewingPlayerId"]{return;}
     let legal: BTreeSet<_>=choice["legalCardIds"].as_array().into_iter().flatten().filter_map(Value::as_u64).collect();
+    let Some(previews)=preview_batches(&previews).into_iter().rev().find(|batch| {
+        batch["sourceName"]==choice["targetSource"]["name"] && batch["player"]==state["viewingPlayerId"]
+            && (batch["sourceId"].is_null() || batch["sourceId"]==choice["targetSource"]["cardId"])
+            && !legal.is_empty() && legal.iter().all(|id|batch["cards"].as_array().is_some_and(|cards|
+                cards.iter().any(|card|card["id"].as_u64()==Some(*id))))
+    }) else {return;};
     let cards:Vec<Value>=previews["cards"].as_array().into_iter().flatten().filter(|c|c["id"].as_u64().is_some_and(|id|legal.contains(&id))).cloned().map(|mut card|{
         // The native index omits PT and Oracle. Read only the displayed options.
         if let Some(path)=card.as_object_mut().and_then(|c|c.remove("_scriptPath")).and_then(|p|p.as_str().map(str::to_owned)){
@@ -345,11 +350,62 @@ pub fn attach_previews(state:&mut Value,choice:&Value,path:&Path){
         card
     }).collect();
     if cards.is_empty(){return;}
-    if let Some(revealed)=state["revealedCards"].as_array_mut(){revealed.extend(cards);}
+    if let Some(revealed)=state["revealedCards"].as_array_mut(){
+        revealed.retain(|card|!card["id"].as_u64().is_some_and(|id|legal.contains(&id)));
+        revealed.extend(cards);
+    }
+}
+
+fn preview_batches(previews:&Value)->Vec<&Value>{
+    previews["batches"].as_array().map(|batches|batches.iter().collect()).unwrap_or_else(||vec![previews])
 }
 
 pub fn needs_previews(state:&Value,path:&Path)->bool{
     let Some(previews)=fs::read(path).ok().and_then(|b|serde_json::from_slice::<Value>(&b).ok()) else{return false;};
-    previews["player"]==state["viewingPlayerId"] && state["stack"].as_array().is_some_and(|stack|
-        stack.iter().any(|entry|entry["resolving"]==true && entry["sourceName"]==previews["sourceName"]))
+    preview_batches(&previews).iter().any(|batch|batch["player"]==state["viewingPlayerId"] && state["stack"].as_array().is_some_and(|stack|
+        stack.iter().any(|entry|entry["resolving"]==true && entry["sourceName"]==batch["sourceName"])))
+}
+
+#[cfg(test)]
+mod preview_tests {
+    use super::*;
+
+    #[test]
+    fn consecutive_discover_batches_survive_later_sources_and_resync() {
+        let path=std::env::temp_dir().join(format!("solo-discover-batches-{}.json",std::process::id()));
+        let batch=|source,ids:Vec<u64>|json!({"sourceId":source,"sourceName":"燃烧军团","player":0,
+            "cards":ids.iter().map(|id|json!({"id":id,"name":format!("Demon {id}")})).collect::<Vec<_>>()});
+        let first=batch(20,vec![30,31,32]);let second=batch(20,vec![33,34,35]);let other=batch(21,vec![36,37,38]);
+        let mut cache=other.clone();cache["batches"]=json!([first,second,other]);
+        fs::write(&path,cache.to_string()).unwrap();
+        for ids in [vec![30,31,32],vec![33,34,35]] {
+            let mut state=json!({"viewingPlayerId":0,"revealedCards":[{"id":10}],
+                "stack":[{"resolving":true,"sourceName":"燃烧军团"}]});
+            let choice=json!({"type":"choice_request","kind":"select","legalCardIds":ids,
+                "targetSource":{"cardId":20,"name":"燃烧军团"}});
+            assert!(needs_previews(&state,&path));
+            attach_previews(&mut state,&choice,&path);
+            assert_eq!(state["revealedCards"].as_array().unwrap().iter().filter_map(|c|c["id"].as_u64()).collect::<Vec<_>>(),
+                [vec![10],ids].concat());
+            let once=state.clone();attach_previews(&mut state,&choice,&path);assert_eq!(state,once);
+        }
+        fs::remove_file(path).unwrap();
+    }
+
+    #[test]
+    fn previews_require_matching_owner_source_and_complete_candidates() {
+        let path=std::env::temp_dir().join(format!("solo-discover-match-{}.json",std::process::id()));
+        let cache=json!({"sourceId":20,"sourceName":"A","player":0,"cards":[{"id":30,"name":"Demon"}]});
+        fs::write(&path,cache.to_string()).unwrap();
+        let state=json!({"viewingPlayerId":0,"revealedCards":[]});
+        let choice=json!({"type":"choice_request","kind":"select","legalCardIds":[30],"targetSource":{"cardId":20,"name":"A"}});
+        for (player,source,ids) in [(1,20,vec![30]),(0,21,vec![30]),(0,20,vec![30,31])] {
+            let mut current=state.clone();current["viewingPlayerId"]=player.into();
+            let mut prompt=choice.clone();prompt["targetSource"]["cardId"]=source.into();prompt["legalCardIds"]=ids.into();
+            let before=current.clone();attach_previews(&mut current,&prompt,&path);assert_eq!(current,before);
+        }
+        let mut legacy=state;attach_previews(&mut legacy,&choice,&path);
+        assert_eq!(legacy["revealedCards"][0]["name"],"Demon");
+        fs::remove_file(path).unwrap();
+    }
 }

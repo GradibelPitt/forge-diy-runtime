@@ -1,0 +1,10 @@
+Name:紫色珍鳃鱼人
+ManaCost:1 U
+Types:Creature Merfolk
+PT:1/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSeek | TriggerDescription$ When CARDNAME enters, seek a sorcery card with mana value 2 or less. You may cast that card this turn without paying its mana cost.
+SVar:TrigSeek:DB$ Seek | Type$ Sorcery.cmcLE2 | Num$ 1 | RememberChanged$ True | SubAbility$ DBFreeCastEffect
+SVar:DBFreeCastEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ FreeCast | ForgetOnMoved$ Hand | Duration$ UntilEndOfTurn | SubAbility$ DBCleanup
+SVar:FreeCast:Mode$ Continuous | Affected$ Sorcery.IsRemembered | AffectedZone$ Hand | MayPlay$ True | MayPlayWithoutManaCost$ True | Description$ You may cast that card this turn without paying its mana cost.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:当紫色珍鳃鱼人进战场时，取出一张总法术力值小于或等于2的法术牌。本回合中，你可以不支付其法术力费用来施放该牌。

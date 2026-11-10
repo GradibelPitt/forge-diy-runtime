@@ -76,6 +76,7 @@ pub unsafe extern "system" fn HsCloneState(target: *mut u8, source: *const u8) -
         unsafe { std::mem::transmute(native_address(0x1ea90c0)) };
     let result = unsafe { original(target, source) };
     crate::native_diy::clone_state(target as usize, source as usize);
+    crate::native_opening::clone_state(target as usize, source as usize);
     crate::native_land_search::clone_state(target as usize, source as usize);
     let mut states = STATES.lock().unwrap();
     if let Some(state) = states.get(&(source as usize)).cloned() {
@@ -97,6 +98,7 @@ pub unsafe extern "system" fn HsMoveState(target: *mut u8, source: *const u8, si
 
 fn transfer_overlay(target: usize, source: usize) {
     crate::native_diy::move_state(target, source);
+    crate::native_opening::move_state(target, source);
     crate::native_land_search::move_state(target, source);
     if target != source {
         let mut states = STATES.lock().unwrap();
@@ -122,6 +124,7 @@ pub unsafe extern "system" fn HsMoveChoiceSnapshot(target: *mut u8, source: *con
 #[unsafe(no_mangle)]
 pub unsafe extern "system" fn HsDropState(engine: *mut u8) {
     crate::native_diy::drop_state(engine as usize);
+    crate::native_opening::drop_state(engine as usize);
     crate::native_land_search::drop_state(engine as usize);
     if let Some(state) = STATES.lock().unwrap().remove(&(engine as usize)) {
         trace("drop", engine as usize, 0, state.get(0));

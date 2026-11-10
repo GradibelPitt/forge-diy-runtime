@@ -99,7 +99,23 @@ unsafe fn release_definition(definition:*mut u8) {
 }
 
 #[unsafe(no_mangle)]
+#[unsafe(naked)]
 pub unsafe extern "system" fn DiyMoveCard(engine:*mut u8,id:u32,zone:u8,options:*const u64)->u64 {
+    // The native Rust caller expects Option<CardId> in EAX (tag) and EDX
+    // (card ID). A normal system-ABI u64 wrapper loses the second register.
+    core::arch::naked_asm!(
+        "sub rsp, 40",
+        "call {implementation}",
+        "add rsp, 40",
+        "mov rdx, rax",
+        "shr rdx, 32",
+        "mov eax, eax",
+        "ret",
+        implementation = sym move_card_with_cause,
+    );
+}
+
+unsafe extern "system" fn move_card_with_cause(engine:*mut u8,id:u32,zone:u8,options:*const u64)->u64 {
     unsafe {
         let cause=read::<u32>(options.cast(),0x10);
         let previous=EFFECT_CAUSE.with(|p|if cause!=u32::MAX {p.replace(Some((engine as usize,cause)))}else{p.get()});
@@ -108,9 +124,26 @@ pub unsafe extern "system" fn DiyMoveCard(engine:*mut u8,id:u32,zone:u8,options:
     }
 }
 
+#[unsafe(naked)]
+unsafe extern "system" fn call_native_move_card(
+    engine:*mut u8,id:u32,zone:u8,options:*const u64,entry:usize,
+)->u64 {
+    // Pack both native result registers before running any Rust cleanup.
+    core::arch::naked_asm!(
+        "mov rax, [rsp + 40]",
+        "sub rsp, 40",
+        "call rax",
+        "add rsp, 40",
+        "shl rdx, 32",
+        "mov eax, eax",
+        "or rax, rdx",
+        "ret",
+    );
+}
+
 unsafe fn move_preserving_clone(engine:*mut u8,id:u32,zone:u8,options:*const u64)->u64 {
     unsafe {
-        let original:unsafe extern "system" fn(*mut u8,u32,u8,*const u64)->u64=std::mem::transmute(native_address(0x1be29d0));
+        let original=|engine,id,zone,options|call_native_move_card(engine,id,zone,options,native_address(0x1be29d0));
         let cards:*const *const u8=read(engine,0x1a98);let card=*cards.add(id as usize);
         let origin=read::<u8>(card,0x11a);
         if !((zone==4&&origin==1)||(zone==2&&origin==4))||!catalog().get(&printed_name(engine,id)).is_some_and(|r|r.keep_clone_on_stack) {
@@ -213,8 +246,10 @@ unsafe fn board(engine: *mut u8) {
         for id in 0..read::<usize>(engine,0x1aa0).min(read(engine,0x1ab8)) {
             let card=*cards.add(id);
             if read::<u8>(card,0x116)!=0 || read::<u8>(card,0x11a)>1 {continue;}
-            if let Some(threshold)=rules.get(&name(engine,id)).and_then(|r|r.boarding) {
-                if state.qualifies(read(card,0x11b),threshold) {ready.push(id as u32);}
+            if let Some(rule)=rules.get(&name(engine,id)) {
+                let owner=read::<u8>(card,0x11b);
+                if rule.boarding_own_turn && owner!=read::<u8>(engine,0x2dc0) {continue;}
+                if rule.boarding.is_some_and(|threshold|state.qualifies(owner,threshold)) {ready.push(id as u32);}
             }
         }
         for id in ready { log(format!("boarding {id}")); move_card(engine,id,2); }
@@ -270,6 +305,7 @@ unsafe fn quests(engine: *mut u8) -> bool {
 #[unsafe(no_mangle)]
 pub unsafe extern "system" fn DiyEvent(engine: *mut u8, event: *const u8) {
     unsafe {
+        crate::native_opening::observe_turn(engine);
         let tag: u64 = read(event, 0);
         if tag == 0x800000000000000d {
             log(format!("damage engine={engine:p} turn={} target={:x} source={} amount={} combat={}",
@@ -294,8 +330,88 @@ pub unsafe extern "system" fn DiySba(engine: *mut u8) {
         capture_starting_decks(engine);
         if !quests(engine) {return;}
         board(engine);
+        if !enforce_nonland_limits(engine) {return;}
         let original: unsafe extern "system" fn(*mut u8) = std::mem::transmute(native_address(0x1b5d000));
         original(engine);
+        enforce_nonland_limits(engine);
+    }
+}
+
+/// These effects impose a state-based limit. Use the native choice/replay
+/// protocol, and move the unchosen objects without destroying or sacrificing.
+unsafe fn enforce_nonland_limits(engine:*mut u8)->bool {
+    unsafe {
+        type Rules=std::sync::Arc<BTreeMap<String,CardRule>>;
+        type Names=std::sync::Arc<std::collections::BTreeSet<String>>;
+        static CACHE:Mutex<Option<(Rules,Names)>>=Mutex::new(None);
+        let rules=catalog();
+        let effect_names={
+            let mut cache=CACHE.lock().unwrap();
+            if cache.as_ref().is_none_or(|(previous,_)|!std::sync::Arc::ptr_eq(previous,&rules)) {
+                let names=rules.values().flat_map(|r|r.nonland_limit_effects.iter().cloned()).collect();
+                *cache=Some((rules,std::sync::Arc::new(names)));
+            }
+            cache.as_ref().unwrap().1.clone()
+        };
+        if effect_names.is_empty() {return true;}
+        let cards:*const *const u8=read(engine,0x1a98);
+        let count=read::<usize>(engine,0x1aa0).min(read(engine,0x1ab8));
+        let mut casters=std::collections::BTreeSet::new();
+        for id in 0..count {
+            let card=*cards.add(id);
+            if read::<u8>(card,0x116)==0&&read::<u8>(card,0x11a)==6&&effect_names.contains(&name(engine,id)) {
+                casters.insert(read::<u8>(card,0x11c));
+            }
+        }
+        if casters.is_empty() {return true;}
+        let collect:unsafe extern "system" fn(*mut usize,*const u8,u32)->*mut usize=std::mem::transmute(native_address(0x1b75b90));
+        let free:unsafe extern "system" fn(*mut u8,usize,usize)=std::mem::transmute(native_address(0x639d00));
+        let mut opponents=std::collections::BTreeSet::new();
+        for caster in casters {
+            let mut defenders=[0usize;3];collect(defenders.as_mut_ptr(),engine,caster as u32);
+            for i in 0..defenders[2] {
+                let defender=*(defenders[1] as *const u64).add(i);
+                if defender&0xff==0 {opponents.insert((defender>>8) as u8);}
+            }
+            if defenders[0]>0 {free(defenders[1] as *mut u8,defenders[0]*8,8);}
+        }
+        for player in opponents {
+            let cards:*const *const u8=read(engine,0x1a98);
+            let views:*const *const u8=read(engine,0x1ab0);
+            let mut ids=Vec::new();
+            for id in 0..read::<usize>(engine,0x1aa0).min(read(engine,0x1ab8)) {
+                let card=*cards.add(id);
+                if read::<u8>(card,0x116)!=0||read::<u8>(card,0x11a)!=2||read::<u8>(card,0x11c)!=player {continue;}
+                let view=*views.add(id);
+                let types=std::slice::from_raw_parts(read::<*const u8>(view,0x48),read::<usize>(view,0x50));
+                if !types.contains(&6) {ids.push(id as u32);}
+            }
+            if ids.len()<2 {continue;}
+            let Some(keep)=choose_nonland_survivor(engine,player,&ids) else {return false;};
+            for id in ids {if id!=keep {move_card(engine,id,3);}}
+        }
+        true
+    }
+}
+
+unsafe fn choose_nonland_survivor(engine:*mut u8,player:u8,ids:&[u32])->Option<u32> {
+    unsafe {
+        let allocate:unsafe extern "system" fn(usize,usize)->*mut u8=std::mem::transmute(native_address(0x271e700));
+        let options=allocate(ids.len()*0x20,8);options.write_bytes(0,ids.len()*0x20);
+        for (index,id) in ids.iter().enumerate() {
+            let label=format!("保留：{}（第{}个）",name(engine,*id as usize),index+1);
+            let bytes=allocate(label.len(),1);std::ptr::copy_nonoverlapping(label.as_ptr(),bytes,label.len());
+            let option=options.add(index*0x20);option.write(5);
+            option.add(8).cast::<usize>().write(label.len());option.add(16).cast::<*mut u8>().write(bytes);option.add(24).cast::<usize>().write(label.len());
+        }
+        let mut choice=[0u64;18];choice[0]=7;choice[1]=ids.len() as u64;choice[2]=options as u64;choice[3]=ids.len() as u64;choice[5]=1;choice[6]=1;choice[7]=42|((player as u64)<<8);
+        let mut answer=[0u64;0x1a8/8];
+        let ask:unsafe extern "system" fn(*mut u64,*mut u8,*mut u64)=std::mem::transmute(native_address(0x1be1340));
+        ask(answer.as_mut_ptr(),engine,choice.as_mut_ptr());
+        if answer[0]==u64::MAX {return None;}
+        let selected=if answer[0] as u32==11&&answer[3]==1 {ids.get(*(answer[2] as *const usize)).copied()}else{None};
+        let drop_answer:unsafe extern "system" fn(*mut u64)=std::mem::transmute(native_address(0x1b15f60));drop_answer(answer.as_mut_ptr());
+        selected
     }
 }
 
@@ -368,6 +484,15 @@ pub unsafe extern "system" fn DiyEffect(out:*mut u8,engine:*mut u8,spec:*const u
         crate::native_land_search::translate_answer(engine,source,native_answer);
         let result=if crate::native_land_search::execute(out,engine,spec,context,native_answer) {out}
             else {original(out,engine,spec,context,native_answer)};
+        // GainLife with an explicit starting-life adjustment. Keep the gain's
+        // normal events/replacements, then update the native baseline used by
+        // YourStartingLife and by the player state sent to the UI.
+        if read::<u64>(out,0)==14 && read::<u8>(spec,0x50)==5
+            && read::<u64>(spec,0x88)==0x8000000000000000 {
+            if let Some(amount)=crate::diy_compat::starting_life_gain(read(spec,0x90)) {
+                increase_starting_life(engine,read(context,0xba),amount);
+            }
+        }
         crate::native_land_search::translate_choice(engine,source,out);
         crate::native_land_search::publish_choice(engine as usize,source,out);
         EFFECT_CAUSE.with(|p|p.set(previous_cause));
@@ -412,6 +537,15 @@ pub unsafe extern "system" fn DiyCloneTargets(out:*mut usize,iterator:*mut usize
 #[unsafe(no_mangle)]
 pub unsafe extern "system" fn DiyAmount(engine:*mut u8,spec:*const u8,source:u32,player:u8,x:u32,context:*const u8)->i32 {
     unsafe {
+        if read::<u64>(spec,0)==0x8000000000000000 {
+            if let Some(amount)=crate::diy_compat::starting_life_gain(read(spec,8)) {return amount;}
+        }
+        if read::<u64>(spec,0)==0x8000000000000000&&read::<i32>(spec,8)==-1900000003 {
+            return starting_deck(engine,player).len() as i32;
+        }
+        if read::<u64>(spec,0)==0x8000000000000000&&read::<i32>(spec,8)==-1900000003 {
+            return starting_deck(engine,player).len() as i32;
+        }
         if read::<u64>(spec,0)==0x8000000000000000&&read::<i32>(spec,8)==-1900000002 {
             let mut counts=BTreeMap::new();
             for (name,card) in starting_deck(engine,player) {
@@ -424,6 +558,28 @@ pub unsafe extern "system" fn DiyAmount(engine:*mut u8,spec:*const u8,source:u32
     }
 }
 
+unsafe fn increase_starting_life(engine:*mut u8,player:u8,amount:i32) {
+    unsafe {
+        // The native BTreeMap<PlayerId, i32> is initialized at game start and
+        // deep-cloned with GameState. Update its existing entry in place.
+        let mut node=read::<*mut u8>(engine,0x2078);
+        let mut height=read::<usize>(engine,0x2080);
+        while !node.is_null() {
+            let count=read::<u16>(node,0x36) as usize;
+            let index=(0..count).find(|&i|read::<u8>(node,0x38+i)>=player).unwrap_or(count);
+            if index<count && read::<u8>(node,0x38+index)==player {
+                let value=node.add(8+index*4).cast::<i32>();
+                value.write_unaligned(value.read_unaligned().saturating_add(amount));
+                log(format!("starting life player={player} amount={amount} total={}",value.read_unaligned()));
+                return;
+            }
+            if height==0 {break;}
+            node=read::<*mut u8>(node,0x48+index*8);height-=1;
+        }
+        panic!("Missing native starting-life entry for player {player}");
+    }
+}
+
 #[unsafe(no_mangle)]
 pub unsafe extern "system" fn DiyValidAtom(engine:*const u8,atom:*const u8,target:u32,view:*const u8,source:u32,player:u8,first:u32,second:u32)->u8 {
     unsafe {
@@ -433,6 +589,16 @@ pub unsafe extern "system" fn DiyValidAtom(engine:*const u8,atom:*const u8,targe
         }else{None};
         if let Some(property)=property {
                 let text=std::slice::from_raw_parts(read::<*const u8>(property,16),read::<usize>(property,24));
+                if text==b"AlternativeDiyStartingDeck" {
+                    let target_name=printed_name(engine,target);
+                    let matched=starting_deck(engine as *mut u8,player).iter().any(|(name,_)|name==&target_name);
+                    return (matched^(*atom==9)) as u8;
+                }
+                if text==b"AlternativeDiyStartingDeck" {
+                    let target_name=printed_name(engine,target);
+                    let matched=starting_deck(engine as *mut u8,player).iter().any(|(name,_)|name==&target_name);
+                    return (matched^(*atom==9)) as u8;
+                }
                 if text==b"AlternativeDiyHasStorm" {return (card_rule(engine,target).is_some_and(|r|r.storm)^(*atom==9)) as u8;}
                 if let Some(hex)=text.strip_prefix(b"AlternativeDiyCauseNot") {
                     let expected:Option<Vec<u8>>=hex.chunks(2).map(|s|std::str::from_utf8(s).ok().and_then(|s|u8::from_str_radix(s,16).ok())).collect();

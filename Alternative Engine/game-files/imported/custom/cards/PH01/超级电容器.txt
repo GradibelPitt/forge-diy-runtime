@@ -1,0 +1,10 @@
+Name:超级电容器
+ManaCost:1 W
+Types:Artifact Creature Construct
+PT:1/1
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ Trig1 | TriggerDescription$ When CARDNAME enters, put X +1/+1 counters on CARDNAME.
+SVar:Trig1:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ X
+DeckHas:Ability$Counters
+SVar:X:Count$Valid Creature.YouCtrl+Other
+Oracle:当超级电容器进战场时，你每操控一个其他生物，便在超级电容器上放置一个+1/+1指示物
+# 中文规则: 当超级电容器进战场时，在超级电容器上放置X个+1/+1指示物。

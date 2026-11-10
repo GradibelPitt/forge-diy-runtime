@@ -1,0 +1,11 @@
+Name:雷纳索尔王子
+ManaCost:3
+Types:Legendary Creature Vampire
+PT:3/4
+T:Mode$ Phase | Phase$ Upkeep | FirstUpkeepThisGame$ True | TriggerZones$ Library,Hand,Battlefield,Graveyard,Exile,Command | CheckSVar$ StartingDeckSize | SVarCompare$ GE40 | Execute$ ChooseReveal | TriggerDescription$ 如果你的起始套牌有至少40张牌且正在进行炉石传说，则游戏开始时，你可以展示这张牌，然后你的起始生命增加10点。
+SVar:StartingDeckSize:Number$-1900000003
+SVar:ChooseReveal:DB$ GenericChoice | Choices$ RevealPrince,KeepHidden | SpellDescription$ 是否展示雷纳索尔王子并起始生命增加10点？
+SVar:RevealPrince:DB$ Reveal | RevealDefined$ Self | SubAbility$ GainTen | SpellDescription$ 展示雷纳索尔王子，起始生命增加10点。
+SVar:KeepHidden:DB$ Cleanup | ClearRemembered$ True | SpellDescription$ 不展示。
+SVar:GainTen:DB$ GainLife | Defined$ You | LifeAmount$ 10 | AdjustStartingLife$ True
+Oracle:如果你的起始套牌有至少40张牌且正在进行炉石传说，则游戏开始时，你可以展示这张牌，然后你的起始生命增加10点。

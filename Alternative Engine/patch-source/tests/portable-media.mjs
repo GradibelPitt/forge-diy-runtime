@@ -47,7 +47,8 @@ fs.writeFileSync(path.join(roaming, 'dev.arcanetable.desktop/settings.json'), JS
 const binary = fs.readFileSync(desktop);
 const script = zlib.brotliDecompressSync(binary.subarray(60674331, 60674331 + 524961)).toString('utf8');
 assert.match(script, /if\(\["get_settings","save_settings","list_style_packs"\]\.includes\(e\)\)return soloPortableInvoke\(e,t,n\);/);
-const mediaCode = script.slice(script.lastIndexOf('async function soloImportMedia('));
+const mediaCode = fs.readFileSync(new URL('../portable-media.js', import.meta.url), 'utf8');
+assert(script.includes(mediaCode), 'The runtime must contain the maintained media implementation');
 
 async function start(root) {
   const child = spawn(path.join(root, 'runtime/hearthstone/hearthstone_launcher.exe'), ['--electron-host'], {

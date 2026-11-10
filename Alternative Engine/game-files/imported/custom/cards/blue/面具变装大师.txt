@@ -1,0 +1,12 @@
+Name:面具变装大师
+ManaCost:1 U
+Types:Legendary Creature Shapeshifter
+PT:3/2
+K:Changeling
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscover | TriggerDescription$ When CARDNAME enters, discover a nonblue planeswalker. The card discovered this way perpetually gains prismatic.
+SVar:TrigDiscover:DB$ CardDiscover | Defined$ You | Source$ CardDatabase | ValidCards$ Planeswalker.nonBlue | OptionCount$ 3 | Destination$ Hand | RememberChosen$ True | SubAbility$ GrantPrismatic
+SVar:GrantPrismatic:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ Prismatic | Duration$ Permanent | SubAbility$ Cleanup
+SVar:Prismatic:Mode$ ManaConvert | EffectZone$ Command | ValidPlayer$ You | ValidCard$ Card.IsRemembered | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ 虹彩（你可以用任意颜色的法术力支付此咒语的法术力费用）。
+SVar:Cleanup:DB$ Cleanup | ClearRemembered$ True
+A:AB$ CopySpellAbility | Cost$ B PayLife<2> | ActivationLimit$ 1 | TargetType$ Activated.YouCtrl | ValidTgts$ Card.nonCreature | TgtPrompt$ Select target activated ability you control from a noncreature source | MayChooseTarget$ True | SpellDescription$ Copy target activated ability you control from a noncreature source. You may choose new targets for the copy. Activate only once each turn. (Mana abilities can't be targeted.)
+Oracle:化形\n当面具变装大师进战场时，发现一个非蓝色的鹏洛客。以此法发现的牌永久获得虹彩异能。\n{B}，支付2点生命：复制目标由你操控且为非生物来源的起动式异能。你可以为该复制品选择新的目标。每回合只能起动一次。

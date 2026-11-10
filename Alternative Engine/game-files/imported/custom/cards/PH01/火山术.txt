@@ -1,0 +1,9 @@
+Name:火山术
+ManaCost:R
+Types:Enchantment Aura
+K:Enchant:Creature
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.AttachedBy | Execute$ TrigDamageAll | TriggerDescription$ When enchanted creature dies, CARDNAME deals 3 damage to each creature.
+SVar:AttachAILogic:Curse
+SVar:TrigDamageAll:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 3
+Oracle:结附于生物。\n当所结附的生物死去时，火山术对所有生物造成3点伤害。
+# 中文规则: 结附于生物

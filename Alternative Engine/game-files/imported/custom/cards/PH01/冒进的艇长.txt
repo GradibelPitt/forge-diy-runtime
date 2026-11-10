@@ -1,0 +1,8 @@
+Name:冒进的艇长
+ManaCost:R
+Types:Creature Pirate
+PT:1/2
+T:Mode$ ChangesZone | Origin$ Stack | Destination$ Battlefield | TriggerZones$ Battlefield | ValidCard$ Creature.Other+wasCastFromYourHandByYou | Execute$ TrigDamage | TriggerDescription$ Whenever another creature enters the battlefield, if you cast it from your hand, CARDNAME deals 1 damage to each creature.
+SVar:TrigDamage:DB$ DamageAll | NumDmg$ 1 | ValidCards$ Creature
+Oracle:Whenever another creature enters the battlefield, if you cast it from your hand, 冒进的艇长 deals 1 damage to each creature.
+# 中文规则: 每当另一个生物进战场时，若它是由你从你手上施放的，冒进的艇长对每个生物造成1点伤害。

@@ -1,0 +1,9 @@
+Name:粗暴的猢狲
+ManaCost:1 R R
+Types:Creature Pirate Monkey
+PT:2/4
+S:Mode$ Continuous | Affected$ Pirate.YouCtrl+Other | AddTrigger$ AttackTrig | Description$ 你操控的其他海盗具有“每当此生物攻击时，在其上放置一个+1/+1指示物。”
+DeckHints:Type$Pirate
+SVar:AttackTrig:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ 每当此生物攻击时，在其上放置一个+1/+1指示物。
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+Oracle:你操控的其他海盗具有“每当此生物攻击时，在其上放置一个+1/+1指示物。”

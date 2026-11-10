@@ -1,0 +1,9 @@
+Name:幻觉药水
+ManaCost:2 U U
+Types:Sorcery
+A:SP$ RepeatEach | RepeatCards$ Creature.YouCtrl+!token | RepeatSubAbility$ DBConjure | SubAbility$ DBAnimate | SpellDescription$ Conjure a duplicate of each nontoken creature you control into your hand. Those cards perpetually have base power and toughness 1/1 and mana cost {1}.
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | DefinedName$ Remembered | Zone$ Hand | ImprintMade$ True
+SVar:DBAnimate:DB$ Animate | Defined$ Imprinted | ManaCost$ 1 | Power$ 1 | Toughness$ 1 | Duration$ Perpetual | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True | ClearRemembered$ True
+Oracle:将每个你操控的非衍生生物的复制品各一张幻变到你的手牌。以此法幻变的牌永久具有1/1的基础力量与防御力，且其法术力费用变为{1}。
+# 中文规则: 将每个你操控的非衍生生物的复制品各一张幻变到你的手牌。以此法幻变的牌永久具有1/1的基础力量与防御力，且其法术力费用变为{1}。

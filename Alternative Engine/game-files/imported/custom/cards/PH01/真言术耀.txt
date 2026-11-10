@@ -1,0 +1,12 @@
+Name:真言术：耀
+ManaCost:W
+Types:Enchantment Aura
+K:Enchant:Creature
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever enchanted creature attacks, you gain 4 life.
+DeckHas:Ability$LifeGain
+SVar:AttachAILogic:Pump
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 4
+SVar:HasAttackEffect:TRUE
+Oracle:结附于生物。\n每当所结附的生物攻击时，你获得4点生命。
+# 中文规则: 结附于生物。
+# 中文规则: 每当所结附的生物攻击时，你获得4点生命。

@@ -1,0 +1,13 @@
+Name:指挥官碧阿崔克丝
+ManaCost:3 W G
+Types:Legendary Creature Human Knight
+PT:5/6
+K:MayEffectFromOpeningDeck:ChooseReveal
+SVar:ChooseReveal:DB$ GenericChoice | Choices$ RevealCommander,KeepHidden | SpellDescription$ 是否展示指挥官碧阿崔克丝？
+SVar:RevealCommander:DB$ Reveal | RevealDefined$ Self | SubAbility$ ChooseCreature | SpellDescription$ 展示指挥官碧阿崔克丝，选择起始套牌中的两费生物。
+SVar:KeepHidden:DB$ Cleanup | ClearChosenCard$ True | SpellDescription$ 不展示。
+SVar:ChooseCreature:DB$ ChooseCard | ChoiceZone$ Library,Hand,Battlefield,Graveyard,Exile,Command | Choices$ Creature.cmcEQ2+YouOwn+namedAlternativeDiyStartingDeck | Amount$ 1 | Mandatory$ True | ChoiceTitle$ 选择起始套牌中法术力值为2的生物 | SubAbility$ ConjureTen
+SVar:ConjureTen:DB$ MakeCard | Conjure$ True | DefinedName$ ChosenCard | Defined$ You | Amount$ 10 | Zone$ Library | SubAbility$ ShuffleCopies
+SVar:ShuffleCopies:DB$ Shuffle | Defined$ You | SubAbility$ Cleanup
+SVar:Cleanup:DB$ Cleanup | ClearChosenCard$ True
+Oracle:游戏开始时，你可以展示碧阿崔克丝，然后选择一张在你起始套牌中且总法术力为2的生物，将它的十张复制幻变进你的牌库。
