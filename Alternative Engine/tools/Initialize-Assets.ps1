@@ -6,6 +6,11 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $root = [IO.Path]::GetFullPath($Installation)
+function Asset-Hash([string]$Path) {
+    $stream=[IO.File]::OpenRead($Path);$algorithm=[Security.Cryptography.SHA256]::Create()
+    try {return [BitConverter]::ToString($algorithm.ComputeHash($stream))}
+    finally {$stream.Dispose();$algorithm.Dispose()}
+}
 function Copy-MissingTree([string]$Source, [string]$Destination, [switch]$Managed) {
     $sourceRoot = [IO.Path]::GetFullPath($Source).TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar
     if (!(Test-Path -LiteralPath $sourceRoot)) { throw "Missing package directory: $sourceRoot" }
@@ -14,7 +19,7 @@ function Copy-MissingTree([string]$Source, [string]$Destination, [switch]$Manage
         if ((Test-Path -LiteralPath $target) -and !$Managed) { continue }
         [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target)) | Out-Null
         [IO.File]::Copy($file.FullName, $target, [bool]$Managed)
-        if ((Get-FileHash -LiteralPath $target).Hash -ne (Get-FileHash -LiteralPath $file.FullName).Hash) {
+        if ((Asset-Hash $target) -ne (Asset-Hash $file.FullName)) {
             throw "Asset copy verification failed: $target"
         }
     }

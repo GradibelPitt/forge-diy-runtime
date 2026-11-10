@@ -3,6 +3,10 @@
 
 ## 启动
 
+普通玩家可以下载 [在线启动包](https://github.com/GradibelPitt/forge-diy-runtime/releases/download/online-seed-908b4d1/Solo-Arcanum-Online.zip)，完整解压后双击 `Start.bat`。首次运行会下载游戏和素材到同目录的 `Game` 文件夹，请保持联网并预留至少 6 GB 空间；之后仍使用同一个 BAT 自动更新并启动。下载中断后可重新运行继续下载。已有完整游戏时，检查更新暂时无法联网会启动本地版本。
+
+开发者也可以从仓库启动：
+
 1. 安装 Git LFS，克隆仓库后在仓库根目录执行 `git lfs pull`。
 2. Windows 下双击本目录的 `Start.cmd`。
 

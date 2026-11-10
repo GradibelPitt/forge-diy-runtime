@@ -124,7 +124,8 @@ for(const item of copied)if(hash(fs.readFileSync(item.source))!==item.sha256)thr
 console.log('正在检查启动更新流程…');
 for(const [command,args] of [
  ['powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-File',path.join(alt,'tools/tests/update-core.tests.ps1')]],
- [process.execPath,[path.join(alt,'tools/tests/startup.test.mjs')]]
+ [process.execPath,[path.join(alt,'tools/tests/startup.test.mjs')]],
+ [process.execPath,[path.join(alt,'tools/tests/online-download.test.mjs')]]
 ]){
  const result=spawnSync(command,args,{cwd:repo,windowsHide:true,stdio:'inherit'});
  if(result.error||result.status)throw new Error('Startup update checks failed; publication stopped.');
